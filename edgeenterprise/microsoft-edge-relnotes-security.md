@@ -1,0 +1,124 @@
+---
+title: Notes de publication pour les mises à jour de sécurité de Microsoft Edge
+ms.author: aguta
+author: dan-wesley
+manager: srugh
+ms.date: 08/27/2020
+audience: ITPro
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.localizationpriority: high
+ms.collection: M365-modern-desktop
+description: Notes de publication pour les mises à jour de sécurité de Microsoft Edge
+ms.openlocfilehash: 258a2bf52d38c95d92c76f3c588a3c199aa2d55b
+ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10979797"
+---
+# Notes de publication pour les mises à jour de sécurité de Microsoft Edge
+
+Ces notes de publication fournissent des informations sur les correctifs de sécurité inclus dans les mises à jour apportées au canal stable Microsoft Edge.
+
+## 27août2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 85.0.564.41)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 20août2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 84.0.522.63)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002). 
+
+## 11août2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 84.0.522.59)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 29 juillet 2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 84.0.522.49)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 16 juillet 2020
+
+Microsoft a publié le dernier **Microsoft Edge Stable Channel (Version 84.0.522.40)**, qui intègre les dernières mises à jour de sécurité du projet Chromium. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+Cette mise à jour contient la mise à jour suivante spécifique à Microsoft Edge :
+- [CVE-2020-1341](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1341)
+
+## 24 juin 2020
+
+Microsoft a publié le dernier **Microsoft Edge Stable Channel (Version 83.0.478.56)**, qui intègre les dernières mises à jour de sécurité du projet Chromium. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 17 juin 2020
+
+Microsoft a publié le dernier **Microsoft Edge Stable Channel (Version 83.0.478.54)**, qui intègre les dernières mises à jour de sécurité du projet Chromium. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 4 juin 2020
+
+Microsoft a publié le dernier **Microsoft Edge Stable Channel (Version 83.0.478.45)**, qui intègre les dernières mises à jour de sécurité du projet Chromium. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## Mai21, 2020
+
+Microsoft a publié le dernier **Microsoft Edge Stable Channel (Version 83.0.478.37)**, qui intègre les dernières mises à jour de sécurité du projet Chromium. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+Cette mise à jour contient la mise à jour suivante spécifique à Microsoft Edge :
+- [CVE-2020-1195](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1195)
+
+## 7mai2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 81.0.416.72)**, qui incorpore les dernières mises à jour de sécurité du projet Chromium.
+Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 29avril2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 81.0.416.68)**, qui incorpore les dernières mises à jour de sécurité du projet Chromium.
+Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 23avril2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version81.0.416.64)**, qui incorpore les dernières mises à jour de sécurité du projet Chromium.
+Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 17 avril 2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 81.0.416.58)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome.
+Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 13avril2020
+
+Microsoft a sorti le dernier **canal Microsoft Edge Stable (version 81.0.416.53)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome.
+Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 1eravril2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 80.0.361.109)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome.
+Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 19 mars 2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 80.0.361.69)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome.
+Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 4 mars 2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 80.0.361.66)**, qui incorpore les dernières mises à jour de sécurité du projet Chromium. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 25février2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 80.0.361.62)**, qui incorpore les dernières mises à jour de sécurité du projet Chromium. Cette mise à jour contient [CVE-2020-6418](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6418), qui a été signalé par l’équipe Chromium comme cible de code malveillant exploitant une faille de sécurité. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 20 février 2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 80.0.361.57)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## Le 7 février 2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 80.0.361.48)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## Le 17 janvier 2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 79.0.309.68)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome.
+Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## Voir également
+
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
