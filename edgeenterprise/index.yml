@@ -1,0 +1,85 @@
+### YamlMime:Landing
+title: Documentation Microsoft Edge Entreprise
+summary: MicrosoftEdge améliore et prolonge l’expérience du navigateur. Il s’exécute sur des appareils Windows, macOS, iOS et Android.
+metadata:
+  title: MicrosoftEdge
+  description: MicrosoftEdge améliore et prolonge l’expérience du navigateur. Il s’exécute sur des appareils Windows, macOS, iOS et Android.
+  services: service
+  ms.service: service
+  ms.subservice: subservice
+  ms.topic: landing-page
+  ms.collection: collection
+  author: dan-wesley
+  ms.author: kvice
+  ms.date: 08/21/2020
+  ms.openlocfilehash: 0a725b99799d7a2476994f1cbddf12fcd688f1e4
+  ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 08/31/2020
+  ms.locfileid: "10979819"
+landingContent:
+- title: En savoir plus sur MicrosoftEdge en entreprise
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Vue d’ensemble des canaux MicrosoftEdge
+      url: microsoft-edge-channels.md
+    - text: Télécharger un canal MicrosoftEdge
+      url: https://aka.ms/EdgeEnterprise
+    - text: Utiliser les fonctionnalités d’entreprise
+      url: edge-ie-mode.md
+    - text: 'Vidéo : Microsoft Edge et Microsoft Search'
+      url: microsoft-edge-video-search.md
+- title: Déployer et mettre à jour MicrosoftEdge
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Planifier votre déploiement de MicrosoftEdge
+      url: deploy-edge-plan-deployment.md
+    - text: 'Vidéo: Déployer Microsoft Edge'
+      url: microsoft-edge-video-deploy.md
+    - text: Déployer sur Windows
+      url: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+    - text: Déployer sur macOS
+      url: https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+- title: Configurer MicrosoftEdge
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurer Microsoft Edge sur Windows
+      url: configure-microsoft-edge.md
+    - text: Configurer Microsoft Edge sur macOS
+      url: configure-microsoft-edge-on-mac.md
+    - text: Définir MicrosoftEdge comme navigateur par défaut
+      url: edge-default-browser.md
+- title: Gérer la sécurité et la confidentialité
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 'Vidéo: sécurité, compatibilité et facilité de gestion'
+      url: microsoft-edge-video-security-compatibility-manageability.md
+    - text: Sécurité
+      url: security-overview.md
+    - text: Confidentialité
+      url: microsoft-edge-enterprise-privacy-settings.md
+- title: Référence sur les stratégies
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Référence de stratégie du navigateur
+      url: microsoft-edge-policies.md
+    - text: Référence de stratégie de mise à jour
+      url: microsoft-edge-update-policies.md
+    - text: Vue d’ensemble du mappage de stratégie
+      url: microsoft-edge-policy-map-overview.md
+    - text: Blog sur les bases de la sécurité Microsoft
+      url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
+- title: S’engager dans la communauté d’entreprise ou obtenir de l’aide
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Communauté technologique d’entreprise
+      url: https://techcommunity.microsoft.com/t5/Enterprise/bd-p/EdgeInsiderEnterprise
+    - text: Support de MicrosoftEdge
+      url: https://microsoftedgesupport.microsoft.com/hc/
