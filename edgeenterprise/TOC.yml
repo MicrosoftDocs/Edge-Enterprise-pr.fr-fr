@@ -1,4 +1,4 @@
-# last revised 08/21/2020
+# last revised 09/02/2020
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
@@ -161,5 +161,7 @@
           href: edge-learnmore-regex.md
         - name: Variable du répertoire de données utilisateur
           href: edge-learnmore-create-user-directory-vars.md
+        - name: Utilisation du Rollback Microsoft Edge pour les entreprises
+          href: edge-learnmore-rollback.md
 - name: Forum Aux Questions
   href: faqs-edge-in-the-enterprise.md
