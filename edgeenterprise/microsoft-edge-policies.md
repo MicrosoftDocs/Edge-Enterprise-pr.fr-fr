@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 8b514b1c1cbcaf64e8c44497522c368f71e7a0a0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9320d7e7b161e6d92421b05262391642b0fe1c2d
+ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979845"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993724"
 ---
 # MicrosoftEdge: Stratégies
 La dernière version de MicrosoftEdge inclut les stratégies suivantes. Vous pouvez utiliser ces stratégies pour configurer le fonctionnement de MicrosoftEdge dans votre organisation.
@@ -82,6 +82,8 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Autoriser les fenêtres contextuelles sur des sites spécifiques|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Bloquer les fenêtres contextuelles sur des sites spécifiques|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Enregistrer les gestionnaires de protocoles|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Déterminer si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications,
+et des conseils pour les services Microsoft|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Accorder l’accès à des sites spécifiques pour la connexion à des périphériques USB spécifiques|
 |[WebUsbAskForUrls](#webusbaskforurls)|Autoriser WebUSB sur des sites spécifiques|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Bloquer WebUSB sur des sites spécifiques|
@@ -224,6 +226,8 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|Vérifications d’interception DNS activées|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Définir MicrosoftEdge comme navigateur par défaut|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Autoriser l’accès au menu contextuel du moteur de recherche par défaut|
+|[DefaultSensorsSetting](#defaultsensorssetting)|Paramètre par défaut des capteurs|
+|[DefaultSerialGuardSetting](#defaultserialguardsetting)|Contrôler l’utilisation de l’API Serial|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Exiger que la liste des sites en mode entreprise soit disponible avant la navigation à l’onglet|
 |[DeleteDataOnMigration](#deletedataonmigration)|Supprimer les anciennes données de navigateur lors de la migration|
 |[DeveloperToolsAvailability](#developertoolsavailability)|Contrôler où les outils de développement peuvent être utilisés|
@@ -256,6 +260,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Appliquer le filtre adulte Google|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Utiliser une stratégie de renvoi par défaut no-referrer-when-downgrade (déconseillé).|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Forcer l’exécution du code de mise en réseau dans le processus du navigateur (obsolète)|
+|[ForceSync](#forcesync)|Forcer la synchronisation des données du navigateur et ne pas afficher l’invite de consentement de synchronisation|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Forcer le mode restreint minimal sur YouTube|
 |[FullscreenAllowed](#fullscreenallowed)|Autoriser le mode plein écran|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Activer le cache d’authentification HTTP de portée globale.|
@@ -276,11 +281,13 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[ImportSearchEngine](#importsearchengine)|Autoriser l’importation des paramètres du moteur de recherche|
 |[ImportShortcuts](#importshortcuts)|Autoriser l’importation des raccourcis|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configurer la disponibilité du mode InPrivate|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Activer les avertissements pour les formulaires non sécurisés|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Contrôler la fonctionnalité IntensiveWakeUpThrottling|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configurer la détection de blocage avancée pour le mode Internet Explorer|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configurer l’intégration d’Internet Explorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configurer la liste des sites en mode Entreprise|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Spécifier le comportement des navigations «sur la page» vers des sites non configurés lors du démarrage à partir des pages du mode Internet Explorer.|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Autoriser le test du mode InternetExplorer|
 |[IsolateOrigins](#isolateorigins)|Activer l’isolation de site pour des origines spécifiques|
 |[LocalProvidersEnabled](#localprovidersenabled)|Autoriser les suggestions des fournisseurs de services locaux|
 |[ManagedFavorites](#managedfavorites)|Configurer les favoris|
@@ -319,6 +326,10 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Sites web ou domaines automatiquement autorisés à utiliser l’attestation de clé de sécurité directe|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Envoyer tous les sites intranet vers Internet Explorer|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Envoyer des informations sur les sites pour améliorer les services Microsoft (déconseillé)|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|Autoriser l’accès aux capteurs sur des sites spécifiques|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquer l’accès aux capteurs sur des sites spécifiques|
+|[SerialAskForUrls](#serialaskforurls)|Autoriser l’API Serial sur des sites spécifiques|
+|[SerialBlockedForUrls](#serialblockedforurls)|Bloquer l’API Serial sur des sites spécifiques|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher le raccourci MicrosoftOffice dans la barre des favoris|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Activer la prise en charge de Signed HTTP Exchange (SXG) |
 |[SitePerProcess](#siteperprocess)|Activer l’isolation de site pour tous les sites|
@@ -340,6 +351,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[URLBlocklist](#urlblocklist)|Bloquer l’accès à une liste d’URL|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Activer la fonctionnalité User-Agent Client Hints (déconseillé)|
 |[UserDataDir](#userdatadir)|Définir le répertoire de données utilisateur|
+|[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limite le nombre de captures instantanées des données utilisateur conservées qui sont utilisées en cas de restauration d’urgence|
 |[UserFeedbackAllowed](#userfeedbackallowed)|Autoriser les commentaires des utilisateurs|
 |[VideoCaptureAllowed](#videocaptureallowed)|Autoriser ou bloquer la capture de vidéos|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites autorisés à accéder aux appareils de capture vidéo sans autorisation préalable|
@@ -568,7 +580,7 @@ Si cette stratégie n’est pas configurée, la sélection automatique n’est e
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = {"pattern":"https://www.contoso.com","filter":{"ISSUER":{"CN":"certificate issuer name", "L": "certificate issuer location", "O": "certificate issuer org", "OU": "certificate issuer org unit"}, "SUBJECT":{"CN":"certificate subject name", "L": "certificate subject location", "O": "certificate subject org", "OU": "certificate subject org unit"}}}
+SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
 ```
 
@@ -631,8 +643,8 @@ Pour exclure la suppression des cookies lors de la fermeture, configurez la stra
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -694,8 +706,8 @@ Il ne peut pas y avoir de modèles d’URL en conflit définis entre ces trois s
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -761,8 +773,8 @@ Si vous définissez la stratégie [RestoreOnStartup](#restoreonstartup) de mani�
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1134,13 +1146,13 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   - sur Windows et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-  Détermine si les sites Web non couverts par [PluginsAllowedForUrls](#pluginsallowedforurls) ou [PluginsBlockedForUrls](#pluginsblockedforurls) peuvent automatiquement exécuter le plug-in Adobe Flash. Vous pouvez sélectionner « BlockPlugins » pour bloquer Adobe Flash sur tous les sites, ou bien « ClickToPlay » pour faire fonctionner Adobe Flash en obligeant l’utilisateur à cliquer sur l’espace réservé pour lancer l’exécution. Dans tous les cas, les stratégies [PluginsAllowedForUrls](#pluginsallowedforurls) et [PluginsBlockedForUrls](#pluginsblockedforurls) prévalent sur ’DefaultPluginsSetting’.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) et [PluginsBlockedForUrls](#pluginsblockedforurls) sont vérifiés en premier, avant cette stratégie. Les options sont «ClickToPlay» et «BlockPlugins». Si vous définissez cette stratégie sur «BlockPlugins», ce plugin est refusé pour tous les sites web. «ClickToPlay» permet au plugin Flash de s’exécuter, mais les utilisateurs cliquent sur l’espace réservé pour le démarrer.
 
-La lecture automatique est uniquement autorisée pour les domaines répertoriés explicitement dans la stratégie [PluginsAllowedForUrls](#pluginsallowedforurls). Si vous souhaitez autoriser la lecture automatique pour tous les sites, vous pouvez ajouter http://* et https://* à cette liste.
+                                                                                                                                                                                                                                            
 
-Si cette stratégie n’est pas configurée, l’utilisateur peut modifier ce paramètre manuellement.
+Si cette stratégie n’est pas définie, elle utilise BlockPlugins et les utilisateurs peuvent modifier ce paramètre.
 
-L’ancien ensemble d’options «1» autorise tout, mais cette fonctionnalité est désormais gérée uniquement par la stratégie de [PluginsAllowedForUrls](#pluginsallowedforurls).  Les stratégies existantes utilisant «1» fonctionneront en mode «ClickToPlay».
+Remarque: la lecture automatique est utilisée uniquement pour les domaines répertoriés explicitement dans la stratégie [PluginsAllowedForUrls](#pluginsallowedforurls). Pour activer la lecture automatique pour tous les sites, ajoutez http://* et https://* à la liste des URL autorisées.
 
 Mappage des options de stratégie:
 
@@ -1390,8 +1402,8 @@ Si cette stratégie n’est pas configurée, la valeur par défaut globale sera 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1443,8 +1455,8 @@ Si cette stratégie n’est pas configurée, la valeur par défaut globale sera 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1496,8 +1508,8 @@ Si cette stratégie n’est pas configurée, le contenu mixte pouvant être bloq
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1549,8 +1561,8 @@ Si cette stratégie n’est pas configurée, le contenu mixte pouvant être bloq
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1602,8 +1614,8 @@ Si cette stratégie n’est pas configurée, la valeur par défaut globale sera 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1655,8 +1667,8 @@ Si cette stratégie n’est pas configurée, la valeur par défaut globale sera 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1770,8 +1782,8 @@ Les modèles que vous répertoriez dans cette stratégie sont traités comme des
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = www.example.com
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = "[*.]example.edu"
 
 ```
 
@@ -1823,8 +1835,8 @@ Si cette stratégie n’est pas configurée, la valeur globale par défaut est u
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1876,8 +1888,8 @@ Si cette stratégie n’est pas configurée, la valeur globale par défaut est u
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1931,8 +1943,8 @@ Pour plus d’informations sur les modèles d’URL valides, consultez [https://
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -1986,8 +1998,8 @@ Pour plus d’informations sur les modèles d’URL valides, consultez [https://
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -2039,8 +2051,8 @@ Si cette stratégie n’est pas configurée, la valeur par défaut globale sera 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2092,8 +2104,8 @@ Si cette stratégie n’est pas configurée, la valeur par défaut globale sera 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2176,6 +2188,51 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   </dict>
 </array>
 ```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### SpotlightExperiencesAndRecommendationsEnabled
+  #### Déterminer si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications,
+et des conseils pour les services Microsoft
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows depuis la version86 ou ultérieur
+
+  #### Description
+  Déterminer si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications et des conseils pour les services Microsoft.
+
+Si vous activez ou ne configurez pas ce paramètre, les expériences à la une et les recommandations sont activées.
+
+Si vous désactivez ce paramètre, les expériences à la une et les recommandations sont désactivées.
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+  - Booléen
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: SpotlightExperiencesAndRecommendationsEnabled
+  - Nom de la stratégie de groupe: déterminer si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications et des conseils pour les services Microsoft
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Content settings
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: SpotlightExperiencesAndRecommendationsEnabled
+  - Type de valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000001
+```
+
+
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -2299,8 +2356,8 @@ Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en con
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2354,8 +2411,8 @@ Les modèles d’URL dans cette stratégie ne peuvent pas être en conflit avec 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2475,10 +2532,10 @@ Cette stratégie est appliquée uniquement si vous activez les stratégies [Defa
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = UTF-8
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = UTF-16
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = GB2312
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = ISO-8859-1
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = "UTF-16"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
@@ -2542,7 +2599,7 @@ Cette stratégie est appliquée uniquement si vous activez les stratégies [Defa
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://search.contoso.com/searchbyimage/upload
+"https://search.contoso.com/searchbyimage/upload"
 ```
 
 
@@ -2596,7 +2653,7 @@ Si cette stratégie n’est pas configurée, les demandes de recherche d’image
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-content={imageThumbnail},url={imageURL},sbisrc={SearchSource}
+"content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
 
@@ -2648,7 +2705,7 @@ Cette stratégie est appliquée uniquement si vous activez les stratégies [Defa
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-mis
+"mis"
 ```
 
 
@@ -2702,7 +2759,7 @@ Si vous n’activez pas cette stratégie ou si vous la laissez vide, le nom d’
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-My Intranet Search
+"My Intranet Search"
 ```
 
 
@@ -2758,7 +2815,7 @@ Cette stratégie est requise lorsque vous activez la stratégie [DefaultSearchPr
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://search.contoso.com/search?q={searchTerms}
+"https://search.contoso.com/search?q={searchTerms}"
 ```
 
 
@@ -2816,7 +2873,7 @@ Cette stratégie est appliquée uniquement si vous activez les stratégies [Defa
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://search.contoso.com/suggest?q={searchTerms}
+"https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
 
@@ -2852,7 +2909,7 @@ Si vous activez cette stratégie et configurez-la comme suit:
 - «Barre d’adresses» («rediriger»), la zone de recherche de la nouvelle page de l’onglet utilise la barre d’adresses pour effectuer une recherche dans les nouveaux onglets.
 
 Mappage des options de stratégie:
-        
+  
 
 * bing (bing) = Zone de recherche (Recommandé)
 
@@ -2882,7 +2939,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-bing
+"bing"
 ```
 
 
@@ -2940,7 +2997,7 @@ Si cette stratégie n’est pas configurée, aucune restriction n’est imposée
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
+SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
@@ -2989,8 +3046,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
 
@@ -3044,8 +3101,8 @@ Si cette stratégie n’est pas configurée, les utilisateurs peuvent installer 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
 
@@ -3075,7 +3132,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
 
 Cette stratégie prévaut lors d’un conflit potentiel avec la stratégie [ExtensionInstallBlocklist](#extensioninstallblocklist). Lorsque vous retirez une extension de la liste des extensions dont l’installation est forcée, elle est automatiquement désinstallée par Microsoft Edge.
 
-Pour les appareils Windows qui ne sont pas liés à un domaine Microsoft ActiveDirectory, l’installation forcée se limite aux extensions disponibles dans le Microsoft Store.
+L’installation forcée est limitée aux applications et extensions répertoriées sur le site web des modules complémentaires de MicrosoftEdge pour les instances qui ne figurent pas parmi les instances suivantes: les instances Windows associées à un domaine Microsoft ActiveDirectory ou les instances Windows10Professionnel ou Entreprise, inscrites pour la gestion des périphériques et les instances macOS gérées via MDM ou jointes à un domaine via MCX.
 
 Les utilisateurs peuvent modifier le code source de n’importe quelle extension à l’aide des outils de développement, ce qui peut potentiellement faire dysfonctionner l’extension. Si cela pose problème, configurez la stratégie [DeveloperToolsAvailability](#developertoolsavailability).
 
@@ -3115,8 +3172,8 @@ Cette stratégie ne s’applique pas au mode InPrivate.
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = abcdefghijklmnopabcdefghijklmnop
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnopabcdefghijklmnop"
 
 ```
 
@@ -3172,7 +3229,7 @@ La stratégie [ExtensionInstallBlocklist](#extensioninstallblocklist) prévaut s
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = https://corp.contoso.com/*
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
 
@@ -3483,7 +3540,7 @@ Si cette stratégie n’est pas configurée, MicrosoftEdge ne délègue pas les 
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-contoso.com
+"contoso.com"
 ```
 
 
@@ -3533,7 +3590,7 @@ Si cette stratégie n’est pas configurée, les quatre schémas sont utilisés.
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-basic,digest,ntlm,negotiate
+"basic,digest,ntlm,negotiate"
 ```
 
 
@@ -3583,7 +3640,7 @@ Si vous ne configurez pas cette stratégie, MicrosoftEdge essaie de détecter si
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-*contoso.com,contoso.com
+"*contoso.com,contoso.com"
 ```
 
 
@@ -3769,8 +3826,8 @@ Par défaut, tous les hôtes de messagerie native sont autorisés. Si la straté
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -3824,8 +3881,8 @@ Si cette stratégie n’est pas configurée, MicrosoftEdge charge tous les hôte
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -4055,7 +4112,7 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://contoso.com/change_password.html
+"https://contoso.com/change_password.html"
 ```
 
 
@@ -4107,8 +4164,8 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = https://contoso.com/login.html
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
 
@@ -4234,7 +4291,7 @@ L’omission d’un champ signifie que toutes les valeurs correspondent. Par exe
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-{ "idPattern": ".*public", "namePattern": ".*Color" }
+"{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
 
@@ -4494,7 +4551,7 @@ Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://www.contoso.com, https://www.fabrikam.com
+"https://www.contoso.com, https://www.fabrikam.com"
 ```
 
 
@@ -4570,7 +4627,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-direct
+"direct"
 ```
 
 
@@ -4624,7 +4681,7 @@ Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.micr
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://internal.contoso.com/example.pac
+"https://internal.contoso.com/example.pac"
 ```
 
 
@@ -4678,7 +4735,7 @@ Si vous souhaitez voir plus d’options et plus d’exemples détaillés, consul
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-123.123.123.123:8080
+"123.123.123.123:8080"
 ```
 
 
@@ -4930,8 +4987,8 @@ Notez également que cette stratégie ne s’applique pas si votre organisation 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.edu
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
 
@@ -5203,7 +5260,7 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://www.contoso.com
+"https://www.contoso.com"
 ```
 
 
@@ -5222,18 +5279,18 @@ https://www.contoso.com
   
   
   #### Versions prises en charge:
-  - sur Windows et macOS depuis la version85 ou versions ultérieures
+  - Sur Windows et macOS depuis la version86 ou ultérieur
 
   #### Description
   Vous pouvez définir les types d’image d’arrière-plan qui sont autorisés dans la disposition du nouvel onglet dans Microsoft Edge.
 
 Si vous ne configurez pas cette stratégie, tous les types d’images d’arrière-plan du nouvel onglet sont activés.
 
-                                           
+             
 
-                                            
+           
 
-                                          
+            
 
 Mappage des options de stratégie:
 
@@ -5460,7 +5517,7 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://www.fabrikam.com
+"https://www.fabrikam.com"
 ```
 
 
@@ -5772,8 +5829,8 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = https://contoso.com
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = https://www.fabrikam.com
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
 
@@ -6245,9 +6302,9 @@ Cette stratégie est disponible uniquement sur les appareils Windows10 disposant
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = [*.]mydomain2.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = [*.].mydomain2.com
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = "[*.]mydomain2.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.com"
 
 ```
 
@@ -6292,8 +6349,8 @@ Si cette stratégie n’est pas configurée, la valeur par défaut globale sera 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -6570,7 +6627,7 @@ Si vous désactivez ou ne configurez pas ce paramètre, MicrosoftEdge utilise le
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-en
+"en"
 ```
 
 
@@ -6662,8 +6719,8 @@ Cette stratégie affecte tous les types d’entrées audio, et pas seulement le 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -6748,17 +6805,17 @@ Cette stratégie est destinée à offrir aux entreprises de la souplesse pour d�
 
  
 
-                                                
+            
 
-                       
+        
 
-                        
+      
 
-                       
+        
 
-                   
+       
 
-                         
+       
 
 Les données du navigateur de l’ancienne version de MicrosoftEdge sont toujours migrées silencieusement lors de la première exécution, quelle que soit la valeur de cette stratégie.
 
@@ -6999,11 +7056,11 @@ Un modèle d’URL doit être mis en forme en fonction de [https://go.microsoft.
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = example.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com"
 
 ```
 
@@ -7042,7 +7099,7 @@ Les types de fichiers qu’un utilisateur a déjà spécifié pour s’ouvrir au
 
 Si vous ne configurez pas cette stratégie, seuls les types de fichiers qu’un utilisateur a déjà spécifié pour s’ouvrir automatiquement le sont lors du téléchargement.
 
-                                                                                                                                                                                                           
+                                                     
 
 Cette stratégie est disponible uniquement sur les instances de Windows qui sont jointes à un domaine Microsoft ActiveDirectory, des instances de Windows10 Professionnel ou Entreprise inscrites pour la gestion des appareils ou des instances macOS gérées via la Gestion des périphériques mobiles ou jointes à un domaine via MCX.
 
@@ -7068,8 +7125,8 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = exe
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
@@ -7799,8 +7856,8 @@ Si vous désactivez ou ne configurez pas cette stratégie, tous les certificats 
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7858,8 +7915,8 @@ Si vous ne configurez pas cette stratégie, tous les certificats obligatoires po
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7915,8 +7972,8 @@ Si vous ne configurez pas cette stratégie, tout certificat qui doit être commu
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = .contoso.com
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
 
@@ -8106,7 +8163,7 @@ Si vous activez cette stratégie, les services et les cibles d’exportation qui
 
 Si cette stratégie n’est pas configurée, aucune restriction n’est imposée concernant les services et cibles d’exportation acceptables.
 
-                                                     
+              
 
 Mappage des options de stratégie:
 
@@ -8136,7 +8193,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pinterest_suggestions
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 
 ```
 
@@ -8501,7 +8558,7 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://go.microsoft.com/fwlink/?linkid=2080734
+"https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
 
@@ -8575,7 +8632,7 @@ Si vous désactivez cette stratégie, les vérifications d’interception DNS ne
   - sur Windows7 et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-      
+   
 
   Si vous attribuez la valeur true à cette stratégie, Microsoft Edge vérifie toujours qu’il s’agit du navigateur par défaut au démarrage et, si possible, s’inscrit automatiquement.
 
@@ -8668,6 +8725,127 @@ La valeur de la stratégie est uniquement prise en compte lorsque la stratégie 
   - Exemple de valeur:
 ``` xml
 <true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### DefaultSensorsSetting
+  #### Paramètre par défaut des capteurs
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows et macOS depuis la version86 ou ultérieur
+
+  #### Description
+  Indiquer si les sites web peuvent accéder aux capteurs et utiliser les capteurs tels que les capteurs de mouvement et de luminosité. Vous pouvez bloquer ou autoriser complètement les sites web à accéder aux capteurs.
+
+Définir la stratégie sur1 permet aux sites web d’accéder et d’utiliser des capteurs. Définir la stratégie sur2 refuse l’accès aux capteurs.
+
+Vous pouvez remplacer cette stratégie pour des modèles d’URL spécifiques par les stratégies [SensorsAllowedForUrls](#sensorsallowedforurls) et [SensorsBlockedForUrls](#sensorsblockedforurls).
+
+Si vous ne configurez pas cette stratégie, les sites web peuvent accéder et utiliser des capteurs, et les utilisateurs peuvent modifier ce paramètre. Il s’agit de la valeur par défaut globale pour [SensorsAllowedForUrls](#sensorsallowedforurls) et [SensorsBlockedForUrls](#sensorsblockedforurls).
+
+Mappage des options de stratégie:
+
+* AllowSensors (1) = autoriser les sites à accéder aux capteurs
+
+* BlockSensors (2) = ne pas autoriser les sites à accéder aux capteurs
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+  - entier.
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: DefaultSensorsSetting
+  - Nom de la stratégie de groupe: paramètre des capteurs par défaut
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: DefaultSensorsSetting
+  - Type de valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000002
+```
+
+
+  #### Informations et paramètres sur Mac
+  - Nom clé de la préférence: DefaultSensorsSetting
+  - Exemple de valeur:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### DefaultSerialGuardSetting
+  #### Contrôler l’utilisation de l’API Serial
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows et macOS depuis la version86 ou ultérieur
+
+  #### Description
+  
+Déterminer si les sites web peuvent accéder aux ports série. Vous pouvez bloquer complètement l’accès ou demander à l’utilisateur, chaque fois qu’un site web souhaite accéder à un port série.
+
+Définir la stratégie sur3 permet aux sites web de demander l’accès aux ports série. Définir la stratégie sur2 refuse l’accès aux ports série.
+
+Vous pouvez remplacer cette stratégie pour des modèles d’URL spécifiques par les stratégies [SerialAskForUrls](#serialaskforurls) et [SerialBlockedForUrls](#serialblockedforurls).
+
+Si vous ne configurez pas cette stratégie, par défaut, les sites web peuvent demander aux utilisateurs s’ils peuvent accéder à un port série, et les utilisateurs peuvent modifier ce paramètre.
+
+Mappage des options de stratégie:
+
+* BlockSerial (2) = ne pas autoriser les sites à demander l’accès aux ports série via l’API Serial
+
+* AskSerial (3) = autoriser les sites à demander l’autorisation de l’utilisateur à accéder à un port série
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+  - entier.
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: DefaultSerialGuardSetting
+  - Nom de la stratégie de groupe: contrôler l’utilisation de l’API Serial
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: DefaultSerialGuardSetting
+  - Type de valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000002
+```
+
+
+  #### Informations et paramètres sur Mac
+  - Nom clé de la préférence: DefaultWebUsbGuardSetting
+  - Exemple de valeur:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -9097,7 +9275,7 @@ Si vous ne configurez pas cette stratégie, le répertoire cache par défaut est
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-${user_home}/Edge_cache
+"${user_home}/Edge_cache"
 ```
 
 
@@ -9213,7 +9391,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-off
+"off"
 ```
 
 
@@ -9267,7 +9445,7 @@ Les modèles au format incorrect sont ignorés.
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://dns.example.net/dns-query{?dns}
+"https://dns.example.net/dns-query{?dns}"
 ```
 
 
@@ -9322,8 +9500,8 @@ Si le dossier spécifié par le chemin d’accès n’existe pas, le télécharg
   ##### Exemple de valeur:
 ```
 
-      Linux-based OSes (including Mac): /home/${user_name}/Downloads
-      Windows: C:\Users\${user_name}\Downloads
+"\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
+                                              
 ```
 
 
@@ -9553,7 +9731,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = ExampleDeprecatedFeature_EffectiveUntil20080902
+SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
 
@@ -9572,8 +9750,8 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = Example
 
   ### EnableDomainActionsDownload
   #### Activer le téléchargement des actions de domaine à partir de Microsoft
-                       
         
+  
   
   
   >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version 84 de Microsoft Edge.
@@ -9874,8 +10052,8 @@ Notez que, bien que l’exemple précédent montre la suppression des avertissem
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {'domains': ['*'], 'file_extension': 'swf'}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
 
@@ -10393,8 +10571,8 @@ Cette stratégie d’entreprise est désactivée par défaut.
 
   ### ForceNetworkInProcess
   #### Forcer l’exécution du code de mise en réseau dans le processus du navigateur (obsolète)
-                       
         
+  
   
   
   
@@ -10439,6 +10617,60 @@ Cette stratégie est désactivée par défaut. Si elle est activée, les utilisa
 ```
 
 
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### ForceSync
+  #### Forcer la synchronisation des données du navigateur et ne pas afficher l’invite de consentement de synchronisation
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows et macOS depuis la version86 ou ultérieur
+
+  #### Description
+  Force la synchronisation des données dans MicrosoftEdge. Cette stratégie empêche également l’utilisateur de désactiver la synchronisation.
+
+Si vous ne configurez pas cette stratégie, les utilisateurs pourront activer ou désactiver la synchronisation. Si vous activez cette stratégie, les utilisateurs ne pourront pas désactiver la synchronisation.
+
+Pour que cette stratégie fonctionne correctement, la stratégie [BrowserSignin](#browsersignin) ne doit pas être configurée ou doit être activée. Si [ForceSync](#forcesync) est désactivée, [BrowserSignin](#browsersignin) ne sera pas prise en compte.
+
+[SyncDisabled](#syncdisabled) ne doit pas être configurée ou doit être définie sur False. Si ce paramètre est défini sur True, [ForceSync](#forcesync) ne sera pas prise en compte.
+
+0 = ne pas démarrer automatiquement la synchronisation et afficher le consentement de synchronisation (par défaut) 1 = forcer l’activation de la synchronisation pour le profil utilisateur AzureAD/Azure AD-Degraded et ne pas afficher l’invite de consentement de synchronisation
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+  - Booléen
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: ForceSync
+  - Nom de la stratégie de groupe: forcer la synchronisation des données du navigateur et ne pas afficher l’invite de consentement de synchronisation
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: ForceSync
+  - Type de valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000001
+```
+
+
+  #### Informations et paramètres sur Mac
+  - Nom clé de la préférence: ForceSync
+  - Exemple de valeur:
+``` xml
+<true/>
+```
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -10693,7 +10925,7 @@ Les termes de recherche populaires à mot unique nécessitent une sélection man
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
+SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
@@ -11558,6 +11790,54 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### InsecureFormsWarningsEnabled
+  #### Activer les avertissements pour les formulaires non sécurisés
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows et macOS depuis la version86 ou ultérieur
+
+  #### Description
+  Cette stratégie contrôle la gestion des formulaires non sécurisés (formulaires soumis via HTTP) intégrés dans des sites sécurisés (HTTPS) dans le navigateur.
+Si vous activez cette stratégie ou ne la définissez pas, un avertissement en plein écran s’affiche lorsqu’un formulaire non sécurisé est soumis. De plus, une bulle d’avertissement s’affiche à côté des champs de formulaire lorsqu’ils sont sélectionnés et la saisie automatique est désactivée pour ces formulaires.
+Si vous désactivez cette stratégie, les avertissements ne seront pas affichés pour les formulaires non sécurisés et la saisie automatique fonctionnera normalement.
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+  - Booléen
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: InsecureFormsWarningsEnabled
+  - Nom de la stratégie de groupe: activer les avertissements pour les formulaires non sécurisés
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: InsecureFormsWarningsEnabled
+  - Type de valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000001
+```
+
+
+  #### Informations et paramètres sur Mac
+  - Nom clé de la préférence: InsecureFormsWarningsEnabled
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### IntensiveWakeUpThrottlingEnabled
   #### Contrôler la fonctionnalité IntensiveWakeUpThrottling
   
@@ -11753,7 +12033,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://internal.contoso.com/sitelist.xml
+"https://internal.contoso.com/sitelist.xml"
 ```
 
 
@@ -11826,6 +12106,54 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationTestingAllowed
+  #### Autoriser le test du mode InternetExplorer
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows depuis la version86 ou ultérieur
+
+  #### Description
+  Cette stratégie remplace la stratégie d’indicateur ie-mode-test. Elle permet aux utilisateurs d’ouvrir un onglet de mode IE à partir de l’option de menu de l’interface utilisateur.
+
+       Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) définie sur «IEMode»    et    [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) avec une liste comportant au moins une entrée.
+
+       Si vous activez cette stratégie, les utilisateurs peuvent ouvrir l’onglet du mode IE à partir de l’option de l’interface utilisateur et naviguer du site actuel vers un site en mode IE.
+
+       Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas voir directement l’option de l’interface utilisateur dans le menu.
+
+       Si vous ne configurez pas cette stratégie, vous pouvez configurer l’indicateur ie-mode-test manuellement.
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+  - Booléen
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: InternetExplorerIntegrationTestingAllowed
+  - Nom de la stratégie: autoriser le test du mode InternetExplorer
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: InternetExplorerIntegrationTestingAllowed
+  - Type de valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000000
+```
+
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### IsolateOrigins
   #### Activer l’isolation de site pour des origines spécifiques
   
@@ -11862,7 +12190,7 @@ Si vous ne configurez pas la stratégie, l'utilisateur peut modifier ce paramèt
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-https://contoso.com/,https://fabrikam.com/
+"https://contoso.com/,https://fabrikam.com/"
 ```
 
 
@@ -12314,7 +12642,7 @@ Dans Windows10, MicrosoftEdge prendra par défaut le paramètre de données de d
 Sur Windows7, Windows8 et macOS, cette stratégie contrôle l’envoi des données relatives à l’utilisation et aux incidents. Si vous ne configurez pas cette stratégie, MicrosoftEdge est défini par défaut sur les préférences de l’utilisateur.
 
 Pour activer cette stratégie,[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) doit être configuré sur Activé. Si [MetricsReportingEnabled](#metricsreportingenabled) ou [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) est défini comme Non configuré ou Désactivé, ces données ne sont pas envoyées à Microsoft.
-                                                                                                                                                                                
+                                            
 
 Cette stratégie est disponible uniquement sur les instances de Windows qui sont jointes à un domaine Microsoft ActiveDirectory, des instances de Windows10 Professionnel ou Entreprise inscrites pour la gestion des appareils ou des instances macOS gérées via la Gestion des périphériques mobiles ou jointes à un domaine via MCX.
 
@@ -12642,8 +12970,8 @@ Si vous souhaitez en savoir plus sur les contextes de sécurité, consultez http
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = http://testserver.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = *.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
 
@@ -13300,7 +13628,7 @@ Si cette stratégie est laissée vide ou n'est pas configurée, l'utilisateur pe
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-.*@contoso.com
+".*@contoso.com"
 ```
 
 
@@ -13352,15 +13680,15 @@ Si vous ne configurez pas cette stratégie, le chemin d’accès du profil itin�
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-${roaming_app_data}\edge-profile
+"${roaming_app_data}\\edge-profile"
 ```
 
 
-           
-              
-      
+     
+     
+   
+ 
     
-             
    
   
 
@@ -13408,11 +13736,11 @@ Pour plus d’informations sur l’utilisation des profils utilisateur itinéran
 ```
 
 
-           
-              
-      
-    
-    
+     
+     
+   
+ 
+ 
    
   
 
@@ -13562,7 +13890,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-tls1
+"tls1"
 ```
 
 
@@ -13619,8 +13947,8 @@ Si vous désactivez ou ne configurez pas cette stratégie, la configuration pers
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
@@ -13871,7 +14199,7 @@ Les sites (par exemple, https://contoso.com/some/path)) ne correspondent qu'en t
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contoso.com
+SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
 ```
 
@@ -13950,7 +14278,7 @@ Dans Windows10, MicrosoftEdge prendra par défaut le paramètre de données de d
 Sous Windows7, Windows8 et macOS, cette stratégie contrôle l'envoi d'informations sur les sites web visités. Si vous ne configurez pas cette stratégie, MicrosoftEdge est défini par défaut sur les préférences de l’utilisateur.
 
 Pour activer cette stratégie, [MetricsReportingEnabled](#metricsreportingenabled) doit être défini sur Activé. Si [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) ou [MetricsReportingEnabled](#metricsreportingenabled) est défini comme Non configuré ou Désactivé, ces données ne sont pas envoyées à Microsoft.
-                                                                                                                                                                            
+                                           
 
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
@@ -13983,6 +14311,242 @@ Pour activer cette stratégie, [MetricsReportingEnabled](#metricsreportingenable
   - Exemple de valeur:
 ``` xml
 <false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### SensorsAllowedForUrls
+  #### Autoriser l’accès aux capteurs sur des sites spécifiques
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows et macOS depuis la version86 ou ultérieur
+
+  #### Description
+  Déterminer une liste de sites, basée sur des modèles d’URL, qui peuvent accéder et utiliser des capteurs tels que des capteurs de mouvement et de luminosité.
+
+Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultSensorsSetting](#defaultsensorssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
+
+Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordre de priorité suivant est utilisé: la stratégie [SensorsBlockedForUrls](#sensorsblockedforurls) (s’il y a une correspondance), la stratégie [DefaultSensorsSetting](#defaultsensorssetting) (si elle est définie) ou les paramètres personnels de l’utilisateur.
+
+Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [SensorsBlockedForUrls](#sensorsblockedforurls). Vous ne pouvez pas autoriser et bloquer une URL.
+
+Si vous souhaitez obtenir plus d’informations concernant les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+  - Liste composée de chaînes
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: SensorsAllowedForUrls
+  - Nom de la stratégie de groupe: autoriser l’accès aux capteurs sur des sites spécifiques
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de valeur: liste composée de REG_SZ
+  ##### Exemple de valeur:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Informations et paramètres sur Mac
+  - Nom clé de préférence: SensorsAllowedForUrls
+  - Exemple de valeur:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### SensorsBlockedForUrls
+  #### Bloquer l’accès aux capteurs sur des sites spécifiques
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows et macOS depuis la version86 ou ultérieur
+
+  #### Description
+  Déterminer une liste de sites, basée sur des modèles d’URL, qui ne peuvent pas accéder aux capteurs tels que les capteurs de mouvement et de luminosité.
+
+Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultSensorsSetting](#defaultsensorssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
+
+Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordre de priorité suivant est utilisé: la stratégie [SensorsAllowedForUrls](#sensorsallowedforurls) (s’il existe une correspondance), la stratégie [DefaultSensorsSetting](#defaultsensorssetting) (si définie) ou les paramètres personnels de l’utilisateur.
+
+Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [SensorsAllowedForUrls](#sensorsallowedforurls). Vous ne pouvez pas autoriser et bloquer une URL.
+
+Si vous souhaitez obtenir plus d’informations concernant les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+  - Liste composée de chaînes
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: SensorsBlockedForUrls
+  - Nom de la stratégie: bloquer l’accès aux capteurs sur des sites spécifiques
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de valeur: liste composée de REG_SZ
+  ##### Exemple de valeur:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Informations et paramètres sur Mac
+  - Nom clé de préférence: SensorsBlockedForUrls
+  - Exemple de valeur:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### SerialAskForUrls
+  #### Autoriser l’API Serial sur des sites spécifiques
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows et macOS depuis la version86 ou ultérieur
+
+  #### Description
+  Déterminer une liste de sites, basée sur des modèles d’URL, qui peuvent demander à l’utilisateur d’accéder à un port série.
+
+Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultSerialGuardSetting](#defaultserialguardsetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
+
+Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordre de priorité suivant est utilisé: la stratégie [SerialBlockedForUrls](#serialblockedforurls) (s’il y a une correspondance), la stratégie [DefaultSerialGuardSetting](#defaultserialguardsetting) (si elle est définie) ou les paramètres personnels de l’utilisateur.
+
+Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [SerialBlockedForUrls](#serialblockedforurls). Vous ne pouvez pas autoriser et bloquer une URL.
+
+Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+  - Liste composée de chaînes
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: SerialAskForUrls
+  - Nom de la stratégie: autoriser l’API Serial sur des sites spécifiques
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de valeur: liste composée de REG_SZ
+  ##### Exemple de valeur:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Informations et paramètres sur Mac
+  - Nom clé de préférence: SerialAskForUrls
+  - Exemple de valeur:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### SerialBlockedForUrls
+  #### Bloquer l’API Serial sur des sites spécifiques
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows et macOS depuis la version86 ou ultérieur
+
+  #### Description
+  Déterminer une liste de sites, basée sur des modèles d’URL, qui ne peuvent pas demander à l’utilisateur de lui accorder l’accès à un port série.
+
+Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultSerialGuardSetting](#defaultserialguardsetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
+
+Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordre de priorité suivant est utilisé: la stratégie [SerialAskForUrls](#serialaskforurls) (s’il y a une correspondance), la stratégie [DefaultSerialGuardSetting](#defaultserialguardsetting) (si elle est définie) ou les paramètres personnels de l’utilisateur.
+
+Les modèles d’URL dans cette stratégie ne peuvent pas être en conflit avec ceux configurés dans la stratégie [SerialAskForUrls](#serialaskforurls). Vous ne pouvez pas autoriser et bloquer une URL.
+
+Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+  - Liste composée de chaînes
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: SerialBlockedForUrls
+  - Nom de la stratégie: bloquer l’API Serial sur des sites spécifiques
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de valeur: liste composée de REG_SZ
+  ##### Exemple de valeur:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Informations et paramètres sur Mac
+  - Nom clé de préférence: SerialBlockedForUrls
+  - Exemple de valeur:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
 ```
   
 
@@ -14228,8 +14792,8 @@ Les langues prises en charge sont les suivantes : af, bg, ca, cs, cy, da, de, el
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
@@ -14280,8 +14844,8 @@ Les langues actuellement prises en charge sont les suivantes: af, bg, ca, cs, da
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
@@ -14480,7 +15044,7 @@ Les utilisateurs ne peuvent pas remplacer les types de données désactivés.
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
+SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
@@ -14514,9 +15078,9 @@ Si vous activez cette stratégie ou si vous ne la configurez pas, MicrosoftEdge 
 
 Si vous désactivez cette stratégie, MicrosoftEdge désactive ces protections de sécurité pour les connexions authentifiées par des certificats de signature installés localement. Ces protections sont toujours activées pour les connexions authentifiées par des certificats de signature reconnus publiquement. 
 
-                                                                                                                                                                                                                                                      
+                                                               
 
-                                                                                                                                                                                                             
+                                                    
 
 Cette stratégie peut être utilisée pour tester les proxys concernés et les mettre à jour. En principe, les proxys affectés provoqueront un échec de connexion avec le code d'erreur "ERR_TLS13_DOWNGRADE_DETECTED".
 
@@ -14598,9 +15162,9 @@ Cette stratégie n’affecte pas les connexions basées sur QUIC. QUIC peut êtr
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = 0x1303
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = 0xcca8
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = "0xcca8"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
@@ -14925,11 +15489,11 @@ Si vous ne configurez pas cette stratégie, il n'existe aucune exception à la l
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
 
@@ -14992,14 +15556,14 @@ Si vous ne configurez pas cette stratégie, aucune URL n'est bloquée.
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = hosting.com/bad_path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = .exact.hostname.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = file://*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = custom_scheme:*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
@@ -15115,7 +15679,7 @@ Vous pouvez consulter la liste des variables utilisables sur [https://go.microso
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-${users}/${user_name}/Edge
+"${users}/${user_name}/Edge"
 ```
 
 
@@ -15125,6 +15689,50 @@ ${users}/${user_name}/Edge
 ``` xml
 <string>${users}/${user_name}/Edge</string>
 ```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### UserDataSnapshotRetentionLimit
+  #### Limite le nombre de captures instantanées des données utilisateur conservées qui sont utilisées en cas de restauration d’urgence
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows depuis la version86 ou ultérieur
+
+  #### Description
+  Après chaque mise à jour de version importante, MicrosoftEdge créera une capture instantanée des parties des données de navigation de l’utilisateur à utiliser en cas d’urgence ultérieure nécessitant une restauration temporaire de la version. Si une restauration temporaire est effectuée vers une version pour laquelle un utilisateur dispose d’une capture instantanée correspondante, les données de la capture instantanée sont restaurées. Cela permet aux utilisateurs de conserver des paramètres comme les signets et les données de saisie automatique.
+
+Si vous ne définissez pas cette stratégie, la valeur par défaut du nombre de captures instantanées est définie sur 3.
+
+Si vous définissez cette stratégie, les anciennes captures instantanées sont supprimées si nécessaire, pour respecter la limite que vous avez définie. Si vous définissez cette stratégie sur 0, aucune capture instantanée n’est prise.
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+  - entier.
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: UserDataSnapshotRetentionLimit
+  - Nom de la stratégie: limite le nombre de captures instantanées des données utilisateur conservées qui sont utilisées en cas de restauration d’urgence
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: UserDataSnapshotRetentionLimit
+  - Type de valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000003
+```
+
+
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -15263,8 +15871,8 @@ Cette stratégie a une incidence sur tous les types d'entrée vidéo, et pas uni
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -15417,8 +16025,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebComponentsV0Enabled
   #### Réactiver l'API Web Components v0 jusqu'à M84 (obsolète)
-                       
         
+  
   
   
   >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version 84 de Microsoft Edge.
@@ -15470,8 +16078,8 @@ Si elle est définie sur False ou si elle n'est pas définie, les fonctionnalit�
 
   ### WebDriverOverridesIncompatiblePolicies
   #### Autoriser WebDriver à remplacer les stratégies incompatibles (obsolète)
-                       
         
+  
   
   
   >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version 84 de Microsoft Edge.
@@ -15566,8 +16174,8 @@ Veuillez noter que cette stratégie affaiblit la protection des adresses IP loca
   - Type de valeur: liste composée de REG_SZ
   ##### Exemple de valeur:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = *contoso.com*
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
 
@@ -15635,7 +16243,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-default
+"default"
 ```
 
 
@@ -15685,7 +16293,7 @@ Si vous ne configurez pas cette stratégie, ou si vous définissez une chaîne v
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-10000-11999
+"10000-11999"
 ```
 
 
@@ -15707,7 +16315,7 @@ Si vous ne configurez pas cette stratégie, ou si vous définissez une chaîne v
   - Sur Windows depuis la version84 ou versions ultérieures
 
   #### Description
-  Cette stratégie est déconseillée, car elle est remplacée par une fonctionnalité semblable dans une prochaine version. voir https://crbug.com/1032820. Il ne fonctionne pas dans la version 87 de Microsoft Edge.
+  Cette stratégie est déconseillée car elle sera remplacée par une fonctionnalité similaire dans une version ultérieure. Consultez https://crbug.com/1032820.
 
 Utilisez Windows pour résoudre les proxys pour tout le réseau de navigation, au lieu du solveur proxy intégré à Microsoft Edge. Le solveur Windows proxy active les fonctionnalités de proxy Windows telles que DirectAccess/NRPT.
 
