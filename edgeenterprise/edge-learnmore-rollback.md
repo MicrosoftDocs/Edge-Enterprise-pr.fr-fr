@@ -3,19 +3,19 @@ title: Restauration Microsoft Edge pour les entreprises
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 07/21/2020
+ms.date: 09/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Comment restaurer Microsoft Edge à une version antérieure
-ms.openlocfilehash: 9af0881a079dd3059e567eaadb912b3d929924c4
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9f659b0bcdd82f54a814c8ad4157521061cdfa7c
+ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979747"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993704"
 ---
 # Comment restaurer Microsoft Edge à une version antérieure
 
@@ -79,12 +79,11 @@ Procédez comme suit pour activer la restauration avec la mise à jour de Micros
 
    - Autoriser toujours les mises à jour
    - Mises à jour silencieuses automatiques uniquement
-   - Mises à jour manuelles uniquement  
 
-5. La restauration aura lieu la prochaine fois que Microsoft Edge Update recherchera une mise à jour.
+     > [!NOTE]
+     > Pour forcer une mise à jour de stratégie de groupe, tapez `dsregcmd /status` dans l’invite de commande de l’administrateur Windows (Exécuter en tant qu’administrateur).
 
-   > [!NOTE]
-   > Si vous voulez que la restauration se produise immédiatement, vous devez modifier l’intervalle d’interrogation de Microsoft Edge Update ou activer la restauration à l’aide d’un MSI.
+5. Cliquez sur **OK** pour enregistrer le paramètre. La restauration aura lieu la prochaine fois que Microsoft Edge Update recherchera une mise à jour. Si vous souhaitez que la mise à jour se produise plus tôt, vous pouvez modifier l’intervalle d’interrogation de MicrosoftEdgeUpdate ou activer la restauration avec un MSI.
 
 ### Erreurs de restauration courantes
 
@@ -109,6 +108,12 @@ Nous vous recommandons de forcer un redémarrage sur les utilisateurs après l�
 
 - Activer *Avertir un utilisateur qu'un redémarrage du navigateur est recommandé ou requis pour les mises à jour en attente*. Sous options, sélectionnez **requis**.
 - Activez *Définir l’intervalle de temps pour les notifications de mise à jour* puis configurez le temps souhaité en millisecondes.
+
+## Capture instantanée
+
+Une capture instantanée est une copie estampillée du dossier des données utilisateur. Lors d’une mise à niveau d’une version, une capture instantanée de la version précédente est créée et stockée dans le dossier des captures instantanées. Une fois la restauration effectuée, une capture instantanée correspondant à la version est copiée dans le nouveau dossier des données utilisateur et est supprimée du dossier des captures instantanées. Si aucune capture instantanée correspondant à la version n’est disponible lors du retour à la version antérieure, la restauration s’appuiera sur la synchronisation pour remplir les données utilisateur dans la nouvelle version de MicrosoftEdge.
+
+La stratégie de groupe [UserDataSnapshotRetentionLimit] vous permet de définir une limite pour le nombre de captures instantanées pouvant être conservées. Par défaut, trois captures instantanées sont conservées. Vous pouvez configurer cette stratégie pour conserver de 0à5captures instantanées.
 
 ## Forum Aux Questions
 
@@ -145,27 +150,15 @@ Voici quelques erreurs courantes qui empêchent la restauration:
   - Le remplacement de la version cible est défini pour une version cible non existante.
   - La mise en forme du remplacement de la version cible est incorrecte.
 
-- Si le remplacement de la méthode de mise à jour est défini comme «mises à jour désactivées», Microsoft Edge Update n’accepte pas les mises à jour. Cela cause la non exécution de la restauration.
+- Si le remplacement de la stratégie de mise à jour est défini sur «Mises à jour désactivées», MicrosoftEdgeUpdate n’accepte aucune mise à jour et la restauration n’est pas exécutée.
 
 ### J’ai défini toutes les méthodes de groupe correctement, mais la restauration n’a pas été exécutée. que se passe-t-il?
 
-Microsoft Edge Update n’a pas encore exécuté de recherche de mises à jour. Définir par défaut, la mise à jour automatique de recherche des mises à jour toutes les 10heures. Vous pouvez résoudre ce problème en modifiant l’intervalle d’interrogation de Microsoft Edge Update à l’aide de la méthode de groupe assurant le remplacement de la période de recherche de mises à jour automatiques. Pour plus d’informations, consultez la méthode [ Des Minutes de la Période de Recherche des Mises à jour](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) Automatiques.
+Microsoft Edge Update n’a pas encore exécuté de recherche de mises à jour. Définir par défaut, la mise à jour automatique de recherche des mises à jour toutes les 10heures. Vous pouvez résoudre ce problème en modifiant l’intervalle d’interrogation de MicrosoftEdgeUpdate avec la stratégie de groupe de remplacement de période de vérification des mises à jour automatiques. Pour plus d’informations, consultez la méthode [ Des Minutes de la Période de Recherche des Mises à jour](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) Automatiques.
 
 ### En tant qu’administrateur informatique, j’ai suivi toutes les étapes de la restauration correctement. Seule une partie de mon groupe d’utilisateurs a été restaurée. Pourquoi les autres utilisateurs n’ont pas encore été restaurés?
 
-Le paramètre de la méthode de groupe n’a pas encore été synchronisé avec tous les clients. Lorsque les administrateurs définissent une méthode de groupe, les clients ne reçoivent pas ces paramètres instantanément.
-
-<!--
-You can update all users' group policy with the  
-
-When admins set all users don't get this setting instantaneously 
-
-GP Update force group policy – link to this 
-
--->
-
-
-
+Le paramètre de la méthode de groupe n’a pas encore été synchronisé avec tous les clients. Lorsque les administrateurs définissent une méthode de groupe, les clients ne reçoivent pas ces paramètres instantanément. Vous pouvez [Forcer une actualisation de la stratégie de groupe à distance](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
 
 
 ## Voir également
