@@ -3,23 +3,27 @@ title: Notes de publication pour les mises à jour de sécurité de Microsoft Ed
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 08/27/2020
+ms.date: 09/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication pour les mises à jour de sécurité de Microsoft Edge
-ms.openlocfilehash: 258a2bf52d38c95d92c76f3c588a3c199aa2d55b
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: dfa422a1a0a20271c99891590c16777f8f774b8b
+ms.sourcegitcommit: d1e7d83b2e4acaaf0cde995eb0f644036a1f976b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979797"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11005780"
 ---
 # Notes de publication pour les mises à jour de sécurité de Microsoft Edge
 
 Ces notes de publication fournissent des informations sur les correctifs de sécurité inclus dans les mises à jour apportées au canal stable Microsoft Edge.
+
+## 9 septembre 2020
+
+Microsoft a sorti le dernier **canal stable Microsoft Edge (version 85.0.564.51)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 27août2020
 
