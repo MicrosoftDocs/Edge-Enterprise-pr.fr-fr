@@ -3,19 +3,19 @@ title: ClickOnce et DirectInvoke dans MicrosoftEdge
 ms.author: kele
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Découvrez ClickOnce et DirectInvoke dans MicrosoftEdge.
-ms.openlocfilehash: 8290c34bd29ca72678e3fa68f74b689d0cf797e3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
+ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979765"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11012794"
 ---
 # Découvrez les fonctionnalités ClickOnce et DirectInvoke dans MicrosoftEdge
 
@@ -55,13 +55,12 @@ Les cas d’utilisation de DirectInvoke dépendent de l’intention du site web 
 
 Prise en charge de ClickOnce et de DirectInvoke:
 
-- DirectInvoke est pris en charge directement par tous les utilisateurs de Windows, mais ClickOnce est désactivé pour tous les utilisateurs de Windows.
+- DirectInvoke et ClickOnce sont prises en charge pour tous les utilisateurs de Windows.
 
   > [!NOTE]
-  > Les utilisateurs qui ont besoin d’une prise en charge ClickOnce peuvent accéder à edge://flags/#edge-click-once et sélectionner **Activer** dans la liste déroulante. Vous devez ensuite **Redémarrer** le navigateur.
+  > Les utilisateurs souhaitant désactiver le support ClickOnce peuvent accéder à *edge://flags/#edge-click-once* et sélectionnent **Désactivé** dans la liste déroulante. Vous devez ensuite **Redémarrer** le navigateur.
 
 - ClickOnce et DirectInvoke ne sont pas pris en charge sur les plateformes autres que Windows.
-- Dans la mesure où ClickOnce est une fonctionnalité axée sur l’entreprise qui est utilisée par un groupe spécifique d’utilisateurs chevronnés et qu’elle n’est pas destinée à une utilisation générale, ClickOnce est désactivée par défaut.
 
 ## Sécurité de gestion des fichiers ClickOnce et DirectInvoke
 
