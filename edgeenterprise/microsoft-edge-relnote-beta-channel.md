@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 2bcd18cd18c9b5be1f4b3b39137aea09889bbc2f
-ms.sourcegitcommit: db44b524973df8ac811b09e6b71c25be9ba92bbc
+ms.openlocfilehash: 75ae113b7e4b39a76b70d9c0f85bc484f63e3c1a
+ms.sourcegitcommit: 468b75d86803ad1531d7bed8e6c1a562a00ebe50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015360"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11026894"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -35,7 +35,6 @@ Résolution de divers bogues et problèmes de performances.
 * **Mode InternetExplorer:**
 
    * Permettre aux utilisateurs d’utiliser l’interface utilisateur de Microsoft Edge pour tester les sites en mode Internet Explorer. À partir de la version86 de Microsoft Edge, les administrateurs peuvent activer une option d'interface utilisateur pour que leurs utilisateurs puissent charger un onglet en mode Internet Explorer à des fins de test ou comme palliatif jusqu'à ce que les sites soient ajoutés à la liste XML des sites.
-   * Autoriser les utilisateurs à fournir des commentaires sur les sites qui nécessitent le mode IE. Les utilisateurs peuvent envoyer des commentaires à l’aide d’une option d’interface utilisateur Microsoft Edge. Vous pouvez configurer cette option d’interface utilisateur de manière à ce qu’elle soit visible dans la stratégie de groupe et choisir la façon dont vous voulez recevoir ces informations (par courrier électronique ou formulaire personnalisé).
 
 * **Supprimez les téléchargements à partir du disque à l’aide du gestionnaire de téléchargement.** Les utilisateurs peuvent désormais supprimer leurs fichiers téléchargés à partir de leur disque sans quitter le navigateur. La nouvelle fonctionnalité Supprimer les téléchargements figure dans le menu contextuel de l’étagère téléchargements ou de la page de téléchargement.
 
@@ -394,7 +393,7 @@ Un utilisateur saisit «powerbi» comme «powerbbi».com. Le docteur de lien sug
 
 #### Nouvelles stratégies
 
-15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
+15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
 - [AllowSurfGame](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowsurfgame) –  Autoriser le jeu de surf.
 - [AllowTokenBindingForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowtokenbindingforurls) – Configurer la liste des sites avec lesquels MicrosoftEdge tentera d’établir une liaison de jeton.
