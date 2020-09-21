@@ -11,18 +11,20 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 08/21/2020
-  ms.openlocfilehash: 0a725b99799d7a2476994f1cbddf12fcd688f1e4
-  ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+  ms.date: 09/20/2020
+  ms.openlocfilehash: 796f769ae61be5db023ebe0c9fb12ab1ac62cd42
+  ms.sourcegitcommit: 71d2e7ddcec4a34a6f052f1ccdff9431928ab4db
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 08/31/2020
-  ms.locfileid: "10979819"
+  ms.lasthandoff: 09/20/2020
+  ms.locfileid: "11030535"
 landingContent:
 - title: En savoir plus sur MicrosoftEdge en entreprise
   linkLists:
   - linkListType: overview
     links:
+    - text: Vidéos Microsoft Edge
+      url: microsoft-edge-videos.md
     - text: Vue d’ensemble des canaux MicrosoftEdge
       url: microsoft-edge-channels.md
     - text: Télécharger un canal MicrosoftEdge

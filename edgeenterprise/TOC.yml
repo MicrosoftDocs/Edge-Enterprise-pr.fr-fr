@@ -1,4 +1,4 @@
-# last revised 09/02/2020
+# last revised 09/20/2020
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
@@ -59,8 +59,6 @@
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Déployer Microsoft Edge
   items:
-    - name: 'Vidéo: Déployer Microsoft Edge'
-      href: microsoft-edge-video-deploy.md
     - name: Déployer dans Windows avec Configuration Manager
       href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: Déployer dans Windows avec Intune
@@ -83,8 +81,6 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Utiliser les fonctionnalités du mode Enterprise de Microsoft Edge
   items:
-    - name: 'Vidéo : Microsoft Edge et Microsoft Search'
-      href: microsoft-edge-video-search.md
     - name: Configurations et expérimentation
       href: edge-configuration-and-experiments.md
     - name: Prise en charge et configuration des identités
@@ -115,8 +111,6 @@
           href: edge-ie-mode-faq.md
 - name: Sécurité Microsoft Edge
   items:
-    - name: 'Vidéo: sécurité, compatibilité et facilité de gestion'
-      href: microsoft-edge-video-security-compatibility-manageability.md
     - name: Vue d’ensemble de la sécurité
       href: security-overview.md
     - name: Liste verte pour les points de terminaison de MicrosoftEdge
@@ -163,5 +157,15 @@
           href: edge-learnmore-create-user-directory-vars.md
         - name: Utilisation du Rollback Microsoft Edge pour les entreprises
           href: edge-learnmore-rollback.md
+- name: Vidéos Microsoft Edge
+  items:
+    - name: Collection de vidéos Microsoft Edge
+      href: microsoft-edge-videos.md
+    - name: 'Vidéo: Déployer Microsoft Edge'
+      href: microsoft-edge-video-deploy.md
+    - name: 'Vidéo : Microsoft Edge et Microsoft Search'
+      href: microsoft-edge-video-search.md
+    - name: 'Vidéo: sécurité, compatibilité et facilité de gestion'
+      href: microsoft-edge-video-security-compatibility-manageability.md
 - name: Forum Aux Questions
   href: faqs-edge-in-the-enterprise.md
