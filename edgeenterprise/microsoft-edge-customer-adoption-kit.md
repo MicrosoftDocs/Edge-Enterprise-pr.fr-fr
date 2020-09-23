@@ -3,25 +3,25 @@ title: Documents d’adoption de Microsoft Edge par les clients
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/30/2020
+ms.date: 09/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Documents d’adoption de Microsoft Edge par les clients
-ms.openlocfilehash: ce3db319fb813e069131700b8de97c51e510333a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
+ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979831"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11072631"
 ---
 # Documents d’adoption par les clients pour Microsoft Edge
 
-Si vous souhaitez en savoir plus sur la prise en charge du déploiement et de l’adoption du nouveau Microsoft Edge, veuillez consulter les ressources et documents collectés ci-après.
+Pour en savoir plus sur la prise en charge du déploiement et de l’adoption du nouveau Microsoft Edge, veuillez consulter les ressources et documents collectés ci-après. Un fichier zip est disponible en téléchargement.
 
-Veuillez vérifier de nouveau la disponibilité de nouveaux documents.
+Vérifiez régulièrement les nouveaux documents disponibles.
 
 ## Kit d’adoption par les clients
 
@@ -29,31 +29,40 @@ Le kit d’adoption par les clients contient les éléments suivants:
 
 - Guide de déploiement informatique
 - Guide de l’utilisateursur la mise en route
+- E-mail d’annonce
+- E-mail Conseils & astuces
 - Signalisation numérique
 
-## Guide de déploiement informatique
+[Télécharger le kit d’adoption par les clients](https://www.microsoft.com/download/details.aspx?id=102119)
+
+### Guide de déploiement informatique
 
 Utilisez ce guide pour commencer à planifier le déploiement, puis découvrez comment démarrer le déploiement de Microsoft Edge dans votre environnement.
 
-[Obtenir le guide de déploiement informatique](media/customer-adoption-not-md/commercial-deployment-guide-microsoft-edge.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Série de vidéos sur Microsoft Mechanics":::
 
-## Guide de l’utilisateursur la mise en route
+### Guide de l’utilisateursur la mise en route
 
 Utilisez ce guide pour former les utilisateurs sur le nouveau Microsoft Edge. Le guide inclut des vues d’ensemble de l’interface utilisateur, des menus et des fonctionnalités. Nous avons également inclus des conseils pour aider les utilisateurs lors de la mise en route.
 
-[Obtenir le guide de l’utilisateursur la mise en route](media/customer-adoption-not-md/microsoft-edge-how-to-get-started-user-guide.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Guide de l’utilisateursur la mise en route":::
 
-## Signalisation numérique
+### Modèles d’e-mail
 
-Utilisez la signalisation numérique suivante pour informer les utilisateurs du nouveau Microsoft Edge.
+Utilisez ces modèles d’e-mail pour annoncer que le nouveau MicrosoftEdge est disponible auprès des utilisateurs et pour fournir des conseils et astuces pour exploiter tout le potentiel du navigateur.
 
-[MicrosoftEdge: nouvel onglet Entreprise](media/customer-adoption-not-md/microsoft-edge-digital-signage-enterprise-new-tab-page.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Modèle d’e-mail pour des conseils et astuces":::
 
-[Microsoft Edge: plusieurs profils et plateformes](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-multiple-profiles-and-cross-platform.pdf)
+### Signalisation numérique
 
-[Microsoft Edge: recherche Microsoft dans Bing](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-microsoft-search-in-bing.pdf)
+Utilisez la signalisation numérique suivante pour informer les utilisateurs du nouveau MicrosoftEdge:
 
-[Microsoft Edge: sécurité](media/customer-adoption-not-md/microsoft-edge-digital-signage-security.pdf)
+- Page du nouvel onglet Entreprise
+- Profils et plateformes multiples
+- Microsoft Search dans Bing
+- Sécurité
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Page Nouvel onglet":::
 
 ## Autres ressources de formation
 
