@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 0561f403bb385792767c3666be18bb6cf680edaf
+ms.openlocfilehash: 146043b518f02b8581498c273db4327682993609
 ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078122"
+ms.locfileid: "11078207"
 ---
 # MicrosoftEdge: Stratégies
 La dernière version de MicrosoftEdge inclut les stratégies suivantes. Vous pouvez utiliser ces stratégies pour configurer le fonctionnement de MicrosoftEdge dans votre organisation.
@@ -1268,8 +1268,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   [PluginsAllowedForUrls](#pluginsallowedforurls) et [PluginsBlockedForUrls](#pluginsblockedforurls) sont vérifiés en premier, avant cette stratégie. Les options sont «ClickToPlay» et «BlockPlugins». Si vous définissez cette stratégie sur «BlockPlugins», ce plugin est refusé pour tous les sites web. «ClickToPlay» permet au plugin Flash de s’exécuter, mais les utilisateurs cliquent sur l’espace réservé pour le démarrer.
 
 Si cette stratégie n’est pas configurée, l’utilisateur peut modifier ce paramètre manuellement.
-
-                                                                                     
 
 Remarque: la lecture automatique est utilisée uniquement pour les domaines répertoriés explicitement dans la stratégie [PluginsAllowedForUrls](#pluginsallowedforurls). Pour activer la lecture automatique pour tous les sites, ajoutez http://* et https://* à la liste des URL autorisées.
 
@@ -3256,7 +3254,6 @@ Si vous activez cette stratégie et configurez-la comme suit:
 - «Barre d’adresses» («rediriger»), la zone de recherche de la nouvelle page de l’onglet utilise la barre d’adresses pour effectuer une recherche dans les nouveaux onglets.
 
 Mappage des options de stratégie:
-  
 
 * bing (bing) = Zone de recherche (Recommandé)
 
@@ -4409,12 +4406,6 @@ Obligatoire et recommandé Désactivé: ces deux États fonctionnent de façon n
 ```
 
 
-  
-  
-   
- 
- 
-   
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -5700,12 +5691,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 
 Si vous ne configurez pas cette stratégie, tous les types d’images d’arrière-plan du nouvel onglet sont activés.
 
-    
-
-     
-
-   
-
 Mappage des options de stratégie:
 
 * DisableImageOfTheDay (1) = Désactiver le type d’image d’arrière-plan quotidienne
@@ -5754,7 +5739,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   ### NewTabPageCompanyLogo
   #### Définir le logo de l’entreprise sur la page Nouvel onglet (obsolète)
-                                                                                                                 
   
   >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version85 de MicrosoftEdge.
   #### Versions prises en charge:
@@ -6639,8 +6623,6 @@ Si vous activez cette stratégie, les pages envoient des demandes XHR synchrones
 
 Si vous désactivez cette stratégie ou ne la configurez pas, les pages ne sont pas autorisées à envoyer des demandes XHR synchrones lors de l’opération de rejet de page.
 
-  
-
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
   - Peut être recommandée: Non
@@ -7218,20 +7200,6 @@ Cette stratégie est destinée à offrir aux entreprises de la souplesse pour d�
   #### Description
   Si vous activez cette stratégie, tous les types de données et paramètres pris en charge par le navigateur spécifié seront importés de façon silencieuse et automatique lors de la première exécution. Lors de la première exécution, la section d’importation est également ignorée.
 
- 
-
-   
-
-  
-
-   
-
-  
-
-    
-
-    
-
 Les données du navigateur de l’ancienne version de MicrosoftEdge sont toujours migrées silencieusement lors de la première exécution, quelle que soit la valeur de cette stratégie.
 
 Si cette stratégie est définie sur « FromDefaultBrowser », les types de données correspondant au navigateur par défaut sur l’appareil géré sont importés.
@@ -7262,7 +7230,6 @@ Remarque: si vous souhaitez obtenir plus d’informations sur les éléments imp
 
 Si cette stratégie est définie sur « FromSafari », les données de l’utilisateur ne sont plus importées dans Microsoft Edge. Ceci est dû à la façon dont l’accès au disque complet fonctionne sur Mac.
 Sur macOS Mojave et versions ultérieures, il n’est plus possible d’importer des données Safari de façon automatisée et autonome dans Microsoft Edge.
- 
 
 À partir de la version83 de MicrosoftEdge, si cette stratégie est définie sur « FromMozillaFirefox », les types de données suivants sont importés à partir de MozillaFirefox:
 1. Favoris ou marque-pages
@@ -7513,8 +7480,6 @@ Les fichiers dont le type doit être ouvert automatiquement restent soumis aux v
 Les types de fichiers qu’un utilisateur a déjà spécifié pour s’ouvrir automatiquement continueront à le faire lors du téléchargement. L’utilisateur continuera à pouvoir spécifier d’autres types de fichiers à ouvrir automatiquement.
 
 Si vous ne configurez pas cette stratégie, seuls les types de fichiers qu’un utilisateur a déjà spécifié pour s’ouvrir automatiquement le sont lors du téléchargement.
-
-              
 
 Cette stratégie est disponible uniquement sur les instances de Windows qui sont jointes à un domaine Microsoft ActiveDirectory, des instances de Windows10 Professionnel ou Entreprise inscrites pour la gestion des appareils ou des instances macOS gérées via la Gestion des périphériques mobiles ou jointes à un domaine via MCX.
 
@@ -8200,10 +8165,6 @@ Si vous ne configurez pas cette stratégie, le client DNS intégré est activé 
 
   #### Description
   Cette stratégie est déconseillée, car elle a pour but de servir uniquement comme mécanisme à court terme afin d’offrir aux entreprises davantage de temps pour mettre à jour leurs environnements et signaler les problèmes s’ils sont détectés comme incompatibles avec le vérificateur de certificat intégré.
- 
-  
-
-  
 
 Il ne fonctionne pas dans Microsoft Edge version 87, lorsque la prise en charge du vérificateur de certificats hérité sur Mac OS X est prévue pour être supprimée.
 
@@ -8577,8 +8538,6 @@ Si vous souhaitez en savoir plus sur ClickOnce, consultez [https://go.microsoft.
 Si vous activez cette stratégie, les services et les cibles d’exportation qui correspondent à la liste donnée sont bloqués.
 
 Si cette stratégie n’est pas configurée, aucune restriction n’est imposée concernant les services et cibles d’exportation acceptables.
-
-     
 
 Mappage des options de stratégie:
 
@@ -9047,8 +9006,6 @@ Si vous désactivez cette stratégie, les vérifications d’interception DNS ne
   - sur Windows7 et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-   
-
   Si vous attribuez la valeur true à cette stratégie, Microsoft Edge vérifie toujours qu’il s’agit du navigateur par défaut au démarrage et, si possible, s’inscrit automatiquement.
 
 Si vous attribuez la valeur false à cette stratégie, Microsoft Edge cesse de vérifier si c’est la valeur par défaut et désactive les contrôles utilisateur pour cette option.
@@ -9914,9 +9871,7 @@ Si le dossier spécifié par le chemin d’accès n’existe pas, le télécharg
   - Type de valeur: REG_SZ
   ##### Exemple de valeur:
 ```
-
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
-             
 ```
 
 
@@ -10165,9 +10120,6 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   ### EnableDomainActionsDownload
   #### Activer le téléchargement des actions de domaine à partir de Microsoft
-  
-  
-  
   
   >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version 84 de Microsoft Edge.
   #### Versions prises en charge:
@@ -10987,10 +10939,6 @@ Cette stratégie d’entreprise est désactivée par défaut.
   ### ForceNetworkInProcess
   #### Forcer l’exécution du code de mise en réseau dans le processus du navigateur (obsolète)
   
-  
-  
-  
-  
   >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version 83 de Microsoft Edge.
   #### Versions prises en charge:
   - Sur Windows depuis 78, jusqu’à 83
@@ -11002,10 +10950,6 @@ Cette stratégie force l'exécution du code réseaux dans le processus du naviga
 
 Cette stratégie est désactivée par défaut. Si elle est activée, les utilisateurs risquent d'être confrontés à des problèmes de sécurité une fois le processus réseaux isolé.
 
-
- 
-
-  
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
   - Peut être recommandée: Non
@@ -12481,7 +12425,6 @@ Si vous configurez cette stratégie sur « AllInPageNavigations », toutes les n
 Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
 
 Mappage des options de stratégie:
-  
 
 * Default (0) = Par défaut
 
@@ -12531,13 +12474,13 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   #### Description
   Cette stratégie remplace la stratégie d’indicateur ie-mode-test. Elle permet aux utilisateurs d’ouvrir un onglet de mode IE à partir de l’option de menu de l’interface utilisateur.
 
-  Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) définie sur «IEMode»    et    [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) avec une liste comportant au moins une entrée.
+       Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) définie sur «IEMode»    et    [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) avec une liste comportant au moins une entrée.
 
-  Si vous activez cette stratégie, les utilisateurs peuvent ouvrir l’onglet du mode IE à partir de l’option de l’interface utilisateur et naviguer du site actuel vers un site en mode IE.
+       Si vous activez cette stratégie, les utilisateurs peuvent ouvrir l’onglet du mode IE à partir de l’option de l’interface utilisateur et naviguer du site actuel vers un site en mode IE.
 
-  Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas voir directement l’option de l’interface utilisateur dans le menu. 
-  
-  Si vous ne configurez pas cette stratégie, vous pouvez configurer l’indicateur ie-mode-test manuellement.
+       Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas voir directement l’option de l’interface utilisateur dans le menu.
+
+       Si vous ne configurez pas cette stratégie, vous pouvez configurer l’indicateur ie-mode-test manuellement.
 
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
@@ -13039,8 +12982,6 @@ Si la stratégie [EnableMediaRouter](#enablemediarouter) est désactivée, cette
   ### MetricsReportingEnabled
   #### Activer les rapports de données d’utilisation et d’incident (déconseillé)
   >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
-   
-  
   
   #### Versions prises en charge:
   - sur Windows et macOS depuis la version77 ou versions ultérieures
@@ -13057,11 +12998,9 @@ Dans Windows10, MicrosoftEdge prendra par défaut le paramètre de données de d
 Sur Windows7, Windows8 et macOS, cette stratégie contrôle l’envoi des données relatives à l’utilisation et aux incidents. Si vous ne configurez pas cette stratégie, MicrosoftEdge est défini par défaut sur les préférences de l’utilisateur.
 
 Pour activer cette stratégie,[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) doit être configuré sur Activé. Si [MetricsReportingEnabled](#metricsreportingenabled) ou [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) est défini comme Non configuré ou Désactivé, ces données ne sont pas envoyées à Microsoft.
-           
 
 Cette stratégie est disponible uniquement sur les instances de Windows qui sont jointes à un domaine Microsoft ActiveDirectory, des instances de Windows10 Professionnel ou Entreprise inscrites pour la gestion des appareils ou des instances macOS gérées via la Gestion des périphériques mobiles ou jointes à un domaine via MCX.
 
-  
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
   - Peut être recommandée: Non
@@ -13298,53 +13237,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 
   
 
-
- 
-   
- 
-
-   
-  
-
-   
-
-   
-
-  
- 
-  
- 
-
-  
-   
-
-   
-  
-   
-   
-  
-   
- 
-   
-   
-   
-  
- 
- 
-   
- 
-   
-
-
-  
-  
-   
- 
- 
-   
-  
-
- 
   [Retour au début](#microsoft-edge---policies)
 
   ### OverrideSecurityRestrictionsOnInsecureOrigin
@@ -14100,12 +13992,6 @@ Si vous ne configurez pas cette stratégie, le chemin d’accès du profil itin�
 
 
   
-  
-   
- 
- 
-   
-  
 
   [Retour au début](#microsoft-edge---policies)
 
@@ -14151,12 +14037,6 @@ Pour plus d’informations sur l’utilisation des profils utilisateur itinéran
 ```
 
 
-  
-  
-   
- 
- 
-   
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -14674,8 +14554,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   ### SendSiteInfoToImproveServices
   #### Envoyer des informations sur les sites pour améliorer les services Microsoft (déconseillé)
   >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
-   
-  
   
   #### Versions prises en charge:
   - sur Windows et macOS depuis la version77 ou versions ultérieures
@@ -14685,7 +14563,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 Cette stratégie permet d'envoyer à Microsoft des informations sur les sites web visités dans MicrosoftEdge afin d'améliorer les services, tels que la recherche.
 
-   
 Activez cette stratégie pour envoyer à Microsoft des informations sur les sites web visités dans MicrosoftEdge. Désactivez cette stratégie pour ne pas envoyer à Microsoft d'informations sur les sites web visités dans MicrosoftEdge. Dans un cas comme dans l’autre, les utilisateurs ne peuvent pas modifier ou remplacer le paramètre.
 
 Dans Windows10, MicrosoftEdge prendra par défaut le paramètre de données de diagnostic Windows, si vous ne configurez cette stratégie. Si cette stratégie est activée, MicrosoftEdge n'envoie que des informations sur les sites web visités dans MicrosoftEdge si le paramètre Données de diagnostic Windows est défini sur Complet. Si cette stratégie est désactivée, MicrosoftEdge n’enverra pas d’informations concernant les sites web visités. Si vous souhaitez en savoir plus sur les paramètres de données de diagnostic Windows, rendez-vous sur: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
@@ -14693,7 +14570,6 @@ Dans Windows10, MicrosoftEdge prendra par défaut le paramètre de données de d
 Sous Windows7, Windows8 et macOS, cette stratégie contrôle l'envoi d'informations sur les sites web visités. Si vous ne configurez pas cette stratégie, MicrosoftEdge est défini par défaut sur les préférences de l’utilisateur.
 
 Pour activer cette stratégie, [MetricsReportingEnabled](#metricsreportingenabled) doit être défini sur Activé. Si [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) ou [MetricsReportingEnabled](#metricsreportingenabled) est défini comme Non configuré ou Désactivé, ces données ne sont pas envoyées à Microsoft.
-             
 
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
@@ -14979,8 +14855,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 Indique s'il faut inclure un raccourci vers Office.com dans la barre des favoris. Pour les utilisateurs connectés à Microsoft Edge, le raccourci permet aux utilisateurs d’accéder à leurs applications et documents Microsoft Office. Si vous activez ou ne configurez pas cette stratégie, les utilisateurs peuvent choisir d’afficher ou non le raccourci en modifiant le bouton bascule dans le menu contextuel de la barre des favoris.
 Si vous désactivez cette stratégie, le raccourci n’apparaît pas.
-
-                                                       
 
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
@@ -15288,8 +15162,6 @@ Si vous définissez la stratégie sur false, les mises à jour automatiques sont
 
 Cette stratégie n'affecte pas les autres types de contenu mixte autres que l'audio, la vidéo et les images. 
 
-
-  
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
   - Peut être recommandée: Non
@@ -15384,8 +15256,6 @@ Si cette stratégie est définie sur false ou si elle n'est pas définie, les av
   #### Description
   Désactive la synchronisation des données dans MicrosoftEdge. Cette stratégie empêche également l'invite de consentement de synchronisation d'apparaître.
 
-
- 
 Si vous configurez pas cette stratégie, ou si vous ne la configurez pas de la façon recommandée, les utilisateurs peuvent activer ou désactiver la synchronisation. Si vous définissez cette stratégie comme étant obligatoire, les utilisateurs ne pourront pas activer la synchronisation.
 
   #### Fonctionnalités prises en charge:
@@ -15480,7 +15350,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
   ### TLS13HardeningForLocalAnchorsEnabled
   #### Activer une fonctionnalité de sécurité TLS1.3 pour les ancres d’approbation locales (obsolète)
   
-  
   >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version85 de MicrosoftEdge.
   #### Versions prises en charge:
   - Sur Windows et macOS depuis la version81 et jusqu’à la version85
@@ -15493,10 +15362,6 @@ Cette stratégie contrôle une fonctionnalité de sécurité TLS 1.3 qui protèg
 Si vous activez cette stratégie ou si vous ne la configurez pas, MicrosoftEdge active ces protections de sécurité pour toutes les connexions. 
 
 Si vous désactivez cette stratégie, MicrosoftEdge désactive ces protections de sécurité pour les connexions authentifiées par des certificats de signature installés localement. Ces protections sont toujours activées pour les connexions authentifiées par des certificats de signature reconnus publiquement. 
-
-                                                            
-
-             
 
 Cette stratégie peut être utilisée pour tester les proxys concernés et les mettre à jour. En principe, les proxys affectés provoqueront un échec de connexion avec le code d'erreur "ERR_TLS13_DOWNGRADE_DETECTED".
 
@@ -15760,8 +15625,6 @@ Si vous ne configurez pas cette stratégie, le navigateur ne commence à économ
 Si vous désactivez cette stratégie ou ne la configurez pas, les utilisateurs peuvent définir leur propre niveau de prévention du suivi.
 
 Mappage des options de stratégie:
-   
- 
 
 * TrackingPreventionOff (0) = Désactivé (pas de prévention de suivi)
 
@@ -16442,9 +16305,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ### WebComponentsV0Enabled
   #### Réactiver l'API Web Components v0 jusqu'à M84 (obsolète)
   
-  
-  
-  
   >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version 84 de Microsoft Edge.
   #### Versions prises en charge:
   - sur Windows et macOS depuis la version80 et jusqu’à la version84
@@ -16495,15 +16355,11 @@ Si elle est définie sur False ou si elle n'est pas définie, les fonctionnalit�
   ### WebDriverOverridesIncompatiblePolicies
   #### Autoriser WebDriver à remplacer les stratégies incompatibles (obsolète)
   
-  
-  
-  
   >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version 84 de Microsoft Edge.
   #### Versions prises en charge:
   - sur Windows et macOS depuis la version77 et jusqu’à la version84
 
   #### Description
-  
   
 Cette stratégie ne fonctionne pas, car WebDriver est désormais compatible avec toutes les stratégies existantes.
 
