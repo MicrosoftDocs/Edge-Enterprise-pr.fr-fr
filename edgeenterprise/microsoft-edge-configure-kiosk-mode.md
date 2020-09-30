@@ -3,19 +3,19 @@ title: Configurer Microsoft Edge en mode plein écran
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/22/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer Microsoft Edge en mode plein écran
-ms.openlocfilehash: d7c9df82079f8343d43ccfd312623e6e01358fa9
-ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
+ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
+ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072668"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "11078664"
 ---
 # Configurer Microsoft Edge en mode plein écran
 
@@ -77,7 +77,7 @@ Vous pouvez appeler les fonctionnalités de Microsoft Edge en mode plein écran 
 
 ## Configurer le mode plein écran avec l’accès attribué
 
-Microsoft Edge en mode plein écran avec accès attribué est actuellement disponible pour le test avec la version la plus récente de la [version d'évaluation Windows10Insider](https://insider.windows.com/), version 20215 ou ultérieure, et avec le [canal de développement Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 87.0.644 ou ultérieure.
+Microsoft Edge en mode plein écran avec accès attribué est actuellement disponible pour le test avec la version la plus récente de la [version d'évaluation Windows10Insider](https://insider.windows.com/), version 20215 ou ultérieure, et avec le [canal de développement Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 87.0.644.4 ou ultérieure.
 
 **Comment puis-je obtenir l’aperçu de Windows Insider?**
 
@@ -88,7 +88,7 @@ Pour installer une version d'évaluation de Windows10 Insider sur un PC, suivez 
 Les paramètres Windows constituent le moyen le plus simple de configurer un ou deux appareils borne à une seule application. Procédez comme suit pour configurer un ordinateur borne à une seul application.
 
 1. Installez la version la plus récente de Windows10 Insider Preview, version 20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
-2. Installez la dernière version du [canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), 87.0.644 ou une version ultérieure.
+2. Installez la dernière version du [canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), 87.0.644.4 ou une version ultérieure.
 
    > [!IMPORTANT]
    > Une installation au niveau des appareils étant requise, seul un canal non-Canary est pris en charge.
@@ -99,39 +99,39 @@ Les paramètres Windows constituent le moyen le plus simple de configurer un ou 
 
 4. Sur la page **Configurer une borne** , cliquez sur  **Prise en main**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Page borne: prise en main":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Configurer la borne avec l’accès attribué":::
 
 5. Tapez un nom pour créer un nouveau compte borne ou sélectionnez un compte existant dans la liste déroulante rempli, puis cliquez sur **Suivant**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Mode plein écran: créer un compte":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Configurer la borne avec l’accès attribué":::
 
 6. Dans la page **Choisir une application borne** , sélectionnez **Microsoft Edge**, puis cliquez sur  **Suivant**.
 
    > [!NOTE]
    > Cela s’applique uniquement aux canaux Microsoft Edge dev, Beta et stable.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Mode plein écran: choisir une application":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Configurer la borne avec l’accès attribué":::
 
 7. Sélectionnez l’une des options suivantes pour l’affichage de Microsoft Edge en mode plein écran:
 
    - Connexion numérique/interactive: affiche un site spécifique en mode plein écran, exécutant Microsoft Edge.
    - Navigateur public: exécute une version multi-onglet limitée de Microsoft Edge.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Affichage en mode plein écran: signature numérique plein écran":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Configurer la borne avec l’accès attribué":::
 
 8. Sélectionnez **Suivant**.
 9. Tapez l’URL à charger lors du lancement du kiosque.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Mode plein écran: entrer l’URL":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Configurer la borne avec l’accès attribué":::
 
 10. Acceptez la valeur par défaut de 5 minutes pour le temps d’inactivité ou indiquez la valeur de votre choix.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Mode plein écran: entrer la durée d’inactivité":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Configurer la borne avec l’accès attribué":::
 
 11. Cliquez sur  **Suivant**.
 12. Fermez la fenêtre  **Paramètres**  pour enregistrer et appliquer vos choix.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Mode plein écran: terminer la configuration":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Configurer la borne avec l’accès attribué":::
 
 13. Redémarrez l’appareil borne et connectez-vous avec le compte borne local pour valider la configuration.
 
@@ -176,6 +176,6 @@ Nous allons ajouter la prise en charge et les fonctionnalités suivantes:
 ## Voir également
 
 - [Configurer des bornes et enseignes numériques dans les éditions Windows de bureau](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Déployer la version héritée du mode plein écran de MicrosoftEdge](https://aka.ms/edgekioskmode) 
+- [Déployer la version héritée du mode plein écran de MicrosoftEdge](https://aka.ms/edgekioskmode)
 - [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
