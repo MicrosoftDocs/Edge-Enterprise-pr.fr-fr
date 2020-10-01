@@ -3,19 +3,19 @@ title: Sécurité Microsoft Edge pour votre entreprise
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 09/22/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sécurité Microsoft Edge pour votre entreprise
-ms.openlocfilehash: b9ad039b699c036b16506d360f75d46c303ce301
-ms.sourcegitcommit: 7b1c5a2a768a7418f8b25128df92442d63f0f87b
+ms.openlocfilehash: 313d1837d85fe23ab910741e28f95b77ffd7029d
+ms.sourcegitcommit: fbfe796b2717573dc221b9d4509a1662d9bbb452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11068382"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "11091683"
 ---
 # Sécurité Microsoft Edge pour votre entreprise
 
