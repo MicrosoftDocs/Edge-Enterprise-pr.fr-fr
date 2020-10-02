@@ -3,19 +3,19 @@ title: Synchronisation de Microsoft Edge Entreprise
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/15/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Synchronisation de Microsoft Edge Entreprise
-ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
-ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
+ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
+ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "11016343"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "11091946"
 ---
 # Synchronisation de Microsoft Edge Entreprise
 
@@ -33,8 +33,6 @@ La synchronisation de MicrosoftEdge permet aux utilisateurs d’accéder à leur
 - Adresses et autres (remplissage de formulaire)
 - Regroupements
 - Paramètres
-- Historique de navigation
-- Ouvrir les onglets
 
 La fonctionnalité de synchronisation est activée après accord de l’utilisateur et les utilisateurs peuvent activer ou désactiver la synchronisation pour chacun des types de données répertoriés ci-dessus.
 
@@ -80,7 +78,7 @@ Les stratégies de groupe suivantes affectent la synchronisation de MicrosoftEdg
 
 #### Les données synchronisées sont-elles chiffrées? 
 
-Les données sont cryptées lors du transport en utilisant TLS 1.2 ou plus. La plupart des types de données sont en outre cryptés au repos dans le service de Microsoft à l'aide d'AES256, à l'exception des types de données de l'historique du navigateur et des onglets ouverts. Pour empêcher ces types de données de se synchroniser, vous pouvez appliquer la politique [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled).
+Les données sont cryptées lors du transport en utilisant TLS 1.2 ou plus. La plupart des types de données sont également chiffrés au repos dans le service Microsoft à l’aide de la fonction AES256. 
 
 #### Où les données Microsoft Edge synchronisées de sont-elles stockées?
 
