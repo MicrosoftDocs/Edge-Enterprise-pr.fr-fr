@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 09/23/2020
+ms.date: 10/01/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: 91bb0ee198b22a25e61470962d4f192a5adf737d
-ms.sourcegitcommit: 4d250c0c48634ecb1ea7ca03307809c80bb21db8
+ms.openlocfilehash: 9bcab3d87658bede42e7fcff0728d7e51228118f
+ms.sourcegitcommit: 63cf3bba0aefdea050d71edc0a3a1070fa9d9cf4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "11077631"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "11093834"
 ---
 # Notes de publication du canal stable Microsoft Edge
 
@@ -23,6 +23,10 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## Version 85.0.564.68: 1eroctobre
+
+Résolution de divers bogues et problèmes de performances.
 
 ## Version 85.0.564.63: 23 septembre
 
