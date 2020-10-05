@@ -3,19 +3,19 @@ title: Sécurité Microsoft Edge pour votre entreprise
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 09/30/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sécurité Microsoft Edge pour votre entreprise
-ms.openlocfilehash: 313d1837d85fe23ab910741e28f95b77ffd7029d
-ms.sourcegitcommit: fbfe796b2717573dc221b9d4509a1662d9bbb452
+ms.openlocfilehash: 018353c4f85bc380d85554d058d029dfde959257
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11091683"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094738"
 ---
 # Sécurité Microsoft Edge pour votre entreprise
 
@@ -46,7 +46,7 @@ Pour Chrome, une extension est disponible pour tirer parti de l’isolation du m
 
 Outre la protection contre les menaces externes, les administrateurs informatiques doivent également se prémunir contre les risques internes. La protection des données d’entreprise sensibles (à l’échelle) est une priorité essentielle pour les administrateurs informatiques, notamment lorsque les effectifs ont été décentralisés. Microsoft Edge est le seul navigateur avec une prise en charge native de l’accès conditionnel Azure AD, la Protection des informations Windows et la nouvelle protection contre la perte de données (DLP) Microsoft Endpoint sans nécessiter de logiciel supplémentaire.
 
-**Microsoft Edge est le seul navigateur à prendre en charge en mode natif l’accès conditionnel**. [La prise en charge de Microsoft Edge pour l’accès conditionnel](https://docs.microsoft.com/DeployEdge/security-overview#conditional-access) permet aux organisations d’utiliser les signaux d’identité dans le cadre de leurs décisions de contrôle d’accès. [L’accès conditionnel](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) est l’outil utilisé par Azure Active Directory pour rassembler les signaux, prendre des décisions et appliquer des stratégies d’organisation. L’accès conditionnel est au cœur du nouveau plan de contrôle orienté identité. Pour obtenir une prise en charge de l’accès conditionnel sur chrome, un plug-in supplémentaire est nécessaire.
+**Microsoft Edge est le seul navigateur à prendre en charge en mode natif l’accès conditionnel**. [La prise en charge de Microsoft Edge pour l’accès conditionnel](ms-edge-security-conditional-access.md) permet aux organisations d’utiliser les signaux d’identité dans le cadre de leurs décisions de contrôle d’accès. [L’accès conditionnel](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) est l’outil utilisé par Azure Active Directory pour rassembler les signaux, prendre des décisions et appliquer des stratégies d’organisation. L’accès conditionnel est au cœur du nouveau plan de contrôle orienté identité. Pour obtenir une prise en charge de l’accès conditionnel sur chrome, un plug-in supplémentaire est nécessaire.
 
 > [!NOTE]
 > Microsoft365 E3 ou une version ultérieure requise pour l’accès conditionnel Azure AD.
@@ -56,7 +56,7 @@ Outre la protection contre les menaces externes, les administrateurs informatiqu
 > [!NOTE]
 > La configuration de la Protection des informations Windows (WIP) requiert des licences Microsoft Intune ou Microsoft Endpoint Configuration Manager, ou à l’aide d’une solution de gestion des appareils mobiles tierces, susceptible d’avoir des exigences en matière de licences supplémentaires.
 
-**Microsoft Endpoint DLP ne sera pris en charge en mode natif que sur Microsoft Edge lors de sa mise à disposition générale en octobre**. Protection contre la perte de données (DLP) Microsoft Endpoint s’intègre au Centre de sécurité Microsoft et étend la protection des informations à Microsoft Edge pour avertir les utilisateurs de l’activité non conforme et empêcher la perte de données à mesure que les utilisateurs travaillent en ligne. Elle découvre et libelle les données sensibles à l’intérieur de l’entreprise qui correspondent à des critères définis par l’administrateur, tels que des fichiers contenant des numéros de carte bancaire ou des ID gouvernementaux (par exemple, des numéros de sécurité sociale), des informations financières, etc. Les stratégies de protection des informations Microsoft peuvent être déployées vers Microsoft Endpoint DLP sans reconfiguration supplémentaire, y compris les identificateurs de contenu sensible et les stratégies que les administrateurs informatiques ont déjà personnalisés. Il s’agit d’un déploiement transparent de la protection des informations pour les administrateurs informatiques.
+**Microsoft Endpoint DLP ne sera pris en charge en mode natif que sur Microsoft Edge lors de sa mise à disposition générale en octobre**. Protection contre la perte de données (DLP) Microsoft Endpoint s’intègre au Centre de sécurité Microsoft et étend la protection des informations à Microsoft Edge pour avertir les utilisateurs de l’activité non conforme et empêcher la perte de données à mesure que les utilisateurs travaillent en ligne. Ce système découvre et libelle les données sensibles à l’intérieur de l’entreprise qui correspondent à des critères définis par l’administrateur, tels que des fichiers contenant des numéros de carte bancaire ou des ID gouvernementaux (par exemple, des numéros de sécurité sociale), des informations financières, et bien plus encore. Vous pouvez déployer des stratégies de protection des informations Microsoft vers Microsoft Endpoint DLP sans reconfiguration supplémentaire, y compris les identificateurs de contenu sensible et les stratégies que les administrateurs informatiques ont déjà personnalisés. Il s’agit d’un déploiement transparent de la protection des informations pour les administrateurs informatiques.
 
 > [!NOTE]
 > Microsoft365 E5 ou l’abonnement de conformité Microsoft365 E5 est requis pour Protection contre la perte de données Microsoft Endpoint.
