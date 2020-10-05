@@ -3,19 +3,19 @@ title: MicrosoftEdge et MicrosoftDefenderApplicationGuard
 ms.author: srugh
 author: dan-wesley
 manager: seanlyn
-ms.date: 06/19/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prise en charge de Microsoft Edge pour Microsoft Defender Application Guard
-ms.openlocfilehash: 7bd2efd35e0cd65c524a17a88f659e9b3838233f
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 7052c8cee9282c0ca2f5cafaa608e7e4e71d111d
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979848"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094758"
 ---
 # Prise en charge de Microsoft Edge pour Microsoft Defender Application Guard
 
@@ -121,5 +121,4 @@ Oui. [Forum aux questions - MicrosoftDefenderApplicationGuard](https://docs.micr
 ## Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Vue d’ensemble de la sécurité](security-overview.md)
 - [Microsoft Defender-Protection avancée contre les menaces](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
