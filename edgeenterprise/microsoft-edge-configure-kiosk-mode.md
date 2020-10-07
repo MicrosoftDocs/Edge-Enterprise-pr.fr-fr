@@ -3,19 +3,19 @@ title: Configurer Microsoft Edge en mode plein écran
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/24/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer Microsoft Edge en mode plein écran
-ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
-ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
+ms.openlocfilehash: 799b3dd4b7fc96f0b8e5cb718bca98fd4f38ec15
+ms.sourcegitcommit: 78905f66f4a6590a57c8f2bf808af92106b62996
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078664"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "11094861"
 ---
 # Configurer Microsoft Edge en mode plein écran
 
@@ -23,8 +23,6 @@ Cet article décrit la configuration des options Microsoft Edge en mode plein é
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version87 ou ultérieure.
-
-Pour plus d’informations sur la version héritée du mode plein écran de MicrosoftEdge (version45 et antérieure , consultez [Déployer Microsoft Edge en mode plein écran](https://aka.ms/edgekioskmode).
 
 ## Vue d'ensemble
 
@@ -35,7 +33,7 @@ Microsoft Edge en mode plein écran offre deux expériences de verrouillage du n
 
 Les deux expériences exécutent une session Microsoft Edge InPrivate qui protège les données de l’utilisateur.
 
-## Configurer Microsoft Edge en mode plein écran  
+## Configurer Microsoft Edge en mode plein écran
 
 Un groupe initial de fonctionnalités du mode plein écran est désormais disponible pour tester avec le canal Microsoft Edge Canary (version87). Vous pouvez télécharger Microsoft Edge Canary à partir de la page [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/download) .
 
@@ -43,10 +41,10 @@ Un groupe initial de fonctionnalités du mode plein écran est désormais dispon
 
 Les composants suivants sont disponibles:
 
-- Navigation InPrivate. Protège les données des utilisateurs en supprimant les données du navigateur et les téléchargements lorsque la session se termine.
-- Stratégie permettant de configurer les téléchargements supprimés à la fermeture.
-- Réinitialiser la session utilisateur après une certaine période d’inactivité.
-- Première série de fonctionnalités de verrouillage. Les fonctions suivantes sont disponibles:
+- La navigation InPrivate protège les données des utilisateurs en supprimant les données du navigateur et les téléchargements à la fin de la session.
+- Stratégie permettant de configurer la fonctionnalité Supprimer les téléchargements à la fermeture.
+- Option permettant de réinitialiser une session utilisateur après une certaine période d’inactivité.
+- Ensemble initial de fonctionnalités de verrouillage. Les fonctions suivantes sont disponibles:
 
   - Menu contextuel de la souris
   - F12: outils de développement
@@ -56,14 +54,14 @@ Les composants suivants sont disponibles:
 > [!NOTE]
 > Lorsque le mode plein écran évolue, d’autres fonctionnalités sont disponibles.
 
-### Utiliser les fonctionnalités du mode plein écran
+## Utiliser les fonctionnalités du mode plein écran
 
 Vous pouvez appeler les fonctionnalités de Microsoft Edge en mode plein écran grâce aux options de ligne de commande suivantes de Windows10 :
 
 - Signalisation numérique/interactive du mode plein écran `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
 - Navigation publique en mode plein écran: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
 
-#### Autres options de la ligne de commande
+### Autres options de la ligne de commande
 
 - `--no-first-run` : désactivez la première expérience d’exécution de Microsoft Edge.
 - `--kiosk-idle-timeout-minutes` : modifiez l’heure (en minutes) de la dernière activité d’utilisateur avant la réinitialisation de la session de l’utilisateur par la version du mode plein écran de MicrosoftEdge. Les valeurs suivantes sont prises en charge:
@@ -75,13 +73,24 @@ Vous pouvez appeler les fonctionnalités de Microsoft Edge en mode plein écran 
     - 0: désactive le minuteur
     - 1-1440 minutes pour la réinitialisation du minuteur d’inactivité
 
-## Configurer le mode plein écran avec l’accès attribué
+## MicrosoftEdge avec accès affecté
 
-Microsoft Edge en mode plein écran avec accès attribué est actuellement disponible pour le test avec la version la plus récente de la [version d'évaluation Windows10Insider](https://insider.windows.com/), version 20215 ou ultérieure, et avec le [canal de développement Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 87.0.644.4 ou ultérieure.
+### Borne à application unique
+
+Microsoft Edge prend actuellement en charge un sous-ensemble des mêmes types de mode plein écran de l’ancienne version de Microsoft Edge pour un accès attribué à une application unique avec les expériences de verrouillage, la signalisation numérique/interactive et la navigation publique ci-après.  
+
+Le mode plein écran avec accès attribué est actuellement disponible pour le test avec la version la plus récente de la  [version d'évaluation Windows10Insider](https://insider.windows.com/), version 20215 ou ultérieure, et avec le  [canal de développement Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 87.0.644.4 ou ultérieure.
 
 **Comment puis-je obtenir l’aperçu de Windows Insider?**
 
-Pour installer une version d'évaluation de Windows10 Insider sur un PC, suivez les instructions de [Prise en main des versions d'évaluation de Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+Si vous souhaitez en savoir plus sur l’installation d’une version d'évaluation de Windows10 Insider sur un PC, veuillez consulter les instructions de la rubrique  [Prise en main des versions d'évaluation de Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+
+### Borne à plusieurs applications
+
+Vous pouvez exécuter MicrosoftEdge avec un [accès attribué à plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) sous Windows10. Cela équivaut au type de mode plein écran «Navigation normale» de l’ancienne version de Microsoft Edge . Pour configurer MicrosoftEdge avec accès affecté à plusieurs applications, suivez les instructions sur la façon de [Configurer une borne à plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (L’AUMID du canal stable de MicrosoftEdge est **MSEdge**).
+
+Configurer le mode plein écran de Microsoft Edge
+Lorsque vous utilisez MicrosoftEdge avec accès attribué à plusieurs applications, vous pouvez utiliser les [stratégies de navigateur MicrosoftEdge](https://review.docs.microsoft.com/en-us/DeployEdge/microsoft-edge-policies) pour configurer l’expérience de navigation en fonction de vos besoins spécifiques.
 
 ### Configurer à l’aide des paramètres Windows
 
@@ -153,9 +162,9 @@ Bien que le mode plein écran ne prenne pas en charge les fonctionnalités suiva
 Nous allons ajouter les fonctionnalités suivantes:
 
 - Bouton terminer la session
-- Barre d’adresse URL en lecture seule  
+- Barre d’adresse en lecture seule  
   - Configurable avec une stratégie de groupe
-  - Lorsque cette option est activée, les utilisateurs ne peuvent pas modifier l’URL de la barre d’adresses pour essayer d’accéder à une autre page.
+  - Lorsque cette option est activée, les utilisateurs ne peuvent pas modifier la barre d’adresse, ni accéder à une autre page.
 
 - Autres fonctions de verrouillage:
 
