@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/24/2020
+ms.date: 09/28/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 146043b518f02b8581498c273db4327682993609
-ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
+ms.openlocfilehash: dc780166f05afd7d667f901a1198ce125831d01b
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078207"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094608"
 ---
 # MicrosoftEdge: Stratégies
 La dernière version de MicrosoftEdge inclut les stratégies suivantes. Vous pouvez utiliser ces stratégies pour configurer le fonctionnement de MicrosoftEdge dans votre organisation.
@@ -36,10 +36,11 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[Paramètres de l’application Guard](#application-guard-settings)|[Cast](#cast)|
 |[Paramètres du contenu](#content-settings)|[Moteur de recherche par défaut](#default-search-provider)|
 |[Extensions](#extensions)|[Authentification HTTP](#http-authentication)|
-|[Messagerie native](#native-messaging)|[Gestionnaire et protection des mots de passe](#password-manager-and-protection)|
-|[Impression](#printing)|[Serveur proxy](#proxy-server)|
-|[Paramètres SmartScreen](#smartscreen-settings)|[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|
-|[Supplémentaire](#additional)|
+|[Paramètres du mode kiosque](#kiosk-mode-settings)|[Messagerie native](#native-messaging)|
+|[Gestionnaire et protection des mots de passe](#password-manager-and-protection)|[Impression](#printing)|
+|[Serveur proxy](#proxy-server)|[Paramètres SmartScreen](#smartscreen-settings)|
+|[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|[Supplémentaire](#additional)|
+
 
 ### [*Paramètres de l’application Guard*](#application-guard-settings-policies)
 |Nom de la stratégie|Caption|
@@ -117,13 +118,17 @@ et des conseils pour les services Microsoft|
 ### [*Authentification HTTP*](#http-authentication-policies)
 |Nom de la stratégie|Caption|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Autoriser les invites d’authentification de base HTTP multi-domaine|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Autoriser les invites d’authentification HTTP à origines multiples|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Définit une liste des serveurs auxquels MicrosoftEdge peut déléguer les informations d’identification de l’utilisateur|
 |[AuthSchemes](#authschemes)|Méthodes d’authentification prises en charge|
 |[AuthServerAllowlist](#authserverallowlist)|Configurer la liste des serveurs d’authentification autorisés|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Désactiver la consultation CNAME lors de la négociation de l’authentification Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Inclure un port non standard dans le SPN Kerberos|
 |[NtlmV2Enabled](#ntlmv2enabled)|Contrôler l’activation de l’authentification NTLMv2|
+### [*Paramètres du mode kiosque*](#kiosk-mode-settings-policies)
+|Nom de la stratégie|Caption|
+|-|-|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Supprimer les fichiers téléchargés dans le cadre d’une session kiosque lorsque MicrosoftEdge se ferme|
 ### [*Messagerie native*](#native-messaging-policies)
 |Nom de la stratégie|Caption|
 |-|-|
@@ -559,11 +564,21 @@ Si vous avez également configuré la stratégie [EnableMediaRouter](#enablemedi
   - sur Windows et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-  Spécifiez une liste des sites, basés sur des formats d’URL, pour lesquels MicrosoftEdge doit sélectionner automatiquement un certificat client, si le site en demande un.
+  La définition de stratégie vous permet de créer une liste de modèles d’URL spécifiant les sites pour lesquels MicrosoftEdge peut automatiquement sélectionner un certificat client. La valeur est un groupe de dictionnaires JSON à séquences, chacun ayant le format { «modèle»: «$URL_PATTERN», «filtre»: $FILTER }, où $URL_PATTERN correspond à un schéma de paramètres de contenu. $FILTER limite les certificats client à partir desquels le navigateur effectue une sélection automatique. Indépendamment du filtre, seuls les certificats correspondant à la demande de certificats du serveur sont sélectionnés.
 
-Cette valeur doit être un tableau de dictionnaires convertis en chaînes JSON. Chaque dictionnaire doit avoir le format { "pattern": "$URL_PATTERN", "filter" : $FILTER }, où $URL_PATTERN correspond à un schéma de paramètres de contenu. $FILTER limite les certificats client parmi lesquels le navigateur effectue une sélection automatique. Indépendamment du filtre, seuls les certificats correspondant à la demande de certificats du serveur sont sélectionnés. Par exemple, si $FILTER est au format { "ISSUER": { "CN": "$ISSUER_CN" } }, seuls les certificats client émis par un certificat dont la valeur CommonName est $ISSUER_CN sont sélectionnés. Si $FILTER contient une section «ISSUER» et une section «SUBJECT», le certificat client doit satisfaire les deux conditions pour être sélectionné. Si $FILTER spécifie une organisation («O»), le certificat doit contenir au moins une organisation correspondant à la valeur spécifiée pour être sélectionné. Si $FILTER spécifie une unité organisationnelle («UO»), le certificat doit contenir au moins une unité organisationnelle correspondant à la valeur spécifiée pour être sélectionné. Si $FILTER correspond à la valeur de dictionnaire vide {}, la sélection de certificats client ne fait pas l’objet de restrictions supplémentaires. 
+Exemples d’utilisation de la section $FILTER:
 
-Si cette stratégie n’est pas configurée, la sélection automatique n’est effectuée pour aucun site.
+* Lorsque $FILTER est défini sur { «ÉMETTEUR»: { «CN»: «$ISSUER_CN» } }, seuls les certificats client émis par un certificat dont la valeur CommonName est $ISSUER_CN sont sélectionnés.
+
+* Lorsque $FILTER comprend les sections «ÉMETTEUR» et «OBJET», seuls les certificats clients répondant aux deux conditions sont sélectionnés.
+
+* Lorsque $FILTER comprend une section «OBJET» avec la valeur «O», un certificat nécessite au moins une organisation qui correspond à la valeur spécifiée à sélectionner.
+
+* Lorsque $FILTER comprend une section «OBJET» avec une valeur «OU», un certificat nécessite au moins une unité organisationnelle qui correspond à la valeur spécifiée à sélectionner.
+
+* Lorsque $FILTER est défini sur {}, la sélection de certificats client ne fait pas l’objet de restrictions supplémentaires. Notez que les filtres fournis par le serveur web continuent de s’appliquer.
+
+Si la stratégie reste non définie, il n’existe pas de sélection automatique des sites.
 
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
@@ -2039,9 +2054,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - sur Windows et macOS depuis la version80 ou versions ultérieures
 
   #### Description
-  Vous permet de rétablir le comportement SameSite hérité pour tous les cookies. Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient «SameSite=None» et supprime la condition requise pour que les cookies «SameSite=None» transportent l’attribut «Secure».
+  Vous permet de rétablir le comportement SameSite hérité pour tous les cookies. Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient «SameSite=None», supprime la condition requise pour que les cookies «SameSite=None» transportent l’attribut «Secure» et ignore la comparaison de schéma lorsque vous évaluez si deux sites sont same-site.
 
-Si cette stratégie n’est pas définie, le comportement par défaut pour les cookies qui n’indiquent pas d’attribut SameSite dépendra d’autres sources de configuration pour la fonctionnalité SameSite par défaut. Cette fonctionnalité peut être définie par un essai pratique ou par l’activation de l’indicateur des cookies du même site par défaut dans edge://flags.
+Si vous ne configurez pas cette stratégie, le comportement SameSite par défaut pour les cookies dépend d’autres sources de configuration pour la fonctionnalité SameSite par défaut, la fonctionnalité Cookies-without-SameSite-must-be-secure et la fonctionnalité Schemeful Same-Site. Ces fonctionnalités peuvent également être configurées à l’aide d’une version d’évaluation de terrain ou de l’indicateur same-site-by-default-cookies, l’indicateur cookies-without-same-site-must-be-secure ou l’indicateur schemeful-same-site dans edge://flags.
 
 Mappage des options de stratégie:
 
@@ -2097,7 +2112,7 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   #### Description
   Les cookies définis pour les domaines correspondant aux modèles spécifiés sont rétablis vers le comportement SameSite hérité. 
 
-Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient «SameSite=None» et supprime la condition requise pour que les cookies «SameSite=None» transportent l’attribut «Secure».
+Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient «SameSite=None», supprime la condition requise pour que les cookies «SameSite=None» transportent l’attribut «Secure» et ignore la comparaison de schéma lorsque vous évaluez si deux sites sont same-site.
 
 Si cette stratégie n’est pas configurée, la valeur globale par défaut est utilisée. La valeur globale par défaut est également utilisée pour les cookies sur les domaines non couverts par les modèles que vous spécifiez.
 
@@ -3801,16 +3816,16 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   [Retour au début](#microsoft-edge---policies)
 
   ### AllowCrossOriginAuthPrompt
-  #### Autoriser les invites d’authentification de base HTTP multi-domaine
+  #### Autoriser les invites d’authentification HTTP à origines multiples
   
   
   #### Versions prises en charge:
   - sur Windows et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-  Contrôle si un sous-contenu tiers sur une page est autorisé à ouvrir une boîte de dialogue d’authentification de base HTTP.
+  Détermine si les images tierces d’une page peuvent afficher une invite d’authentification.
 
-Cette option est habituellement désactivée dans le cadre de la protection contre l’hameçonnage. Si cette stratégie n’est pas configurée, elle est désactivée et les sous-contenus tiers ne sont pas autorisés à ouvrir une boîte de dialogue authentification HTTP de base.
+Cette option est habituellement désactivée dans le cadre de la protection contre l’hameçonnage. Si vous ne configurez pas cette stratégie, elle est désactivée et les images tierces ne peuvent pas afficher d’invite d’authentification.
 
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
@@ -3823,7 +3838,7 @@ Cette option est habituellement désactivée dans le cadre de la protection cont
   #### Informations et paramètres Windows
   ##### Informations relatives à la stratégie de groupe (ADMX)
   - Nom unique de la stratégie de groupe: AllowCrossOriginAuthPrompt
-  - Nom de la stratégie de groupe: autoriser les invites d’authentification de base HTTP multi-domaine
+  - Nom de la stratégie de groupe: autorise les invites d’authentification HTTP à origines multiples
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/HTTP authentication
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -4128,6 +4143,56 @@ Si cette stratégie n’est pas configurée, l’authentification NTLMv2 est act
 ``` xml
 <true/>
 ```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ## Stratégies des paramètres du mode kiosque
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### KioskDeleteDownloadsOnExit
+  #### Supprimer les fichiers téléchargés dans le cadre d’une session kiosque lorsque MicrosoftEdge se ferme
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows depuis la version87 ou versions ultérieures
+
+  #### Description
+  Remarque: cette stratégie est prise en charge uniquement lorsque MicrosoftEdge est lancée avec le paramètre command-line «--edge-kiosk-type».
+
+Si vous activez cette stratégie, les fichiers téléchargés dans le cadre d’une session kiosque sont supprimés lors de chaque fermeture de MicrosoftEdge.
+
+Si vous désactivez cette stratégie ou si vous ne la configurez pas, les fichiers téléchargés dans le cadre d’une session kiosque ne sont pas supprimés lors de la fermeture de MicrosoftEdge.
+
+Pour obtenir plus d’informations sur la configuration du mode kiosque, voir [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+  - Booléen
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - Nom unique de la stratégie de groupe: KioskDeleteDownloadsOnExit
+  - Nom de la stratégie de groupe: supprimer les fichiers téléchargés dans le cadre d’une session kiosque lorsque MicrosoftEdge se ferme
+  - Chemin d’accès de la stratégie de groupe(obligatoire): paramètres Administrative Templates/Microsoft Edge/Kiosk Mode
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: KioskDeleteDownloadsOnExit
+  - Type de valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000001
+```
+
+
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -9170,8 +9235,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Sur Windows et macOS depuis la version86 ou ultérieur
 
   #### Description
-  
-Déterminer si les sites web peuvent accéder aux ports série. Vous pouvez bloquer complètement l’accès ou demander à l’utilisateur, chaque fois qu’un site web souhaite accéder à un port série.
+  Déterminer si les sites web peuvent accéder aux ports série. Vous pouvez bloquer complètement l’accès ou demander à l’utilisateur, chaque fois qu’un site web souhaite accéder à un port série.
 
 Définir la stratégie sur3 permet aux sites web de demander l’accès aux ports série. Définir la stratégie sur2 refuse l’accès aux ports série.
 
@@ -10892,7 +10956,7 @@ Si vous désactivez ce paramètre ou ne définissez pas de valeur, le Filtre adu
   - sur Windows et macOS depuis la version81 ou versions ultérieures
 
   #### Description
-  Cette stratégie est déconseillée, car elle a pour but de servir uniquement comme mécanisme à court terme afin d’offrir aux entreprises davantage de temps pour mettre à jour leurs environnements si et quand ils sont détectés comme étant incompatibles avec la stratégie actuelles de point d’accès par défaut. Il ne fonctionne pas dans la version 86 de Microsoft Edge.
+  Cette stratégie est déconseillée, car elle a pour but de servir uniquement comme mécanisme à court terme afin d’offrir aux entreprises davantage de temps pour mettre à jour leurs environnements si et quand ils sont détectés comme étant incompatibles avec la stratégie actuelles de point d’accès par défaut. Il ne fonctionne pas dans la version 88 de Microsoft Edge.
 
 La stratégie de renvoie par défaut de MicrosoftEdge est renforcée à partir de sa valeur actuelle no-referrer-when-downgrade vers la valeur strict-origin-when-cross-origin, plus sécurisée dans le cadre d'un lancement graduel.
 
@@ -10992,7 +11056,7 @@ Cette stratégie est désactivée par défaut. Si elle est activée, les utilisa
 
 Si vous ne configurez pas cette stratégie, les utilisateurs pourront activer ou désactiver la synchronisation. Si vous activez cette stratégie, les utilisateurs ne pourront pas désactiver la synchronisation.
 
-Pour que cette stratégie fonctionne correctement, la stratégie [BrowserSignin](#browsersignin) ne doit pas être configurée ou doit être activée. Si [ForceSync](#forcesync) est désactivée, [BrowserSignin](#browsersignin) ne sera pas prise en compte.
+Pour que cette stratégie fonctionne correctement, la stratégie [BrowserSignin](#browsersignin) ne doit pas être configurée ou doit être activée. Si [BrowserSignin](#browsersignin) est désactivée, [ForceSync](#forcesync) ne sera pas prise en compte.
 
 [SyncDisabled](#syncdisabled) ne doit pas être configurée ou doit être définie sur False. Si ce paramètre est défini sur True, [ForceSync](#forcesync) ne sera pas prise en compte.
 
@@ -11365,7 +11429,7 @@ Pour les options de configuration affichées dans l'expérience de première ex�
 
 - L'utilisateur est toujours connecté automatiquement à MicrosoftEdge si le compte Windows est de type AAD ou MSA.
 
-- La synchronisation ne sera pas activée par défaut à Microsoft Edge si le compte Windows est de type AAD ou MSA. 
+-La synchronisation n’est pas activée par défaut et les utilisateurs sont invités à décider s’ils souhaitent effectuer une synchronisation au démarrage du navigateur. Vous pouvez utiliser la stratégie [ForceSync](#forcesync) ou [SyncDisabled](#syncdisabled) pour configurer la synchronisation et l’invite de consentement à la synchronisation.
 
 Si vous désactivez cette stratégie ou si vous ne la configurez pas, l'expérience de première exécution et l'écran de démarrage s'affichent.
 
@@ -11376,6 +11440,8 @@ Remarque : les options de configuration spécifiques qui s'affichent à l'utilis
 -[NewTabPageLocation](#newtabpagelocation)
 
 -[NewTabPageSetFeedType](#newtabpagesetfeedtype)
+
+-[ForceSync](#forcesync)
 
 -[SyncDisabled](#syncdisabled)
 
@@ -12474,13 +12540,13 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   #### Description
   Cette stratégie remplace la stratégie d’indicateur ie-mode-test. Elle permet aux utilisateurs d’ouvrir un onglet de mode IE à partir de l’option de menu de l’interface utilisateur.
 
-       Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) définie sur «IEMode»    et    [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) avec une liste comportant au moins une entrée.
+Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) défini sur «IEMode» et [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) avec une liste comportant au moins une entrée.
 
-       Si vous activez cette stratégie, les utilisateurs peuvent ouvrir l’onglet du mode IE à partir de l’option de l’interface utilisateur et naviguer du site actuel vers un site en mode IE.
+Si vous activez cette stratégie, les utilisateurs peuvent ouvrir l’onglet du mode IE à partir de l’option de l’interface utilisateur et naviguer du site actuel vers un site en mode IE.
 
-       Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas voir directement l’option de l’interface utilisateur dans le menu.
+Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas voir directement l’option de l’interface utilisateur dans le menu.
 
-       Si vous ne configurez pas cette stratégie, vous pouvez configurer l’indicateur ie-mode-test manuellement.
+Si vous ne configurez pas cette stratégie, vous pouvez configurer l’indicateur ie-mode-test manuellement.
 
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
@@ -12521,9 +12587,13 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### Description
   Spécifiez les origines à exécuter dans une isolation, dans leur propre processus.
+
 Cette stratégie isole également les origines nommées par sous-domaine. Par exemple, la définition de https://contoso.com/ provoque l'isolation de https://foo.contoso.com/ dans le cadre du site https://contoso.com/.
+
 Si la stratégie est activée, chacune des origines nommées dans une liste séparée par des virgules s'exécute dans son propre processus.
+
 Si vous désactivez cette stratégie, les fonctionnalités «IsolateOrigins» et «SitePerProcess» sont désactivées. Les utilisateurs peuvent toujours activer la stratégie «IsolateOrigins» manuellement, via les indicateurs de ligne de commande.
+
 Si vous ne configurez pas la stratégie, l'utilisateur peut modifier ce paramètre.
 
   #### Fonctionnalités prises en charge:
@@ -14149,9 +14219,9 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas poursuivre
   - sur Windows et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-  Définit la version minimale de SSL prise en charge. Si vous ne configurez pas cette stratégie, MicrosoftEdge utilise la version minimale par défaut qui est TLS 1.0. 
+  Définit la version minimale de TLS prise en charge. Si vous ne configurez pas cette stratégie, MicrosoftEdge utilise la version minimale par défaut qui est TLS 1.0. 
 
-Si vous activez cette stratégie, vous pouvez définir la version minimale parmi l’une des valeurs suivantes: «TLSv1», «TLSv1.1» or «TLSv1.2». Si la stratégie est configurée, MicrosoftEdge n'utilise pas de versions SSL/TLS antérieures à la version précisée. Toute valeur non reconnue sera ignorée.
+Si vous activez cette stratégie, MicrosoftEdge n'utilise pas de versions SSL/TLS antérieures à la version précisée. Toute valeur non reconnue sera ignorée.
 
 Mappage des options de stratégie:
 
@@ -14851,9 +14921,9 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - sur Windows et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-  Cette stratégie ne fonctionnait pas comme prévu en raison de modifications apportées aux besoins opérationnels. Par conséquent, elle est déconseillée et ne doit pas être utilisé.
+  Cette stratégie ne fonctionnait pas comme prévu en raison de modifications apportées aux besoins opérationnels. Therefore it's deprecated and should not be used.
 
-Indique s'il faut inclure un raccourci vers Office.com dans la barre des favoris. Pour les utilisateurs connectés à Microsoft Edge, le raccourci permet aux utilisateurs d’accéder à leurs applications et documents Microsoft Office. Si vous activez ou ne configurez pas cette stratégie, les utilisateurs peuvent choisir d’afficher ou non le raccourci en modifiant le bouton bascule dans le menu contextuel de la barre des favoris.
+Indique s'il faut inclure un raccourci vers Office.com dans la barre des favoris. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs. If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
 Si vous désactivez cette stratégie, le raccourci n’apparaît pas.
 
   #### Fonctionnalités prises en charge:
@@ -14950,9 +15020,10 @@ Si cette stratégie est désactivée, Signed HTTP Exchanges ne peut pas être ch
   - sur Windows et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-  
-La stratégie SitePerProcess peut être employée pour empêcher les utilisateurs de désactiver le comportement par défaut qui isole tous les sites. Vous pouvez également utiliser la stratégie [IsolateOrigins](#isolateorigins) pour isoler d'autres origines de manière plus précise. 
+  La stratégie SitePerProcess peut être employée pour empêcher les utilisateurs de désactiver le comportement par défaut qui isole tous les sites. Vous pouvez également utiliser la stratégie [IsolateOrigins](#isolateorigins) pour isoler d'autres origines de manière plus précise. 
+
 Si la règle est activée, les utilisateurs ne peuvent pas désactiver le comportement par défaut, dans lequel chaque site exécute son propre processus.
+
 Si cette règle n'est pas configurée ou si elle est désactivée, les utilisateurs peuvent désactiver l'isolation de sites.  (Par exemple, en accédant à l'option «Désactiver l'isolation de sites» sur edge://flags.) Le fait de désactiver cette règle, ou de ne pas la configurer, ne désactive pas l'isolation de sites. 
 
 
@@ -16229,16 +16300,9 @@ Quelle que soit la façon dont cette stratégie est activée, le paramètre d’
   - sur Windows et macOS depuis la version80 ou versions ultérieures
 
   #### Description
-  Spécifie la liste des sites web qui sont installés en mode silencieux, sans interaction de l'utilisateur, et qui ne peuvent pas être désinstallés ou désactivés par l'utilisateur.
+  Configurez cette stratégie pour spécifier la liste d’applications web qui s’installent de manière silencieuse, sans intervention de l’utilisateur, et les utilisateurs qui ne peuvent pas effectuer une désinstallation ou une désactivation.
 
-Chaque élément de la liste de la stratégie est un objet avec les membres suivants: 
-  - «url», qui est obligatoire. «url» doit indiqué l'URL de l'application web à installer.
-
-Les valeurs des membres facultatifs sont les suivantes: 
-  - «launch_container» doit avoir la valeur «window» ou «tab» pour indiquer comment l'application web sera ouverte après son installation.
-  - «create_desktop_shortcut» doit avoir la valeur true si un raccourci de bureau doit être créé sur Windows.
-
-Si «default_launch_container» est omis, l'application s'ouvre par défaut dans un onglet.  Quelle que soit la valeur de «default_launch_container», les utilisateurs peuvent modifier le conteneur dans lequel l'application s'ouvre. Si «create_desktop_shortcuts» est omis, aucun raccourci de bureau n'est créé.
+Chaque élément dans la liste de la stratégie est un objet avec un membre obligatoire: URL (URL de l’application web à installer) et 2membres facultatifs: default_launch_container (spécifie au mode fenêtre que l’application web s’ouvre with-a nouvel onglet est la valeur par défaut) et create_desktop_shortcut (True si vous voulez créer des raccourcis Linux et Windows Desktop).
 
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
@@ -16360,8 +16424,7 @@ Si elle est définie sur False ou si elle n'est pas définie, les fonctionnalit�
   - sur Windows et macOS depuis la version77 et jusqu’à la version84
 
   #### Description
-  
-Cette stratégie ne fonctionne pas, car WebDriver est désormais compatible avec toutes les stratégies existantes.
+  Cette stratégie ne fonctionne pas, car WebDriver est désormais compatible avec toutes les stratégies existantes.
 
 Cette stratégie permet aux utilisateurs de la fonctionnalité WebDriver de remplacer des stratégies pouvant interférer avec son fonctionnement.
 
