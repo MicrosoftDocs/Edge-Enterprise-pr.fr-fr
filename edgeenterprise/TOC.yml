@@ -139,6 +139,8 @@
       href: microsoft-edge-policies.md
     - name: Référence de stratégie de mise à jour
       href: microsoft-edge-update-policies.md
+    - name: Référence de la stratégie WebView2
+      href: microsoft-edge-webview-policies.md
     - name: Plus de références
       items:
         - name: ClickOnce et DirectInvoke
@@ -167,9 +169,11 @@
   items:
     - name: Collection de vidéos Microsoft Edge
       href: microsoft-edge-videos.md
+    - name: 'Vidéo: isolement de navigateur à l’aide d’application Guard'
+      href: microsoft-edge-video-security-application-guard.md
     - name: 'Vidéo: Déployer Microsoft Edge'
       href: microsoft-edge-video-deploy.md
-    - name: Vidéo-Microsoft Edge et protection contre la perte de données (DLP)
+    - name: Video-protection contre la perte de données (DLP)
       href: microsoft-edge-video-security-dlp.md
     - name: 'Vidéo : Microsoft Edge et Microsoft Search'
       href: microsoft-edge-video-search.md
