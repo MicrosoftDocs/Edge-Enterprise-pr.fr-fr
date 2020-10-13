@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/07/2020
+ms.date: 10/12/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 3108af527697a15875bc615deb6c3efe19a120d3
-ms.sourcegitcommit: 5dceccd6f882ce46ed53b8aa9247e115ce5adc7a
+ms.openlocfilehash: fdef5540214e80599c53d3802c9f34dacbfe7697
+ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104579"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "11114402"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -230,7 +230,7 @@ Résolution de divers bogues et problèmes de performances.
 
 - **L’API d’accès au stockage est disponible**. Cette API d’accès au stockage permet l’accès au stockage interne alors qu’un utilisateur tiers manifeste son intention directe d’autoriser un stockage qui sinon serait bloqué par la configuration actuelle du navigateur. Pour plus d’informations, voir [API d’accès au stockage](https://www.chromestatus.com/feature/5612590694662144).
 
-- **Envoyer à OneNote est disponible pour les collections MicrosoftEdge**. Tout le monde a hâte de pouvoir envoyer des informations rassemblées dans des collections vers OneNote, où l’on peut l’ajouter à un projet plus important et collaborer avec d’autres personnes. Et encore plus important, dans MicrosoftEdge85, vous pourrez envoyer du contenu aux produits *Office pour Mac* (Word, Excel et OneNote) pour MSA et AzureActiveDirectory.
+- **Envoyer à OneNote est disponible pour les collections MicrosoftEdge**. Tout le monde a hâte de pouvoir envoyer des informations rassemblées dans des collections vers OneNote, où l’on peut l’ajouter à un projet plus important et collaborer avec d’autres personnes. Et encore plus important, dans MicrosoftEdge85, vous pourrez envoyer du contenu aux produits *Office pour Mac* (Word, Excel et OneNote) pour le compte Microsoft et AzureActiveDirectory.
 
 - **Mises à jour de DevTools**. Pour plus d’informations sur les mises à jour suivantes, voir [Nouveautés de DevTools (MicrosoftEdge85)](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/whats-new/2020/06/devtools).
 
@@ -477,7 +477,7 @@ Résolution de divers bogues et problèmes de performances.
 
 - Autoriser la suppression (Masquer dans la barre d’outils) du bouton Collections de la barre d’outils Microsoft Edge par souci de cohérence.
 
-- La connexion automatique d'un compte Active Directory local est ciblée uniquement pour les organisations qui l’activent.  Si des utilisateurs ont déjà ouvert une session avec un compte Active Directory local, ils pourront maintenant se déconnecter. Les utilisateurs sont désormais automatiquement connectés au compte principal de leur système d’exploitation s’il s’agit d’un compte MSA ou Azure Active Directory. Les administrateurs peuvent activer la connexion automatique à l’aide d’un compte Azure Active Directory local utilisant la stratégie ConfigureOnPremisesAccountAutoSignIn.
+- La connexion automatique d'un compte Active Directory local est ciblée uniquement pour les organisations qui l’activent. Si des utilisateurs ont déjà ouvert une session avec un compte Active Directory local, ils pourront maintenant se déconnecter. Les utilisateurs sont désormais automatiquement connectés au compte principal de leur système d’exploitation s’il s’agit d’un compte Microsoft ou Azure Active Directory. Les administrateurs peuvent activer la connexion automatique à l’aide d’un compte Azure Active Directory local utilisant la stratégie ConfigureOnPremisesAccountAutoSignIn.
 
 - ApplicationGuard. La prise en charge des extensions est désormais disponible dans le conteneur.
 
