@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 74b96cc1b9695b94715f61eed4f61521ce9c888e
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: bb864232c4139277d43dee20918399feab7b7d5f
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094628"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105638"
 ---
 # Microsoft Edge: directivas
 La versión más reciente de Microsoft Edge incluye las siguientes directivas. Puedes usar estas directivas para configurar cómo se ejecuta Microsoft Edge en la organización.
@@ -52,7 +52,7 @@ En estas tablas se muestra una lista de todas las directivas de grupo relacionad
 ### [*Autenticación HTTP*](#autenticación-http-policies)
 |Nombre de directiva|Título|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Autoriser les invites d’authentification HTTP à origines multiples|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Especifica una lista de servidores a los que Microsoft Edge puede delegar credenciales de usuario|
 |[AuthSchemes](#authschemes)|Esquemas de autenticación admitidos|
 |[AuthServerAllowlist](#authserverallowlist)|Configurar lista de servidores de autenticación permitidos|
@@ -254,7 +254,7 @@ y consejos para los servicios Microsoft|
 |[DownloadRestrictions](#downloadrestrictions)|Permitir restricciones de descarga|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Habilitar la característica Colecciones|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Permite a los usuarios editar los favoritos|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Volver a habilitar las características de la plataforma web en desuso durante un tiempo limitado|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Volver a habilitar las características de la plataforma web en desuso durante un tiempo limitado (obsoleto)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Habilitar la descarga de acciones de dominio desde Microsoft (obsoleto)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Habilitar comprobaciones de CRL/OCSP en línea|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Permitir certificados firmados con SHA-1 al emitirlos por anclajes de veracidad local (en desuso)|
@@ -344,6 +344,7 @@ y consejos para los servicios Microsoft|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar la compatibilidad con Exchange firmado de HTTP (SXG)|
 |[SitePerProcess](#siteperprocess)|Habilitar el aislamiento de sitios para cada sitio|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configurar el reconocimiento de voz|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilitar corrector ortográfico|
 |[SpellcheckLanguage](#spellchecklanguage)|Habilitar los idiomas de corrección ortográfica específicos|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forzar deshabilitar idiomas de corrección ortográfica|
@@ -1511,21 +1512,21 @@ Esta directiva solo está disponible en las instancias de Windows que estén uni
   - En Windows y macOS desde 77 o posterior
 
   #### Descripción
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  El establecimiento de la directiva permite crear una lista de patrones de URL que especifican los sitios para los que Microsoft Edge puede seleccionar automáticamente un certificado de cliente. El valor es una matriz de diccionarios JSON en cadena, cada uno con el formulario { "pattern": "$URL_PATTERN", "filter" : $FILTER }, donde $URL_PATTERN es un patrón de configuración de contenido. $FILTER restringe los certificados de cliente que selecciona automáticamente el navegador web. Independientemente del filtro, solo se seleccionan los certificados que coinciden con la solicitud de certificado del servidor.
 
-Examples for the usage of the $FILTER section:
+Ejemplos para ver el uso de la sección $FILTER:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+* Cuando $FILTER se establece en { "ISSUER": { "CN": "$ISSUER_CN" } }, solo se seleccionan los certificados de cliente emitidos por un certificado con $ISSUER_CN CommonName.
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+* Cuando $FILTER contiene tanto las secciones "ISSUER" como "SUBJECT", solo se seleccionan los certificados de cliente que cumplan ambas condiciones.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+* Cuando $FILTER contiene una sección "SUBJECT" con el valor "O", un certificado necesita al menos una organización que coincida con el valor especificado para ser seleccionado.
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+* Cuando $FILTER contiene una sección "SUBJECT" con un valor "OU", un certificado necesita que se seleccione al menos una unidad organizativa que coincida con el valor especificado.
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+* Cuando se establece $FILTER en {}, la selección de certificados de cliente no se limita adicionalmente. Tenga en cuenta que los filtros que proporciona el servidor web se siguen aplicando.
 
-If you leave the policy unset, there's no autoselection for any site.
+Si deja la directiva sin establecer, no hay selección automática para ningún sitio.
 
   #### Características admitidas:
   - Puede ser obligatorio: Sí
@@ -3001,9 +3002,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - En Windows y macOS desde 80 o posterior
 
   #### Descripción
-  Vous permet de rétablir le comportement SameSite hérité pour tous les cookies. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+  Vous permet de rétablir le comportement SameSite hérité pour tous les cookies. Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient «SameSite=None», supprime la condition requise pour que les cookies «SameSite=None» transportent l’attribut «Secure» et ignore la comparaison de schéma lorsque vous évaluez si deux sites sont same-site.
 
-If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+Si vous ne configurez pas cette stratégie, le comportement SameSite par défaut pour les cookies dépend d’autres sources de configuration pour la fonctionnalité SameSite par défaut, la fonctionnalité Cookies-without-SameSite-must-be-secure et la fonctionnalité Schemeful Same-Site. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 Asignación de opciones de directiva:
 
@@ -3059,7 +3060,7 @@ Usa la información anterior al configurar esta directiva.
   #### Descripción
   Les cookies définis pour les domaines correspondant aux modèles spécifiés sont rétablis vers le comportement SameSite hérité. 
 
-Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient «SameSite=None», supprime la condition requise pour que les cookies «SameSite=None» transportent l’attribut «Secure» et ignore la comparaison de schéma lorsque vous évaluez si deux sites sont same-site.
 
 Si cette stratégie n’est pas configurée, la valeur globale par défaut est utilisée. La valeur globale par défaut est également utilisée pour les cookies sur les domaines non couverts par les modèles que vous spécifiez.
 
@@ -10117,14 +10118,16 @@ Deshabilita esta directiva para impedir que los usuarios agreguen, quiten o modi
   [Volver al principio](#microsoft-edge:-directivas)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Volver a habilitar las características de la plataforma web en desuso durante un tiempo limitado
+  #### Volver a habilitar las características de la plataforma web en desuso durante un tiempo limitado (obsoleto)
   
-  
+  >OBSOLETO: Esta directiva es obsoleta y no funciona después de la versión 86 de Microsoft Edge.
   #### Versiones admitidas:
-  - En Windows y macOS desde 77 o posterior
+  - En Windows y macOS desde 77, hasta 86
 
   #### Descripción
-  Especifica una lista de características de la plataforma web en desuso para volver a habilitarlas temporalmente.
+  Esta directiva es obsoleta, ya que las directivas de plataforma web dedicadas se emplean actualmente para administrar características individuales en desuso de plataforma web.
+
+Especificar una lista de características de la plataforma web en desuso para volver a habilitarlas temporalmente.
 
 Esta directiva permite volver a habilitar las características de la plataforma web en desuso durante un tiempo limitado. Las características se identifican mediante una etiqueta de cadena.
 
@@ -10132,7 +10135,7 @@ Si no se configura esta directiva, si la lista está vacía o si una caracterís
 
 Aunque la propia directiva se admite en las plataformas anteriores, es posible que la característica que se está habilitando no esté disponible en todas las plataformas. No todas las características de la plataforma web en desuso se pueden volver a habilitar. Solo aquellas que se indican explícitamente a continuación pueden volver a habilitarse y solo durante un período de tiempo limitado, que es diferente en función de la característica. Puedes revisar la finalidad de los cambios de la característica de la plataforma web en https://bit.ly/blinkintents.
 
-El formato habitual de la etiqueta de cadena es [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
+El formato general de la etiqueta de cadena es [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
 
 Asignación de opciones de directiva:
 
@@ -10151,7 +10154,7 @@ Usa la información anterior al configurar esta directiva.
   #### Información y configuración de Windows
   ##### Información de la directiva de grupos (ADMX)
   - Nombre único de la directiva de grupos: EnableDeprecatedWebPlatformFeatures
-  - Nombre de la directiva de grupos: Volver a habilitar las características de la plataforma web en desuso durante un tiempo limitado
+  - Nombre de la directiva de grupos: Volver a habilitar las características de la plataforma web en desuso durante un tiempo limitado (obsoleto)
   - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (Recomendada): N/D
   - Nombre del archivo ADMX de GP: MSEdge.admx
@@ -14218,7 +14221,7 @@ Si se deshabilita esta directiva, los usuarios no podrán hacer clic en ninguna 
   #### Descripción
   Sets the minimum supported version of TLS. Si vous ne configurez pas cette stratégie, MicrosoftEdge utilise la version minimale par défaut qui est TLS 1.0. 
 
-If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Toute valeur non reconnue sera ignorée.
+Si vous activez cette stratégie, MicrosoftEdge n'utilise pas de versions SSL/TLS antérieures à la version précisée. Toute valeur non reconnue sera ignorée.
 
 Asignación de opciones de directiva:
 
@@ -15052,6 +15055,58 @@ Si se deshabilita o no se configura esta directiva, un usuario puede optar por e
 
   #### Información y configuración de Mac
   - Nombre de clave de preferencia: SitePerProcess
+  - Valor de ejemplo:
+``` xml
+<true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge:-directivas)
+
+  ### SpeechRecognitionEnabled
+  #### Configurar el reconocimiento de voz
+  
+  
+  #### Versiones admitidas:
+  - En Windows y macOS desde 87 o posterior
+
+  #### Descripción
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Características admitidas:
+  - Puede ser obligatorio: Sí
+  - Se puede recomendar: No
+  - Actualización de directiva dinámica: Sí
+
+  #### Tipo de datos:
+  - Booleano
+
+  #### Información y configuración de Windows
+  ##### Información de la directiva de grupos (ADMX)
+  - Nombre único de la directiva de grupos: SpeechRecognitionEnabled
+  - Nombre de la directiva de grupos: Configurar el reconocimiento de voz
+  - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (Recomendada): N/D
+  - Nombre del archivo ADMX de GP: MSEdge.admx
+  ##### Configuración del registro de Windows
+  - Ruta de acceso (Obligatorio): SOFTWARE\Policies\Microsoft\Edge
+  - Ruta de acceso (Recomendada): N/D
+  - Nombre del valor: SpeechRecognitionEnabled
+  - Tipo de valor: REG_DWORD
+  ##### Valor de ejemplo:
+```
+0x00000001
+```
+
+
+  #### Información y configuración de Mac
+  - Nombre de clave de preferencia: SpeechRecognitionEnabled
   - Valor de ejemplo:
 ``` xml
 <true/>

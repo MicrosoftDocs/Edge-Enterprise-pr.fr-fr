@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 08d410336d86620e0dbd400c1aad7b0a9409cac9
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 5d00695cfbf245f0b3e888f18be26463f51fce7b
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094588"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105658"
 ---
 # Microsoft Edge - Políticas
 A versão mais recente do Microsoft Edge inclui as seguintes políticas. Você pode usar essas políticas para configurar como o Microsoft Edge é executado em sua organização.
@@ -44,7 +44,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 ### [*Autenticação HTTP*](#autenticação-http-policies)
 |Nome da Política|Legenda|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Autoriser les invites d’authentification HTTP à origines multiples|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Especifica uma lista de servidores aos quais o Microsoft Edge pode delegar credenciais de usuário|
 |[AuthSchemes](#authschemes)|Esquemas de autenticação com suporte|
 |[AuthServerAllowlist](#authserverallowlist)|Configurar lista de servidores de autenticação permitidos|
@@ -254,7 +254,7 @@ e dicas para serviços Microsoft|
 |[DownloadRestrictions](#downloadrestrictions)|Permitir restrições de download|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Habilitar o recurso Coleções|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Permite que os usuários editem os favoritos|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Reabilitar os recursos preteridos da plataforma da Web por um tempo limitado|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Reabilitar os recursos preteridos da plataforma da Web por um tempo limitado (obsoleto)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Habilitar o download de ações de domínio da Microsoft (obsoleto)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Habilitar verificações de OCSP/CRL online|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Permitir certificados assinados usando o SHA-1 quando emitidos por âncoras de confiança locais (preterida)|
@@ -344,6 +344,7 @@ e dicas para serviços Microsoft|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar o atalho do Microsoft Office na barra Favoritos (preterida)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar o suporte para o Signed HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Habilitar isolamento de sites para todos os sites|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilitar verificação ortográfica|
 |[SpellcheckLanguage](#spellchecklanguage)|Habilitar idiomas específicos da verificação ortográfica|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Aplicar a desabilitação de verificação ortográfica dos idiomas|
@@ -830,21 +831,21 @@ Se você definir também a política [EnableMediaRouter](#enablemediarouter) com
   - Em Windows e macOS desde 77 ou posterior
 
   #### Descrição
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  A definição da política permite que você faça uma lista de padrões de URL que especificam sites para os quais o Microsoft Edge pode selecionar automaticamente um certificado de cliente. O valor é uma matriz de dicionários de cadeias de caracteres JSON, cada uma com o formulário { "pattern": "$URL_PATTERN", "filter" : $FILTER }, onde $URL_PATTERN é o padrão de configuração do conteúdo. $FILTER restringe os certificados do cliente para os quais o navegador seleciona automaticamente. Independente do filtro, somente os certificados que correspondem à solicitação do servidor serão selecionados.
 
-Examples for the usage of the $FILTER section:
+Exemplos do uso da seção $FILTER:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+* Quando $FILTER estiver definida como { "ISSUER": { "CN": "$ISSUER_CN" } }, somente os certificados de cliente emitidos com um $ISSUER_CNCommonName serão selecionados.
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+* Quando $FILTER contiver tanto a seção "ISSUER" quanto a seção "SUBJECT", somente os certificados que atenderem a ambas as condições serão selecionados.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+* Quando $FILTER contiver a seção "SUBJECT" com o valor de"O", um certificado precisa ter pelo menos uma organização correspondente ao valor especificado para ser selecionado.
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+* Quando $FILTER contiver uma seção "SUBJECT" com um valor "OU", um certificado precisar ter pelo menos uma unidade organizacional correspondente ao valor especificado para ser selecionado.
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+* Quando $FILTER estiver definida como {}, a seleção dos certificados de cliente não será adicionalmente restrita. Observe que os filtros fornecidos pelo servidor da web ainda se aplicam.
 
-If you leave the policy unset, there's no autoselection for any site.
+Se você não definir a política, não haverá seleção automática para nenhum site.
 
   #### Recursos com suporte:
   - Pode ser obrigatório: Sim
@@ -2320,9 +2321,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Em Windows e macOS desde 80 ou posterior
 
   #### Descrição
-  Vous permet de rétablir le comportement SameSite hérité pour tous les cookies. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+  Vous permet de rétablir le comportement SameSite hérité pour tous les cookies. Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient «SameSite=None», supprime la condition requise pour que les cookies «SameSite=None» transportent l’attribut «Secure» et ignore la comparaison de schéma lorsque vous évaluez si deux sites sont same-site.
 
-If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+Si vous ne configurez pas cette stratégie, le comportement SameSite par défaut pour les cookies dépend d’autres sources de configuration pour la fonctionnalité SameSite par défaut, la fonctionnalité Cookies-without-SameSite-must-be-secure et la fonctionnalité Schemeful Same-Site. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 Mapeamento das opções da política:
 
@@ -2378,7 +2379,7 @@ Use as informações anteriores ao configurar essa política.
   #### Descrição
   Les cookies définis pour les domaines correspondant aux modèles spécifiés sont rétablis vers le comportement SameSite hérité. 
 
-Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient «SameSite=None», supprime la condition requise pour que les cookies «SameSite=None» transportent l’attribut «Secure» et ignore la comparaison de schéma lorsque vous évaluez si deux sites sont same-site.
 
 Si cette stratégie n’est pas configurée, la valeur globale par défaut est utilisée. La valeur globale par défaut est également utilisée pour les cookies sur les domaines non couverts par les modèles que vous spécifiez.
 
@@ -10116,22 +10117,24 @@ Desabilite essa política para impedir que os usuários adicionem, removam ou mo
   [Voltar ao início](#microsoft-edge---políticas)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Reabilitar os recursos preteridos da plataforma da Web por um tempo limitado
+  #### Reabilitar os recursos preteridos da plataforma da Web por um tempo limitado (obsoleto)
   
-  
+  >OBSOLETO: Essa política é obsoleta e não funciona após o Microsoft Edge 86.
   #### Versões com suporte:
-  - Em Windows e macOS desde 77 ou posterior
+  - No Windows e macOS desde 77, até 86
 
   #### Descrição
-  Especifica uma lista de recursos da plataforma da Web preteridos que serão temporariamente habilitados novamente.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
-Essa política permite que você habilite novamente os recursos preteridos da plataforma da Web por tempo limitado. Os recursos são identificados por uma marca de cadeia de caracteres.
+Spécifiez une liste de fonctionnalités de plateforme web déconseillées à réactiver temporairement.
 
-Se você não configurar essa política, se a lista estiver vazia ou se um recurso não corresponder a uma das marcas de cadeia de caracteres com suporte, todos os recursos da plataforma da Web preteridos permanecerão desabilitados.
+Cette stratégie vous permet de réactiver des fonctionnalités déconseillées de la plateforme en ligne pendant une durée limitée. Les fonctionnalités sont identifiées par une balise de chaîne.
 
-Embora a política propriamente dita tenha suporte nas plataformas acima, o recurso que ela estiver habilitando talvez não esteja disponível em todas as plataformas. Nem todos os recursos da plataforma da Web preteridos podem ser habilitados novamente. Somente os explicitamente listados abaixo podem ser habilitados novamente e apenas por um período de tempo limitado, que difere por recurso. Você pode examinar o intuito subjacente às alterações de recurso da plataforma da Web em https://bit.ly/blinkintents.
+Si vous ne configurez pas cette stratégie, si la liste est vide ou si une fonctionnalité ne correspond pas à l’une des balises de chaîne prises en charge, toutes les fonctionnalités de plateforme web déconseillées restent désactivées.
 
-O formato geral da marca da cadeia de caracteres é [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
+Bien que la stratégie elle-même soit compatible avec les plateformes citées, la fonctionnalité qu'elle active peut n'être disponible que sur un nombre plus restreint de plateformes. Les fonctionnalités déconseillées de la plateforme web ne peuvent pas toutes être réactivées. Seules celles qui sont énumérées ci-dessous peuvent l'être pendant une durée limitée, qui varie en fonction de la fonctionnalité. Vous pouvez découvrir les raisons pour lesquelles des motivations ont été apportées aux fonctionnalités des plates-formes en ligne en consultant la page https://bit.ly/blinkintents.
+
+Le format général de la balise de chaîne est [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
 
 Mapeamento das opções da política:
 
@@ -10150,7 +10153,7 @@ Use as informações anteriores ao configurar essa política.
   #### Informações e configurações do Windows
   ##### Informações da Política de Grupo (ADMX)
   - Nome exclusivo da GP: EnableDeprecatedWebPlatformFeatures
-  - Nome da GP: Reabilitar os recursos preteridos da plataforma da Web por um tempo limitado
+  - Nome da GP: Reabilitar os recursos preteridos da plataforma da Web por um tempo limitado (obsoleto)
   - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da GP (Recomendações): N/A
   - Nome do arquivo da GP ADMX: MSEdge.admx
@@ -14217,7 +14220,7 @@ Se você desabilitar essa política, os usuários serão impedidos de clicar em 
   #### Descrição
   Sets the minimum supported version of TLS. Si vous ne configurez pas cette stratégie, MicrosoftEdge utilise la version minimale par défaut qui est TLS 1.0. 
 
-If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Toute valeur non reconnue sera ignorée.
+Si vous activez cette stratégie, MicrosoftEdge n'utilise pas de versions SSL/TLS antérieures à la version précisée. Toute valeur non reconnue sera ignorée.
 
 Mapeamento das opções da política:
 
@@ -15051,6 +15054,58 @@ Se você desabilitar ou não configurar esta política, um usuário poderá recu
 
   #### Informações e configurações do Mac
   - Nome da chave de preferência: SitePerProcess
+  - Exemplo de valor:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---políticas)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Versões com suporte:
+  - Em Windows e macOS desde 87 ou posterior
+
+  #### Descrição
+  Defina se os sites podem usar a API W3C Web Speech para reconhecer a fala do usuário. A implementação do Microsoft Edge da API Web Speech usa Serviços Cognitivos do Azure, portanto, os dados de voz sairão do computador.
+
+Se você habilitar ou não configurar essa política, os aplicativos baseados na Web que usam a API Web Speech poderão usar o reconhecimento de fala.
+
+Se você desabilitar essa política, o Reconhecimento de Fala não estará disponível por meio da API Web Speech API.
+
+Leia mais sobre este recurso aqui: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Serviços de Cognitivos: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Recursos com suporte:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendado: Não
+  - Atualização de política dinâmica: Sim
+
+  #### Tipo de Dados:
+  - Booliano
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: SpeechRecognitionEnabled
+  - Nome da GP: Configure Speech Recognition
+  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/
+  - Caminho da GP (Recomendações): N/A
+  - Nome do arquivo da GP ADMX: MSEdge.admx
+  ##### Configurações do Registro do Windows
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendações): N/A
+  - Nome do Valor: SpeechRecognitionEnabled
+  - Tipo de Valor: REG_DWORD
+  ##### Exemplo de valor:
+```
+0x00000001
+```
+
+
+  #### Informações e configurações do Mac
+  - Nome da chave de preferência: SpeechRecognitionEnabled
   - Exemplo de valor:
 ``` xml
 <true/>

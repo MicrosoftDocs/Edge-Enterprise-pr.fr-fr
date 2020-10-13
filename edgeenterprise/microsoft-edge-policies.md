@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 906a8cdd73e07efc5662e9b3ea51d8b7a2f03079
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 9a0a9157f1176f935ba2462ee34abb3ebb708b66
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094748"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105728"
 ---
 # MicrosoftEdge: Stratégies
 La dernière version de MicrosoftEdge inclut les stratégies suivantes. Vous pouvez utiliser ces stratégies pour configurer le fonctionnement de MicrosoftEdge dans votre organisation.
@@ -255,7 +255,7 @@ et des conseils pour les services Microsoft|
 |[DownloadRestrictions](#downloadrestrictions)|Autoriser les restrictions de téléchargement|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Activer la fonctionnalité Collections|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Autorise les utilisateurs à modifier les favoris|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Réactiver les fonctionnalités des plateformes web déconseillées pendant une durée limitée|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Activer le téléchargement des actions de domaine à partir de Microsoft|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Activer les vérifications OCSP/CRL en ligne|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Autoriser les certificats signés à l’aide de l’algorithme SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (obsolète)|
@@ -345,6 +345,7 @@ et des conseils pour les services Microsoft|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher le raccourci MicrosoftOffice dans la barre des favoris (déconseillé)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Activer la prise en charge de Signed HTTP Exchange (SXG) |
 |[SitePerProcess](#siteperprocess)|Activer l’isolation de site pour tous les sites|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Activer la vérification orthographique|
 |[SpellcheckLanguage](#spellchecklanguage)|Activer des langues spécifiques pour la vérification orthographique|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forcer la désactivation de langues spécifiques pour la vérification orthographique|
@@ -564,7 +565,7 @@ Si vous avez également configuré la stratégie [EnableMediaRouter](#enablemedi
   - sur Windows et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-  La définition de stratégie vous permet de créer une liste de modèles d’URL spécifiant les sites pour lesquels MicrosoftEdge peut automatiquement sélectionner un certificat client. La valeur est un groupe de dictionnaires JSON à séquences, chacun ayant le format { «modèle»: «$URL_PATTERN», «filtre»: $FILTER }, où $URL_PATTERN correspond à un schéma de paramètres de contenu. $FILTER limite les certificats client à partir duquel le navigateur effectue une sélection automatique. Indépendamment du filtre, seuls les certificats correspondant à la demande de certificats du serveur sont sélectionnés.
+  La définition de stratégie vous permet de créer une liste de modèles d’URL spécifiant les sites pour lesquels MicrosoftEdge peut automatiquement sélectionner un certificat client. La valeur est un groupe de dictionnaires JSON à séquences, chacun ayant le format { «modèle»: «$URL_PATTERN», «filtre»: $FILTER }, où $URL_PATTERN correspond à un schéma de paramètres de contenu. $FILTER limite les certificats client à partir desquels le navigateur effectue une sélection automatique. Indépendamment du filtre, seuls les certificats correspondant à la demande de certificats du serveur sont sélectionnés.
 
 Exemples d’utilisation de la section $FILTER:
 
@@ -10120,14 +10121,16 @@ Désactivez cette stratégie pour empêcher les utilisateurs d'ajouter, de suppr
   [Retour au début](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Réactiver les fonctionnalités des plateformes web déconseillées pendant une durée limitée
+  #### Re-enable deprecated web platform features for a limited time (obsolete)
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Versions prises en charge:
-  - sur Windows et macOS depuis la version77 ou versions ultérieures
+  - On Windows and macOS since 77, until 86
 
   #### Description
-  Spécifiez une liste de fonctionnalités de plateforme web déconseillées à réactiver temporairement.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+
+Spécifiez une liste de fonctionnalités de plateforme web déconseillées à réactiver temporairement.
 
 Cette stratégie vous permet de réactiver des fonctionnalités déconseillées de la plateforme en ligne pendant une durée limitée. Les fonctionnalités sont identifiées par une balise de chaîne.
 
@@ -10154,7 +10157,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   #### Informations et paramètres Windows
   ##### Informations relatives à la stratégie de groupe (ADMX)
   - Nom unique de la stratégie de groupe: EnableDeprecatedWebPlatformFeatures
-  - Nom de la stratégie de groupe: réactiver les fonctionnalités des plateformes web déconseillées pendant une durée limitée
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -15055,6 +15058,58 @@ Si cette règle n'est pas configurée ou si elle est désactivée, les utilisate
 
   #### Informations et paramètres sur Mac
   - Nom clé de la préférence: SitePerProcess
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Versions prises en charge:
+  - On Windows and macOS since 87 or later
+
+  #### Description
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+  - Booléen
+
+  #### Informations et paramètres Windows
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+  - GP unique name: SpeechRecognitionEnabled
+  - GP name: Configure Speech Recognition
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Value Name: SpeechRecognitionEnabled
+  - Type de valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000001
+```
+
+
+  #### Informations et paramètres sur Mac
+  - Preference Key Name: SpeechRecognitionEnabled
   - Exemple de valeur:
 ``` xml
 <true/>
