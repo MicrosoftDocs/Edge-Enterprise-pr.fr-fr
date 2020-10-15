@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/06/2020
+ms.date: 10/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: 3dbefdd433f4a0e5fe35f3850d22ac5817326f17
-ms.sourcegitcommit: 3be0b6ec0dba236050e876cd3ba4d9926c68b189
+ms.openlocfilehash: f624562f6c357940576138b2cb51e6a7ccdb75f2
+ms.sourcegitcommit: cc39d3a3e36a273261c0c3fb6ed859de1dd56fa2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "11102403"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "11115905"
 ---
 # Notes de publication du canal stable Microsoft Edge
 
@@ -24,6 +24,86 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 
+<!-- begin major 86 -->
+## Version 86.0.622.38 : 9 octobre
+
+Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-9-2020).
+
+### Mises à jour des fonctionnalités
+
+* **Revenir à la version précédente de Microsoft Edge.** La fonctionnalité de restauration permet aux administrateurs de revenir à une version correcte connue de Microsoft Edge s’il existe un problème dans la dernière version de Microsoft Edge. **Remarque : ** la version stable 86.0.622.38 est la première version vers laquelle vous pouvez revenir, ce qui signifie que la version stable 87 est la première version prête à revenir. [En savoir plus](edge-learnmore-rollback.md).
+
+* **Appliquer l’activation de la synchronisation par défaut au sein de l’entreprise.**  Les administrateurs peuvent activer la synchronisation pour les comptes Azure Active Directory (Azure AD) par défaut avec la stratégie [ForceSync](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcesync) .
+
+* **Changement de profil automatique sur Windows 7 et 8.1.** Le changement automatique de profil actuellement disponible dans Microsoft Edge sur Windows 10 est étendu aux niveaux inférieurs de Windows (Windows 7 et 8.1). Pour plus d’informations, consultez le billet de blog [changement automatique de profil](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/).
+
+* **SameSite = Lax cookies par défaut**. Pour améliorer la sécurité et la confidentialité sur le Web, les cookies s’affichent désormais par défaut [SameSite = Lax](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite) gestion par défaut. Cela signifie que les cookies sont uniquement envoyés dans un contexte tiers et sont omis pour les demandes envoyées aux tiers. Cette modification peut avoir un impact sur les sites Web qui requièrent des cookies pour que les ressources tierces fonctionnent correctement. Pour autoriser de tels cookies, les développeurs Web peuvent marquer les cookies qui doivent être définis de et envoyés à des contextes tiers en ajoutant des attributs `SameSite=none` et `Secure` explicites lorsque le cookie est défini. Les entreprises qui souhaitent exempter certains sites de cette modification peuvent le faire à l’aide de la stratégie de [LegacySameSiteCookieBehaviorEnabledForDomainList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabledfordomainlist). Vous pouvez également désactiver la modification sur tous les sites à l’aide de la stratégie [LegacySameSiteCookieBehaviorEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) .
+
+* **Supprimez l’API de cache de l’application HTML5.**  Depuis Microsoft Edge version86, l’API cache de l’application héritée qui permet d’utiliser en mode hors connexion des pages web est supprimée de Microsoft Edge. Les développeurs web doivent consulter la [documentation WebDev](https://web.dev/appcache-removal/) pour plus d’informations sur le remplacement de l’API cache de l’application avec les travailleurs de service.  Important: vous pouvez demander un [Jeton AppCache OriginTrial](https://developers.chrome.com/origintrials/#/view_trial/1776670052997660673) qui permet aux sites de continuer à utiliser l’API de cache d’application déconseillée jusqu’à la version90 de Microsoft Edge.
+
+* **Confidentialité et sécurité :**
+
+  * **Remplacez les stratégies [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) et [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) pour les fenêtres de niveau inférieur et macOS.** Ces stratégies sont déconseillées dans Microsoft Edge version86 et deviendront obsolètes dans Microsoft Edge version89.<br>
+Ces stratégies sont remplacées par [Autoriser la télémétrie](https://go.microsoft.com/fwlink/?linkid=2099569) sur Windows10, et la nouvelle stratégie [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) pour toutes les autres plateformes. Cela permet aux utilisateurs de gérer les données de diagnostic envoyées à Microsoft pour Windows7, 8, 8.1 et macOS.
+  * Prise en charge du DNS sécurisé (DNS-sur-HTTPS).  À partir de la version86 de Microsoft Edge, les paramètres de contrôle de DNS sécurisé sur les appareils non gérés sont disponibles. Ces paramètres ne sont pas accessibles aux utilisateurs sur les appareils gérés, mais les administrateurs informatiques peuvent activer ou désactiver le DNS sécurisé à l’aide de la stratégie de groupe [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode).
+
+* ** Mode Internet Explorer :** Permet aux utilisateurs d'utiliser l'interface utilisateur (IU) de Microsoft Edge pour tester des sites en mode Internet Explorer. À partir de la version86 de Microsoft Edge, les administrateurs peuvent activer une option d'interface utilisateur pour que leurs utilisateurs puissent charger un onglet en mode Internet Explorer à des fins de test ou comme palliatif jusqu'à ce que les sites soient ajoutés à la liste XML des sites.
+
+* **Mises à jour PDF:**
+
+  * Table des matières des documents PDF. À partir de la version86, Microsoft Edge a ajouté la prise en charge de la table des matières qui permet aux utilisateurs de parcourir facilement les documents PDF.
+  * Accédez à toutes les fonctionnalités de PDF sur les écrans compacts. Accédez à toutes les fonctionnalités du lecteur PDF Microsoft Edge sur les appareils disposant de petites tailles d’écran.
+  * Prise en charge du stylet pour le surligneur des fichiers PDF. Avec cette mise à jour, les utilisateurs peuvent utiliser leur stylet numérique pour mettre en surbrillance directement du texte dans les fichiers PDF, de la même manière qu’avec un surligneur physique et du papier.
+  * Défilement PDF amélioré. Vous pourrez désormais faire défiler les documents au format PDF long.
+
+* **Les suggestions de saisie semi-automatique s’affichent lorsque les utilisateurs commencent à taper une requête de recherche sur le site web des composants additionnels Microsoft Edge.** La saisie semi-automatique permet aux utilisateurs d’effectuer rapidement leur requête de recherche sans entrer l’intégralité de la chaîne. Ceci est utile, car les utilisateurs n’ont pas besoin de se souvenir des orthographes correctes, et peuvent choisir parmi les options disponibles qui s’affichent.
+
+* **Ajoutez une image personnalisée à la nouvelle page d’onglet (NTP) à l’aide d’une stratégie de groupe.** À partir de la version 86 de Microsoft Edge, le protocole NTP offre une option permettant de remplacer l'image par défaut par une image personnalisée fournie par l'utilisateur. La possibilité de gérer les propriétés de cette image est également prise en charge par la stratégie de groupe.
+
+* **Faites correspondre les raccourcis clavier personnalisés à VS Code.** MicrosoftEdgeDevTools prend désormais en charge la personnalisation des raccourcis clavier dans DevTools pour adapter à votre éditeur/IDE. (Dans MicrosoftEdge84, nous avons ajouté la possibilité de faire correspondre les raccourcis clavier DevTools à VSCode).
+
+* **Supprimez les téléchargements à partir du disque à l’aide du gestionnaire de téléchargement.** Les utilisateurs peuvent désormais supprimer leurs fichiers téléchargés à partir de leur disque sans quitter le navigateur. La nouvelle fonctionnalité Supprimer les téléchargements figure dans le menu contextuel de l’étagère téléchargements ou de la page de téléchargement.
+
+### Mises à jour de stratégies
+
+#### Nouvelles stratégies
+
+Vingt-trois nouvelles politiques ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
+
+- [CollectionsServicesAndExportsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#collectionsservicesandexportsblocklist) : Bloquer l’accès à une liste de services et de cibles d’exportation spécifiée dans Collections.
+- [ DefaultFileSystemReadGuardSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultfilesystemreadguardsetting)- Contrôle de l'utilisation de l'API du système de fichiers pour la lecture.
+- [ DefaultFileSystemWriteGuardSetting ](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultfilesystemwriteguardsetting) - Contrôle de l'utilisation de l'API du système de fichiers pour l'écriture.
+- [DefaultSensorsSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultsensorssetting): paramètre par défaut des capteurs.
+- [DefaultSerialGuardSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultserialguardsetting): contrôler l’utilisation de l’API Serial.
+- [ DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) - Envoyer des données de diagnostic obligatoires et facultatives sur l'utilisation du navigateur.
+- [EnterpriseModeSiteListManagerAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed): autoriser l’accès à l’outil Enterprise Mode Site List Manager.
+- [FileSystemReadAskForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemreadaskforurls) - Autoriser l'accès en lecture via l'API du système de fichiers sur ces sites.
+- [FileSystemReadBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemreadblockedforurls) - Bloquer l'accès en lecture via l'API du système de fichiers sur ces sites.
+- [FileSystemWriteAskForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemwriteaskforurls) - Autoriser l'accès en écriture aux fichiers et aux répertoires de ces sites.
+- [FileSystemWriteBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemwriteblockedforurls) - Bloquer l'accès en écriture aux fichiers et aux répertoires de ces sites.
+- [ForceSync](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcesync): forcer la synchronisation des données du navigateur et ne pas afficher l’invite de consentement de synchronisation.
+- [InsecureFormsWarningsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#insecureformswarningsenabled): activer les avertissements pour les formulaires non sécurisés.
+- [InternetExplorerIntegrationTestingAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed): autoriser le test du mode Internet Explorer.
+- [SpotlightExperiencesAndRecommendationsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#spotlightexperiencesandrecommendationsenabled): déterminer si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications et des conseils pour les services Microsoft.
+- [NewTabPageAllowedBackgroundTypes](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpageallowedbackgroundtypes): Définir les types d’arrière-plan autorisés pour la disposition du nouvel onglet.
+- [SaveCookiesOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savecookiesonexit): Enregistrer les cookies lors de la fermeture de MicrosoftEdge.
+- [SensorsAllowedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sensorsallowedforurls): autoriser l’accès aux capteurs sur des sites spécifiques.
+- [SensorsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sensorsblockedforurls): bloquer l’accès aux capteurs sur des sites spécifiques.
+- [SerialAskForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#serialaskforurls): autoriser l’API Serial sur des sites spécifiques.
+- [SerialBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#serialblockedforurls): bloquer l’API Serial sur des sites spécifiques.
+- [UserAgentClientHintsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled): Activer la fonctionnalité User-Agent Client Hints.
+- [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#userdatasnapshotretentionlimit): limite le nombre de captures instantanées des données utilisateur conservées qui sont utilisées en cas de restauration d’urgence.
+
+#### Stratégies déconseillées
+
+- [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled): activer les rapports de données d’utilisation et d’incident.
+- [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices): Envoyer des informations sur les sites pour améliorer les services Microsoft.
+
+#### Stratégie obsolète
+
+[TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled): active une fonctionnalité de sécurité TLS 1.3 pour les ancres d’approbation locales.
+
+<!-- end 86 -->
 ## Version 85.0.564.70: 6octobre
 
 Résolution de divers bogues et problèmes de performances.
@@ -58,7 +138,7 @@ Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft
 
 - **L’API d’accès au stockage est disponible**. Cette API d’accès au stockage permet l’accès au stockage interne alors qu’un utilisateur tiers manifeste son intention directe d’autoriser un stockage qui sinon serait bloqué par la configuration actuelle du navigateur. Pour plus d’informations, voir [API d’accès au stockage](https://www.chromestatus.com/feature/5612590694662144).
 
-- **Envoyer à OneNote est disponible pour les collections MicrosoftEdge**. Tout le monde a hâte de pouvoir envoyer des informations rassemblées dans des collections vers OneNote, où l’on peut l’ajouter à un projet plus important et collaborer avec d’autres personnes. Et encore plus important, dans MicrosoftEdge85, vous pourrez envoyer du contenu aux produits *Office pour Mac* (Word, Excel et OneNote) pour MSA et AzureActiveDirectory.
+- **Envoyer à OneNote est disponible pour les collections MicrosoftEdge**. Tout le monde a hâte de pouvoir envoyer des informations rassemblées dans des collections vers OneNote, où l’on peut l’ajouter à un projet plus important et collaborer avec d’autres personnes. Et encore plus important, dans MicrosoftEdge85, vous pourrez envoyer du contenu aux produits *Office pour Mac* (Word, Excel et OneNote) pour le compte Microsoft et AzureActiveDirectory.
 
 - **Mises à jour de DevTools**. Pour plus d’informations sur les mises à jour suivantes, voir [Nouveautés de DevTools (MicrosoftEdge85)](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/whats-new/2020/06/devtools).
 
@@ -332,7 +412,7 @@ Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft
 
 - Autoriser la suppression (Masquer dans la barre d’outils) du bouton Collections de la barre d’outils Microsoft Edge par souci de cohérence.
 
-- La connexion automatique d'un compte Active Directory local est ciblée uniquement pour les organisations qui l’activent.  Si des utilisateurs ont déjà ouvert une session avec un compte Active Directory local, ils pourront se déconnecter. Les utilisateurs sont automatiquement connectés au compte principal de leur système d’exploitation s’il s’agit d’un compte MSA ou Azure Active Directory. Les administrateurs peuvent activer la connexion automatique à l’aide d’un compte Azure Active Directory local utilisant la stratégie ConfigureOnPremisesAccountAutoSignIn.
+- La connexion automatique d'un compte Active Directory local est ciblée uniquement pour les organisations qui l’activent.  Si des utilisateurs ont déjà ouvert une session avec un compte Active Directory local, ils pourront se déconnecter. Les utilisateurs se connectent automatiquement au compte principal de leur système d’exploitation uniquement s’il s’agit d’un compte Microsoft ou Azure Active Directory. Les administrateurs peuvent activer la connexion automatique à l’aide d’un compte Azure Active Directory local utilisant la stratégie ConfigureOnPremisesAccountAutoSignIn.
 
 - ApplicationGuard. La prise en charge des extensions est désormais disponible dans le conteneur.
 
