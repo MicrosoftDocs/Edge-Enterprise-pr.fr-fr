@@ -11,13 +11,13 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 10/02/2020
-  ms.openlocfilehash: 16320883e56f65142a0d99e7cd62d4d7a5555b29
-  ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+  ms.date: 10/15/2020
+  ms.openlocfilehash: 09eb7c214e048ddd281817f8050ef4f1ff4cb985
+  ms.sourcegitcommit: 49a37e9c584eeb44683c83f098a15464054a26f9
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/03/2020
-  ms.locfileid: "11094458"
+  ms.lasthandoff: 10/15/2020
+  ms.locfileid: "11119409"
 landingContent:
 - title: En savoir plus sur MicrosoftEdge en entreprise
   linkLists:
@@ -73,6 +73,8 @@ landingContent:
       url: microsoft-edge-policies.md
     - text: Référence de stratégie de mise à jour
       url: microsoft-edge-update-policies.md
+    - text: Référence de la stratégie WebView2
+      url: microsoft-edge-webview-policies.md
     - text: Vue d’ensemble du mappage de stratégie
       url: microsoft-edge-policy-map-overview.md
     - text: Blog sur les bases de la sécurité Microsoft
