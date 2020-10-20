@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/12/2020
+ms.date: 10/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: fdef5540214e80599c53d3802c9f34dacbfe7697
-ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
+ms.openlocfilehash: e35d98c762edb11049cc0b4956ba0a8d991ad86c
+ms.sourcegitcommit: 5dea32e4330b9157a7c415cb473dd97522e17ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "11114402"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "11120232"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -23,6 +23,10 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 
 > [!IMPORTANT]
 > Consultez cette [mise à jour sur les versions de canaux Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Version 86.0.622.43 : 16 octobre
+
+Résolution de divers bogues et problèmes de performances.
 
 ## Version 86.0.622.36: 7octobre
 
@@ -407,7 +411,7 @@ Un utilisateur saisit «powerbi» comme «powerbbi».com. Le docteur de lien sug
 
 #### Nouvelles stratégies
 
-15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
+15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
 - [AllowSurfGame](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowsurfgame) –  Autoriser le jeu de surf.
 - [AllowTokenBindingForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowtokenbindingforurls) – Configurer la liste des sites avec lesquels MicrosoftEdge tentera d’établir une liaison de jeton.
