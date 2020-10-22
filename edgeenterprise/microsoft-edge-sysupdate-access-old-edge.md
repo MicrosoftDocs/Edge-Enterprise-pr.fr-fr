@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Découvrez comment accéder à la version héritée de MicrosoftEdge.
-ms.openlocfilehash: e5a97a487dc6b3a45504a721e460a69103b0174e
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
+ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979793"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125516"
 ---
 # Accéder à la version héritée de MicrosoftEdge après avoir installé la nouvelle version de MicrosoftEdge
 
@@ -35,6 +35,8 @@ Bien que la plupart des organisations souhaiteront remplacer l’héritage Micro
 > L’ Assistance pour l’application de bureau de Microsoft Edge arrivera à terme le 9 mars 2021 en faveur de la nouvelle application Microsoft Edge. Cela signifie que Microsoft Edge Legacy ne recevra pas de mises à jour de sécurité après cette date. Ce changement est applicable à toutes les options qui sont exécutées dans l’application de bureau de Microsoft Edge Legacy. [En savoir plus](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 ## Avant de commencer
+> [!NOTE]
+> À compter de Windows 10 version20H2, nous n’incluons plus l’ancienne version de Microsoft Edge. À compter de cette version de Windows 10, nous ne prenons plus en charge l’expérience côte à côte.
 
 Les procédures présentées dans cet article s’appliquent aux systèmes qui ont été mis à jour avec les dernières mises à jour de sécurité. Lorsque la nouvelle version de MicrosoftEdge est installée, l’ancienne version (MicrosoftEdge héritée) est masquée. Par défaut, toutes les tentatives de lancement de l’ancienne version de MicrosoftEdge redirigent l’utilisateur vers la nouvelle version de MicrosoftEdge installée. Cet article décrit la manière dont vous pouvez continuer à utiliser le langage hérité Microsoft Edge après l’installation de Microsoft Edge.
 
@@ -85,7 +87,7 @@ Cette stratégie de groupe est documentée [ici](https://docs.microsoft.com/depl
 La définition de cette stratégie définira la clé de Registre suivante sur «00000001»:
 
 - Clé: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate`
-- Nom de la valeur: `Allowsxs`
+- Nom de valeur: `Allowsxs`
 - Type de la valeur: `'REG_DWORD'`
 
 #### Guide des bonnes pratiques

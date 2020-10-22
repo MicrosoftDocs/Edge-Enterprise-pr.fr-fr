@@ -15,7 +15,7 @@ ms.locfileid: "11123968"
 | Date de publication |Titre de la rubrique | Modification |
 |------|------------|--------|
 | 12/10/2020 | [Notes de publication de Microsoft Edge pour le canal bêta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Correction de bogues et améliorations des performances dans la version de publication mineure86.0.622.36. | Modifié |
-| 12/10/2020 | [Notes de publication de Microsoft Edge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Retirez le moniteur PW des notes de publication de la version86.0.622.38, actuellement non prise en charge dans le canal Stable. | Modifié |
+| 12/10/2020 | [Notes de publication de Microsoft Edge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Retirez PW monitor des notes de publication de la version 86.0.622.38, actuellement non prise en charge dans le canal Stable. | Modifié |
 | 12/10/2020 | [MicrosoftEdge et MicrosoftDefenderApplicationGuard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard)<br>Ajoutez un lien à la vidéo Ignite. | Modifié |
 | 13/10/2020 | [Notes de publication de Microsoft Edge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Correction de bogues et améliorations des performances dans la version de publication mineure86.0.622.43. | Modifié |
 | 15/10/2020 | [Documentation Microsoft Edge Entreprise](/DeployEdge/index)<br>Annotez le contenu nouveau et mis à jour pour la semaine précédente. | Modifié |
