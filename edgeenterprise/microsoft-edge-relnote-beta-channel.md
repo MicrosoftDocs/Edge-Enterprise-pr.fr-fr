@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 57cd68d9366dd80812617f98934d44918b76926c
-ms.sourcegitcommit: a54037baf06d6f2e30b9485cfd397468b3174a86
+ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
+ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "11133201"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "11133292"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -29,11 +29,7 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 
 ### Mises à jour des fonctionnalités
 
-- **Rediriger automatiquement les sites incompatibles de Internet Explorer vers Microsoft Edge**. Avec la mise à jour Microsoft Edge 87 stable, les sites Web publics qui affichent un message d’incompatibilité dans Internet Explorer sont automatiquement redirigés vers Microsoft Edge par défaut. Vous pouvez désactiver cette fonctionnalité en configurant les stratégies décrites dans [Redirection d’Internet Explorer vers Microsoft Edge pour assurer la compatibilité avec les sites Web modernes](https://docs.microsoft.com/deployedge/edge-learnmore-neededge).
-- **Réinitialiser manuellement les données de Synchronisation Microsoft Edge dans cloud**. Nous vous présentons la réinitialisation des données de synchronisation Microsoft Edge de l’intérieur du produit. Ainsi, les données de l’utilisateur sont supprimées des services Microsoft, ainsi que la résolution de problèmes liés au produit qui nécessitaient précédemment un ticket de support.
 - **Activation des fonctionnalités de confidentialité en mode plein écran**. Le démarrage des fonctionnalités du mode plein écran de Microsoft Edge version 87 qui permettront aux entreprises de respecter la confidentialité des données utilisateur, sera  activée. Ces fonctionnalités activent les expériences telles que l’effacement des données utilisateur à la fermeture, la suppression des fichiers téléchargés et la réinitialisation de l’expérience de démarrage configurée après une durée inactivité déterminée. En savoir plus sur la [Configuration du mode plein écran Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
-- **L’authentification unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) sur Windows de niveau inférieur.** Un utilisateur connecté à Microsoft Edge sur Microsoft  Windows de niveau inférieur (versions 7 et 8,1) est  connecté automatiquement aux sites Web qui autorisent l’authentification unique avec les comptes Professionnels ou Scolaires (par exemple, sharepoint.com, office.com et bing.com).
-- **le connexion automatique des comptes Microsoft avec l’authentification unique (SSO) Web**. Un utilisateur connecté dans Microsoft Edge sur Windows de niveau inférieur est désormais connecté automatiquement aux sites Web qui autorisent l’authentification unique avec les comptes Microsoft (par exemple, bing.com, office.com, msn.com et outlook.com).
 - **Activation du déploiement ClickOnce par défaut**. L’activation de ClickOnce par défaut dans Microsoft Edge 87, réduit les difficultés des entreprises à déployer des logiciels et mieux s’aligner sur le comportement du navigateur Microsoft Edge Legacy. Au démarrage de Microsoft Edge 87, l’état «Non Configuré» de la stratégie ClickOnceEnabled reflète le nouvel état par défaut Activé de la stratégie ClickOnce (comparé à l’État par défaut Désactivé précédent).
 - **La page nouvel onglet de l’entreprise (NTP) intègre la productivité avec un contenu de flux de travail personnalisable**. La Page Nouvel Onglet de l’Entreprise combine la page de productivité d’Office 365 que nous proposons aux utilisateurs connectés à leur compte professionnel ou scolaire, avec des flux professionnels personnalisés qui sont organisés en une seule page. Les utilisateurs reconnaîtront le contenu Office 365 familier et Microsoft Search pour Entreprises offert par Bing. De plus, ils peuvent facilement retourner à «Mon Flux» personnalisable avec du contenu et des modules pertinents pour l’utilisateur, sa société ou son industrie, et à une sélection d’autres flux mis à disposition par l’organisation. [En savoir plus](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide&preserve-view=true).
 
@@ -128,7 +124,7 @@ Résolution de divers bogues et problèmes de performances.
 * **Sécurité:**
 
   * Prise en charge de DNS sécurisé (DNS-HTTPs).  À partir de la version86 de Microsoft Edge, les paramètres de contrôle de DNS sécurisé sur les appareils non gérés sont disponibles. Ces paramètres ne sont pas accessibles aux utilisateurs sur les appareils gérés, mais les administrateurs informatiques peuvent activer ou désactiver le DNS sécurisé à l’aide de la stratégie de groupe [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode).
-  * Microsoft Edge vous avertit si votre mot de passe est détecté dans une fuite en ligne. Microsoft Edge vérifie vos mots de passe par rapport à un référentiel d'informations d'identification connues et vous avertit si une correspondance est trouvée.
+
 
 * **Ajoutez une image personnalisée à la nouvelle page d’onglet (NTP) à l’aide d’une stratégie de groupe.** À partir de la version 86 de Microsoft Edge, le protocole NTP offre une option permettant de remplacer l'image par défaut par une image personnalisée fournie par l'utilisateur. La possibilité de gérer les propriétés de cette image est également prise en charge par la stratégie de groupe.
 
@@ -464,7 +460,7 @@ Un utilisateur saisit «powerbi» comme «powerbbi».com. Le docteur de lien sug
 
 #### Nouvelles stratégies
 
-15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
+15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
 - [AllowSurfGame](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowsurfgame) –  Autoriser le jeu de surf.
 - [AllowTokenBindingForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowtokenbindingforurls) – Configurer la liste des sites avec lesquels MicrosoftEdge tentera d’établir une liaison de jeton.
