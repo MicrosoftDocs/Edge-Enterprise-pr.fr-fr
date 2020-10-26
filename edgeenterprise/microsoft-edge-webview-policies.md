@@ -1,9 +1,9 @@
 ---
-title: Documentation relative aux stratégies du navigateur Microsoft Edge
+title: Documentation relative aux stratégies WebView2 Microsoft Edge
 ms.author: stmoody
-author: brianalt-msft
+author: dan-wesley
 manager: tahills
-ms.date: 10/08/2020
+ms.date: 10/16/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,132 +11,158 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 56abadf907dfffec733af2456cc20db36510880b
-ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
+ms.openlocfilehash: 4298b25f7f158bc54f798442b4426494f046fa68
+ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "11105749"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "11134443"
 ---
-# <span data-ttu-id="875a8-103">Microsoft Edge WebView2 - Politiques</span><span class="sxs-lookup"><span data-stu-id="875a8-103">Microsoft Edge WebView2 - Policies</span></span>
+# <span data-ttu-id="043c0-103">Microsoft Edge WebView2 - Politiques</span><span class="sxs-lookup"><span data-stu-id="043c0-103">Microsoft Edge WebView2 - Policies</span></span>
 
-<span data-ttu-id="875a8-104">La dernière version de Microsoft Edge WebView2 comprend les politiques suivantes.</span><span class="sxs-lookup"><span data-stu-id="875a8-104">The latest version of Microsoft Edge WebView2 includes the following policies.</span></span> <span data-ttu-id="875a8-105">Vous pouvez utiliser ces politiques pour configurer le fonctionnement de Microsoft Edge WebView2 dans votre organisation.</span><span class="sxs-lookup"><span data-stu-id="875a8-105">You can use these policies to configure how Microsoft Edge WebView2 runs in your organization.</span></span>
+<span data-ttu-id="043c0-104">La dernière version de Microsoft Edge WebView2 comprend les politiques suivantes.</span><span class="sxs-lookup"><span data-stu-id="043c0-104">The latest version of Microsoft Edge WebView2 includes the following policies.</span></span> <span data-ttu-id="043c0-105">Vous pouvez utiliser ces politiques pour configurer le fonctionnement de Microsoft Edge WebView2 dans votre organisation.</span><span class="sxs-lookup"><span data-stu-id="043c0-105">You can use these policies to configure how Microsoft Edge WebView2 runs in your organization.</span></span>
 
-<span data-ttu-id="875a8-106">Pour plus d'informations sur un ensemble supplémentaire de politiques utilisées pour contrôler quand et comment Microsoft Edge WebView2 est mis à jour, consultez la [référence des politiques de mise à jour de Microsoft Edge](microsoft-edge-update-policies.md).</span><span class="sxs-lookup"><span data-stu-id="875a8-106">For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).</span></span>
+<span data-ttu-id="043c0-106">Pour plus d'informations sur un ensemble supplémentaire de politiques utilisées pour contrôler quand et comment Microsoft Edge WebView2 est mis à jour, consultez la [référence des politiques de mise à jour de Microsoft Edge](microsoft-edge-update-policies.md).</span><span class="sxs-lookup"><span data-stu-id="043c0-106">For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).</span></span>
+
 
 > [!NOTE]
-> <span data-ttu-id="875a8-107">Cet article concerne MicrosoftEdge version87 ou ultérieure.</span><span class="sxs-lookup"><span data-stu-id="875a8-107">This article applies to Microsoft Edge version 87 or later.</span></span>
+> <span data-ttu-id="043c0-107">Cet article concerne MicrosoftEdge version87 ou ultérieure.</span><span class="sxs-lookup"><span data-stu-id="043c0-107">This article applies to Microsoft Edge version 87 or later.</span></span>
 
-## <span data-ttu-id="875a8-108">Stratégies disponibles</span><span class="sxs-lookup"><span data-stu-id="875a8-108">Available policies</span></span>
-<span data-ttu-id="875a8-109">Ces tableaux répertorient toutes les politiques de groupe disponibles dans cette version de Microsoft Edge WebView2.</span><span class="sxs-lookup"><span data-stu-id="875a8-109">These tables list all of the group policies available in this release of Microsoft Edge WebView2.</span></span> <span data-ttu-id="875a8-110">Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.</span><span class="sxs-lookup"><span data-stu-id="875a8-110">Use the links in the table to get more details about specific policies.</span></span>
+## <span data-ttu-id="043c0-108">Stratégies disponibles</span><span class="sxs-lookup"><span data-stu-id="043c0-108">Available policies</span></span>
+
+<span data-ttu-id="043c0-109">Ces tableaux répertorient toutes les politiques de groupe disponibles dans cette version de Microsoft Edge WebView2.</span><span class="sxs-lookup"><span data-stu-id="043c0-109">These tables list all of the group policies available in this release of Microsoft Edge WebView2.</span></span> <span data-ttu-id="043c0-110">Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.</span><span class="sxs-lookup"><span data-stu-id="043c0-110">Use the links in the table to get more details about specific policies.</span></span>
 
 |||
 |-|-|
-|[<span data-ttu-id="875a8-111">Paramètres d'annulation du chargeur</span><span class="sxs-lookup"><span data-stu-id="875a8-111">Loader Override Settings</span></span>](#loader-override-settings)|
+|[<span data-ttu-id="043c0-111">Paramètres d'annulation du chargeur</span><span class="sxs-lookup"><span data-stu-id="043c0-111">Loader Override Settings</span></span>](#loader-override-settings)|
 
-### [*<span data-ttu-id="875a8-112">Paramètres d'annulation du chargeur</span><span class="sxs-lookup"><span data-stu-id="875a8-112">Loader Override Settings</span></span>*](#loader-override-settings-policies)
-|<span data-ttu-id="875a8-113">Nom de la stratégie</span><span class="sxs-lookup"><span data-stu-id="875a8-113">Policy Name</span></span>|<span data-ttu-id="875a8-114">Caption</span><span class="sxs-lookup"><span data-stu-id="875a8-114">Caption</span></span>|
+### [*<span data-ttu-id="043c0-112">Paramètres d'annulation du chargeur</span><span class="sxs-lookup"><span data-stu-id="043c0-112">Loader Override Settings</span></span>*](#loader-override-settings-policies)
+
+|<span data-ttu-id="043c0-113">Nom de la stratégie</span><span class="sxs-lookup"><span data-stu-id="043c0-113">Policy Name</span></span>|<span data-ttu-id="043c0-114">Caption</span><span class="sxs-lookup"><span data-stu-id="043c0-114">Caption</span></span>|
 |-|-|
-|[<span data-ttu-id="875a8-115">browserExecutableFolder</span><span class="sxs-lookup"><span data-stu-id="875a8-115">browserExecutableFolder</span></span>](#browserexecutablefolder)|<span data-ttu-id="875a8-116">Configurer l'emplacement du dossier de l'exécutable du navigateur</span><span class="sxs-lookup"><span data-stu-id="875a8-116">Configure the location of the browser executable folder</span></span>|
-|[<span data-ttu-id="875a8-117">releaseChannelPreference</span><span class="sxs-lookup"><span data-stu-id="875a8-117">releaseChannelPreference</span></span>](#releasechannelpreference)|<span data-ttu-id="875a8-118">Définir la préférence de l'ordre de recherche du canal de diffusion</span><span class="sxs-lookup"><span data-stu-id="875a8-118">Set the release channel search order preference</span></span>|
+|[<span data-ttu-id="043c0-115">browserExecutableFolder</span><span class="sxs-lookup"><span data-stu-id="043c0-115">browserExecutableFolder</span></span>](#browserexecutablefolder)|<span data-ttu-id="043c0-116">Configurer l'emplacement du dossier de l'exécutable du navigateur</span><span class="sxs-lookup"><span data-stu-id="043c0-116">Configure the location of the browser executable folder</span></span>|
+|[<span data-ttu-id="043c0-117">releaseChannelPreference</span><span class="sxs-lookup"><span data-stu-id="043c0-117">releaseChannelPreference</span></span>](#releasechannelpreference)|<span data-ttu-id="043c0-118">Définir la préférence de l'ordre de recherche du canal de diffusion</span><span class="sxs-lookup"><span data-stu-id="043c0-118">Set the release channel search order preference</span></span>|
 
 
 
 
-  ## <span data-ttu-id="875a8-119">Politiques d'annulation des paramètres du chargeur</span><span class="sxs-lookup"><span data-stu-id="875a8-119">Loader Override Settings policies</span></span>
+  ## <span data-ttu-id="043c0-119">Politiques d'annulation des paramètres du chargeur</span><span class="sxs-lookup"><span data-stu-id="043c0-119">Loader Override Settings policies</span></span>
 
-  [<span data-ttu-id="875a8-120">Retour au début</span><span class="sxs-lookup"><span data-stu-id="875a8-120">Back to top</span></span>](#microsoft-edge-webview2---policies)
+  [<span data-ttu-id="043c0-120">Retour au début</span><span class="sxs-lookup"><span data-stu-id="043c0-120">Back to top</span></span>](#microsoft-edge-webview2---policies)
 
-  ### <span data-ttu-id="875a8-121">browserExecutableFolder</span><span class="sxs-lookup"><span data-stu-id="875a8-121">browserExecutableFolder</span></span>
-  #### <span data-ttu-id="875a8-122">Configurer l'emplacement du dossier de l'exécutable du navigateur</span><span class="sxs-lookup"><span data-stu-id="875a8-122">Configure the location of the browser executable folder</span></span>
+  ### <span data-ttu-id="043c0-121">browserExecutableFolder</span><span class="sxs-lookup"><span data-stu-id="043c0-121">browserExecutableFolder</span></span>
+
+  #### <span data-ttu-id="043c0-122">Configurer l'emplacement du dossier de l'exécutable du navigateur</span><span class="sxs-lookup"><span data-stu-id="043c0-122">Configure the location of the browser executable folder</span></span>
+
   
   
-  #### <span data-ttu-id="875a8-123">Versions prises en charge:</span><span class="sxs-lookup"><span data-stu-id="875a8-123">Supported versions:</span></span>
-  - <span data-ttu-id="875a8-124">Sur Windows depuis la version87 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="875a8-124">On Windows since 87 or later</span></span>
+  #### <span data-ttu-id="043c0-123">Versions prises en charge:</span><span class="sxs-lookup"><span data-stu-id="043c0-123">Supported versions:</span></span>
 
-  #### <span data-ttu-id="875a8-125">Description</span><span class="sxs-lookup"><span data-stu-id="875a8-125">Description</span></span>
-  <span data-ttu-id="875a8-126">Cette politique configure les applications WebView2 pour qu'elles utilisent le runtime WebView2 dans le chemin spécifié.</span><span class="sxs-lookup"><span data-stu-id="875a8-126">This policy configures WebView2 applications to use the WebView2 Runtime in the specified path.</span></span> <span data-ttu-id="875a8-127">Le dossier doit contenir les fichiers suivants : msedgewebview2.exe, msedge.dll, etc.</span><span class="sxs-lookup"><span data-stu-id="875a8-127">The folder should contain the following files: msedgewebview2.exe, msedge.dll, and so on.</span></span>
+  - <span data-ttu-id="043c0-124">Sur Windows depuis la version87 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="043c0-124">On Windows since 87 or later</span></span>
 
-<span data-ttu-id="875a8-128">Pour définir la valeur du chemin d'accès au dossier, fournissez un nom de valeur et une paire de valeurs.</span><span class="sxs-lookup"><span data-stu-id="875a8-128">To set the value for the folder path, provide a Value name and Value pair.</span></span> <span data-ttu-id="875a8-129">Définissez le nom de la valeur à l'ID du modèle d'utilisateur de l'application ou au nom du fichier exécutable.</span><span class="sxs-lookup"><span data-stu-id="875a8-129">Set value name to the Application User Model ID or the executable file name.</span></span> <span data-ttu-id="875a8-130">Vous pouvez utiliser le «\*» joker comme nom de valeur à appliquer à toutes les applications.</span><span class="sxs-lookup"><span data-stu-id="875a8-130">You can use the "\*" wildcard as value name to apply to all applications.</span></span>
+  #### <span data-ttu-id="043c0-125">Description</span><span class="sxs-lookup"><span data-stu-id="043c0-125">Description</span></span>
 
-  #### <span data-ttu-id="875a8-131">Fonctionnalités prises en charge:</span><span class="sxs-lookup"><span data-stu-id="875a8-131">Supported features:</span></span>
-  - <span data-ttu-id="875a8-132">Peut être obligatoire: Oui</span><span class="sxs-lookup"><span data-stu-id="875a8-132">Can be mandatory: Yes</span></span>
-  - <span data-ttu-id="875a8-133">Peut être recommandée: Non</span><span class="sxs-lookup"><span data-stu-id="875a8-133">Can be recommended: No</span></span>
-  - <span data-ttu-id="875a8-134">Actualisation dynamique de la stratégie: Oui</span><span class="sxs-lookup"><span data-stu-id="875a8-134">Dynamic Policy Refresh: Yes</span></span>
+  <span data-ttu-id="043c0-126">Cette politique configure les applications WebView2 pour qu'elles utilisent le runtime WebView2 dans le chemin spécifié.</span><span class="sxs-lookup"><span data-stu-id="043c0-126">This policy configures WebView2 applications to use the WebView2 Runtime in the specified path.</span></span> <span data-ttu-id="043c0-127">Le dossier doit contenir les fichiers suivants : msedgewebview2.exe, msedge.dll, etc.</span><span class="sxs-lookup"><span data-stu-id="043c0-127">The folder should contain the following files: msedgewebview2.exe, msedge.dll, and so on.</span></span>
 
-  #### <span data-ttu-id="875a8-135">Type de données:</span><span class="sxs-lookup"><span data-stu-id="875a8-135">Data Type:</span></span>
-  - <span data-ttu-id="875a8-136">Liste composée de chaînes</span><span class="sxs-lookup"><span data-stu-id="875a8-136">List of strings</span></span>
+<span data-ttu-id="043c0-128">Pour définir la valeur du chemin d'accès au dossier, fournissez un nom de valeur et une paire de valeurs.</span><span class="sxs-lookup"><span data-stu-id="043c0-128">To set the value for the folder path, provide a Value name and Value pair.</span></span> <span data-ttu-id="043c0-129">Définissez le nom de la valeur à l'ID du modèle d'utilisateur de l'application ou au nom du fichier exécutable.</span><span class="sxs-lookup"><span data-stu-id="043c0-129">Set value name to the Application User Model ID or the executable file name.</span></span> <span data-ttu-id="043c0-130">Vous pouvez utiliser le «\*» joker comme nom de valeur à appliquer à toutes les applications.</span><span class="sxs-lookup"><span data-stu-id="043c0-130">You can use the "\*" wildcard as value name to apply to all applications.</span></span>
 
-  #### <span data-ttu-id="875a8-137">Informations et paramètres Windows</span><span class="sxs-lookup"><span data-stu-id="875a8-137">Windows information and settings</span></span>
-  ##### <span data-ttu-id="875a8-138">Informations relatives à la stratégie de groupe (ADMX)</span><span class="sxs-lookup"><span data-stu-id="875a8-138">Group Policy (ADMX) info</span></span>
-  - <span data-ttu-id="875a8-139">Nom unique de GP : browserExecutableFolder</span><span class="sxs-lookup"><span data-stu-id="875a8-139">GP unique name: browserExecutableFolder</span></span>
-  - <span data-ttu-id="875a8-140">Nom du GP : Configurer l'emplacement du dossier de l'exécutable du navigateur</span><span class="sxs-lookup"><span data-stu-id="875a8-140">GP name: Configure the location of the browser executable folder</span></span>
-  - <span data-ttu-id="875a8-141">Parcours GP (Obligatoire) : Modèles d'administration/Microsoft Edge WebView2/Loader Paramètres de remplacement</span><span class="sxs-lookup"><span data-stu-id="875a8-141">GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings</span></span>
-  - <span data-ttu-id="875a8-142">Chemin d’accès de la stratégie de groupe (recommandé): N/A</span><span class="sxs-lookup"><span data-stu-id="875a8-142">GP path (Recommended): N/A</span></span>
-  - <span data-ttu-id="875a8-143">Nom du fichier GP ADMX : MSEdgeWebView2.admx</span><span class="sxs-lookup"><span data-stu-id="875a8-143">GP ADMX file name: MSEdgeWebView2.admx</span></span>
-  ##### <span data-ttu-id="875a8-144">Paramètres du Registre Windows</span><span class="sxs-lookup"><span data-stu-id="875a8-144">Windows Registry Settings</span></span>
-  - <span data-ttu-id="875a8-145">Chemin (Obligatoire) : SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder</span><span class="sxs-lookup"><span data-stu-id="875a8-145">Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder</span></span>
-  - <span data-ttu-id="875a8-146">Chemin d’accès (recommandé): N/A</span><span class="sxs-lookup"><span data-stu-id="875a8-146">Path (Recommended): N/A</span></span>
-  - <span data-ttu-id="875a8-147">Nom de la valeur : liste des REG_SZ</span><span class="sxs-lookup"><span data-stu-id="875a8-147">Value Name: list of REG_SZ</span></span>
-  - <span data-ttu-id="875a8-148">Type de valeur: liste composée de REG_SZ</span><span class="sxs-lookup"><span data-stu-id="875a8-148">Value Type: list of REG_SZ</span></span>
-  ##### <span data-ttu-id="875a8-149">Exemple de valeur:</span><span class="sxs-lookup"><span data-stu-id="875a8-149">Example value:</span></span>
+  #### <span data-ttu-id="043c0-131">Fonctionnalités prises en charge:</span><span class="sxs-lookup"><span data-stu-id="043c0-131">Supported features:</span></span>
+
+  - <span data-ttu-id="043c0-132">Peut être obligatoire: Oui</span><span class="sxs-lookup"><span data-stu-id="043c0-132">Can be mandatory: Yes</span></span>
+  - <span data-ttu-id="043c0-133">Peut être recommandée: Non</span><span class="sxs-lookup"><span data-stu-id="043c0-133">Can be recommended: No</span></span>
+  - <span data-ttu-id="043c0-134">Actualisation dynamique de la stratégie: Oui</span><span class="sxs-lookup"><span data-stu-id="043c0-134">Dynamic Policy Refresh: Yes</span></span>
+
+  #### <span data-ttu-id="043c0-135">Type de données:</span><span class="sxs-lookup"><span data-stu-id="043c0-135">Data Type:</span></span>
+
+  - <span data-ttu-id="043c0-136">Liste composée de chaînes</span><span class="sxs-lookup"><span data-stu-id="043c0-136">List of strings</span></span>
+
+  #### <span data-ttu-id="043c0-137">Informations et paramètres Windows</span><span class="sxs-lookup"><span data-stu-id="043c0-137">Windows information and settings</span></span>
+
+  ##### <span data-ttu-id="043c0-138">Informations relatives à la stratégie de groupe (ADMX)</span><span class="sxs-lookup"><span data-stu-id="043c0-138">Group Policy (ADMX) info</span></span>
+
+  - <span data-ttu-id="043c0-139">Nom unique de GP : browserExecutableFolder</span><span class="sxs-lookup"><span data-stu-id="043c0-139">GP unique name: browserExecutableFolder</span></span>
+  - <span data-ttu-id="043c0-140">Nom du GP : Configurer l'emplacement du dossier de l'exécutable du navigateur</span><span class="sxs-lookup"><span data-stu-id="043c0-140">GP name: Configure the location of the browser executable folder</span></span>
+  - <span data-ttu-id="043c0-141">Parcours GP (Obligatoire) : Modèles d'administration/Microsoft Edge WebView2/Loader Paramètres de remplacement</span><span class="sxs-lookup"><span data-stu-id="043c0-141">GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings</span></span>
+  - <span data-ttu-id="043c0-142">Chemin d’accès de la stratégie de groupe (recommandé): N/A</span><span class="sxs-lookup"><span data-stu-id="043c0-142">GP path (Recommended): N/A</span></span>
+  - <span data-ttu-id="043c0-143">Nom du fichier GP ADMX : MSEdgeWebView2.admx</span><span class="sxs-lookup"><span data-stu-id="043c0-143">GP ADMX file name: MSEdgeWebView2.admx</span></span>
+
+  ##### <span data-ttu-id="043c0-144">Paramètres du Registre Windows</span><span class="sxs-lookup"><span data-stu-id="043c0-144">Windows Registry Settings</span></span>
+
+  - <span data-ttu-id="043c0-145">Chemin (Obligatoire) : SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder</span><span class="sxs-lookup"><span data-stu-id="043c0-145">Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder</span></span>
+  - <span data-ttu-id="043c0-146">Chemin d’accès (recommandé): N/A</span><span class="sxs-lookup"><span data-stu-id="043c0-146">Path (Recommended): N/A</span></span>
+  - <span data-ttu-id="043c0-147">Nom de la valeur : liste des REG_SZ</span><span class="sxs-lookup"><span data-stu-id="043c0-147">Value Name: list of REG_SZ</span></span>
+  - <span data-ttu-id="043c0-148">Type de valeur: liste composée de REG_SZ</span><span class="sxs-lookup"><span data-stu-id="043c0-148">Value Type: list of REG_SZ</span></span>
+
+  ##### <span data-ttu-id="043c0-149">Exemple de valeur:</span><span class="sxs-lookup"><span data-stu-id="043c0-149">Example value:</span></span>
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
-
   
 
-  [<span data-ttu-id="875a8-150">Retour au début</span><span class="sxs-lookup"><span data-stu-id="875a8-150">Back to top</span></span>](#microsoft-edge-webview2---policies)
+  [<span data-ttu-id="043c0-150">Retour au début</span><span class="sxs-lookup"><span data-stu-id="043c0-150">Back to top</span></span>](#microsoft-edge-webview2---policies)
 
-  ### <span data-ttu-id="875a8-151">releaseChannelPreference</span><span class="sxs-lookup"><span data-stu-id="875a8-151">releaseChannelPreference</span></span>
-  #### <span data-ttu-id="875a8-152">Définir la préférence de l'ordre de recherche du canal de diffusion</span><span class="sxs-lookup"><span data-stu-id="875a8-152">Set the release channel search order preference</span></span>
+  ### <span data-ttu-id="043c0-151">releaseChannelPreference</span><span class="sxs-lookup"><span data-stu-id="043c0-151">releaseChannelPreference</span></span>
+
+  #### <span data-ttu-id="043c0-152">Définir la préférence de l'ordre de recherche du canal de diffusion</span><span class="sxs-lookup"><span data-stu-id="043c0-152">Set the release channel search order preference</span></span>
+
   
   
-  #### <span data-ttu-id="875a8-153">Versions prises en charge:</span><span class="sxs-lookup"><span data-stu-id="875a8-153">Supported versions:</span></span>
-  - <span data-ttu-id="875a8-154">Sur Windows depuis la version87 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="875a8-154">On Windows since 87 or later</span></span>
+  #### <span data-ttu-id="043c0-153">Versions prises en charge:</span><span class="sxs-lookup"><span data-stu-id="043c0-153">Supported versions:</span></span>
 
-  #### <span data-ttu-id="875a8-155">Description</span><span class="sxs-lookup"><span data-stu-id="875a8-155">Description</span></span>
-  <span data-ttu-id="875a8-156">L'ordre de recherche des chaînes par défaut est le suivant : WebView2 Runtime, Beta, Dev et Canary.</span><span class="sxs-lookup"><span data-stu-id="875a8-156">The default channel search order is WebView2 Runtime, Beta, Dev, and Canary.</span></span>
+  - <span data-ttu-id="043c0-154">Sur Windows depuis la version87 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="043c0-154">On Windows since 87 or later</span></span>
 
-<span data-ttu-id="875a8-157">Pour inverser l'ordre de recherche par défaut, réglez cette politique sur 1.</span><span class="sxs-lookup"><span data-stu-id="875a8-157">To reverse the default search order, set this policy to 1.</span></span>
+  #### <span data-ttu-id="043c0-155">Description</span><span class="sxs-lookup"><span data-stu-id="043c0-155">Description</span></span>
 
-<span data-ttu-id="875a8-158">Pour définir la valeur de la préférence de canal de diffusion, fournissez un nom de valeur et une paire de valeurs.</span><span class="sxs-lookup"><span data-stu-id="875a8-158">To set the value for the release channel preference, provide a Value name and Value pair.</span></span> <span data-ttu-id="875a8-159">Définissez le nom de la valeur à l'ID du modèle d'utilisateur de l'application ou au nom du fichier exécutable.</span><span class="sxs-lookup"><span data-stu-id="875a8-159">Set value name to the Application User Model ID or the executable file name.</span></span> <span data-ttu-id="875a8-160">Vous pouvez utiliser le «\*» joker comme nom de valeur à appliquer à toutes les applications.</span><span class="sxs-lookup"><span data-stu-id="875a8-160">You can use the "\*" wildcard as value name to apply to all applications.</span></span>
+  <span data-ttu-id="043c0-156">L'ordre de recherche des chaînes par défaut est le suivant : WebView2 Runtime, Beta, Dev et Canary.</span><span class="sxs-lookup"><span data-stu-id="043c0-156">The default channel search order is WebView2 Runtime, Beta, Dev, and Canary.</span></span>
 
-  #### <span data-ttu-id="875a8-161">Fonctionnalités prises en charge:</span><span class="sxs-lookup"><span data-stu-id="875a8-161">Supported features:</span></span>
-  - <span data-ttu-id="875a8-162">Peut être obligatoire: Oui</span><span class="sxs-lookup"><span data-stu-id="875a8-162">Can be mandatory: Yes</span></span>
-  - <span data-ttu-id="875a8-163">Peut être recommandée: Non</span><span class="sxs-lookup"><span data-stu-id="875a8-163">Can be recommended: No</span></span>
-  - <span data-ttu-id="875a8-164">Actualisation dynamique de la stratégie: Oui</span><span class="sxs-lookup"><span data-stu-id="875a8-164">Dynamic Policy Refresh: Yes</span></span>
+<span data-ttu-id="043c0-157">Pour inverser l'ordre de recherche par défaut, réglez cette politique sur 1.</span><span class="sxs-lookup"><span data-stu-id="043c0-157">To reverse the default search order, set this policy to 1.</span></span>
 
-  #### <span data-ttu-id="875a8-165">Type de données:</span><span class="sxs-lookup"><span data-stu-id="875a8-165">Data Type:</span></span>
-  - <span data-ttu-id="875a8-166">Liste composée de chaînes</span><span class="sxs-lookup"><span data-stu-id="875a8-166">List of strings</span></span>
+<span data-ttu-id="043c0-158">Pour définir la valeur de la préférence de canal de diffusion, fournissez un nom de valeur et une paire de valeurs.</span><span class="sxs-lookup"><span data-stu-id="043c0-158">To set the value for the release channel preference, provide a Value name and Value pair.</span></span> <span data-ttu-id="043c0-159">Définissez le nom de la valeur à l'ID du modèle d'utilisateur de l'application ou au nom du fichier exécutable.</span><span class="sxs-lookup"><span data-stu-id="043c0-159">Set value name to the Application User Model ID or the executable file name.</span></span> <span data-ttu-id="043c0-160">Vous pouvez utiliser le «\*» joker comme nom de valeur à appliquer à toutes les applications.</span><span class="sxs-lookup"><span data-stu-id="043c0-160">You can use the "\*" wildcard as value name to apply to all applications.</span></span>
 
-  #### <span data-ttu-id="875a8-167">Informations et paramètres Windows</span><span class="sxs-lookup"><span data-stu-id="875a8-167">Windows information and settings</span></span>
-  ##### <span data-ttu-id="875a8-168">Informations relatives à la stratégie de groupe (ADMX)</span><span class="sxs-lookup"><span data-stu-id="875a8-168">Group Policy (ADMX) info</span></span>
-  - <span data-ttu-id="875a8-169">Nom unique de GP : releaseChannelPreference</span><span class="sxs-lookup"><span data-stu-id="875a8-169">GP unique name: releaseChannelPreference</span></span>
-  - <span data-ttu-id="875a8-170">Nom du GP : Définir la préférence de l'ordre de recherche du canal de diffusion</span><span class="sxs-lookup"><span data-stu-id="875a8-170">GP name: Set the release channel search order preference</span></span>
-  - <span data-ttu-id="875a8-171">Parcours GP (Obligatoire) : Modèles d'administration/Microsoft Edge WebView2/Loader Paramètres de remplacement</span><span class="sxs-lookup"><span data-stu-id="875a8-171">GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings</span></span>
-  - <span data-ttu-id="875a8-172">Chemin d’accès de la stratégie de groupe (recommandé): N/A</span><span class="sxs-lookup"><span data-stu-id="875a8-172">GP path (Recommended): N/A</span></span>
-  - <span data-ttu-id="875a8-173">Nom du fichier GP ADMX : MSEdgeWebView2.admx</span><span class="sxs-lookup"><span data-stu-id="875a8-173">GP ADMX file name: MSEdgeWebView2.admx</span></span>
-  ##### <span data-ttu-id="875a8-174">Paramètres du Registre Windows</span><span class="sxs-lookup"><span data-stu-id="875a8-174">Windows Registry Settings</span></span>
-  - <span data-ttu-id="875a8-175">Chemin (Obligatoire) : SOFTWARE\Politiques\Microsoft\Edge\WebView2\releaseChannelPreference</span><span class="sxs-lookup"><span data-stu-id="875a8-175">Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference</span></span>
-  - <span data-ttu-id="875a8-176">Chemin d’accès (recommandé): N/A</span><span class="sxs-lookup"><span data-stu-id="875a8-176">Path (Recommended): N/A</span></span>
-  - <span data-ttu-id="875a8-177">Nom de la valeur : liste des REG_SZ</span><span class="sxs-lookup"><span data-stu-id="875a8-177">Value Name: list of REG_SZ</span></span>
-  - <span data-ttu-id="875a8-178">Type de valeur: liste composée de REG_SZ</span><span class="sxs-lookup"><span data-stu-id="875a8-178">Value Type: list of REG_SZ</span></span>
-  ##### <span data-ttu-id="875a8-179">Exemple de valeur:</span><span class="sxs-lookup"><span data-stu-id="875a8-179">Example value:</span></span>
+  #### <span data-ttu-id="043c0-161">Fonctionnalités prises en charge:</span><span class="sxs-lookup"><span data-stu-id="043c0-161">Supported features:</span></span>
+
+  - <span data-ttu-id="043c0-162">Peut être obligatoire: Oui</span><span class="sxs-lookup"><span data-stu-id="043c0-162">Can be mandatory: Yes</span></span>
+  - <span data-ttu-id="043c0-163">Peut être recommandée: Non</span><span class="sxs-lookup"><span data-stu-id="043c0-163">Can be recommended: No</span></span>
+  - <span data-ttu-id="043c0-164">Actualisation dynamique de la stratégie: Oui</span><span class="sxs-lookup"><span data-stu-id="043c0-164">Dynamic Policy Refresh: Yes</span></span>
+
+  #### <span data-ttu-id="043c0-165">Type de données:</span><span class="sxs-lookup"><span data-stu-id="043c0-165">Data Type:</span></span>
+
+  - <span data-ttu-id="043c0-166">Liste composée de chaînes</span><span class="sxs-lookup"><span data-stu-id="043c0-166">List of strings</span></span>
+
+  #### <span data-ttu-id="043c0-167">Informations et paramètres Windows</span><span class="sxs-lookup"><span data-stu-id="043c0-167">Windows information and settings</span></span>
+
+  ##### <span data-ttu-id="043c0-168">Informations relatives à la stratégie de groupe (ADMX)</span><span class="sxs-lookup"><span data-stu-id="043c0-168">Group Policy (ADMX) info</span></span>
+
+  - <span data-ttu-id="043c0-169">Nom unique de GP : releaseChannelPreference</span><span class="sxs-lookup"><span data-stu-id="043c0-169">GP unique name: releaseChannelPreference</span></span>
+  - <span data-ttu-id="043c0-170">Nom du GP : Définir la préférence de l'ordre de recherche du canal de diffusion</span><span class="sxs-lookup"><span data-stu-id="043c0-170">GP name: Set the release channel search order preference</span></span>
+  - <span data-ttu-id="043c0-171">Parcours GP (Obligatoire) : Modèles d'administration/Microsoft Edge WebView2/Loader Paramètres de remplacement</span><span class="sxs-lookup"><span data-stu-id="043c0-171">GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings</span></span>
+  - <span data-ttu-id="043c0-172">Chemin d’accès de la stratégie de groupe (recommandé): N/A</span><span class="sxs-lookup"><span data-stu-id="043c0-172">GP path (Recommended): N/A</span></span>
+  - <span data-ttu-id="043c0-173">Nom du fichier GP ADMX : MSEdgeWebView2.admx</span><span class="sxs-lookup"><span data-stu-id="043c0-173">GP ADMX file name: MSEdgeWebView2.admx</span></span>
+
+  ##### <span data-ttu-id="043c0-174">Paramètres du Registre Windows</span><span class="sxs-lookup"><span data-stu-id="043c0-174">Windows Registry Settings</span></span>
+
+  - <span data-ttu-id="043c0-175">Chemin (Obligatoire) : SOFTWARE\Politiques\Microsoft\Edge\WebView2\releaseChannelPreference</span><span class="sxs-lookup"><span data-stu-id="043c0-175">Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference</span></span>
+  - <span data-ttu-id="043c0-176">Chemin d’accès (recommandé): N/A</span><span class="sxs-lookup"><span data-stu-id="043c0-176">Path (Recommended): N/A</span></span>
+  - <span data-ttu-id="043c0-177">Nom de la valeur : liste des REG_SZ</span><span class="sxs-lookup"><span data-stu-id="043c0-177">Value Name: list of REG_SZ</span></span>
+  - <span data-ttu-id="043c0-178">Type de valeur: liste composée de REG_SZ</span><span class="sxs-lookup"><span data-stu-id="043c0-178">Value Type: list of REG_SZ</span></span>
+
+  ##### <span data-ttu-id="043c0-179">Exemple de valeur:</span><span class="sxs-lookup"><span data-stu-id="043c0-179">Example value:</span></span>
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, Value: 1"
 
 ```
 
-
   
 
-  [<span data-ttu-id="875a8-180">Retour au début</span><span class="sxs-lookup"><span data-stu-id="875a8-180">Back to top</span></span>](#microsoft-edge-webview2---policies)
+  [<span data-ttu-id="043c0-180">Retour au début</span><span class="sxs-lookup"><span data-stu-id="043c0-180">Back to top</span></span>](#microsoft-edge-webview2---policies)
 
 
-## <span data-ttu-id="875a8-181">Voir également</span><span class="sxs-lookup"><span data-stu-id="875a8-181">See also</span></span>
-- [<span data-ttu-id="875a8-182">Configuration de MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="875a8-182">Configuring Microsoft Edge</span></span>](configure-microsoft-edge.md)
-- [<span data-ttu-id="875a8-183">Page d’accueil MicrosoftEdge Entreprise</span><span class="sxs-lookup"><span data-stu-id="875a8-183">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
-- [<span data-ttu-id="875a8-184">Blog sur les bases de la sécurité Microsoft</span><span class="sxs-lookup"><span data-stu-id="875a8-184">Microsoft Security Baselines Blog</span></span>](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines)
+## <span data-ttu-id="043c0-181">Voir également</span><span class="sxs-lookup"><span data-stu-id="043c0-181">See also</span></span>
+
+- [<span data-ttu-id="043c0-182">Configuration de MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="043c0-182">Configuring Microsoft Edge</span></span>](configure-microsoft-edge.md)
+- [<span data-ttu-id="043c0-183">Page d’accueil MicrosoftEdge Entreprise</span><span class="sxs-lookup"><span data-stu-id="043c0-183">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
+- [<span data-ttu-id="043c0-184">Blog sur les bases de la sécurité Microsoft</span><span class="sxs-lookup"><span data-stu-id="043c0-184">Microsoft Security Baselines Blog</span></span>](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines)
