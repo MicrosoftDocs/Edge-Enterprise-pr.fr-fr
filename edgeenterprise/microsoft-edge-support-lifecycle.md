@@ -3,36 +3,43 @@ title: Cycle de vie Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 01/13/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Cycle de vie Microsoft Edge
-ms.openlocfilehash: 6f29155362a4f942f850116ca09162d49f1dfc52
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 311041e314a5c21d1110275cafbc23aadd6b737b
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979794"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136203"
 ---
-# <span data-ttu-id="e955c-103">Politique de cycle de vie Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="e955c-103">Microsoft Edge Lifecycle Policy</span></span>
+# <span data-ttu-id="2047b-103">Politique de cycle de vie Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="2047b-103">Microsoft Edge Lifecycle Policy</span></span>
 
-<span data-ttu-id="e955c-104">Cet article décrit la politique de cycle de vie qui s’applique à Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="e955c-104">This article describes the lifecycle policy that applies to Microsoft Edge.</span></span>
+<span data-ttu-id="2047b-104">Cet article décrit la politique de cycle de vie qui s’applique à Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="2047b-104">This article describes the lifecycle policy that applies to Microsoft Edge.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e955c-105">Cet article concerne MicrosoftEdge versions77 et ultérieures.</span><span class="sxs-lookup"><span data-stu-id="e955c-105">This article applies to the Microsoft Edge versions 77 and higher.</span></span>
+> <span data-ttu-id="2047b-105">Cet article concerne MicrosoftEdge versions77 et ultérieures.</span><span class="sxs-lookup"><span data-stu-id="2047b-105">This article applies to the Microsoft Edge versions 77 and higher.</span></span>
 
-## <span data-ttu-id="e955c-106">Vue d’ensemble de la stratégie de cycle de vie pour MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="e955c-106">Overview of the lifecycle policy for Microsoft Edge</span></span>
+## <span data-ttu-id="2047b-106">Vue d’ensemble de la stratégie de cycle de vie pour MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="2047b-106">Overview of the lifecycle policy for Microsoft Edge</span></span>
 
-<span data-ttu-id="e955c-107">La prochaine version de MicrosoftEdge offre des fonctionnalités des mise à jour plus fréquentes et flexibles.</span><span class="sxs-lookup"><span data-stu-id="e955c-107">The next version of Microsoft Edge features more frequent and more flexible updating capabilities.</span></span> <span data-ttu-id="e955c-108">Étant donné que les versions de navigateur ne sont pas liées aux versions majeures de Windows, il est nécessaire de mettre à jour la stratégie de cycle de vie pour refléter cela.</span><span class="sxs-lookup"><span data-stu-id="e955c-108">Because browser releases aren't bound to the Windows major releases, it is necessary to have the governing lifecycle policy updated to reflect this.</span></span> <span data-ttu-id="e955c-109">Dorénavant, Microsoft Edge fera partie de la [Politique de cycle de vie moderne](https://support.microsoft.com/help/30881/modern-lifecycle-policy).</span><span class="sxs-lookup"><span data-stu-id="e955c-109">Going forward Microsoft Edge will be part of the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).</span></span>
+<span data-ttu-id="2047b-107">La prochaine version de MicrosoftEdge offre des fonctionnalités des mise à jour plus fréquentes et flexibles.</span><span class="sxs-lookup"><span data-stu-id="2047b-107">The next version of Microsoft Edge features more frequent and more flexible updating capabilities.</span></span> <span data-ttu-id="2047b-108">Étant donné que les versions de navigateur ne sont pas liées aux versions majeures de Windows, il est nécessaire de mettre à jour la stratégie de cycle de vie pour refléter cela.</span><span class="sxs-lookup"><span data-stu-id="2047b-108">Because browser releases aren't bound to the Windows major releases, it is necessary to have the governing lifecycle policy updated to reflect this.</span></span> <span data-ttu-id="2047b-109">Dorénavant, Microsoft Edge fera partie de la [Politique de cycle de vie moderne](https://support.microsoft.com/help/30881/modern-lifecycle-policy).</span><span class="sxs-lookup"><span data-stu-id="2047b-109">Going forward Microsoft Edge will be part of the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).</span></span>
 
-<span data-ttu-id="e955c-110">Dans le cadre de cette stratégie, les versions de MicrosoftEdge prises en charge comprendront la dernière version disponible à partir des canaux bêta et stable.</span><span class="sxs-lookup"><span data-stu-id="e955c-110">As part of this policy, the supported releases of Microsoft Edge will include the latest available release from the Beta and Stable channels.</span></span>
+<span data-ttu-id="2047b-110">Dans le cadre de cette stratégie, les versions de MicrosoftEdge prises en charge comprendront la dernière version disponible à partir des canaux bêta et stable.</span><span class="sxs-lookup"><span data-stu-id="2047b-110">As part of this policy, the supported releases of Microsoft Edge will include the latest available release from the Beta and Stable channels.</span></span>
 
-## <span data-ttu-id="e955c-111">Voir également</span><span class="sxs-lookup"><span data-stu-id="e955c-111">See also</span></span>
+## <span data-ttu-id="2047b-111">Disponibilité du support assisté pour MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="2047b-111">Assisted support availability for Microsoft Edge</span></span>
+<span data-ttu-id="2047b-112">Les mises à jour de sécurité et les mises à jour de maintenance sont uniquement disponibles sur la publication la plus récente du canal stable et la publication de canal bêta.</span><span class="sxs-lookup"><span data-stu-id="2047b-112">Security updates and servicing updates are available on the most recent Stable channel release and latest Beta channel release only.</span></span> <span data-ttu-id="2047b-113">L’utilisation d’anciennes versions de MicrosoftEdge signifie probablement que vous ne disposez pas des dernières mises à jour de qualité et de sécurité, ce qui n’est pas recommandé.</span><span class="sxs-lookup"><span data-stu-id="2047b-113">Using older releases of Microsoft Edge likely means you are missing the latest quality and security updates and is not recommended.</span></span> <span data-ttu-id="2047b-114">Si l’utilisation des versions antérieures est nécessaire pour votre organisation, un support assisté est disponible pour les trois versions les plus récentes du canal stable et la dernière publication du canal bêta.</span><span class="sxs-lookup"><span data-stu-id="2047b-114">If use of the older releases is necessary for your organization then Assisted Support is available for the most recent three Stable channel releases and the latest Beta channel release.</span></span>  <span data-ttu-id="2047b-115">La véritable durée du support assistée pour une publication de canal stable est d’environ 18semaines.</span><span class="sxs-lookup"><span data-stu-id="2047b-115">The effective assisted support duration for a Stable channel release is approximately 18 weeks.</span></span> <span data-ttu-id="2047b-116">La véritable durée du support d’une version de canal bêta est de 6semaines environ. Les versions précédentes du canal bêta ne sont pas prises en charge.</span><span class="sxs-lookup"><span data-stu-id="2047b-116">The effective support duration for a Beta channel release is ~6 weeks, prior Beta channel releases are not supported.</span></span>
 
-- [<span data-ttu-id="e955c-112">Page d’accueil MicrosoftEdge Entreprise</span><span class="sxs-lookup"><span data-stu-id="e955c-112">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
-- [<span data-ttu-id="e955c-113">Documentation MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="e955c-113">Microsoft Edge documentation</span></span>](https://docs.microsoft.com/DeployEdge/)
-- [<span data-ttu-id="e955c-114">Politique de cycle de vie moderne de Microsoft</span><span class="sxs-lookup"><span data-stu-id="e955c-114">Microsoft Modern Lifecycle Policy</span></span>](https://support.microsoft.com/help/30881/modern-lifecycle-policy)
-- [<span data-ttu-id="e955c-115">Systèmes d’exploitation prenant en charge MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="e955c-115">Microsoft Edge Supported Operating Systems</span></span>](https://docs.microsoft.com/DeployEdge/microsoft-edge-supported-operating-systems)
+<span data-ttu-id="2047b-117">Microsoft vous recommande vivement de rester à jour avec la version la plus récente du canal stable ou de la version du canal bêta.</span><span class="sxs-lookup"><span data-stu-id="2047b-117">Microsoft strongly recommends staying current with the most recent Stable channel or Beta channel release.</span></span>
+
+
+
+## <span data-ttu-id="2047b-118">Voir également</span><span class="sxs-lookup"><span data-stu-id="2047b-118">See also</span></span>
+
+- [<span data-ttu-id="2047b-119">Page d’accueil MicrosoftEdge Entreprise</span><span class="sxs-lookup"><span data-stu-id="2047b-119">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
+- [<span data-ttu-id="2047b-120">Documentation MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="2047b-120">Microsoft Edge documentation</span></span>](https://docs.microsoft.com/DeployEdge/)
+- [<span data-ttu-id="2047b-121">Politique de cycle de vie moderne de Microsoft</span><span class="sxs-lookup"><span data-stu-id="2047b-121">Microsoft Modern Lifecycle Policy</span></span>](https://support.microsoft.com/help/30881/modern-lifecycle-policy)
+- [<span data-ttu-id="2047b-122">Systèmes d’exploitation prenant en charge MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="2047b-122">Microsoft Edge Supported Operating Systems</span></span>](https://docs.microsoft.com/DeployEdge/microsoft-edge-supported-operating-systems)
