@@ -143,6 +143,8 @@
       href: microsoft-edge-webview-policies.md
     - name: Plus de références
       items:
+        - name: Compatibilité descendante pour la nouvelle page d’onglets de l’entreprise
+          href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce et DirectInvoke
           href: edge-learn-more-co-di.md
         - name: Les options de ligne de commande pour configurer les paramètres de proxy
