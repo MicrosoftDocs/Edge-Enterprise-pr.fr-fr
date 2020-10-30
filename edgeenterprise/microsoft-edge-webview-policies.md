@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies WebView2 Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/16/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 4298b25f7f158bc54f798442b4426494f046fa68
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 3ca9adb18ef41581bb016451015cf0aca0aa63c9
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134443"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136213"
 ---
 # Microsoft Edge WebView2 - Politiques
 
@@ -40,8 +40,8 @@ Ces tableaux répertorient toutes les politiques de groupe disponibles dans cett
 
 |Nom de la stratégie|Caption|
 |-|-|
-|[browserExecutableFolder](#browserexecutablefolder)|Configurer l'emplacement du dossier de l'exécutable du navigateur|
-|[releaseChannelPreference](#releasechannelpreference)|Définir la préférence de l'ordre de recherche du canal de diffusion|
+|[BrowserExecutableFolder](#browserexecutablefolder)|Configurer l'emplacement du dossier de l'exécutable du navigateur|
+|[ReleaseChannelPreference](#releasechannelpreference)|Définir la préférence de l'ordre de recherche du canal de diffusion|
 
 
 
@@ -50,7 +50,7 @@ Ces tableaux répertorient toutes les politiques de groupe disponibles dans cett
 
   [Retour au début](#microsoft-edge-webview2---policies)
 
-  ### browserExecutableFolder
+  ### BrowserExecutableFolder
 
   #### Configurer l'emplacement du dossier de l'exécutable du navigateur
 
@@ -80,7 +80,7 @@ Pour définir la valeur du chemin d'accès au dossier, fournissez un nom de vale
 
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de GP : browserExecutableFolder
+  - Nom unique de GP: BrowserExecutableFolder
   - Nom du GP : Configurer l'emplacement du dossier de l'exécutable du navigateur
   - Parcours GP (Obligatoire) : Modèles d'administration/Microsoft Edge WebView2/Loader Paramètres de remplacement
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
@@ -88,7 +88,7 @@ Pour définir la valeur du chemin d'accès au dossier, fournissez un nom de vale
 
   ##### Paramètres du Registre Windows
 
-  - Chemin (Obligatoire) : SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Chemin d’accès (recommandé): N/A
   - Nom de la valeur : liste des REG_SZ
   - Type de valeur: liste composée de REG_SZ
@@ -96,7 +96,7 @@ Pour définir la valeur du chemin d'accès au dossier, fournissez un nom de vale
   ##### Exemple de valeur:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
@@ -104,7 +104,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   [Retour au début](#microsoft-edge-webview2---policies)
 
-  ### releaseChannelPreference
+  ### ReleaseChannelPreference
 
   #### Définir la préférence de l'ordre de recherche du canal de diffusion
 
@@ -136,7 +136,7 @@ Pour définir la valeur de la préférence de canal de diffusion, fournissez un 
 
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de GP : releaseChannelPreference
+  - Nom unique de GP: ReleaseChannelPreference
   - Nom du GP : Définir la préférence de l'ordre de recherche du canal de diffusion
   - Parcours GP (Obligatoire) : Modèles d'administration/Microsoft Edge WebView2/Loader Paramètres de remplacement
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
@@ -144,7 +144,7 @@ Pour définir la valeur de la préférence de canal de diffusion, fournissez un 
 
   ##### Paramètres du Registre Windows
 
-  - Chemin (Obligatoire) : SOFTWARE\Politiques\Microsoft\Edge\WebView2\releaseChannelPreference
+  - Chemin (Obligatoire): SOFTWARE\Politiques\Microsoft\Edge\WebView2\releaseChannelPreference
   - Chemin d’accès (recommandé): N/A
   - Nom de la valeur : liste des REG_SZ
   - Type de valeur: liste composée de REG_SZ
@@ -152,7 +152,7 @@ Pour définir la valeur de la préférence de canal de diffusion, fournissez un 
   ##### Exemple de valeur:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, Value: 1"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
 ```
 

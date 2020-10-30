@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
-ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
+ms.openlocfilehash: 8cedd34ba3a2053ae7c8d098c9d5106139a8b961
+ms.sourcegitcommit: 737da8f49297a0189f533480f7bfe5989a59a8f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "11133292"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136117"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -24,8 +24,12 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!IMPORTANT]
 > Consultez cette [mise à jour sur les versions de canaux Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
+## Version87.0.664.18: 26octobre
+
+Résolution de divers bogues et problèmes de performances.
+
 <!-- begin major 87 -->
-## Version87.0.664.12 : 20octobre
+## Version87.0.664.12: 20octobre
 
 ### Mises à jour des fonctionnalités
 
@@ -69,19 +73,17 @@ Ajout de dix nouvelles stratégies. Téléchargez les modèles d’administratio
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - Réactivez les fonctionnalités de plateforme web déconseillées pour une période limitée.
 
-
-
 <!-- end major 87 -->
 
-## Version 86.0.622.43 : 16 octobre
+## Version86.0.622.43: 16octobre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 86.0.622.36: 7octobre
+## Version86.0.622.36: 7octobre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 86.0.622.31: 1eroctobre
+## Version86.0.622.31: 1octobre
 
 Résolution de divers bogues et problèmes de performances.
 
@@ -460,7 +462,7 @@ Un utilisateur saisit «powerbi» comme «powerbbi».com. Le docteur de lien sug
 
 #### Nouvelles stratégies
 
-15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
+15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
 - [AllowSurfGame](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowsurfgame) –  Autoriser le jeu de surf.
 - [AllowTokenBindingForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowtokenbindingforurls) – Configurer la liste des sites avec lesquels MicrosoftEdge tentera d’établir une liaison de jeton.
