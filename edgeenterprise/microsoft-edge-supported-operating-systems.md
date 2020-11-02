@@ -3,76 +3,76 @@ title: Systèmes d’exploitation prenant en charge MicrosoftEdge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 05/11/2020
+ms.date: 10/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Systèmes d’exploitation prenant en charge MicrosoftEdge
-ms.openlocfilehash: c883798f11089060a2f4547999b015e9023d0ea9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: cb7998fd8ee47b376df94f52bfc5f636687d848f
+ms.sourcegitcommit: 0c713487a811a2837abe4a3b08236f6815e65773
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979792"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "11145886"
 ---
-# <span data-ttu-id="88972-103">Systèmes d’exploitation prenant en charge MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="88972-103">Microsoft Edge supported Operating Systems</span></span>
+# <span data-ttu-id="9e571-103">Systèmes d’exploitation prenant en charge MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="9e571-103">Microsoft Edge supported Operating Systems</span></span>
 
-<span data-ttu-id="88972-104">Cet article décrit les systèmes d’exploitation prenant en charge MicrosoftEdge.</span><span class="sxs-lookup"><span data-stu-id="88972-104">This article describes the supported operating systems that apply to Microsoft Edge.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="88972-105">Cet article concerne les versions77 et ultérieures de bureau de Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="88972-105">This article applies to the Microsoft Edge versions 77 and higher for the desktop.</span></span>
-
-## <span data-ttu-id="88972-106">Systèmes d’exploitation prenant en charge MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="88972-106">Supported Operating Systems for Microsoft Edge</span></span>
+<span data-ttu-id="9e571-104">Cet article décrit les systèmes d’exploitation prenant en charge MicrosoftEdge.</span><span class="sxs-lookup"><span data-stu-id="9e571-104">This article describes the supported operating systems that apply to Microsoft Edge.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="88972-107">La disponibilité des fonctionnalités et les fonctionnalités du produit peuvent varier sur des systèmes d’exploitation plus anciens.</span><span class="sxs-lookup"><span data-stu-id="88972-107">Product functionality and feature availability may vary on older operating systems.</span></span> <span data-ttu-id="88972-108">Pour garantir l’installation correcte de Microsoft Edge, utilisez la dernière version de l’un des systèmes d’exploitation indiqués ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="88972-108">To ensure that Microsoft Edge installs correctly, use the latest version of any operating system specified below.</span></span> <span data-ttu-id="88972-109">Ces conseils incluent la mise à jour cumulative la plus récente, le cas échéant.</span><span class="sxs-lookup"><span data-stu-id="88972-109">This guidance includes the latest cumulative update, as applicable.</span></span>
+> <span data-ttu-id="9e571-105">Cet article concerne les versions77 et ultérieures de bureau de Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="9e571-105">This article applies to the Microsoft Edge versions 77 and higher for the desktop.</span></span>
 
-<span data-ttu-id="88972-110">La prochaine version de MicrosoftEdge est prise en charge sur les systèmes d’exploitation suivants:</span><span class="sxs-lookup"><span data-stu-id="88972-110">The next version of Microsoft Edge is supported on the following operating systems:</span></span>
+## <span data-ttu-id="9e571-106">Systèmes d’exploitation prenant en charge MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="9e571-106">Supported Operating Systems for Microsoft Edge</span></span>
 
-### <span data-ttu-id="88972-111">Client Windows</span><span class="sxs-lookup"><span data-stu-id="88972-111">Windows Client</span></span>
+> [!NOTE]
+> <span data-ttu-id="9e571-107">La disponibilité des fonctionnalités et les fonctionnalités du produit peuvent varier sur des systèmes d’exploitation plus anciens.</span><span class="sxs-lookup"><span data-stu-id="9e571-107">Product functionality and feature availability may vary on older operating systems.</span></span> <span data-ttu-id="9e571-108">Pour garantir l’installation correcte de Microsoft Edge, utilisez la dernière version de l’un des systèmes d’exploitation indiqués ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="9e571-108">To ensure that Microsoft Edge installs correctly, use the latest version of any operating system specified below.</span></span> <span data-ttu-id="9e571-109">Ces conseils incluent la mise à jour cumulative la plus récente, le cas échéant.</span><span class="sxs-lookup"><span data-stu-id="9e571-109">This guidance includes the latest cumulative update, as applicable.</span></span>
 
-- <span data-ttu-id="88972-112">Windows7\*\*</span><span class="sxs-lookup"><span data-stu-id="88972-112">Windows 7\*\*</span></span>
-- <span data-ttu-id="88972-113">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="88972-113">Windows 8.1</span></span>
-- <span data-ttu-id="88972-114">Windows10 SACRS3 et versions ultérieures \*\*\*</span><span class="sxs-lookup"><span data-stu-id="88972-114">Windows 10 SAC RS3 and later \*\*\*</span></span>
-- <span data-ttu-id="88972-115">Windows 10 Entreprise 2015 LTSC</span><span class="sxs-lookup"><span data-stu-id="88972-115">Windows 10 Enterprise 2015 LTSC</span></span>
-- <span data-ttu-id="88972-116">Windows 10 Entreprise 2016 LTSC</span><span class="sxs-lookup"><span data-stu-id="88972-116">Windows 10 Enterprise 2016 LTSC</span></span>
-- <span data-ttu-id="88972-117">Windows 10 Entreprise 2019 LTSC</span><span class="sxs-lookup"><span data-stu-id="88972-117">Windows 10 Enterprise 2019 LTSC</span></span>
-- <span data-ttu-id="88972-118">Multi-session Windows 10 Entreprise</span><span class="sxs-lookup"><span data-stu-id="88972-118">Windows 10 Enterprise multi-session</span></span>
+<span data-ttu-id="9e571-110">La prochaine version de MicrosoftEdge est prise en charge sur les systèmes d’exploitation suivants:</span><span class="sxs-lookup"><span data-stu-id="9e571-110">The next version of Microsoft Edge is supported on the following operating systems:</span></span>
 
-### <span data-ttu-id="88972-119">WindowsServer</span><span class="sxs-lookup"><span data-stu-id="88972-119">Windows Server</span></span>
+### <span data-ttu-id="9e571-111">Client Windows</span><span class="sxs-lookup"><span data-stu-id="9e571-111">Windows Client</span></span>
 
-- <span data-ttu-id="88972-120">Windows Server2008R2\*\*</span><span class="sxs-lookup"><span data-stu-id="88972-120">Windows Server 2008 R2\*\*</span></span>
-- <span data-ttu-id="88972-121">Windows Server2012</span><span class="sxs-lookup"><span data-stu-id="88972-121">Windows Server 2012</span></span>
-- <span data-ttu-id="88972-122">WindowsServer2012R2</span><span class="sxs-lookup"><span data-stu-id="88972-122">Windows Server 2012 R2</span></span>
-- <span data-ttu-id="88972-123">Windows Server2016 (LTSC)</span><span class="sxs-lookup"><span data-stu-id="88972-123">Windows Server 2016 (LTSC)</span></span>
-- <span data-ttu-id="88972-124">Windows Server2019 (LTSC)</span><span class="sxs-lookup"><span data-stu-id="88972-124">Windows Server 2019 (LTSC)</span></span>
-- <span data-ttu-id="88972-125">Windows Server (SAC)</span><span class="sxs-lookup"><span data-stu-id="88972-125">Windows Server (SAC)</span></span>
+- <span data-ttu-id="9e571-112">Windows7\*\*</span><span class="sxs-lookup"><span data-stu-id="9e571-112">Windows 7\*\*</span></span>
+- <span data-ttu-id="9e571-113">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="9e571-113">Windows 8.1</span></span>
+- <span data-ttu-id="9e571-114">Windows10 SACRS3 et versions ultérieures \*\*_</span><span class="sxs-lookup"><span data-stu-id="9e571-114">Windows 10 SAC RS3 and later \*\*_</span></span>
+- <span data-ttu-id="9e571-115">Windows 10 Entreprise 2015 LTSC</span><span class="sxs-lookup"><span data-stu-id="9e571-115">Windows 10 Enterprise 2015 LTSC</span></span>
+- <span data-ttu-id="9e571-116">Windows 10 Entreprise 2016 LTSC</span><span class="sxs-lookup"><span data-stu-id="9e571-116">Windows 10 Enterprise 2016 LTSC</span></span>
+- <span data-ttu-id="9e571-117">Windows 10 Entreprise 2019 LTSC</span><span class="sxs-lookup"><span data-stu-id="9e571-117">Windows 10 Enterprise 2019 LTSC</span></span>
+- <span data-ttu-id="9e571-118">Multi-session Windows 10 Entreprise</span><span class="sxs-lookup"><span data-stu-id="9e571-118">Windows 10 Enterprise multi-session</span></span>
+
+### <span data-ttu-id="9e571-119">WindowsServer</span><span class="sxs-lookup"><span data-stu-id="9e571-119">Windows Server</span></span>
+
+- <span data-ttu-id="9e571-120">WindowsServer2008R2_\*</span><span class="sxs-lookup"><span data-stu-id="9e571-120">Windows Server 2008 R2_\*</span></span>
+- <span data-ttu-id="9e571-121">Windows Server2012</span><span class="sxs-lookup"><span data-stu-id="9e571-121">Windows Server 2012</span></span>
+- <span data-ttu-id="9e571-122">WindowsServer2012R2</span><span class="sxs-lookup"><span data-stu-id="9e571-122">Windows Server 2012 R2</span></span>
+- <span data-ttu-id="9e571-123">Windows Server2016 (LTSC)</span><span class="sxs-lookup"><span data-stu-id="9e571-123">Windows Server 2016 (LTSC)</span></span>
+- <span data-ttu-id="9e571-124">Windows Server2019 (LTSC)</span><span class="sxs-lookup"><span data-stu-id="9e571-124">Windows Server 2019 (LTSC)</span></span>
+- <span data-ttu-id="9e571-125">Windows Server (SAC)</span><span class="sxs-lookup"><span data-stu-id="9e571-125">Windows Server (SAC)</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="88972-126">\* \* Nous continuerons à prendre en charge Microsoft Edge sur Windows 7 et Windows Server 2008 R2 jusqu’au 15 juillet 2021.</span><span class="sxs-lookup"><span data-stu-id="88972-126">\*\* We will continue to support Microsoft Edge on Windows 7 and Windows Server 2008 R2 until July 15, 2021.</span></span> <span data-ttu-id="88972-127">Ces systèmes d’exploitation ne sont pas pris en charge et Microsoft vous recommande de migrer vers un système d’exploitation pris en charge tel que Windows 10.</span><span class="sxs-lookup"><span data-stu-id="88972-127">These operating systems are out of support and Microsoft recommends you move to a supported operating system such as Windows 10.</span></span> <span data-ttu-id="88972-128">Bien que Microsoft Edge vous aide à rester plus sécurisé sur le web, il est possible que votre PC soit toujours vulnérable aux risques de sécurité.</span><span class="sxs-lookup"><span data-stu-id="88972-128">While Microsoft Edge helps keep you more secure on the web, your PC may still be vulnerable to security risks.</span></span> <span data-ttu-id="88972-129">Pour que le mode IE soit pris en charge sur ces systèmes d’exploitation, les appareils doivent disposer des [Mises à jour de sécurité étendues pour Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7).</span><span class="sxs-lookup"><span data-stu-id="88972-129">In order for IE mode to be supported on these operating systems the devices will need to have the [Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7).</span></span> <span data-ttu-id="88972-130">Sans les mises à jour de sécurité étendues de Windows 7, les fonctionnalités d’Internet Explorer sont exposées aux risques de sécurité.</span><span class="sxs-lookup"><span data-stu-id="88972-130">Without the Windows 7 Extended Security updates Internet Explorer functionality will be vulnerable to security risks.</span></span> <span data-ttu-id="88972-131">En outre, il se peut que les fonctionnalités du mode IE cessent de fonctionner sans que la maintenance soit poursuivie par les mises à jour de sécurité étendues.</span><span class="sxs-lookup"><span data-stu-id="88972-131">Additionally, IE mode functionality may cease to work without the continued servicing through the extended security updates.</span></span>  
+> <span data-ttu-id="9e571-126">\* \* Nous continuerons à prendre en charge Microsoft Edge sur Windows 7 et Windows Server 2008 R2 jusqu’au 15 juillet 2021.</span><span class="sxs-lookup"><span data-stu-id="9e571-126">\*\* We will continue to support Microsoft Edge on Windows 7 and Windows Server 2008 R2 until July 15, 2021.</span></span> <span data-ttu-id="9e571-127">Ces systèmes d’exploitation ne sont pas pris en charge et Microsoft vous recommande de migrer vers un système d’exploitation pris en charge tel que Windows 10.</span><span class="sxs-lookup"><span data-stu-id="9e571-127">These operating systems are out of support and Microsoft recommends you move to a supported operating system such as Windows 10.</span></span> <span data-ttu-id="9e571-128">Bien que Microsoft Edge vous aide à rester plus sécurisé sur le web, il est possible que votre PC soit toujours vulnérable aux risques de sécurité.</span><span class="sxs-lookup"><span data-stu-id="9e571-128">While Microsoft Edge helps keep you more secure on the web, your PC may still be vulnerable to security risks.</span></span> <span data-ttu-id="9e571-129">Pour que le mode IE soit pris en charge sur ces systèmes d’exploitation, les appareils doivent disposer des [Mises à jour de sécurité étendues pour Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7).</span><span class="sxs-lookup"><span data-stu-id="9e571-129">In order for IE mode to be supported on these operating systems the devices will need to have the [Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7).</span></span> <span data-ttu-id="9e571-130">Sans les mises à jour de sécurité étendues de Windows 7, les fonctionnalités d’Internet Explorer sont exposées aux risques de sécurité.</span><span class="sxs-lookup"><span data-stu-id="9e571-130">Without the Windows 7 Extended Security updates Internet Explorer functionality will be vulnerable to security risks.</span></span> <span data-ttu-id="9e571-131">En outre, il se peut que les fonctionnalités du mode IE cessent de fonctionner sans que la maintenance soit poursuivie par les mises à jour de sécurité étendues.</span><span class="sxs-lookup"><span data-stu-id="9e571-131">Additionally, IE mode functionality may cease to work without the continued servicing through the extended security updates.</span></span>  
 >
-> <span data-ttu-id="88972-132">\*\*\* De la même façon que ci-dessus, pour les versions de Windows10SAC qui ne sont pas prises en charge, mais si MicrosoftEdge est pris en charge, il est conseillé d’effectuer une mise à niveau vers une version de Windows10SAC prise en charge dès que possible pour maintenir la sécurité.</span><span class="sxs-lookup"><span data-stu-id="88972-132">\*\*\* In the same fashion as above, for Windows 10 SAC releases that are out of support but Microsoft Edge is supported it is recommended to upgrade to a supported Win10 SAC release as soon as possible to remain secure.</span></span> <span data-ttu-id="88972-133">MicrosoftEdge pris en charge dans cet état doit être considéré comme un pont temporaire pour obtenir un état de système d’exploitation pris en charge.</span><span class="sxs-lookup"><span data-stu-id="88972-133">Microsoft Edge being supported in this state should be considered a temporary bridge to getting to a supported OS state.</span></span>
+> <span data-ttu-id="9e571-132">\*\*\* De la même façon que ci-dessus, pour les versions de Windows10SAC qui ne sont pas prises en charge, mais si MicrosoftEdge est pris en charge, il est conseillé d’effectuer une mise à niveau vers une version de Windows10SAC prise en charge dès que possible pour maintenir la sécurité.</span><span class="sxs-lookup"><span data-stu-id="9e571-132">\*\*\* In the same fashion as above, for Windows 10 SAC releases that are out of support but Microsoft Edge is supported it is recommended to upgrade to a supported Win10 SAC release as soon as possible to remain secure.</span></span> <span data-ttu-id="9e571-133">MicrosoftEdge pris en charge dans cet état doit être considéré comme un pont temporaire pour obtenir un état de système d’exploitation pris en charge.</span><span class="sxs-lookup"><span data-stu-id="9e571-133">Microsoft Edge being supported in this state should be considered a temporary bridge to getting to a supported OS state.</span></span>
 
-### <span data-ttu-id="88972-134">macOS</span><span class="sxs-lookup"><span data-stu-id="88972-134">macOS</span></span>
+### <span data-ttu-id="9e571-134">macOS</span><span class="sxs-lookup"><span data-stu-id="9e571-134">macOS</span></span>
 
-- <span data-ttu-id="88972-135">Sierra(10.12) et versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="88972-135">Sierra (10.12) and later</span></span>
+- <span data-ttu-id="9e571-135">Sierra(10.12) et versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="9e571-135">Sierra (10.12) and later</span></span>
 
-### <span data-ttu-id="88972-136">iOS</span><span class="sxs-lookup"><span data-stu-id="88972-136">iOS</span></span>
+### <span data-ttu-id="9e571-136">iOS</span><span class="sxs-lookup"><span data-stu-id="9e571-136">iOS</span></span>
 
-<span data-ttu-id="88972-137">Microsoft Edge pour iPad&reg; et iPhone&reg; nécessite iOS 11.0 ou version ultérieure.</span><span class="sxs-lookup"><span data-stu-id="88972-137">Microsoft Edge for iPad&reg; and iPhone&reg; requires iOS 11.0 or later.</span></span> <span data-ttu-id="88972-138">Microsoft Edge pour iPad Pro&trade; nécessite iOS 11.0 ou version ultérieure.</span><span class="sxs-lookup"><span data-stu-id="88972-138">Microsoft Edge for iPad Pro&trade; requires iOS 11.0 or later.</span></span> <span data-ttu-id="88972-139">Microsoft Edge est pris en charge sur les deux versions d'iOS les plus récentes.</span><span class="sxs-lookup"><span data-stu-id="88972-139">Microsoft Edge is supported on the two most recent versions of iOS.</span></span> <span data-ttu-id="88972-140">Lors de la publication d’une nouvelle version d’iOS, la configuration requise pour le Système d’exploitation Microsoft Edge devient la version actuelle de deux versions les plus récentes: la nouvelle version d’iOS et la version précédente.</span><span class="sxs-lookup"><span data-stu-id="88972-140">When a new version of iOS is released, the Microsoft Edge Operating System requirement becomes the then-current two most recent versions: the new version of iOS and the previous version.</span></span>
+<span data-ttu-id="9e571-137">Microsoft Edge pour iPad&reg; et iPhone&reg; nécessite iOS 11.0 ou version ultérieure.</span><span class="sxs-lookup"><span data-stu-id="9e571-137">Microsoft Edge for iPad&reg; and iPhone&reg; requires iOS 11.0 or later.</span></span> <span data-ttu-id="9e571-138">Microsoft Edge pour iPad Pro&trade; nécessite iOS 11.0 ou version ultérieure.</span><span class="sxs-lookup"><span data-stu-id="9e571-138">Microsoft Edge for iPad Pro&trade; requires iOS 11.0 or later.</span></span> <span data-ttu-id="9e571-139">Microsoft Edge est pris en charge sur les deux versions d'iOS les plus récentes.</span><span class="sxs-lookup"><span data-stu-id="9e571-139">Microsoft Edge is supported on the two most recent versions of iOS.</span></span> <span data-ttu-id="9e571-140">Lors de la publication d’une nouvelle version d’iOS, la configuration requise pour le Système d’exploitation Microsoft Edge devient la version actuelle de deux versions les plus récentes: la nouvelle version d’iOS et la version précédente.</span><span class="sxs-lookup"><span data-stu-id="9e571-140">When a new version of iOS is released, the Microsoft Edge Operating System requirement becomes the then-current two most recent versions: the new version of iOS and the previous version.</span></span>
 
-### <span data-ttu-id="88972-141">Android</span><span class="sxs-lookup"><span data-stu-id="88972-141">Android</span></span>
+### <span data-ttu-id="9e571-141">Android</span><span class="sxs-lookup"><span data-stu-id="9e571-141">Android</span></span>
 
-<span data-ttu-id="88972-142">Microsoft Edge pour Android peut s'installer sur des tablettes et des téléphones répondant aux critères suivants: appareils exécutant Android KitKat 4.4 ou version ultérieure avec un processeur basé sur ARM.</span><span class="sxs-lookup"><span data-stu-id="88972-142">Microsoft Edge for Android can be installed on tablets and phones that meet the following criteria: devices running Android KitKat 4.4 or later with an ARM-based processor.</span></span>
+<span data-ttu-id="9e571-142">Microsoft Edge pour Android peut s'installer sur des tablettes et des téléphones répondant aux critères suivants: appareils exécutant Android KitKat 4.4 ou version ultérieure avec un processeur basé sur ARM.</span><span class="sxs-lookup"><span data-stu-id="9e571-142">Microsoft Edge for Android can be installed on tablets and phones that meet the following criteria: devices running Android KitKat 4.4 or later with an ARM-based processor.</span></span>
 
-### <span data-ttu-id="88972-143">Chromebooks</span><span class="sxs-lookup"><span data-stu-id="88972-143">Chromebooks</span></span>
+### <span data-ttu-id="9e571-143">Chromebooks</span><span class="sxs-lookup"><span data-stu-id="9e571-143">Chromebooks</span></span>
 
-<span data-ttu-id="88972-144">Microsoft Edge ne prend pas en charge Chromebooks.</span><span class="sxs-lookup"><span data-stu-id="88972-144">Microsoft Edge does not support Chromebooks.</span></span>
+<span data-ttu-id="9e571-144">Microsoft Edge ne prend pas en charge Chromebooks.</span><span class="sxs-lookup"><span data-stu-id="9e571-144">Microsoft Edge does not support Chromebooks.</span></span>
 
-## <span data-ttu-id="88972-145">Voir également</span><span class="sxs-lookup"><span data-stu-id="88972-145">See also</span></span>
+## <span data-ttu-id="9e571-145">Voir également</span><span class="sxs-lookup"><span data-stu-id="9e571-145">See also</span></span>
 
-- [<span data-ttu-id="88972-146">Page d’accueil MicrosoftEdge Entreprise</span><span class="sxs-lookup"><span data-stu-id="88972-146">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
-- [<span data-ttu-id="88972-147">Politique de cycle de vie moderne de Microsoft</span><span class="sxs-lookup"><span data-stu-id="88972-147">Microsoft Modern Lifecycle Policy</span></span>](https://support.microsoft.com/help/30881/modern-lifecycle-policy)
-- [<span data-ttu-id="88972-148">Mises à jour de sécurité étendues pour Windows7</span><span class="sxs-lookup"><span data-stu-id="88972-148">Extended Security Updates for Windows 7</span></span>](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)
+- [<span data-ttu-id="9e571-146">Page d’accueil MicrosoftEdge Entreprise</span><span class="sxs-lookup"><span data-stu-id="9e571-146">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
+- [<span data-ttu-id="9e571-147">Politique de cycle de vie moderne de Microsoft</span><span class="sxs-lookup"><span data-stu-id="9e571-147">Microsoft Modern Lifecycle Policy</span></span>](https://support.microsoft.com/help/30881/modern-lifecycle-policy)
+- [<span data-ttu-id="9e571-148">Mises à jour de sécurité étendues pour Windows7</span><span class="sxs-lookup"><span data-stu-id="9e571-148">Extended Security Updates for Windows 7</span></span>](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)
