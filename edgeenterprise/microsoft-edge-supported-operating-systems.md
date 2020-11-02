@@ -3,19 +3,19 @@ title: Systèmes d’exploitation prenant en charge MicrosoftEdge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 05/11/2020
+ms.date: 10/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Systèmes d’exploitation prenant en charge MicrosoftEdge
-ms.openlocfilehash: c883798f11089060a2f4547999b015e9023d0ea9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: cb7998fd8ee47b376df94f52bfc5f636687d848f
+ms.sourcegitcommit: 0c713487a811a2837abe4a3b08236f6815e65773
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979792"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "11145886"
 ---
 # Systèmes d’exploitation prenant en charge MicrosoftEdge
 
@@ -35,7 +35,7 @@ La prochaine version de MicrosoftEdge est prise en charge sur les systèmes d’
 
 - Windows7**
 - Windows 8.1
-- Windows10 SACRS3 et versions ultérieures ***
+- Windows10 SACRS3 et versions ultérieures **_
 - Windows 10 Entreprise 2015 LTSC
 - Windows 10 Entreprise 2016 LTSC
 - Windows 10 Entreprise 2019 LTSC
@@ -43,7 +43,7 @@ La prochaine version de MicrosoftEdge est prise en charge sur les systèmes d’
 
 ### WindowsServer
 
-- Windows Server2008R2**
+- WindowsServer2008R2_*
 - Windows Server2012
 - WindowsServer2012R2
 - Windows Server2016 (LTSC)
