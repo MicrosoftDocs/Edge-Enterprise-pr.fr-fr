@@ -3,19 +3,19 @@ title: Redirection d’InternetExplorer vers MicrosoftEdge pour assurer une comp
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/19/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Redirection d’InternetExplorer vers MicrosoftEdge pour assurer une compatibilité avec les sites web modernes
-ms.openlocfilehash: ce9e8dabdff25cc3ba375746ec82ddd78b6d7694
-ms.sourcegitcommit: cf991cc4bd2e70169902cbda9ddc870d70e31ca2
+ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
+ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "11120519"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "11151094"
 ---
 # Redirection d’InternetExplorer vers MicrosoftEdge pour assurer une compatibilité avec les sites web modernes
 
@@ -74,14 +74,14 @@ La redirection d’InternetExplorer vers MicrosoftEdge nécessite un Objet Appli
 - Si vous activez cette stratégie, l’Objet Application d’assistance du navigateur (BHO) nécessaire à la redirection ne sera pas installé et vos utilisateurs continueront à voir les messages d’incompatibilité relatifs à certains sites web sur InternetExplorer. Si l’Objet Application d’assistance du navigateur (BHO) est déjà installé, il sera désinstallé lors de la prochaine mise à jour du canal stable de MicrosoftEdge.
 - Si vous désactivez ou ne configurez pas cette stratégie, l’Objet Application d’assistance du navigateur (BHO) est installé. Il s’agit du comportement par défaut.
 
-Outre la nécessité de l’Objet Application d’assistance du navigateur (BHO), il existe une dépendance sur **RedirectSitesFromInternetExplorerRedirectMode**, qui doit être défini sur «Liste de sites» ou «Non configuré».
+Outre la nécessité de l’Objet Application d’assistance du navigateur (BHO), il existe une dépendance sur **RedirectSitesFromInternetExplorerRedirectMode**, qui doit être définie sur «Rediriger les sites en fonction de la liste des sites incompatibles» ou «Non configuré».
 
 ### Stratégie: RedirectSitesFromInternetExplorerRedirectMode
 
  Cette stratégie correspond au paramètre **Navigateur par défaut** «Laisser InternetExplorer ouvrir les sites dans MicrosoftEdge» de MicrosoftEdge. Vous pouvez accéder à ce paramètre en accédant à l’URL *edge://settings/defaultbrowser*.  
 
 - Si vous ne configurez pas cette stratégie ou si vous la définissez-la sur «Liste de sites», InternetExplorer redirige les sites incompatibles vers MicrosoftEdge. Il s’agit du comportement par défaut.
-- Si vous désactivez cette stratégie, les sites incompatibles ne sont pas redirigés vers MicrosoftEdge.
+- Pour désactiver cette stratégie, sélectionnez **Activé** puis, dans la liste déroulante sous Options: rediriger les sites incompatibles d’InternetExplorer vers MicrosoftEdge, sélectionnez **Désactiver**. Dans ce cas, les sites incompatibles ne sont pas redirigés vers MicrosoftEdge.
 
 > [!NOTE]
 > Si vous utilisez un appareil personnel non géré par votre organisation, un autre paramètre s’affiche intitulé «Autoriser le chargement de sites en mode InternetExplorer» sous **Compatibilité d’InternetExplorer**.
@@ -104,11 +104,11 @@ Cette stratégie configure l’expérience utilisateur pour la redirection de si
 
 Si vous voulez désactiver la redirection AVANT de procéder à la mise à jour vers la version87 du canal stable de MicrosoftEdge, procédez comme suit:
 
-1. Définissez la stratégie **RedirectSitesFromInternetExplorerRedirectMode** sur **Activé**. Ce paramètre arrête la redirection dès que la stratégie prend effet.
+1. Définissez la stratégie **RedirectSitesFromInternetExplorerPreventBHOInstall** sur **Activé**.
 
 Si vous voulez désactiver la redirection APRÈS la mise à jour vers la version87 du canal stable de MicrosoftEdge, procédez comme suit:
 
-1. Définissez la stratégie **RedirectSitesFromInternetExplorerRedirectMode** sur **Désactivé**. Ce paramètre arrête la redirection dès que la stratégie prend effet.
+1. Définissez la stratégie **RedirectSitesFromInternetExplorerRedirectMode** sur **Activé**puis, dans la liste déroulante sous Options: rediriger les sites incompatibles d’InternetExplorer vers MicrosoftEdge, sélectionnez **Désactiver**. Ce paramètre arrête la redirection dès que la stratégie prend effet.
 2. Définissez la stratégie **RedirectSitesFromInternetExplorerPreventBHOInstall** sur **Activé**. Cette opération désinstalle l’Objet Application d’assistance du navigateur (BHO) après la prochaine mise à jour de MicrosoftEdge.
 
 ## Voir également
