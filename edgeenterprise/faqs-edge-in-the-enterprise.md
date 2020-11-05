@@ -3,19 +3,19 @@ title: Forum aux questions sur Edge dans l’entreprise
 ms.author: jwhit
 author: jwhit-MSFT
 manager: laurawi
-ms.date: 08/03/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Forum aux questions sur le déploiement de MicrosoftEdge dans l’entreprise
-ms.openlocfilehash: 0f6891f4f7187b23f6e3d4e7880fdafa49def351
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e689967cbad950e2969535bad0dd63d5d7081798
+ms.sourcegitcommit: 12827458f6217f443128e826c1d18d36d401d03b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979745"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "11154319"
 ---
 # Forum aux questions sur MicrosoftEdge dans l’entreprise
 
@@ -56,7 +56,9 @@ Oui. La configuration de MicrosoftEdge sur Windows10 avec MicrosoftIntune et la 
 
 ## Est-ce que WSUS prend en charge le déploiement initial du nouveau Microsoft Edge?
 
-Non. WSUS prend en charge la mise à jour des installations MSI existantes de Microsoft Edge, mais ne peut pas être utilisé pour le déploiement initial. Si vous avez l’intention de gérer finalement les mises à jour via WSUS, alors le déploiement initial peut être effectué via un outil de gestion, tel que [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+Oui. Le [catalogue Microsoft Update est inclus dans les packages](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) qui peuvent être utilisés pour le déploiement initial du nouveau MicrosoftEdge via WSUS. Après le déploiement initial, les mises à jour automatiques sont configurées par défaut. Pour plus d’informations, voir [mise à jour dans WSUS pour le nouveau Microsoft Edge pour Windows10, version1809, 1903, 1909 et 2004: 29octobre2020](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
+
+Les mises à jour manuelles peuvent être effectuées à l’aide d’un outil de gestion de la configuration, tel que [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
 
 ## Voir également
 
