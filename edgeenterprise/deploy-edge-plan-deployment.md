@@ -3,19 +3,19 @@ title: Planifier votre déploiement de MicrosoftEdge
 ms.author: cjacks
 author: appcompatguy
 manager: saudm
-ms.date: 04/23/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planifier votre déploiement de MicrosoftEdge
-ms.openlocfilehash: 3ac3d050578ca4f230ed7e775aefb73f11abb3c0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979732"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155251"
 ---
 # Planifier votre déploiement de MicrosoftEdge
 
@@ -23,6 +23,19 @@ Cet article décrit les pratiques recommandées pour le déploiement de Microsof
 
 >[!NOTE]
 >Cet article concerne MicrosoftEdge version77 ou ultérieure.
+
+Ces sections fournissent des instructions spécifiques pour la planification du déploiement Microsoft Edge.
+
+- [Évaluez l’environnement et les conditions du navigateur](#evaluate-your-existing-browser-environment-and-browser-needs)
+- [Assurez-vous que les appareils Windows10 sont prêts](#make-sure-your-windows-10-devices-are-ready)
+- [Définissez votre méthodologie de déploiement](#determine-your-deployment-methodology)
+- [Effectuer une détection du site](#do-site-discovery)
+- [Choisissez une stratégie de canal](#determine-your-channel-strategy)
+- [Identifiez et configurez les stratégies](#define-and-configure-policies)
+- [Testez la compatibilité des applications](#do-app-compatibility-testing)
+- [Pilote Microsoft Edge](#deploy-microsoft-edge-to-a-pilot-group)
+- [Évaluez le pilote](#validate-your-deployment)
+- [Déployez Microsoft Edge au sein de l’entreprise](#broad-deployment-of-microsoft-edge)
 
 ## Évaluer votre environnement de navigateur et vos besoins de navigateur existants
 
@@ -157,9 +170,11 @@ La compatibilité des applications pour MicrosoftEdge est extrêmement élevée,
 2. Si elle fonctionne sur Internet Explorer, elle fonctionnera sur MicrosoftEdge en mode InternetExplorer.
 3. Si elle fonctionne sur Google Chrome, elle fonctionnera sur MicrosoftEdge.
 
-Si vous possédez d’une application où nous ne répondons pas à cet engagement, nous résoudrons le problèmes avec [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
+Si vous utilisez une application pour laquelle nous ne répondons pas à l’engagement de compatibilité, nous nous servons de cet engagement pour résoudre le problème avec [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-Malgré cet engagement, nous savons que de nombreuses organisations doivent valider certaines applications pour leurs propres raisons de conformité ou de gestion des risques. Même si cette procédure est très simple, il est important d’être organisé et rigoureux lors des tests d’applications.
+### Ligne interne de test des applications professionnelles
+
+Malgré notre engagement de compatibilité, nous savons que de nombreuses organisations doivent valider certaines applications pour leurs propres raisons de conformité ou de gestion des risques. Même si cette procédure est très simple, il est important d’être organisé et rigoureux lors des tests d’applications.
 
 Il existe deux façons d’effectuer des tests de compatibilité des applications:
 
@@ -167,6 +182,10 @@ Il existe deux façons d’effectuer des tests de compatibilité des application
 2. Test pilote. Les applications sont validées par un nombre limité d’utilisateurs dans leur environnement de travail quotidien à l’aide de leurs propres appareils.
 
 Choisissez la méthode qui convient le mieux à chaque application pour gérer les risques sans surinvestissement dans les tests de compatibilité.
+
+### Prise en charge des applications tierces
+
+Outre leur propre gamme d’applications professionnelles, de nombreuses organisations utilisent des applications fournies par des sources externes. L’article [Prêt pour Microsoft Edge](deploy-edge-ready-for-edge.md) contient la liste des applications Web susceptibles d’être utilisées au sein de votre organisation. Cette liste fournit des liens vers des instructions de prise en charge de fournisseur pour leurs produits utilisés avec Microsoft Edge.
 
 ## Déployer MicrosoftEdge vers un groupe pilote
 
