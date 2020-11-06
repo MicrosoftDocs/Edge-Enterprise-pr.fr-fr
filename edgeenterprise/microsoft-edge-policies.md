@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/22/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 982a171e1c4f55ab99db53a399c669fdf4798f53
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134463"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155311"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -29,6 +29,18 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
+## Nouvelles stratégies déconseillées
+
+Le tableau suivant répertorie les nouvelles stratégies déconseillées pour cette mise à jour.
+
+| Nom | Statut |
+|-|-|
+| [WebWidgetAllowed](#webwidgetallowed) | Nouveauté |
+| [ProxyBypassList](#proxybypasslist) | Déconseillée |
+| [ProxyMode](#proxymode) | Déconseillée |
+| [ProxyPacUrl](#proxypacurl) | Déconseillée |
+| [ProxyServer](#proxyserver) | Déconseillée |
+
 ## Stratégies disponibles
 
 Ces tableaux répertorient toutes les stratégies de groupe relatives au navigateur, disponibles dans cette version de MicrosoftEdge. Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.
@@ -39,10 +51,10 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[Paramètres du contenu](#content-settings)|[Moteur de recherche par défaut](#default-search-provider)|
 |[Extensions](#extensions)|[Authentification HTTP](#http-authentication)|
 |[Paramètres du mode kiosque](#kiosk-mode-settings)|[Messagerie native](#native-messaging)|
-|[Gestionnaire et protection des mots de passe](#password-manager-and-protection)|[Impression](#printing)|
-|[Serveur proxy](#proxy-server)|[Paramètres SmartScreen](#smartscreen-settings)|
-|[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|[Supplémentaire](#additional)|
-
+|[Gestionnaire et protection des mots de passe](#password-manager-and-protection)|[Niveau de performance](#performance)|
+|[Impression](#printing)|[Serveur proxy](#proxy-server)|
+|[Paramètres SmartScreen](#smartscreen-settings)|[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|
+|[Supplémentaire](#additional)|
 
 ### [*Paramètres de l’application Guard*](#application-guard-settings-policies)
 
@@ -156,6 +168,11 @@ et des conseils pour les services Microsoft|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configurer la liste des URL de connexion d’entreprise dans lesquelles le service de protection par mot de passe doit capturer les codes de hachage d’un mot de passe|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configurer le déclencheur d’avertissement de protection par mot de passe|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Activer le bouton d’affichage du mot de passe|
+### [*Niveau de performance*](#performance-policies)
+
+|Nom de la stratégie|Caption|
+|-|-|
+|[StartupBoostEnabled](#startupboostenabled)|Activer l’accélérateur du démarrage|
 ### [*Impression*](#printing-policies)
 
 |Nom de la stratégie|Caption|
@@ -170,10 +187,10 @@ et des conseils pour les services Microsoft|
 
 |Nom de la stratégie|Caption|
 |-|-|
-|[ProxyBypassList](#proxybypasslist)|Configurer les règles de contournement du proxy|
-|[ProxyMode](#proxymode)|Configurer les paramètres du serveur proxy|
-|[ProxyPacUrl](#proxypacurl)|Définir l’URL du fichier .pac du proxy|
-|[ProxyServer](#proxyserver)|Configurer l’adresse ou l’URL du serveur proxy|
+|[ProxyBypassList](#proxybypasslist)|Configurer les règles de contournement du proxy (déconseillé)|
+|[ProxyMode](#proxymode)|Configurer les paramètres du serveur proxy (déconseillé)|
+|[ProxyPacUrl](#proxypacurl)|Définissez l’URL du fichier .pac du proxy|
+|[ProxyServer](#proxyserver)|Configurer l’adresse ou l’URL du serveur proxy (déconseillé)|
 |[ProxySettings](#proxysettings)|Paramètres du proxy|
 ### [*Paramètres SmartScreen*](#smartscreen-settings-policies)
 
@@ -399,6 +416,8 @@ et des conseils pour les services Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gérer l’exposition des adresses IP locales par WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Limiter l’exposition de l’adresse IP locale par WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restreindre la portée des ports UDP locaux utilisés par WebRTC|
+|[WebWidgetAllowed](#webwidgetallowed)|Activer le widget Web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Autoriser le widget Web au démarrage de Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Utiliser la résolution du proxy Windows (déconseillée)|
 
 
@@ -546,7 +565,6 @@ Par défaut, Google Cast est activé.
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: EnableMediaRouter
@@ -608,7 +626,6 @@ Si vous avez également configuré la stratégie [EnableMediaRouter](#enablemedi
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -687,7 +704,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: AutoSelectCertificateForUrls
@@ -764,7 +780,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: CookiesAllowedForUrls
@@ -839,7 +854,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -920,7 +934,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: CookiesSessionOnlyForUrls
@@ -996,7 +1009,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultCookiesSetting
@@ -1065,7 +1077,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultFileSystemReadGuardSetting
@@ -1133,7 +1144,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 ```
 0x00000002
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -1205,7 +1215,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultGeolocationSetting
@@ -1273,7 +1282,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -1345,7 +1353,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultInsecureContentSetting
@@ -1413,7 +1420,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -1485,7 +1491,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultNotificationsSetting
@@ -1556,7 +1561,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultPluginsSetting
@@ -1625,7 +1629,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultPopupsSetting
@@ -1693,7 +1696,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 ```
 0x00000002
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -1765,7 +1767,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultWebUsbGuardSetting
@@ -1831,7 +1832,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.examp
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -1902,7 +1902,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: FileSystemReadBlockedForUrls
@@ -1971,7 +1970,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.exam
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -2042,7 +2040,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: FileSystemWriteBlockedForUrls
@@ -2107,7 +2104,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -2174,7 +2170,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ImagesBlockedForUrls
@@ -2239,7 +2234,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -2306,7 +2300,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: InsecureContentBlockedForUrls
@@ -2372,7 +2365,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: JavaScriptAllowedForUrls
@@ -2437,7 +2429,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.conto
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -2510,7 +2501,6 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: LegacySameSiteCookieBehaviorEnabled
@@ -2579,7 +2569,6 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: LegacySameSiteCookieBehaviorEnabledForDomainList
@@ -2645,7 +2634,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: NotificationsAllowedForUrls
@@ -2710,7 +2698,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.co
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -2779,7 +2766,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: PluginsAllowedForUrls
@@ -2847,7 +2833,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: PluginsBlockedForUrls
@@ -2913,7 +2898,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: PopupsAllowedForUrls
@@ -2978,7 +2962,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -3133,7 +3116,6 @@ Si vous désactivez ce paramètre, les expériences à la une et les recommandat
 ```
 0x00000001
 ```
-
 
   
 
@@ -3294,7 +3276,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: WebUsbAskForUrls
@@ -3361,7 +3342,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -3442,7 +3422,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultSearchProviderEnabled
@@ -3510,7 +3489,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -3587,7 +3565,6 @@ Cette stratégie est appliquée uniquement si vous activez les stratégies [Defa
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultSearchProviderImageURL
@@ -3654,7 +3631,6 @@ Si cette stratégie n’est pas configurée, les demandes de recherche d’image
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultSearchProviderImageURLPostParams
@@ -3718,7 +3694,6 @@ Cette stratégie est appliquée uniquement si vous activez les stratégies [Defa
 ```
 "mis"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -3785,7 +3760,6 @@ Si vous n’activez pas cette stratégie ou si vous la laissez vide, le nom d’
 ```
 "My Intranet Search"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -3854,7 +3828,6 @@ Cette stratégie est requise lorsque vous activez la stratégie [DefaultSearchPr
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -3925,7 +3898,6 @@ Cette stratégie est appliquée uniquement si vous activez les stratégies [Defa
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -4004,7 +3976,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 "bing"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: NewTabPageSearchBox
@@ -4076,7 +4047,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ExtensionAllowedTypes
@@ -4138,7 +4108,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -4206,7 +4175,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -4291,7 +4259,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ExtensionInstallForcelist
@@ -4320,9 +4287,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   Définissez les URL qui peuvent installer des extensions et des thèmes.
 
-Par défaut, les utilisateurs doivent télécharger un fichier *.crx pour chaque extension ou script qu’ils souhaitent installer, puis doivent le faire glisser sur la page des paramètres de MicrosoftEdge. Cette stratégie permet aux URL spécifiques d’utiliser l’option installer l’extension ou le script pour l’utilisateur.
+Définissez les URL qui peuvent installer les extensions et les thèmes directement sans avoir à faire glisser les packages vers la page edge://extensions.
 
-Chaque élément de cette liste est un modèle correspondant au type extension (consultez [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Les utilisateurs peuvent facilement installer des éléments à partir de n’importe quelle URL qui correspond à un élément de cette liste. L’emplacement du fichier *.crx et de la page à partir de laquelle le téléchargement est effectué (en d’autres termes, le référent) doit être autorisé par ces modèles.
+Chaque élément de cette liste est un modèle correspondant au type extension (consultez [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Les utilisateurs peuvent facilement installer des éléments à partir de n’importe quelle URL qui correspond à un élément de cette liste. L’emplacement du fichier *.crx et de la page à partir de laquelle le téléchargement est effectué (en d’autres termes, le référent) doit être autorisé par ces modèles. N’hébergez pas les fichiers à un emplacement nécessitant une authentification.
 
 La stratégie [ExtensionInstallBlocklist](#extensioninstallblocklist) prévaut sur cette stratégie. Les extensions figurant dans la liste rouge ne sont pas installées, même si elles proviennent d’un site figurant sur cette liste.
 
@@ -4359,7 +4326,6 @@ La stratégie [ExtensionInstallBlocklist](#extensioninstallblocklist) prévaut s
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -4652,7 +4618,6 @@ Cette option est habituellement désactivée dans le cadre de la protection cont
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: AllowCrossOriginAuthPrompt
@@ -4714,7 +4679,6 @@ Si cette stratégie n’est pas configurée, MicrosoftEdge ne délègue pas les 
 ```
 "contoso.com"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -4778,7 +4742,6 @@ Si cette stratégie n’est pas configurée, les quatre schémas sont utilisés.
 "basic,digest,ntlm,negotiate"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: AuthSchemes
@@ -4840,7 +4803,6 @@ Si vous ne configurez pas cette stratégie, MicrosoftEdge essaie de détecter si
 ```
 "*contoso.com,contoso.com"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -4904,7 +4866,6 @@ Si vous désactivez cette stratégie ou si elle n’est pas définie, le nom can
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DisableAuthNegotiateCnameLookup
@@ -4966,7 +4927,6 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, le SPN Ker
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -5099,7 +5059,6 @@ Pour obtenir plus d’informations sur la configuration du mode plein écran, vo
   - Sur Windows depuis la version87 ou versions ultérieures
 
   #### Description
-                                                                                              
 
   Cette stratégie s’applique à MicrosoftEdge en mode plein écran.
 
@@ -5141,7 +5100,6 @@ Pour obtenir plus d’informations sur la configuration du mode plein écran, vo
 ```
 0x00000001
 ```
-
 
   
 
@@ -5201,7 +5159,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messag
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -5270,7 +5227,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: NativeMessagingBlocklist
@@ -5335,7 +5291,6 @@ Par défaut, si cette stratégie n’est pas configurée, MicrosoftEdge autorise
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -5404,7 +5359,6 @@ Si cette règle est activée ou désactivée, les utilisateurs ne peuvent ni la 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -5484,7 +5438,6 @@ Obligatoire et recommandé Désactivé: ces deux États fonctionnent de façon n
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -5543,7 +5496,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 ```
 "https://contoso.com/change_password.html"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -5610,7 +5562,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contos
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -5691,7 +5642,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: PasswordProtectionWarningTrigger
@@ -5769,6 +5719,71 @@ Cette stratégie affecte uniquement le bouton d’affichage du mot de passe du n
 
   [Retour au début](#microsoft-edge---policies)
 
+  ## Stratégies de performances
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### StartupBoostEnabled
+
+  #### Activer l’accélérateur du démarrage
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version88 ou versions ultérieures
+
+  #### Description
+
+  Autorise les processus de MicrosoftEdge à démarrer lors de la connexion au système d’exploitation et à redémarrer en arrière-plan après la fermeture de la dernière fenêtre du navigateur.
+
+Si MicrosoftEdge est exécuté en mode arrière-plan, il est possible que le navigateur ne se ferme pas lors de la fermeture de la dernière fenêtre, et le navigateur ne redémarrera pas en arrière-plan lors de la fermeture de la fenêtre. Consultez la stratégie [BackgroundModeEnabled](#backgroundmodeenabled) pour découvrir le résultat de la configuration du comportement du mode arrière-plan de Microsoft Edge.
+
+L’activation de cette stratégie déclenche l’accélération du démarrage.
+
+La désactivation de cette stratégie désactive l’accélération du démarrage.
+
+Si vous ne configurez pas cette stratégie, l’accélération du démarrage peut être initialement désactivée ou activée. L’utilisateur peut configurer son comportement dans edge://settings/system.
+
+En savoir plus sur l’accélération du démarrage: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Oui
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique GP: StartupBoostEnabled
+  - Nom GP: Activer l’accélération du démarrage
+  - Chemin d’accès GP (Obligatoire): Administrative Templates/Microsoft Edge/Performance
+  - Chemin d’accès GP (recommandé): Administrative Templates/Microsoft Edge - Paramètres Par défaut (peut être remplacé par les utilisateurs)/Performance
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de valeur: StartupBoostEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ## Stratégies d’impression
 
   [Retour au début](#microsoft-edge---policies)
@@ -5827,7 +5842,6 @@ L’omission d’un champ signifie que toutes les valeurs correspondent. Par exe
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -5893,7 +5907,6 @@ Si vous activez cette stratégie, les utilisateurs impriment toujours les en-tê
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: PrintHeaderFooter
@@ -5956,7 +5969,6 @@ Si vous activez cette stratégie, l’aperçu avant impression utilise l’impri
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: PrintPreviewUseSystemDefaultPrinter
@@ -6018,7 +6030,6 @@ Si cette stratégie est désactivée, les utilisateurs ne sont pas autorisés à
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -6168,7 +6179,6 @@ Si vous ne configurez pas ou désactivez cette stratégie, les commandes d’imp
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: UseSystemPrintDialog
@@ -6186,9 +6196,9 @@ Si vous ne configurez pas ou désactivez cette stratégie, les commandes d’imp
 
   ### ProxyBypassList
 
-  #### Configurer les règles de contournement du proxy
+  #### Configurer les règles de contournement du proxy (déconseillé)
 
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
   #### Versions prises en charge:
 
@@ -6196,9 +6206,11 @@ Si vous ne configurez pas ou désactivez cette stratégie, les commandes d’imp
 
   #### Description
 
-  Définit la liste des hôtes pour lesquels MicrosoftEdge contourne les proxy.
+  Cette stratégie est déconseillée, utilisez plutôt[ProxySettings](#proxysettings). Elle ne fonctionne pas dans la version91 de MicrosoftEdge.
 
-Cette stratégie est appliquée uniquement si vous avez sélectionné «Utiliser des serveurs proxy fixes» dans la stratégie [ProxyMode](#proxymode). Si vous avez sélectionné un autre mode pour la configuration des stratégies proxy, n’activez ou ne configurez pas cette stratégie.
+Définit la liste des hôtes pour lesquels MicrosoftEdge contourne les proxy.
+
+Cette stratégie est appliquée uniquement si la stratégie de [ProxySettings](#proxysettings) n’est pas spécifiée et que vous avez sélectionné fixed_servers dans la stratégie [ProxyMode](#proxymode) . Si vous avez sélectionné un autre mode pour la configuration des stratégies proxy, n’activez ou ne configurez pas cette stratégie.
 
 Si vous activez cette stratégie, vous pouvez créer une liste d’hôtes pour lesquels MicrosoftEdge n’utilise pas de proxy.
 
@@ -6221,7 +6233,7 @@ Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: ProxyBypassList
-  - Nom de la stratégie de groupe: configurer les règles de contournement du proxy
+  - Nom GP: Configurer les règles de contournement du proxy (déconseillé)
   - Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge/Proxy server
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -6239,7 +6251,6 @@ Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ProxyBypassList
@@ -6253,9 +6264,9 @@ Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go
 
   ### ProxyMode
 
-  #### Configurer les paramètres du serveur proxy
+  #### Configurer les paramètres du serveur proxy (déconseillé)
 
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
   #### Versions prises en charge:
 
@@ -6263,21 +6274,20 @@ Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go
 
   #### Description
 
-  Spécifiez les paramètres du serveur proxy utilisé par MicrosoftEdge. Si vous activez cette stratégie, les utilisateurs sont autorisés à modifier les paramètres du proxy.
+  Cette stratégie est déconseillée, utilisez plutôt[ProxySettings](#proxysettings). Elle ne fonctionne pas dans la version91 de MicrosoftEdge.
 
-Si vous choisissez de ne jamais utiliser un serveur proxy et de toujours vous connecter directement, toutes les autres options sont ignorées.
+Si vous définissez cette stratégie sur Activé vous pouvez spécifier le serveur proxy que MicrosoftEdge utilise et empêche les utilisateurs de modifier les paramètres du proxy. MicrosoftEdge ignore toutes les options liées au proxy spécifiées à partir de la ligne de commande. La stratégie est appliquée uniquement si la stratégie [ProxySettings](#proxysettings) n’est pas spécifiée.
 
-Si vous décidez d’utiliser les paramètres de proxy du système, toutes les autres options sont ignorées.
+Les autres options ne sont pas prises en compte si vous choisissez l’une de ces options:
+  * direct = Ne jamais utiliser un serveur proxy et toujours vous connecter directement
+  * système=Utiliser les paramètres proxy du système
+  * auto_detect=Détecter automatiquement le serveur proxy
 
-Si vous optez pour la détection automatique du serveur proxy, toutes les autres options sont ignorées.
-
-Si vous choisissez le mode de serveur proxy fixe, vous pouvez spécifier d’autres options dans [ProxyServer](#proxyserver) et dans «Liste de règles de contournement de proxy séparées par des virgules».
-
-Si vous décidez d’utiliser un script de proxy .pac, vous devez indiquer l’URL du script dans «URL d’un fichier .pac de proxy».
+Si vous choisissez d’utiliser:
+  * fixed_servers=Serveurs proxy fixes. Vous pouvez spécifier d’autres options avec [ProxyServer](#proxyserver) et [ProxyBypassList](#proxybypasslist).
+  * pac_script= UnScript proxy .pac. Use [ProxyPacUrl](#proxypacurl) pour définir l’URL sur fichier .pac proxy.
 
 Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
-
-Si vous activez cette stratégie, MicrosoftEdge ignore toutes les options liées au proxy spécifiées à partir de la ligne de commande.
 
 Si vous ne configurez pas cette stratégie, les utilisateurs peuvent choisir eux-mêmes leurs paramètres de proxy.
 
@@ -6310,7 +6320,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: ProxyMode
-  - Nom de la stratégie de groupe: configurer les paramètres du serveur proxy
+  - Nom GP: configurer les paramètres du serveur proxy (déconseillé)
   - Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge/Proxy server
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -6328,7 +6338,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 "direct"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ProxyMode
@@ -6342,9 +6351,9 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   ### ProxyPacUrl
 
-  #### Définir l’URL du fichier .pac du proxy
+  #### Définissez l’URL du fichier .pac du proxy
 
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
   #### Versions prises en charge:
 
@@ -6352,9 +6361,11 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### Description
 
-  Spécifie l’URL du fichier (PAC) de configuration automatique du proxy.
+  Cette stratégie est déconseillée, utilisez plutôt[ProxySettings](#proxysettings). Elle ne fonctionne pas dans la version91 de MicrosoftEdge.
 
-Cette stratégie est appliquée uniquement si vous sélectionnez «Utiliser un script proxy .pac» dans la stratégie [ProxyMode](#proxymode). Si vous avez sélectionné un autre mode pour la configuration des stratégies proxy, n’activez ou ne configurez pas cette stratégie.
+Spécifie l’URL du fichier (PAC) de configuration automatique du proxy.
+
+Cette stratégie est appliquée uniquement si la stratégie [ProxySettings](#proxysettings) n’est pas spécifiée et vous avez sélectionné pac_script dans la stratégie [ProxyMode](#proxymode). Si vous avez sélectionné un autre mode pour la configuration des stratégies proxy, n’activez ou ne configurez pas cette stratégie.
 
 Si vous activez cette stratégie, vous pouvez spécifier une URL pour un fichier PAC, qui définit la façon dont le navigateur choisit automatiquement le serveur proxy approprié pour l’extraction d’un site web particulier.
 
@@ -6377,7 +6388,7 @@ Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.micr
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: ProxyPacUrl
-  - Nom de la stratégie de groupe: définir l’URL du fichier .pac du proxy
+  - Nom GP: Définir l’URL du fichier .pac proxy
   - Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge/Proxy server
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -6395,7 +6406,6 @@ Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.micr
 "https://internal.contoso.com/example.pac"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ProxyPacUrl
@@ -6409,9 +6419,9 @@ Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.micr
 
   ### ProxyServer
 
-  #### Configurer l’adresse ou l’URL du serveur proxy
+  #### Configurer l’adresse ou l’URL du serveur proxy (déconseillé)
 
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
   #### Versions prises en charge:
 
@@ -6419,9 +6429,11 @@ Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.micr
 
   #### Description
 
-  Spécifie l’URL du serveur proxy.
+  Cette stratégie est déconseillée, utilisez plutôt[ProxySettings](#proxysettings). Elle ne fonctionne pas dans la version91 de MicrosoftEdge.
 
-Cette stratégie est appliquée uniquement si vous avez sélectionné «Utiliser des serveurs proxy fixes» dans la stratégie [ProxyMode](#proxymode). Si vous avez sélectionné un autre mode pour la configuration des stratégies proxy, n’activez ou ne configurez pas cette stratégie.
+Spécifie l’URL du serveur proxy.
+
+Cette stratégie est appliquée uniquement si la stratégie de [ProxySettings](#proxysettings) n’est pas spécifiée et que vous avez sélectionné fixed_servers dans la stratégie [ProxyMode](#proxymode) . Si vous avez sélectionné un autre mode pour la configuration des stratégies proxy, n’activez ou ne configurez pas cette stratégie.
 
 Si vous activez cette stratégie, le serveur proxy configuré par cette stratégie sera utilisé pour toutes les URL.
 
@@ -6444,7 +6456,7 @@ Si vous souhaitez voir plus d’options et plus d’exemples détaillés, consul
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: ProxyServer
-  - Nom de la stratégie de groupe: configurer l’adresse ou l’URL du serveur proxy
+  - Nom GP: Configurer l’adresse ou l’URL du serveur proxy (déconseillé)
   - Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge/Proxy server
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -6461,7 +6473,6 @@ Si vous souhaitez voir plus d’options et plus d’exemples détaillés, consul
 ```
 "123.123.123.123:8080"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -6499,23 +6510,20 @@ Cette stratégie remplace les stratégies individuelles suivantes:
 [ProxyServer](#proxyserver)
 [ProxyBypassList](#proxybypasslist)
 
-Le champ ProxyMode vous permet de spécifier le serveur proxy utilisé par MicrosoftEdge et empêche les utilisateurs de modifier les paramètres du proxy.
+Le paramétrage de la stratégie [ProxySettings](#proxysettings) accepte ces champs:
+  * Le champ ProxyMode vous permet de spécifier le serveur proxy que MicrosoftEdge utilise et empêche les utilisateurs de modifier les paramètres du proxy.
+  * ProxyPacUrl, URL du fichier proxy .pac 
+  * ProxyServer, URL pour le serveur proxy.
+  * ProxyBypassList, liste des hôtes proxy que MicrosoftEdge contourne.
 
-Le champ ProxyPacUrl est une URL d’un fichier .pac du proxy.
+Pour ProxyMode, si vous choisissez la valeur:
+  * direct, un proxy n’est jamais utilisé et tous les autres champs sont ignorés.
+  * système, le proxy système est utilisé et tous les autres champs sont ignorés.
+  * auto_detect, tous les autres champs sont ignorés.
+  * fixed_server, les champs ProxyServer et ProxyBypassList sont utilisés.
+  * pac_script, les champs ProxyPacUrl et ProxyBypassList sont utilisés.
 
-Le champ ProxyServer est une URL pour le serveur proxy.
-
-Le champ ProxyBypassList est une liste d’hôtes proxy que MicrosoftEdge contourne.
-
-Si vous choisissez la valeur ’direct’ comme ’ProxyMode’, les proxy ne sont jamais utilisés et tous les autres champs sont ignorés.
-
-Si vous choisissez la valeur ’direct’ comme ’ProxyMode’, le proxy du système est utilisé et tous les autres champs sont ignorés.
-
-Si vous choisissez la valeur ’auto_detect’ comme ’ProxyMode’, tous les autres champs sont ignorés.
-
-Si vous choisissez la valeur «fixed_server» comme 'ProxyMode', les champs 'ProxyServer' et 'ProxyBypassList' sont utilisés.
-
-Si vous choisissez la valeur 'pac_script' comme 'ProxyMode', les champs 'ProxyPacUrl' et 'ProxyBypassList' sont utilisés.
+Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### Fonctionnalités prises en charge:
 
@@ -6640,7 +6648,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: PreventSmartScreenPromptOverride
@@ -6705,7 +6712,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -6773,7 +6779,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -6844,7 +6849,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: SmartScreenEnabled
@@ -6909,7 +6913,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 0x00000000
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -6968,7 +6971,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -7040,7 +7042,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: HomepageIsNewTabPage
@@ -7108,7 +7109,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 ```
 "https://www.contoso.com"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -7179,7 +7179,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 ```
 0x00000002
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -7347,7 +7346,6 @@ Si vous attribuez la valeur false à cette stratégie ou si vous ne la configure
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: NewTabPageHideDefaultTopSites
@@ -7417,7 +7415,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 ```
 "https://www.fabrikam.com"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -7578,7 +7575,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: NewTabPagePrerenderEnabled
@@ -7661,7 +7657,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: NewTabPageSetFeedType
@@ -7740,7 +7735,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000004
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: RestoreOnStartup
@@ -7804,7 +7798,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -7871,7 +7864,6 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent choisir d’af
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ShowHomeButton
@@ -7935,7 +7927,6 @@ Si vous avez activé l’ensemble de stratégies qui force un moteur de recherch
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8003,7 +7994,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: AdsSettingForIntrusiveAdsSites
@@ -8033,7 +8023,7 @@ Même si cette stratégie est désactivée, il n’est pas garanti que l’histo
 
 Si vous activez cette stratégie ou que vous ne la configurez pas, les utilisateurs peuvent supprimer l’historique de navigation et de téléchargement.
 
-Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas supprimer l’historique de navigation et de téléchargement.
+Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas supprimer l’historique de navigation et de téléchargement du navigateur et la synchronisation de l’historique sera désactivée.
 
 Si vous activez cette stratégie, n’activez pas la stratégie [ClearBrowsingDataOnExit](#clearbrowsingdataonexit), car elles traitent toutes deux la suppression de données. Si vous activez toutes les deux, la stratégie [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) prévaut et supprime toutes les données lors de la fermeture de MicrosoftEdge, quelle que soit la configuration de cette stratégie.
 
@@ -8069,7 +8059,6 @@ Si vous activez cette stratégie, n’activez pas la stratégie [ClearBrowsingDa
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8132,7 +8121,6 @@ Si vous désactivez cette stratégie, chaque fois que l’utilisateur effectue u
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8198,7 +8186,6 @@ Cette stratégie sera supprimée à l’avenir.
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: AllowPopupsDuringPageUnload
@@ -8258,7 +8245,6 @@ Si cette stratégie est activée ou si elle n’est pas configurée, les utilisa
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8323,7 +8309,6 @@ Si vous désactivez cette stratégie ou ne la configurez pas, les pages ne sont 
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8394,7 +8379,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -8451,7 +8435,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8521,7 +8504,6 @@ Plus précisément, il existe un bouton **Suggérer des pages similaires lorsqu�
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: AlternateErrorPagesEnabled
@@ -8583,7 +8565,6 @@ Si vous ne configurez pas cette stratégie ou si vous la désactivez, MicrosoftE
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8669,7 +8650,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: AmbientAuthenticationInPrivateModesEnabled
@@ -8729,7 +8709,6 @@ Si vous avez défini cette stratégie sur false ou que vous ne la configurez pas
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8793,7 +8772,6 @@ Si vous désactivez ou ne configurez pas ce paramètre, MicrosoftEdge utilise le
 "en"
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -8850,7 +8828,6 @@ Cette stratégie affecte tous les types d’entrées audio, et pas seulement le 
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8911,7 +8888,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -8982,7 +8958,6 @@ Cette stratégie est destinée à offrir aux entreprises de la souplesse pour d�
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -9096,7 +9071,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 ```
 0x00000002
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -9295,7 +9269,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: AutoOpenAllowedForURLs
@@ -9372,7 +9345,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: AutoOpenFileTypes
@@ -9440,7 +9412,6 @@ Si vous désactivez cette stratégie, vous arrêtez également toutes les activi
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: AutofillAddressEnabled
@@ -9502,7 +9473,6 @@ Si vous activez cette stratégie ou ne la configurez pas, les utilisateurs contr
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -9571,7 +9541,6 @@ Un onglet doit être fermé et rouvert pour que cette stratégie soit appliquée
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: AutoplayAllowed
@@ -9636,7 +9605,6 @@ Si vous ne configurez pas cette stratégie, le mode arrière-plan est désactiv�
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -9691,7 +9659,6 @@ Si vous désactivez ce paramètre, la liste des modèles disponibles est téléc
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -9765,7 +9732,6 @@ Si vous souhaitez en apprendre plus sur cette stratégie ou si ces cas s’appli
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: BingAdsSuppression
@@ -9830,7 +9796,6 @@ Si vous ne configurez pas cette stratégie, les cookies tiers sont activés, mai
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: BlockThirdPartyCookies
@@ -9891,7 +9856,6 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas ajouter de
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -9955,7 +9919,6 @@ Si vous désactivez cette stratégie, MicrosoftEdge ne permet pas aux utilisateu
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: BrowserGuestModeEnabled
@@ -10017,7 +9980,6 @@ Si vous activez cette stratégie ou si vous ne la configurez pas, MicrosoftEdge 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -10095,7 +10057,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: BrowserSignin
@@ -10161,7 +10122,6 @@ Si vous ne configurez pas cette stratégie, le client DNS intégré est activé 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -10274,7 +10234,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: CertificateTransparencyEnforcementDisabledForCas
@@ -10346,7 +10305,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: CertificateTransparencyEnforcementDisabledForLegacyCas
@@ -10415,7 +10373,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -10486,7 +10443,6 @@ Pour exclure la suppression des cookies lors de la fermeture, configurez la stra
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ClearBrowsingDataOnExit
@@ -10552,7 +10508,6 @@ Si vous désactivez cette stratégie, n’activez pas la stratégie [ClearBrowsi
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -10622,7 +10577,6 @@ Si vous souhaitez en savoir plus sur ClickOnce, consultez [https://go.microsoft.
 0x00000000
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -10648,6 +10602,8 @@ Si cette stratégie n’est pas configurée, aucune restriction n’est imposée
 Mappage des options de stratégie:
 
 * pinterest_suggestions (pinterest_suggestions) = Suggestions Pinterest
+
+* collections_share (collections_share) = P°artage de Collections
 
 Utilisez les informations précédentes lors de la configuration de cette stratégie.
 
@@ -10682,9 +10638,9 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -10693,6 +10649,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ``` xml
 <array>
   <string>pinterest_suggestions</string>
+  <string>collections_share</string>
 </array>
 ```
   
@@ -10751,7 +10708,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -10814,7 +10770,6 @@ Toutefois, certains composants ne sont pas soumis à cette stratégie. Cela incl
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -10880,7 +10835,6 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent choisir d’en
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ConfigureDoNotTrack
@@ -10901,6 +10855,7 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent choisir d’en
   #### Versions prises en charge:
 
   - Sur Windows depuis la version87 ou versions ultérieures
+  - Sur macOS depuis la version88 ou versions ultérieures
 
   #### Description
 
@@ -10963,6 +10918,13 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000003
 ```
 
+  #### Informations et paramètres sur Mac
+  
+  - Nom Clé de Préférence: ConfigureFriendlyURLFormat
+  - Exemple de valeur:
+``` xml
+<integer>3</integer>
+```
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -11028,7 +10990,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000000
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -11085,7 +11046,6 @@ Si vous souhaitez en savoir plus sur cette fonctionnalité, consultez les articl
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -11155,7 +11115,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -11212,7 +11171,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -11278,7 +11236,6 @@ Si vous désactivez cette stratégie, les vérifications d’interception DNS ne
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DNSInterceptionChecksEnabled
@@ -11343,7 +11300,6 @@ Remarque pour les administrateurs Windows: L’activation de cette stratégie ne
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultBrowserSettingEnabled
@@ -11407,7 +11363,6 @@ La valeur de la stratégie est uniquement prise en compte lorsque la stratégie 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -11481,7 +11436,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DefaultSensorsSetting
@@ -11553,7 +11507,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 ```
 0x00000002
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -11629,7 +11582,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -11684,7 +11636,6 @@ Si vous désactivez cette stratégie, ou si la stratégie n’est pas configuré
 ```
 0x00000000
 ```
-
 
   
 
@@ -11752,7 +11703,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 ```
 0x00000002
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -11840,7 +11790,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: DiagnosticData
@@ -11907,7 +11856,6 @@ Si vous souhaitez en savoir plus sur DirectInvoke, consultez [https://go.microso
 0x00000000
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -11962,7 +11910,6 @@ Si la stratégie [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenab
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -12028,7 +11975,6 @@ Cette stratégie contrôle les captures d’écran effectuées dans le navigateu
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DisableScreenshots
@@ -12093,7 +12039,6 @@ Si vous ne configurez pas cette stratégie, le répertoire cache par défaut est
 "${user_home}/Edge_cache"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DiskCacheDir
@@ -12157,7 +12102,6 @@ Si cette stratégie n'est pas configurée, la taille par défaut est utilisée, 
 ```
 0x06400000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -12235,7 +12179,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 "off"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DnsOverHttpsMode
@@ -12302,7 +12245,6 @@ Les modèles au format incorrect sont ignorés.
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DnsOverHttpsTemplates
@@ -12368,7 +12310,6 @@ Si le dossier spécifié par le chemin d’accès n’existe pas, le télécharg
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -12454,7 +12395,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: DownloadRestrictions
@@ -12516,7 +12456,6 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas accéder �
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -12640,7 +12579,6 @@ Désactivez cette stratégie pour empêcher les utilisateurs d'ajouter, de suppr
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: EditFavoritesEnabled
@@ -12659,7 +12597,6 @@ Désactivez cette stratégie pour empêcher les utilisateurs d'ajouter, de suppr
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Versions prises en charge:
-            
 
   - On Windows and macOS since 77, until 86
 
@@ -12716,7 +12653,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -12790,7 +12726,6 @@ Si vous ne configurez pas cette stratégie, la liste des actions de domaine cont
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: EnableDomainActionsDownload
@@ -12852,7 +12787,6 @@ Si vous désactivez ou ne configurez pas la stratégie, MicrosoftEdge n’effect
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -12918,7 +12852,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: EnableSha1ForLocalAnchors
@@ -12978,7 +12911,6 @@ Cette stratégie s'applique également aux extensions de composant.
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -13041,7 +12973,6 @@ Si vous désactivez ou ne configurez pas cette stratégie, les utilisateurs ne v
 ```
 0x00000000
 ```
-
 
   
 
@@ -13112,7 +13043,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -13201,7 +13131,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ExperimentationAndConfigurationServiceControl
@@ -13270,7 +13199,6 @@ En ce qui concerne MicrosoftEdge84, si vous ne configurez pas cette stratégie, 
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ExternalProtocolDialogShowAlwaysOpenCheckbox
@@ -13332,7 +13260,6 @@ Si vous désactivez cette stratégie, la page du contrôle parental n’apparaî
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -13397,7 +13324,6 @@ Si cette stratégie n’est pas configurée, l’utilisateur peut décider d’u
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -13475,7 +13401,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ForceBingSafeSearch
@@ -13537,7 +13462,6 @@ Si vous définissez cette stratégie sur False ou si vous ne la configurez pas, 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -13603,7 +13527,6 @@ En mode éphémère, les données de profil ne sont enregistrées sur le disque 
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ForceEphemeralProfiles
@@ -13665,7 +13588,6 @@ Si vous désactivez ce paramètre ou ne définissez pas de valeur, le Filtre adu
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -13731,7 +13653,6 @@ Cette stratégie d’entreprise est désactivée par défaut.
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ForceLegacyDefaultReferrerPolicy
@@ -13794,7 +13715,6 @@ Cette stratégie est désactivée par défaut. Si elle est activée, les utilisa
 0x00000000
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -13853,7 +13773,6 @@ Pour que cette stratégie fonctionne correctement, la stratégie [BrowserSignin]
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -13929,7 +13848,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ForceYouTubeRestrict
@@ -13994,7 +13912,6 @@ L'ouverture de Microsoft Edge en mode kiosque à l'aide de la ligne de commande 
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -14053,7 +13970,6 @@ Cette stratégie est destinée à fournir aux entreprises, en fonction du compor
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -14123,7 +14039,6 @@ Les termes de recherche populaires à mot unique nécessitent une sélection man
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: GoToIntranetSiteForSingleWordEntryInAddressBar
@@ -14182,7 +14097,6 @@ Les termes de recherche populaires à mot unique nécessitent une sélection man
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -14245,7 +14159,6 @@ Si vous désactivez cette stratégie, l'accélération matérielle est désactiv
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -14330,7 +14243,6 @@ Remarque : les options de configuration spécifiques qui s'affichent à l'utilis
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -14457,7 +14369,6 @@ Vous pouvez définir cette stratégie comme une recommandation. Cela signifie qu
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ImportAutofillFormData
@@ -14526,7 +14437,6 @@ Vous pouvez également définir cette stratégie comme une recommandation. Cela 
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ImportBrowserSettings
@@ -14592,7 +14502,6 @@ Vous pouvez également définir cette stratégie comme une recommandation. Cela 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -14662,7 +14571,6 @@ Vous pouvez également définir cette stratégie comme une recommandation. Cela 
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ImportExtensions
@@ -14730,7 +14638,6 @@ Vous pouvez également définir cette stratégie comme une recommandation. Cela 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -14800,7 +14707,6 @@ Vous pouvez également définir cette stratégie comme une recommandation. Cela 
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ImportHistory
@@ -14868,7 +14774,6 @@ Vous pouvez définir cette stratégie comme une recommandation. Cela signifie qu
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -14938,7 +14843,6 @@ Vous pouvez également définir cette stratégie comme une recommandation. Cela 
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ImportOpenTabs
@@ -15006,7 +14910,6 @@ Vous pouvez également définir cette stratégie comme une recommandation. Cela 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -15076,7 +14979,6 @@ Vous pouvez définir cette stratégie comme une recommandation. Cela signifie qu
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ImportSavedPasswords
@@ -15145,7 +15047,6 @@ Vous pouvez définir cette stratégie comme une recommandation. Cela signifie qu
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ImportSearchEngine
@@ -15211,7 +15112,6 @@ Vous pouvez également définir cette stratégie comme une recommandation. Cela 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -15287,7 +15187,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: InPrivateModeAvailability
@@ -15347,7 +15246,6 @@ Si vous désactivez cette stratégie, les avertissements ne seront pas affichés
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -15415,7 +15313,6 @@ Notez que la stratégie est appliquée par processus de convertisseur, et la val
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -15493,7 +15390,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -15555,7 +15451,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -15606,7 +15501,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
-
 
   
 
@@ -15683,7 +15577,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000000
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -15700,15 +15593,17 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### Description
 
-  Cette stratégie remplace la stratégie d’indicateur ie-mode-test. Elle permet aux utilisateurs d’ouvrir un onglet de mode IE à partir de l’option de menu de l’interface utilisateur.
+  Cette stratégie permet aux utilisateurs de tester les applications en mode Internet Explorer en ouvrant l’onglet mode Internet Explorer dans Microsoft Edge.
+
+Les utilisateurs peuvent le faire dans le menu «Autres Outils» en sélectionnant «Ouvrir les sites en mode Internet Explorer».
+
+Par ailleurs, les utilisateurs peuvent tester leurs applications dans un navigateur moderne sans supprimer les applications de la liste des sites à l’aide de l’option «Ouvrir les sites en mode Edge».
 
 Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) défini sur «IEMode» et [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) avec une liste comportant au moins une entrée.
 
-Si vous activez cette stratégie, les utilisateurs peuvent ouvrir l’onglet du mode IE à partir de l’option de l’interface utilisateur et naviguer du site actuel vers un site en mode IE.
+Si vous activez cette stratégie, l’option «Ouvrir les sites en mode Internet Explorer» est visible sous «Autres outils». Les utilisateurs peuvent afficher leurs sites en mode Internet Explorer dans cet onglet. Une autre option servant à «Ouvrir les sites en mode Edge» apparaît également sous «Autres outils» pour permettre le test des sites dans un navigateur moderne sans les supprimer de la liste des sites.
 
-Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas voir directement l’option de l’interface utilisateur dans le menu.
-
-Si vous ne configurez pas cette stratégie, vous pouvez configurer l’indicateur ie-mode-test manuellement.
+Si vous désactivez ou ne configurez pas cette stratégie, les utilisateurs ne peuvent pas voir les options «Ouvrir dans le mode Internet Explorer» et «Ouvrir en mode Edge» sous le menu «Autres outils». Toutefois, les utilisateurs peuvent configurer ces options avec l’indicateur --ie-mode-test.
 
   #### Fonctionnalités prises en charge:
 
@@ -15742,7 +15637,6 @@ Si vous ne configurez pas cette stratégie, vous pouvez configurer l’indicateu
 ```
 0x00000000
 ```
-
 
   
 
@@ -15802,7 +15696,6 @@ Si vous ne configurez pas la stratégie, l'utilisateur peut modifier ce paramèt
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -15871,7 +15764,6 @@ Cette stratégie nécessite un redémarrage du navigateur pour finaliser l’app
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -16232,7 +16124,6 @@ Si vous ne configurez pas cette stratégie, la valeur par défaut (32) est utili
 0x00000020
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: MaxConnectionsPerProxy
@@ -16296,7 +16187,6 @@ Si la stratégie [EnableMediaRouter](#enablemediarouter) est désactivée, cette
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -16368,7 +16258,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: MetricsReportingEnabled
@@ -16433,7 +16322,6 @@ Si cette stratégie n’est pas configurée, la détection du masquage des fenê
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -16492,7 +16380,6 @@ Si vous ne configurez pas cette stratégie, le délai d’expiration par défaut
 ```
 0x0000000a
 ```
-
 
   
 
@@ -16558,7 +16445,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 ```
 0x00000002
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -16626,7 +16512,6 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -16685,7 +16570,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -16752,7 +16636,6 @@ Si vous activez cette stratégie ou si vous ne la définissez pas, les sites web
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: PaymentMethodQueryEnabled
@@ -16814,7 +16697,6 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas modifier o
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -16880,7 +16762,6 @@ Les paramètres utilisateur permettant d'activer ou de désactiver l'Assistant �
 0x00000000
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -16937,7 +16818,6 @@ Si vous ne configurez pas cette stratégie, l'authentification proactive est act
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -17001,7 +16881,6 @@ Si vous désactivez (définissez sur false) cette stratégie, MicrosoftEdge ne p
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: PromotionalTabsEnabled
@@ -17063,7 +16942,6 @@ Si cette stratégie n’est pas configurée, l’utilisateur peut modifier ce pa
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -17128,7 +17006,6 @@ QUIC est un protocole réseau de couche de transport qui permet d’améliorer l
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -17215,8 +17092,6 @@ Pour plus d’informations sur cette stratégie, voir [https://go.microsoft.com/
   Ce paramètre vous permet de spécifier si Internet Explorer redirige vers Microsoft Edge les utilisateurs qui se rendent sur des sites qui nécessitent un navigateur moderne.
 
 Si vous ne configurez pas cette stratégie ou si vous la définissez sur Liste de sites, à partir de M87, InternetExplorer redirige vers MicrosoftEdge les sites qui requièrent un navigateur moderne.
-
-Microsoft fournit une liste de sites publics qui nécessitent une telle redirection, comme https://mail.yahoo.com.
 
 Lors de la redirection d’un site d’InternetExplorer vers MicrosoftEdge, l’onglet InternetExplorer qui a commencé le chargement du site est fermé s’il ne dispose pas de contenu antérieur. Dans le cas contraire, il redirige vers une page d’aide de Microsoft qui explique pourquoi l’utilisateur a été redirigé vers Microsoft Edge.
 
@@ -17334,7 +17209,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: RelaunchNotification
@@ -17397,7 +17271,6 @@ Si cette valeur n'est pas définie, la période par défaut de 604 800 000 milli
 0x240c8400
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: RelaunchNotificationPeriod
@@ -17458,7 +17331,6 @@ Désactiver cette stratégie affectera la sécurité et la stabilité de Microso
 0x00000000
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -17513,7 +17385,6 @@ Si cette stratégie n'est pas configurée ou si elle est désactivée, les param
 ```
 0x00000000
 ```
-
 
   
 
@@ -17574,7 +17445,6 @@ De manière spécifique, il existe un bouton bascule **Utiliser un service web p
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -17637,7 +17507,6 @@ Si cette stratégie est laissée vide ou n'est pas configurée, l'utilisateur pe
 ```
 ".*@contoso.com"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -17703,7 +17572,6 @@ Si vous ne configurez pas cette stratégie, le chemin d’accès du profil itin�
 "${roaming_app_data}\\edge-profile"
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -17761,7 +17629,6 @@ Pour plus d’informations sur l’utilisation des profils utilisateur itinéran
 0x00000001
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -17816,7 +17683,6 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, le contenu
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -17880,7 +17746,6 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas poursuivre
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: SSLErrorOverrideAllowed
@@ -17904,7 +17769,7 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas poursuivre
 
   #### Description
 
-  Définit la version minimale de TLS prise en charge. Si vous ne configurez pas cette stratégie, MicrosoftEdge utilise la version minimale par défaut qui est TLS 1.0. 
+  Définit la version minimale de TLS prise en charge. Si vous ne configurez pas cette stratégie, Microsoft Edge affiche une erreur pour TLS 1,0 et TLS 1,1, mais l’utilisateur peut la contourner.
 
 Si vous activez cette stratégie, MicrosoftEdge n'utilise pas de versions SSL/TLS antérieures à la version précisée. Toute valeur non reconnue sera ignorée.
 
@@ -17950,7 +17815,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 ```
 "tls1"
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -18023,7 +17887,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: SaveCookiesOnExit
@@ -18089,7 +17952,6 @@ Si cette stratégie est désactivée ou n'est pas configurée, l'historique de n
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: SavingBrowserHistoryDisabled
@@ -18148,7 +18010,6 @@ Si vous désactivez cette stratégie, les appels aux API de partage d'écran éc
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -18211,7 +18072,6 @@ Si vous désactivez cette stratégie, le défilement de pages web vers des fragm
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -18277,7 +18137,6 @@ Si cette règle n'est pas configurée, ce paramètre est activé, mais l'utilisa
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: SearchSuggestEnabled
@@ -18339,7 +18198,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: SecurityKeyPermitAttestation
@@ -18399,7 +18257,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 0x00000001
 ```
-
 
   
 
@@ -18461,7 +18318,6 @@ Pour activer cette stratégie, [MetricsReportingEnabled](#metricsreportingenable
 ```
 0x00000000
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -18530,7 +18386,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -18603,7 +18458,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de préférence: SensorsBlockedForUrls
@@ -18674,7 +18528,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -18747,7 +18600,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de préférence: SerialBlockedForUrls
@@ -18812,7 +18664,6 @@ Si vous désactivez cette stratégie, le raccourci n’apparaît pas.
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: ShowOfficeShortcutInFavoritesBar
@@ -18874,7 +18725,6 @@ Si cette stratégie est désactivée, Signed HTTP Exchanges ne peut pas être ch
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -18938,7 +18788,6 @@ Si cette règle n'est pas configurée ou si elle est désactivée, les utilisate
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -19064,7 +18913,6 @@ Si vous désactivez cette stratégie, l’utilisateur ne peut pas utiliser la v�
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: SpellcheckEnabled
@@ -19135,7 +18983,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -19199,7 +19046,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -19258,7 +19104,6 @@ Cette stratégie n'affecte pas les autres types de contenu mixte autres que l'au
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -19320,7 +19165,6 @@ Si cette stratégie est définie sur false ou si elle n'est pas définie, les av
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: SuppressUnsupportedOSWarning
@@ -19380,7 +19224,6 @@ Si vous configurez pas cette stratégie, ou si vous ne la configurez pas de la f
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -19444,7 +19287,6 @@ Les utilisateurs ne peuvent pas remplacer les types de données désactivés.
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -19513,7 +19355,6 @@ Cette stratégie peut être utilisée pour tester les proxys concernés et les m
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -19586,7 +19427,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: TLSCipherSuiteDenyList
@@ -19655,7 +19495,6 @@ Si vous désactivez cette stratégie, aucun onglet n’est figé.
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: TabFreezingEnabled
@@ -19713,7 +19552,6 @@ Si vous désactivez cette stratégie, aucun onglet n’est figé.
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -19776,7 +19614,6 @@ Si vous ne configurez pas cette stratégie, le navigateur ne commence à économ
 ```
 0x00000800
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -19850,7 +19687,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 0x00000002
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: TrackingPrevention
@@ -19915,7 +19751,6 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent décider d'uti
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: TranslateEnabled
@@ -19938,7 +19773,6 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent décider d'uti
   - sur Windows et macOS depuis la version77 ou versions ultérieures
 
   #### Description
-                    
 
   La définition de la stratégie permet d’accéder aux URL répertoriées en tant qu’exceptions à [URLBlocklist](#urlblocklist).
 
@@ -19991,7 +19825,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -20075,7 +19908,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: URLBlocklist
@@ -20149,7 +19981,6 @@ Si vous activez ou ne configurez pas cette stratégie, la fonctionnalité User-A
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: UserAgentClientHintsEnabled
@@ -20216,7 +20047,6 @@ Vous pouvez consulter la liste des variables utilisables sur [https://go.microso
 "${users}/${user_name}/Edge"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: UserDataDir
@@ -20279,7 +20109,6 @@ Si vous définissez cette stratégie, les anciennes captures instantanées sont 
 0x00000003
 ```
 
-
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -20334,7 +20163,6 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas invoquer l
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -20400,7 +20228,6 @@ Cette stratégie a une incidence sur tous les types d'entrée vidéo, et pas uni
 0x00000000
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: VideoCaptureAllowed
@@ -20460,7 +20287,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -20528,7 +20354,6 @@ Quelle que soit la façon dont cette stratégie est activée, le paramètre d’
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -20745,7 +20570,6 @@ Si elle est définie sur False ou si elle n'est pas définie, les fonctionnalit�
 0x00000001
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: WebComponentsV0Enabled
@@ -20763,7 +20587,6 @@ Si elle est définie sur False ou si elle n'est pas définie, les fonctionnalit�
 
   >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
-                     
   #### Versions prises en charge:
 
   - sur Windows et macOS depuis la version77 et jusqu’à la version84
@@ -20811,7 +20634,6 @@ Si la stratégie est désactivée ou n'est pas configurée, WebDriver n'est pas 
 ```
 0x00000001
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -20880,7 +20702,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.cont
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
-
 
   #### Informations et paramètres sur Mac
   
@@ -20961,7 +20782,6 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 "default"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: WebRtcLocalhostIpHandling
@@ -21024,7 +20844,6 @@ Si vous ne configurez pas cette stratégie, ou si vous définissez une chaîne v
 "10000-11999"
 ```
 
-
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: WebRtcUdpPortRange
@@ -21032,6 +20851,130 @@ Si vous ne configurez pas cette stratégie, ou si vous définissez une chaîne v
 ``` xml
 <string>10000-11999</string>
 ```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Activer le widget Web
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version88 ou versions ultérieures
+
+  #### Description
+
+  Active le widget Web. Lorsque cette option est activée, les utilisateurs peuvent utiliser le widget pour effectuer une recherche sur le Web à partir de leur ordinateur de bureau ou d’une application. Le widget fournit une zone de recherche qui affiche les suggestions Web et ouvre toutes les recherches sur le Web dans Microsoft Edge. La zone de recherche fournit des suggestions de recherche (par Bing) et d’URL. Le widget inclut également les vignettes de flux sur lesquelles les utilisateurs peuvent cliquer pour afficher plus d’informations sur msn.com dans un nouvel onglet ou une nouvelle fenêtre du navigateur Microsoft Edge. Les vignettes de flux peuvent inclure des publicités. Le widget peut être lancé à partir des paramètres Microsoft Edge ou à partir du menu «Autres outils» dans Microsoft Edge.
+
+Si vous activez ou ne configurez pas cette stratégie: le widget Web est automatiquement activé pour tous les profils.
+Dans les paramètres de Microsoft Edge, les utilisateurs verront l’option de lancement du widget.
+Dans les paramètres Microsoft Edge, les utilisateurs verront l’élément de menu pour l’exécution du widget au démarrage de Windows (démarrage automatique).
+L’option d’activation du widget au démarrage est activée si la stratégie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) est activée.
+Si la stratégie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) est désactivée ou n’est pas configurée, l’option permettant d’activer le widget au démarrage est désactivée.
+Les utilisateurs verront l’élément de menu pour le lancement du widget à partir du menu «Autres outils» de Microsoft Edge. Les utilisateurs peuvent lancer le widget à partir de l’option «Autres outils».
+Le widget peut être désactivé à l’aide de l’option «Quitter» dans la barre d’état système ou en fermant le widget à partir de la barre des tâches. Le widget est redémarré lors du redémarrage du système si le démarrage automatique est activé.
+
+Si vous désactivez cette stratégie: le widget Web est désactivé pour tous les profils.
+L’option de lancement du widget à partir des paramètres Microsoft Edge est désactivée.
+L’option de lancement de démarrage du widget au démarrage de Windows (démarrage automatique) est désactivée.
+L’option de lancement du widget à partir du menu «Autres outils» de Microsoft Edge est désactivée.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique GP: WebWidgetAllowed
+  - Nom GP: Activer le widget Web
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de valeur: WebWidgetAllowed
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Autoriser le widget Web au démarrage de Windows
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version88 ou versions ultérieures
+
+  #### Description
+
+  Permet le démarrage de l’exécution du widget Web au démarrage de Windows.
+
+Si vous activez: l’exécution du widget Web démarre au démarrage de Windows par défaut.
+Si le widget est désactivé via lma stratégie [WebWidgetAllowed](#webwidgetallowed), cette stratégie ne démarre pas le widget au démarrage de Windows.
+
+Si vous désactivez cette stratégie: Le widget Web ne démarre pas au démarrage de Windows pour tous les profils.
+L’option de démarrage du widget au démarrage de Windows est désactivée et dans les paramètres de Microsoft Edge également.
+
+Si vous ne configurez pas cette stratégie: Le widget Web ne démarre pas au démarrage de Windows pour tous les profils.
+L’option de démarrage du widget au démarrage de Windows est désactivée dans les paramètres de Microsoft Edge.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique GP: WebWidgetIsEnabledOnStartup
+  - Nom GP: Autoriser le widget Web au démarrage de Windows
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de valeur: WebWidgetIsEnabledOnStartup
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -21090,7 +21033,6 @@ Si vous désactivez ou ne configurez pas cette stratégie, le solveur Microsoft 
 ```
 0x00000001
 ```
-
 
   
 
