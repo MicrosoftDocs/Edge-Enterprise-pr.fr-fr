@@ -3,19 +3,19 @@ title: Prêt pour Microsoft Edge
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/04/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prêt pour Microsoft Edge
-ms.openlocfilehash: 06fd37dfa910c05db091cf764552ec93471dcbef
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
+ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155360"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "11157687"
 ---
 # Prêt pour Microsoft Edge
 
@@ -24,6 +24,17 @@ Cet article fournit des informations aux administrateurs informatiques qui envis
 ## Compatibilité et prise en charge de l’application web
 
 Pour vous aider dans le déploiement de Microsoft Edge, nous avons compilé une liste des applications web susceptibles d’être utilisées au sein de votre organisation. Cette liste vous permet de déterminer si l’application Web est prête pour Microsoft Edge, conformément aux instructions de l’énoncé de support public du fournisseur d’applications web.
+
+### Ajouter à la liste des applications
+
+Nous mettons régulièrement à jour la liste, car les commentaires de l’engagement client permettent d’identifier les énoncés de support.
+
+Si vous êtes fournisseur d’applications web et souhaitez inclure votre énoncé de support à titre de référence client, veuillez envoyer les informations suivantes par e-mail à l’adresse [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com).
+
+- Nom du produit
+- Version prise en charge (le cas échéant)
+- Nom du fournisseur
+- URL de l’énoncé de support public.
 
 ### Liste des applications
 
