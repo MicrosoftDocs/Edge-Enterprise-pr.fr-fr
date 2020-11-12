@@ -3,19 +3,19 @@ title: Sécurité Microsoft Edge pour votre entreprise
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/09/2020
+ms.date: 11/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sécurité Microsoft Edge pour votre entreprise
-ms.openlocfilehash: 465dbc2a7e90d205630f559d8a7b7d582f0467ae
-ms.sourcegitcommit: 10e18ce8a9585bb54c2716939fce93e1c6e708fd
+ms.openlocfilehash: e2f45d49d8f4960f3f2263098ff2eb7d0103b6ea
+ms.sourcegitcommit: 5efa7f6196804da205c3deff4ba7917a94ffcf4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "11160953"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11165938"
 ---
 # Sécurité Microsoft Edge pour votre entreprise
 
@@ -27,7 +27,7 @@ Nous allons voir les détails, à partir des **menaces externes** et examiner **
 
 ### Protection la mieux cotée contre le hameçonnage et les programmes malveillants
 
-Intégré à Microsoft Edge, SmartScreen bloque davantage de tentatives de hameçonnage et de programmes malveillants que Google Chrome, conformément à une étude [indépendante de NSS Labs](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/). SmartScreen fournit des vérifications de réputation en temps réel sur les sites et les téléchargements au fur et à mesure que les utilisateurs travaillent en ligne. Il fait partie de la [Sécurité intelligente Microsoft Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), qui permet de dessiner des signaux et des informations générés par le réseau de grande envergure de biens généraux, de chercheurs et de partenaires de Microsoft. En exécutant des vérifications sur des listes dynamiques de sites et de téléchargements dangereux, Microsoft Edge permet de détecter et de bloquer même les menaces éphémères qui disparaissent rapidement.  
+Intégré à Microsoft Edge, SmartScreen bloque davantage de tentatives de [hameçonnage](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) et de [programmes malveillants](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) que Google Chrome, en fonction d’une étude indépendante de NSS Labs. SmartScreen fournit des vérifications de réputation en temps réel sur les sites et les téléchargements au fur et à mesure que les utilisateurs travaillent en ligne. Il fait partie de la [Sécurité intelligente Microsoft Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), qui permet de dessiner des signaux et des informations générés par le réseau de grande envergure de biens généraux, de chercheurs et de partenaires de Microsoft. En exécutant des vérifications sur des listes dynamiques de sites et de téléchargements dangereux, Microsoft Edge permet de détecter et de bloquer même les menaces éphémères qui disparaissent rapidement.  
 
 [Microsoft Edge avec SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) a bloqué 95,5% des tentatives de hameçonnage et 98,5% des tentatives de programmes malveillants [pendant le test NSS Labs](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/) par rapport aux taux de 86,9% et 86,0% de la navigation de chrome, respectivement.
 
@@ -56,7 +56,7 @@ Outre la protection contre les menaces externes, les administrateurs informatiqu
 > [!NOTE]
 > La configuration de la Protection des informations Windows (WIP) requiert des licences Microsoft Intune ou Microsoft Endpoint Configuration Manager, ou à l’aide d’une solution de gestion des appareils mobiles tierces, susceptible d’avoir des exigences en matière de licences supplémentaires.
 
-**Microsoft Endpoint DLP sera uniquement pris en charge en mode natif dans Microsoft Edge. (Microsoft Endpoint DLP est actuellement en version d’évaluation publique et devrait être disponible plus tard dans 2020.)**. Protection contre la perte de données (DLP) Microsoft Endpoint s’intègre au Centre de sécurité Microsoft et étend la protection des informations à Microsoft Edge pour avertir les utilisateurs de l’activité non conforme et empêcher la perte de données à mesure que les utilisateurs travaillent en ligne. Ce système découvre et libelle les données sensibles à l’intérieur de l’entreprise qui correspondent à des critères définis par l’administrateur, tels que des fichiers contenant des numéros de carte bancaire ou des ID gouvernementaux (par exemple, des numéros de sécurité sociale), des informations financières, et bien plus encore. Vous pouvez déployer des stratégies de protection des informations Microsoft vers Microsoft Endpoint DLP sans reconfiguration supplémentaire, y compris les identificateurs de contenu sensible et les stratégies que les administrateurs informatiques ont déjà personnalisés. Il s’agit d’un déploiement transparent de la protection des informations pour les administrateurs informatiques.
+**Le DLP du Pont de Terminaison Microsoft est uniquement pris en charge en mode natif dans Microsoft Edge**. Protection contre la perte de données (DLP) Microsoft Endpoint s’intègre au Centre de sécurité Microsoft et étend la protection des informations à Microsoft Edge pour avertir les utilisateurs de l’activité non conforme et empêcher la perte de données à mesure que les utilisateurs travaillent en ligne. Ce système découvre et libelle les données sensibles à l’intérieur de l’entreprise qui correspondent à des critères définis par l’administrateur, tels que des fichiers contenant des numéros de carte bancaire ou des ID gouvernementaux (par exemple, des numéros de sécurité sociale), des informations financières, et bien plus encore. Vous pouvez déployer des stratégies de protection des informations Microsoft vers Microsoft Endpoint DLP sans reconfiguration supplémentaire, y compris les identificateurs de contenu sensible et les stratégies que les administrateurs informatiques ont déjà personnalisés. Il s’agit d’un déploiement transparent de la protection des informations pour les administrateurs informatiques.
 
 > [!NOTE]
 > Microsoft365 E5 ou l’abonnement de conformité Microsoft365 E5 est requis pour Protection contre la perte de données Microsoft Endpoint.
