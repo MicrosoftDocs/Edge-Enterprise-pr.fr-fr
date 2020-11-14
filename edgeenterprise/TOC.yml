@@ -1,4 +1,4 @@
-# last revised 11/03/2020
+# last revised 11/06/2020
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
@@ -113,7 +113,9 @@
           href: edge-ie-mode-faq.md
         - name: Autres recommandations
           items:
-            - name: Partage de cookies entre Microsoft Edge et Internet Explorer
+            - name: Ajouter le mode IE au menu contextuel
+              href: edge-ie-mode-add-guidance-filetype-associations.md
+            - name: Partage de cookies de Microsoft Edge vers Internet Explorer
               href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Sécurité Microsoft Edge
   items:
