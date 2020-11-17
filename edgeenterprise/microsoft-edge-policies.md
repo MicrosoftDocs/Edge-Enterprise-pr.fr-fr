@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155311"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168799"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -28,18 +28,6 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
-
-## Nouvelles stratégies déconseillées
-
-Le tableau suivant répertorie les nouvelles stratégies déconseillées pour cette mise à jour.
-
-| Nom | Statut |
-|-|-|
-| [WebWidgetAllowed](#webwidgetallowed) | Nouveauté |
-| [ProxyBypassList](#proxybypasslist) | Déconseillée |
-| [ProxyMode](#proxymode) | Déconseillée |
-| [ProxyPacUrl](#proxypacurl) | Déconseillée |
-| [ProxyServer](#proxyserver) | Déconseillée |
 
 ## Stratégies disponibles
 
@@ -4003,15 +3991,23 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### Description
 
-  Détermine les types d’extensions pouvant être installés et limite l’accès pendant l’exécution.
+  La définition de la stratégie détermine les applications et les extensions que vous pouvez installer dans Microsoft Edge, les hôtes avec lesquels elles peuvent interagir et limite l’accès pendant l’exécution.
 
-Ce paramètre définit les types d’extensions autorisés et les hôtes avec lesquels ils peuvent interagir. La valeur est une liste composée de chaînes, chacune pouvant prendre l’une des suivantes: «extension», «theme», «user_script» et «hosted_app». Si vous souhaitez en savoir plus sur ces types, consultez la documentation sur les extensions MicrosoftEdge.
+Si vous ne définissez pas cette stratégie, aucune restriction ne s’appliquera concernant les types d’extension et d’application acceptables.
 
-Cette stratégie affecte également les extensions dont l’installation est forcée à l’aide de la stratégie [ExtensionInstallForcelist](#extensioninstallforcelist).
+Le programme n’installera pas les extensions et applications ayant un type qui ne figure pas dans la liste. Chaque valeur doit être l’une des chaînes suivantes:
 
-Si vous activez cette stratégie, seules les extensions qui correspondent à un type répertorié dans la liste sont installées.
+* "extension"
 
-Si cette stratégie n’est pas configurée, aucune restriction n’est imposée concernant les types d’extensions pouvant être installés.
+* "theme"
+
+* "user_script"
+
+* "hosted_app"
+
+Si vous souhaitez en savoir plus sur ces types, veuillez consulter la documentation sur les extensions Microsoft Edge.
+
+Remarque: cette stratégie concerne également les extensions et applications à installer de manière forcée à l’aide de [ExtensionInstallForcelist](#extensioninstallforcelist).
 
   #### Fonctionnalités prises en charge:
 
@@ -4202,27 +4198,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   #### Description
 
-  Définit la liste des applications et des extensions qui sont installées en arrière-plan, sans aucune intervention de l’utilisateur, et qui ne peuvent pas être désinstallées ou désactivées («installation forcée»). Toutes les autorisations demandées par les extensions sont accordées de manière implicite, sans intervention de l’utilisateur, y compris tout autre autorisation demandée par les futures versions de l’extension. En outre, les autorisations sont accordées pour les API d’extension enterprise.deviceAttributes et enterprise.platformKeys. (ces deux API sont disponibles uniquement pour les extensions dont l’installation est forcée).
+  Définissez cette stratégie pour spécifier une liste d’applications et d’extensions à installer en mode silencieux, sans interaction de l’utilisateur. Les utilisateurs ne peuvent pas désinstaller ou désactiver ce paramètre. Les autorisations sont implicites, y compris pour les API d’extension enterprise.deviceAttributes et enterprise.platformKeys. Remarque: ces 2 API ne sont pas disponibles pour les applications et les extensions non installées de manière forcée.
 
-Cette stratégie prévaut lors d’un conflit potentiel avec la stratégie [ExtensionInstallBlocklist](#extensioninstallblocklist). Lorsque vous retirez une extension de la liste des extensions dont l’installation est forcée, elle est automatiquement désinstallée par Microsoft Edge.
+Si vous ne définissez pas cette stratégie, aucune application ou extension ne s’installe automatiquement, et les utilisateurs peuvent désinstaller n’importe quelle application dans Microsoft Edge.
 
-L’installation forcée est limitée aux applications et extensions répertoriées sur le site web des modules complémentaires de MicrosoftEdge pour les instances qui ne figurent pas parmi les instances suivantes: les instances Windows associées à un domaine Microsoft ActiveDirectory ou les instances Windows10Professionnel ou Entreprise, inscrites pour la gestion des périphériques et les instances macOS gérées via MDM ou jointes à un domaine via MCX.
+Cette stratégie remplace la stratégie [ExtensionInstallBlocklist](#extensioninstallblocklist). Si vous supprimez de cette liste une extension ou une application déjà installée de manière forcée, Microsoft Edge la désinstalle automatiquement.
 
-Les utilisateurs peuvent modifier le code source de n’importe quelle extension à l’aide des outils de développement, ce qui peut potentiellement faire dysfonctionner l’extension. Si cela pose problème, configurez la stratégie [DeveloperToolsAvailability](#developertoolsavailability).
+Sur les instances Microsoft Windows, les applications et les extensions externes au site web des composants additionnels Microsoft Edge peuvent faire l’objet d’une installation forcée uniquement si l’instance fait partie d’un domaine Microsoft Active Directory et exécute Windows 10 Professionnel.
 
-Utilisez le format suivant pour ajouter une extension à la liste:
+Sur les instances macOS, les applications et les extensions externes au site web des composants additionnels Microsoft Edge ne peuvent faire l’objet d’une installation forcée uniquement si l’instance est gérée via la gestion des périphériques mobiles, ou si elle est associée à un domaine via MCX.
 
-[extensionID];[updateURL]
+Des utilisateurs équipés d’outils de développement peuvent modifier le code source de n’importe quelle extension. Cela risque éventuellement de rendre l’extension inopérante. Si ce point est un problème, configurez la stratégie DeveloperToolsDisabled.
 
-- extensionID: la chaîne de 32lettres qui se trouve sur edge://extensions lorsque vous êtes en mode développeur.
+Chaque élément de liste de la stratégie est une chaîne contenant un ID d’extension et, éventuellement, une URL de «mise à jour» séparée par un point-virgule (;). L’ID d’extension correspond à la chaîne de 32 caractères détectée, par exemple, sur edge://extensions en mode développeur. Si vous avez spécifié ce paramètre, l’URL «update» doit pointer vers un document XML Update Manifest ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). Par défaut, le programme utilise l’URL de mise à jour du site web des composants additionnels Microsoft Edge. L’URL «update» spécifiée dans cette stratégie ne sert que pour l’installation initiale. Les mises à jour ultérieures de l’extension utilisent l’URL indiquée dans le fichier manifeste de l’extension.
 
-- updateURL (facultatif) est l’adresse du document XML du manifeste de mise à jour pour l’application ou l’extension, comme décrit dans [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043). Si vous voulez installer une extension à partir du magasin Web chrome, fournissez l’URL de mise à jour du magasin Web chrome, https://clients2.google.com/service/update2/crx. L’URL de mise à jour spécifiée dans cette stratégie n’est utilisée que pour l’installation initiale. Toute mise à jour ultérieure de l’extension est effectuée avec l’URL indiquée dans le fichier manifeste de l’extension. Si vous ne configurez pas la miseàjourURL, l’extension est supposée être hébergée dans le Microsoft Store et l’URL de mise à jour suivante est utilisée (https://edge.microsoft.com/extensionwebstorebase/v1/crx).
-
-Par exemple, gggmmkjegpiggikcnhidnjjhmicpibll;https://edge.microsoft.com/extensionwebstorebase/v1/crx installe l’application Microsoft Online à partir de l’URL «mettre à jour» du Microsoft Store. Si vous souhaitez en savoir plus sur l’hébergement des extensions, consultez la page [https://go.microsoft.com/fwlink/?linkid=2095044](https://go.microsoft.com/fwlink/?linkid=2095044).
-
-Si cette stratégie n’est pas configurée, les extensions ne sont pas installées automatiquement et les utilisateurs peuvent désinstaller toutes les extensions dans MicrosoftEdge.
-
-Cette stratégie ne s’applique pas au mode InPrivate.
+Remarque: cette stratégie ne s’applique pas au mode InPrivate. En savoir plus sur les extensions d’hébergement ( https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) .
 
   #### Fonctionnalités prises en charge:
 

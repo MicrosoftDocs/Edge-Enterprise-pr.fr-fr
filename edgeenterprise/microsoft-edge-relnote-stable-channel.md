@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/11/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: 50c9c45f59f5c1d05f4934d2226145b07903630c
-ms.sourcegitcommit: ac0d3fe9a2d0b3023abd2cc22868579aa9942a9b
+ms.openlocfilehash: 0fa69d14e9a90bfc8da9fcec9592b57b82c836f3
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11166031"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168779"
 ---
 # Notes de publication du canal stable Microsoft Edge
 
@@ -24,13 +24,17 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 
+## Version 86.0.622.69: 13 novembre
+
+Nous avons répertorié les mises à jour de sécurité [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-13-2020). Cette mise à jour contient [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) et [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), signalés par l’équipe Chromium comme cible code malveillant exploitant une faille de sécurité.
+
 ## Version 86.0.622.68: 11 novembre
 
 Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020).
 
 ## Version 86.0.622.63: 4novembre
 
-Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020). Cette mise à jour contient [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), qui a été signalé par l’équipe Chromium comme une exploitation active.
+Nous avons répertorié les mises à jour de sécurité [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020). Cette mise à jour contient [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), signalé par l’équipe Chromium comme cible de code malveillant exploitant une faille de sécurité.
 
 ## Version 86.0.622.61: 2novembre
 
