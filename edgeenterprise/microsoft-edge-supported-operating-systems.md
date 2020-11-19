@@ -3,19 +3,19 @@ title: Systèmes d’exploitation prenant en charge MicrosoftEdge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 10/30/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Systèmes d’exploitation prenant en charge MicrosoftEdge
-ms.openlocfilehash: cb7998fd8ee47b376df94f52bfc5f636687d848f
-ms.sourcegitcommit: 0c713487a811a2837abe4a3b08236f6815e65773
+ms.openlocfilehash: 62b8df0ed23ed72d5e29008ddea8aa7116317616
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "11145886"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175167"
 ---
 # Systèmes d’exploitation prenant en charge MicrosoftEdge
 
@@ -29,21 +29,25 @@ Cet article décrit les systèmes d’exploitation prenant en charge MicrosoftEd
 > [!NOTE]
 > La disponibilité des fonctionnalités et les fonctionnalités du produit peuvent varier sur des systèmes d’exploitation plus anciens. Pour garantir l’installation correcte de Microsoft Edge, utilisez la dernière version de l’un des systèmes d’exploitation indiqués ci-dessous. Ces conseils incluent la mise à jour cumulative la plus récente, le cas échéant.
 
-La prochaine version de MicrosoftEdge est prise en charge sur les systèmes d’exploitation suivants:
+Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge par les systèmes d'exploitation suivants.
 
 ### Client Windows
 
-- Windows7**
+- Windows7 **
 - Windows 8.1
 - Windows10 SACRS3 et versions ultérieures **_
 - Windows 10 Entreprise 2015 LTSC
 - Windows 10 Entreprise 2016 LTSC
 - Windows 10 Entreprise 2019 LTSC
 - Multi-session Windows 10 Entreprise
+- Windows 10 IoT entreprise SAC _***
+- Windows 10 IoT entreprise 2019 LTSC ****
+
+
 
 ### WindowsServer
 
-- WindowsServer2008R2_*
+- Windows Server 2008 R2 **
 - Windows Server2012
 - WindowsServer2012R2
 - Windows Server2016 (LTSC)
@@ -53,7 +57,9 @@ La prochaine version de MicrosoftEdge est prise en charge sur les systèmes d’
 > [!IMPORTANT]
 > * * Nous continuerons à prendre en charge Microsoft Edge sur Windows 7 et Windows Server 2008 R2 jusqu’au 15 juillet 2021. Ces systèmes d’exploitation ne sont pas pris en charge et Microsoft vous recommande de migrer vers un système d’exploitation pris en charge tel que Windows 10. Bien que Microsoft Edge vous aide à rester plus sécurisé sur le web, il est possible que votre PC soit toujours vulnérable aux risques de sécurité. Pour que le mode IE soit pris en charge sur ces systèmes d’exploitation, les appareils doivent disposer des [Mises à jour de sécurité étendues pour Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Sans les mises à jour de sécurité étendues de Windows 7, les fonctionnalités d’Internet Explorer sont exposées aux risques de sécurité. En outre, il se peut que les fonctionnalités du mode IE cessent de fonctionner sans que la maintenance soit poursuivie par les mises à jour de sécurité étendues.  
 >
-> *** De la même façon que ci-dessus, pour les versions de Windows10SAC qui ne sont pas prises en charge, mais si MicrosoftEdge est pris en charge, il est conseillé d’effectuer une mise à niveau vers une version de Windows10SAC prise en charge dès que possible pour maintenir la sécurité. MicrosoftEdge pris en charge dans cet état doit être considéré comme un pont temporaire pour obtenir un état de système d’exploitation pris en charge.
+> **_ De la même façon que ci-dessus, pour les versions de Windows10SAC qui ne sont pas prises en charge, mais si MicrosoftEdge est pris en charge, il est conseillé d’effectuer une mise à niveau vers une version de Windows10SAC prise en charge dès que possible pour maintenir la sécurité. MicrosoftEdge pris en charge dans cet état doit être considéré comme un pont temporaire pour obtenir un état de système d’exploitation pris en charge.
+>
+> _*** Le kit de préinstallation OEM (OPK) de Microsoft Edge est disponible sur MOO pour les OEM d’IoT pour la préinstallation et la distribution dans le cadre de leur solution Windows 10 IoT Enterprise.
 
 ### macOS
 
