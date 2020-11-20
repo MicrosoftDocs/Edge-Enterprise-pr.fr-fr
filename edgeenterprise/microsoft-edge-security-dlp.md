@@ -3,19 +3,19 @@ title: Protection contre la perte de données dans Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/08/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Protection contre la perte de données (DLP) dans Microsoft Edge
-ms.openlocfilehash: 59c1b68c0526a49a2ee30283893707852514828d
-ms.sourcegitcommit: 2af303fc97e8493024e2359fa2e8be162ab95a59
+ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
+ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104608"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176941"
 ---
 # Protection contre la perte de données (DLP) dans Microsoft Edge
 
@@ -27,12 +27,17 @@ Ce mélange d’activités des utilisateurs s’est également étendu aux appar
 
 Microsoft Edge prend en charge en mode natif deux solutions DLP différentes: Microsoft Endpoint DLP et Protection des informations Windows (WIP).
 
-## Microsoft Endpoint DLP
+## Protection de perte de données de points de terminaison Microsoft (Endpoint DLP)
 
-Microsoft Endpoint DLP est la nouvelle génération de solution DLP utilisant des concepts modernes tels que la protection axée sur les données. Elle est intégrée à Windows10 et Microsoft Edge et ne nécessite donc pas d’autres agents ou plug-ins sur l’appareil. Si vous souhaitez en savoir plus sur Endpoint DLP, veuillez consulter la rubrique [En savoir plus sur Microsoft 365 Endpoint DLP (protection contre la perte de données)](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
+Protection de perte de données de points de terminaison Microsoft est la nouvelle génération de prévention de perte de données à l’aide de concepts modernes tels que la protection orientée données. Elle est intégrée à Windows 10 et à Microsoft Edge, de sorte qu’il n’a pas besoin d’agents ou de plug-ins supplémentaires sur l’appareil.
 
 > [!NOTE]
 > Ceci concerne MicrosoftEdge version85 ou ultérieure.
+
+Pour en savoir plus sur Endpoint DLP, procédez comme suit:
+
+- [Découvrez la protection contre la perte de données de Point de terminaison Microsoft365 ](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
+- [Prise en main de la protection contre la perte de données de point de terminaison](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
 
 Microsoft Edge applique les stratégies configurées par l’administrateur pour les fichiers sensibles et enregistre les événements d’audit sur les activités non conformes.
 
