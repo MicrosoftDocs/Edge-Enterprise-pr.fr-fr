@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/13/2020
+ms.date: 11/19/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
-ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
+ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
+ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168799"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "11181985"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -28,6 +28,17 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
+
+## Nouvelles stratégies déconseillées
+
+Le tableau suivant répertorie les stratégies nouvelles et déconseillées pour cette mise à jour.
+
+| Nom | Statut |
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| Nouveauté |
+|[BlockExternalExtensions](#blockexternalextensions) | Nouveauté |
+|[ShowMicrosoftRewards](#showmicrosoftrewards) | Nouveauté |
+|[ProactiveAuthEnabled](#proactiveauthenabled) | Déconseillée |
 
 ## Stratégies disponibles
 
@@ -41,8 +52,9 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[Paramètres du mode kiosque](#kiosk-mode-settings)|[Messagerie native](#native-messaging)|
 |[Gestionnaire et protection des mots de passe](#password-manager-and-protection)|[Niveau de performance](#performance)|
 |[Impression](#printing)|[Serveur proxy](#proxy-server)|
-|[Paramètres SmartScreen](#smartscreen-settings)|[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|
-|[Supplémentaire](#additional)|
+|[Paramètres de l’onglet endormi](#sleeping-tabs-settings)|[Paramètres SmartScreen](#smartscreen-settings)|
+|[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|[Supplémentaire](#additional)|
+
 
 ### [*Paramètres de l’application Guard*](#application-guard-settings-policies)
 
@@ -116,6 +128,7 @@ et des conseils pour les services Microsoft|
 
 |Nom de la stratégie|Caption|
 |-|-|
+|[BlockExternalExtensions](#blockexternalextensions)|Empêche l’installation d’extensions externes|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Configurer les types d’extension autorisés|
 |[ExtensionInstallAllowlist](#extensioninstallallowlist)|Autoriser l’installation d’extensions spécifiques|
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|Déterminer les extensions ne pouvant pas être installées|
@@ -180,6 +193,13 @@ et des conseils pour les services Microsoft|
 |[ProxyPacUrl](#proxypacurl)|Définissez l’URL du fichier .pac du proxy|
 |[ProxyServer](#proxyserver)|Configurer l’adresse ou l’URL du serveur proxy (déconseillé)|
 |[ProxySettings](#proxysettings)|Paramètres du proxy|
+### [*Paramètres de l’onglet endormi*](#sleeping-tabs-settings-policies)
+
+|Nom de la stratégie|Caption|
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquer les onglets en sommeil sur des sites spécifiques|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Configurer les onglets en sommeil|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Définir le délai d’inactivité de l’onglet arrière-plan pour les onglets en veille|
 ### [*Paramètres SmartScreen*](#smartscreen-settings-policies)
 
 |Nom de la stratégie|Caption|
@@ -341,7 +361,7 @@ et des conseils pour les services Microsoft|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Autoriser les sites web à vérifier les modes de paiement disponibles|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Autoriser la personnalisation des publicités, de la recherche et des actualités en envoyant un historique de navigation à Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Autoriser l’Assistant Épingler à la barre des tâches|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|Activer l’authentification proactive|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|Activer l’authentification proactive (déconseillé)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Activer le contenu promotionnel dans les onglets|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Demander où enregistrer les fichiers téléchargés|
 |[QuicAllowed](#quicallowed)|Autoriser le protocole QUIC|
@@ -370,6 +390,7 @@ et des conseils pour les services Microsoft|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquer l’accès aux capteurs sur des sites spécifiques|
 |[SerialAskForUrls](#serialaskforurls)|Autoriser l’API Serial sur des sites spécifiques|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquer l’API Serial sur des sites spécifiques|
+|[ShowMicrosoftRewards](#showmicrosoftrewards)|Afficher les expériences de Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher le raccourci MicrosoftOffice dans la barre des favoris (déconseillé)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Activer la prise en charge de Signed HTTP Exchange (SXG) |
 |[SitePerProcess](#siteperprocess)|Activer l’isolation de site pour tous les sites|
@@ -3979,6 +4000,71 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### BlockExternalExtensions
+
+  #### Empêche l’installation d’extensions externes
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Contrôler l’installation d’extensions externes;
+
+Si vous activez ce paramètre, les extensions externes ne peuvent pas être installées.
+
+Si vous désactivez ce paramètre ou si vous ne l’avez pas désactivé, les extensions externes sont autorisées à être installées.
+
+Les extensions externes et leur installation sont documentées sur https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options .
+
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de BlockExternalExtensions:
+  - Nom de la stratégie de protection: empêche l’installation d’extensions externes
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Extensions
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: BlockExternalExtensions
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom de la clé de préférence: BlockExternalExtensions
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### ExtensionAllowedTypes
 
   #### Configurer les types d’extension autorisés
@@ -6581,6 +6667,225 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Retour au début](#microsoft-edge---policies)
 
+  ## Stratégies des paramètres des onglets en veille
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### SleepingTabsBlockedForUrls
+
+  #### Bloquer les onglets en sommeil sur des sites spécifiques
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Définissez une liste de sites en fonction de modèles d’URL qui ne peuvent pas être mis en veille par des onglets en sommeil.
+
+Si la stratégie [SleepingTabsEnabled](#sleepingtabsenabled) est désactivée, cette liste n’est pas utilisée et aucun site n’est mis en veille automatiquement.
+
+Si vous ne configurez pas cette stratégie, tous les sites seront éligibles pour être mis en veille, sauf si la configuration personnelle de l’utilisateur les bloque.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Oui
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Liste composée de chaînes
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de SleepingTabsBlockedForUrls:
+  - Nom de la stratégie de nom: bloquer les onglets en sommeil sur des sites spécifiques
+  - Path GP (obligatoire): modèles d’administration/paramètres de l’onglet Microsoft Edge/Sleep
+  - Path GP (recommandé): modèles d’administration/Microsoft Edge-paramètres par défaut (les utilisateurs peuvent ignorer)/Sleeping paramètres des onglets
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Path (obligatoire): SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls
+  - Path (recommandée): SOFTWARE\Policies\Microsoft\Edge\Recommended\SleepingTabsBlockedForUrls
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de valeur: liste composée de REG_SZ
+
+  ##### Exemple de valeur:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom de la clé de préférence: SleepingTabsBlockedForUrls
+  - Exemple de valeur:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### SleepingTabsEnabled
+
+  #### Configurer les onglets en sommeil
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Ce paramètre de stratégie vous permet d’activer ou de désactiver les onglets en mode sommeil. Les onglets en veille réduisent l’utilisation du processeur, de la batterie et de la mémoire en plaçant les onglets d’arrière-plan inactifs Microsoft Edge utilise des heuristiques pour éviter de mettre en veille des onglets qui fonctionnent de manière utile en arrière-plan, tels que les notifications d’affichage, la lecture de sons et la vidéo en flux continu. Par défaut, les onglets en veille sont activés.
+
+Le passage des sites individuels peuvent être bloqués en configurant le [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)de stratégie.
+
+Si vous activez ce paramètre, les onglets en veille sont activés.
+
+Si vous désactivez ce paramètre, les onglets en mode veille sont désactivés.
+
+Si vous ne configurez pas ce paramètre, les utilisateurs peuvent choisir d’utiliser les onglets en mode sommeil.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Oui
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de SleepingTabsEnabled:
+  - Nom de la stratégie de protection: configurer les onglets de endormi
+  - Path GP (obligatoire): modèles d’administration/paramètres de l’onglet Microsoft Edge/Sleep
+  - Path GP (recommandé): modèles d’administration/Microsoft Edge-paramètres par défaut (les utilisateurs peuvent ignorer)/Sleeping paramètres des onglets
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de la valeur: SleepingTabsEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom de la clé de préférence: SleepingTabsEnabled
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### SleepingTabsTimeout
+
+  #### Définir le délai d’inactivité de l’onglet arrière-plan pour les onglets en veille
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Ce paramètre de stratégie vous permet de configurer le délai d’expiration, en secondes, après lequel les onglets d’arrière-plan inactifs seront automatiquement mis en veille en cas d’activation de l’onglet endormi. Par défaut, ce délai d’expiration est de 7 200 secondes (2 heures).
+
+Les onglets sont uniquement mis en veille automatiquement lorsque le [SleepingTabsEnabled](#sleepingtabsenabled) de la stratégie est activé ou n’est pas configuré et que l’utilisateur a activé le paramètre des onglets de veille.
+
+Si vous ne configurez pas ce paramètre, les utilisateurs peuvent choisir la valeur du délai d’expiration.
+
+Mappage des options de stratégie:
+
+* 5Minutes (300) = 5 minutes d’inactivité
+
+* 15Minutes (900) = 15 minutes d’inactivité
+
+* 30Minutes (1800) = 30 minutes d’inactivité
+
+* 1Hour (3600) = 1 heure d’inactivité
+
+* 2Hours (7200) = 2 heures d’inactivité
+
+* 3Hours (10800) = 3 heures d’inactivité
+
+* 6Hours (21600) = 6 heures d’inactivité
+
+* 12Hours (43200) = 12 heures d’inactivité
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Oui
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - entier.
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de SleepingTabsTimeout:
+  - Nom de la stratégie de jeu: définir le délai d’inactivité de l’onglet arrière-plan pour les onglets
+  - Path GP (obligatoire): modèles d’administration/paramètres de l’onglet Microsoft Edge/Sleep
+  - Path GP (recommandé): modèles d’administration/Microsoft Edge-paramètres par défaut (les utilisateurs peuvent ignorer)/Sleeping paramètres des onglets
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de la valeur: SleepingTabsTimeout
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000384
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom de la clé de préférence: SleepingTabsTimeout
+  - Exemple de valeur:
+``` xml
+<integer>900</integer>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ## Stratégies des paramètres SmartScreen
 
   [Retour au début](#microsoft-edge---policies)
@@ -7361,6 +7666,8 @@ Si vous attribuez la valeur false à cette stratégie ou si vous ne la configure
 
   Configure l’URL par défaut de la page Nouvel onglet.
 
+La version recommandée de cette stratégie ne fonctionne pas pour le moment et ne fonctionne pas exactement comme la version obligatoire.
+
 Cette stratégie détermine la page qui s’ouvre lors de la création de nouveaux onglets (y compris lorsque de nouvelles fenêtres sont ouvertes). Elle affecte également la page de démarrage si celle-ci est configurée pour s’ouvrir sur la page Nouvel onglet.
 
 Cette stratégie ne détermine pas la page qui s’ouvre au démarrage. Cette dernière est contrôlée par la stratégie [RestoreOnStartup](#restoreonstartup). Elle n’affecte pas non plus la page d’accueil si celle-ci est configurée pour s’ouvrir sur la page Nouvel onglet.
@@ -7889,7 +8196,7 @@ Si vous avez activé l’ensemble de stratégies qui force un moteur de recherch
 
   - Peut être obligatoire: Oui
   - Peut être recommandée: Non
-  - Actualisation dynamique de la stratégie: Oui
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
 
   #### Type de données:
 
@@ -16758,9 +17065,9 @@ Les paramètres utilisateur permettant d'activer ou de désactiver l'Assistant �
 
   ### ProactiveAuthEnabled
 
-  #### Activer l’authentification proactive
+  #### Activer l’authentification proactive (déconseillé)
 
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
   #### Versions prises en charge:
 
@@ -16768,11 +17075,13 @@ Les paramètres utilisateur permettant d'activer ou de désactiver l'Assistant �
 
   #### Description
 
-  Vous permet de configurer l'activation et la désactivation de l'Authentification proactive.
+  Cette stratégie est déconseillée, car elle ne fonctionne pas indépendamment de la connexion du navigateur. Elle ne fonctionne pas dans la version91 de MicrosoftEdge. Si vous souhaitez configurer la connexion du navigateur, utilisez la stratégie [BrowserSignin](#browsersignin).
 
-Si vous activez cette stratégie, MicrosoftEdge tente d'authentifier de manière proactive l'utilisateur connecté aux services Microsoft. À intervalles réguliers, MicrosoftEdge recherche sur le service en ligne un manifeste mis à jour contenant la configuration régissant ce comportement.
+Vous permet de configurer l’activation de l’authentification proactive dans Microsoft Edge.
 
-Si vous désactivez cette stratégie, MicrosoftEdge ne tente pas d'authentifier de manière proactive l'utilisateur connecté aux services Microsoft. MicrosoftEdge ne recherche pas sur le service en ligne un manifeste mis à jour contenant la configuration régissant ce comportement.
+Si vous activez cette stratégie, Microsoft Edge tente de s’authentifier en toute transparence sur les sites Web et services à l’aide du compte connecté au navigateur.
+
+Si vous désactivez cette stratégie, Microsoft Edge ne tente pas d’authentifier auprès de sites Web ou services à l’aide de l’authentification unique (SSO). Les expériences authentifiées comme la nouvelle page de l’onglet entreprise nouveau ne fonctionneront pas (par exemple, les documents Office récents et recommandés ne seront pas disponibles).
 
 Si vous ne configurez pas cette stratégie, l'authentification proactive est activée.
 
@@ -16791,7 +17100,7 @@ Si vous ne configurez pas cette stratégie, l'authentification proactive est act
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: ProactiveAuthEnabled
-  - Nom de la stratégie de groupe: activer l'authentification proactive
+  - Nom de la stratégie de protection: activer l’authentification proactive (déconseillé)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -18599,6 +18908,77 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### ShowMicrosoftRewards
+
+  #### Afficher les expériences de Microsoft Rewards
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Afficher les notifications et l’expertise de Microsoft.
+Si vous activez cette stratégie:
+   - Les utilisateurs de compte Microsoft (à l’exclusion des comptes Azure Active Directory) dans le cadre de la recherche et de gagner des marchés pourront voir l’utilisation de Microsoft Edge dans le profil utilisateur Microsoft Edge.
+   - Le paramètre permettant d’activer Microsoft Rewards dans les paramètres Microsoft Edge sera activé et activé.
+   - Le paramètre d’activation du mode d’attribution sera activé et respecte le paramètre de l’utilisateur.
+
+Si vous désactivez cette stratégie:
+   - Les utilisateurs de compte Microsoft (à l’exclusion des comptes Azure AD) dans la recherche et gagner des marchés ne verront pas l’interface utilisateur de Microsoft Edge dans le profil utilisateur Microsoft Edge.
+   - Le paramètre permettant d’activer Microsoft Rewards dans les paramètres Microsoft Edge sera désactivé ou désactivé.
+
+Si vous ne configurez pas cette stratégie:
+   - Les utilisateurs de compte Microsoft (à l’exclusion des comptes Azure Active Directory) dans le cadre de la recherche et de gagner des marchés pourront voir l’utilisation de Microsoft Edge dans le profil utilisateur Microsoft Edge.
+   - Le paramètre permettant d’activer Microsoft Rewards dans les paramètres Microsoft Edge sera activé et activé.
+   - Le paramètre d’activation du mode d’attribution sera activé et respecte le paramètre de l’utilisateur.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Oui
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de ShowMicrosoftRewards:
+  - Nom de la stratégie de protection: afficher les expériences de Microsoft
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): Administrative Templates/Microsoft Edge - Default Settings (peut être remplacé par les utilisateurs)/
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de la valeur: ShowMicrosoftRewards
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000000
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom de la clé de préférence: ShowMicrosoftRewards
+  - Exemple de valeur:
+``` xml
+<false/>
 ```
   
 
