@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies WebView2 Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/19/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: a1204b4e334e2545a2570110ab5eaf498ef7c8f7
-ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
+ms.openlocfilehash: 3ca9adb18ef41581bb016451015cf0aca0aa63c9
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "11181965"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136213"
 ---
 # Microsoft Edge WebView2 - Politiques
 
@@ -144,7 +144,7 @@ Pour définir la valeur de la préférence de canal de diffusion, fournissez un 
 
   ##### Paramètres du Registre Windows
 
-  - Chemin (Obligatoire): SOFTWARE\Politiques\Microsoft\Edge\WebView2\releaseChannelPreference
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Chemin d’accès (recommandé): N/A
   - Nom de la valeur : liste des REG_SZ
   - Type de valeur: liste composée de REG_SZ
