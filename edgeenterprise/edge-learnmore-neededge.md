@@ -3,19 +3,19 @@ title: Redirection d’InternetExplorer vers MicrosoftEdge pour assurer une comp
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/03/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Redirection d’InternetExplorer vers MicrosoftEdge pour assurer une compatibilité avec les sites web modernes
-ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
-ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
+ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "11151094"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175197"
 ---
 # Redirection d’InternetExplorer vers MicrosoftEdge pour assurer une compatibilité avec les sites web modernes
 
@@ -31,7 +31,7 @@ Vous devez basculer manuellement vers d’autres navigateurs à partir de la ver
 Lorsqu’un utilisateur accède à un site incompatible avec InternetExplorer, il est automatiquement redirigé vers MicrosoftEdge. Cet article décrit l’expérience utilisateur pour la redirection et les stratégies de groupe utilisées pour configurer ou désactiver la redirection automatique.
 
 > [!NOTE]
-> Microsoft gère une liste de tous les sites connus comme incompatibles avec InternetExplorer.
+> Microsoft gère une liste de tous les sites connus comme incompatibles avec InternetExplorer. Pour plus d’informations, voir [Demander une mise à jour de la liste de compatibilité d’InternetExplorer](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
 ## Expérience de redirection
 
@@ -113,5 +113,6 @@ Si vous voulez désactiver la redirection APRÈS la mise à jour vers la version
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Demander une mise à jour de la liste de compatibilité d’InternetExplorer](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+- [Page d’accueil MicrosoftEdgeEntreprise](https://aka.ms/EdgeEnterprise)
 - [Stratégies MicrosoftEdge](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
