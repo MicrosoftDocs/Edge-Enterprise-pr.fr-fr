@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/13/2020
+ms.date: 11/20/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: 0fa69d14e9a90bfc8da9fcec9592b57b82c836f3
-ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
+ms.openlocfilehash: fdf0a80af68259d8c36b93b072605dfa0e4893e0
+ms.sourcegitcommit: 9a7ece9f4b5892ea6dc8a9b5fa5ebf71c0407f59
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168779"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "11182467"
 ---
 # Notes de publication du canal stable Microsoft Edge
 
@@ -24,7 +24,62 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 
-## Version 86.0.622.69: 13 novembre
+<!-- begin major 87 --->
+## Version87.0.664.41: 19novembre
+
+Nous avons répertorié les mises à jour de sécurité [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-19-2020).
+
+### Mises à jour des fonctionnalités
+
+- **Redirection automatique pour les sites incompatibles d’InternetExplorer vers MicrosoftEdge**. À partir de la mise à jour stable de MicrosoftEdge87, les sites web publics qui affichent un message d’incompatibilité sur InternetExplorer seront automatiquement redirigés vers MicrosoftEdge. Pour en savoir plus et configurer cette interface, voir la [Redirection des sites incompatibles](https://docs.microsoft.com/deployedge/edge-learnmore-neededge).
+
+- **Activation des fonctionnalités de confidentialité en mode plein écran**. À partir de la version87 de MicrosoftEdge, les fonctionnalités du mode plein écran seront activées et permettront aux entreprises de garantir la confidentialité des données utilisateur. Ces fonctionnalités activent les expériences telles que l’effacement des données utilisateur à la fermeture, la suppression des fichiers téléchargés et la réinitialisation de l’expérience de démarrage configurée après une durée inactivité déterminée. En savoir plus sur la [Configuration du mode plein écran MicrosoftEdge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
+
+- **Fonctionnalités d’achat activées par défaut**. À partir de la version87 de MicrosoftEdge, les utilisateurs entreprise peuvent également bénéficier des achats dans MicrosoftEdge. Grâce aux fonctionnalités Achats, MicrosoftEdge permet aux utilisateurs de trouver des bons de réduction et de meilleurs tarifs lors de leurs achats en ligne. La fonction des bons de réduction est disponible avec cette mise à jour et la fonctionnalité de comparaison des prix sera publiée dans les prochaines mises à jour de MicrosoftEdge version87. Vous pouvez configurer cette fonctionnalité via la stratégie [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) . Consultez notre [Blog](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) et [En savoir plus](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#shopping) sur les Achats Microsoft.
+
+- **Activation du déploiement ClickOnce par défaut**. L’activation de ClickOnce par défaut dans Microsoft Edge 87, réduit les difficultés des entreprises à déployer des logiciels et mieux s’aligner sur le comportement du navigateur Microsoft Edge Legacy. Au démarrage de Microsoft Edge 87, l’état «Non Configuré» de la stratégie ClickOnceEnabled reflète le nouvel état par défaut Activé de la stratégie ClickOnce (comparé à l’État par défaut Désactivé précédent).
+
+- **La page nouvel onglet de l’entreprise (NTP) intègre la productivité avec un contenu de flux de travail personnalisable**. La Page Nouvel Onglet de l’Entreprise combine la page de productivité d’Office 365 que nous proposons aux utilisateurs connectés à leur compte professionnel ou scolaire, avec des flux professionnels personnalisés qui sont organisés en une seule page. Les utilisateurs reconnaîtront le contenu familier Office365 et MicrosoftSearch pour les entreprises optimisé par Bing. Par ailleurs, il peuvent facilement personnaliser «Mon flux» en choisissant le contenu le plus pertinent pour eux à partir du contenu et des modules disponibles pour leur organisation. Les administrateurs informatiques peuvent contrôler les paramètres de flux d’actualités pour leur organisation, notamment le secteur sélectionné pour la nouvelle page d’onglets MicrosoftEdge en accédant au Centre d’administration Microsoft365. [Si vous souhaitez en savoir plus](https://blogs.windows.com/msedgedev/2020/10/29/enterprise-new-tab-page-my-feed/)
+
+- **Confidentialité et sécurité:**
+
+  - Jeton TLS de support Obligatoire pour les sites configurés par une stratégie. Le jeton TLS obligatoire permet d’éviter les attaques par vol de jetons afin de s’assurer que les cookies ne peuvent pas être réutilisés à partir d’un autre appareil que l’appareil sur lequel ils ont été initialement définis. L’utilisation du jeton TLS obligatoire nécessite la définition de la stratégie [AllowTokenBindingForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowtokenbindingforurls) et nécessite que les sites répertoriés prennent en charge cette fonctionnalité.
+
+- **Prise en charge du clavier pour le surligneur des fichiers PDF**. Les utilisateurs peuvent utiliser leurs touches de clavier pour surligner des textes de fichiers PDF.
+
+- **Impression:**
+
+  - Sélectionnez le côté à retourner lors de l’impression recto verso. Les utilisateurs peuvent choisir de retourner sur le côté long ou sur le côté court d’une feuille lors de l’impression recto verso.
+  - Sélectionnez le mode de tramage de l’impression pour l’entreprise. Contrôlez l’impression Microsoft Edge sur une imprimante non-PostScript sur Windows. Parfois l’ impression sur des imprimantes non-PostScript doit être tramée pour imprimer correctement. Les options d’impression sont «Complètes» et «Rapides».
+
+### Mises à jour de stratégies
+
+#### Nouvelles stratégies
+
+Ajout de dix nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
+
+- [ConfigureFriendlyURLFormat](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configurefriendlyurlformat) - Configurez le format de collage par défaut des URL copiées à partir de MicrosoftEdge et déterminez si d’autres formats sont disponibles pour les utilisateurs.
+- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) -Achats activés dans MicrosoftEdge.
+- [HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#hideinternetexplorerredirectuxforincompatiblesitesenabled) - Masquez la boite de dialogue de redirection ponctuelle et la bannière sur MicrosoftEdge.
+- [KioskAddressBarEditingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) - Configurez la modification de la barre d’adresses pour l’expérience de navigation publique en mode plein écran.
+- [KioskDeleteDownloadsOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) - Supprimez des fichiers téléchargés sous la session plein écran lorsque MicrosoftEdge se ferme.
+- [PasswordRevealEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#passwordrevealenabled) -Activez le bouton Affichage du mot de passe.
+- [RedirectSitesFromInternetExplorerPreventBHOInstall](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerpreventbhoinstall) -Empêchez l’installation de l’objet d’assistance du navigateur (BHO) pour rediriger les sites incompatibles d’InternetExplorer vers MicrosoftEdge.
+- [RedirectSitesFromInternetExplorerRedirectMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerredirectmode) - Redirigez les sites incompatibles de InternetExplorer vers MicrosoftEdge.
+- [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) - Configurez la Reconnaissance vocale.
+- [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) -Activez la fonctionnalité de capture web dans MicrosoftEdge.
+
+#### Stratégie Déconseillée
+
+[NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Configurez l’expérience de la page nouvel onglet de Microsoft Edge.
+
+#### Stratégie obsolète
+
+[EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - Réactivez les fonctionnalités de plateforme web déconseillées pendant une période limitée.
+
+<!-- end major 87 -->
+
+## Version86.0.622.69: 13novembre
 
 Nous avons répertorié les mises à jour de sécurité [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-13-2020). Cette mise à jour contient [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) et [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), signalés par l’équipe Chromium comme cible code malveillant exploitant une faille de sécurité.
 
