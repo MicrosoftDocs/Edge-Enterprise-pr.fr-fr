@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/26/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 8cedd34ba3a2053ae7c8d098c9d5106139a8b961
-ms.sourcegitcommit: 737da8f49297a0189f533480f7bfe5989a59a8f7
+ms.openlocfilehash: 61123466da51b8cffbd233d4616c16c447bef5e8
+ms.sourcegitcommit: 9c2a08e8d7f30053c32cc65ac9d921e1b569b10d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "11136117"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11179781"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -23,6 +23,22 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 
 > [!IMPORTANT]
 > Consultez cette [mise à jour sur les versions de canaux Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Version 87.0.664.40: 18 novembre
+
+Résolution de divers bogues et problèmes de performances.
+
+## Version 87.0.664.36: 16 novembre
+
+Résolution de divers bogues et problèmes de performances.
+
+## Version 87.0.664.30: 9 novembre
+
+Résolution de divers bogues et problèmes de performances.
+
+## Version 87.0.664.24: 2 novembre
+
+Résolution de divers bogues et problèmes de performances.
 
 ## Version87.0.664.18: 26octobre
 
