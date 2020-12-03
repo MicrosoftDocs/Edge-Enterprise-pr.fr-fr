@@ -3,19 +3,19 @@ title: Configurer Microsoft Edge pour macOS à l'aide d'un fichier .plist
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 02/14/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer les paramètres de stratégie MicrosoftEdge sur macOS à l'aide d'un fichier .plist
-ms.openlocfilehash: 84469a4f84deeee0e47b6d8899426fa36cf345aa
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: abe110ab3589cc9276f28590273ece2d372be3b8
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979662"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194684"
 ---
 # Configurer les paramètres de stratégie MicrosoftEdge pour macOS à l'aide d'un fichier .plist
 
@@ -35,7 +35,7 @@ La première étape consiste à créer une soumission. Vous pouvez créer le fic
 
 Pour obtenir la liste des stratégies prises en charge et leurs noms de clé de préférence, consultez [Référence sur les stratégies de navigateur MicrosoftEdge](microsoft-edge-policies.md). Le fichier de modèles de stratégie, qui peut être téléchargé à partir de la [page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise) contient un exemple de plist (*itadminexample.plist*) dans le dossier d’**exemples**. L’exemple de fichier contient tous les types de données pris en charge que vous pouvez personnaliser pour définir vos paramètres de stratégie. 
 
-L’étape suivante, après la création du contenu de votre plist, consiste à la nommer en utilisant le domaine de préférence Microsoft Edge, *com.microsoft.Edge*. Le nom respecte la casse et ne doit pas contenir le canal que vous ciblez, car il s’applique à tous les canaux MicrosoftEdge. Le nom du fichier plist doit être **_com.microsoft.Edge.plist_**. 
+L’étape suivante, après la création du contenu de votre plist, consiste à la nommer en utilisant le domaine de préférence Microsoft Edge, *com.microsoft.Edge*. Le nom respecte la casse et ne doit pas contenir le canal que vous ciblez, car il s’applique à tous les canaux MicrosoftEdge. Le nom du fichier plist doit être **_com.microsoft.Edge.plist_**.
 
 > [!IMPORTANT]
 > À partir de la build78.0.249.2, tous les canaux MicrosoftEdge sur macOS lisent à partir du domaine de préférence **com.microsoft.Edge**. Toutes les versions antérieures lisent à partir d’un domaine spécifique du canal, tel que **com.microsoft.Edge.Dev** pour le canal Dev.
@@ -55,6 +55,7 @@ La dernière étape consiste à déployer votre plist sur les appareils Mac de v
    ```cmd
    /usr/bin/plutil -convert xml1 ~/Desktop/com.microsoft.Edge.plist
    ```
+
 Après avoir converti le fichier, vérifiez que vos données de stratégie sont correctes et qu’elles contiennent les paramètres de votre choix pour votre profil de configuration.
 
 > [!NOTE]
@@ -66,22 +67,7 @@ Pour MicrosoftIntune créez un profil de configuration de périphérique ciblant
 
 Pour Jamf, téléchargez le fichier plist en tant que charge utile des *Paramètres personnalisés*.
 
-## Forum Aux Questions
-
-### MicrosoftEdge peut-il être configuré pour utiliser les préférences principales?
-
-Oui, vous pouvez configurer MicrosoftEdge pour qu’il utilise un fichier de préférences principales.
-
-Un fichier de préférences principales vous permet de configurer les paramètres par défaut d’un profil utilisateur de navigateur lors du déploiement de MicrosoftEdge. Vous pouvez également utiliser un fichier de préférences principales pour appliquer des paramètres sur des ordinateurs qui ne sont pas gérés par un système de gestion des périphériques. Ces paramètres sont appliqués au profil de l’utilisateur la première fois que l’utilisateur exécute le navigateur. Une fois que l’utilisateur a exécuté le navigateur, les modifications apportées au fichier de préférences principales ne sont pas appliquées. Un utilisateur peut modifier les paramètres à partir des préférences principales dans le navigateur. Si vous souhaitez rendre un paramètre obligatoire ou modifier un paramètre après la première exécution du navigateur, vous devez utiliser une stratégie.
-
-Un fichier de préférences principales vous permet de personnaliser de nombreux paramètres et préférences pour le navigateur, y compris ceux partagés avec d’autres navigateurs basés Chromium et spécifiques à MicrosoftEdge.  Les préférences liées à la stratégie peuvent être configurées à l’aide du fichier de préférences principales. Dans les cas où une stratégie est définie et qu’un jeu de préférences principales correspondant est défini, le paramètre de stratégie est prioritaire.
-
-> [!IMPORTANT]
-> Toutes les préférences disponibles peuvent ne pas être cohérentes avec la terminologie et les conventions d’affectation de noms de MicrosoftEdge.  Il n’est pas garanti que ces préférences continuent de fonctionner comme prévu dans les prochaines versions. Les préférences peuvent être modifiées ou ignorées dans les versions ultérieures.
-
-Un fichier de préférences principales est un fichier texte mis en forme à l’aide du balisage JSON. Ce fichier doit être ajouté au même répertoire que le msedge.exe exécutable. Pour les déploiements à l’échelle du système sur macOS, c’est généralement: «*~/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*» ou «*/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*».
-
-## Articles associés
+## Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Configurer pour macOS avec Jamf](configure-microsoft-edge-on-mac-jamf.md)

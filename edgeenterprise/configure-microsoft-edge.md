@@ -3,19 +3,19 @@ title: Configurer Microsoft Edge pour Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/09/2019
+ms.date: 11/30/2019
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer les paramètres de stratégie MicrosoftEdge sur les appareils Windows
-ms.openlocfilehash: 99aaf002f868ce29e81aa40024fa1de2e83d76e1
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 14ba2845e95394fe1f992c8b6446c975a8b4fb00
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979663"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194702"
 ---
 # Configurer les paramètres de stratégie MicrosoftEdge sur Windows
 
@@ -53,12 +53,12 @@ Accédez à la [page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeE
 #### Ajouter le modèle d’administration à ActiveDirectory
 
 1. Sur un contrôleur de domaine ou une station de travail sur laquelle sont installés les Outils d’administration de serveur distant, accédez au dossier **PolicyDefinition** (également appelé _magasin central_) sur n’importe quel contrôleur de domaine de votre domaine. Pour les versions antérieures de Windows Server, vous devrez peut-être créer le dossier PolicyDefinition. Pour plus d’informations, consultez le [Guide pratique pour créer et gérer le magasin central pour les modèles d’administration de stratégie de groupe dans Windows](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra).
-1. Ouvrez *MicrosoftEdgePolicyTemplates* et accédez à **Windows** > **ADMX**.
-1. Copiez le fichier *msedge.admx* dans le dossier PolicyDefinition. (Exemple: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
-1. Dans le dossier *admx*, ouvrez le dossier de langue approprié. Par exemple, si vous êtes aux États-unis, ouvrez le dossier **en-US**.
-1. Copiez le fichier *msedge.adml* dans le dossier de langue correspondant dans le dossier de définition de stratégie. Créez le dossier s’il n’existe pas déjà. (Exemple: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
-1. Si votre domaine comporte plusieurs contrôleurs de domaine, les nouveaux fichiers ADMX y seront répliqués à l’intervalle de réplication du domaine suivant.
-1. Pour vérifier le chargement correct des fichiers, ouvrez l’**Éditeur de gestion des stratégies de groupe** dans les Outils d’administration de Windows et développez **Configuration de l’ordinateur** > **Stratégies** > **Modèles d’administration** > **Microsoft Edge**. Vous devez voir un ou plusieurs nœuds MicrosoftEdge, comme illustré ci-dessous.
+2. Ouvrez *MicrosoftEdgePolicyTemplates* et accédez à **Windows** > **ADMX**.
+3. Copiez le fichier *msedge.admx* dans le dossier PolicyDefinition. (Exemple: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
+4. Dans le dossier *admx*, ouvrez le dossier de langue approprié. Par exemple, si vous êtes aux États-unis, ouvrez le dossier **en-US**.
+5. Copiez le fichier *msedge.adml* dans le dossier de langue correspondant dans le dossier de définition de stratégie. Créez le dossier s’il n’existe pas déjà. (Exemple: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
+6. Si votre domaine comporte plusieurs contrôleurs de domaine, les nouveaux fichiers ADMX y seront répliqués à l’intervalle de réplication du domaine suivant.
+7. Pour vérifier le chargement correct des fichiers, ouvrez l’**Éditeur de gestion des stratégies de groupe** dans les Outils d’administration de Windows et développez **Configuration de l’ordinateur** > **Stratégies** > **Modèles d’administration** > **Microsoft Edge**. Vous devez voir un ou plusieurs nœuds MicrosoftEdge, comme illustré ci-dessous.
 
     ![Stratégies Microsoft Edge](./media/configure-microsoft-edge/edge-gpo-policies.png)
 
@@ -69,19 +69,6 @@ Accédez à la [page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeE
 3. Dans le dossier *admx*, ouvrez le dossier de langue approprié. Par exemple, si vous êtes aux États-unis, ouvrez le dossier **en-US**.
 4. Copiez le fichier *msedge.adml* dans le dossier de langue correspondant dans le dossier de définition de stratégie. (Exemple: C:\Windows\PolicyDefinitions\en-US)
 5. Pour vérifier que les fichiers sont chargés correctement, ouvrez l’Éditeur d’objets de stratégie de groupe directement (touche Windows + R et entrez gpedit.msc) ou ouvrez MMC et chargez le composant logiciel enfichable Éditeur d’objets de stratégie de groupe. Si une erreur se produit, cela est généralement dû au fait que les fichiers se trouvent dans un emplacement incorrect.
-
-<!--
-To add the administrative template to manage Microsoft Edge updates:
-
-1. Open the *MicrosoftEdgePolicyTemplates* file and go to **windows** > **admx**.
-2. Copy the *msedgeupdate.admx* file to your Policy Definition template folder. (Example: C:\Windows\PolicyDefinitions)
-3. In the *updatepolicies* folder, open the appropriate language folder. For example, if you’re in Germany, open the **de-DE** folder.
-4. Copy the *msedgeupdate.adml* file to the matching language folder in your Policy Definition folder. (Example: C:\Windows\PolicyDefinitions\de-DE)
-5. Open MMC and load the Local Group Policy Editor snap-in to confirm the files loaded correctly. If an error occurs, it’s usually because the files are in an incorrect location.
-
-> [!NOTE]
-> Currently the Microsoft Edge update policies are only localized in en-US. Additional language support will be added in a future release.
--->
 
 ### 2. Définir les stratégies obligatoires ou recommandées
 
@@ -108,22 +95,7 @@ Vous devrez peut-être fermer et rouvrir MicrosoftEdge pour que les nouvelles st
 
 Vous pouvez également utiliser REGEDIT.exe sur un ordinateur cible pour afficher les paramètres du registre qui stockent les paramètres de stratégie de groupe. Ces paramètres se trouvent dans le chemin d’accès **HKLM\SOFTWARE\Policies\Microsoft\Edge**.
 
-## Forum aux questions
-
-### MicrosoftEdge peut-il être configuré pour utiliser les préférences principales?
-
-Oui, vous pouvez configurer MicrosoftEdge pour qu’il utilise un fichier de préférences principales.
-
- Un fichier de préférences principales vous permet de configurer les paramètres par défaut lors du déploiement de MicrosoftEdge. Vous pouvez également utiliser un fichier de préférences principales pour appliquer des paramètres sur des ordinateurs qui ne sont pas gérés par un système de gestion des périphériques. Ces paramètres sont appliqués au profil de l’utilisateur la première fois que l’utilisateur exécute le navigateur. Une fois que l’utilisateur a exécuté le navigateur, les modifications apportées au fichier de préférences principales ne sont pas appliquées. Un utilisateur peut modifier les paramètres à partir des préférences principales dans le navigateur. Si vous souhaitez rendre un paramètre obligatoire ou modifier un paramètre après la première exécution du navigateur, vous devez utiliser une stratégie.
-
-Un fichier de préférences principales vous permet de personnaliser de nombreux paramètres et préférences pour le navigateur, y compris ceux partagés avec d’autres navigateurs basés Chromium et spécifiques à MicrosoftEdge.  Les préférences liées à la stratégie peuvent être configurées à l’aide du fichier de préférences principales. Dans les cas où une stratégie est définie et qu’un jeu de préférences principales correspondant est défini, le paramètre de stratégie est prioritaire.
-
-> [!IMPORTANT]
-> Toutes les préférences disponibles peuvent ne pas être cohérentes avec la terminologie et les conventions d’affectation de noms de MicrosoftEdge.  Il n’est pas garanti que ces préférences continuent de fonctionner comme prévu dans les prochaines versions. Les préférences peuvent être modifiées ou ignorées dans les versions ultérieures.
-
-Un fichier de préférences principales est un fichier texte mis en forme à l’aide du balisage JSON. Ce fichier doit être ajouté au même répertoire que le msedge.exe exécutable. Pour les déploiements à l’échelle du système sur Windows, il s’agit généralement de: *Windows: C:\Program Files\Microsoft\Edge\Application\master_preferences*.
-
-## Articles associés
+## Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Configurer pour Windows avec Intune](configure-edge-with-intune.md)

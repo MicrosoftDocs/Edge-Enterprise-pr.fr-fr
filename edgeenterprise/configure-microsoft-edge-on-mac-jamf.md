@@ -3,19 +3,19 @@ title: Configurer les stratégies MicrosoftEdge sur macOS grâce à Jamf
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 02/20/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer les paramètres de stratégie MicrosoftEdge sur les appareils Mac grâce à Jamf
-ms.openlocfilehash: 336bdfed2c53811615b0183dc5ca7db916cd7428
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979668"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194712"
 ---
 # Configurer les paramètres de stratégie MicrosoftEdge sur macOS grâce à Jamf
 
@@ -45,8 +45,8 @@ Pour plus d’informations, voir [Profils de configuration d’ordinateur](https
 Pour obtenir le manifeste de stratégie:
 
 - Accédez à la [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise).
-- Dans la liste déroulante Canal/Version, sélectionnez **tout canal avec la version 81 ou ultérieure.***.
-- Dans la liste déroulante Build, sélectionnez toute **version 81 ou ultérieure.***.
+- Dans la liste déroulante Canal/Version, sélectionnez **n’importe quel canal avec la version 81 ou une version ultérieure.**_.
+- Dans la liste déroulante Build, sélectionnez n’importe quel _ *build 81 ou une version ultérieure.**_.
 - Cliquez sur OBTENIR DES FICHIERS DE STRATÉGIE pour télécharger notre ensemble de modèles de stratégie.
 
   > [!NOTE]
@@ -61,7 +61,7 @@ Ce manifeste est publié dans chaque ensemble de stratégies à compter de la bu
 Utilisez la procédure suivante pour télécharger le manifeste de stratégie dans Jamf Pro et créer un profil de stratégie pour macOS.
 
 1. Connectez-vous à Jamf.
-2. Sélectionnez l'onglet **Ordinateur**.
+2. Sélectionnez l’onglet _*Ordinateur**.
 3. Sous **Gestion de contenu**, sélectionnez **Profils de configuration**.
 4. Sur la page **Profils de configuration**, cliquez sur **+ Nouveau**.
 
@@ -115,22 +115,7 @@ Une fois le nouveau profil de configuration créé, vous devez configurer l’**
 2. Pour les **Limitations**, conservez le paramètre par défaut, à savoir Aucune. Cliquez sur **Annuler**.
 3. Pour les **Exclusions**, conservez le paramètre par défaut, à savoir Aucune. Cliquez sur **Annuler**.
 
-## Forum Aux Questions
-
-### MicrosoftEdge peut-il être configuré pour utiliser les préférences principales?
-
-Oui, vous pouvez configurer MicrosoftEdge pour qu’il utilise un fichier de préférences principales.
-
-Un fichier de préférences principales vous permet de configurer les paramètres par défaut d’un profil utilisateur de navigateur lors du déploiement de MicrosoftEdge. Vous pouvez également utiliser un fichier de préférences principales pour appliquer des paramètres sur des ordinateurs qui ne sont pas gérés par un système de gestion des périphériques. Ces paramètres sont appliqués au profil de l’utilisateur la première fois que l’utilisateur exécute le navigateur. Une fois que l’utilisateur a exécuté le navigateur, les modifications apportées au fichier de préférences principales ne sont pas appliquées. Un utilisateur peut modifier les paramètres à partir des préférences principales dans le navigateur. Si vous souhaitez rendre un paramètre obligatoire ou modifier un paramètre après la première exécution du navigateur, vous devez utiliser une stratégie.
-
-Un fichier de préférences principales vous permet de personnaliser de nombreux paramètres et préférences pour le navigateur, y compris ceux partagés avec d’autres navigateurs basés Chromium et spécifiques à MicrosoftEdge.  Les préférences liées à la stratégie peuvent être configurées à l’aide du fichier de préférences principales. Dans les cas où une stratégie est définie et qu’un jeu de préférences principales correspondant est défini, le paramètre de stratégie est prioritaire.
-
-> [!IMPORTANT]
-> Toutes les préférences disponibles peuvent ne pas être cohérentes avec la terminologie et les conventions d’affectation de noms de MicrosoftEdge.  Il n’est pas garanti que ces préférences continuent de fonctionner comme prévu dans les prochaines versions. Les préférences peuvent être modifiées ou ignorées dans les versions ultérieures.
-
-Un fichier de préférences principales est un fichier texte mis en forme à l’aide du balisage JSON. Ce fichier doit être ajouté au même répertoire que le msedge.exe exécutable. Pour les déploiements à l’échelle du système sur macOS, c’est généralement: «*~/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*» ou «*/Library/Microsoft/Microsoft Edge Master Preferences*».
-
-## Articles associés
+## Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Configurer pour macOS avec Intune](configure-microsoft-edge-on-mac.md)
