@@ -3,19 +3,19 @@ title: Liste verte pour les points de terminaison de MicrosoftEdge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 11/25/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Liste verte pour les points de terminaison de MicrosoftEdge
-ms.openlocfilehash: 48a3a72e5af3744516e3b72d02b5254ad2e0504a
-ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
+ms.openlocfilehash: 3d46e2e8c85eadc39cf9788df44b45592ea4fb1b
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "11133119"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194687"
 ---
 # Liste verte pour les points de terminaison de MicrosoftEdge
 
@@ -93,7 +93,7 @@ Ces points de terminaison gèrent la lecture et l’écriture de données synchr
 
 - Points de terminaison du service de synchronisation Edge:
 
-  - `https://enterprise.edge.activity.windows.com`
+  - `https://edge-enterprise.activity.windows.com`
   - `https://edge.activity.windows.com`
 
 - Points de terminaison Azure Information Protection:

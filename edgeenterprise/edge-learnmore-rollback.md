@@ -3,19 +3,19 @@ title: Restauration Microsoft Edge pour les entreprises
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 09/02/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Comment restaurer Microsoft Edge à une version antérieure
-ms.openlocfilehash: 9f659b0bcdd82f54a814c8ad4157521061cdfa7c
-ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
+ms.openlocfilehash: 69fdfd29572dd6eda9f7eb7cbd4c2500851dcafc
+ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993704"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "11192424"
 ---
 # Comment restaurer Microsoft Edge à une version antérieure
 
@@ -81,7 +81,7 @@ Procédez comme suit pour activer la restauration avec la mise à jour de Micros
    - Mises à jour silencieuses automatiques uniquement
 
      > [!NOTE]
-     > Pour forcer une mise à jour de stratégie de groupe, tapez `dsregcmd /status` dans l’invite de commande de l’administrateur Windows (Exécuter en tant qu’administrateur).
+     > Pour forcer une mise à jour de stratégie de groupe, tapez `gpupdate /force` dans l’invite de commande de l’administrateur Windows (Exécuter en tant qu’administrateur).
 
 5. Cliquez sur **OK** pour enregistrer le paramètre. La restauration aura lieu la prochaine fois que Microsoft Edge Update recherchera une mise à jour. Si vous souhaitez que la mise à jour se produise plus tôt, vous pouvez modifier l’intervalle d’interrogation de MicrosoftEdgeUpdate ou activer la restauration avec un MSI.
 
@@ -113,7 +113,7 @@ Nous vous recommandons de forcer un redémarrage sur les utilisateurs après l�
 
 Une capture instantanée est une copie estampillée du dossier des données utilisateur. Lors d’une mise à niveau d’une version, une capture instantanée de la version précédente est créée et stockée dans le dossier des captures instantanées. Une fois la restauration effectuée, une capture instantanée correspondant à la version est copiée dans le nouveau dossier des données utilisateur et est supprimée du dossier des captures instantanées. Si aucune capture instantanée correspondant à la version n’est disponible lors du retour à la version antérieure, la restauration s’appuiera sur la synchronisation pour remplir les données utilisateur dans la nouvelle version de MicrosoftEdge.
 
-La stratégie de groupe [UserDataSnapshotRetentionLimit] vous permet de définir une limite pour le nombre de captures instantanées pouvant être conservées. Par défaut, trois captures instantanées sont conservées. Vous pouvez configurer cette stratégie pour conserver de 0à5captures instantanées.
+La stratégie de groupe [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userdatasnapshotretentionlimit) vous permet de définir une limite pour le nombre d’instantanés qui peuvent être conservés à tout moment. Par défaut, trois captures instantanées sont conservées. Vous pouvez configurer cette stratégie pour conserver de 0à5captures instantanées.
 
 ## Forum Aux Questions
 
@@ -159,7 +159,6 @@ Microsoft Edge Update n’a pas encore exécuté de recherche de mises à jour. 
 ### En tant qu’administrateur informatique, j’ai suivi toutes les étapes de la restauration correctement. Seule une partie de mon groupe d’utilisateurs a été restaurée. Pourquoi les autres utilisateurs n’ont pas encore été restaurés?
 
 Le paramètre de la méthode de groupe n’a pas encore été synchronisé avec tous les clients. Lorsque les administrateurs définissent une méthode de groupe, les clients ne reçoivent pas ces paramètres instantanément. Vous pouvez [Forcer une actualisation de la stratégie de groupe à distance](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
-
 
 ## Voir également
 
