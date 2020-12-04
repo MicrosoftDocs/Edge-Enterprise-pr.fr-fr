@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies WebView2 Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/27/2020
+ms.date: 12/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 3ca9adb18ef41581bb016451015cf0aca0aa63c9
-ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
+ms.openlocfilehash: b924e40e34c86c3636c18394b561f4b0c35c0437
+ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "11136213"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195115"
 ---
 # Microsoft Edge WebView2 - Politiques
 
