@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: f674c39506736dfc5b5706e902970e0e4ce84fd8
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
+ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192534"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195260"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -23,6 +23,12 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 
 > [!IMPORTANT]
 > Consultez cette [mise à jour sur les versions de canaux Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Version 87.0.664.55: 3 décembre
+
+Résolution de divers bogues et problèmes de performances. La nouvelle fonctionnalité suivante est prise en charge dans cette version.
+
+- **Des alertes sont générées si le mot de passe d’un utilisateur est détecté dans une fuite en ligne**. Les mots de passe des utilisateurs sont vérifiés par rapport à un référentiel d’informations d’identification ayant connu une violation connue et envoient une alerte à l’utilisateur si une correspondance est trouvée. (Cette fonctionnalité sera disponible dans Microsoft Edge stable 88.)
 
 ## Version 87.0.664.52: 30 novembre
 
