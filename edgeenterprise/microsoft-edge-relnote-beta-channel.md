@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/03/2020
+ms.date: 12/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
-ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
+ms.openlocfilehash: 39e6062d8cf7ce0e5f03ecf26daaae4cc06bd4cf
+ms.sourcegitcommit: 46d42a284e54574811a7c934a36d85a3526fc8ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195260"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "11196535"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -24,13 +24,13 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!IMPORTANT]
 > Consultez cette [mise à jour sur les versions de canaux Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
-## Version 87.0.664.55: 3 décembre
+## Version 87.0.664.55: 3décembre
 
 Résolution de divers bogues et problèmes de performances. La nouvelle fonctionnalité suivante est prise en charge dans cette version.
 
-- **Des alertes sont générées si le mot de passe d’un utilisateur est détecté dans une fuite en ligne**. Les mots de passe des utilisateurs sont vérifiés par rapport à un référentiel d’informations d’identification ayant connu une violation connue et envoient une alerte à l’utilisateur si une correspondance est trouvée. (Cette fonctionnalité sera disponible dans Microsoft Edge stable 88.)
+- **Des alertes sont générées si le mot de passe d’un utilisateur est détecté dans une fuite en ligne**. Les mots de passe des utilisateurs sont examinés par rapport à un référentiel d’informations d’identification connues qui ont été violées et envoient à l’utilisateur une alerte si une correspondance est trouvée. Pour garantir la sécurité et la confidentialité, les mots de passe des utilisateurs sont chiffrés et cryptés lorsqu’ils sont vérifiés par rapport à la base de données des informations d’identification divulguées.
 
-## Version 87.0.664.52: 30 novembre
+## Version 87.0.664.52: 30novembre
 
 Résolution de divers bogues et problèmes de performances.
 
