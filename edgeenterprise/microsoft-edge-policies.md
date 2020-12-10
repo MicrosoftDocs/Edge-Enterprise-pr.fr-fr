@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/19/2020
+ms.date: 12/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
-ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
+ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
+ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "11181985"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195135"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -33,12 +33,18 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 
 Le tableau suivant répertorie les stratégies nouvelles et déconseillées pour cette mise à jour.
 
-| Nom | Statut |
+| Nom | Légende |
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| Nouveauté |
-|[BlockExternalExtensions](#blockexternalextensions) | Nouveauté |
-|[ShowMicrosoftRewards](#showmicrosoftrewards) | Nouveauté |
-|[ProactiveAuthEnabled](#proactiveauthenabled) | Déconseillée |
+|[PrinterTypeDenyList](#printertypedenylist)|Désactiver les types d’imprimante dans la liste d’exclusion|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Autoriser le lancement de fichiers locaux en mode InternetExplorer|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Ouvrir les fichiers locaux dans la liste verte des extensions de fichier en mode InternetExplorer|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Afficher le menu contextuel pour ouvrir un lien en mode InternetExplorer|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportement de la redirection intranet|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Indique comment MicrosoftEdgeUpdate gère les mises à jour disponibles à partir de MicrosoftEdge|
+|[VerticalTabsAllowed](#verticaltabsallowed)|Configure la disponibilité d’une disposition verticale, pour les onglets, sur le côté du navigateur.|
+| [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols) DÉCONSEILLÉ|Autoriser la mise à niveau vers une ancienne version de TLS/DTLS dans WebRTC|
+
+
 
 ## Stratégies disponibles
 
@@ -83,7 +89,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Contrôler l’utilisation des exceptions pour le contenu non sécurisé|
 |[DefaultJavaScriptSetting](#defaultjavascriptsetting)|Paramètre par défaut de JavaScript|
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|Paramètre par défaut des notifications|
-|[DefaultPluginsSetting](#defaultpluginssetting)|Paramètre par défaut de AdobeFlash|
+|[DefaultPluginsSetting](#defaultpluginssetting)|Paramètre Adobe Flash par défaut (obsolète)|
 |[DefaultPopupsSetting](#defaultpopupssetting)|Paramètre par défaut de la fenêtre contextuelle|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Contrôler l’utilisation de l’API Web Bluetooth|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Contrôler l’utilisation de l’API WebUSB|
@@ -101,8 +107,8 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Revenir au comportement hérité de SameSite pour les cookies sur des sites spécifiés|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Autoriser les notifications sur des sites spécifiques|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|Bloquer les notifications sur des sites spécifiques|
-|[PluginsAllowedForUrls](#pluginsallowedforurls)|Autoriser le plug-in AdobeFlash sur des sites spécifiques|
-|[PluginsBlockedForUrls](#pluginsblockedforurls)|Bloquer le plug-in Adobe Flash sur des sites spécifiques|
+|[PluginsAllowedForUrls](#pluginsallowedforurls)|Autoriser le plug-in Adobe Flash sur des sites spécifiques (obsolète)|
+|[PluginsBlockedForUrls](#pluginsblockedforurls)|Bloquer le plug-in Adobe Flash sur des sites spécifiques (obsolète)|
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Autoriser les fenêtres contextuelles sur des sites spécifiques|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Bloquer les fenêtres contextuelles sur des sites spécifiques|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Enregistrer les gestionnaires de protocoles|
@@ -181,6 +187,7 @@ et des conseils pour les services Microsoft|
 |[DefaultPrinterSelection](#defaultprinterselection)|Instructions de sélection de l’imprimante par défaut|
 |[PrintHeaderFooter](#printheaderfooter)|Imprimer des en-têtes et des pieds de page|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Définir l’imprimante par défaut du système comme imprimante par défaut|
+|[PrinterTypeDenyList](#printertypedenylist)|Désactiver les types d’imprimante dans la liste d’exclusion|
 |[PrintingEnabled](#printingenabled)|Activer l’impression|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Taille de page par défaut pour l’impression|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimer via la boîte de dialogue Imprimer du système|
@@ -300,7 +307,7 @@ et des conseils pour les services Microsoft|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Activer la fonctionnalité Collections|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Achats activés dans MicrosoftEdge|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Autorise les utilisateurs à modifier les favoris|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Nom de la stratégie de groupe: réactiver les fonctionnalités des plateformes web déconseillées pendant une durée limitée (obsolète)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Activer le téléchargement des actions de domaine à partir de Microsoft|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Activer les vérifications OCSP/CRL en ligne|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Autoriser les certificats signés à l’aide de l’algorithme SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (obsolète)|
@@ -342,10 +349,14 @@ et des conseils pour les services Microsoft|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Activer les avertissements pour les formulaires non sécurisés|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Contrôler la fonctionnalité IntensiveWakeUpThrottling|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configurer la détection de blocage avancée pour le mode Internet Explorer|
-|[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configurer l’intégration d’Internet Explorer|
+|[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configurer l’intégration d’InternetExplorer|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Autoriser le lancement de fichiers locaux en mode InternetExplorer|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Ouvrir les fichiers locaux dans la liste verte des extensions de fichier en mode InternetExplorer|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Afficher le menu contextuel pour ouvrir un lien en mode InternetExplorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configurer la liste des sites en mode Entreprise|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Spécifier le comportement des navigations «sur la page» vers des sites non configurés lors du démarrage à partir des pages du mode Internet Explorer.|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Autoriser le test du mode InternetExplorer|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportement de la redirection intranet|
 |[IsolateOrigins](#isolateorigins)|Activer l’isolation de site pour des origines spécifiques|
 |[LocalProvidersEnabled](#localprovidersenabled)|Autoriser les suggestions des fournisseurs de services locaux|
 |[ManagedFavorites](#managedfavorites)|Configurer les favoris|
@@ -375,7 +386,7 @@ et des conseils pour les services Microsoft|
 |[RestrictSigninToPattern](#restrictsignintopattern)|Limiter les comptes qui peuvent être utilisés comme comptes principaux sur MicrosoftEdge|
 |[RoamingProfileLocation](#roamingprofilelocation)|Définition du répertoire de profil itinérant|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Activer l’utilisation des copies itinérantes pour les données de profil Microsoft Edge|
-|[RunAllFlashInAllowMode](#runallflashinallowmode)|Étendre le paramètre de contenu Adobe Flash à l’ensemble du contenu|
+|[RunAllFlashInAllowMode](#runallflashinallowmode)|Étendre le paramètre de contenu Adobe Flash à tout le contenu (obsolète)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Autoriser les utilisateurs à poursuivre la navigation depuis une page d’avertissement SSL|
 |[SSLVersionMin](#sslversionmin)|Version TLS minimale activée|
 |[SaveCookiesOnExit](#savecookiesonexit)|Enregistrer les cookies lors de la fermeture de MicrosoftEdge|
@@ -411,10 +422,12 @@ et des conseils pour les services Microsoft|
 |[TranslateEnabled](#translateenabled)|Activer la traduction|
 |[URLAllowlist](#urlallowlist)|Définir une liste d’URL autorisées|
 |[URLBlocklist](#urlblocklist)|Bloquer l’accès à une liste d’URL|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Indique comment MicrosoftEdgeUpdate gère les mises à jour disponibles à partir de MicrosoftEdge|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Activer la fonctionnalité User-Agent Client Hints (déconseillé)|
 |[UserDataDir](#userdatadir)|Définir le répertoire de données utilisateur|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limite le nombre de captures instantanées des données utilisateur conservées qui sont utilisées en cas de restauration d’urgence|
 |[UserFeedbackAllowed](#userfeedbackallowed)|Autoriser les commentaires des utilisateurs|
+|[VerticalTabsAllowed](#verticaltabsallowed)|Configure la disponibilité d’une disposition verticale, pour les onglets, sur le côté du navigateur.|
 |[VideoCaptureAllowed](#videocaptureallowed)|Autoriser ou bloquer la capture de vidéos|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites autorisés à accéder aux appareils de capture vidéo sans autorisation préalable|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Définir l’optimisation WPAD|
@@ -422,6 +435,7 @@ et des conseils pour les services Microsoft|
 |[WebCaptureEnabled](#webcaptureenabled)|Activer la fonctionnalité de capture web dans Microsoft Edge|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Réactiver l'API Web Components v0 jusqu'à M84 (obsolète)|
 |[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Autoriser WebDriver à remplacer les stratégies incompatibles (déconseillé)|
+|[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Autoriser la mise à niveau vers une ancienne version de TLS/DTLS dans WebRTC (déconseillé)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gérer l’exposition des adresses IP locales par WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Limiter l’exposition de l’adresse IP locale par WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restreindre la portée des ports UDP locaux utilisés par WebRTC|
@@ -1513,17 +1527,19 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 
   ### DefaultPluginsSetting
 
-  #### Paramètre par défaut de AdobeFlash
+  #### Paramètre Adobe Flash par défaut (obsolète)
 
   
-  
+  >OBSOLÈTE: cette stratégie est obsolète et ne fonctionne pas sur les versions ultérieures à Microsoft Edge87.
   #### Versions prises en charge:
 
-  - sur Windows et macOS depuis la version77 ou versions ultérieures
+  - Sur Windows et macOS depuis la version77 et jusqu’à la version87
 
   #### Description
 
-  [PluginsAllowedForUrls](#pluginsallowedforurls) et [PluginsBlockedForUrls](#pluginsblockedforurls) sont vérifiés en premier, avant cette stratégie. Les options sont «ClickToPlay» et «BlockPlugins». Si vous définissez cette stratégie sur «BlockPlugins», ce plugin est refusé pour tous les sites web. «ClickToPlay» permet au plugin Flash de s’exécuter, mais les utilisateurs cliquent sur l’espace réservé pour le démarrer.
+  Cette stratégie ne fonctionne pas, car Flash n’est plus pris en charge par MicrosoftEdge.
+
+[PluginsAllowedForUrls](#pluginsallowedforurls) et [PluginsBlockedForUrls](#pluginsblockedforurls) sont vérifiés en premier, avant cette stratégie. Les options sont «ClickToPlay» et «BlockPlugins». Si vous définissez cette stratégie sur «BlockPlugins», ce plugin est refusé pour tous les sites web. «ClickToPlay» permet au plugin Flash de s’exécuter, mais les utilisateurs cliquent sur l’espace réservé pour le démarrer.
 
 Si cette stratégie n’est pas configurée, l’utilisateur peut modifier ce paramètre manuellement.
 
@@ -1552,7 +1568,7 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: DefaultPluginsSetting
-  - Nom de la stratégie de groupe: paramètre par défaut de Adobe Flash
+  - Nom de la stratégie: paramètre Adobe Flash par défaut (obsolète)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Content settings
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -2724,21 +2740,23 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
   ### PluginsAllowedForUrls
 
-  #### Autoriser le plug-in AdobeFlash sur des sites spécifiques
+  #### Autoriser le plug-in Adobe Flash sur des sites spécifiques (obsolète)
 
   
-  
+  >OBSOLÈTE: cette stratégie est obsolète et ne fonctionne pas sur les versions ultérieures à Microsoft Edge87.
   #### Versions prises en charge:
 
-  - sur Windows et macOS depuis la version77 ou versions ultérieures
+  - Sur Windows et macOS depuis la version77 et jusqu’à la version87
 
   #### Description
 
-  Déterminez une liste des sites, basés sur des formats d’URL, qui sont autorisés à exécuter le plug-in Adobe Flash.
+  Cette stratégie ne fonctionne pas, car Flash n’est plus pris en charge par MicrosoftEdge.
+
+Déterminez une liste des sites, basés sur des formats d’URL, qui sont autorisés à exécuter le plug-in Adobe Flash.
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultPluginsSetting](#defaultpluginssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les motifs avec les caractères génériques «*» et «[*] » dans l’hôte ne sont plus pris en charge pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
 
   #### Fonctionnalités prises en charge:
 
@@ -2755,7 +2773,7 @@ Pour plus d’informations sur les modèles d’URL valides, consultez [https://
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: PluginsAllowedForUrls
-  - Nom de la stratégie de groupe: autoriser le plug-in Adobe Flash sur des sites spécifiques
+  - Nom de la stratégie de groupe: autoriser le plug-in Adobe Flash sur des sites spécifiques (obsolète)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Content settings
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -2791,21 +2809,23 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
   ### PluginsBlockedForUrls
 
-  #### Bloquer le plug-in Adobe Flash sur des sites spécifiques
+  #### Bloquer le plug-in Adobe Flash sur des sites spécifiques (obsolète)
 
   
-  
+  >OBSOLÈTE: cette stratégie est obsolète et ne fonctionne pas sur les versions ultérieures à Microsoft Edge87.
   #### Versions prises en charge:
 
-  - sur Windows et macOS depuis la version77 ou versions ultérieures
+  - Sur Windows et macOS depuis la version77 et jusqu’à la version87
 
   #### Description
 
-  Déterminez une liste des sites, basés sur des formats d’URL, qui ne sont pas autorisés à exécuter Adobe Flash.
+  Cette stratégie ne fonctionne pas, car Flash n’est plus pris en charge par MicrosoftEdge.
+
+Déterminez une liste des sites, basés sur des formats d’URL, qui ne sont pas autorisés à exécuter Adobe Flash.
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultPluginsSetting](#defaultpluginssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les motifs avec les caractères génériques «*» et «[*] » dans l’hôte ne sont plus pris en charge pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
 
   #### Fonctionnalités prises en charge:
 
@@ -2822,7 +2842,7 @@ Pour plus d’informations sur les modèles d’URL valides, consultez [https://
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: PluginsBlockedForUrls
-  - Nom de la stratégie de groupe: bloquer le plug-in Adobe Flash sur des sites spécifiques
+  - Nom de la stratégie de groupe: bloquer le plug-in Adobe Flash sur des sites spécifiques (obsolète)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Content settings
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -6051,6 +6071,88 @@ Si vous activez cette stratégie, l’aperçu avant impression utilise l’impri
   - Exemple de valeur:
 ``` xml
 <false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### PrinterTypeDenyList
+
+  #### Désactiver les types d’imprimante dans la liste d’exclusion
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Les types d’imprimante dans la liste d’exclusion ne seront pas détectés ou leurs fonctionnalités ne seront pas récupérées.
+
+Placer tous les types d’imprimante sur la liste d’exclusion désactive l’impression de manière efficace. En effet, il n’existe aucune destination d’impression pour les documents.
+
+Si vous ne configurez pas cette stratégie, ou si la liste des imprimantes est vide, tous les types d’imprimante sont détectables.
+
+Les destinations d’impression incluent les imprimantes par extension et les imprimantes locales. Les imprimantes par extension sont également appelées destinations du fournisseur d’impression et incluent toute destination associée à une extension MicrosoftEdge.
+Les imprimantes locales sont également connues sous le nom de destinations d’impression natives et incluent les destinations disponibles pour l’ordinateur local et les imprimantes réseau partagées.
+
+Mappage des options de stratégie:
+
+* privet (privet)=destinations des protocole basées sur Zeroconf (mDNS + DNS-SD)
+
+* extension (extension)=destinations basées sur une extension
+
+* pdf (pdf)=la destination «Enregistrer au format PDF»
+
+* locales (locales)=destinations des imprimantes locales
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Liste composée de chaînes
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: PrinterTypeDenyList
+  - Nom de la stratégie de groupe: désactiver les types d’imprimante dans la liste d’exclusion
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Printing
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de valeur: liste composée de REG_SZ
+
+  ##### Exemple de valeur:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\1 = "local"
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
+
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom clé de la préférence: PrinterTypeDenyList
+  - Exemple de valeur:
+``` xml
+<array>
+  <string>local</string>
+  <string>privet</string>
+</array>
 ```
   
 
@@ -12889,17 +12991,17 @@ Désactivez cette stratégie pour empêcher les utilisateurs d'ajouter, de suppr
 
   ### EnableDeprecatedWebPlatformFeatures
 
-  #### Re-enable deprecated web platform features for a limited time (obsolete)
+  #### Nom de la stratégie de groupe: réactiver les fonctionnalités des plateformes web déconseillées pendant une durée limitée (obsolète)
 
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
+  >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version 86 de Microsoft Edge.
   #### Versions prises en charge:
 
   - On Windows and macOS since 77, until 86
 
   #### Description
 
-  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+  Cette stratégie est obsolète, car des stratégies de plateforme Web dédiées sont désormais utilisées pour gérer les désapprobations des fonctionnalités de plateforme Web individuelles.
 
 Spécifiez une liste de fonctionnalités de plateforme web déconseillées à réactiver temporairement.
 
@@ -12932,7 +13034,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: EnableDeprecatedWebPlatformFeatures
-  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
+  - Nom de la stratégie de groupe: réactiver les fonctionnalités des plateformes web déconseillées pendant une durée limitée (obsolète)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -15752,6 +15854,186 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationLocalFileAllowed
+
+  #### Autoriser le lancement de fichiers locaux en mode InternetExplorer
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version88 ou versions ultérieures
+
+  #### Description
+
+  Cette stratégie contrôle la disponibilité de l’argument de ligne de commande --ie-mode-file-url qui est utilisé pour lancer MicrosoftEdge avec un fichier local spécifié sur la ligne de commande en mode InternetExplorer.
+
+Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) est défini sur «IEMode».
+
+Si vous définissez cette stratégie sur true ou si vous ne la configurez pas, l’utilisateur est autorisé à utiliser l’argument de ligne de commande --ie-mode-file-url pour lancer des fichiers locaux en mode InternetExplorer.
+
+Si vous définissez cette stratégie sur false, l’utilisateur n’est pas autorisé à utiliser l’argument de ligne de commande --ie-mode-file-url pour lancer des fichiers locaux en mode InternetExplorer.
+
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: InternetExplorerIntegrationLocalFileAllowed
+  - Nom de la stratégie de groupe: autoriser le lancement de fichiers locaux en mode InternetExplorer
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: InternetExplorerIntegrationLocalFileAllowed
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileExtensionAllowList
+
+  #### Ouvrir les fichiers locaux dans la liste verte des extensions de fichier en mode InternetExplorer
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version88 ou versions ultérieures
+
+  #### Description
+
+  Cette stratégie limite les URL file:// autorisées à être lancées en mode InternetExplorer en fonction de l’extension de fichier.
+
+Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) est défini sur «IEMode».
+
+Lorsqu’une URL file:// doit être lancée en mode InternetExplorer, l’extension de fichier de l’URL doit être présente dans cette liste pour que l’URL soit autorisée à se lancer en mode InternetExplorer. Une URL dont l’ouverture est bloquée dans le mode InternetExplorer s’ouvre en mode Edge.
+
+Si vous définissez cette stratégie sur la valeur spéciale «*» ou si vous ne la configurez pas, toutes les extensions de fichier sont autorisées.
+
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Liste composée de chaînes
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: InternetExplorerIntegrationLocalFileExtensionAllowList
+  - Nom de la stratégie de groupe: ouvrir les fichiers locaux dans la liste verte des extensions de fichier en mode InternetExplorer
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de valeur: liste composée de REG_SZ
+
+  ##### Exemple de valeur:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\1 = ".mht"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\2 = ".pdf"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\3 = ".vsdx"
+
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileShowContextMenu
+
+  #### Afficher le menu contextuel pour ouvrir un lien en mode InternetExplorer
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version88 ou versions ultérieures
+
+  #### Description
+
+  Cette stratégie contrôle la visibilité de l’option «Ouvrir le lien dans un nouvel onglet Mode Internet Explorer» dans le menu contextuel des liens file://.
+
+Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) est défini sur «IEMode».
+
+Si vous définissez cette stratégie sur true, l’élément de menu contextuel «Ouvrir le lien dans un nouvel onglet Mode InternetExplorer» sera disponible pour les liens file://.
+
+Si vous définissez cette stratégie sur false ou si vous ne la configurez pas, l’élément de menu contextuel ne sera pas ajouté.
+
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: InternetExplorerIntegrationLocalFileShowContextMenu
+  - Nom de la stratégie: afficher le menu contextuel pour ouvrir un lien en mode InternetExplorer
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: InternetExplorerIntegrationLocalFileShowContextMenu
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### InternetExplorerIntegrationSiteList
 
   #### Configurer la liste des sites en mode Entreprise
@@ -15935,6 +16217,82 @@ Si vous désactivez ou ne configurez pas cette stratégie, les utilisateurs ne p
 0x00000000
 ```
 
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### IntranetRedirectBehavior
+
+  #### Comportement de la redirection intranet
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Cette stratégie configure le comportement pour la redirection intranet via les vérifications d’interception DNS. Les vérifications tentent de découvrir si le navigateur se trouve derrière un proxy qui redirige les noms d’hôtes inconnus.
+
+Si cette stratégie n’est pas configurée, le navigateur utilisera le comportement par défaut des vérifications d’interception DNS et des suggestions de redirection intranet. Dans M88, elles sont activées par défaut, mais elles seront désactivées par défaut dans la prochaine version.
+
+[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) est une stratégie associée à celle-ci qui peut également désactiver les vérifications d’interception DNS. Cependant, cette stratégie est une version plus flexible qui pourrait contrôler séparément les barres d’information de redirection intranet et pourrait être étendue à l’avenir.
+Si [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) ou cette stratégie effectue une demande de désactivation des vérifications d’interception, les vérifications sont désactivées.
+Si les vérifications d’interception DNS sont désactivées par cette stratégie mais que [GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) est activé, les requêtes de mots uniques entraînent toujours des navigations intranet.
+
+Mappage des options de stratégie:
+
+* Par défaut(0)=utiliser le comportement par défaut du navigateur.
+
+* DisableInterceptionChecksDisableInfobar(1)=désactiver les vérifications d’interception DNS et les barres d’information «http://intranetsite/».
+
+* DisableInterceptionChecksEnableInfobar(2)=désactiver les vérifications d’interception DNS; autoriser les barres d’information «http://intranetsite/».
+
+* EnableInterceptionChecksEnableInfobar(3)=autorise les vérifications d’interception DNS et les barres d’information «http://intranetsite/».
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - entier.
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: IntranetRedirectBehavior
+  - Nom de la stratégie: comportement de la redirection intranet
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: IntranetRedirectBehavior
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom clé de la préférence: IntranetRedirectBehavior
+  - Exemple de valeur:
+``` xml
+<integer>1</integer>
+```
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -17934,17 +18292,19 @@ Pour plus d’informations sur l’utilisation des profils utilisateur itinéran
 
   ### RunAllFlashInAllowMode
 
-  #### Étendre le paramètre de contenu Adobe Flash à l’ensemble du contenu
+  #### Étendre le paramètre de contenu Adobe Flash à tout le contenu (obsolète)
 
   
-  
+  >OBSOLÈTE: cette stratégie est obsolète et ne fonctionne pas sur les versions ultérieures à Microsoft Edge87.
   #### Versions prises en charge:
 
-  - sur Windows et macOS depuis la version77 ou versions ultérieures
+  - Sur Windows et macOS depuis la version77 et jusqu’à la version87
 
   #### Description
 
-  Si vous activez cette stratégie, la totalité du contenu Adobe Flash incorporé dans les sites web définis de manière à autoriser Adobe Flash dans les paramètres de contenu, que ce soit par l'utilisateur ou par la stratégie d'entreprise, est exécutée. Ceci inclut le contenu provenant d'autres origines et/ou du contenu de petite taille.
+  Cette stratégie ne fonctionne pas, car Flash n’est plus pris en charge par MicrosoftEdge.
+
+Si vous activez cette stratégie, la totalité du contenu Adobe Flash incorporé dans les sites web définis de manière à autoriser Adobe Flash dans les paramètres de contenu, que ce soit par l'utilisateur ou par la stratégie d'entreprise, est exécutée. Ceci inclut le contenu provenant d'autres origines et/ou du contenu de petite taille.
 
 Pour contrôler les sites web autorisés à exécuter Adobe Flash, consultez les spécifications dans les stratégies [DefaultPluginsSetting](#defaultpluginssetting), [PluginsAllowedForUrls](#pluginsallowedforurls) et [PluginsBlockedForUrls](#pluginsblockedforurls). 
 
@@ -17965,7 +18325,7 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, le contenu
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: RunAllFlashInAllowMode
-  - Nom de la stratégie de groupe: étendre le paramètre de contenu Adobe Flash à l'ensemble du contenu
+  - Nom de la stratégie de groupe: étendre le paramètre de contenu Adobe Flash à tout le contenu (obsolète)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -18998,7 +19358,7 @@ Si vous ne configurez pas cette stratégie:
 
   Cette stratégie ne fonctionnait pas comme prévu en raison de modifications apportées aux besoins opérationnels. Therefore it's deprecated and should not be used.
 
-Indique s'il faut inclure un raccourci vers Office.com dans la barre des favoris. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs. If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
+Indique s'il faut inclure un raccourci vers Office.com dans la barre des favoris. Pour les utilisateurs connectés à MicrosoftEdge, le raccourci dirige les utilisateurs vers leurs applications et documents Microsoft Office. Si cette stratégie est activée ou si vous ne la configurez pas, les utilisateurs peuvent choisir d'afficher le raccourci en modifiant le bouton bascule dans le menu contextuel de la barre des favoris.
 Si vous désactivez cette stratégie, le raccourci n’apparaît pas.
 
   #### Fonctionnalités prises en charge:
@@ -19182,11 +19542,11 @@ Si cette règle n'est pas configurée ou si elle est désactivée, les utilisate
 
   #### Description
 
-  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+  Indiquez si les sites Web peuvent utiliser l’API Web Speech du W3C pour reconnaître la voix de l’utilisateur. L’implémentation Microsoft Edge de l’API Web Speech utilise les services cognitifs d’Azure, de sorte que les données vocales quittent l’ordinateur.
 
-If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+Si vous activez ou ne configurez pas cette stratégie, les applications Web qui utilisent l’API de reconnaissance vocale Web peuvent utiliser la reconnaissance vocale.
 
-If you disable this policy, Speech Recognition is not available through the Web Speech API.
+Si vous désactivez cette stratégie, la reconnaissance vocale n’est pas disponible via l’API de reconnaissance vocale Web.
 
 Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
 
@@ -19205,7 +19565,7 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - GP unique name: SpeechRecognitionEnabled
-  - GP name: Configure Speech Recognition
+  - Nom GP: Configure Speech Recognition
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -20298,6 +20658,60 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### UpdatePolicyOverride
+
+  #### Indique comment MicrosoftEdgeUpdate gère les mises à jour disponibles à partir de MicrosoftEdge
+
+  
+  
+  #### Versions prises en charge:
+
+  - sur macOS depuis la version89 ou versions ultérieures
+
+  #### Description
+
+  Si vous activez cette stratégie, MicrosoftEdgeUpdate gère les mises à jour de MicrosoftEdge en fonction de la façon dont vous configurez les options suivantes:
+
+- Mises à jour automatiques sans assistance uniquement: les mises à jour sont appliquées uniquement lorsqu’elles sont détectées par la recherche de mise à jour périodique.
+
+- Mises à jour manuelles uniquement: les mises à jour sont appliquées uniquement lorsque l’utilisateur exécute une recherche de mise à jour manuelle. (Certaines applications n’offrent pas d’interface pour cette option.)
+
+Si vous sélectionnez les mises à jour manuelles, assurez-vous de rechercher périodiquement des mises à jour avec Microsoft AutoUpdate.
+
+Si vous n’activez et configurez pas cette stratégie, MicrosoftEdgeUpdate vérifie automatiquement les mises à jour.
+
+
+Mappage des options de stratégie:
+
+* automatic-silent-only (automatic-silent-only)=les mises à jour sont appliquées uniquement lorsqu’elles sont détectées par la recherche périodique des mises à jour.
+
+* manual-only (manual-only) = les mises à jour sont appliquées uniquement lorsque l’utilisateur recherche manuellement des mises à jour. (Certaines applications n’offrent pas d’interface pour cette option.)
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Oui
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Chaîne
+
+  
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom clé de la préférence: UpdatePolicyOverride
+  - Exemple de valeur:
+``` xml
+<string>automatic-silent-only</string>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### UserAgentClientHintsEnabled
 
   #### Activer la fonctionnalité User-Agent Client Hints (déconseillé)
@@ -20537,6 +20951,70 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas invoquer l
   #### Informations et paramètres sur Mac
   
   - Nom clé de la préférence: UserFeedbackAllowed
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### VerticalTabsAllowed
+
+  #### Configure la disponibilité d’une disposition verticale, pour les onglets, sur le côté du navigateur.
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Indique si un utilisateur peut accéder à une autre disposition dans laquelle les onglets sont alignés de façon verticale sur le côté du navigateur plutôt que dans la partie supérieure.
+Lorsque plusieurs onglets sont ouverts, cette disposition offre un meilleure affichage et une meilleure gestion des onglets. La visibilité des titres du site est meilleure, il est plus facile de scanner les icônes alignées et vous disposez plus d’espace pour gérer et fermer les onglets.
+
+Si vous désactivez cette stratégie, l’option de disposition verticale des onglets ne sera pas disponible pour les utilisateurs.
+
+Si vous activez ou si vous ne configurez pas cette stratégie, la disposition de l’onglet restera horizontale, mais un utilisateur a la possibilité d’activer les onglets verticaux sur le côté.
+
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: VerticalTabsAllowed
+  - Nom de la stratégie: configure la disponibilité d’une disposition verticale, pour les onglets, sur le côté du navigateur.
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: VerticalTabsAllowed
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom clé de la préférence: VerticalTabsAllowed
   - Exemple de valeur:
 ``` xml
 <true/>
@@ -21011,6 +21489,67 @@ Si la stratégie est désactivée ou n'est pas configurée, WebDriver n'est pas 
   - Exemple de valeur:
 ``` xml
 <true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### WebRtcAllowLegacyTLSProtocols
+
+  #### Autoriser la mise à niveau vers une ancienne version de TLS/DTLS dans WebRTC (déconseillé)
+
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Si vous activez cette stratégie, les connexions homologues WebRTC peuvent être mises à niveau vers des versions obsolètes des protocoles TLS/DTLS (DTLS1.0, TLS1.0 et TLS1.1).
+Si vous désactivez ou ne définissez pas cette stratégie, les versions TLS/DTLS suivantes sont désactivées.
+
+Cette stratégie est temporaire et sera supprimée dans les versions ultérieures de MicrosoftEdge.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: WebRtcAllowLegacyTLSProtocols
+  - Nom de la stratégie: autoriser la mise à niveau vers une ancienne version de TLS/DTLS dans WebRTC (déconseillé)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: WebRtcAllowLegacyTLSProtocols
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000000
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom clé de la préférence: WebRtcAllowLegacyTLSProtocols
+  - Exemple de valeur:
+``` xml
+<false/>
 ```
   
 
