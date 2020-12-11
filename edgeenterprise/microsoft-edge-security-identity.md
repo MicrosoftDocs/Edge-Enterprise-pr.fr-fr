@@ -3,19 +3,19 @@ title: Prise en charge et configuration des identités MicrosoftEdge
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 07/15/2020
+ms.date: 12/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prise en charge et configuration des identités MicrosoftEdge
-ms.openlocfilehash: 357f3928d870f83aa087f86cbe30db3ec4f360a2
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
+ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979852"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "11201291"
 ---
 # Prise en charge et configuration des identités MicrosoftEdge
 
@@ -79,13 +79,13 @@ L’authentification unique transparente connecte automatiquement les utilisateu
 
 ### Authentification Windows intégrée (WIA)
 
-MicrosoftEdge prend également en charge l’authentification Windows intégrée pour les demandes d’authentification au sein du réseau interne d’une organisation pour les applications qui utilisent un navigateur pour leur authentification. Cette option est prise en charge sur toutes les versions de Windows10 et les versions antérieures de Windows. Par défaut, MicrosoftEdge utilise la zone Intranet comme liste verte pour WIA. Pour configurer les serveurs qui sont activés pour l’authentification intégrée, consultez la stratégie [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist).
+MicrosoftEdge prend également en charge l’authentification Windows intégrée pour les demandes d’authentification au sein du réseau interne d’une organisation pour les applications qui utilisent un navigateur pour leur authentification. Cette option est prise en charge sur toutes les versions de Windows10 et les versions antérieures de Windows. Par défaut, MicrosoftEdge utilise la zone Intranet comme liste verte pour WIA. Vous pouvez également personnaliser la liste des serveurs activés pour l’authentification intégrée à l’aide de la stratégie [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) . Sur macOS, cette stratégie est nécessaire pour activer l’authentification intégrée.
 
 Pour prendre en charge l’authentification unique basée sur WIA sur MicrosoftEdge (version77 et ultérieure), vous devrez également effectuer une configuration côté serveur. Vous devrez probablement configurer la propriété de services de fédération Active Directory (AD FS) **WiaSupportedUserAgents** pour ajouter la prise en charge de la nouvelle chaîne d’agent utilisateur MicrosoftEdge. Si vous souhaitez obtenir des instructions concernant la configuration de la propriété, consultez [Afficher les paramètre WIASupportedUserAgent](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) et [Modifier les paramètres WIASupportedUserAgent](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings). Un exemple de la chaîne d’agent utilisateur MicrosoftEdge sur Windows10 est illustré ci-dessous. Si vous souhaitez en savoir plus, consultez l’article sur la [chaine de l’agent utilisateur MicrosoftEdge](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string). 
 
 L’exemple suivant de chaîne UA est destiné à la build du canal Dev la plus récente au moment de la publication de cet article:<br> `"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3951.0 Safari/537.36 Edg/80.0.334.2"`
 
-Sur MacOS, vous pouvez également utiliser les stratégies [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) et [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist) pour activer l’authentification unique Kerberos avec MicrosoftEdge.
+Pour les services qui nécessitent la délégation des informations d’identification de négociation, Microsoft Edge prend en charge la délégation contrainte à l’aide de la stratégie [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist) .
 
 ## Concepts d’authentification supplémentaires
 
