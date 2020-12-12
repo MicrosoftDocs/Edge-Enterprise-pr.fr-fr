@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2020
+ms.date: 12/10/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
-ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
+ms.openlocfilehash: b6d3ca2b485f6ce508f1a280fef48c4ed392d5fc
+ms.sourcegitcommit: 2887b30d46a9fe59d2ab9f95e638197ae058eaf7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195135"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "11205732"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -29,22 +29,14 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
-## Nouvelles stratégies déconseillées
+## Nouvelles stratégies
 
-Le tableau suivant répertorie les stratégies nouvelles et déconseillées pour cette mise à jour.
+Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour.
 
 | Nom | Légende |
-|-|-|
-|[PrinterTypeDenyList](#printertypedenylist)|Désactiver les types d’imprimante dans la liste d’exclusion|
-|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Autoriser le lancement de fichiers locaux en mode InternetExplorer|
-|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Ouvrir les fichiers locaux dans la liste verte des extensions de fichier en mode InternetExplorer|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Afficher le menu contextuel pour ouvrir un lien en mode InternetExplorer|
-|[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportement de la redirection intranet|
-|[UpdatePolicyOverride](#updatepolicyoverride)|Indique comment MicrosoftEdgeUpdate gère les mises à jour disponibles à partir de MicrosoftEdge|
-|[VerticalTabsAllowed](#verticaltabsallowed)|Configure la disponibilité d’une disposition verticale, pour les onglets, sur le côté du navigateur.|
-| [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols) DÉCONSEILLÉ|Autoriser la mise à niveau vers une ancienne version de TLS/DTLS dans WebRTC|
-
-
+|--|--|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Restreindre le mode d’impression graphique d’arrière-plan|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Mode d’impression graphique d’arrière-plan par défaut|
 
 ## Stratégies disponibles
 
@@ -188,6 +180,8 @@ et des conseils pour les services Microsoft|
 |[PrintHeaderFooter](#printheaderfooter)|Imprimer des en-têtes et des pieds de page|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Définir l’imprimante par défaut du système comme imprimante par défaut|
 |[PrinterTypeDenyList](#printertypedenylist)|Désactiver les types d’imprimante dans la liste d’exclusion|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restreindre le mode d’impression graphique d’arrière-plan|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Mode d’impression graphique d’arrière-plan par défaut|
 |[PrintingEnabled](#printingenabled)|Activer l’impression|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Taille de page par défaut pour l’impression|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimer via la boîte de dialogue Imprimer du système|
@@ -2756,7 +2750,7 @@ Déterminez une liste des sites, basés sur des formats d’URL, qui sont autori
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultPluginsSetting](#defaultpluginssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les motifs avec les caractères génériques «*» et «[*] » dans l’hôte ne sont plus pris en charge pour cette stratégie.
 
   #### Fonctionnalités prises en charge:
 
@@ -2825,7 +2819,7 @@ Déterminez une liste des sites, basés sur des formats d’URL, qui ne sont pas
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultPluginsSetting](#defaultpluginssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les motifs avec les caractères génériques «*» et «[*] » dans l’hôte ne sont plus pris en charge pour cette stratégie.
 
   #### Fonctionnalités prises en charge:
 
@@ -4174,7 +4168,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### Description
 
-  Par défaut, toutes les extensions sont autorisées. Toutefois, si vous bloquez toutes les extensions en définissant la stratégie «ExtensionInstallBlockList» sur «*», les utilisateurs peuvent uniquement installer les extensions définies dans cette stratégie.
+  La définition de cette stratégie spécifie les extensions qui ne sont pas soumises au blocage.
+
+Une valeur de liste de blocage de * signifie que toutes les extensions sont bloquées et que les utilisateurs ne peuvent installer que les extensions indiquées dans la liste verte.
+
+Par défaut, toutes les extensions sont autorisées. Toutefois, si vous avez interdit les extensions par stratégie, vous pouvez utiliser la liste des extensions autorisées pour modifier cette stratégie.
 
   #### Fonctionnalités prises en charge:
 
@@ -4237,11 +4235,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   #### Description
 
-  Répertoriez des extensions spécifiques que les utilisateurs ne peuvent PAS installer dans MicrosoftEdge. Lorsque vous déployez cette stratégie, toutes les extensions de cette liste, qui ont été installées précédemment, sont désactivées et l’utilisateur ne peut pas les activer. Si vous supprimez un élément de la liste des extensions bloquées, cette extension est automatiquement réactivée partout où elle a déjà été installée.
+  Vous permet de spécifier les extensions qui ne peuvent pas être installées par les utilisateurs. Les extensions déjà installées seront désactivées en cas de blocage, sans permettre à l’utilisateur de les activer. Après la suppression d’une extension désactivée de la mise en application, celle-ci est automatiquement réactivée.
 
-Utilisez «*» pour bloquer toutes les extensions qui ne sont pas répertoriées de façon explicite dans la liste verte. 
+Une valeur de liste de blocage de « * » signifie que toutes les extensions sont bloquées, sauf si elles sont explicitement répertoriées dans le verte.
 
-Si cette stratégie n’est pas configurée, les utilisateurs peuvent installer n’importe quelle extension dans MicrosoftEdge.
+Si cette stratégie n’est pas définie, l’utilisateur peut installer n’importe quelle extension dans Microsoft Edge.
 
   #### Fonctionnalités prises en charge:
 
@@ -4448,11 +4446,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   #### Description
 
-  Configure les paramètres de gestion d’extension pour MicrosoftEdge.
+  La définition de cette stratégie contrôle les paramètres de gestion des extensions pour Microsoft Edge, y compris tout contrôle par les stratégies associées aux extensions existantes. Cette stratégie remplace les stratégies héritées éventuellement définies.
 
-Cette stratégie contrôle plusieurs paramètres, y compris ceux contrôlés par des stratégies associées à une extension. Cette stratégie remplace les stratégies héritées si elles sont toutes les deux définies.
+Cette stratégie mappe un ID d’extension ou une URL de mise à jour à son paramètre spécifique. Une configuration par défaut peut être définie pour l’ID spécial «*», qui s’applique à toutes les extensions sans configuration personnalisée de cette stratégie. Avec une URL de mise à jour, la configuration s’applique aux extensions dont l’URL de mise à jour est exacte, indiquée dans le manifeste de l’extension ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
 
-Cette stratégie associe un ID d’extension ou une URL de mise à jour à sa configuration. Avec un ID d’extension, la configuration est appliquée uniquement à l’extension spécifiée. Définissez la configuration par défaut de l’ID spécial «*» pour qu’il s’applique à toutes les extensions qui ne sont pas spécifiquement répertoriées dans cette stratégie. Avec une URL de mise à jour, la configuration est appliquée à l’ensemble des extensions avec l’URL de mise à jour telle qu’elle est indiquée dans le fichier manifeste de cette extension, comme indiqué sur [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043).
+Remarque: pour les instances Windows qui ne sont pas jointes à un domaine Microsoft Active Directory, l’installation forcée est limitée aux applications et aux extensions figurant sur le site web des modules complémentaires Microsoft Edge.
+
 
   #### Fonctionnalités prises en charge:
 
@@ -5217,9 +5216,9 @@ Pour obtenir plus d’informations sur la configuration du mode plein écran, vo
 
   #### Description
 
-  Répertoriez les hôtes de messagerie native spécifiques que les utilisateurs peuvent utiliser dans MicrosoftEdge.
+  La définition de la stratégie spécifie quels hôtes de messagerie natifs ne font pas l’objet de la liste d’exclusion. Une valeur de liste d’exclusion de * signifie que tous les hôtes de messagerie natifs sont refusés, sauf s’ils sont explicitement autorisés.
 
-Par défaut, tous les hôtes de messagerie native sont autorisés. Si la stratégie [NativeMessagingBlocklist](#nativemessagingblocklist) est définie sur *, tous les hôtes de messagerie native sont bloqués, et seuls les hôtes de messagerie native, répertoriés ici, sont chargés.
+Tous les hôtes de messagerie native sont autorisés par défaut. Toutefois, si un hôte de messagerie native est refusé par la stratégie, l’administrateur peut utiliser la liste verte pour modifier cette stratégie.
 
   #### Fonctionnalités prises en charge:
 
@@ -5282,11 +5281,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   #### Description
 
-  Spécifie les hôtes de messagerie native qui ne doivent pas être utilisés.
+  La définition de cette stratégie spécifie les hôtes de messagerie native qui ne doivent pas être chargés. Une valeur de liste d’exclusion de * signifie que tous les hôtes de messagerie natifs sont refusés, sauf s’ils sont explicitement autorisés.
 
-Utilisez «*» pour bloquer tous les hôtes de messagerie native, sauf s’ils sont explicitement répertoriés dans la liste verte.
-
-Si cette stratégie n’est pas configurée, MicrosoftEdge charge tous les hôtes de messagerie native installés.
+Si vous n’avez pas désactivé cette stratégie, Microsoft Edge charge tous les hôtes de messagerie native installés.
 
   #### Fonctionnalités prises en charge:
 
@@ -5349,11 +5346,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   #### Description
 
-  Permet d’installer des hôtes de messagerie native côté utilisateur.
+  Si vous affectez à cette stratégie la valeur Activé ou si elle n’est pas définie, Microsoft Edge peut utiliser les hôtes de messagerie native installés au niveau de l’utilisateur.
 
-Si vous désactivez cette stratégie, MicrosoftEdge utilise uniquement les hôtes de messagerie native installés côté système.
-
-Par défaut, si cette stratégie n’est pas configurée, MicrosoftEdge autorise l’utilisation d’hôtes de messagerie native installés côté utilisateur.
+Si vous affectez à cette stratégie la valeur Désactivé, Microsoft Edge ne peut utiliser ces hôtes que s’ils sont installés au niveau du système.
 
   #### Fonctionnalités prises en charge:
 
@@ -6153,6 +6148,140 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   <string>local</string>
   <string>privet</string>
 </array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### PrintingAllowedBackgroundGraphicsModes
+
+  #### Restreindre le mode d’impression graphique d’arrière-plan
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 89 ou version ultérieure
+
+  #### Description
+
+  Restreint le mode d’impression graphique d’arrière-plan. Si cette stratégie n’est pas définie, il n’existe aucune restriction sur l’impression des graphiques d’arrière-plan.
+
+Mappage des options de stratégie:
+
+* tout (tout) = autoriser l’impression avec et sans graphique d’arrière-plan
+
+* activée (activée) = autoriser l’impression uniquement avec les graphiques d’arrière-plan
+
+* désactivé (désactivé) = autoriser l’impression uniquement sans graphique d’arrière-plan
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Chaîne
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: PrintingAllowedBackgroundGraphicsModes
+  - Nom de la stratégie: restreindre le mode d’impression graphique d’arrière-plan
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Printing
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de valeur: PrintingAllowedBackgroundGraphicsModes
+  - Type de valeur: REG_SZ
+
+  ##### Exemple de valeur:
+
+```
+"enabled"
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom de la clé de préférence: PrintingAllowedBackgroundGraphicsModes
+  - Exemple de valeur:
+``` xml
+<string>enabled</string>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### PrintingBackgroundGraphicsDefault
+
+  #### Mode d’impression graphique d’arrière-plan par défaut
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 89 ou version ultérieure
+
+  #### Description
+
+  Remplace le mode d’impression par défaut du graphique d’arrière-plan.
+
+Mappage des options de stratégie:
+
+* activée (activée) = activer le mode d’impression graphique d’arrière-plan par défaut
+
+* désactivé (désactivé) = désactiver le mode d’impression graphique d’arrière-plan par défaut
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Chaîne
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: PrintingBackgroundGraphicsDefault
+  - Nom de la stratégie de groupe: mode d’impression graphique d’arrière-plan par défaut
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Printing
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: PrintingBackgroundGraphicsDefault
+  - Type de valeur: REG_SZ
+
+  ##### Exemple de valeur:
+
+```
+"enabled"
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom de la clé de préférence: PrintingBackgroundGraphicsDefault
+  - Exemple de valeur:
+``` xml
+<string>enabled</string>
 ```
   
 
@@ -8292,7 +8421,7 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent choisir d’af
 
   Permet d’afficher les suggestions de Recherche Microsoft dans Bing appropriées dans la liste de suggestions de la barre d’adresse lorsque l’utilisateur tape une chaîne de recherche dans la barre d’adresse. Si vous activez cette stratégie ou si vous ne la configurez pas, les utilisateurs peuvent voir les résultats internes obtenus par la Recherche Microsoft dans Bing dans la liste de suggestions de la barre d’adresse de MicrosoftEdge. Pour afficher les résultats de Recherche Microsoft dans Bing, l’utilisateur doit être connecté à MicrosoftEdge avec son compte AzureAD pour cette organisation.
 Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas voir les résultats internes dans la liste de suggestions de la barre d’adresse de MicrosoftEdge.
-Si vous avez activé l’ensemble de stratégies qui force un moteur de recherche par défaut ([DefaultSearchProviderEnabled](#defaultsearchproviderenabled), [DefaultSearchProviderName](#defaultsearchprovidername) et [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)), et si le moteur de recherche spécifié n’est pas Bing, cette stratégie n’est pas applicable et aucune suggestion de Recherche Microsoft dans Bing n’apparaît dans la liste de suggestions de la barre d’adresse.
+À partir de la version89 de Microsoft Edge, Microsoft Search dans Bing suggestions sera disponible même si Bing n’est pas le fournisseur de recherche par défaut de l’utilisateur.
 
   #### Fonctionnalités prises en charge:
 
@@ -17951,9 +18080,8 @@ Si cette valeur n'est pas définie, la période par défaut de 604 800 000 milli
 
   #### Description
 
-  Si cette stratégie est activée ou si elle n'est pas définie, la règle d'intégrité du code du moteur de rendu est activée. Cette stratégie ne doit être désactivée qu'en cas de problèmes de compatibilité avec le logiciel tiers qui doit s'exécuter dans les processus du moteur de rendu de MicrosoftEdge.
-
-Désactiver cette stratégie affectera la sécurité et la stabilité de MicrosoftEdge, car des codes inconnus et potentiellement dangereux pourront être chargés dans les processus de son moteur de rendu.
+  Lorsque la stratégie est activée ou qu’elle est désactivée, l’intégrité du code de rendu est activée.
+Définir la stratégie sur Désactivé affecte la sécurité et la stabilité de Microsoft Edge en tant qu’inconnu et le code potentiellement dangereux peut être chargé dans les processus de rendu Microsoft Edge. Désactivez la stratégie uniquement en cas de problèmes de compatibilité avec le logiciel tiers qui doit s’exécuter dans les processus du moteur de rendu de Microsoft Edge.
 
   #### Fonctionnalités prises en charge:
 
