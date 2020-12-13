@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/10/2020
+ms.date: 12/11/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: b6d3ca2b485f6ce508f1a280fef48c4ed392d5fc
-ms.sourcegitcommit: 2887b30d46a9fe59d2ab9f95e638197ae058eaf7
+ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
+ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "11205732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "11218733"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -433,8 +433,6 @@ et des conseils pour les services Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gérer l’exposition des adresses IP locales par WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Limiter l’exposition de l’adresse IP locale par WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restreindre la portée des ports UDP locaux utilisés par WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Activer le widget Web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Autoriser le widget Web au démarrage de Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Utiliser la résolution du proxy Windows (déconseillée)|
 
 
@@ -21888,131 +21886,7 @@ Si vous ne configurez pas cette stratégie, ou si vous définissez une chaîne v
 ``` xml
 <string>10000-11999</string>
 ```
-  
-
-  [Retour au début](#microsoft-edge---policies)
-
-  ### WebWidgetAllowed
-
-  #### Activer le widget Web
-
-  
-  
-  #### Versions prises en charge:
-
-  - Sur Windows depuis la version88 ou versions ultérieures
-
-  #### Description
-
-  Active le widget Web. Lorsque cette option est activée, les utilisateurs peuvent utiliser le widget pour effectuer une recherche sur le Web à partir de leur ordinateur de bureau ou d’une application. Le widget fournit une zone de recherche qui affiche les suggestions Web et ouvre toutes les recherches sur le Web dans Microsoft Edge. La zone de recherche fournit des suggestions de recherche (par Bing) et d’URL. Le widget inclut également les vignettes de flux sur lesquelles les utilisateurs peuvent cliquer pour afficher plus d’informations sur msn.com dans un nouvel onglet ou une nouvelle fenêtre du navigateur Microsoft Edge. Les vignettes de flux peuvent inclure des publicités. Le widget peut être lancé à partir des paramètres Microsoft Edge ou à partir du menu «Autres outils» dans Microsoft Edge.
-
-Si vous activez ou ne configurez pas cette stratégie: le widget Web est automatiquement activé pour tous les profils.
-Dans les paramètres de Microsoft Edge, les utilisateurs verront l’option de lancement du widget.
-Dans les paramètres Microsoft Edge, les utilisateurs verront l’élément de menu pour l’exécution du widget au démarrage de Windows (démarrage automatique).
-L’option d’activation du widget au démarrage est activée si la stratégie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) est activée.
-Si la stratégie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) est désactivée ou n’est pas configurée, l’option permettant d’activer le widget au démarrage est désactivée.
-Les utilisateurs verront l’élément de menu pour le lancement du widget à partir du menu «Autres outils» de Microsoft Edge. Les utilisateurs peuvent lancer le widget à partir de l’option «Autres outils».
-Le widget peut être désactivé à l’aide de l’option «Quitter» dans la barre d’état système ou en fermant le widget à partir de la barre des tâches. Le widget est redémarré lors du redémarrage du système si le démarrage automatique est activé.
-
-Si vous désactivez cette stratégie: le widget Web est désactivé pour tous les profils.
-L’option de lancement du widget à partir des paramètres Microsoft Edge est désactivée.
-L’option de lancement de démarrage du widget au démarrage de Windows (démarrage automatique) est désactivée.
-L’option de lancement du widget à partir du menu «Autres outils» de Microsoft Edge est désactivée.
-
-  #### Fonctionnalités prises en charge:
-
-  - Peut être obligatoire: Oui
-  - Peut être recommandée: Non
-  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
-
-  #### Type de données:
-
-  - Booléen
-
-  #### Informations et paramètres Windows
-
-  ##### Informations relatives à la stratégie de groupe (ADMX)
-
-  - Nom unique GP: WebWidgetAllowed
-  - Nom GP: Activer le widget Web
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
-  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
-  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
-
-  ##### Paramètres du Registre Windows
-
-  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
-  - Chemin d’accès (recommandé): N/A
-  - Nom de valeur: WebWidgetAllowed
-  - Type de valeur: REG_DWORD
-
-  ##### Exemple de valeur:
-
-```
-0x00000001
-```
-
-  
-
-  [Retour au début](#microsoft-edge---policies)
-
-  ### WebWidgetIsEnabledOnStartup
-
-  #### Autoriser le widget Web au démarrage de Windows
-
-  
-  
-  #### Versions prises en charge:
-
-  - Sur Windows depuis la version88 ou versions ultérieures
-
-  #### Description
-
-  Permet le démarrage de l’exécution du widget Web au démarrage de Windows.
-
-Si vous activez: l’exécution du widget Web démarre au démarrage de Windows par défaut.
-Si le widget est désactivé via lma stratégie [WebWidgetAllowed](#webwidgetallowed), cette stratégie ne démarre pas le widget au démarrage de Windows.
-
-Si vous désactivez cette stratégie: Le widget Web ne démarre pas au démarrage de Windows pour tous les profils.
-L’option de démarrage du widget au démarrage de Windows est désactivée et dans les paramètres de Microsoft Edge également.
-
-Si vous ne configurez pas cette stratégie: Le widget Web ne démarre pas au démarrage de Windows pour tous les profils.
-L’option de démarrage du widget au démarrage de Windows est désactivée dans les paramètres de Microsoft Edge.
-
-  #### Fonctionnalités prises en charge:
-
-  - Peut être obligatoire: Oui
-  - Peut être recommandée: Non
-  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
-
-  #### Type de données:
-
-  - Booléen
-
-  #### Informations et paramètres Windows
-
-  ##### Informations relatives à la stratégie de groupe (ADMX)
-
-  - Nom unique GP: WebWidgetIsEnabledOnStartup
-  - Nom GP: Autoriser le widget Web au démarrage de Windows
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
-  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
-  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
-
-  ##### Paramètres du Registre Windows
-
-  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
-  - Chemin d’accès (recommandé): N/A
-  - Nom de valeur: WebWidgetIsEnabledOnStartup
-  - Type de valeur: REG_DWORD
-
-  ##### Exemple de valeur:
-
-```
-0x00000001
-```
-
-  
+ 
 
   [Retour au début](#microsoft-edge---policies)
 
