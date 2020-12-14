@@ -3,28 +3,117 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/04/2020
+ms.date: 12/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 39e6062d8cf7ce0e5f03ecf26daaae4cc06bd4cf
-ms.sourcegitcommit: 46d42a284e54574811a7c934a36d85a3526fc8ea
+ms.openlocfilehash: 258a8f06bf726d1260536de5216911918bdfd2c4
+ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "11196535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "11218693"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta.
 
-> [!IMPORTANT]
-> Consultez cette [mise à jour sur les versions de canaux Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+<!-- begin major 88 -->
+## Version88.0.705.18: 9décembre
 
-## Version 87.0.664.55: 3décembre
+### Mises à jour des fonctionnalités
+
+- **Fonctionnalités obsolètes:**
+
+  - Prise en charge du protocole FTP obsolète. La prise en charge du protocole FTP hérité a été supprimée de Microsoft Edge. Toute tentative d’accès à un lien FTP entraînera l’ouverture par le système d’exploitation d’une application externe pour gérer le lien FTP. Une autre solution pour les administrateurs informatiques consiste à configurer Microsoft Edge afin qu’il utilise le mode IE pour les sites qui dépendent du protocole FTP.
+  - La prise en charge d’Adobe Flash sera supprimé. À partir de la version88 de Microsoft Edge Beta, la fonctionnalité et la prise en charge d’Adobe Flash seront supprimées. Pour en savoir plus: [Mise à jour concernant la fin de la prise en charge d’Adobe Flash Player – Blog Microsoft Edge (Windows.com)](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/)
+
+- **Authentification:**
+
+  - L’authentification unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) et le compte Microsoft (MSA) sur macOS et les versions inférieures de Windows. Un utilisateur connecté à Microsoft Edge sur macOS ou Microsoft Windows de version inférieure (7 et 8.1) est désormais connecté automatiquement aux sites web configurés pour autoriser l’authentification unique avec des comptes professionnels et Microsoft (par exemple, bing.com, office.com, msn.com, outlook.com).<br>Remarque: il est possible que l’utilisateur doive se déconnecter et se reconnecter s’il se connecte à une version antérieure à la version88 de Microsoft Edge pour utiliser cette fonctionnalité.
+  - Basculer automatiquement les utilisateurs sur macOS vers leur profil de travail pour les sites qui s’authentifient avec leur compte professionnel. À partir de la version88 de Microsoft Edge, nous offrons la possibilité de basculer entre les sites qui s’authentifient avec le profil de travail de l’utilisateur sur macOS.<br>Remarque: il est possible que l’utilisateur doive se déconnecter et se reconnecter s’il se connecte à une version antérieure à la version88 de Microsoft Edge pour utiliser cette fonctionnalité.
+
+- Option du mode plein écran pour terminer la session. Le bouton Mettre fin à la session est désormais disponible en mode plein écran de navigation publique. Cette fonctionnalité permet de supprimer les données et paramètres du navigateur lorsque Microsoft Edge est fermé. Pour en savoir plus sur les fonctionnalités et la feuille de route du mode plein écran, voir [Configurer le mode plein écran Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
+
+- **Sécurité et confidentialité:**
+
+  - Des alertes sont générées si le mot de passe d’un utilisateur est détecté dans une fuite en ligne. Les mots de passe des utilisateurs sont examinés par rapport à un référentiel d’informations d’identification connues qui ont été divulguées et envoient à l’utilisateur une alerte si une correspondance est trouvée. Pour garantir la sécurité et la confidentialité, les mots de passe des utilisateurs sont hachés et chiffrés lorsqu’ils sont vérifiés par rapport à la base de données des informations d’identification divulguées.
+  - Mettre automatiquement à niveau le contenu mixte. Les pages sécurisées fournies via HTTPS peuvent contenir des images de référence fournies via HTTP non sécurisé. Pour améliorer la confidentialité et la sécurité dans Microsoft Edge88, ces images seront récupérées via HTTPS. Si l’image n’est pas disponible via HTTPS, elle n’est pas chargée.
+  - Afficher les autorisations de site par site et par activité récente. À partir de Microsoft Edge88, les utilisateurs peuvent gérer plus facilement les autorisations de site. Ils peuvent afficher les autorisations par site web, et non plus seulement par type d’autorisation. Par ailleurs, nous avons ajouté une section activité récente qui permettra à l’utilisateur d’afficher les dernières modifications apportées à ses autorisations de site.
+  - Amélioration des contrôles pour les cookies du navigateur. À partir de Microsoft Edge88, les utilisateurs peuvent supprimer des cookies tiers sans affecter les cookies de première partie. Les utilisateurs peuvent également filtrer leurs cookies selon s’il s’agit d’une première ou tierce partie et les trier en fonction du nom, du nombre de cookies, de la quantité de données stockées et de la dernière modification.
+
+- **Performance:**
+
+  - Améliorez les performances du navigateur grâce aux onglets en veille. Les onglets en veille améliorent les performances du navigateur en mettant les onglets inactifs en veille pour libérer des ressources système, telles que la mémoire et le processeur de sorte que les onglets actifs ou d’autres applications puissent les utiliser. Les utilisateurs peuvent empêcher la mise en veille de sites et configurer le délai avant qu’un onglet inactif ne soit mis en veille. Pour ne pas gêner les utilisateurs dans leur travail, il est également possible de faire en sorte que certains sites ne soient pas mis en veille, tels que les sites intranet. Cette fonctionnalité peut être gérée avec des stratégies de groupe.
+  - Améliorez la vitesse de démarrage de Microsoft Edge avec l’Accélérateur de démarrage. Pour améliorer la vitesse de démarrage de Microsoft Edge, nous avons conçu une fonctionnalité appelée Accélérateur de démarrage. L’Accélérateur de démarrage accélère le lancement en permettant à Microsoft Edge de s’exécuter en arrière-plan. Remarque: cette fonctionnalité est limitée à un groupe d’utilisateurs sélectionnés de manière aléatoire et ayant activé l’expérimentation. Ces utilisateurs donnent des commentaires à l’équipe chargée de la fonctionnalité.
+
+- **Productivité:**
+
+  - Améliorez votre productivité et le travail multitâche grâce aux onglets verticaux. À mesure que vous ajoutez des onglets horizontaux, les titres de site sont tronqués et les commandes des onglets perdent en visibilité. Cela interrompt le flux de travail de l’utilisateur, car il passe plus de temps à rechercher, à passer de l’un à l’autre et à gérer ses onglets, et moins de temps sur la tâche en cours. Les onglets verticaux permettent aux utilisateurs de déplacer leurs onglets vers le côté, là où les icônes alignées à la verticale et les titres de sites plus longs permettent de jeter un coup d’œil rapide pour identifier l’onglet que vous voulez ouvrir et basculer vers celui-ci.
+  - Remplissage automatique du champ de date de naissance. Microsoft Edge vous permet d’économiser du temps et de l’énergie lors du remplissage des formulaires et de la création de comptes en ligne à l’aide de la saisie semi-automatique des données utilisateur, telles que les adresses, les noms, les numéros de téléphone, etc. Microsoft Edge prend désormais en charge le champ Date de naissance que les utilisateurs peuvent enregistrer et remplir automatiquement. Un utilisateur peut afficher, modifier et supprimer ces informations à tout moment dans ses paramètres de profil.
+  - Améliorations apportées à l’historique Récemment fermés. L’historique Récemment fermés conserve désormais les 25derniers onglets et fenêtres de n’importe quelle session de navigation, et non plus seulement la session précédente. Les utilisateurs peuvent sélectionner Récemment fermés dans la nouvelle expérience d’historique pour afficher tous les onglets qui ont été ouverts.
+
+- **PDF:**
+
+  - Affichage d’un document PDF en mode livre (deux pages) À partir de la version88 de Microsoft Edge, les utilisateurs peuvent consulter des documents PDF en affichage à une ou deux pages (mode livre). Pour modifier l’affichage, cliquez sur le bouton **Mode Page** dans la barre d’outils.
+  - Prise en charge des notes de texte ancré pour les fichiers PDF. À partir de la version87 de Microsoft Edge, les utilisateurs peuvent ajouter des notes de texte tapées sur n’importe quelle portion de texte dans des fichiers PDF.
+  - Expérience de sélection de texte plus fluide dans les documents PDF. Les utilisateurs bénéficient d’une expérience de sélection de texte plus fluide et cohérente sur les documents PDF ouverts dans Microsoft Edge.
+  - Afficher les pages web enregistrées en tant que fichiers PDF dans la barre Téléchargements. Les utilisateurs peuvent désormais afficher les fichiers PDF générés en définissant Enregistrer en tant que PDF comme destination d’impression des pages web dans la barre Téléchargements.
+
+- **Polices:**
+
+  - Les icônes du navigateur sont mises à jour dans le système Fluent Design. Dans le cadre de nos efforts continus en termes de Fluent Design dans le navigateur, nous avons apporté des modifications de façon à aligner davantage les icônes sur le nouveau système d’icônes Microsoft. Ces modifications peuvent avoir une incidence sur un grand nombre de nos interfaces utilisateur avec une interaction tactile importante, y compris les onglets, la barre d’adresses, ainsi que les icônes de navigation et de recherche d’itinéraire dans nos différents menus.
+  - Amélioration du rendu des polices. Le rendu du texte est amélioré pour améliorer la clarté et réduire le flou.
+
+### Mises à jour de stratégies
+
+#### Nouvelles stratégies
+
+16nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
+
+- [BlockExternalExtensions](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#blockexternalextensions): empêche l’installation d’extensions externes.
+- [InternetExplorerIntegrationLocalFileAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalfileallowed): autorise le lancement de fichiers locaux en mode Internet Explorer.
+- [InternetExplorerIntegrationLocalFileExtensionAllowList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist): ouvre les fichiers locaux dans la liste verte des extensions de fichier en mode Internet Explorer.
+- [InternetExplorerIntegrationLocalFileShowContextMenu](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalfileshowcontextmenu): afficher le menu contextuel pour ouvrir un lien en mode Internet Explorer.
+- [IntranetRedirectBehavior](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#intranetredirectbehavior): comportement de la redirection intranet.
+- [PrinterTypeDenyList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printertypedenylist): désactive les types d’imprimante dans la liste d’exclusion.
+- [ShowMicrosoftRewards](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showmicrosoftrewards): affiche les expériences Microsoft Rewards.
+- [SleepingTabsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sleepingtabsenabled): configure les onglets en veille.
+- [SleepingTabsTimeout](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sleepingtabstimeout): définit le délai d’inactivité des onglets en arrière-plan avant qu’ils ne soient mis en veille.
+- [SleepingTabsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sleepingtabsblockedforurls): bloque les onglets en veille sur des sites spécifiques.
+- [StartupBoostEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#startupboostenabled): active l’accélérateur de démarrage.
+- [UpdatePolicyOverride](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#updatepolicyoverride): indique comment Microsoft Edge Update gère les mises à jour disponibles à partir de Microsoft Edge.
+- [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed): configure la disponibilité de la disposition verticale pour les onglets situés sur le côté du navigateur.
+- [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols): autorise le passage à une version antérieure héritée de TLS/DTLS dans WebRTC.
+- [WebWidgetAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetallowed): active le widget Web.
+- [WebWidgetIsEnabledOnStartup](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetisenabledonstartup): autorise le widget Web au démarrage de Windows.
+
+#### Stratégies déconseillées
+
+Les stratégies suivantes sont déconseillées.
+
+- [ProactiveAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proactiveauthenabled): active l’authentification proactive.
+- [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist): configure les règles de contournement du proxy.
+- [ProxyMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxymode): configure les paramètres du serveur proxy.
+- [ProxyPacUrl](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxypacurl): définit l’URL du fichier proxy .pac.
+- [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver): configure l’adresse ou l’URL du serveur proxy.
+- [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies): autorise WebDriver à remplacer les stratégies incompatibles.
+
+#### Stratégies obsolètes
+
+Les stratégies suivantes sont obsolètes.
+
+- [DefaultPluginsSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultpluginssetting): paramètre Adobe Flash par défaut.
+- [PluginsAllowedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#pluginsallowedforurls): autorise le plug-in Adobe Flash sur des sites spécifiques.
+- [PluginsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#pluginsblockedforurls): bloque le plug-in Adobe Flash sur des sites spécifiques.
+- [RunAllFlashInAllowMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#runallflashinallowmode): étend le paramètre de contenu Adobe Flash à l’ensemble du contenu.
+
+<!-- end major 88 -->
+
+## Version87.0.664.55: 3décembre
 
 Résolution de divers bogues et problèmes de performances. La nouvelle fonctionnalité suivante est prise en charge dans cette version.
 
