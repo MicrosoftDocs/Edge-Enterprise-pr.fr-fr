@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 258a8f06bf726d1260536de5216911918bdfd2c4
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: 45389aec9eb8f174abe32d0e4ac86509a109e2fa
+ms.sourcegitcommit: c7c326c97926764d2d614520c1c8dc2546254c98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218693"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "11218940"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -88,8 +88,6 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 - [UpdatePolicyOverride](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#updatepolicyoverride): indique comment Microsoft Edge Update gère les mises à jour disponibles à partir de Microsoft Edge.
 - [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed): configure la disponibilité de la disposition verticale pour les onglets situés sur le côté du navigateur.
 - [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols): autorise le passage à une version antérieure héritée de TLS/DTLS dans WebRTC.
-- [WebWidgetAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetallowed): active le widget Web.
-- [WebWidgetIsEnabledOnStartup](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetisenabledonstartup): autorise le widget Web au démarrage de Windows.
 
 #### Stratégies déconseillées
 
