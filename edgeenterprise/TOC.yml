@@ -1,4 +1,4 @@
-# last revised 11/16/2020
+# last revised 12/14/2020
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
@@ -74,7 +74,7 @@
     - name: Configurer pour Windows
       href: configure-microsoft-edge.md
     - name: Configurer pour Windows avec Intune
-      href: configure-edge-with-intune.md
+      href: 'https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: Configurer pour Windows avec la gestion des périphériques mobiles
       href: configure-edge-with-mdm.md
     - name: Configurer pour macOS à l'aide d'un fichier .plist
