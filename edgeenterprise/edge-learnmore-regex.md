@@ -387,7 +387,7 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | Old\_Sogdian |
 | Old\_South\_Arabian |
 | Old\_Turkic |
-| Oriya |
+| Odia |
 | Osage |
 | Osmanya |
 | Pahawh\_Hmong |
