@@ -192,4 +192,4 @@
     - name: 'Vidéo: sécurité, compatibilité et facilité de gestion'
       href: microsoft-edge-video-security-compatibility-manageability.md
 - name: Forum Aux Questions
-  href: faqs-edge-in-the-enterprise.md
+  href: faqs-edge-in-the-enterprise.yml
