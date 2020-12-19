@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Forum aux questions sur Edge dans l’entreprise
+  title: Forum aux questions (FAQ) sur Edge au sein de l’entreprise
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
@@ -10,14 +10,14 @@ metadata:
   ms.prod: microsoft-edge
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
-  description: Forum aux questions sur le déploiement de MicrosoftEdge dans l’entreprise
-  ms.openlocfilehash: 8a260d4830de4bb84ef6744be1871b148a2466e6
-  ms.sourcegitcommit: 9e92bea0a3e2e7f1ef373c34eb761115508e747f
+  description: Forum aux questions (FAQ) sur le déploiement de Microsoft Edge au sein de l’entreprise
+  ms.openlocfilehash: 59a47c7a37629e94ff50d6319fb96e8bf45f7f63
+  ms.sourcegitcommit: d1ecab8d3d9f7a369c2690c0e6eaa9b12520ae46
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/16/2020
-  ms.locfileid: "11229510"
-title: Forum aux questions sur MicrosoftEdge dans l’entreprise
+  ms.lasthandoff: 12/18/2020
+  ms.locfileid: "11236811"
+title: Forum aux questions (FAQ) sur Microsoft Edge au sein de l’entreprise
 summary: >
   > [!NOTE]
 
@@ -26,7 +26,8 @@ sections:
 - name: Ignorance
   questions:
   - question: Comment savoir de quelle version de MicrosoftEdge je dispose?
-    answer: Dans le coin supérieur droit de Microsoft Edge, sélectionnez l’icône de points de suspension (**...**), puis sélectionnez **paramètres**. Sélectionnez **A propos de MicrosoftEdge** pour afficher votre version de MicrosoftEdge.
+    answer: >
+      Dans le coin supérieur droit de Microsoft Edge, sélectionnez l’icône de points de suspension (**...**), puis sélectionnez **paramètres**. Sélectionnez **A propos de MicrosoftEdge** pour afficher votre version de MicrosoftEdge.
   - question: Internet Explorer11 continuera-t-il à recevoir des mises à jour?
     answer: >
       Nous nous engageons à ce qu’Internet Explorer reste un navigateur pris en charge, fiable et sécurisé. Internet Explorer est toujours un composant de Windows et suit le cycle de vie du support technique du système d’exploitation sur lequel il est installé. Pour plus d’informations, consultez [FAQ sur le cycle de vie: Internet Explorer](https://support.microsoft.com/help/17454/). Bien que nous continuions à prendre en charge et à mettre à jour Internet Explorer, les fonctionnalités et mises à jour de plateforme les plus récentes seront disponibles uniquement dans MicrosoftEdge.
