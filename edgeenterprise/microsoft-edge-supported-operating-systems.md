@@ -3,19 +3,19 @@ title: Systèmes d’exploitation prenant en charge MicrosoftEdge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 12/10/2020
+ms.date: 12/17/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Systèmes d’exploitation prenant en charge MicrosoftEdge
-ms.openlocfilehash: 3d3b9c341230aff4ab8fb7dbc1beb40bd2025beb
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: 866708bc1d24523f47237a5242575a16544b8009
+ms.sourcegitcommit: 7db4c9854175898844ce3daf75d8007cfc6632a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218723"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "11237246"
 ---
 # Systèmes d’exploitation prenant en charge MicrosoftEdge
 
@@ -43,8 +43,6 @@ Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge 
 - Windows 10 IoT entreprise SAC _***
 - Windows 10 IoT entreprise 2019 LTSC ****
 
-
-
 ### WindowsServer
 
 - Windows Server 2008 R2 **
@@ -55,7 +53,7 @@ Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge 
 - Windows Server (SAC)
 
 > [!IMPORTANT]
-> * * Nous continuerons à prendre en charge Microsoft Edge sur Windows 7 et Windows Server 2008 R2 jusqu’au 15 juillet 2021. Ces systèmes d’exploitation ne sont pas pris en charge et Microsoft vous recommande de migrer vers un système d’exploitation pris en charge tel que Windows 10. Bien que Microsoft Edge vous aide à rester plus sécurisé sur le web, il est possible que votre PC soit toujours vulnérable aux risques de sécurité. Pour que le mode IE soit pris en charge sur ces systèmes d’exploitation, les appareils doivent disposer des [Mises à jour de sécurité étendues pour Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Sans les mises à jour de sécurité étendues de Windows 7, les fonctionnalités d’Internet Explorer sont exposées aux risques de sécurité. En outre, il se peut que les fonctionnalités du mode IE cessent de fonctionner sans que la maintenance soit poursuivie par les mises à jour de sécurité étendues.  
+> **Nous continuerons à prendre en charge MicrosoftEdge sur Windows7 et WindowsServer 2008R2 jusqu’au 15janvier2022. Ces systèmes d’exploitation ne sont pas pris en charge et Microsoft vous recommande de migrer vers un système d’exploitation pris en charge tel que Windows 10. Bien que Microsoft Edge vous aide à rester plus sécurisé sur le web, il est possible que votre PC soit toujours vulnérable aux risques de sécurité. Pour que le mode IE soit pris en charge sur ces systèmes d’exploitation, les appareils doivent disposer des [Mises à jour de sécurité étendues pour Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Sans les mises à jour de sécurité étendues de Windows 7, les fonctionnalités d’Internet Explorer sont exposées aux risques de sécurité. En outre, il se peut que les fonctionnalités du mode IE cessent de fonctionner sans que la maintenance soit poursuivie par les mises à jour de sécurité étendues.  
 >
 > **_ De la même façon que ci-dessus, pour les versions de Windows10SAC qui ne sont pas prises en charge, mais si MicrosoftEdge est pris en charge, il est conseillé d’effectuer une mise à niveau vers une version de Windows10SAC prise en charge dès que possible pour maintenir la sécurité. MicrosoftEdge pris en charge dans cet état doit être considéré comme un pont temporaire pour obtenir un état de système d’exploitation pris en charge.
 >
@@ -76,6 +74,10 @@ Microsoft Edge pour Android peut s'installer sur des tablettes et des téléphon
 ### Chromebooks
 
 Microsoft Edge ne prend pas en charge Chromebooks.
+
+## Modifications récentes
+
+- **17/12/2020**: le support MicrosoftEdge sur Windows7 et WindowsServer 2008R2 étendu jusqu’au 15janvier2022.
 
 ## Voir également
 
