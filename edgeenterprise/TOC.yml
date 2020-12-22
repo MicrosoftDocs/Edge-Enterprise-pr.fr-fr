@@ -1,4 +1,4 @@
-# last revised 12/14/2020
+# last revised 12/21/2020
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
@@ -173,6 +173,8 @@
           href: edge-learnmore-neededge.md
         - name: Syntaxe expression régulière 2 (re2.h)
           href: edge-learnmore-regex.md
+        - name: Réinitialisation des données Microsoft Edge
+          href: edge-learnmore-reset-data-in-cloud.md
         - name: Variable du répertoire de données utilisateur
           href: edge-learnmore-create-user-directory-vars.md
         - name: Utilisation du Rollback Microsoft Edge pour les entreprises
