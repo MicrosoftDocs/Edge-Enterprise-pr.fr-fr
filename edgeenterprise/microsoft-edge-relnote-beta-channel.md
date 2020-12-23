@@ -3,23 +3,27 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/16/2020
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: ee992fad6effe1f10b72c34f3073915a22e13ccd
-ms.sourcegitcommit: 124e8bc890c80ffd68e25b4acc3815ef2dda699e
+ms.openlocfilehash: 02be654a3a3cd4dd4a4e47f4708e782c768ba693
+ms.sourcegitcommit: 28cdf201b1bd143337950ed8065c86c4005ae33b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11229688"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "11247176"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta.
+
+## Version 88.0.705.29:21 décembre
+
+Résolution de divers bogues et problèmes de performances.
 
 <!-- begin major 88 -->
 ## Version88.0.705.18: 9décembre
@@ -576,7 +580,7 @@ Un utilisateur saisit «powerbi» comme «powerbbi».com. Le docteur de lien sug
 
 #### Nouvelles stratégies
 
-15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
+15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
 - [AllowSurfGame](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowsurfgame) –  Autoriser le jeu de surf.
 - [AllowTokenBindingForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowtokenbindingforurls) – Configurer la liste des sites avec lesquels MicrosoftEdge tentera d’établir une liaison de jeton.

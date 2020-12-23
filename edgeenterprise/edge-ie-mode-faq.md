@@ -1,21 +1,21 @@
 ---
 title: FAQ sur le mode IE
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/27/2020
+ms.author: shisub
+author: dan-wesley
+manager: srugh
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Forum aux questions et résolution des problèmes pour Microsoft Edge avec le mode IE
-ms.openlocfilehash: fcceb9eab19d667f772c593fe4f362606c1623ff
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979717"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238171"
 ---
 # FAQ sur le mode IE
 
@@ -81,6 +81,20 @@ Il n’existe pas de ligne de commande explicite dans Microsoft Edge pour mettre
 2. Utilisez la ligne de commande `--user-data-dir=<path>`, mais avec un chemin d’accès différent pour chaque session. Si nécessaire, vous pouvez créer un utilitaire permettant à l’utilisateur d’exécuter et de lancer Microsoft Edge et de modifier le chemin d’accès de la session.
 
 Si aucune des options ci-dessus ne fonctionne pour votre scénario, contactez l’un de nos canaux de commentaires: support Microsoft, [Forum TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)ou [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/forums/928825-enterprise).
+
+### Est-il possible d’enregistrer les liens sous forme de pages web en mode Internet Explorer?
+ 
+Oui, vous pouvez activer l’option Enregistrer la cible sous dans le menu contextuel du mode InternetExplorer dans MicrosoftEdge. Pour ce faire, configurez la stratégie de groupe *«Autoriser Enregistrer la cible sous dans le mode InternetExplorer»* située sur *Configuration de l'ordinateur > Modèles d’administration > Composants Windows > Internet Explorer*.
+Le mécanisme d’enregistrement fonctionne de la même façon que dans InternetExplorer et si la cible est enregistrée sous forme de fichier HTML, la réouverture du fichier entraîne le rendu de la page dans MicrosoftEdge.
+ 
+Notez que cette fonctionnalité nécessite les mises à jour de système d’exploitation minimales suivantes:
+- Windows10, version2004, Windows Server version2004, Windows10, version20H2: [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)
+- Windows10, version1903, Windows10, version1909, Windows Server version1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)
+- Windows10, version1809, Windows Server version1809, Windows Server2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)
+- Windows10, version1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
+- Windows10, version1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
+- Windows10, version1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
+
 
 ## Voir également
 
