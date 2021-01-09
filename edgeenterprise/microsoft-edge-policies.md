@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/11/2020
+ms.date: 01/07/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
+ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218733"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "11254972"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -29,14 +29,18 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
+
 ## Nouvelles stratégies
 
 Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour.
 
 | Nom | Légende |
-|--|--|
-|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Restreindre le mode d’impression graphique d’arrière-plan|
-|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Mode d’impression graphique d’arrière-plan par défaut|
+|-|-|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Autoriser l’authentification de base pour HTTP|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Ne définissez pas window.opener pour les liens ciblant \_blank|
+|[WebWidgetAllowed](#webwidgetallowed)|Autoriser le widget web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Activer le widget web au démarrage de Windows|
+
 
 ## Stratégies disponibles
 
@@ -50,7 +54,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[Paramètres du mode kiosque](#kiosk-mode-settings)|[Messagerie native](#native-messaging)|
 |[Gestionnaire et protection des mots de passe](#password-manager-and-protection)|[Niveau de performance](#performance)|
 |[Impression](#printing)|[Serveur proxy](#proxy-server)|
-|[Paramètres de l’onglet endormi](#sleeping-tabs-settings)|[Paramètres SmartScreen](#smartscreen-settings)|
+|[Paramètres des onglets en veille](#sleeping-tabs-settings)|[Paramètres SmartScreen](#smartscreen-settings)|
 |[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|[Supplémentaire](#additional)|
 
 
@@ -141,6 +145,7 @@ et des conseils pour les services Microsoft|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Définit une liste des serveurs auxquels MicrosoftEdge peut déléguer les informations d’identification de l’utilisateur|
 |[AuthSchemes](#authschemes)|Méthodes d’authentification prises en charge|
 |[AuthServerAllowlist](#authserverallowlist)|Configurer la liste des serveurs d’authentification autorisés|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Autoriser l’authentification de base pour HTTP|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Désactiver la consultation CNAME lors de la négociation de l’authentification Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Inclure un port non standard dans le SPN Kerberos|
 |[NtlmV2Enabled](#ntlmv2enabled)|Contrôler l’activation de l’authentification NTLMv2|
@@ -194,13 +199,13 @@ et des conseils pour les services Microsoft|
 |[ProxyPacUrl](#proxypacurl)|Définissez l’URL du fichier .pac du proxy|
 |[ProxyServer](#proxyserver)|Configurer l’adresse ou l’URL du serveur proxy (déconseillé)|
 |[ProxySettings](#proxysettings)|Paramètres du proxy|
-### [*Paramètres de l’onglet endormi*](#sleeping-tabs-settings-policies)
+### [*Paramètres des onglets en veille*](#sleeping-tabs-settings-policies)
 
 |Nom de la stratégie|Caption|
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquer les onglets en sommeil sur des sites spécifiques|
-|[SleepingTabsEnabled](#sleepingtabsenabled)|Configurer les onglets en sommeil|
-|[SleepingTabsTimeout](#sleepingtabstimeout)|Définir le délai d’inactivité de l’onglet arrière-plan pour les onglets en veille|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquer les onglets en veille sur des sites spécifiques|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Configurer les onglets en veille|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Définir le délai d’inactivité de l’onglet en arrière-plan pour les onglets en veille|
 ### [*Paramètres SmartScreen*](#smartscreen-settings-policies)
 
 |Nom de la stratégie|Caption|
@@ -235,7 +240,7 @@ et des conseils pour les services Microsoft|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Paramètres des annonces pour les sites contenant des annonces gênantes|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Activer la suppression de l’historique du navigateur et de l’historique des téléchargements|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Autoriser les boîtes de dialogue de sélection de fichier|
-|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Autorise une page à afficher les fenêtres contextuelles pendant son déchargement|
+|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Permet à une page d’afficher des fenêtres contextuelles pendant son déchargement (obsolète)|
 |[AllowSurfGame](#allowsurfgame)|Autoriser le jeu de surf|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Autoriser les pages à envoyer des demandes XHR synchrones lors de l’opération de rejet de page (déconseillé)|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configurer la liste des sites avec lesquels MicrosoftEdge tentera d’établir une liaison de jetons|
@@ -316,7 +321,7 @@ et des conseils pour les services Microsoft|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configurer la sélection automatique d’un certificat par MicrosoftEdge lorsqu’il existe plusieurs correspondances de certificats pour un site configuré avec «AutoSelectCertificateForUrls»|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Activer l’utilisation des profils éphémères|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Appliquer le filtre adulte Google|
-|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Utiliser une stratégie de renvoi par défaut no-referrer-when-downgrade (déconseillé).|
+|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Utiliser une stratégie de référence par défaut de no-referrer-when-downgrade (obsolète)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Forcer l’exécution du code de mise en réseau dans le processus du navigateur (obsolète)|
 |[ForceSync](#forcesync)|Forcer la synchronisation des données du navigateur et ne pas afficher l’invite de consentement de synchronisation|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Forcer le mode restreint minimal sur YouTube|
@@ -357,7 +362,7 @@ et des conseils pour les services Microsoft|
 |[ManagedSearchEngines](#managedsearchengines)|Gérer les moteurs de recherche|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Nombre maximal de connexions simultanées au serveur proxy|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Autoriser Google Cast à se connecter aux appareils Cast sur toutes les adresses IP|
-|[MetricsReportingEnabled](#metricsreportingenabled)|Activer les rapports de données d’utilisation et d’incident (déconseillé)|
+|[MetricsReportingEnabled](#metricsreportingenabled)|Activer les rapports de données liés à l’utilisation et aux incidents (obsolète)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Activer l’occlusion de fenêtre native|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Définition d’un délai d’expiration pour la navigation à l’onglet de la liste des sites en mode entreprise|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Activer la prédiction réseau|
@@ -390,7 +395,7 @@ et des conseils pour les services Microsoft|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Activer les suggestions de recherche|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Sites web ou domaines automatiquement autorisés à utiliser l’attestation de clé de sécurité directe|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Envoyer tous les sites intranet vers Internet Explorer|
-|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Envoyer des informations sur les sites pour améliorer les services Microsoft (déconseillé)|
+|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Envoyer des informations sur le site pour améliorer les services Microsoft (obsolète)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Autoriser l’accès aux capteurs sur des sites spécifiques|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquer l’accès aux capteurs sur des sites spécifiques|
 |[SerialAskForUrls](#serialaskforurls)|Autoriser l’API Serial sur des sites spécifiques|
@@ -410,6 +415,7 @@ et des conseils pour les services Microsoft|
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Activer une fonctionnalité de sécurité TLS1.3 pour les ancres d’approbation locales (obsolète)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Spécifier les suites de chiffrement TLS à désactiver|
 |[TabFreezingEnabled](#tabfreezingenabled)|Autoriser le gel des onglets d’arrière-plan|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Ne définissez pas window.opener pour les liens ciblant _blank|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Activer la possibilité de mettre fin aux processus dans le gestionnaire des tâches|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Définir une limite de mémoire en mégaoctets qu’une seule instance de MicrosoftEdge peut utiliser|
 |[TrackingPrevention](#trackingprevention)|Bloquer le suivi de l’activité de navigation sur le web des utilisateurs|
@@ -433,6 +439,8 @@ et des conseils pour les services Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gérer l’exposition des adresses IP locales par WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Limiter l’exposition de l’adresse IP locale par WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restreindre la portée des ports UDP locaux utilisés par WebRTC|
+|[WebWidgetAllowed](#webwidgetallowed)|Autoriser le widget web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Activer le widget web au démarrage de Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Utiliser la résolution du proxy Windows (déconseillée)|
 
 
@@ -758,6 +766,8 @@ Il ne peut pas y avoir de modèles d’URL en conflit définis entre ces trois s
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
+Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) * n’est pas une valeur acceptée pour cette stratégie.
+
 Pour exclure la suppression des cookies lors de la fermeture, configurez la stratégie de [SaveCookiesOnExit](#savecookiesonexit).
 
   #### Fonctionnalités prises en charge:
@@ -835,6 +845,8 @@ Il ne peut pas y avoir de modèles d’URL en conflit définis entre ces trois s
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * n’est pas une valeur acceptée pour cette stratégie.
+
   #### Fonctionnalités prises en charge:
 
   - Peut être obligatoire: Oui
@@ -911,6 +923,8 @@ Il ne peut pas y avoir de modèles d’URL en conflit définis entre ces trois s
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 
 - CookiesSessionOnlyForUrls
+
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * n’est pas une valeur acceptée pour cette stratégie.
 
 Si vous définissez la stratégie [RestoreOnStartup](#restoreonstartup) de manière à restaurer les URL à partir des sessions précédentes, cette stratégie est ignorée et les cookies sont stockés définitivement pour ces sites. 
 
@@ -2748,7 +2762,7 @@ Déterminez une liste des sites, basés sur des formats d’URL, qui sont autori
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultPluginsSetting](#defaultpluginssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les motifs avec les caractères génériques «*» et «[*] » dans l’hôte ne sont plus pris en charge pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
 
   #### Fonctionnalités prises en charge:
 
@@ -2817,7 +2831,7 @@ Déterminez une liste des sites, basés sur des formats d’URL, qui ne sont pas
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultPluginsSetting](#defaultpluginssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les motifs avec les caractères génériques «*» et «[*] » dans l’hôte ne sont plus pris en charge pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
 
   #### Fonctionnalités prises en charge:
 
@@ -4233,11 +4247,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   #### Description
 
-  Vous permet de spécifier les extensions qui ne peuvent pas être installées par les utilisateurs. Les extensions déjà installées seront désactivées en cas de blocage, sans permettre à l’utilisateur de les activer. Après la suppression d’une extension désactivée de la mise en application, celle-ci est automatiquement réactivée.
+  Vous permet de spécifier les extensions qui ne peuvent pas être installées par les utilisateurs. Les extensions déjà installées seront désactivées en cas de blocage, sans permettre à l’utilisateur de les activer. Après la suppression d’une extension désactivée de la liste de blocage, celle-ci est automatiquement réactivée.
 
-Une valeur de liste de blocage de « * » signifie que toutes les extensions sont bloquées, sauf si elles sont explicitement répertoriées dans le verte.
+La valeur «\*» de la liste de blocage signifie que toutes les extensions sont bloquées, sauf si elles sont explicitement répertoriées dans la liste verte.
 
-Si cette stratégie n’est pas définie, l’utilisateur peut installer n’importe quelle extension dans Microsoft Edge.
+Si cette stratégie n’est pas définie, l’utilisateur peut installer n’importe quelle extension dans MicrosoftEdge.
 
   #### Fonctionnalités prises en charge:
 
@@ -4447,6 +4461,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
   La définition de cette stratégie contrôle les paramètres de gestion des extensions pour Microsoft Edge, y compris tout contrôle par les stratégies associées aux extensions existantes. Cette stratégie remplace les stratégies héritées éventuellement définies.
 
 Cette stratégie mappe un ID d’extension ou une URL de mise à jour à son paramètre spécifique. Une configuration par défaut peut être définie pour l’ID spécial «*», qui s’applique à toutes les extensions sans configuration personnalisée de cette stratégie. Avec une URL de mise à jour, la configuration s’applique aux extensions dont l’URL de mise à jour est exacte, indiquée dans le manifeste de l’extension ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+
+Pour bloquer les extensions d’un magasin tiers particulier, vous devez uniquement bloquer les update_url pour ce magasin. Par exemple, si vous souhaitez bloquer les extensions du Chrome Web Store, vous pouvez utiliser le JSON suivant.
+
+{"update_url: https://clients2.google.com/service/update2/crx «:{"installation_mode»:"blocked"}}
+
+Notez que vous pouvez toujours utiliser [ExtensionInstallForcelist](#extensioninstallforcelist) et [ExtensionInstallAllowlist](#extensioninstallallowlist) pour autoriser/forcer l’installation d’extensions spécifiques, même si le magasin est bloqué à l’aide du JSON dans l’exemple précédent.
 
 Remarque: pour les instances Windows qui ne sont pas jointes à un domaine Microsoft Active Directory, l’installation forcée est limitée aux applications et aux extensions figurant sur le site web des modules complémentaires Microsoft Edge.
 
@@ -4903,6 +4923,66 @@ Si vous ne configurez pas cette stratégie, MicrosoftEdge essaie de détecter si
   - Exemple de valeur:
 ``` xml
 <string>*contoso.com,contoso.com</string>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### BasicAuthOverHttpEnabled
+
+  #### Autoriser l’authentification de base pour HTTP
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Si vous activez cette stratégie ou si vous la laissez non définie, les défis d’authentification de base reçus sur HTTP non sécurisé seront autorisés.
+
+Si vous désactivez cette stratégie, les demandes HTTP non sécurisées provenant du schéma d’authentification de base sont bloquées et seule la sécurité HTTPS est autorisée.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : BasicAuthOverHttpEnabled
+  - Nom de la stratégie de groupe : autoriser l’authentification de base pour HTTP
+  - Chemin d’accès de la stratégie de groupe(obligatoire): modèles administratifs/Microsoft Edge/authentification HTTP
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : BasicAuthOverHttpEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000000
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom de clé de la préférence : BasicAuthOverHttpEnabled
+  - Exemple de valeur:
+``` xml
+<false/>
 ```
   
 
@@ -6896,13 +6976,13 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Retour au début](#microsoft-edge---policies)
 
-  ## Stratégies des paramètres des onglets en veille
+  ## Stratégies de paramètres des onglets en veille
 
   [Retour au début](#microsoft-edge---policies)
 
   ### SleepingTabsBlockedForUrls
 
-  #### Bloquer les onglets en sommeil sur des sites spécifiques
+  #### Bloquer les onglets en veille sur des sites spécifiques
 
   
   
@@ -6912,7 +6992,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   #### Description
 
-  Définissez une liste de sites en fonction de modèles d’URL qui ne peuvent pas être mis en veille par des onglets en sommeil.
+  Définissez une liste de sites, basés sur des modèles d’URL, qui ne sont pas autorisés à être mis en veille par des onglets en veille.
 
 Si la stratégie [SleepingTabsEnabled](#sleepingtabsenabled) est désactivée, cette liste n’est pas utilisée et aucun site n’est mis en veille automatiquement.
 
@@ -6932,10 +7012,10 @@ Si vous ne configurez pas cette stratégie, tous les sites seront éligibles pou
 
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de SleepingTabsBlockedForUrls:
-  - Nom de la stratégie de nom: bloquer les onglets en sommeil sur des sites spécifiques
-  - Path GP (obligatoire): modèles d’administration/paramètres de l’onglet Microsoft Edge/Sleep
-  - Path GP (recommandé): modèles d’administration/Microsoft Edge-paramètres par défaut (les utilisateurs peuvent ignorer)/Sleeping paramètres des onglets
+  - Nom unique de la stratégie de groupe: SleepingTabsBlockedForUrls
+  - Nom de la stratégie de groupe : bloquer les onglets en veille sur des sites spécifiques
+  - Chemin d’accès de la stratégie de groupe (obligatoire) : paramètres Modèles d’administration/Microsoft Edge/Onglets en veille
+  - Chemin d’accès de la stratégie de groupe (recommandé) : Modèles d’administration/Microsoft Edge – Paramètres par défaut (peut être remplacé par les utilisateurs)/Paramètres d’onglets en veille
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
   ##### Paramètres du Registre Windows
@@ -6969,7 +7049,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   ### SleepingTabsEnabled
 
-  #### Configurer les onglets en sommeil
+  #### Configurer les onglets en veille
 
   
   
@@ -6979,15 +7059,15 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   #### Description
 
-  Ce paramètre de stratégie vous permet d’activer ou de désactiver les onglets en mode sommeil. Les onglets en veille réduisent l’utilisation du processeur, de la batterie et de la mémoire en plaçant les onglets d’arrière-plan inactifs Microsoft Edge utilise des heuristiques pour éviter de mettre en veille des onglets qui fonctionnent de manière utile en arrière-plan, tels que les notifications d’affichage, la lecture de sons et la vidéo en flux continu. Par défaut, les onglets en veille sont activés.
+  Ce paramètre de stratégie vous permet de configurer l’activer ou non pour les onglets en veille. Les onglets en veille réduisent l’utilisation du processeur, de la batterie et de la mémoire en mettant en veille les onglets d’arrière-plan inactifs. Microsoft Edge utilise des heuristiques pour éviter de mettre en veille des onglets qui fonctionnent de manière utile en arrière-plan, tels que les notifications d’affichage, la lecture de sons et la vidéo en flux continu. Par défaut, les onglets en veille sont activés.
 
-Le passage des sites individuels peuvent être bloqués en configurant le [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)de stratégie.
+La mise en veille des sites individuels peut être bloquée en configurant la stratégie [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
 
 Si vous activez ce paramètre, les onglets en veille sont activés.
 
-Si vous désactivez ce paramètre, les onglets en mode veille sont désactivés.
+Si vous désactivez ce paramètre, les onglets en veille sont désactivés.
 
-Si vous ne configurez pas ce paramètre, les utilisateurs peuvent choisir d’utiliser les onglets en mode sommeil.
+Si vous ne configurez pas ce paramètre, les utilisateurs peuvent choisir d’utiliser ou non les onglets en veille.
 
   #### Fonctionnalités prises en charge:
 
@@ -7003,10 +7083,10 @@ Si vous ne configurez pas ce paramètre, les utilisateurs peuvent choisir d’ut
 
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de SleepingTabsEnabled:
-  - Nom de la stratégie de protection: configurer les onglets de endormi
-  - Path GP (obligatoire): modèles d’administration/paramètres de l’onglet Microsoft Edge/Sleep
-  - Path GP (recommandé): modèles d’administration/Microsoft Edge-paramètres par défaut (les utilisateurs peuvent ignorer)/Sleeping paramètres des onglets
+  - Nom unique de la stratégie de groupe: SleepingTabsEnabled
+  - Nom de la stratégie de groupe : configurer les onglets en veille
+  - Chemin d’accès de la stratégie de groupe (obligatoire) : paramètres Modèles d’administration/Microsoft Edge/Onglets en veille
+  - Chemin d’accès de la stratégie de groupe (recommandé) : Modèles d’administration/Microsoft Edge – Paramètres par défaut (peut être remplacé par les utilisateurs)/Paramètres d’onglets en veille
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
   ##### Paramètres du Registre Windows
@@ -7035,7 +7115,7 @@ Si vous ne configurez pas ce paramètre, les utilisateurs peuvent choisir d’ut
 
   ### SleepingTabsTimeout
 
-  #### Définir le délai d’inactivité de l’onglet arrière-plan pour les onglets en veille
+  #### Définir le délai d’inactivité de l’onglet en arrière-plan pour les onglets en veille
 
   
   
@@ -7045,9 +7125,9 @@ Si vous ne configurez pas ce paramètre, les utilisateurs peuvent choisir d’ut
 
   #### Description
 
-  Ce paramètre de stratégie vous permet de configurer le délai d’expiration, en secondes, après lequel les onglets d’arrière-plan inactifs seront automatiquement mis en veille en cas d’activation de l’onglet endormi. Par défaut, ce délai d’expiration est de 7 200 secondes (2 heures).
+  Ce paramètre de stratégie vous permet de configurer le délai d’inactivité, en secondes, après lequel les onglets d’arrière-plan inactifs sont automatiquement mis en veille si les onglets en veille sont activés. Par défaut, ce délai d’expiration est de 7200secondes (2heures).
 
-Les onglets sont uniquement mis en veille automatiquement lorsque le [SleepingTabsEnabled](#sleepingtabsenabled) de la stratégie est activé ou n’est pas configuré et que l’utilisateur a activé le paramètre des onglets de veille.
+Les onglets sont automatiquement mis en veille lorsque la stratégie [SleepTabsEnabled](#sleepingtabsenabled) est activée ou n’est pas configurée et que l’utilisateur a activé le paramètre onglets en veille.
 
 Si vous ne configurez pas ce paramètre, les utilisateurs peuvent choisir la valeur du délai d’expiration.
 
@@ -7085,10 +7165,10 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de SleepingTabsTimeout:
-  - Nom de la stratégie de jeu: définir le délai d’inactivité de l’onglet arrière-plan pour les onglets
-  - Path GP (obligatoire): modèles d’administration/paramètres de l’onglet Microsoft Edge/Sleep
-  - Path GP (recommandé): modèles d’administration/Microsoft Edge-paramètres par défaut (les utilisateurs peuvent ignorer)/Sleeping paramètres des onglets
+  - Nom unique de la stratégie de groupe: SleepingTabsTimeout
+  - Nom de la stratégie de groupe: définir le délai d’inactivité de l’onglet en arrière-plan pour les onglets en veille
+  - Chemin d’accès de la stratégie de groupe (obligatoire) : paramètres Modèles d’administration/Microsoft Edge/Onglets en veille
+  - Chemin d’accès de la stratégie de groupe (recommandé) : Modèles d’administration/Microsoft Edge – Paramètres par défaut (peut être remplacé par les utilisateurs)/Paramètres d’onglets en veille
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
   ##### Paramètres du Registre Windows
@@ -8661,13 +8741,13 @@ Si vous désactivez cette stratégie, chaque fois que l’utilisateur effectue u
 
   ### AllowPopupsDuringPageUnload
 
-  #### Autorise une page à afficher les fenêtres contextuelles pendant son déchargement
+  #### Permet à une page d’afficher des fenêtres contextuelles pendant son déchargement (obsolète)
 
   
-  
+  >OBSOLÈTE: cette stratégie est obsolète et ne fonctionne pas sur les versions ultérieures à Microsoft Edge87.
   #### Versions prises en charge:
 
-  - sur Windows et macOS depuis la version78 ou versions ultérieures
+  - Sur Windows et macOS depuis la 78, jusqu’à la 87
 
   #### Description
 
@@ -8677,7 +8757,7 @@ Lorsque la stratégie est activée, les pages sont autorisées à afficher des f
 
 Lorsque la stratégie est désactivée ou n’est pas configurée, les pages ne sont pas autorisées à afficher des fenêtres contextuelles pendant leur déchargement. Ceci est conforme à la spécification: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name).
 
-Cette stratégie sera supprimée à l’avenir.
+Cette stratégie a été supprimée dans MicrosoftEdge88 et est ignorée si elle est définie.
 
   #### Fonctionnalités prises en charge:
 
@@ -8694,8 +8774,8 @@ Cette stratégie sera supprimée à l’avenir.
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: AllowPopupsDuringPageUnload
-  - Nom de la stratégie de groupe: autorise une page à afficher les fenêtres contextuelles pendant son déchargement
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Nom de la stratégie de groupe : permet à une page d’afficher des fenêtres contextuelles pendant son déchargement (obsolète)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -11469,11 +11549,15 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   Activez l’utilisation des comptes ActiveDirectory pour la connexion automatique si les ordinateurs de vos utilisateurs sont joints au domaine et si votre environnement n’est pas joint de façon hybride. Si vous souhaitez que les utilisateurs soient connectés automatiquement avec leur compte AzureActiveDirectory, créez une jonction AzureAD (consultez [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) si vous souhaitez en savoir plus) ou une jonction hybride (consultez [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) si vous souhaitez en savoir plus) pour votre environnement.
 
+À chaque lancement, Microsoft Edge essaiera de se connecter à l’aide de cette stratégie, tant que le premier profil lancé n’est pas connecté ou qu’une se connecte automatique n’a pas eu lieu auparavant.
+
 Si vous avez désactivé la stratégie [BrowserSignin](#browsersignin), celle-ci n’a aucun effet.
 
 Si vous activez cette stratégie et la définissez sur «SignInAndMakeDomainAccountNonRemovable», MicrosoftEdge connecte automatiquement les utilisateurs qui se trouvent sur des ordinateurs joints au domaine à l’aide de leur compte ActiveDirectory.
 
 Si vous définissez cette stratégie sur « Disabled » ou ne la définissez pas, MicrosoftEdge ne connecte pas automatiquement les utilisateurs qui se trouvent sur des ordinateurs joints au domaine joint avec un compte Active Directory.
+
+À partir de MicrosoftEdge89, s’il existe un profil local existant avec synchronisation désactivée et que l’ordinateur est désormais joint hybride, c’est-à-dire qu’il dispose d’un compte Azure AD, il va mettre à niveau automatiquement le profil local vers le profil Azure AD pour obtenir les installations de synchronisation Azure AD complètes.
 
 Mappage des options de stratégie:
 
@@ -14128,21 +14212,21 @@ Si vous désactivez ce paramètre ou ne définissez pas de valeur, le Filtre adu
 
   ### ForceLegacyDefaultReferrerPolicy
 
-  #### Utiliser une stratégie de renvoi par défaut no-referrer-when-downgrade (déconseillé).
+  #### Utiliser une stratégie de référence par défaut de no-referrer-when-downgrade (obsolète)
 
-  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
+  >OBSOLÈTE : cette stratégie est obsolète et ne fonctionne pas après MicrosoftEdge88.
   #### Versions prises en charge:
 
-  - sur Windows et macOS depuis la version81 ou versions ultérieures
+  - Sur Windows et macOS depuis la 81, jusqu’à la 88
 
   #### Description
 
-  Cette stratégie est déconseillée, car elle a pour but de servir uniquement comme mécanisme à court terme afin d’offrir aux entreprises davantage de temps pour mettre à jour leurs environnements si et quand ils sont détectés comme étant incompatibles avec la stratégie actuelles de point d’accès par défaut. Il ne fonctionne pas dans la version 88 de Microsoft Edge.
+  Cette stratégie ne fonctionne pas, car elle était destinée uniquement à être un mécanisme à court terme permettant aux entreprises de mettre à jour leur contenu web s’il était jugé incompatible avec la nouvelle stratégie de référence par défaut.
 
-La stratégie de renvoie par défaut de MicrosoftEdge est renforcée à partir de sa valeur actuelle no-referrer-when-downgrade vers la valeur strict-origin-when-cross-origin, plus sécurisée dans le cadre d'un lancement graduel.
+La stratégie de référence par défaut de MicrosoftEdge a été renforcée de la valeur no-referrer-when-downgrade vers la valeur strict-origin-when-cross-origin plus sécurisée.
 
-Avant le lancement, cette stratégie d'entreprise n'a aucun effet. Après le lancement, lorsque cette stratégie d'entreprise est activée, la stratégie de renvoi par défaut de Microsoft Edge sera définie sur l’ancienne valeur définie, c’est-à-dire la valeur no-referrer-when-downgrade. 
+Lorsque cette stratégie d’entreprise est activée, la stratégie de référence par défaut de MicrosoftEdge est définie sur son ancienne valeur no-referrer-when-downgrade.
 
 Cette stratégie d’entreprise est désactivée par défaut.
 
@@ -14161,8 +14245,8 @@ Cette stratégie d’entreprise est désactivée par défaut.
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: ForceLegacyDefaultReferrerPolicy
-  - Nom de la stratégie de groupe: utiliser une stratégie de renvoi par défaut no-referrer-when-downgrade.
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Nom de la stratégie de groupe : utiliser une stratégie de référence par défaut de no-referrer-when-downgrade (obsolète)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -16983,17 +17067,17 @@ Si la stratégie [EnableMediaRouter](#enablemediarouter) est désactivée, cette
 
   ### MetricsReportingEnabled
 
-  #### Activer les rapports de données d’utilisation et d’incident (déconseillé)
+  #### Activer les rapports de données liés à l’utilisation et aux incidents (obsolète)
 
-  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
+  >OBSOLÈTE : cette stratégie est obsolète et ne fonctionne pas après MicrosoftEdge88.
   #### Versions prises en charge:
 
-  - sur Windows et macOS depuis la version77 ou versions ultérieures
+  - Sur Windows et macOS depuis la 77, jusqu’à la 88
 
   #### Description
 
-  Cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans la version MicrosoftEdge89. Cette stratégie est remplacée par la nouvelle stratégie:  [DiagnosticData](#diagnosticdata) pour Windows7, Windows8 et macOS. Cette stratégie est remplacée par Autoriser la télémétrie sur Windows10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Cette stratégie n’est plus prise en charge. Elle est remplacée par [DiagnosticData](#diagnosticdata) (pour Windows7, Windows8 et macOS) et Autoriser la télémétrie sur Windows10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569) ).
 
 Cette stratégie permet l’envoi à Microsoft de rapports sur l’utilisation et les incidents liés à MicrosoftEdge.
 
@@ -17022,8 +17106,8 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: MetricsReportingEnabled
-  - Nom de la stratégie de groupe: Activer les rapports de données d’utilisation et d’incident (déconseillé)
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Nom de la stratégie de groupe : activer les rapports de données d’utilisation et d’incident (obsolète)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -17253,13 +17337,15 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   Cette stratégie détermine si un utilisateur peut supprimer le profil MicrosoftEdge connecté automatiquement dans le compte professionnel ou scolaire d'un utilisateur.
 
-Si vous activez cette stratégie, un profil impossible à supprimer est créé avec le compte professionnel ou scolaire de l'utilisateur sous Windows. Ce profil ne peut pas être déconnecté ni supprimé.
+Si vous activez cette stratégie, un profil impossible à supprimer est créé avec le compte professionnel ou scolaire de l'utilisateur sous Windows. Ce profil ne peut pas être déconnecté ni supprimé. Le profil ne sera pas amovible uniquement si le profil est signé avec un compte local ou un compte AzureAD qui correspond au compte de signature du système d’exploitation.
 
 Si vous désactivez cette stratégie ou ne la configurez pas, le profil connecté automatiquement avec le compte professionnel ou scolaire d'un utilisateur sous Windows peut être déconnecté ou supprimé par l'utilisateur.
 
 Si vous souhaitez configurer la connexion du navigateur, utilisez la stratégie [BrowserSignin](#browsersignin).
 
 Cette stratégie est disponible uniquement sur les instances de Windows qui sont jointes à un domaine Microsoft ActiveDirectory, des instances de Windows10 Professionnel ou Entreprise qui sont inscrites pour la gestion des appareils.
+
+À partir de Microsoft Edge89, s’il existe un profil local avec synchronisation désactivée et que l’ordinateur est joint de manière hybride, il va mettre à niveau automatiquement le profil local vers le profil AzureAD et le rendre non amovible au lieu de créer un profil AzureAD non amovible.
 
   #### Fonctionnalités prises en charge:
 
@@ -19049,17 +19135,17 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   ### SendSiteInfoToImproveServices
 
-  #### Envoyer des informations sur les sites pour améliorer les services Microsoft (déconseillé)
+  #### Envoyer des informations sur le site pour améliorer les services Microsoft (obsolète)
 
-  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
+  >OBSOLÈTE : cette stratégie est obsolète et ne fonctionne pas après MicrosoftEdge88.
   #### Versions prises en charge:
 
-  - sur Windows et macOS depuis la version77 ou versions ultérieures
+  - Sur Windows et macOS depuis la 77, jusqu’à la 88
 
   #### Description
 
-  Cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans la version MicrosoftEdge89. Cette stratégie est remplacée par la nouvelle stratégie:  [DiagnosticData](#diagnosticdata) pour Windows7, Windows8 et macOS. Cette stratégie est remplacée par Autoriser la télémétrie sur Windows10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Cette stratégie n’est plus prise en charge. Elle est remplacée par [DiagnosticData](#diagnosticdata) (pour Windows7, Windows8 et macOS) et Autoriser la télémétrie sur Windows10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569) ).
 
 Cette stratégie permet d'envoyer à Microsoft des informations sur les sites web visités dans MicrosoftEdge afin d'améliorer les services, tels que la recherche.
 
@@ -19086,8 +19172,8 @@ Pour activer cette stratégie, [MetricsReportingEnabled](#metricsreportingenable
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: SendSiteInfoToImproveServices
-  - Nom de la stratégie de groupe: Envoyer des informations sur les sites pour améliorer les services Microsoft (déconseillé)
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Nom de la stratégie de groupe : envoyer des informations sur le site pour améliorer les services Microsoft (obsolète)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -19414,8 +19500,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   Afficher les notifications et l’expertise de Microsoft.
 Si vous activez cette stratégie:
    - Les utilisateurs de compte Microsoft (à l’exclusion des comptes Azure Active Directory) dans le cadre de la recherche et de gagner des marchés pourront voir l’utilisation de Microsoft Edge dans le profil utilisateur Microsoft Edge.
-   - Le paramètre permettant d’activer Microsoft Rewards dans les paramètres Microsoft Edge sera activé et activé.
-   - Le paramètre d’activation du mode d’attribution sera activé et respecte le paramètre de l’utilisateur.
+   - Le paramètre permettant d’activer Microsoft Rewards dans les paramètres MicrosoftEdge sera activé.
 
 Si vous désactivez cette stratégie:
    - Les utilisateurs de compte Microsoft (à l’exclusion des comptes Azure AD) dans la recherche et gagner des marchés ne verront pas l’interface utilisateur de Microsoft Edge dans le profil utilisateur Microsoft Edge.
@@ -19423,8 +19508,7 @@ Si vous désactivez cette stratégie:
 
 Si vous ne configurez pas cette stratégie:
    - Les utilisateurs de compte Microsoft (à l’exclusion des comptes Azure Active Directory) dans le cadre de la recherche et de gagner des marchés pourront voir l’utilisation de Microsoft Edge dans le profil utilisateur Microsoft Edge.
-   - Le paramètre permettant d’activer Microsoft Rewards dans les paramètres Microsoft Edge sera activé et activé.
-   - Le paramètre d’activation du mode d’attribution sera activé et respecte le paramètre de l’utilisateur.
+   - Le paramètre permettant d’activer Microsoft Rewards dans les paramètres MicrosoftEdge sera activé.
 
   #### Fonctionnalités prises en charge:
 
@@ -20362,6 +20446,68 @@ Si vous désactivez cette stratégie, aucun onglet n’est figé.
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### TargetBlankImpliesNoOpener
+
+  #### Ne définissez pas window.opener pour les liens ciblant _blank
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 88 ou version ultérieure
+
+  #### Description
+
+  Si vous activez cette stratégie ou si vous la laissez non définie, la propriété window.opener est définie sur null, sauf si l’ancrage spécifie rel="opener».
+
+Si vous désactivez cette stratégie, les fenêtres popup qui ciblent _blank sont autorisées à accéder (via JavaScript) à la page qui a demandé à ouvrir la fenêtre contextuelle.
+
+Cette stratégie sera obsolète dans MicrosoftEdge version95.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : TargetBlankImpliesNoOpener
+  - Nom de la stratégie de groupe : ne définissez pas window.opener pour les liens ciblant _blank
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : TargetBlankImpliesNoOpener
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000000
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom de clé de la préférence : TargetBlankImpliesNoOpener
+  - Exemple de valeur:
+``` xml
+<false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### TaskManagerEndProcessEnabled
 
   #### Activer la possibilité de mettre fin aux processus dans le gestionnaire des tâches
@@ -20634,7 +20780,7 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent décider d'uti
 
 Le format d'un modèle d’URL doit être conforme aux règles stipulées à l'adresse [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-Vous pouvez utiliser cette stratégie pour ouvrir des exceptions aux listes rouges restrictives. Par exemple, vous pouvez inclure «*» dans la liste rouge pour bloquer toutes les requêtes, puis utiliser cette stratégie pour autoriser l'accès à une liste limitée d'URL. Vous pouvez utiliser cette stratégie pour ouvrir des exceptions pour certains schémas, sous-domaines d'autres domaines, ports ou chemins d'accès spécifiques.
+Vous pouvez utiliser cette stratégie pour ouvrir des exceptions aux listes rouges restrictives. Par exemple, vous pouvez inclure « \* » dans la liste d’adresses url pour bloquer toutes les demandes, puis utiliser cette stratégie pour autoriser l’accès à une liste limitée d’URL. Vous pouvez utiliser cette stratégie pour ouvrir des exceptions pour certains schémas, sous-domaines d'autres domaines, ports ou chemins d'accès spécifiques.
 
 Le filtre plus spécifique détermine si une URL est bloquée ou autorisée. La liste verte prévaut sur la liste rouge.
 
@@ -21354,7 +21500,14 @@ Quelle que soit la façon dont cette stratégie est activée, le paramètre d’
 
   Configurez cette stratégie pour spécifier la liste d’applications web qui s’installent de manière silencieuse, sans intervention de l’utilisateur, et les utilisateurs qui ne peuvent pas effectuer une désinstallation ou une désactivation.
 
-Chaque élément dans la liste de la stratégie est un objet avec un membre obligatoire: URL (URL de l’application web à installer) et 2membres facultatifs: default_launch_container (spécifie au mode fenêtre que l’application web s’ouvre with-a nouvel onglet est la valeur par défaut) et create_desktop_shortcut (True si vous voulez créer des raccourcis Linux et Windows Desktop).
+Chaque élément de liste de la stratégie est un objet avec un membre obligatoire : url (URL de l’application web à installer)
+
+et 3 membres facultatifs :
+- default_launch_container (spécifie le mode fenêtre que l’application web ouvre avec un nouvel onglet est la valeur par défaut.)
+
+- create_desktop_shortcut (True si vous souhaitez créer des raccourcis de bureau Linux et Windows.)
+
+- override_app_name (à partir de MicrosoftEdge89, vous permet de remplacer le nom de l’application s’il ne s’agit pas d’une application web progressive (PWA) ou du nom d’application qui est temporairement installé s’il s’agit d’un PWA, mais l’authentification est requise avant la fin de l’installation.)
 
   #### Fonctionnalités prises en charge:
 
@@ -21395,6 +21548,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21402,7 +21560,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Exemple de valeur compacte:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21426,6 +21584,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -21886,7 +22052,131 @@ Si vous ne configurez pas cette stratégie, ou si vous définissez une chaîne v
 ``` xml
 <string>10000-11999</string>
 ```
- 
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Autoriser le widget web
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version88 ou versions ultérieures
+
+  #### Description
+
+  Active le widget Web. Lorsque cette option est activée, les utilisateurs peuvent utiliser le widget pour effectuer une recherche sur le Web à partir de leur ordinateur de bureau ou d’une application. Le widget fournit une zone de recherche qui affiche les suggestions Web et ouvre toutes les recherches sur le Web dans Microsoft Edge. La zone de recherche fournit des suggestions de recherche (par Bing) et d’URL. Le widget inclut également les vignettes de flux sur lesquelles les utilisateurs peuvent cliquer pour afficher plus d’informations sur msn.com dans un nouvel onglet ou une nouvelle fenêtre du navigateur Microsoft Edge. Les vignettes de flux peuvent inclure des publicités. Le widget peut être lancé à partir des paramètres Microsoft Edge ou à partir du menu «Autres outils» dans Microsoft Edge.
+
+Si vous activez ou ne configurez pas cette stratégie: le widget Web est automatiquement activé pour tous les profils.
+Dans les paramètres de Microsoft Edge, les utilisateurs verront l’option de lancement du widget.
+Dans les paramètres Microsoft Edge, les utilisateurs verront l’élément de menu pour l’exécution du widget au démarrage de Windows (démarrage automatique).
+L’option d’activation du widget au démarrage est activée si la stratégie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) est activée.
+Si la stratégie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) est désactivée ou n’est pas configurée, l’option permettant d’activer le widget au démarrage est désactivée.
+Les utilisateurs verront l’élément de menu pour le lancement du widget à partir du menu «Autres outils» de Microsoft Edge. Les utilisateurs peuvent lancer le widget à partir de l’option «Autres outils».
+Le widget peut être désactivé à l’aide de l’option «Quitter» dans la barre d’état système ou en fermant le widget à partir de la barre des tâches. Le widget est redémarré lors du redémarrage du système si le démarrage automatique est activé.
+
+Si vous désactivez cette stratégie: le widget Web est désactivé pour tous les profils.
+L’option de lancement du widget à partir des paramètres Microsoft Edge est désactivée.
+L’option de lancement de démarrage du widget au démarrage de Windows (démarrage automatique) est désactivée.
+L’option de lancement du widget à partir du menu «Autres outils» de Microsoft Edge est désactivée.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique GP: WebWidgetAllowed
+  - Nom GP: Activer le widget Web
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de valeur: WebWidgetAllowed
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Activer le widget web au démarrage de Windows
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version88 ou versions ultérieures
+
+  #### Description
+
+  Permet le démarrage de l’exécution du widget Web au démarrage de Windows.
+
+Si vous activez: l’exécution du widget Web démarre au démarrage de Windows par défaut.
+Si le widget est désactivé via lma stratégie [WebWidgetAllowed](#webwidgetallowed), cette stratégie ne démarre pas le widget au démarrage de Windows.
+
+Si vous désactivez cette stratégie: Le widget Web ne démarre pas au démarrage de Windows pour tous les profils.
+L’option de démarrage du widget au démarrage de Windows est désactivée et dans les paramètres de Microsoft Edge également.
+
+Si vous ne configurez pas cette stratégie: Le widget Web ne démarre pas au démarrage de Windows pour tous les profils.
+L’option de démarrage du widget au démarrage de Windows est désactivée dans les paramètres de Microsoft Edge.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique GP: WebWidgetIsEnabledOnStartup
+  - Nom GP: Autoriser le widget Web au démarrage de Windows
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de valeur: WebWidgetIsEnabledOnStartup
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  
 
   [Retour au début](#microsoft-edge---policies)
 
@@ -21950,7 +22240,7 @@ Si vous désactivez ou ne configurez pas cette stratégie, le solveur Microsoft 
   [Retour au début](#microsoft-edge---policies)
 
 
-## Voir également
+## Articles associés
 
 - [Configuration de MicrosoftEdge](configure-microsoft-edge.md)
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
