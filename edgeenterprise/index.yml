@@ -11,28 +11,30 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 10/15/2020
-  ms.openlocfilehash: 09eb7c214e048ddd281817f8050ef4f1ff4cb985
-  ms.sourcegitcommit: 49a37e9c584eeb44683c83f098a15464054a26f9
+  ms.date: 12/01/2020
+  ms.openlocfilehash: 2a0466121bb773be20a01ec0b9f72e16bb8ac644
+  ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/15/2020
-  ms.locfileid: "11119409"
+  ms.lasthandoff: 01/14/2021
+  ms.locfileid: "11269275"
 landingContent:
 - title: En savoir plus sur MicrosoftEdge en entreprise
   linkLists:
   - linkListType: overview
     links:
-    - text: Vidéos Microsoft Edge
-      url: microsoft-edge-videos.md
     - text: Vue d’ensemble des canaux MicrosoftEdge
       url: microsoft-edge-channels.md
     - text: Télécharger un canal MicrosoftEdge
       url: https://aka.ms/EdgeEnterprise
     - text: Utiliser les fonctionnalités d’entreprise
       url: edge-ie-mode.md
-    - text: 'Vidéo : Microsoft Edge et Microsoft Search'
-      url: microsoft-edge-video-search.md
+  - linkListType: video
+    links:
+    - text: Vidéos Microsoft Edge
+      url: microsoft-edge-videos.md
+    - text: Canal YouTube Microsoft Edge
+      url: https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA
 - title: Déployer et mettre à jour MicrosoftEdge
   linkLists:
   - linkListType: deploy
@@ -73,7 +75,7 @@ landingContent:
       url: microsoft-edge-policies.md
     - text: Référence de stratégie de mise à jour
       url: microsoft-edge-update-policies.md
-    - text: Référence de la stratégie WebView2
+    - text: Référence de stratégie WebView2
       url: microsoft-edge-webview-policies.md
     - text: Vue d’ensemble du mappage de stratégie
       url: microsoft-edge-policy-map-overview.md

@@ -1,4 +1,4 @@
-# last revised 01/13/2021
+# last revised 01/14/2021
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
@@ -185,14 +185,22 @@
   items:
     - name: Collection de vidéos Microsoft Edge
       href: microsoft-edge-videos.md
+    - name: Vidéo - Microsoft Edge - État du navigateur 2020
+      href: microsoft-edge-video-state-of-browser.md
     - name: 'Vidéo : isolation du navigateur à l’aide d’Application Guard'
       href: microsoft-edge-video-security-application-guard.md
     - name: 'Vidéo: Déployer Microsoft Edge'
       href: microsoft-edge-video-deploy.md
     - name: Vidéo - Protection contre la perte de données (DLP)
       href: microsoft-edge-video-security-dlp.md
-    - name: 'Vidéo : Microsoft Edge et Microsoft Search'
-      href: microsoft-edge-video-search.md
+    - name: Vidéo - Identité dans Microsoft Edge
+      href: microsoft-edge-video-identity.md
+    - name: Vidéo - Version de la version de Microsoft Edge
+      href: microsoft-edge-video-version-rollback.md
+    - name: Vidéo - Lecteur PDF dans Microsoft Edge
+      href: microsoft-edge-video-pdf-reader.md
+    - name: Vidéo - Navigation sécurisée sur Microsoft Edge
+      href: microsoft-edge-video-security-smartscreen.md
     - name: 'Vidéo: sécurité, compatibilité et facilité de gestion'
       href: microsoft-edge-video-security-compatibility-manageability.md
 - name: Forum Aux Questions
