@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/07/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
-ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
+ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
+ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "11254972"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11270840"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -29,17 +29,14 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
-
 ## Nouvelles stratégies
 
 Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour.
 
 | Nom | Légende |
-|-|-|
-|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Autoriser l’authentification de base pour HTTP|
-|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Ne définissez pas window.opener pour les liens ciblant \_blank|
-|[WebWidgetAllowed](#webwidgetallowed)|Autoriser le widget web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Activer le widget web au démarrage de Windows|
+|--|--|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Paramètres de durée de vie des données de navigation|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Définir une liste ordonnée des langues préférées que les sites web doivent afficher si le site prend en charge la langue|
 
 
 ## Stratégies disponibles
@@ -268,6 +265,7 @@ et des conseils pour les services Microsoft|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Activer le mode Invité|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Autoriser l’envoi de requêtes à un service horaire du navigateur|
 |[BrowserSignin](#browsersignin)|Paramètres de connexion du navigateur|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Paramètres de durée de vie des données de navigation|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Utiliser le client DNS intégré|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Indique si le vérificateur de certificats intégré est utilisé pour la vérification des certificats de serveur (déconseillé)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Désactiver l’application des règles de transparence des certificats pour une liste de hachages subjectPublicKeyInfo|
@@ -290,6 +288,7 @@ et des conseils pour les services Microsoft|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Autoriser l’accès au menu contextuel du moteur de recherche par défaut|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Paramètre par défaut des capteurs|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Contrôler l’utilisation de l’API Serial|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Définir une liste ordonnée des langues préférées que les sites web doivent afficher si le site prend en charge la langue|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Exiger que la liste des sites en mode entreprise soit disponible avant la navigation à l’onglet|
 |[DeleteDataOnMigration](#deletedataonmigration)|Supprimer les anciennes données de navigateur lors de la migration|
 |[DeveloperToolsAvailability](#developertoolsavailability)|Contrôler où les outils de développement peuvent être utilisés|
@@ -439,8 +438,8 @@ et des conseils pour les services Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gérer l’exposition des adresses IP locales par WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Limiter l’exposition de l’adresse IP locale par WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restreindre la portée des ports UDP locaux utilisés par WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Autoriser le widget web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Activer le widget web au démarrage de Windows|
+|[WebWidgetAllowed](#webwidgetallowed)|Activer le widget Web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Autoriser le widget Web au démarrage de Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Utiliser la résolution du proxy Windows (déconseillée)|
 
 
@@ -6311,7 +6310,9 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### Description
 
-  Remplace le mode d’impression par défaut du graphique d’arrière-plan.
+  Remplace le dernier paramètre utilisé pour l’impression des graphiques d’arrière-plan.
+Si vous activez ce paramètre, l’impression des graphiques d’arrière-plan est activée.
+Si vous désactivez ce paramètre, l’impression des graphiques d’arrière-plan est désactivée.
 
 Mappage des options de stratégie:
 
@@ -10674,6 +10675,108 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### BrowsingDataLifetime
+
+  #### Paramètres de durée de vie des données de navigation
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 89 ou version ultérieure
+
+  #### Description
+
+  Configure les paramètres de durée de vie des données de navigation pour MicrosoftEdge.
+Cette stratégie contrôle la durée de vie des données de navigation sélectionnées. Cette stratégie n’a aucun effet si la synchronisation est activée.
+Les types de données disponibles sont «browsing_history» ( browsing_history), «download_history» (cookies_and_other_site_data), «cached_images_and_files» (cached_images_and_files), «password_signin» (password_signin), «autofill», «site_settings» (site_settings) et «hosted_app_data» (hosted_app_data).
+MicrosoftEdge supprime régulièrement les données des types sélectionnés plus anciens que «time_to_live_in_hours». Étant donné que la suppression des données ne se produit qu’à certains intervalles, certaines données peuvent être conservées légèrement plus longtemps, mais jamais plus du double du «time_to_live_in_hours» prévu.
+
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Dictionary
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : BrowsingDataLifetime
+  - Nom de la stratégie de groupe: paramètres de durée de vie des données de navigation
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: BrowsingDataLifetime
+  - Type de valeur: REG_SZ
+
+  ##### Exemple de valeur:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
+  {
+    "data_types": [
+      "browsing_history"
+    ], 
+    "time_to_live_in_hours": 24
+  }, 
+  {
+    "data_types": [
+      "password_signin", 
+      "autofill"
+    ], 
+    "time_to_live_in_hours": 12
+  }
+]
+```
+
+  ##### Exemple de valeur compacte:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [{"data_types": ["browsing_history"], "time_to_live_in_hours": 24}, {"data_types": ["password_signin", "autofill"], "time_to_live_in_hours": 12}]
+  ```
+  
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom clé de la préférence: BrowsingDataLifetime
+  - Exemple de valeur:
+``` xml
+<key>BrowsingDataLifetime</key>
+<array>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>browsing_history</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>24</integer>
+  </dict>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>password_signin</string>
+      <string>autofill</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>12</integer>
+  </dict>
+</array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### BuiltInDnsClientEnabled
 
   #### Utiliser le client DNS intégré
@@ -10688,13 +10791,13 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   Détermine si le client DNS intégré doit être utilisé.
 
-Cette règle n’a aucune incidence sur les serveurs DNS utilisés, mais uniquement sur la pile logicielle utilisée pour communiquer avec eux. Par exemple, si le système d’exploitation est configuré pour utiliser un serveur DNS d’entreprise, ce même serveur sera utilisé par le client DNS intégré. Il est toutefois possible que le client DNS intégré gère les serveurs de différentes manières en utilisant des protocoles liés aux DNS plus modernes tels que DNS-over-TLS. 
+Cette stratégie contrôle la pile logicielle utilisée pour communiquer avec le serveur DNS: le client DNS du système d’exploitation ou le client DNS intégré de MicrosoftEdge. Cette stratégie n’affecte pas les serveurs DNS utilisés: si, par exemple, le système d’exploitation est configuré pour utiliser un serveur DNS d’entreprise, ce même serveur sera utilisé par le client DNS intégré. Il ne contrôle pas non plus si DNS-over-HTTPS est utilisé; MicrosoftEdge utilise toujours le résolveur intégré pour les demandes DNS-over-HTTPS. Pour plus d’informations sur le contrôle DNS-over-HTTPS, voir la stratégie [DnsOverHttpsMode](#dnsoverhttpsmode).
 
 Si vous activez cette stratégie, le client DNS intégré est utilisé, si disponible.
 
-Si vous désactivez cette stratégie, le client n’est jamais utilisé.
+Si vous désactivez cette stratégie, le client DNS intégré est utilisé uniquement lorsque DNS-over-HTTPS est en cours d’utilisation.
 
-Si vous ne configurez pas cette stratégie, le client DNS intégré est activé par défaut sur Mac OS, et les utilisateurs peuvent choisir si le client DNS intégré doit être utilisé ou non, en modifiant edge://flags, ou à l’aide d’un indicateur de ligne de commande.
+Si vous ne configurez pas cette stratégie, le client DNS intégré est activé par défaut.
 
   #### Fonctionnalités prises en charge:
 
@@ -12129,6 +12232,70 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### DefinePreferredLanguages
+
+  #### Définir une liste ordonnée des langues préférées que les sites web doivent afficher si le site prend en charge la langue
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 89 ou version ultérieure
+
+  #### Description
+
+  Configure les variantes de langue que MicrosoftEdge envoie aux sites web dans le cadre de l’en-tête HTTP de demande Accept-Language et empêche les utilisateurs d’ajouter, de supprimer ou de modifier l’ordre des langues préférées dans les paramètres MicrosoftEdge. Les utilisateurs qui souhaitent modifier les langues que MicrosoftEdge affiche ou propose de traduire des pages seront limités aux langues configurées dans cette stratégie.
+
+Si vous activez cette stratégie, les sites web apparaissent dans la première langue de la liste qu’ils prennent en charge, sauf si une autre logique spécifique au site est utilisée pour déterminer la langue d’affichage. Les variantes de langue définies dans cette stratégie remplacent les langues configurées dans le cadre de la stratégie [SpellcheckLanguage](#spellchecklanguage).
+
+Si vous ne configurez pas ou ne désactivez pas cette stratégie, MicrosoftEdge envoie aux sites web les langues préférées spécifiées par l’utilisateur dans le cadre de l’en-tête HTTP Accept-Language demande.
+
+Pour plus d’informations sur les variantes de langue valides, voir [https://go.microsoft.com/fwlink/?linkid=2148854](https://go.microsoft.com/fwlink/?linkid=2148854).
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Chaîne
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: DefinePreferredLanguages
+  - Nom de la stratégie de groupe: définir une liste ordonnée des langues préférées que les sites web doivent afficher si le site prend en charge la langue
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : DefinePreferredLanguages
+  - Type de valeur: REG_SZ
+
+  ##### Exemple de valeur:
+
+```
+"en-US,fr,es"
+```
+
+  #### Informations et paramètres sur Mac
+  
+  - Nom clé de la préférence : DefinePreferredLanguages
+  - Exemple de valeur:
+``` xml
+<string>en-US,fr,es</string>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### DelayNavigationsForInitialSiteListDownload
 
   #### Exiger que la liste des sites en mode entreprise soit disponible avant la navigation à l’onglet
@@ -13090,11 +13257,11 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas accéder �
 
   #### Description
 
-  Cette stratégie permet aux utilisateurs de comparer les prix d’un produit qu’ils consultent, d’obtenir des bons de réduction sur le site web sur lequel ils se trouvent ou d’appliquer automatiquement des bons de réduction lors du règlement.
+  Cette stratégie permet aux utilisateurs de comparer les prix d’un produit qu’ils recherchent, d’obtenir des coupons ou des remises à partir du site web où ils se trouvent, ou d’appliquer automatiquement des coupons lors de l’achat.
 
-Si vous activez cette stratégie ou ne la configurez pas, les fonctionnalités d’achat telles que les comparaisons de prix et les bons de réduction sont automatiquement appliquées pour les domaines de vente au détail. Les bons de réduction pour le détaillant actuel et les prix d’autres détaillants sont récupérés à partir d’un serveur.
+Si vous activez ou ne configurez pas cette stratégie, les fonctionnalités d’achat telles que la comparaison des prix, les coupons et les remises sont automatiquement appliquées aux domaines de vente au détail. Les bons de réduction pour le détaillant actuel et les prix d’autres détaillants sont récupérés à partir d’un serveur.
 
-Si vous désactivez cette stratégie, les fonctionnalités d’achat telles que les comparaisons de prix et les bons de réduction ne sont pas automatiquement proposées pour les domaines de vente au détail.
+Si vous désactivez cette stratégie, les fonctionnalités d’achat telles que la comparaison des prix, les coupons et les remises ne seront pas automatiquement trouvés pour les domaines de vente au détail.
 
   #### Fonctionnalités prises en charge:
 
@@ -18461,9 +18628,9 @@ Si vous ne configurez pas cette stratégie, le chemin d’accès du profil itin�
 
 Si vous désactivez cette stratégie ou si vous ne la configurez pas, seuls les profils locaux standard sont utilisés.
 
-La stratégie [SyncDisabled](#syncdisabled) désactive toute synchronisation de données, en remplaçant la stratégie.
+[SyncDisabled](#syncdisabled) désactive uniquement la synchronisation cloud et n’a aucun impact sur cette stratégie.
 
-Pour plus d’informations sur l’utilisation des profils utilisateur itinérant, voir https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles.
+Voir [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) pour plus d’informations sur l’utilisation des profils utilisateur itinérants.
 
   #### Fonctionnalités prises en charge:
 
@@ -20128,7 +20295,9 @@ Si cette stratégie est définie sur false ou si elle n'est pas définie, les av
 
   #### Description
 
-  Désactive la synchronisation des données dans MicrosoftEdge. Cette stratégie empêche également l'invite de consentement de synchronisation d'apparaître.
+  Désactive la synchronisation des données dans MicrosoftEdge. Cette stratégie empêche également l'invite de consentement de synchronisation de s’afficher.
+
+Cette stratégie désactive uniquement la synchronisation cloud et n’a aucun impact sur la stratégie [RoamingProfileSupportEnabled](#roamingprofilesupportenabled).
 
 Si vous configurez pas cette stratégie, ou si vous ne la configurez pas de la façon recommandée, les utilisateurs peuvent activer ou désactiver la synchronisation. Si vous définissez cette stratégie comme étant obligatoire, les utilisateurs ne pourront pas activer la synchronisation.
 
@@ -22058,7 +22227,7 @@ Si vous ne configurez pas cette stratégie, ou si vous définissez une chaîne v
 
   ### WebWidgetAllowed
 
-  #### Autoriser le widget web
+  #### Activer le widget Web
 
   
   
@@ -22122,7 +22291,7 @@ L’option de lancement du widget à partir du menu «Autres outils» de Microso
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Activer le widget web au démarrage de Windows
+  #### Autoriser le widget Web au démarrage de Windows
 
   
   
@@ -22240,7 +22409,7 @@ Si vous désactivez ou ne configurez pas cette stratégie, le solveur Microsoft 
   [Retour au début](#microsoft-edge---policies)
 
 
-## Articles associés
+## Voir également
 
 - [Configuration de MicrosoftEdge](configure-microsoft-edge.md)
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
