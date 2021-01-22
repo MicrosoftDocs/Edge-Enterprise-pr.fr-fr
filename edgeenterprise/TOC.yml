@@ -1,4 +1,4 @@
-# last revised 01/14/2021
+# last revised 01/20/2021
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
@@ -119,6 +119,8 @@
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Partage de cookies de MicrosoftEdge vers InternetExplorer
               href: edge-ie-mode-add-guidance-cookieshare.md
+            - name: Enterprise Site List Manager dans Microsoft Edge
+              href: edge-ie-mode-site-list-manager.md
 - name: Sécurité Microsoft Edge
   items:
     - name: Sécurité pour votre entreprise
