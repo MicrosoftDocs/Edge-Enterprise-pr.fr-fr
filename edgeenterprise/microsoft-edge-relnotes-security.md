@@ -3,24 +3,28 @@ title: Notes de publication pour les mises à jour de sécurité de Microsoft Ed
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/08/2021
+ms.date: 01/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication pour les mises à jour de sécurité de Microsoft Edge
-ms.openlocfilehash: 9644f981f8a94d0c6bd7a4c9070fb53668e7d4ab
-ms.sourcegitcommit: f3b422cba2810c973682437ff46a652fc5429f7c
+ms.openlocfilehash: 2ea1a9e79fba3cba83fead9fe05d691ad54ddc1e
+ms.sourcegitcommit: e5980a7a36c252e8a04315b3d4c64a161027324e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "11255240"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297027"
 ---
 # Notes de publication pour les mises à jour de sécurité de Microsoft Edge
 
 Ces notes de publication fournissent des informations sur les correctifs de sécurité inclus dans les mises à jour apportées au canal stable Microsoft Edge.
 
+## 21 janvier 2021
+
+Microsoft a publié le dernier canal **stable Microsoft Edge (version 88.0.705.50),** qui intègre les dernières mises à jour de sécurité du projet Chromium. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+<!--- https://msrc.microsoft.com/update-guide/ -->
 ## Le 7 janvier 2021
 
 Microsoft a sorti le dernier **canal stable Microsoft Edge (version 87.0.664.75)**, qui incorpore les dernières mises à jour de sécurité du projet de chrome. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
