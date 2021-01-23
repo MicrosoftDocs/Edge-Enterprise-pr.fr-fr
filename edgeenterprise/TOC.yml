@@ -1,4 +1,4 @@
-# last revised 01/20/2021
+# last revised 01/21/2021
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
@@ -129,6 +129,8 @@
       href: microsoft-edge-security-endpoints.md
     - name: Protection contre la perte de données (DLP)
       href: microsoft-edge-security-dlp.md
+    - name: Moniteur de mot de passe activé automatiquement pour les utilisateurs
+      href: microsoft-edge-security-password-monitor.md
     - name: Protection contre des applications potentiellement indésirables (PUA)
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Prise en charge de l’accès conditionnel Azure AD
