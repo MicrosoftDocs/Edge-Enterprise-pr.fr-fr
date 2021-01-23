@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/15/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
-ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
+ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
+ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270840"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11281023"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -35,8 +35,10 @@ Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour
 
 | Nom | Légende |
 |--|--|
-|[BrowsingDataLifetime](#browsingdatalifetime)|Paramètres de durée de vie des données de navigation|
-|[DefinePreferredLanguages](#definepreferredlanguages)|Définir une liste ordonnée des langues préférées que les sites web doivent afficher si le site prend en charge la langue|
+|[MAMEnabled](#mamenabled)|Gestion des applications mobiles activée|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Autoriser les recommandations et les notifications promotionnelles de MicrosoftEdge|
+
+
 
 
 ## Stratégies disponibles
@@ -48,12 +50,12 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[Paramètres de l’application Guard](#application-guard-settings)|[Cast](#cast)|
 |[Paramètres du contenu](#content-settings)|[Moteur de recherche par défaut](#default-search-provider)|
 |[Extensions](#extensions)|[Authentification HTTP](#http-authentication)|
-|[Paramètres du mode kiosque](#kiosk-mode-settings)|[Messagerie native](#native-messaging)|
-|[Gestionnaire et protection des mots de passe](#password-manager-and-protection)|[Niveau de performance](#performance)|
-|[Impression](#printing)|[Serveur proxy](#proxy-server)|
-|[Paramètres des onglets en veille](#sleeping-tabs-settings)|[Paramètres SmartScreen](#smartscreen-settings)|
-|[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|[Supplémentaire](#additional)|
-
+|[Paramètres du mode kiosque](#kiosk-mode-settings)|[Facilité de gestion](#manageability)|
+|[Messagerie native](#native-messaging)|[Gestionnaire et protection des mots de passe](#password-manager-and-protection)|
+|[Niveau de performance](#performance)|[Impression](#printing)|
+|[Serveur proxy](#proxy-server)|[Paramètres des onglets en veille](#sleeping-tabs-settings)|
+|[Paramètres SmartScreen](#smartscreen-settings)|[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|
+|[Supplémentaire](#additional)|
 
 ### [*Paramètres de l’application Guard*](#application-guard-settings-policies)
 
@@ -151,7 +153,12 @@ et des conseils pour les services Microsoft|
 |Nom de la stratégie|Caption|
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Configurer la modification de la barre d’adresse pour l’expérience de navigation publique en mode plein écran|
-|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Supprimer les fichiers téléchargés dans le cadre d’une session plein écran lorsque MicrosoftEdge se ferme|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Supprimer les fichiers téléchargés dans le cadre d’une session plein écran lors de la fermeture de MicrosoftEdge|
+### [*Facilité de gestion*](#manageability-policies)
+
+|Nom de la stratégie|Sous-titre|
+|-|-|
+|[MAMEnabled](#mamenabled)|Gestion des applications mobiles activée|
 ### [*Messagerie native*](#native-messaging-policies)
 
 |Nom de la stratégie|Caption|
@@ -401,6 +408,7 @@ et des conseils pour les services Microsoft|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquer l’API Serial sur des sites spécifiques|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Afficher les expériences de Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher le raccourci MicrosoftOffice dans la barre des favoris (déconseillé)|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Autoriser les recommandations et les notifications promotionnelles à partir de MicrosoftEdge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Activer la prise en charge de Signed HTTP Exchange (SXG) |
 |[SitePerProcess](#siteperprocess)|Activer l’isolation de site pour tous les sites|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
@@ -5277,6 +5285,72 @@ Pour obtenir plus d’informations sur la configuration du mode plein écran, vo
 
   [Retour au début](#microsoft-edge---policies)
 
+  ## Stratégies de gestion
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### MAMEnabled
+
+  #### Gestion des applications mobiles activée
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 89 ou version ultérieure
+
+  #### Description
+
+  Permet au navigateur Microsoft Edge de récupérer des stratégies à partir des services de gestion des applications Intune et de les appliquer aux profils des utilisateurs.
+
+Si vous activez cette stratégie ou si vous ne la configurez pas, les stratégies de gestion des applications mobiles (MAM) peuvent être appliquées.
+
+Si vous désactivez cette stratégie, MicrosoftEdge ne communiquera pas avec Intune pour demander des stratégies MAM.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: MAMEnabled
+  - Nom de la stratégie de groupe: Gestion des applications mobiles activée
+  - Chemin d’accès de la stratégie de groupe (obligatoire) : Administrative Templates/Microsoft Edge/Manageability
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : MAMEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000000
+```
+
+  #### Informations et paramètres Mac
+  
+  - Nom de la clé de préférence : MAMEnabled
+  - Exemple de valeur:
+``` xml
+<false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ## Stratégies de messagerie native
 
   [Retour au début](#microsoft-edge---policies)
@@ -9136,7 +9210,9 @@ Plus précisément, il existe un bouton **Suggérer des pages similaires lorsqu�
 
   Désactive la visionneuse de PDF intégrée dans MicrosoftEdge.
 
-Si vous activez cette stratégie, Microsoft Edge traite les fichiers PDF de la même manière que les téléchargements et permet aux utilisateurs de les ouvrir avec l’application par défaut.
+Si vous activez cette stratégie, MicrosoftEdge traite les fichiers PDF de la même manière que les téléchargements et permet aux utilisateurs de les ouvrir avec l’application par défaut.
+
+Si MicrosoftEdge est le lecteur PDF par défaut, les fichiers PDF ne sont pas téléchargés et continueront à s’ouvrir dans MicrosoftEdge.
 
 Si vous ne configurez pas cette stratégie ou si vous la désactivez, MicrosoftEdge ouvre les fichiers PDF (à moins que l’utilisateur ne le désactive).
 
@@ -19777,6 +19853,68 @@ Si vous désactivez cette stratégie, le raccourci n’apparaît pas.
   - Exemple de valeur:
 ``` xml
 <false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### ShowRecommendationsEnabled
+
+  #### Autoriser les recommandations et les notifications promotionnelles à partir de MicrosoftEdge
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis 89 ou version ultérieure
+
+  #### Description
+
+  Ce paramètre de stratégie vous permet de décider si les employés doivent recevoir des recommandations et des notifications d’assistance dans le produit de MicrosoftEdge.
+
+Si vous activez ou ne configurez pas ce paramètre, les employés reçoivent des recommandations/notifications de MicrosoftEdge.
+
+Si vous désactivez ce paramètre, les employés ne recevront pas de recommandations/notifications de MicrosoftEdge.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: ShowRecommendationsEnabled
+  - Nom de la stratégie de groupe: autoriser les recommandations et les notifications promotionnelles à partir de MicrosoftEdge
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : ShowRecommendationsEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  #### Informations et paramètres Mac
+  
+  - Nom de la clé de la préférence : ShowRecommendationsEnabled
+  - Exemple de valeur:
+``` xml
+<true/>
 ```
   
 
