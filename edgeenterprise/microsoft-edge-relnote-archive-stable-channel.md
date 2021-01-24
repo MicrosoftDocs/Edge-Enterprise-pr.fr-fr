@@ -3,23 +3,106 @@ title: Notes de publication archivées du canal stable Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/13/2021
+ms.date: 01/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication archivées du canal stable Microsoft Edge
-ms.openlocfilehash: 383f2c806e0459c32c378ff91613cf240453c781
-ms.sourcegitcommit: 498a62144b099a1198c06f98ad010cf95aa33727
+ms.openlocfilehash: b75cbb1de6da97bf15174c36ab0e6a872c4948f2
+ms.sourcegitcommit: 929c95f4254710d9582afbfb7a582dfc0280db3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "11268265"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297149"
 ---
 # Notes de publication archivées du canal stable Microsoft Edge
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal stable Microsoft Edge. L'ensemble des mises à jour de sécurité sont répertoriées [ici](microsoft-edge-relnotes-security.md).
+
+## Version 85.0.564.41: 27août
+
+Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#august-27-2020).
+
+### Mises à jour des fonctionnalités
+
+- **Synchronisation locale des favoris et des paramètres**. Vous pouvez désormais synchroniser les favoris et paramètres d’un navigateur entre les profils ActiveDirectory au sein de votre propre environnement sans avoir besoin d’effectuer une synchronisation dans le cloud.
+
+- **Prise en charge de la stratégie de groupe MicrosoftEdge pour l’approbation de combinaisons site + application à lancer sans invite de confirmation.**. La prise en charge de la stratégie de groupe ajoutée permet aux administrateurs d’ajouter des combinaisons site+application dont le lancement est approuvé sans invite de confirmation. Cela ajoute la possibilité pour les administrateurs de configurer les combinaisons de protocoles/origines approuvées (par exemple, les applications Microsoft365) pour leurs utilisateurs finaux afin de supprimer l’invite de confirmation lors de la navigation vers uneURL qui contient un protocole d’application.
+
+- **Outil de mise en surbrillancePDF**. Cet outil peut être ajouté à la barre d’outils pour les fichiers PDF afin de mettre en évidence le texte important.
+
+- **L’API d’accès au stockage est disponible**. Cette API d’accès au stockage permet l’accès au stockage interne alors qu’un utilisateur tiers manifeste son intention directe d’autoriser un stockage qui sinon serait bloqué par la configuration actuelle du navigateur. Pour plus d’informations, voir [API d’accès au stockage](https://www.chromestatus.com/feature/5612590694662144).
+
+- **Envoyer à OneNote est disponible pour les collections MicrosoftEdge**. Tout le monde a hâte de pouvoir envoyer des informations rassemblées dans des collections vers OneNote, où l’on peut l’ajouter à un projet plus important et collaborer avec d’autres personnes. Et encore plus important, dans MicrosoftEdge85, vous pourrez envoyer du contenu aux produits *Office pour Mac* (Word, Excel et OneNote) pour le compte Microsoft et AzureActiveDirectory.
+
+- **Mises à jour de DevTools**. Pour plus d’informations sur les mises à jour suivantes, voir [Nouveautés de DevTools (MicrosoftEdge85)](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/whats-new/2020/06/devtools).
+
+   - MicrosoftEdgeDevTools prend en charge l’émulation SurfaceDuo. MicrosoftEdgeDevTools peut émuler le SurfaceDuo pour vous permettre de tester l’apparence de votre contenu Web sur les appareils à deux écran. Pour activer cette expérience dans DevTools, accédez au mode Appareil en appuyant sur Ctrl+Maj+M sur Windows ou cmd+Maj+M sur macOS, puis sélectionnez SurfaceDuo dans la liste déroulante des appareils.
+   - MicrosoftEdgeDevTools vous permet de faire correspondre les raccourcis clavier à VSCode. MicrosoftEdgeDevTools prend en charge la personnalisation des raccourcis clavier dans DevTools pour reproduire votre éditeur/IDE. Dans MicrosoftEdge85, nous ajoutons la possibilité de faire correspondre les raccourcis clavier DevTools à VSCode. Cette modification permet de gagner en efficacité dans VSCode et DevTools.
+
+### Mises à jour de stratégie
+
+#### Nouvelles stratégies
+
+Treize nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
+
+- [AutoLaunchProtocolsFromOrigins](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#autolaunchprotocolsfromorigins): définir une liste de protocoles qui peuvent lancer une application externe à partir d’origines, sans inviter l’utilisateur.
+- [AutoOpenAllowedForURLs](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#autoopenallowedforurls): les URL pour lesquels AutoOpenFileTypes peut s’appliquer.
+- [AutoOpenFileTypes](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#autoopenfiletypes): liste des types de fichiers qui doivent être automatiquement ouverts lors du téléchargement.
+- [DefaultSearchProviderContextMenuAccessAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultsearchprovidercontextmenuaccessallowed): autoriser la recherche d’accès au menu contextuel du moteur de recherche par défaut.
+- [EnableSha1ForLocalAnchors](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors): autoriser les certificats signés à l’aide de l’algorithme SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales.
+- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings): désactiver les avertissements basés sur l’extension de fichier de téléchargement pour les types de fichiers spécifiés sur des domaines.
+- [IntensiveWakeUpThrottlingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#intensivewakeupthrottlingenabled): contrôler la fonctionnalité IntensiveWakeUpThrottling.
+- [NewTabPagePrerenderEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpageprerenderenabled): activer le préchargement de la nouvelle page d’onglet pour un rendu plus rapide.
+- [NewTabPageSearchBox](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesearchbox): configurer l’expérience de zone de recherche de la page Nouvelonglet.
+- [PasswordMonitorAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#passwordmonitorallowed): autoriser les utilisateurs à être avertis si leur mot de passe est considéré comme non sécurisé.
+- [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled): activer l’utilisation de copies itinérantes pour les données de profil MicrosoftEdge.
+- [RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation): définit le répertoire de profil itinérant.
+- [TLSCsipherSuiteDenyList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tlsciphersuitedenylist): spécifier les suites de chiffrementTLS à désactiver.
+
+#### Stratégies obsolètes
+
+- [EnableDomainActionsDownload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledomainactionsdownload): activer le téléchargement des actions de domaine à partir de Microsoft.
+- [WebComponentsV0Enabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcomponentsv0enabled) – Réactive les composants WebPart de l’API v0 jusqu’au M84.
+- [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies): autoriser WebDriver à remplacer les stratégies incompatibles.
+
+## Version 84.0.522.63: août 2020
+
+Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#august-20-2020).
+
+## Version 84.0.522.61: 17 août
+
+Résolution de divers bogues et problèmes de performances.
+
+## Version 84.0.522.59: 11 août
+
+Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#august-11-2020).
+
+## Version 84.0.522.58: 10 août
+
+Résolution de divers bogues et problèmes de performances.
+
+## Version 84.0.522.52: 1er août
+
+Résolution de divers bogues et problèmes de performances.
+
+## Version84.0.522.50: 31juillet
+
+Résolution de divers bogues et problèmes de performances.
+
+## Version84.0.522.49: 29juillet
+
+Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#july-29-2020).
+
+## Version84.0.522.48: 28juillet
+
+Résolution de divers bogues et problèmes de performances.
+
+## Version84.0.522.44: 23juillet
+
+Résolution de divers bogues et problèmes de performances.
 
 ## Version84.0.522.40: 16juillet
 
@@ -66,7 +149,7 @@ Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft
 
 #### Nouvelles stratégies
 
-Nous avons ajouté sept nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
+Nous avons ajouté sept nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
 - [AppCacheForceEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#appcacheforceenabled): permet de réactiver la fonctionnalité AppCache, même si elle est désactivée par défaut.
 - [ApplicationGuardContainerProxy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardcontainerproxy): configure les paramètres du proxy conteneur Application Guard.
@@ -165,7 +248,7 @@ Un utilisateur saisit «powerbi» comme «powerbbi».com. Le docteur de lien sug
 
 #### Nouvelles stratégies
 
-15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
+15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
 - [AllowSurfGame](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowsurfgame) –  Autoriser le jeu de surf.
 - [AllowTokenBindingForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowtokenbindingforurls) – Configurer la liste des sites avec lesquels MicrosoftEdge tentera d’établir une liaison de jeton.
