@@ -3,19 +3,19 @@ title: Configurer et résoudre les problèmes de synchronisation de MicrosoftEdg
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 01/14/2021
+ms.date: 01/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer et résoudre les problèmes de synchronisation de MicrosoftEdge
-ms.openlocfilehash: fa9b9ead6319bceeb95066003a77be7ecf84db46
-ms.sourcegitcommit: 68b50c45b2b78acec5a0776ce4ddd11410a4e382
+ms.openlocfilehash: 36912d2fd1c33a227ce1d4b7c912f6ef1dfdcc00
+ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270760"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297453"
 ---
 # Configurer et résoudre les problèmes de synchronisation de MicrosoftEdge
 
@@ -74,7 +74,7 @@ Pour limiter la synchronisation à certains groupes d'utilisateurs, vous pouvez 
 
 ## MicrosoftEdge et Enterprise State Roaming (ESR)
 
-MicrosoftEdge est une application multiplateforme avec une étendue développée pour la synchronisation des données utilisateur sur tous leurs appareils et ne fait plus partie d’Azure AD Enterprise State Roaming. Toutefois, MicrosoftEdge remplit les promesses de protection des données d’Enterprise State Roaming, telles que la possibilité d’apporter votre propre clé. Pour plus d’informations, consultez [MicrosoftEdge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
+MicrosoftEdge est une application inter-plateforme avec une étendue développée pour la synchronisation des données utilisateur sur tous leurs appareils et ne fait plus partie intégrante d’Azure AD Enterprise State Roaming. Toutefois, MicrosoftEdge remplit les promesses de protection des données d’Enterprise State Roaming, telles que la possibilité d’apporter votre propre clé. Pour plus d’informations, consultez [MicrosoftEdge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
 
 ## Résoudre les problèmes de synchronisation
 
@@ -86,9 +86,9 @@ Un cas d’utilisation populaire pour la maintenance de l’identité de l’uti
 
 Avant de traiter un problème comme un problème de synchronisation, vérifiez si l’utilisateur est signé dans le navigateur avec un compte valide.
 
-La capture d’écran suivante montre un exemple d’erreur d’identité trouvée dans *edge://sync-internals* sous **Informations d’identification**:
+La capture d’écran suivante montre un exemple d’erreur d’identité. L’erreur est «**Dernière erreur de jeton, EDGE_AUTH_ERROR: 3, 54, 3ea**», qui se trouve dans *edge://sync-internals* sous **Informations d’identification**:
 
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Erreur d’identité":::
+:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Dernière erreur de jeton EDGE_AUTH_ERROR: 3,54, 3ea":::
 
 ### Problèmes de synchronisation courants
 
@@ -160,11 +160,10 @@ Si cette erreur est rencontrée pour un compte Azure Active Directory, ou si DIS
 
 ### Problème: erreur de chiffrement rencontrée
 
-Cette erreur est visible sous **Type d’informations** dans *edge://sync-internals* et peut signifier que les données côté service de l’utilisateur doivent être réinitialisées. La capture d’écran suivante montre un exemple des informations sur une erreur de chiffrement.
+Cette erreur est visible sous **Type d’informations** dans *edge://sync-internals* et peut signifier que les données côté service de l’utilisateur doivent être réinitialisées. L’exemple suivant montre un message d’erreur de chiffrement:
+<br>«Error:GenerateCryptoErrorsForTypes@.. /.. /components/sync/driver/data_type_manager_impl.cc:42, une erreur de chiffrement s’est produite».
 
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error-new.png" alt-text="Erreur de chiffrement.":::
-
-1. Redémarrez Microsoft Edge et accédez à *edge://sync-internals*, puis consultez la section «**État de la clé de compte AAD**»
+1. Redémarrez MicrosoftEdge et accédez à *edge://sync-internals*, puis consultez la section «**État de la clé de compte AAD**»
    - «Réussite» dans «Dernier résultat MIP»: l’erreur de chiffrement signifie que les données du serveur peuvent être chiffrées avec une clé perdue. La réinitialisation des données est nécessaire pour reprendre la synchronisation.
    - «Aucune autorisation» dans «Résultat du dernier MIP»: il est possible qu’il soit dû à une modification d’AzureAD ou à des modifications d’abonnement client. La réinitialisation des données est nécessaire pour reprendre la synchronisation.
    - D’autres erreurs peuvent signifier des problèmes de configuration du serveur.
@@ -210,7 +209,7 @@ Pas à la date d'aujourd'hui. Pour les clients qui utilisent le Cloud HD de GCC,
 
 #### Pourquoi la synchronisation MicrosoftEdge n’est-elle pas prise en charge dans tous les abonnements M365?
 
-La synchronisation d’entreprise dépend [d’Azure Information Protection,](https://azure.microsoft.com/services/information-protection/) qui n’est pas disponible dans tous les abonnements M365.
+La synchronisation d’entreprise dépend [d’Azure Information Protection,](https://azure.microsoft.com/services/information-protection/)qui n’est pas disponible dans tous les abonnements M365.
 
 #### Est-ce que la synchronisation de MicrosoftEdge se base sur Enterprise State Roaming?
 
