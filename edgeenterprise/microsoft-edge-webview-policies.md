@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies WebView2 Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,19 +11,18 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 63a34f35994b459eb26258c38d870ed5db126794
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 52c426e3c08764fbbfdce207127ca083d38a93c4
+ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281033"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304717"
 ---
 # Microsoft Edge WebView2 - Politiques
 
 La dernière version de Microsoft Edge WebView2 comprend les politiques suivantes. Vous pouvez utiliser ces politiques pour configurer le fonctionnement de Microsoft Edge WebView2 dans votre organisation.
 
 Pour plus d'informations sur un ensemble supplémentaire de politiques utilisées pour contrôler quand et comment Microsoft Edge WebView2 est mis à jour, consultez la [référence des politiques de mise à jour de Microsoft Edge](microsoft-edge-update-policies.md).
-
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version87 ou ultérieure.
