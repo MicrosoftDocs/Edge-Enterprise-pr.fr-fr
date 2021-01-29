@@ -3,19 +3,19 @@ title: Surveillance de mot de passe activée automatiquement pour les utilisateu
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/21/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Surveillance de mot de passe activée automatiquement pour les utilisateurs
-ms.openlocfilehash: 8ea96522fe99082579e88b2eab330fb265d02b12
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
+ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297496"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "11304534"
 ---
 # Surveillance de mot de passe activée automatiquement pour les utilisateurs
 
@@ -26,7 +26,7 @@ Cet article explique comment la Surveillance de mot de passe dans MicrosoftEdge 
 
 ## Introduction, avantages et disponibilité
 
-La Surveillance de mot de passe permet aux utilisateurs de MicrosoftEdge de protéger leurs comptes en ligne en les informant si l’un de leurs mots de passe a été trouvé dans une fuite en ligne. Les fuites en ligne ou les violations de données se produisent lorsque des acteurs malveillants volent des données à partir d’applications ou de sites web tiers.
+La Surveillance de mot de passe permet aux utilisateurs de MicrosoftEdge de protéger leurs comptes en ligne en les informant si l’un de leurs mots de passe a été trouvé dans une fuite en ligne. Les fuites en ligne ou les violations de données se produisent lorsque des acteurs malveillants volent des données à partir d’applications ou de sites web tiers. Pour en savoir plus, voir la [Surveillance de mot de passe : protection des mots de passe dans le livre Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/) sur le blog Microsoft Research.
 
 ### Avantages
 
@@ -34,7 +34,7 @@ La Surveillance de mot de passe permet aux utilisateurs de MicrosoftEdge de prot
 
 ### Disponibilité
 
-La Surveillance de mot de passe est présente dans les canaux de prévisualisation préliminaire (Canary/Dev) et sera promue au canal stable version88 à partir du 21/01. Le déploiement sera progressif et peut prendre quelques semaines avant de voir le message et le contrôle suivants dans votre page **Paramètres** > **Profil** > **Mot de passe**.
+Le moniteur de mot de passe est disponible dans le canal stable version88 à partir du 21/01. Le déploiement sera progressif et peut prendre quelques semaines avant de voir le message et le contrôle suivants dans votre page **Paramètres** > **Profil** > **Mot de passe**.
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Option permettant d’activer la Surveillance de mot de passe":::
 
