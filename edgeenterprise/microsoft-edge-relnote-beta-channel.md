@@ -3,23 +3,27 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 01/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: c1d0b7091655d5ca0893ea11cc0c2fc44bb516dd
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 83a33a5bdd5bee59a4a3dd0d3914ee9d3de3eb86
+ms.sourcegitcommit: 4b76ef2f210a00fd3bd86d5ac70670711fb09b72
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281003"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "11306183"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta. Les versions archivées de ces notes de publication sont disponibles [ici](microsoft-edge-relnote-archive-beta-channel.md).
+
+## Version 88.0.705.56 : 29 janvier
+
+Résolution de divers bogues et problèmes de performances.
 
 ## Version 88.0.705.49 : 20 janvier
 
