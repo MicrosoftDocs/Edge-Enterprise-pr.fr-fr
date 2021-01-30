@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/26/2021
+ms.date: 01/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: fd5336a57ad3f6706a2a61a2781c772f12e8b795
-ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
+ms.openlocfilehash: 6adba3b373f5989362594d0ff84a2932a661550a
+ms.sourcegitcommit: 6109055bfd0e2deba7f0cc75b27f6a805b16a0b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "11304544"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "11306064"
 ---
 # Notes de publication du canal stable Microsoft Edge
 
@@ -29,7 +29,11 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 
-## Version 88.0.705.53 : 26 janvier
+## Version 88.0.705.56 : 28janvier
+
+Résolution de divers bogues et problèmes de performances.
+
+## Version 88.0.705.53 : 26janvier
 
 Résolution de divers bogues et problèmes de performances.
 
@@ -48,8 +52,13 @@ Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft
 - **Authentification:**
 
   - La signature unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) et le compte Microsoft (MSA) sur Windows de niveau inférieur. Un utilisateur se connectant à Microsoft Edge sur Microsoft Windows de niveau inférieur (7, 8.1) se connecte désormais automatiquement aux sites web configurés pour autoriser la connexion unique avec les comptes Professionnel et Microsoft (par exemple, bing.com, office.com, msn.com, outlook.com).<br>Remarque: il est possible que l’utilisateur doive se déconnecter et se reconnecter s’il se connecte à une version antérieure à la version88 de Microsoft Edge pour utiliser cette fonctionnalité.
+  
+  - L’authentification unique (SSO) vers des sites professionnels à l’aide des comptes Windows Azure Active Directory (Azure AD) sur le système dans des profils Microsoft Edge non Azure AD. Cette fonctionnalité peut être activée pour n’importe quel profil qui n’est pas connecté avec un compte scolaire/professionnel et qui n’est pas invité ou en mode privé et permet l’utilisation de n’importe quel compte scolaire/professionnel sur le système d’exploitation avec ce profil. Cette fonctionnalité peut être configurée dans **Paramètres** > **Profils** > **Préférences de profil** > **Autoriser l'authentification unique pour les sites professionnels ou scolaires à l’aide de ce profil**.
+  
+    > [!NOTE]
+    > «L’authentification unique (SSO) pour tous les comptes Windows utilisant le profil Microsoft Edge» est une mise à jour des notes de publication du 21janvier.
 
-- **Option du mode plein écran pour terminer la session.** Le bouton «Mettre fin à la session» est désormais disponible en mode plein écran dans l’expérience de navigation publique. Cette fonctionnalité permet de supprimer les données et paramètres du navigateur lorsque Microsoft Edge est fermé. Pour en savoir plus sur les fonctionnalités et la feuille de route du mode plein écran, voir [Configurer le mode plein écran Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
+- **Option du mode plein écran pour terminer la session**. Le bouton «Mettre fin à la session» est désormais disponible en mode plein écran dans l’expérience de navigation publique. Cette fonctionnalité permet de supprimer les données et paramètres du navigateur lorsque Microsoft Edge est fermé. Pour en savoir plus sur les fonctionnalités et la feuille de route du mode plein écran, voir [Configurer le mode plein écran Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 
 - **Sécurité et confidentialité:**
 
