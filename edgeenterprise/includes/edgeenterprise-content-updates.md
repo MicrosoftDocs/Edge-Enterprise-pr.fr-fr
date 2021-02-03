@@ -1,30 +1,45 @@
 ---
-ms.openlocfilehash: fee3153f7884bd3c36328d88e433d3ca1b13d0e4
-ms.sourcegitcommit: 23277e25061c75da033ed042e25c33acff3ac0bd
+ms.openlocfilehash: 841bb970fba4da5c861343d3032155e99b2e7a4d
+ms.sourcegitcommit: 21509bb4ca9b2f62c657fbdb43267dec0de1c458
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "11297850"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "11306585"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+## Semaine du 25 janvier 2021
+
+
+| Date de publication |Titre de la rubrique | Modification |
+|------|------------|--------|
+| 25/01/2021 | [Mises à jour du contenu de MicrosoftEdge](/DeployEdge/microsoft-edge-content-updates)<br>Annotez le contenu publié la semaine du 25 janvier. | modifié |
+| 26/01/2021 | [Notes de publication de MicrosoftEdge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Mettez à jour avec l’addendum pour la version principale 88.0.705.50. Appelez la disponibilité de l’authentification unique (SSO).| modifié |
+| 26/01/2021 | [Surveillance de mot de passe activée automatiquement pour les utilisateurs](/DeployEdge/microsoft-edge-security-password-monitor)<br>Disponibilité correcte et lien vers Microsoft Research sur la protection des mots de passe. | modifié |
+| 27/01/2021 | [Documentation relative aux stratégies du navigateur MicrosoftEdge](/DeployEdge/microsoft-edge-policies)<br>Mise à jour, nouvelle stratégie ajoutée.| modifié |
+| 27/01/2021 | [Documentation relative aux stratégies WebView2 MicrosoftEdge](/DeployEdge/microsoft-edge-webview-policies)<br>Actualiser, aucune modification. | modifié |
+| 27/01/2021 | [Notes de publication de MicrosoftEdge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Mise à jour pour les correctifs de version mineure 88.0.705.53. | modifié |
+| 28/01/2021 | [Notes de publication de MicrosoftEdge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Mise à jour pour les correctifs de version mineure 88.0.705.56. | modifié |
+| 29/01/2021 | [Notes de publication de MicrosoftEdge pour le canal bêta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Mise à jour pour les correctifs de version mineure 88.0.705.56. | modifié |
+
 
 ## Semaine du 18janvier2021
 
 
 | Date de publication |Titre de la rubrique | Modification |
 |------|------------|--------|
-| 22/01/2021 | [Lecteur PDF dans Microsoft Edge](/DeployEdge/microsoft-edge-pdf)<br>Mise à jour avec ajouts aux fonctionnalités prises en charge. | modifié |
-| 22/01/2021 | [Notes de publication de MicrosoftEdge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Liste des fonctionnalités mise à jour pour la version principale 88.0.705.50. | Modifié |
-| 21/01/2021 | [Notes de publication de Microsoft Edge pour le canal bêta](/DeployEdge/microsoft-edge-relnote-beta-channel),<br>Correctifs pour la version mineure 88.0.705.49.| modifié |
-| 21/01/2021 | [Notes de publication de MicrosoftEdge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Mise à jour pour la version principale 88.0.705.50, appel de nouvelles fonctionnalités et stratégies de groupe nouvelles ou dépréciées.| modifié |
-| 21/01/2021 | [Notes de publication pour les mises à jour de sécurité de MicrosoftEdge](/DeployEdge/microsoft-edge-relnotes-security)<br>Mise à jour de sécurité pour stable version 88.0.705.50.  | modifié |
-| 21/01/2021 | [Documentation relative aux stratégies du navigateur MicrosoftEdge](/DeployEdge/microsoft-edge-policies)<br>Mise à jour et appel de nouvelles stratégies.| modifié |
-| 21/01/2021 | [Documentation relative aux stratégies WebView2 MicrosoftEdge](/DeployEdge/microsoft-edge-webview-policies)<br>Actualisation automatique, aucune modification. | modifié |
-| 22/01/2021 | [Surveillance de mot de passe activée automatiquement pour les utilisateurs](/DeployEdge/microsoft-edge-security-password-monitor)<br>Nouvel article décrivant la Surveillance de mot de passe et la façon dont elle est automatiquement activée pour les utilisateurs. | ajouté |
-| 21/01/2021 | [Enterprise Site List Manager dans MicrosoftEdge ](/DeployEdge/edge-ie-mode-site-list-manager)<br>Nouvel article décrivant Site List Manager intégré à Microsoft Edge. | ajouté |
-| 19/01/2021 | [Mises à jour du contenu de MicrosoftEdge](/DeployEdge/microsoft-edge-content-updates)<br>Annoter le contenu publié la semaine précédente. | modifié |
-| 22/01/2021 | [Configurer Microsoft Edge en mode plein écran](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Mise à jour de la prise en charge et la feuille de route des fonctionnalités. | modifié |
-| 22/01/2021 | [Configurer et résoudre les problèmes de synchronisation de MicrosoftEdge](/DeployEdge/microsoft-edge-enterprise-sync)<br>Mise à jour de l’article pour clarifier la résolution des problèmes. | modifié |
+| 22/01/2021 | [Lecteur PDF dans Microsoft Edge](/DeployEdge/microsoft-edge-pdf) | modifié |
+| 22/01/2021 | [Notes de publication de MicrosoftEdge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel) | Modifié |
+| 21/01/2021 | [Notes de publication de MicrosoftEdge pour le canal bêta](/DeployEdge/microsoft-edge-relnote-beta-channel) | Modifié |
+| 21/01/2021 | [Notes de publication de MicrosoftEdge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel) | Modifié |
+| 21/01/2021 | [Notes de publication pour les mises à jour de sécurité de MicrosoftEdge](/DeployEdge/microsoft-edge-relnotes-security) | Modifié |
+| 21/01/2021 | [Documentation relative aux stratégies du navigateur MicrosoftEdge](/DeployEdge/microsoft-edge-policies) | modifié |
+| 21/01/2021 | [Documentation relative aux stratégies WebView2 MicrosoftEdge](/DeployEdge/microsoft-edge-webview-policies) | Modifié |
+| 22/01/2021 | [Surveillance de mot de passe activée automatiquement pour les utilisateurs](/DeployEdge/microsoft-edge-security-password-monitor) | ajouté |
+| 21/01/2021 | [Enterprise Site List Manager dans MicrosoftEdge ](/DeployEdge/edge-ie-mode-site-list-manager) | ajouté |
+| 19/01/2021 | [Mises à jour du contenu de MicrosoftEdge](/DeployEdge/microsoft-edge-content-updates) | modifié |
+| 22/01/2021 | [Configurer Microsoft Edge en mode plein écran](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modifié |
+| 22/01/2021 | [Configurer et résoudre les problèmes de synchronisation de MicrosoftEdge](/DeployEdge/microsoft-edge-enterprise-sync) | modifié |
 
 
 ## Semaine du 21décembre2020
@@ -43,7 +58,7 @@ ms.locfileid: "11297850"
 
 | Date de publication |Titre de la rubrique | Modification |
 |------|------------|--------|
-| 07/01/2021 | [Documentation relative aux stratégies du navigateur MicrosoftEdge](/DeployEdge/microsoft-edge-policies) | modifié |
+| 07/01/2021 | [Documentation relative aux stratégies du navigateur MicrosoftEdge](/DeployEdge/microsoft-edge-policies) | Modifié |
 | 07/01/2021 | [Documentation relative aux stratégies WebView2 MicrosoftEdge](/DeployEdge/microsoft-edge-webview-policies) | Modifié |
 | 08/01/2021 | [Notes de publication pour les mises à jour de sécurité de MicrosoftEdge](/DeployEdge/microsoft-edge-relnotes-security) | Modifié |
 | 08/01/2021 | [Notes de publication de MicrosoftEdge pour le canal stable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modifié |
@@ -63,12 +78,12 @@ ms.locfileid: "11297850"
 | 13/01/2021 | [Déploiement de Microsoft Edge sur des centaines ou des milliers d’appareils](/DeployEdge/microsoft-edge-video-deploy) | modifié |
 | 13/01/2021 | [Microsoft Edge et Microsoft Search](/DeployEdge/microsoft-edge-video-search) | modifié |
 | 13/01/2021 | [Isolation du navigateur Microsoft Edge en utilisant Application Guard](/DeployEdge/microsoft-edge-video-security-application-guard) | modifié |
-| 13/01/2021 | [Sécurité, compatibilité et facilité de gestion de Microsoft Edge](/DeployEdge/microsoft-edge-video-security-compatibility-manageability) | modifié |
-| 13/01/2021 | [Microsoft Edge et la protection contre la perte de données](/DeployEdge/microsoft-edge-video-security-dlp) | modifié |
+| 13/01/2021 | [Sécurité, compatibilité et facilité de gestion de Microsoft Edge](/DeployEdge/microsoft-edge-video-security-compatibility-manageability) | Modifié |
+| 13/01/2021 | [Microsoft Edge et la protection contre la perte de données](/DeployEdge/microsoft-edge-video-security-dlp) | Modifié |
 | 14/01/2021 | [Configurer et résoudre les problèmes de synchronisation de MicrosoftEdge](/DeployEdge/microsoft-edge-enterprise-sync) | modifié |
-| 15/01/2021 | [Documentation relative aux stratégies du navigateur MicrosoftEdge](/DeployEdge/microsoft-edge-policies) | modifié |
-| 15/01/2021 | [Documentation relative aux stratégies WebView2 MicrosoftEdge](/DeployEdge/microsoft-edge-webview-policies) | modifié |
-| 15/01/2021 | [Notes de publication de MicrosoftEdge pour le canal bêta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modifié |
+| 15/01/2021 | [Documentation relative aux stratégies du navigateur MicrosoftEdge](/DeployEdge/microsoft-edge-policies) | Modifié |
+| 15/01/2021 | [Documentation relative aux stratégies WebView2 MicrosoftEdge](/DeployEdge/microsoft-edge-webview-policies) | Modifié |
+| 15/01/2021 | [Notes de publication de MicrosoftEdge pour le canal bêta](/DeployEdge/microsoft-edge-relnote-beta-channel) | Modifié |
 
 
 ## Semaine du 14décembre2020
