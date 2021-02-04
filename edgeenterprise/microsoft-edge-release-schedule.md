@@ -3,19 +3,19 @@ title: Planning de publication de MicrosoftEdge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planning de publication de MicrosoftEdge
-ms.openlocfilehash: 3b9c257123f2d1eeda1484e761963b6d0106c7c0
-ms.sourcegitcommit: d8d0b0fcb787fe90fa20426ef5e6dc194e935808
+ms.openlocfilehash: ad02c2775b836fe1a829945c205f2f52208065f1
+ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "11297699"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11311521"
 ---
 # Planning de publication de MicrosoftEdge
 
@@ -33,6 +33,8 @@ Le tableau suivant répertorie les dates de publication planifiées pour les can
 > Les dates de publication sont approximatives et peuvent varier en fonction de l’état de la Build.
 
 ### Versions MicrosoftEdge
+
+Le tableau suivant suit et fournit uniquement des informations sur les principales publication dans les deux canaux.
 
 | Version | État de la publication | Canal Beta<br>Semaine de publication | Canal Stable<br>Semaine de publication |
 |---------|-----|------|--------|
