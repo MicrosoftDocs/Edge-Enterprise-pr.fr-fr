@@ -3,26 +3,26 @@ title: 'Enterprise Site List Manager dans MicrosoftEdge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Activer et utiliser Enterprise Site List Manager dans MicrosoftEdge '
-ms.openlocfilehash: 2d10886624918c97933a841c428ea66ccf5b34c9
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 9700c2b78bba514525c4d80d211ef744dd175d2f
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281046"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312580"
 ---
 # Enterprise Site List Manager dans MicrosoftEdge
 
 Cet article explique comment activer l’accès à Enterprise Site List Manager dans MicrosoftEdge et l’utiliser pour créer, modifier et exporter votre liste des sites en mode Entreprise pour le mode InternetExplorer.
 
 > [!NOTE]
-> Cet article s’applique à MicrosoftEdge version89 ou ultérieure.
+> Cet article s’applique à MicrosoftEdge version89 ou ultérieure. 
 
 ## Vue d’ensemble
 
@@ -34,13 +34,13 @@ De futures améliorations de l’outil pour le mode Internet Explorer seront dis
 
 Vous pouvez configurer l’accès à l’outil à l’aide de la stratégie de groupe [EnterpriseModeSiteListManagerAllowed.](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed)
 
-S’il est activé, vos utilisateurs voient une option nommée Enterprise Site List Manager dans le volet de navigation gauche dans *edge://compat*. S’il est désactivé, les utilisateurs ne voient pas le point d’entrée vers Enterprise Site List Manager dans le volet de navigation gauche. Il s’agit du comportement par défaut.
+S’il est activé, vos utilisateurs voient une option nommée Enterprise Site List Manager dans le volet de navigation gauche dans *edge://compat*. Si elle est désactivée, les utilisateurs ne verront pas le point d'entrée du gestionnaire de liste de sites d'entreprise dans le volet de navigation de gauche. Il s’agit du comportement par défaut.
 
 ## Utilisation de l’outil Enterprise Site List Manager
 
-L’outil Enterprise Site List Manager utilise la version v.2 du schéma. Si vous importez un schéma de version v.1 dans Enterprise Site List Manager (schéma v.2), le XML est enregistré dans la version v.2 du schéma.
+L’outil Enterprise Site List Manager utilise la version v.2 du schéma. Si vous importez un schéma de version v.1 dans Enterprise Site List Manager (schéma v.2), le XML est enregistré dans la version v.2 du schéma. Voir [Guide du schéma du mode entreprise v.2](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
-### Ajouter des sites uniques à votre liste des sites  
+### Ajouter des sites uniques à votre liste de sites  
 
 Utilisez les étapes suivantes pour ajouter des sites individuels à votre liste des sites.
 
@@ -126,6 +126,6 @@ Pour effectuer une recherche, tapez une partie de l’URL dans la zone de recher
 ## Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [À propos du mode IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
+- [À propos du mode Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode)
+- [Guide du schéma du mode entreprise v.2](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
 - [Informations supplémentaires sur le mode entreprise](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Informations supplémentaires concernant la découverte de site d’entreprise](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
