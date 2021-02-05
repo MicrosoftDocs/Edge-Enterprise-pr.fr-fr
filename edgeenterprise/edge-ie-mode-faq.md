@@ -3,23 +3,23 @@ title: FAQ sur le mode IE
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Forum aux questions et résolution des problèmes pour Microsoft Edge avec le mode IE
-ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: aeae79dfd1745c754fb5ab690338f87fd25c080b
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238171"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312590"
 ---
 # FAQ sur le mode IE
 
-Cet article fournit des conseils de dépannage et un Forum aux questions sur Microsoft Edge (version 77 ou ultérieure).
+Cet article fournit des conseils de dépannage et un FAQ pour MicrosoftEdge version77 ou ultérieure.
 
 > [!NOTE]
 > Cet article concerne les canaux MicrosoftEdge **stable**, **Beta** et **Dev**, version77 ou ultérieures.
@@ -62,6 +62,10 @@ Cette erreur peut apparaître en cas d’erreur inattendue dans Internet Explore
 ### Message d’erreur: «Désactiver le débogage à distance pour ouvrir ce site en mode InternetExplorer, sinon il risque de ne pas fonctionner comme prévu».
 
 Vous pouvez rencontrer cette erreur si vous procédez au débogage distant et accédez à une page Web configurée pour s’exécuter en mode IE. Vous pouvez continuer, mais la page sera affichée à l’aide de Microsoft Edge.
+
+### Message d’erreur: «Erreur: La liste des sites EMIE n’a pas pu être récupérée.»
+
+Vous pouvez voir cette erreur sur la page *edge://compat/enterprise* indiquant que le téléchargement de la liste des sites a échoué. À partir de La version87 de MicrosoftEdge, lorsque les cookies sont bloqués pour les demandes tierces à l’aide de la stratégie [BlockThirdPartyCookies,](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) l’authentification HTTP est également interdite. Vous pouvez autoriser les cookies pour le domaine spécifique hébergeant votre liste des sites en mode Entreprise à l’aide de la stratégie [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) pour vous assurer que les téléchargements de listes de sites sont réussis.
 
 ## Forum Aux Questions
 
