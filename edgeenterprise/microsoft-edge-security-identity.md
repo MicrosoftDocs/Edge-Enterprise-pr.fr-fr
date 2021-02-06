@@ -3,23 +3,23 @@ title: Prise en charge et configuration des identités MicrosoftEdge
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prise en charge et configuration des identités MicrosoftEdge
-ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
-ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
+ms.openlocfilehash: 05dc0fabe212f31fe9207c72d097913d5765915f
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11201291"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314607"
 ---
 # Prise en charge et configuration des identités MicrosoftEdge
 
-Cet article décrit comment MicrosoftEdge utilise les identités pour prendre en charge des fonctionnalités telles que la synchronisation et l’authentification unique (SSO). MicrosoftEdge prend en charge la connexion avec ActiveDirectory Domain Services (AD DS), Azure ActiveDirectory (Azure AD) et les comptes Microsoft (MSA). Pour l’instant, Microsoft Edge prend uniquement en charge les comptes Azure Active Directory (Azure AD) appartenant au cloud global ou au cloud souverain GCC. Nous travaillons à l’ajout d’une prise en charge des autres clouds souverains. 
+Cet article décrit comment MicrosoftEdge utilise les identités pour prendre en charge des fonctionnalités telles que la synchronisation et l’authentification unique (SSO). MicrosoftEdge prend en charge la connexion avec ActiveDirectory Domain Services (AD DS), Azure ActiveDirectory (Azure AD) et les comptes Microsoft (MSA). Pour l’instant, Microsoft Edge prend uniquement en charge les comptes Azure Active Directory (Azure AD) appartenant au cloud global ou au cloud souverain GCC. Nous travaillons à l’ajout d’une prise en charge des autres clouds souverains.
 
 > [!NOTE]
 > Ceci concerne MicrosoftEdge version77 ou ultérieure.
@@ -28,13 +28,13 @@ Cet article décrit comment MicrosoftEdge utilise les identités pour prendre en
 
 MicrosoftEdge prend en charge la connexion à un profil de navigateur avec un compte Azure AD, MSA ou de domaine. Le type de compte utilisé pour la connexion détermine les fonctionnalités basées sur l’authentification disponibles pour l’utilisateur dans MicrosoftEdge. Le tableau suivant résume la prise en charge des fonctionnalités pour chaque type de compte.
 
-|    | Azure AD Premium | AzureAD Free | Services ADDS en local | MSA     |
+| Fonctionnalité   | Azure AD Premium | AzureAD Free | Services ADDS en local | MSA     |
 |----|------------------|---------------|----------------|---------|
 | Synchronisation | Oui | Non | Non | Oui |
 | SSO avec jeton d’actualisation principal | Oui | Oui | Non | Oui |
 | SSO transparente | Oui | Oui | Oui | Non applicable |
 | Authentification Windows intégrée | Oui | Oui | Oui | Non applicable |
-| Page de nouvel onglet Entreprise | Nécessite O365 |   Nécessite O365 | Non | N/A |
+| Page de nouvel onglet Entreprise | Nécessite O365 |   Nécessite O365 | Non | Non applicable |
 | Recherche Microsoft | Nécessite O365 | Nécessite O365 | Non | Non applicable |
 
 ## Comment les utilisateurs se connectent à MicrosoftEdge
@@ -51,7 +51,7 @@ Par défaut, l’utilisateur n’est pas connecté automatiquement. Si vous souh
 
 ### Connexion manuelle
 
-Si l’utilisateur n’est pas automatiquement connecté à MicrosoftEdge, il peut se connecter manuellement lors de la première utilisation, dans les paramètres du navigateur ou en ouvrant le menu volant identité. 
+Si l’utilisateur n’est pas automatiquement connecté à MicrosoftEdge, il peut se connecter manuellement lors de la première utilisation, dans les paramètres du navigateur ou en ouvrant le menu volant identité.
 
 ### Gestion de la connexion au navigateur
 
@@ -104,7 +104,7 @@ Si un utilisateur enregistre des mots de passe dans MicrosoftEdge, il peut activ
 ## Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Page d’accueil de la documentation MicrosoftEdge](https://docs.microsoft.com/DeployEdge/)
+- [Vidéo: Microsoft Edge et identité](microsoft-edge-video-identity.md)
 - [Gestion des identités et des accès](https://www.microsoft.com/security/technology/identity-access-management)
 - [Plateforme d’identité](https://developer.microsoft.com/identity)
 - [Quatre étapes pour une fondation d’identité forte avec Azure ActiveDirectory](https://docs.microsoft.com/azure/active-directory/hybrid/four-steps)

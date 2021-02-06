@@ -1,21 +1,21 @@
 ---
 title: Planifier votre déploiement de MicrosoftEdge
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
-manager: saudm
-ms.date: 11/04/2020
+manager: srugh
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planifier votre déploiement de MicrosoftEdge
-ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: 1b56d9874550c2002cec0577a53a3bf5766e2805
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155251"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313874"
 ---
 # Planifier votre déploiement de MicrosoftEdge
 
@@ -55,7 +55,6 @@ Commencez par définir votre état actuel:
 Une fois que vous avez pris connaissance de l’état actuel, vous pouvez déterminer les objectifs de votre choix pour le déploiement de votre navigateur, en tenant compte des éléments suivants:
 
 - Souhaitez-vous [définir MicrosoftEdge comme navigateur par défaut](https://docs.microsoft.com/DeployEdge/edge-default-browser)?
-- Voulez-vous masquer la version héritée de MicrosoftEdge ou souhaitez-vous la [laisser à disposition des utilisateurs?](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-access-old-edge)
 - Comment allez-vous [configurer MicrosoftEdge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)?
 - Quelles fonctionnalités est-il essentiel de configurer dans le cadre de votre déploiement initial?
 - Quelle est la procédure de résolution d’éventuels problèmes de compatibilité ou de configuration identifiés?
@@ -211,4 +210,3 @@ Après avoir terminé le projet pilote et mis à jour votre plan de déploiement
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Vidéo: Déployer Microsoft Edge](microsoft-edge-video-deploy.md)
-
