@@ -3,19 +3,19 @@ title: Configurer Microsoft Edge en mode plein écran
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 01/21/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer Microsoft Edge en mode plein écran
-ms.openlocfilehash: be353a0e13e9234de40296a2e8dcc31b1b800f52
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 3f6e75b73d8c541bae4442263a5b415aeeb15eb1
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297470"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314617"
 ---
 # Configurer Microsoft Edge en mode plein écran
 
@@ -39,44 +39,85 @@ Un ensemble initial de fonctionnalités du mode plein écran est disponible pour
 
 ### Fonctionnalités prise en charge en mode plein écran
 
-Le tableau suivant répertorie les fonctionnalités prises en charge par le mode plein écran.
+Le tableau suivant répertorie les fonctionnalités prise en charge par le mode plein écran dans Microsoft Edge et MicrosoftEdge hérité. Utilisez ce tableau comme guide pour passer à MicrosoftEdge en comparant la prise en charge de ces fonctionnalités dans les deux versions de Microsoft Edge.
 
-|Fonctionnalité|Connexion numérique/interactive|Navigation publique|Disponible avec la version de MicrosoftEdge (et versions supérieures)|
-|-|-|-|-|
-|Navigation InPrivate|Y|Y|87|
-|Réinitialiser en période d’inactivité|Y|Y|87|
-|[Barre d’adresses en lecture seule](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (stratégie) |N|Y |87|
-|[Supprimer les téléchargements à la sortie](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (stratégie)  | Y|Y |87|
-|F11 bloqué (entrée/sortie en plein écran) | Y | Y | 87 |
-|F12 bloqué (lancer les outils de développement) | Y | Y | 87 |
-| Prise en charge de plusieurs onglets | N| Y| 87|
-|Bouton Terminer la session | N| Y| 88|
-|Toutes les URL MicrosoftEdge internes sont bloquées, à l’exception de *edge://downloads* et *edge://print* |N|Y|88|
-| Ctrl+N bloqué (ouvrir une nouvelle fenêtre) | Y | Y | 89 |
-| Ctrl+T bloqué (ouvrir un nouvel onglet) | N | Y | 89 |
-|Paramètres et plus (...) afficheront uniquement les options requises  |N |Y |89 |
+|Fonctionnalité|Connexion numérique/interactive|Navigation publique|Disponible avec la version de MicrosoftEdge (et versions supérieures)|Disponible avec Microsoft Edge hérité|
+|-|-|-|-|-|
+|Navigation InPrivate|Y|Y|89|Y|
+|Réinitialiser en période d’inactivité|Y|Y|89|Y|
+|[Barre d’adresses en lecture seule](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (stratégie) |N|Y |89|N|
+|[Supprimer les téléchargements à la sortie](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (stratégie)  | Y|Y |89|N|
+|F11 bloqué (entrée/sortie en plein écran) | Y | Y | 89 |Y|
+|F12 bloqué (lancer les outils de développement) | Y | Y | 89 |Y|
+| Prise en charge de plusieurs onglets | N| Y| 89|Y|
+|[Autoriser la prise en charge des URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (stratégie)|Y|Y|89|N|
+|[Bloquer la prise en charge des URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (stratégie)|Y|Y|89|N|
+|[Afficher le bouton d’accueil](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (stratégie)|N|Y|89|Y|
+|[Gérer les favoris](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (stratégie)|N|Y|89|Y|
+|[Activer l’imprimante](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (stratégie)|Y|Y|89|Y|
+|[Configurer l’URL de la page nouvel onglet](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (stratégie)|N|Y||Y|
+|Bouton Terminer la session | N| Y| 89|Y|
+|Toutes les URL MicrosoftEdge internes sont bloquées, à l’exception de *edge://downloads* et *edge://print* |N|Y|89|Y|
+| Ctrl+N bloqué (ouvrir une nouvelle fenêtre) | Y | Y | 89 |Y|
+| Ctrl+T bloqué (ouvrir un nouvel onglet) |Y | Y | 89 |Y|
+|Paramètres et plus (...) afficheront uniquement les options requises  |Y |Y |89 |Y|
+|Restreindre le lancement d’autres applications à partir du navigateur|Y|Y|90/91|Y|
+|Verrouillage des paramètres d’impression de l’interface utilisateur|Y|Y|90/91|Y|
+|[Définir la page nouvel onglet comme page d’accueil](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (stratégie)|-|-|À déterminer|Y|
 
 > [!NOTE]
 > Lorsque le mode plein écran évolue, d’autres fonctionnalités sont disponibles.
 
 ## Utiliser les fonctionnalités du mode plein écran
 
-Les fonctionnalités du mode plein écran de MicrosoftEdge peuvent être invoquées avec les options de ligne de commande Windows10 suivantes:
+Les fonctionnalités du mode plein écran de Microsoft Edge peuvent être invoquées avec les options de ligne de commande Windows10 suivantes pour la signalisation numérique/interactive et la navigation publique.
 
-- Connexion numérique/interactive du mode plein écran: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
-- Navigation publique en mode plein écran: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
+### Mode plein écran numérique/signalisation interactive
+ 
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
+```
+
+### Navigation publique en mode plein écran
+
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
+```
 
 ### Autres options de la ligne de commande
 
-- `--no-first-run` : désactivez la première expérience d’exécution de Microsoft Edge.
-- `--kiosk-idle-timeout-minutes` : modifiez l’heure (en minutes) de la dernière activité d’utilisateur avant la réinitialisation de la session de l’utilisateur par la version du mode plein écran de MicrosoftEdge. Les valeurs suivantes sont prises en charge:
+- **--no-first-run**: désactiver la première expérience d’exécuter Microsoft Edge.
 
-  - Valeurs par défaut
-    - Plein écran: désactivé
-    - Navigation publique: 5minutes
-  - Valeurs autorisées
-    - 0: désactive le minuteur
-    - 1-1440 minutes pour la réinitialisation du minuteur d’inactivité
+   ```
+  msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --no-first-run
+  ```
+
+  ```
+  msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
+  ```
+
+- **--kiosk-idle-timeout-minutes=**: modifiez l’heure (en minutes) de la dernière activité utilisateur avant que le mode plein écran de MicrosoftEdge réinitialise la session de l’utilisateur. Remplacez «value» dans l’exemple suivant par le nombre de minutes.
+
+   ```
+   --kiosk-idle-timeout-minutes=value
+   ``` 
+   Les «valeurs » suivantes sont pris en charge :
+
+     - Valeurs par défaut (en minutes)
+       - Plein écran - 0 (désactivé)
+       - Navigation publique: 5minutes
+    - Valeurs autorisées
+      - 0: désactive le minuteur
+      - 1-1440 minutes pour la réinitialisation du minuteur d’inactivité
+
+
+    ```
+    msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --kiosk-idle-timeout-minutes=1
+   ```
+
+   ```
+   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --kiosk-idle-timeout-minutes=1
+   ```
 
 ## Stratégies de support pour le mode plein écran
 
@@ -98,6 +139,7 @@ Utilisez l’une des stratégies MicrosoftEdge répertoriées dans le tableau su
 |[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
 |[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
 |[Paramètres SmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |Y |Y |
+|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|Y|Y|
 
 ## MicrosoftEdge avec accès affecté
 
@@ -105,7 +147,7 @@ Utilisez l’une des stratégies MicrosoftEdge répertoriées dans le tableau su
 
 MicrosoftEdge prend actuellement en charge un sous-ensemble des mêmes types de mode plein écran hérités de MicrosoftEdge pour l’accès affecté à une seule application avec les expériences de verrouillage suivantes: connexion numérique/interactive et navigation publique.  
 
-Le mode plein écran avec accès attribué est actuellement disponible pour le test avec la version la plus récente de la  [version d'évaluation Windows10Insider](https://insider.windows.com/), version 20215 ou ultérieure, et avec le  [canal de développement Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 87.0.644.4 ou ultérieure.
+Le mode plein écran de Microsoft Edge avec une seule application à accès affecté est actuellement disponible pour les tests avec la dernière version d’évaluation de [Windows 10 Insider Preview,](https://insider.windows.com/)version 20215 ou supérieure, et avec le  [canal bêta de Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 89 ou supérieure.
 
 **Comment puis-je obtenir l’aperçu de Windows Insider?**
 
@@ -122,12 +164,8 @@ Lorsque vous utilisez MicrosoftEdge avec un accès affecté à plusieurs applica
 Les paramètres Windows constituent le moyen le plus simple de configurer un ou deux appareils borne à une seule application. Procédez comme suit pour configurer un ordinateur borne à une seul application.
 
 1. Installez la version la plus récente de Windows10 Insider Preview, version 20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
-2. Installez la dernière version du canal [stable MicrosoftEdge,](https://www.microsoft.com/edge)version 87 ou supérieure.  Pour tester les dernières fonctionnalités, vous pouvez télécharger le dernier [canal de développement Microsoft Edge,](https://www.microsoftedgeinsider.com/download)version89 ou supérieure.
-
-   > [!IMPORTANT]
-   > Une installation au niveau des appareils étant requise, seul un canal non-Canary est pris en charge.
-
-3. Sur l’ordinateur borne, ouvrez Paramètres Windows, puis tapez «borne» dans le champ de recherche. Sélectionnez  **Configurer une borne (accès attribué)**, illustré dans la capture d’écran suivante pour ouvrir la boîte de dialogue de création de la borne.
+2. Pour tester les dernières fonctionnalités, vous pouvez télécharger la dernière version bêta de [Microsoft Edge](https://www.microsoftedgeinsider.com/download), version89 ou supérieure.
+3. Sur l’ordinateur de borne, ouvrez Paramètres Windows, puis tapez «borne» dans le champ de recherche. Sélectionnez  **Configurer une borne (accès attribué)**, illustré dans la capture d’écran suivante pour ouvrir la boîte de dialogue de création de la borne.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Configurer la borne avec l’accès attribué":::
 
@@ -175,6 +213,13 @@ Avec la publication de cette version d’évaluation du mode plein écran, nous 
 
 Nous vous recommandons de désactiver :
 
+- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
+- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
+- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
+- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
+- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
 - [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
@@ -189,12 +234,12 @@ Nous allons ajouter la prise en charge et les fonctionnalités suivantes:
 - Disponibilité générale du mode plein écran de MicrosoftEdge avec accès affecté à l’application unique sur Windows10 1909 et les plus élevés.
 - Fonctionnalités supplémentaires pour la parité avec la version MicrosoftEdge hérité.
 - Intégration avec Intune pour configurer les appareils à l’aide d’un profil en mode plein écran UX.
-- Les raccourcis clavier supplémentaires seront bloqués.
 - Limiter le lancement d’autres applications à partir du navigateur.
+- Verrouillage des paramètres d’impression de l’interface utilisateur.
 
 ## Voir également
 
-- [Configurer des bornes et enseignes numériques dans les éditions Windows de bureau](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Déployer la version héritée du mode plein écran de MicrosoftEdge](https://aka.ms/edgekioskmode)
-- [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)
+- [Configurer des bornes et enseignes numériques dans les éditions Windows de bureau](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Planifier votre transition en mode plein écran](microsoft-edge-kiosk-mode-transition-plan.md)
