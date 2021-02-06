@@ -3,23 +3,23 @@ title: Accéder à l’ancienne version de MicrosoftEdge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Découvrez comment accéder à la version héritée de MicrosoftEdge.
-ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
-ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
+ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125516"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313894"
 ---
 # Accéder à la version héritée de MicrosoftEdge après avoir installé la nouvelle version de MicrosoftEdge
 
-Découvrez comment accéder à la version héritée de MicrosoftEdge après avoir installé la nouvelle version de MicrosoftEdge.
+L’ancienne version de Microsoft Edge cessera de recevoir les mises à jour de sécurité le 9 mars 2021. Vous pouvez accéder à l’ancienne version de Microsoft Edge jusqu’au 13 avril. Pour plus d’informations, consultez [le billet de blog](https://aka.ms/EdgeLegacyEOS)de l’équipe produit Microsoft Edge.
 
 > [!NOTE]
 > Cet article concerne le [canal stable](microsoft-edge-channels.md) de MicrosoftEdge.
@@ -45,10 +45,6 @@ Les procédures présentées dans cet article s’appliquent aux systèmes qui o
 Avant d’utiliser les instructions détaillées de cet article, prenez en compte les deux étapes suivantes pour permettre à vos utilisateurs d’exécuter Microsoft Edge Legacy et la chaine Beta de [ Microsoft Edge](microsoft-edge-channels.md) cote à cote.
 
 1. Empêchez l’installation automatique du canal stable MicrosoftEdge par [Windows Update.](https://support.microsoft.com/help/12373/windows-update-faq)
-
-   > [!TIP]
-   > Utilisez [Blocker Toolkit](microsoft-edge-blocker-toolkit.md) pour désactiver la distribution automatique de MicrosoftEdge.
-
 2. Installez le [canal bêta](https://www.microsoft.com/edge/business/download) de la nouvelle version de Microsoft Edge.
 
    > [!NOTE]

@@ -3,30 +3,33 @@ title: Mises à jour Windows pour MicrosoftEdge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Mises à jour Windows pour MicrosoftEdge.
-ms.openlocfilehash: ab5832dc878495a0f0a0880676fb7c3e34b69d4d
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979790"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313904"
 ---
 # Mises à jour Windows pour prendre en charge la prochaine version de MicrosoftEdge
 
 Cet article décrit comment Windows sera mis à jour pour prendre en charge la prochaine version de MicrosoftEdge.
+
+> [!IMPORTANT]
+> Reportez-vous au [billet de blog](https://aka.ms/EdgeLegacyEOS) de l’équipe produit Microsoft Edge sur la fin de service de l’ancienne version de Microsoft Edge.
 
 > [!NOTE]
 > Cet article concerne le canal MicrosoftEdge Stable.
 
 ## MicrosoftEdge et le cycle de publication Windows
 
-La prochaine version de MicrosoftEdge offre des fonctionnalités des mise à jour plus fréquentes et flexibles. Les versions de navigateur n’étant pas liées aux versions majeures de Windows, des modifications seront apportées au système d’exploitation pour garantir que la prochaine version de MicrosoftEdge s’adapte de façon transparente à Windows. Par conséquent, les mises à jour des fonctionnalités seront publiées sur un cycle de 6semaines (approximativement). Les mises à jour de sécurité et de compatibilité seront fournies en fonction des besoins.
+La prochaine version de MicrosoftEdge offre des fonctionnalités des mise à jour plus fréquentes et flexibles. Les versions de navigateur n’étant pas liées aux versions majeures de Windows, des modifications seront apportées au système d’exploitation pour garantir que la prochaine version de MicrosoftEdge s’adapte de façon transparente à Windows. Par conséquent, les mises à jour des fonctionnalités seront publiées sur un cycle de 6 semaines (environ). Les mises à jour de sécurité et de compatibilité seront livrées selon les besoins.
 
 ## Mises à jour et expérience utilisateur
 
