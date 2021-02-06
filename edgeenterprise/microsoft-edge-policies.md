@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/27/2021
+ms.date: 02/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
-ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
+ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
+ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "11304727"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "11313422"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -33,9 +33,11 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 
 Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour.
 
-| Nom | Légende |
+| Nom| Légende |
 |--|--|
-|[SmartActionsBlockList](#smartactionsblocklist)|Bloquer les actions intelligentes pour une liste de services|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello pour HTTP Auth activé|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Définit des valeurs de configuration gérées pour des sites web avec des origines spécifiques|
+
 
 ## Stratégies disponibles
 
@@ -144,7 +146,8 @@ et des conseils pour les services Microsoft|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Désactiver la consultation CNAME lors de la négociation de l’authentification Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Inclure un port non standard dans le SPN Kerberos|
 |[NtlmV2Enabled](#ntlmv2enabled)|Contrôler l’activation de l’authentification NTLMv2|
-### [*Paramètres du mode kiosque*](#kiosk-mode-settings-policies)
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello pour HTTP Auth activé|
+### [*Paramètres du mode plein écran*](#kiosk-mode-settings-policies)
 
 |Nom de la stratégie|Caption|
 |-|-|
@@ -360,6 +363,7 @@ et des conseils pour les services Microsoft|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportement de la redirection intranet|
 |[IsolateOrigins](#isolateorigins)|Activer l’isolation de site pour des origines spécifiques|
 |[LocalProvidersEnabled](#localprovidersenabled)|Autoriser les suggestions des fournisseurs de services locaux|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Définit des valeurs de configuration gérées pour des sites web avec des origines spécifiques|
 |[ManagedFavorites](#managedfavorites)|Configurer les favoris|
 |[ManagedSearchEngines](#managedsearchengines)|Gérer les moteurs de recherche|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Nombre maximal de connexions simultanées au serveur proxy|
@@ -412,7 +416,7 @@ et des conseils pour les services Microsoft|
 |[SpellcheckEnabled](#spellcheckenabled)|Activer la vérification orthographique|
 |[SpellcheckLanguage](#spellchecklanguage)|Activer des langues spécifiques pour la vérification orthographique|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forcer la désactivation de langues spécifiques pour la vérification orthographique|
-|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Activer l’utilisation d’un traitement plus strict pour les contenus mixtes (déconseillé)|
+|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Activer un traitement plus strict pour le contenu mixte (obsolète)|
 |[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|Supprimer l’avertissement relatif au système d’exploitation non pris en charge|
 |[SyncDisabled](#syncdisabled)|Désactiver la synchronisation des données à l’aide des services de synchronisation Microsoft|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Configurer la liste des types exclus de la synchronisation|
@@ -770,7 +774,7 @@ Il ne peut pas y avoir de modèles d’URL en conflit définis entre ces trois s
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
 
 Pour exclure la suppression des cookies lors de la fermeture, configurez la stratégie de [SaveCookiesOnExit](#savecookiesonexit).
 
@@ -5157,6 +5161,59 @@ Si cette stratégie n’est pas configurée, l’authentification NTLMv2 est act
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### WindowsHelloForHTTPAuthEnabled
+
+  #### Windows Hello pour HTTP Auth activé
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version 90 ou ultérieure
+
+  #### Description
+
+  Indique si l’interface utilisateur des informations d’identification Windows doit être utilisée pour répondre aux problèmes d’authentification NTLM et Négocier.
+
+Si vous désactivez cette stratégie, une invite de nom d’utilisateur et de mot de passe de base sera utilisée pour répondre aux défis NTLM et Négocier. Si vous activez ou ne configurez pas cette stratégie, l’interface utilisateur des informations d’identification Windows est utilisée.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Oui
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : WindowsHelloForHTTPAuthEnabled
+  - Nom de la stratégie de groupe : Windows Hello pour HTTP Auth activé
+  - Chemin d’accès de la stratégie de groupe(obligatoire): modèles administratifs/Microsoft Edge/authentification HTTP
+  - Chemin d’accès de la stratégie de groupe (recommandé) : Administrative Templates/Microsoft Edge - Paramètres par défaut (remplacement possible par les utilisateurs)/Authentification HTTP
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de la valeur : WindowsHelloForHTTPAuthEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ## Stratégies des paramètres du mode kiosque
 
   [Retour au début](#microsoft-edge---policies)
@@ -5337,7 +5394,7 @@ Si vous désactivez cette stratégie, MicrosoftEdge ne communiquera pas avec Int
 0x00000000
 ```
 
-  #### Informations et paramètres Mac
+  #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence : MAMEnabled
   - Exemple de valeur:
@@ -8783,7 +8840,7 @@ Si vous désactivez cette stratégie, chaque fois que l’utilisateur effectue u
 
   - Nom unique de la stratégie de groupe: AllowFileSelectionDialogs
   - Nom de la stratégie de groupe: autoriser les boîtes de dialogue de sélection de fichier
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -10720,7 +10777,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   - Nom unique de la stratégie de groupe: BrowserSignin
   - Nom de la stratégie de groupe: paramètres de connexion du navigateur
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -14486,7 +14543,7 @@ Cette stratégie d’entreprise est désactivée par défaut.
 
   - Nom unique de la stratégie de groupe: ForceLegacyDefaultReferrerPolicy
   - Nom de la stratégie de groupe : utiliser une stratégie de référence par défaut de no-referrer-when-downgrade (obsolète)
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -16882,6 +16939,103 @@ Cette stratégie nécessite un redémarrage du navigateur pour finaliser l’app
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### ManagedConfigurationPerOrigin
+
+  #### Définit des valeurs de configuration gérées pour des sites web avec des origines spécifiques
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version 90 ou ultérieure
+
+  #### Description
+
+  La définition de cette stratégie définit la valeur de retour de l’API de configuration gérée pour une origine donnée.
+
+ L’API de configuration gérée est une configuration clé-valeur accessible via l’appel javascript navigator.device.getManagedConfiguration(). Cette API est uniquement disponible pour les origines qui correspondent aux applications web installées de force via [WebAppInstallForceList](#webappinstallforcelist).
+
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Dictionary
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : ManagedConfigurationPerOrigin
+  - Nom de la stratégie de groupe : définit des valeurs de configuration gérées pour des sites web avec des origines spécifiques
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : ManagedConfigurationPerOrigin
+  - Type de valeur: REG_SZ
+
+  ##### Exemple de valeur:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
+  {
+    "managed_configuration_hash": "asd891jedasd12ue9h", 
+    "managed_configuration_url": "https://static.contoso.com/configuration.json", 
+    "origin": "https://www.contoso.com"
+  }, 
+  {
+    "managed_configuration_hash": "djio12easd89u12aws", 
+    "managed_configuration_url": "https://static.contoso.com/configuration2.json", 
+    "origin": "https://www.example.com"
+  }
+]
+```
+
+  ##### Exemple de valeur compacte:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [{"managed_configuration_hash": "asd891jedasd12ue9h", "managed_configuration_url": "https://static.contoso.com/configuration.json", "origin": "https://www.contoso.com"}, {"managed_configuration_hash": "djio12easd89u12aws", "managed_configuration_url": "https://static.contoso.com/configuration2.json", "origin": "https://www.example.com"}]
+  ```
+  
+
+  #### Informations et paramètres Mac
+  
+  - Nom clé de la préférence : ManagedConfigurationPerOrigin
+  - Exemple de valeur:
+``` xml
+<key>ManagedConfigurationPerOrigin</key>
+<array>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>asd891jedasd12ue9h</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration.json</string>
+    <key>origin</key>
+    <string>https://www.contoso.com</string>
+  </dict>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>djio12easd89u12aws</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration2.json</string>
+    <key>origin</key>
+    <string>https://www.example.com</string>
+  </dict>
+</array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### ManagedFavorites
 
   #### Configurer les favoris
@@ -17347,7 +17501,7 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 
   - Nom unique de la stratégie de groupe: MetricsReportingEnabled
   - Nom de la stratégie de groupe : activer les rapports de données d’utilisation et d’incident (obsolète)
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -19783,7 +19937,7 @@ Si vous ne configurez pas cette stratégie:
 0x00000000
 ```
 
-  #### Informations et paramètres sur Mac
+  #### Informations et paramètres Mac
   
   - Nom de la clé de préférence: ShowMicrosoftRewards
   - Exemple de valeur:
@@ -20087,7 +20241,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: SmartActionsBlockList
-  - Nom de la stratégie de groupe: bloquer les actions intelligentes pour une liste de services
+  - Nom de la stratégie de groupe : bloquer les actions intelligentes pour une liste de services
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): Administrative Templates/Microsoft Edge - Default Settings (peut être remplacé par les utilisateurs)/
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -20371,17 +20525,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   ### StricterMixedContentTreatmentEnabled
 
-  #### Activer l’utilisation d’un traitement plus strict pour les contenus mixtes (déconseillé)
+  #### Activer un traitement plus strict pour le contenu mixte (obsolète)
 
-  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
+  >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version84 de Microsoft Edge.
   #### Versions prises en charge:
 
-  - sur Windows et macOS depuis la version81 ou versions ultérieures
+  - Sur Windows et macOS depuis la version 81 jusqu’à la 84
 
   #### Description
 
-  Cette stratégie est déconseillée, car elle n’est destinée qu’à être un mécanisme à court terme permettant aux entreprises de mettre à jour leur contenu web si et quand il est jugé incompatible avec un traitement de contenu mixte plus strict. Il ne fonctionne pas dans la version 85 de Microsoft Edge.
+  Cette stratégie ne fonctionne pas, car elle était destinée uniquement à être un mécanisme à court terme permettant aux entreprises de mettre à jour leur contenu web s’il était jugé incompatible avec un traitement de contenu mixte plus strict.
 
 Cette stratégie contrôle le traitement du contenu mixte (contenu HTTP dans les sites HTTPS) dans le navigateur.
 
@@ -20406,7 +20560,7 @@ Cette stratégie n'affecte pas les autres types de contenu mixte autres que l'au
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: StricterMixedContentTreatmentEnabled
-  - Nom de stratégie de groupe: Activer l’utilisation d’un traitement plus strict pour les contenus mixtes (déconseillé)
+  - Nom de la stratégie de groupe : activer un traitement plus strict pour le contenu mixte (obsolète)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -20728,7 +20882,7 @@ Cette stratégie n’affecte pas les connexions basées sur QUIC. QUIC peut êtr
 
   - Nom unique GP: TLSCipherSuiteDenyList
   - Nom de la stratégie de protection: spécifier les suites de chiffrement TLS à désactiver
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -20861,7 +21015,7 @@ Cette stratégie sera obsolète dans MicrosoftEdge version95.
 
   - Nom unique de la stratégie de groupe : TargetBlankImpliesNoOpener
   - Nom de la stratégie de groupe : ne définissez pas window.opener pour les liens ciblant _blank
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -21881,7 +22035,14 @@ Quelle que soit la façon dont cette stratégie est activée, le paramètre d’
 
   Configurez cette stratégie pour spécifier la liste d’applications web qui s’installent de manière silencieuse, sans intervention de l’utilisateur, et les utilisateurs qui ne peuvent pas effectuer une désinstallation ou une désactivation.
 
-Chaque élément dans la liste de la stratégie est un objet avec un membre obligatoire: URL (URL de l’application web à installer) et 2membres facultatifs: default_launch_container (spécifie au mode fenêtre que l’application web s’ouvre with-a nouvel onglet est la valeur par défaut) et create_desktop_shortcut (True si vous voulez créer des raccourcis Linux et Windows Desktop).
+Chaque élément de liste de la stratégie est un objet avec un membre obligatoire : url (URL de l’application web à installer)
+
+et 3 membres facultatifs :
+- default_launch_container (spécifie le mode fenêtre que l’application web ouvre avec un nouvel onglet est la valeur par défaut.)
+
+- create_desktop_shortcut (True si vous souhaitez créer des raccourcis de bureau Linux et Windows.)
+
+- override_app_name (à partir de MicrosoftEdge89, vous permet de remplacer le nom de l’application s’il ne s’agit pas d’une application web progressive (PWA) ou du nom d’application qui est temporairement installé s’il s’agit d’un PWA, mais l’authentification est requise avant la fin de l’installation.)
 
   #### Fonctionnalités prises en charge:
 
@@ -21922,6 +22083,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21929,7 +22095,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Exemple de valeur compacte:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21953,6 +22119,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```

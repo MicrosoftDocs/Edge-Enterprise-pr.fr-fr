@@ -3,25 +3,25 @@ title: Sécurité Microsoft Edge pour votre entreprise
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/18/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sécurité Microsoft Edge pour votre entreprise
-ms.openlocfilehash: 52e55c64aad193072c44f6bc76e5c66808a5439d
-ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
+ms.openlocfilehash: eb981f3ed47b40219e50818531132ed5d385b642
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "11176951"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314677"
 ---
 # Sécurité Microsoft Edge pour votre entreprise
 
-Microsoft Edge s’appuie sur le projet open source de chrome (le projet qui est essentiel de Google Chrome), ce qui signifie qu’il partage la même architecture de sécurité bien conçue et bien testée que la conception de base. L’histoire de la sécurité Microsoft Edge ne s’arrête pas là. En fait, **Microsoft Edge est plus sécurisé que Google Chrome pour votre entreprise sur Windows10**. Il offre des défenses intégrées et puissantes contre le hameçonnage et les programmes malveillants, et prend en charge l’isolation du matériel de façon native sur Windows10. Vous n’avez pas besoin d’un logiciel supplémentaire pour atteindre cette base de référence sécurisée. Par ailleurs, en cas de prise en charge native pour les services de sécurité et de conformité Microsoft365, Microsoft Edge offre des fonctionnalités de sécurité et des fonctionnalités de sécurité avancées qui vous permettent de vous protéger contre la perte de données.
+Microsoft Edge s’appuie sur le projet open source de chrome (le projet qui est essentiel de Google Chrome), ce qui signifie qu’il partage la même architecture de sécurité bien conçue et bien testée que la conception de base. L’histoire de la sécurité Microsoft Edge ne s’arrête pas là. En fait, **Microsoft Edge est plus sécurisé que Google Chrome pour votre entreprise sur Windows10**. Il offre des défenses intégrées et puissantes contre le hameçonnage et les programmes malveillants, et prend en charge l’isolation du matériel de façon native sur Windows10. Vous n’avez pas besoin d’un logiciel supplémentaire pour atteindre cette base de référence sécurisée. Par ailleurs, en cas de prise en charge native pour les services de sécurité et de conformité Microsoft365, Microsoft Edge offre des fonctionnalités de sécurité et des fonctionnalités de sécurité avancées qui vous permettent de vous protéger contre la perte de données. Pour plus d’informations, regardez [la vidéo: sécurité, compatibilité et gestion de Microsoft Edge](microsoft-edge-video-security-compatibility-manageability.md).
 
-Nous allons voir les détails, à partir des **menaces externes** et examiner **risques internes et la protection des informations**.
+Nous allons voir les détails, à partir des **menaces externes** et examiner **les risques internes et la protection des informations**.
 
 ## Protection contre les menaces externes
 
@@ -58,7 +58,7 @@ Outre la protection contre les menaces externes, les administrateurs informatiqu
 
 **Microsoft Endpoint Protection contre la perte de données (Endpoint DLP) est uniquement pris en charge en mode natif dans Microsoft Edge**. Microsoft Endpoint Protection contre la perte de données est intégré au centre de sécurité Microsoft et étend la protection des informations à Microsoft Edge pour alerter les utilisateurs et empêcher la perte de données à mesure que les utilisateurs travaillent en ligne. Ce système découvre et libelle les données sensibles à l’intérieur de l’entreprise qui correspondent à des critères définis par l’administrateur, tels que des fichiers contenant des numéros de carte bancaire ou des ID gouvernementaux (par exemple, des numéros de sécurité sociale), des informations financières, et bien plus encore. Vous pouvez déployer des stratégies de protection des informations Microsoft vers Microsoft Endpoint DLP sans reconfiguration supplémentaire, y compris les identificateurs de contenu sensible et les stratégies que les administrateurs informatiques ont déjà personnalisés. Il s’agit d’un déploiement transparent de la protection des informations pour les administrateurs informatiques.
 
-Pour en savoir plus sur les conditions préalables de Microsoft Endpoint Protection contre la perte de données et sur la manière de le configurer, consultez [Prise en main de la protection contre la perte de données de point de terminaison](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide).
+Pour en savoir plus sur les conditions préalables de Microsoft Endpoint Protection contre la perte de données et sur la manière de le configurer, consultez [Prise en main de la protection contre la perte de données de point de terminaison](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true).
 
 > [!NOTE]
 > Microsoft365 E5 ou l’abonnement de conformité Microsoft365 E5 est requis pour Protection contre la perte de données Microsoft Endpoint.
@@ -66,3 +66,4 @@ Pour en savoir plus sur les conditions préalables de Microsoft Endpoint Protect
 ## Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Vidéo: Sécurité, compatibilité et facilité de gestion de Microsoft Edge](microsoft-edge-video-security-compatibility-manageability.md)
