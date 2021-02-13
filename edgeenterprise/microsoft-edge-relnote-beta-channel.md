@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 1738114b34625d8c4b2e96536c6e91dccd9fafa6
-ms.sourcegitcommit: 5d9ca85738c9dd8581738674e0459a549b6381c8
+ms.openlocfilehash: 822c6cf40cc046d1fe38301fb89cf2a8fe67c04e
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "11319068"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325864"
 ---
 # Notes de publication du canal Microsoft Edge Beta
 
@@ -29,26 +29,31 @@ Résolution de divers bogues et de problèmes de performances.
 
 ### Mises à jour des fonctionnalités
 
-- Le mode plein écran active des fonctionnalités de verrouillage supplémentaires. À partir de la version89 de MicrosoftEdge, nous avons ajouté des fonctionnalités de verrouillage supplémentaires en mode plein écran pour permettre aux clients d’accomplir leur travail dans une expérience productive et plus sécurisée. [Si vous souhaitez en savoir plus](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
+- **Le mode plein écran active des fonctionnalités de verrouillage supplémentaires.** À partir de la version89 de MicrosoftEdge, nous avons ajouté des fonctionnalités de verrouillage supplémentaires en mode plein écran pour permettre aux clients d’accomplir leur travail dans une expérience productive et plus sécurisée. [Si vous souhaitez en savoir plus](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
-- L’outil Enterprise Mode Site List Manager sera disponible dans le navigateur via la page *edge://compat*. Vous pouvez utiliser cet outil pour créer, modifier et exporter votre liste de sites XML pour le mode Internet Explorer sur MicrosoftEdge. Vous pouvez activer l’accès à cet outil selon vos besoins par le biais de la stratégie de groupe. [Si vous souhaitez en savoir plus](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
+- **L’outil Enterprise Mode Site List Manager sera disponible dans le navigateur via la page *edge://compat* **. Vous pouvez utiliser cet outil pour créer, modifier et exporter votre liste de sites XML pour le mode Internet Explorer sur MicrosoftEdge. Vous pouvez activer l’accès à cet outil selon vos besoins par le biais de la stratégie de groupe. [Si vous souhaitez en savoir plus](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
 
-- Réinitialisez manuellement vos données de synchronisation MicrosoftEdge dans le cloud. Nous introduisons un moyen de réinitialiser vos données de synchronisation MicrosoftEdge à partir du produit. Cela garantit que vos données sont effacées des services Microsoft, ainsi qu’une résolution de certains problèmes de produit qui nécessitaient auparavant un ticket de support.
+- **Améliorer les performances du navigateur avec des onglets en veille**. Les onglets en veille améliorent les performances du navigateur en mettant les onglets inactifs en veille pour libérer des ressources système, telles que la mémoire et le processeur de sorte que les onglets actifs ou d’autres applications puissent les utiliser. Les utilisateurs peuvent empêcher la mise en veille de sites et configurer le délai avant qu’un onglet inactif ne soit mis en veille. Pour maintenir les utilisateurs dans leur flux, il existe également des [heuristiques](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434) pour empêcher certains sites de passer en veille, tels que les sites intranet. Cette fonctionnalité peut être gérée avec des stratégies de groupe.
 
-- Améliorations apportées à l’expérience de sélection de texte dans les documents PDF. Les utilisateurs commenceront à obtenir une expérience de sélection de texte plus fluide et plus cohérente dans les documents PDF ouverts dans MicrosoftEdge à partir de la version89.
+  > [!NOTE]
+  > «Améliorer les performances du navigateur avec les onglets de mise en quarantaine» est une mise à jour des notes de publication du 3février pour la version majeure 89.0.774.18.
 
-- L’avertissement «Désactiver les extensions du mode développeur» peut être définitivement ignoré. À partir de la version89 de MicrosoftEdge, vous pouvez désactiver l’avertissement «Désactiver les extensions du mode développeur» en sélectionnant l’option «Ne plus afficher cette option».
+- **Réinitialisez manuellement vos données de synchronisation Microsoft Edge dans le cloud**. Nous introduisons un moyen de réinitialiser vos données de synchronisation MicrosoftEdge à partir du produit. Cela garantit que vos données sont effacées des services Microsoft, ainsi qu’une résolution de certains problèmes de produit qui nécessitaient auparavant un ticket de support.
 
-- Gérez vos extensions à partir de la barre d’outils. Le nouveau menu des extensions de la barre d’outils vous permet de masquer/épingler facilement les extensions. Les liens rapides pour gérer les extensions et trouver de nouvelles extensions vous permettra de trouver facilement de nouvelles extensions et de gérer vos extensions existantes.
+- **Améliorations apportées à l’expérience de sélection de texte dans les documents PDF**. Les utilisateurs commenceront à obtenir une expérience de sélection de texte plus fluide et plus cohérente dans les documents PDF ouverts dans MicrosoftEdge à partir de la version89.
 
-- Prise en charge de la recherche en langage naturel sur la barre d’adresses, la page de recherche de l’historique et le concentrateur d’historique. À partir de la version89 de MicrosoftEdge, la recherche d’un article/site web sera plus facile avec la recherche en langage naturel sur la barre d’adresses, la page d’historique et le concentrateur d’historique. Les utilisateurs peuvent rechercher le contenu/description/minutage des pages précédemment vues (par exemple, «recette de gâteau de la semaine dernière») en plus des correspondances de mots clés de titres/URL.
+- **L’avertissement «Désactiver les extensions du mode développeur» peut être définitivement rejeté**. À partir de la version89 de MicrosoftEdge, vous pouvez désactiver l’avertissement «Désactiver les extensions du mode développeur» en sélectionnant l’option «Ne plus afficher cette option».
+
+- **Gérez vos extensions à partir de la barre d’outils**. Le nouveau menu des extensions de la barre d’outils vous permet de masquer/épingler facilement les extensions. Les liens rapides pour gérer les extensions et trouver de nouvelles extensions vous permettra de trouver facilement de nouvelles extensions et de gérer vos extensions existantes.
+
+- **Prise en charge de la recherche en langage naturel sur la barre d’adresses, la page de recherche de l’historique et le hub d’historique**. À partir de la version89 de MicrosoftEdge, la recherche d’un article/site web sera plus facile avec la recherche en langage naturel sur la barre d’adresses, la page d’historique et le concentrateur d’historique. Les utilisateurs peuvent rechercher le contenu/description/minutage des pages précédemment vues (par exemple, «recette de gâteau de la semaine dernière») en plus des correspondances de mots clés de titres/URL.
 
 - **Productivité:**
 
   - Le champ Date de naissance est désormais pris en charge dans le remplissage automatique. Aujourd’hui, MicrosoftEdge vous permet de gagner du temps et des efforts lors du remplissage de formulaires et de la création de comptes en ligne en remplissant automatiquement vos données telles que les adresses, les noms, les numéros de téléphone, etc. À partir de la version89 de MicrosoftEdge, nous ajoutons la prise en charge d’un autre champ que vous pouvez avoir enregistré et rempli automatiquement: la date de naissance. Vous pouvez afficher, modifier et supprimer ces informations à tout moment dans vos paramètres de profil.
   - Développez les suggestions de remplissage automatique pour inclure le contenu du Presse-papiers. Le contenu du Presse-papiers est analysé lorsque vous sélectionnez un champ de profil/adresse (par exemple, téléphone, e-mail, code postal, ville, état, etc.) pour l’afficher en tant que suggestions de remplissage automatique.
 
-- Prise en charge du blocage de la lecture automatique de vidéos. À partir de la version89 de MicrosoftEdge, les utilisateurs ont la possibilité d’empêcher la lecture automatique du média.
+- **Prise en charge du blocage de la lecture automatique de vidéos**. À partir de la version89 de MicrosoftEdge, les utilisateurs ont la possibilité d’empêcher la lecture automatique du média.
 
 ### Mises à jour de stratégies
 
@@ -104,7 +109,7 @@ Résolution de divers bogues et problèmes de performances.
   - L’authentification unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) et le compte Microsoft (MSA) sur macOS et les versions inférieures de Windows. Un utilisateur connecté à Microsoft Edge sur macOS ou Microsoft Windows de version inférieure (7 et 8.1) est désormais connecté automatiquement aux sites web configurés pour autoriser l’authentification unique avec des comptes professionnels et Microsoft (par exemple, bing.com, office.com, msn.com, outlook.com).<br>Remarque: il est possible que l’utilisateur doive se déconnecter et se reconnecter s’il se connecte à une version antérieure à la version88 de Microsoft Edge pour utiliser cette fonctionnalité.
   - Basculer automatiquement les utilisateurs sur macOS vers leur profil de travail pour les sites qui s’authentifient avec leur compte professionnel. À partir de la version88 de Microsoft Edge, nous offrons la possibilité de basculer entre les sites qui s’authentifient avec le profil de travail de l’utilisateur sur macOS.<br>Remarque: il est possible que l’utilisateur doive se déconnecter et se reconnecter s’il se connecte à une version antérieure à la version88 de Microsoft Edge pour utiliser cette fonctionnalité.
 
-- Option du mode plein écran pour terminer la session. Le bouton Mettre fin à la session est désormais disponible en mode plein écran de navigation publique. Cette fonctionnalité permet de supprimer les données et paramètres du navigateur lorsque Microsoft Edge est fermé. Pour en savoir plus sur les fonctionnalités et la feuille de route du mode plein écran, voir [Configurer le mode plein écran Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
+- **Option du mode plein écran pour terminer la session.** Le bouton «Mettre fin à la session» est désormais disponible en mode plein écran dans l’expérience de navigation publique. Cette fonctionnalité permet de supprimer les données et paramètres du navigateur lorsque Microsoft Edge est fermé. Pour en savoir plus sur les fonctionnalités et la feuille de route du mode plein écran, voir [Configurer le mode plein écran Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 
 - **Sécurité et confidentialité:**
 

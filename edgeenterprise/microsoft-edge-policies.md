@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/03/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
-ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
+ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313422"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325894"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -33,10 +33,11 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 
 Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour.
 
-| Nom| Légende |
+| Nom | Légende |
 |--|--|
-|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello pour HTTP Auth activé|
-|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Définit des valeurs de configuration gérées pour des sites web avec des origines spécifiques|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Synchronisation des favoris d’Application Guard activée|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Gérer les fonctionnalités de fichiers QuickView Office dans MicrosoftEdge|
+
 
 
 ## Stratégies disponibles
@@ -60,7 +61,8 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |Nom de la stratégie|Caption|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Proxy conteneur de Application Guard|
-### [*Cast*](#cast-policies)
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Synchronisation des favoris d’Application Guard activée|
+### [*Diffuser*](#cast-policies)
 
 |Nom de la stratégie|Caption|
 |-|-|
@@ -381,6 +383,7 @@ et des conseils pour les services Microsoft|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Activer le contenu promotionnel dans les onglets|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Demander où enregistrer les fichiers téléchargés|
 |[QuicAllowed](#quicallowed)|Autoriser le protocole QUIC|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Gérer les fonctionnalités de fichiers QuickView Office dans MicrosoftEdge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Empêcher l’installation de l’objet application d'assistance du navigateur pour rediriger les sites incompatibles d’Internet Explorer vers Microsoft Edge|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Rediriger les sites incompatibles d’Internet Explorer vers Microsoft Edge|
 |[RelaunchNotification](#relaunchnotification)|Avertir un utilisateur qu’un redémarrage du navigateur est recommandé ou requis pour les mises à jour en attente|
@@ -408,7 +411,7 @@ et des conseils pour les services Microsoft|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquer l’API Serial sur des sites spécifiques|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Afficher les expériences de Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher le raccourci MicrosoftOffice dans la barre des favoris (déconseillé)|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Autoriser les recommandations et les notifications promotionnelles à partir de MicrosoftEdge|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Autoriser les recommandations et les notifications promotionnelles de MicrosoftEdge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Activer la prise en charge de Signed HTTP Exchange (SXG) |
 |[SitePerProcess](#siteperprocess)|Activer l’isolation de site pour tous les sites|
 |[SmartActionsBlockList](#smartactionsblocklist)|Bloquer les actions intelligentes pour une liste de services|
@@ -536,6 +539,63 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### ApplicationGuardFavoritesSyncEnabled
+
+  #### Synchronisation des favoris d’Application Guard activée
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version 90 ou ultérieure
+
+  #### Description
+
+  Cette stratégie permet aux ordinateurs/appareils MicrosoftEdge sur les ordinateurs/appareils dont l’Application Guard est activée pour synchroniser les favoris de l’hôte vers le conteneur afin que les favoris correspondent.
+
+Si [ManagedFavorites](#managedfavorites) est configuré, ces favoris sont également synchronisés avec le conteneur.
+
+Si vous activez cette stratégie, la modification des favoris dans le conteneur est désactivée. Ainsi, les boutons Ajouter des favoris et Ajouter le dossier des favoris seront floutés dans l’interface utilisateur du navigateur de conteneur.
+
+Si vous désactivez ou ne configurez pas cette stratégie, les favoris de l’hôte ne seront pas partagés avec le conteneur.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Non, nécessite le redémarrage du navigateur
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: ApplicationGuardFavoritesSyncEnabled
+  - Nom de la stratégie de groupe: Synchronisation des favoris d’Application Guard activée
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Paramètres des modèles administratifs/Microsoft Edge/Application Guard
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : ApplicationGuardFavoritesSyncEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
 
   
 
@@ -5230,11 +5290,11 @@ Si vous désactivez cette stratégie, une invite de nom d’utilisateur et de mo
 
   #### Description
 
-  Cette stratégie s’applique uniquement au mode plein écran Microsoft Edge lors de l’utilisation de l’expérience de navigation publique.
+  Cette stratégie s’applique uniquement au mode plein écran MicrosoftEdge lors de l’utilisation de l’expérience de navigation publique.
 
-Si vous l’activez, cette stratégie empêche les utilisateurs de modifier l’URL dans la barre d’adresse.
+Si vous activez ou ne configurez pas cette stratégie, les utilisateurs peuvent modifier l’URL dans la barre d’adresses.
 
-Si vous la désactivez ou ne la configurez pas, les utilisateurs peuvent modifier l’URL dans la barre d’adresse.
+Si vous désactivez cette stratégie, cela empêche les utilisateurs de modifier l’URL dans la barre d’adresses.
 
 Pour obtenir plus d’informations sur la configuration du mode plein écran, voir [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
@@ -8112,9 +8172,9 @@ Cette stratégie ne détermine pas la page qui s’ouvre au démarrage. Cette de
 
 Si cette stratégie n’est pas configurée, la page Nouvel onglet par défaut est utilisée. 
 
-Si vous configurez cette stratégie *et * la stratégie [NewTabPageSetFeedType](#newtabpagesetfeedtype), cette stratégie prévaut.
+Si vous configurez cette stratégie* et * la stratégie [NewTabPageSetFeedType](#newtabpagesetfeedtype), cette stratégie prévaut.
 
-Si une URL non valide est fournie, les nouveaux onglets affichent about://blank.
+Si un onglet vide est préféré, «about:blank» est l’URL correcte à utiliser, et non «about://blank».
 
 Cette stratégie est disponible uniquement sur les instances de Windows qui sont jointes à un domaine Microsoft ActiveDirectory, des instances de Windows10 Professionnel ou Entreprise inscrites pour la gestion des appareils ou des instances macOS gérées via la Gestion des périphériques mobiles ou jointes à un domaine via MCX.
 
@@ -10432,7 +10492,7 @@ Si vous souhaitez en apprendre plus sur cette stratégie ou si ces cas s’appli
 
 * Vous avez un client EDU, mais la stratégie ne fonctionne pas.
 
-* Votre adresse IP a été ajoutée à la liste verte pour une expérience de recherche sans publicité.
+* Votre adresse IP était déjà sur la liste d’autorisations pour une expérience de recherche gratuite de la recherche.
 
 * Vous connaissez une expérience de recherche sans publicités sur l’ancienne version de Microsoft Edge et vous souhaitez effectuer la mise à jour vers la nouvelle version de MicrosoftEdge.
 
@@ -18282,6 +18342,68 @@ QUIC est un protocole réseau de couche de transport qui permet d’améliorer l
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### QuickViewOfficeFilesEnabled
+
+  #### Gérer les fonctionnalités de fichiers QuickView Office dans MicrosoftEdge
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version 90 ou ultérieure
+
+  #### Description
+
+  Vous permet de définir si les utilisateurs peuvent afficher des fichiers Office sur le web qui ne sont pas sur OneDrive ou SharePoint. (par exemple : le documents Word, les présentations PowerPoint et les feuilles de calcul Excel)
+
+Si vous activez ou ne configurez pas cette stratégie, ces fichiers peuvent être visualisés dans Microsoft Edge à l’aide de la visionneuse Office au lieu de les télécharger.
+
+Si vous désactivez cette stratégie, ces fichiers sont téléchargés pour l’affichage.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : QuickViewOfficeFilesEnabled
+  - Nom de la stratégie de groupe : gérer la fonctionnalité de fichiers QuickView Office dans Microsoft Edge
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : QuickViewOfficeFilesEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  #### Informations et paramètres Mac
+  
+  - Nom clé de la préférence : QuickViewOfficeFilesEnabled
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### RedirectSitesFromInternetExplorerPreventBHOInstall
 
   #### Empêcher l’installation de l’objet application d'assistance du navigateur pour rediriger les sites incompatibles d’Internet Explorer vers Microsoft Edge
@@ -20011,7 +20133,7 @@ Si vous désactivez cette stratégie, le raccourci n’apparaît pas.
 
   ### ShowRecommendationsEnabled
 
-  #### Autoriser les recommandations et les notifications promotionnelles à partir de MicrosoftEdge
+  #### Autoriser les recommandations et les notifications promotionnelles de MicrosoftEdge
 
   
   
@@ -20042,7 +20164,7 @@ Si vous désactivez ce paramètre, les employés ne recevront pas de recommandat
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: ShowRecommendationsEnabled
-  - Nom de la stratégie de groupe: autoriser les recommandations et les notifications promotionnelles à partir de MicrosoftEdge
+  - Nom de la stratégie de groupe : autoriser les recommandations et les notifications promotionnelles de Microsoft Edge
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -20208,10 +20330,10 @@ Si cette règle n'est pas configurée ou si elle est désactivée, les utilisate
 
   #### Description
 
-  Établir une liste de services spécifiques, tels que les fichiers, qui n’affichent aucune action intelligente. (Les actions intelligentes sont des actions telles que « définir » qui sont disponibles dans les menus contextuels complets et mini dans MicrosoftEdge.)
+  Établir une liste de services spécifiques, tels que les fichiers, qui n’affichent aucune action intelligente. (les actions intelligentes sont des actions telles que «définir» qui sont disponibles dans les menus contextuels complets et mini dans MicrosoftEdge.)
 
-Si vous activez la stratégie:
-   - L’action intelligente dans le menu contextuel complet et mini sera désactivée pour tous les profils pour les services qui correspondent à la liste donnée.
+Si vous activez la stratégie :
+   - l’action intelligente dans le menu contextuel complet et mini sera désactivée pour tous les profils pour les services qui correspondent à la liste donnée.
    - Les utilisateurs ne voient pas l’action intelligente dans le menu contextuel mini et complet de la sélection de texte pour les services qui correspondent à la liste donnée.
    - Dans les paramètres de Microsoft Edge, l’action intelligente dans le menu contextuel mini et complet est désactivée pour les services qui correspondent à la liste donnée.
 
@@ -20882,7 +21004,7 @@ Cette stratégie n’affecte pas les connexions basées sur QUIC. QUIC peut êtr
 
   - Nom unique GP: TLSCipherSuiteDenyList
   - Nom de la stratégie de protection: spécifier les suites de chiffrement TLS à désactiver
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
