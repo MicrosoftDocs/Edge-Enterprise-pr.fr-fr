@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/09/2021
+ms.date: 02/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: eaf7c7718a5ed56644c67769bf71847fb14e8728
-ms.sourcegitcommit: f141a3b315244e93291ca30ed23741a1d84f0a73
+ms.openlocfilehash: 82c03b918f8407eaa4b7f6b91a7a6fc1d3e2dc9b
+ms.sourcegitcommit: 543259647f221de88e67d47984617091f9c75cfc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "11324856"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "11326997"
 ---
 # Notes de publication du canal stable Microsoft Edge
 
@@ -29,7 +29,11 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 
-## Version88.0.705.63 du 5février
+## Version 88.0.705.68 du 11février
+
+Résolution de divers bogues et de problèmes de performances.
+
+## Version 88.0.705.63 du 5février
 
 Les mises à jour de sécurité sont répertoriées [ici](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021). Cette mise à jour contient [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), qui a été signalé par l’équipe Chromium comme cible de code malveillant exploitant une faille de sécurité.
 
