@@ -3,19 +3,19 @@ title: Mises à jour du contenu de MicrosoftEdge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 02/08/2021
+ms.date: 02/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Mises à jour du contenu de MicrosoftEdge
-ms.openlocfilehash: 5fd3e31c6fc40fb13d63b19bb7517670e88fe9d8
-ms.sourcegitcommit: b4a2bebc45da3c8fff8dd8eae194c2c8ed589bce
+ms.openlocfilehash: 826fde9d2f5e0a036437476d891bc3ede27fbb82
+ms.sourcegitcommit: a5432605280b1a634fdaf31b21b55ba1e2818763
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "11319241"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "11328328"
 ---
 # <span data-ttu-id="aad92-103">Mises à jour du contenu de MicrosoftEdge</span><span class="sxs-lookup"><span data-stu-id="aad92-103">Microsoft Edge content updates</span></span>
 
