@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
-ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
+ms.openlocfilehash: e293fc948625f2a36a94184f1e0502bb5e73f65a
+ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11325894"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11340604"
 ---
 # MicrosoftEdge: Stratégies
 
@@ -29,16 +29,15 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
-## Nouvelles stratégies
+## Nouvelles stratégies déconseillées
 
-Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour.
+Le tableau suivant répertorie les stratégies nouvelles et déconseillées pour cette mise à jour.
 
-| Nom | Légende |
+| Nom | Sous-titre |
 |--|--|
-|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Synchronisation des favoris d’Application Guard activée|
-|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Gérer les fonctionnalités de fichiers QuickView Office dans MicrosoftEdge|
-
-
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Autoriser les utilisateurs à poursuivre à partir de la page d’avertissement HTTPS pour des origines spécifiques|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Activer l’occlusion de fenêtre|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Activer l’occlusion de fenêtre native (supprimé)|
 
 ## Stratégies disponibles
 
@@ -371,7 +370,7 @@ et des conseils pour les services Microsoft|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Nombre maximal de connexions simultanées au serveur proxy|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Autoriser Google Cast à se connecter aux appareils Cast sur toutes les adresses IP|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Activer les rapports de données liés à l’utilisation et aux incidents (obsolète)|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Activer l’occlusion de fenêtre native|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Activer l’occlusion de fenêtre native (supprimé)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Définition d’un délai d’expiration pour la navigation à l’onglet de la liste des sites en mode entreprise|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Activer la prédiction réseau|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configurer la connexion automatique du profil par défaut de l’utilisateur avec son compte professionnel ou scolaire|
@@ -395,7 +394,8 @@ et des conseils pour les services Microsoft|
 |[RoamingProfileLocation](#roamingprofilelocation)|Définition du répertoire de profil itinérant|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Activer l’utilisation des copies itinérantes pour les données de profil Microsoft Edge|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Étendre le paramètre de contenu Adobe Flash à tout le contenu (obsolète)|
-|[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Autoriser les utilisateurs à poursuivre la navigation depuis une page d’avertissement SSL|
+|[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Autoriser les utilisateurs à poursuivre depuis la page d’avertissement HTTPS|
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Autoriser les utilisateurs à poursuivre à partir de la page d’avertissement HTTPS pour des origines spécifiques|
 |[SSLVersionMin](#sslversionmin)|Version TLS minimale activée|
 |[SaveCookiesOnExit](#savecookiesonexit)|Enregistrer les cookies lors de la fermeture de MicrosoftEdge|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Désactiver l’enregistrement de l’historique du navigateur|
@@ -453,11 +453,12 @@ et des conseils pour les services Microsoft|
 |[WebWidgetAllowed](#webwidgetallowed)|Activer le widget Web|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Autoriser le widget Web au démarrage de Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Utiliser la résolution du proxy Windows (déconseillée)|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Activer l’occlusion de fenêtre|
 
 
 
 
-  ## Stratégies de paramètres de Application Guard
+  ## Stratégies de paramètres de l’application Guard
 
   [Retour au début](#microsoft-edge---policies)
 
@@ -8900,7 +8901,7 @@ Si vous désactivez cette stratégie, chaque fois que l’utilisateur effectue u
 
   - Nom unique de la stratégie de groupe: AllowFileSelectionDialogs
   - Nom de la stratégie de groupe: autoriser les boîtes de dialogue de sélection de fichier
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -10837,7 +10838,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   - Nom unique de la stratégie de groupe: BrowserSignin
   - Nom de la stratégie de groupe: paramètres de connexion du navigateur
-  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d'administration/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
 
@@ -15090,7 +15091,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### Description
 
-  Indiquez si vous souhaitez utiliser l’accélération matérielle, si celle-ci est disponible. Si vous activez cette stratégie ou si vous ne la configurez pas, l'accélération matérielle est activée, sauf si une certaine fonctionnalité GPU figure sur la liste noire. 
+  Indique s’il faut utiliser l’accélération matérielle si elle est disponible. Si vous activez cette stratégie ou si vous ne la configurez pas, l'accélération matérielle est activée, sauf si une fonctionnalité GPU figure sur la liste noire. 
 
 Si vous désactivez cette stratégie, l'accélération matérielle est désactivée.
 
@@ -17591,9 +17592,9 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 
   ### NativeWindowOcclusionEnabled
 
-  #### Activer l’occlusion de fenêtre native
+  #### Activer l’occlusion de fenêtre native (supprimé)
 
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
   #### Versions prises en charge:
 
@@ -17601,13 +17602,15 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 
   #### Description
 
-  Active l’occlusion de fenêtre native dans Microsoft Edge.
+  Cette stratégie est déconseillée, utilisez la stratégie «[WindowOcclusionEnabled](#windowocclusionenabled)» à la place. Elle ne fonctionnera pas dans Microsoft Edge version 92.
+
+Active l’occlusion de fenêtre native dans Microsoft Edge.
 
 Si vous activez ce paramètre pour réduire la consommation du processeur et d’énergie, MicrosoftEdge détecte quand une fenêtre est couverte par d’autres fenêtres et suspend les pixels de peinture.
 
-Si vous désactivez ce paramètre, MicrosoftEdge ne détecte pas les fenêtres couvertes par d’autres fenêtres.
+Si vous désactivez ce paramètre, MicrosoftEdge ne détectera pas les fenêtres couvertes par d’autres fenêtres.
 
-Si cette stratégie n’est pas configurée, la détection du masquage des fenêtres est activée.
+Si cette stratégie n’est pas définie, la détection de l’occlusion sera activée.
 
   #### Fonctionnalités prises en charge:
 
@@ -17624,7 +17627,7 @@ Si cette stratégie n’est pas configurée, la détection du masquage des fenê
   ##### Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: NativeWindowOcclusionEnabled
-  - Nom GP: Activer l’occlusion de fenêtre native
+  - Nom de la stratégie de groupe: activer l’occlusion de fenêtre native (déconseillé)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -19144,6 +19147,77 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas poursuivre
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### SSLErrorOverrideAllowedForOrigins
+
+  #### Autoriser les utilisateurs à poursuivre à partir de la page d’avertissement HTTPS pour des origines spécifiques
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version 90 ou ultérieure
+
+  #### Description
+
+  MicrosoftEdge affiche une page d'avertissement lorsque les utilisateurs consultent des sites présentant des erreurs SSL.
+
+Si vous activez ou ne configurez pas la stratégie [SSLErrorOverrideAllowed,](#sslerroroverrideallowed) cette stratégie ne fait rien.
+
+Si vous désactivez la stratégie [SSLErrorOverrideAllowed,](#sslerroroverrideallowed) la configuration de cette stratégie vous permet de configurer une liste de modèles d’origine pour les sites où les utilisateurs peuvent continuer à cliquer sur les pages d’erreur SSL. Les utilisateurs ne peuvent pas cliquer sur les pages d’erreur SSL sur les origines qui ne se trouve pas dans cette liste.
+
+Si vous ne configurez pas cette stratégie, la stratégie [SSLErrorOverrideAllowed](#sslerroroverrideallowed) s’applique à tous les sites.
+
+Pour plus d’informations sur les modèles d’origine valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie. Cette stratégie ne correspond qu’en fonction de l’origine, de sorte que tout chemin d’accès ou requête dans le modèle d’URL est ignoré.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Liste composée de chaînes
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: SSLErrorOverrideAllowedForOrigins
+  - Nom de la stratégie de groupe: autoriser les utilisateurs à poursuivre à partir de la page d’avertissement HTTPS pour des origines spécifiques
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de valeur: liste composée de REG_SZ
+
+  ##### Exemple de valeur:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Informations et paramètres Mac
+  
+  - Nom clé de la préférence: SSLErrorOverrideAllowedForOrigins
+  - Exemple de valeur:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### SSLVersionMin
 
   #### Version TLS minimale activée
@@ -20059,7 +20133,7 @@ Si vous ne configurez pas cette stratégie:
 0x00000000
 ```
 
-  #### Informations et paramètres Mac
+  #### Informations et paramètres sur Mac
   
   - Nom de la clé de préférence: ShowMicrosoftRewards
   - Exemple de valeur:
@@ -22160,11 +22234,11 @@ Quelle que soit la façon dont cette stratégie est activée, le paramètre d’
 Chaque élément de liste de la stratégie est un objet avec un membre obligatoire : url (URL de l’application web à installer)
 
 et 3 membres facultatifs :
-- default_launch_container (spécifie le mode fenêtre que l’application web ouvre avec un nouvel onglet est la valeur par défaut.)
+- default_launch_container (spécifie le mode fenêtre que l’application web ouvre avec un nouvel onglet, est la valeur par défaut.)
 
-- create_desktop_shortcut (True si vous souhaitez créer des raccourcis de bureau Linux et Windows.)
+- create_desktop_shortcut (vrai si vous souhaitez créer des raccourcis de bureau Linux et Microsoft Windows.)
 
-- override_app_name (à partir de MicrosoftEdge89, vous permet de remplacer le nom de l’application s’il ne s’agit pas d’une application web progressive (PWA) ou du nom d’application qui est temporairement installé s’il s’agit d’un PWA, mais l’authentification est requise avant la fin de l’installation.)
+- fallback_app_name (à partir de Microsoft Edge 90, vous permet de remplacer le nom de l’application s’il ne s’agit pas d’une application web progressive (PWA) ou du nom de l’application qui est temporairement installé s’il s’agit d’un PWA, mais l’authentification est requise avant la fin de l’installation.)
 
   #### Fonctionnalités prises en charge:
 
@@ -22208,7 +22282,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   }, 
   {
     "default_launch_container": "window", 
-    "override_app_name": "Editor", 
+    "fallback_app_name": "Editor", 
     "url": "https://app.contoso.com/editor"
   }
 ]
@@ -22217,7 +22291,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Exemple de valeur compacte:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -22245,7 +22319,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   <dict>
     <key>default_launch_container</key>
     <string>window</string>
-    <key>override_app_name</key>
+    <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
     <string>https://app.contoso.com/editor</string>
@@ -22884,6 +22958,63 @@ Si vous désactivez ou ne configurez pas cette stratégie, le solveur Microsoft 
   - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
   - Chemin d’accès (recommandé): N/A
   - Nom de la valeur: WinHttpProxyResolverEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### Exemple de valeur:
+
+```
+0x00000001
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### WindowOcclusionEnabled
+
+  #### Activer l’occlusion de fenêtre
+
+  
+  
+  #### Versions prises en charge:
+
+  - Sur Windows depuis la version 89 ou ultérieure
+
+  #### Description
+
+  Active l’occlusion de fenêtre dans Microsoft Edge.
+
+Si vous activez ce paramètre pour réduire la consommation du processeur et d’énergie, MicrosoftEdge détecte quand une fenêtre est couverte par d’autres fenêtres et suspend les pixels de peinture.
+
+Si vous désactivez ce paramètre, MicrosoftEdge ne détecte pas les fenêtres couvertes par d’autres fenêtres.
+
+Si cette stratégie n’est pas configurée, la détection du masquage des fenêtres est activée.
+
+  #### Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### Type de données:
+
+  - Booléen
+
+  #### Informations et paramètres Windows
+
+  ##### Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: WindowOcclusionEnabled
+  - Nom de la stratégie de groupe: activer l’occlusion de fenêtre
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: WindowOcclusionEnabled
   - Type de valeur: REG_DWORD
 
   ##### Exemple de valeur:
