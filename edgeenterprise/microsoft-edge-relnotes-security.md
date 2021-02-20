@@ -3,23 +3,27 @@ title: Notes de publication pour les mises à jour de sécurité de Microsoft Ed
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication pour les mises à jour de sécurité de Microsoft Edge
-ms.openlocfilehash: fffcad26dba8d3a5e0899fa741648341b17411c5
-ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
+ms.openlocfilehash: e147211ba9ca834d4e65e253f59cf4419c566fda
+ms.sourcegitcommit: 8589a07ebd936070edb2eafa43b83cc6ef283a6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11314174"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "11343827"
 ---
 # Notes de publication pour les mises à jour de sécurité de Microsoft Edge
 
 Ces notes de publication fournissent des informations sur les correctifs de sécurité inclus dans les mises à jour apportées au canal stable Microsoft Edge.
+
+## 17 février 2021
+
+Microsoft a publié le dernier canal **stable Microsoft Edge (version 88.0.705.74),** qui intègre les dernières mises à jour de sécurité du projet Chromium. Pour plus d’informations, consultez le [Guide de mise à jour de sécurité](https://msrc.microsoft.com/update-guide).
 
 ## Le 5 février 2021
 
