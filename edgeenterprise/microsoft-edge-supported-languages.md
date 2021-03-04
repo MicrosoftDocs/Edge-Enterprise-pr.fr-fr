@@ -3,28 +3,28 @@ title: Prise en charge linguistique dans MicrosoftEdge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 10/22/2019
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prise en charge linguistique dans MicrosoftEdge
-ms.openlocfilehash: 60fff62335f5683f338c4a4b1b17ea54d40e19c6
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979796"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11384991"
 ---
-# Prise en charge linguistique dans MicrosoftEdge
+# <a name="microsoft-edge-language-support"></a>Prise en charge linguistique dans MicrosoftEdge
 
 Cet article explique comment utiliser les paramètres de MicrosoftEdge pour ajouter une langue prise en charge au navigateur. MicrosoftEdge prend en charge 96langues dans Windows et 91langues sur macOS.
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version78 ou ultérieure.
 
-## Ajouter une langue prise en charge à MicrosoftEdge
+## <a name="add-a-supported-language-to-microsoft-edge"></a>Ajouter une langue prise en charge à MicrosoftEdge
 
 Procédez comme suit pour afficher la liste des langues prises en charge, puis ajoutez une langue à MicrosoftEdge.
 
@@ -34,7 +34,7 @@ Procédez comme suit pour afficher la liste des langues prises en charge, puis a
 4. Dans la liste **Ajouter des langues**, vous pouvez rechercher une langue (**Langues de recherche**) ou utiliser la barre de défilement pour rechercher la langue que vous souhaitez ajouter.
 5. Lorsque vous avez localisé la langue, activez la case à cocher lui correspondant, puis cliquez sur **Ajouter**. La langue que vous avez ajoutée s’affiche en bas de la liste des **Langues préférées** qui sont déjà définies pour MicrosoftEdge. Les sites web que vous visitez s’affichent dans la première langue de la liste qu’ils prennent en charge.
 
-### Modifier les langues préférées
+### <a name="change-preferred-languages"></a>Modifier les langues préférées
 
 Vous pouvez réorganiser vos préférences linguistiques, obtenir MicrosoftEdge pour proposer des traductions et voir MicrosoftEdge dans une langue spécifique.
 Pour modifier un paramètre de langue, cliquez sur les points de suspension (**...**) en regard de la langue à ouvrir pour «Autres actions».
@@ -51,14 +51,14 @@ Selon la langue, une ou plusieurs des options suivants sont disponibles:
 > [!NOTE]
 > Vous pouvez également configurer les options du correcteur orthographique (**Vérifier l’orthographe**) en fonction de vos paramètres linguistiques préférés.
 
-## Extension traducteur de langue étrangère
+## <a name="foreign-language-translator-extension"></a>Extension traducteur de langue étrangère
 
 Outre l’utilisation d’une langue étrangère dans le navigateur, vous pouvez utiliser l’extension [Traducteur pour MicrosoftEdge](https://www.microsoft.com/p/translator-for-microsoft-edge/9nblggh4n4n3) pour traduire des pages web en langue étrangère et des sélections de texte pour plus de 60langues.
 
 > [!NOTE]
 > Si l’extension traducteur ne fonctionne pas après l’installation, redémarrez MicrosoftEdge. Si l’extension ne fonctionne toujours pas, envoyez vos commentaires par le biais du Hub de commentaires.
 
-## Langues prises en charge
+## <a name="supported-languages"></a>Langues prises en charge
 
 Le tableau suivant répertorie les langues prises en charge par MicrosoftEdge.
 
@@ -71,23 +71,18 @@ Le tableau suivant répertorie les langues prises en charge par MicrosoftEdge.
 |                 Albanais                           |                 Albanie                 |     sq         |
 |            Amharique                                 |                Éthiopie                 |     am         |
 |               Arabe                               |              Arabiesaoudite               |     ar         |
-|               Arménien                             |              Arménie                    |      hy        |
 |               Assamais                             |                  Inde                  |     as         |
 |          Azerbaïdjanais                               |               Azerbaïdjan, latin         |    az          |
-|                   Bengali                           |              Bangladesh                |     bn         |
-|                                                    |                  Inde                 |     bn-IN      |
+|                   Bengali                           |              Inde*                     |     bn-IN      |
 |                  Basque                            |                  Basque                 |     eu         |
-|                   Biélorusse                       |                  Bélarus                |     be         |
 |              Bosniaque                               |       Bosnie-Herzégovine     |       bs       |
 |                Bulgare                           |                Bulgarie                 |     bg         |
 |                 Catalan                            |                Catalan                  |     ca         |
-|                Cherokee                            |                   Cherokee              |      chr       |
 |            Chinois                                 |              Chine, simplifié          |     zh-CN      |
 |                                                    |             Taïwan, traditionnel         |     zh-TW      |
 |                 Croate                           |                 Croatie                 |     hr         |
 |                 Tchèque                              |             République tchèque              |     cs         |
 |                  Danois                            |                 Danemark                 |     da         |
-|                   Dari                             |                  Afghanistan*           |     prs        |
 |                Néerlandais                               |               Pays-Bas               |     nl         |
 |              Anglais                               |             Royaume-Uni              |     en-GB      |
 |                                                    |              États-Unis              |     en         |
@@ -112,10 +107,8 @@ Le tableau suivant répertorie les langues prises en charge par MicrosoftEdge.
 |                      Kannada                       |                  Inde                  |     kn         |
 |                Kazakh                              |               Kazakhstan                |     kk         |
 |                  Khmer                             |                Cambodge                 |     km         |
-|                   Kiswahili                        |                    Kenya                |     sw         |
 |                      Konkani                       |                  Inde                  |     kok        |
 |                   Coréen                           |                  Corée du Sud                  |     ko         |
-|                    Kirghiz                          |              Kirghizistan                 |     ky         |
 |                     Lao                            |               République démocratique populaireLao               |     lo         |
 |                  Letton                           |                 Lettonie                  |     lv         |
 |               Lituanien                           |                Lituanie                |     lt         |
@@ -126,7 +119,6 @@ Le tableau suivant répertorie les langues prises en charge par MicrosoftEdge.
 |               Maltais                              |                  Malte                  |     mt         |
 |          Maori                                     |               Nouvelle-Zélande               |     mi         |
 |               Marathi                              |                  Inde                  |     mr         |
-|                Mongole                           |           Mongolie, cyrillique            |     mn         |
 |                Népalais                              |               Népal                     |     ne         |
 |             Norvégien                              |                 Norvège, bokmål          |     nb         |
 |                                                    |                 Norvège, nynorsk         |     nn         |
@@ -143,8 +135,6 @@ Le tableau suivant répertorie les langues prises en charge par MicrosoftEdge.
 |            Serbe                                 |    Bosnie-Herzégovine, cyrillique*    |   sr-Cyrl-BA   |
 |                                                    |                 Serbie, cyrillique        |   sr-Cyrl-RS   |
 |                                                    |                 Serbie, latin           |   sr-Latn-RS   |
-|                   Sindhi                           |               Pakistan                  |      sd        |
-|                 Sinhala                            |           Sri Lanka                     |      si        |
 |                 Slovaque                             |                Slovaquie                 |        sk      |
 |                Slovène                           |                Slovénie                 |        sl      |
 |              Espagnol                               |                 Mexique                  |     es-MX      |
@@ -155,18 +145,16 @@ Le tableau suivant répertorie les langues prises en charge par MicrosoftEdge.
 |                Télougou                              |                  Inde                  |     te         |
 |                  Thaï                              |                Thaïlande                 |     th         |
 |                  Turc                           |                 Turquie                  |     tr         |
-|                  Turkmène                           |         Turkménistan                    |      tk        |
 |                Ukrainien                           |                 Ukraine                 |     uk         |
 |             Ourdou                                   |       République islamique du Pakistan      |     ur         |
 |              Ouïgour                                |                   RPC                   |     ug         |
-|              Ouzbek (latin)                                 |         Ouzbékistan, latin               |   uz-Latn      |
 |               Valencien                            |                  Espagne                 | ca-ES-valencia |
 |            Vietnamien                              |                 Vietnam                 |     vi         |
 |            Gallois                                   |             Royaume-Uni              |     cy         |
 
 ---
 
-## Articles associés
+## <a name="see-also"></a>Articles associés
 
 - [Documentation MicrosoftEdge](https://docs.microsoft.com/DeployEdge/)
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

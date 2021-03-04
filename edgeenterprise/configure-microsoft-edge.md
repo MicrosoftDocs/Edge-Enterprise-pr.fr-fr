@@ -3,34 +3,34 @@ title: Configurer Microsoft Edge pour Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 11/30/2019
+ms.date: 03/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer les paramètres de stratégie MicrosoftEdge sur les appareils Windows
-ms.openlocfilehash: 14ba2845e95394fe1f992c8b6446c975a8b4fb00
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
+ms.openlocfilehash: 27e94a609bb8b01c90e1080c6e8cd521facc8d70
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194702"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11385022"
 ---
-# Configurer les paramètres de stratégie MicrosoftEdge sur Windows
+# <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Configurer les paramètres de stratégie MicrosoftEdge sur Windows
 
 Utilisez les informations suivantes pour configurer les paramètres de stratégie MicrosoftEdge sur vos appareils Windows.
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
-## Configurer les paramètres de stratégie sur Windows
+## <a name="configure-policy-settings-on-windows"></a>Configurer les paramètres de stratégie sur Windows
 
 Vous pouvez utiliser des _objets de stratégie de groupe_ pour configurer les paramètres de stratégie pour MicrosoftEdge et les mises à jour MicrosoftEdge gérées sur toutes les versions de Windows. Vous pouvez également configurer une stratégie par le biais du registre pour les appareils Windows qui sont joints à un domaine MicrosoftActiveDirectory ou des instances Windows10 Professionnel ou Entreprise inscrites pour la gestion des périphériques dans MicrosoftIntune. Pour configurer MicrosoftEdge avec des objets de stratégie de groupe, vous devez installer des _modèles d’administration_ qui ajoutent des règles et des paramètres pour MicrosoftEdge au magasin Central de stratégie de groupe dans votre domaine ActiveDirectory ou au dossier de modèles de définition de stratégie sur des ordinateurs individuels, puis configurer les stratégies spécifiques que vous souhaitez définir.
 
 Vous pouvez utiliser la stratégie de groupe ActiveDirectory pour configurer les paramètres de stratégie MicrosoftEdge si vous préférez gérer la stratégie au niveau du domaine. Cela vous permet de gérer globalement les paramètres de stratégie, de cibler différents paramètres de stratégie sur des unités d’organisation spécifiques ou d’utiliser des filtres WMI pour appliquer les paramètres uniquement aux utilisateurs ou aux ordinateurs retournés par une requête particulière. Si vous souhaitez configurer la stratégie sur des ordinateurs individuels, vous pouvez appliquer des paramètres de stratégie qui affectent uniquement le périphérique local à l’aide de l’Éditeur d’objets de stratégie de groupe sur l’ordinateur cible.
 
-MicrosoftEdge prend en charge les stratégies _obligatoires_ et _recommandées_. Les stratégies obligatoires remplacent les préférences utilisateur et empêchent l’utilisateur de les modifier. Les stratégies recommandées fournissent un paramètre par défaut qui peut être remplacé par l’utilisateur. La plupart des stratégies sont obligatoires uniquement; un sous-ensemble est obligatoire et recommandée. Si les deux versions d’une stratégie sont définies, le paramètre obligatoire est prioritaire.
+MicrosoftEdge prend en charge les stratégies _obligatoires_ et _recommandées_. Les stratégies obligatoires remplacent les préférences utilisateur et empêchent l’utilisateur de les modifier. Les stratégies recommandées fournissent un paramètre par défaut qui peut être remplacé par l’utilisateur. La plupart des stratégies sont obligatoires uniquement; un sous-ensemble est obligatoire et recommandée. Si les deux versions d’une stratégie sont définies, le paramètre obligatoire est prioritaire. Une stratégie recommandée prend effet uniquement lorsque l’utilisateur n’a pas modifié le paramètre.
 
 >[!TIP]
 > Vous pouvez utiliser Microsoft Intune pour configurer les paramètres de stratégie MicrosoftEdge. Pour plus d’informations, consultez [Configurer MicrosoftEdge à l’aide de Microsoft Intune](configure-edge-with-intune.md).
@@ -42,7 +42,7 @@ Il existe deux modèles d’administration pour MicrosoftEdge, qui peuvent être
 
 Pour commencer, téléchargez et installez le modèle d’administration de MicrosoftEdge.
 
-### 1. Télécharger et installer le modèle d’administration de MicrosoftEdge
+### <a name="1-download-and-install-the-microsoft-edge-administrative-template"></a>1. Télécharger et installer le modèle d’administration de MicrosoftEdge
 
 Si vous souhaitez configurer des paramètres de stratégie MicrosoftEdge dans ActiveDirectory, téléchargez les fichiers vers un emplacement réseau auquel vous pouvez accéder à partir d’un contrôleur de domaine ou d’une station de travail sur laquelle les Outils d’administration de serveur distant sont installés. Pour effectuer la configuration sur un ordinateur individuel, téléchargez simplement les fichiers sur cet ordinateur.
 
@@ -50,7 +50,7 @@ Lorsque vous ajoutez les fichiers de modèles d’administration à l’emplacem
 
 Accédez à la [page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise) pour télécharge le fichier de modèle de stratégie Microsoft Edge (*MicrosoftEdgePolicyTemplates.cab*) et extrayez le contenu.
 
-#### Ajouter le modèle d’administration à ActiveDirectory
+#### <a name="add-the-administrative-template-to-active-directory"></a>Ajouter le modèle d’administration à ActiveDirectory
 
 1. Sur un contrôleur de domaine ou une station de travail sur laquelle sont installés les Outils d’administration de serveur distant, accédez au dossier **PolicyDefinition** (également appelé _magasin central_) sur n’importe quel contrôleur de domaine de votre domaine. Pour les versions antérieures de Windows Server, vous devrez peut-être créer le dossier PolicyDefinition. Pour plus d’informations, consultez le [Guide pratique pour créer et gérer le magasin central pour les modèles d’administration de stratégie de groupe dans Windows](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra).
 2. Ouvrez *MicrosoftEdgePolicyTemplates* et accédez à **Windows** > **ADMX**.
@@ -62,7 +62,7 @@ Accédez à la [page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeE
 
     ![Stratégies Microsoft Edge](./media/configure-microsoft-edge/edge-gpo-policies.png)
 
-#### Ajouter le modèle d’administration à un ordinateur individuel
+#### <a name="add-the-administrative-template-to-an-individual-computer"></a>Ajouter le modèle d’administration à un ordinateur individuel
 
 1. Sur l’ordinateur cible, ouvrez *MicrosoftEdgePolicyTemplates* et accédez à **Windows** > **ADMX**.
 2. Copiez le fichier *msedge.admx* dans le dossier de modèles de définition de stratégie. (Exemple: C:\Windows\PolicyDefinitions)
@@ -70,7 +70,7 @@ Accédez à la [page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeE
 4. Copiez le fichier *msedge.adml* dans le dossier de langue correspondant dans le dossier de définition de stratégie. (Exemple: C:\Windows\PolicyDefinitions\en-US)
 5. Pour vérifier que les fichiers sont chargés correctement, ouvrez l’Éditeur d’objets de stratégie de groupe directement (touche Windows + R et entrez gpedit.msc) ou ouvrez MMC et chargez le composant logiciel enfichable Éditeur d’objets de stratégie de groupe. Si une erreur se produit, cela est généralement dû au fait que les fichiers se trouvent dans un emplacement incorrect.
 
-### 2. Définir les stratégies obligatoires ou recommandées
+### <a name="2-set-mandatory-or-recommended-policies"></a>2. Définir les stratégies obligatoires ou recommandées
 
 Vous pouvez définir des stratégies obligatoires ou recommandées pour configurer MicrosoftEdge avec l’éditeur de stratégie de groupe pour les ordinateurs ActiveDirectory et individuels. Vous pouvez définir le périmètre des paramètres de stratégie sur la **Configuration de l’ordinateur** ou la **Configuration de l’utilisateur** en sélectionnant le nœud approprié comme décrit ci-dessous.
 
@@ -79,7 +79,7 @@ Vous pouvez définir des stratégies obligatoires ou recommandées pour configur
 
   ![Ouvrir l’Éditeur de stratégie de groupe](./media/configure-microsoft-edge/edge-ad-policy.png)
 
-### 3. Tester votre déploiement
+### <a name="3-test-your-policies"></a>3. Tester votre déploiement
 
 Sur un périphérique client cible, ouvrez MicrosoftEdge et accédez à **edge://policy** pour afficher toutes les stratégies qui sont appliquées. Si vous avez appliqué des paramètres de stratégie sur l’ordinateur local, les stratégies doivent apparaître immédiatement. Vous devrez peut-être fermer et rouvrir MicrosoftEdge s’il était ouvert pendant la configuration des paramètres de stratégie.
 
@@ -95,7 +95,7 @@ Vous devrez peut-être fermer et rouvrir MicrosoftEdge pour que les nouvelles st
 
 Vous pouvez également utiliser REGEDIT.exe sur un ordinateur cible pour afficher les paramètres du registre qui stockent les paramètres de stratégie de groupe. Ces paramètres se trouvent dans le chemin d’accès **HKLM\SOFTWARE\Policies\Microsoft\Edge**.
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Configurer pour Windows avec Intune](configure-edge-with-intune.md)
