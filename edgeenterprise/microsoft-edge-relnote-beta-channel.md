@@ -3,35 +3,47 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/12/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 0baad5271af16e84b224a92f14ec02c83194c102
-ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
+ms.openlocfilehash: e2a2933e7edf3456bcb33e70d6db7a36ab72aa07
+ms.sourcegitcommit: 6603dc23d8e7ff46df76bc6aa48b93a0b435fe7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "11328066"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11385629"
 ---
-# Notes de publication du canal Microsoft Edge Beta
+# <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication du canal Microsoft Edge Beta
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta. Les versions archivées de ces notes de publication sont disponibles [ici](microsoft-edge-relnote-archive-beta-channel.md).
 
-## Version 89.0.774.27 : 12 février
+## <a name="version-89077445-march-3"></a>Version89.0.774.45:3 mars
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-89077439-february-26"></a>Version89.0.774.39: 26février
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-89077434-february-22"></a>Version89.0.774.34: 22février
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-89077427-february-12"></a>Version89.0.774.27: 12février
 
 Résolution de divers bogues et de problèmes de performances.
 
-## Version 89.0.774.23: 8février
+## <a name="version-89077423-february-8"></a>Version 89.0.774.23: 8février
 
 Résolution de divers bogues et de problèmes de performances.
 <!-- begin major 89 -->
-## Version89.0.774.18 du 3février
+## <a name="version-89077418-february-3"></a>Version89.0.774.18 du 3février
 
-### Mises à jour des fonctionnalités
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
 - **Le mode plein écran active des fonctionnalités de verrouillage supplémentaires.** À partir de la version89 de MicrosoftEdge, nous avons ajouté des fonctionnalités de verrouillage supplémentaires en mode plein écran pour permettre aux clients d’accomplir leur travail dans une expérience productive et plus sécurisée. [Si vous souhaitez en savoir plus](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
@@ -59,9 +71,9 @@ Résolution de divers bogues et de problèmes de performances.
 
 - **Prise en charge du blocage de la lecture automatique de vidéos**. À partir de la version89 de MicrosoftEdge, les utilisateurs ont la possibilité d’empêcher la lecture automatique du média.
 
-### Mises à jour de stratégies
+### <a name="policy-updates"></a>Mises à jour de stratégies
 
-#### Nouvelles stratégies
+#### <a name="new-policies"></a>Nouvelles stratégies
 
 - [BrowsingDataLifetime](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#browsingdatalifetime) - Paramètres de durée de vie des données de navigation
 - [MAMEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mamenabled) - Gestion des applications mobiles activée
@@ -71,37 +83,37 @@ Résolution de divers bogues et de problèmes de performances.
 - [PrintingBackgroundGraphicsDefault](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingbackgroundgraphicsdefault): Mode d’impression des graphiques d’arrière-plan par défaut
 - [SmartActionsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartactionsblocklist): Bloquer les actions intelligentes pour une liste de services
 
-#### Stratégies obsolètes
+#### <a name="obsoleted-policies"></a>Stratégies obsolètes
 
 - [ForceLegacyDefaultReferrerPolicy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcelegacydefaultreferrerpolicy) : Utiliser une stratégie de référence par défaut de no-referrer-when-downgrade
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) : Activer les rapports de données d’utilisation et d’incident
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices)|Envoyer des informations sur le site pour améliorer les services Microsoft
 <!-- end major 89 -->
 
-## Version 88.0.705.56: 29janvier
+## <a name="version-88070556-january-29"></a>Version 88.0.705.56: 29janvier
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 88.0.705.49 : 20 janvier
+## <a name="version-88070549-january-20"></a>Version 88.0.705.49 : 20 janvier
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 88.0.705.45 : 15 janvier
+## <a name="version-88070545-january-15"></a>Version 88.0.705.45 : 15 janvier
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 88.0.705.41 : 11 janvier
+## <a name="version-88070541-january-11"></a>Version 88.0.705.41 : 11 janvier
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 88.0.705.29 : 21 décembre
+## <a name="version-88070529-december-21"></a>Version 88.0.705.29 : 21 décembre
 
 Résolution de divers bogues et problèmes de performances.
 
 <!-- begin major 88 -->
-## Version88.0.705.18: 9décembre
+## <a name="version-88070518-december-9"></a>Version88.0.705.18: 9décembre
 
-### Mises à jour des fonctionnalités
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
 - **Fonctionnalités obsolètes:**
 
@@ -146,9 +158,9 @@ Résolution de divers bogues et problèmes de performances.
   - Les icônes du navigateur sont mises à jour dans le système Fluent Design. Dans le cadre de nos efforts continus en termes de Fluent Design dans le navigateur, nous avons apporté des modifications de façon à aligner davantage les icônes sur le nouveau système d’icônes Microsoft. Ces modifications peuvent avoir une incidence sur un grand nombre de nos interfaces utilisateur avec une interaction tactile importante, y compris les onglets, la barre d’adresses, ainsi que les icônes de navigation et de recherche d’itinéraire dans nos différents menus.
   - Amélioration du rendu des polices. Le rendu du texte est amélioré pour améliorer la clarté et réduire le flou.
 
-### Mises à jour de stratégies
+### <a name="policy-updates"></a>Mises à jour de stratégies
 
-#### Nouvelles stratégies
+#### <a name="new-policies"></a>Nouvelles stratégies
 
 16nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
 
@@ -167,7 +179,7 @@ Résolution de divers bogues et problèmes de performances.
 - [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed): configure la disponibilité de la disposition verticale pour les onglets situés sur le côté du navigateur.
 - [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols): autorise le passage à une version antérieure héritée de TLS/DTLS dans WebRTC.
 
-#### Stratégies déconseillées
+#### <a name="deprecated-policies"></a>Stratégies déconseillées
 
 Les stratégies suivantes sont déconseillées.
 
@@ -178,7 +190,7 @@ Les stratégies suivantes sont déconseillées.
 - [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver): configure l’adresse ou l’URL du serveur proxy.
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies): autorise WebDriver à remplacer les stratégies incompatibles.
 
-#### Stratégies obsolètes
+#### <a name="obsoleted-policies"></a>Stratégies obsolètes
 
 Les stratégies suivantes sont obsolètes.
 
@@ -189,40 +201,40 @@ Les stratégies suivantes sont obsolètes.
 
 <!-- end major 88 -->
 
-## Version87.0.664.55: 3décembre
+## <a name="version-87066455-december-3"></a>Version87.0.664.55: 3décembre
 
 Résolution de divers bogues et problèmes de performances. La nouvelle fonctionnalité suivante est prise en charge dans cette version.
 
 - **Des alertes sont générées si le mot de passe d’un utilisateur est détecté dans une fuite en ligne**. Les mots de passe des utilisateurs sont examinés par rapport à un référentiel d’informations d’identification connues qui ont été violées et envoient à l’utilisateur une alerte si une correspondance est trouvée. Pour garantir la sécurité et la confidentialité, les mots de passe des utilisateurs sont chiffrés et cryptés lorsqu’ils sont vérifiés par rapport à la base de données des informations d’identification divulguées.
 
-## Version 87.0.664.52: 30novembre
+## <a name="version-87066452-november-30"></a>Version 87.0.664.52: 30novembre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 87.0.664.40: 18 novembre
+## <a name="version-87066440-november-18"></a>Version 87.0.664.40: 18 novembre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 87.0.664.36: 16 novembre
+## <a name="version-87066436-november-16"></a>Version 87.0.664.36: 16 novembre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 87.0.664.30: 9 novembre
+## <a name="version-87066430-november-9"></a>Version 87.0.664.30: 9 novembre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 87.0.664.24: 2 novembre
+## <a name="version-87066424-november-2"></a>Version 87.0.664.24: 2 novembre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version87.0.664.18: 26octobre
+## <a name="version-87066418-october-26"></a>Version87.0.664.18: 26octobre
 
 Résolution de divers bogues et problèmes de performances.
 
 <!-- begin major 87 -->
-## Version87.0.664.12: 20octobre
+## <a name="version-87066412-october-20"></a>Version87.0.664.12: 20octobre
 
-### Mises à jour des fonctionnalités
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
 - **Activation des fonctionnalités de confidentialité en mode plein écran**. Le démarrage des fonctionnalités du mode plein écran de Microsoft Edge version 87 qui permettront aux entreprises de respecter la confidentialité des données utilisateur, sera  activée. Ces fonctionnalités activent les expériences telles que l’effacement des données utilisateur à la fermeture, la suppression des fichiers téléchargés et la réinitialisation de l’expérience de démarrage configurée après une durée inactivité déterminée. En savoir plus sur la [Configuration du mode plein écran Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 - **Activation du déploiement ClickOnce par défaut**. L’activation de ClickOnce par défaut dans Microsoft Edge 87, réduit les difficultés des entreprises à déployer des logiciels et mieux s’aligner sur le comportement du navigateur Microsoft Edge Legacy. Au démarrage de Microsoft Edge 87, l’état «Non Configuré» de la stratégie ClickOnceEnabled reflète le nouvel état par défaut Activé de la stratégie ClickOnce (comparé à l’État par défaut Désactivé précédent).
@@ -239,9 +251,9 @@ Résolution de divers bogues et problèmes de performances.
   - Sélectionnez le côté à retourner lors de l’impression recto verso. Les utilisateurs peuvent choisir de retourner sur le côté long ou sur le côté court d’une feuille lors de l’impression recto verso.
   - Sélectionnez le mode de tramage de l’impression pour l’entreprise. Contrôlez l’impression Microsoft Edge sur une imprimante non-PostScript sur Windows. Parfois l’ impression sur des imprimantes non-PostScript doit être tramée pour imprimer correctement. Les options d’impression sont «Complètes» et «Rapides».
 
-### Mises à jour de stratégies
+### <a name="policy-updates"></a>Mises à jour de stratégies
 
-#### Nouvelles stratégies
+#### <a name="new-policies"></a>Nouvelles stratégies
 
 Ajout de dix nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
 
@@ -256,39 +268,39 @@ Ajout de dix nouvelles stratégies. Téléchargez les modèles d’administratio
 - [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) - Configurez la Reconnaissance Vocale.
 - [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) - Activez la fonctionnalité de capture web dans Microsoft Edge.
 
-#### Stratégie Déconseillée
+#### <a name="deprecated-policy"></a>Stratégie Déconseillée
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Configurez l’expérience de la page nouvel onglet de Microsoft Edge.
 
-#### Stratégie obsolète
+#### <a name="obsoleted-policy"></a>Stratégie obsolète
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - Réactivez les fonctionnalités de plateforme web déconseillées pour une période limitée.
 
 <!-- end major 87 -->
 
-## Version86.0.622.43: 16octobre
+## <a name="version-86062243-october-16"></a>Version86.0.622.43: 16octobre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version86.0.622.36: 7octobre
+## <a name="version-86062236-october-7"></a>Version86.0.622.36: 7octobre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version86.0.622.31: 1octobre
+## <a name="version-86062231-october-1"></a>Version86.0.622.31: 1octobre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 86.0.622.28: 28 septembre
+## <a name="version-86062228-september-28"></a>Version 86.0.622.28: 28 septembre
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 86.0.622.15: 14 septembre
+## <a name="version-86062215-september-14"></a>Version 86.0.622.15: 14 septembre
 
 Résolution de divers bogues et problèmes de performances.
 
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
