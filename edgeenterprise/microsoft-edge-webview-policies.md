@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies WebView2 Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/17/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,24 +11,23 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 2e3258a0427a7fb280023ddc1518f12869f9c791
-ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
+ms.openlocfilehash: b362ac7b7addde044155428f61b7fb35d68f3e80
+ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "11340584"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11388740"
 ---
-# Microsoft Edge WebView2 - Politiques
+# <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 - Politiques
 
 La dernière version de Microsoft Edge WebView2 comprend les politiques suivantes. Vous pouvez utiliser ces politiques pour configurer le fonctionnement de Microsoft Edge WebView2 dans votre organisation.
 
 Pour plus d'informations sur un ensemble supplémentaire de politiques utilisées pour contrôler quand et comment Microsoft Edge WebView2 est mis à jour, consultez la [référence des politiques de mise à jour de Microsoft Edge](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version87 ou ultérieure.
 
-## Stratégies disponibles
+## <a name="available-policies"></a>Stratégies disponibles
 
 Ces tableaux répertorient toutes les politiques de groupe disponibles dans cette version de Microsoft Edge WebView2. Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.
 
@@ -36,7 +35,7 @@ Ces tableaux répertorient toutes les politiques de groupe disponibles dans cett
 |-|-|
 |[Paramètres d'annulation du chargeur](#loader-override-settings)|
 
-### [*Paramètres d'annulation du chargeur*](#loader-override-settings-policies)
+### [*<a name="loader-override-settings"></a>Paramètres d'annulation du chargeur*](#loader-override-settings-policies)
 
 |Nom de la stratégie|Caption|
 |-|-|
@@ -46,39 +45,39 @@ Ces tableaux répertorient toutes les politiques de groupe disponibles dans cett
 
 
 
-  ## Politiques d'annulation des paramètres du chargeur
+  ## <a name="loader-override-settings-policies"></a>Politiques d'annulation des paramètres du chargeur
 
   [Retour au début](#microsoft-edge-webview2---policies)
 
-  ### BrowserExecutableFolder
+  ### <a name="browserexecutablefolder"></a>BrowserExecutableFolder
 
-  #### Configurer l'emplacement du dossier de l'exécutable du navigateur
+  #### <a name="configure-the-location-of-the-browser-executable-folder"></a>Configurer l'emplacement du dossier de l'exécutable du navigateur
 
   
   
-  #### Versions prises en charge:
+  #### <a name="supported-versions"></a>Versions prises en charge:
 
   - Sur Windows depuis la version87 ou versions ultérieures
 
-  #### Description
+  #### <a name="description"></a>Description
 
   Cette politique configure les applications WebView2 pour qu'elles utilisent le runtime WebView2 dans le chemin spécifié. Le dossier doit contenir les fichiers suivants : msedgewebview2.exe, msedge.dll, etc.
 
 Pour définir la valeur du chemin d'accès au dossier, fournissez un nom de valeur et une paire de valeurs. Définissez le nom de la valeur à l'ID du modèle d'utilisateur de l'application ou au nom du fichier exécutable. Vous pouvez utiliser le «*» joker comme nom de valeur à appliquer à toutes les applications.
 
-  #### Fonctionnalités prises en charge:
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire: Oui
   - Peut être recommandée: Non
   - Actualisation dynamique de la stratégie: Oui
 
-  #### Type de données:
+  #### <a name="data-type"></a>Type de données:
 
   - Liste composée de chaînes
 
-  #### Informations et paramètres Windows
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
 
-  ##### Informations relatives à la stratégie de groupe (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de GP: BrowserExecutableFolder
   - Nom du GP : Configurer l'emplacement du dossier de l'exécutable du navigateur
@@ -86,14 +85,14 @@ Pour définir la valeur du chemin d'accès au dossier, fournissez un nom de vale
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier GP ADMX : MSEdgeWebView2.admx
 
-  ##### Paramètres du Registre Windows
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
 
   - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Chemin d’accès (recommandé): N/A
   - Nom de la valeur : liste des REG_SZ
   - Type de valeur: liste composée de REG_SZ
 
-  ##### Exemple de valeur:
+  ##### <a name="example-value"></a>Exemple de valeur:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
@@ -104,17 +103,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 
   [Retour au début](#microsoft-edge-webview2---policies)
 
-  ### ReleaseChannelPreference
+  ### <a name="releasechannelpreference"></a>ReleaseChannelPreference
 
-  #### Définir la préférence de l'ordre de recherche du canal de diffusion
+  #### <a name="set-the-release-channel-search-order-preference"></a>Définir la préférence de l'ordre de recherche du canal de diffusion
 
   
   
-  #### Versions prises en charge:
+  #### <a name="supported-versions"></a>Versions prises en charge:
 
   - Sur Windows depuis la version87 ou versions ultérieures
 
-  #### Description
+  #### <a name="description"></a>Description
 
   L'ordre de recherche des chaînes par défaut est le suivant : WebView2 Runtime, Beta, Dev et Canary.
 
@@ -122,19 +121,19 @@ Pour inverser l'ordre de recherche par défaut, réglez cette politique sur 1.
 
 Pour définir la valeur de la préférence de canal de diffusion, fournissez un nom de valeur et une paire de valeurs. Définissez le nom de la valeur à l'ID du modèle d'utilisateur de l'application ou au nom du fichier exécutable. Vous pouvez utiliser le «*» joker comme nom de valeur à appliquer à toutes les applications.
 
-  #### Fonctionnalités prises en charge:
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire: Oui
   - Peut être recommandée: Non
   - Actualisation dynamique de la stratégie: Oui
 
-  #### Type de données:
+  #### <a name="data-type"></a>Type de données:
 
   - Liste composée de chaînes
 
-  #### Informations et paramètres Windows
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
 
-  ##### Informations relatives à la stratégie de groupe (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de GP: ReleaseChannelPreference
   - Nom du GP : Définir la préférence de l'ordre de recherche du canal de diffusion
@@ -142,14 +141,14 @@ Pour définir la valeur de la préférence de canal de diffusion, fournissez un 
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier GP ADMX : MSEdgeWebView2.admx
 
-  ##### Paramètres du Registre Windows
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
 
   - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Chemin d’accès (recommandé): N/A
   - Nom de la valeur : liste des REG_SZ
   - Type de valeur: liste composée de REG_SZ
 
-  ##### Exemple de valeur:
+  ##### <a name="example-value"></a>Exemple de valeur:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
@@ -161,7 +160,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, V
   [Retour au début](#microsoft-edge-webview2---policies)
 
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Configuration de MicrosoftEdge](configure-microsoft-edge.md)
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
