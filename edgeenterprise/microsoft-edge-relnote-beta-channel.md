@@ -3,25 +3,28 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: e2a2933e7edf3456bcb33e70d6db7a36ab72aa07
-ms.sourcegitcommit: 6603dc23d8e7ff46df76bc6aa48b93a0b435fe7d
+ms.openlocfilehash: e5096d437f8b70ed94add8341db1cdb1d4b69b84
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11385629"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393636"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication du canal Microsoft Edge Beta
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta. Les versions archivées de ces notes de publication sont disponibles [ici](microsoft-edge-relnote-archive-beta-channel.md).
 
-## <a name="version-89077445-march-3"></a>Version89.0.774.45:3 mars
+> [!NOTE]
+> Nous avons mis à jour la version bêta de MicrosoftEdge [version89.0.774.18](#version-89077418-february-3) du 3février pour refléter les fonctionnalités qui ont été publiées.
+
+## <a name="version-89077445-march-3"></a>Version89.0.774.45:3mars
 
 Résolution de divers bogues et problèmes de performances.
 
@@ -58,18 +61,9 @@ Résolution de divers bogues et de problèmes de performances.
 
 - **Améliorations apportées à l’expérience de sélection de texte dans les documents PDF**. Les utilisateurs commenceront à obtenir une expérience de sélection de texte plus fluide et plus cohérente dans les documents PDF ouverts dans MicrosoftEdge à partir de la version89.
 
-- **L’avertissement «Désactiver les extensions du mode développeur» peut être définitivement rejeté**. À partir de la version89 de MicrosoftEdge, vous pouvez désactiver l’avertissement «Désactiver les extensions du mode développeur» en sélectionnant l’option «Ne plus afficher cette option».
+- **Date de naissance désormais prise en charge dans le remplissage automatique**. Aujourd’hui, MicrosoftEdge vous permet de gagner du temps et des efforts lors du remplissage de formulaires et de la création de comptes en ligne en remplissant automatiquement vos données telles que les adresses, les noms, les numéros de téléphone, etc. À partir de la version89 de MicrosoftEdge, nous ajoutons la prise en charge d’un autre champ que vous pouvez avoir enregistré et rempli automatiquement: la date de naissance. Vous pouvez afficher, modifier et supprimer ces informations à tout moment dans vos paramètres de profil.
 
-- **Gérez vos extensions à partir de la barre d’outils**. Le nouveau menu des extensions de la barre d’outils vous permet de masquer/épingler facilement les extensions. Les liens rapides pour gérer les extensions et trouver de nouvelles extensions vous permettra de trouver facilement de nouvelles extensions et de gérer vos extensions existantes.
-
-- **Prise en charge de la recherche en langage naturel sur la barre d’adresses, la page de recherche de l’historique et le hub d’historique**. À partir de la version89 de MicrosoftEdge, la recherche d’un article/site web sera plus facile avec la recherche en langage naturel sur la barre d’adresses, la page d’historique et le concentrateur d’historique. Les utilisateurs peuvent rechercher le contenu/description/minutage des pages précédemment vues (par exemple, «recette de gâteau de la semaine dernière») en plus des correspondances de mots clés de titres/URL.
-
-- **Productivité:**
-
-  - Le champ Date de naissance est désormais pris en charge dans le remplissage automatique. Aujourd’hui, MicrosoftEdge vous permet de gagner du temps et des efforts lors du remplissage de formulaires et de la création de comptes en ligne en remplissant automatiquement vos données telles que les adresses, les noms, les numéros de téléphone, etc. À partir de la version89 de MicrosoftEdge, nous ajoutons la prise en charge d’un autre champ que vous pouvez avoir enregistré et rempli automatiquement: la date de naissance. Vous pouvez afficher, modifier et supprimer ces informations à tout moment dans vos paramètres de profil.
-  - Développez les suggestions de remplissage automatique pour inclure le contenu du Presse-papiers. Le contenu du Presse-papiers est analysé lorsque vous sélectionnez un champ de profil/adresse (par exemple, téléphone, e-mail, code postal, ville, état, etc.) pour l’afficher en tant que suggestions de remplissage automatique.
-
-- **Prise en charge du blocage de la lecture automatique de vidéos**. À partir de la version89 de MicrosoftEdge, les utilisateurs ont la possibilité d’empêcher la lecture automatique du média.
+- **Prise en charge de la recherche en langage naturel sur la barre d’adresses, la page de recherche de l’historique et le hub d’historique**. À partir de la version89 de MicrosoftEdge, la recherche d’un article/site web sera plus facile avec la recherche en langage naturel sur la barre d’adresses, la page d’historique et le concentrateur d’historique. Les utilisateurs peuvent rechercher le contenu/description/minutage des pages précédemment consultées (par exemple, «recette de gâteau de la semaine dernière») en plus des correspondances de mots clés de titres/URL. Cette fonctionnalité est limitée à un groupe d’utilisateurs sélectionnés de manière aléatoire et ayant activé l’expérimentation. Ces utilisateurs fournissent des commentaires à l’équipe chargée de la fonctionnalité.
 
 ### <a name="policy-updates"></a>Mises à jour de stratégies
 

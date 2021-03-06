@@ -1,30 +1,30 @@
 ---
-title: Configurer Microsoft Edge en mode plein écran
+title: Configurer le mode kiosque Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Configurer Microsoft Edge en mode plein écran
-ms.openlocfilehash: 3f6e75b73d8c541bae4442263a5b415aeeb15eb1
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+description: Apprenez les fonctionnalités du mode kiosque et comment configurer les options du mode kiosque de Microsoft Edge.
+ms.openlocfilehash: 9f2ce26f2c505ba3fc9e2e05b057e5d5df8257fe
+ms.sourcegitcommit: 8da3a4de1a14514014b6d7b103ba79f2ace48044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314617"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11388552"
 ---
-# Configurer Microsoft Edge en mode plein écran
+# <a name="configure-microsoft-edge-kiosk-mode"></a>Configurer le mode kiosque Microsoft Edge
 
 Cet article décrit la configuration des options Microsoft Edge en mode plein écran que vous pouvez piloter. Il existe également une feuille de route des fonctionnalités que nous ciblons.
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version87 ou ultérieure.
 
-## Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble
 
 Microsoft Edge en mode plein écran offre deux expériences de verrouillage du navigateur afin de permettre aux organisations de créer, gérer et offrir une expérience optimale pour leurs clients. Les expériences de verrouillage suivantes sont disponibles:  
 
@@ -33,11 +33,11 @@ Microsoft Edge en mode plein écran offre deux expériences de verrouillage du n
 
 Les deux expériences exécutent une session MicrosoftEdge InPrivate qui protège les données de l’utilisateur.
 
-## Configurer MicrosoftEdge en mode plein écran
+## <a name="set-up-microsoft-edge-kiosk-mode"></a>Configurer MicrosoftEdge en mode plein écran
 
 Un ensemble initial de fonctionnalités du mode plein écran est disponible pour le test avec le canal stable MicrosoftEdge, version87. Vous pouvez télécharger la dernière version à partir [de MicrosoftEdge (canal stable officiel).](https://www.microsoft.com/edge)
 
-### Fonctionnalités prise en charge en mode plein écran
+### <a name="kiosk-mode-supported-features"></a>Fonctionnalités prise en charge en mode plein écran
 
 Le tableau suivant répertorie les fonctionnalités prise en charge par le mode plein écran dans Microsoft Edge et MicrosoftEdge hérité. Utilisez ce tableau comme guide pour passer à MicrosoftEdge en comparant la prise en charge de ces fonctionnalités dans les deux versions de Microsoft Edge.
 
@@ -55,36 +55,36 @@ Le tableau suivant répertorie les fonctionnalités prise en charge par le mode 
 |[Afficher le bouton d’accueil](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (stratégie)|N|Y|89|Y|
 |[Gérer les favoris](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (stratégie)|N|Y|89|Y|
 |[Activer l’imprimante](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (stratégie)|Y|Y|89|Y|
-|[Configurer l’URL de la page nouvel onglet](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (stratégie)|N|Y||Y|
-|Bouton Terminer la session | N| Y| 89|Y|
+|[Configurer l’URL de la page Nouvel onglet](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (stratégie)|N|Y||Y|
+|Bouton de fin de session * | N| Y| 89|Y|
 |Toutes les URL MicrosoftEdge internes sont bloquées, à l’exception de *edge://downloads* et *edge://print* |N|Y|89|Y|
-| Ctrl+N bloqué (ouvrir une nouvelle fenêtre) | Y | Y | 89 |Y|
-| Ctrl+T bloqué (ouvrir un nouvel onglet) |Y | Y | 89 |Y|
+| CTRL+N bloqué (ouvrir une nouvelle fenêtre) * | Y | Y | 89 |Y|
+| Ctrl+T bloqué (ouvrir un nouvel onglet) |Y | N | 89 |Y|
 |Paramètres et plus (...) afficheront uniquement les options requises  |Y |Y |89 |Y|
 |Restreindre le lancement d’autres applications à partir du navigateur|Y|Y|90/91|Y|
 |Verrouillage des paramètres d’impression de l’interface utilisateur|Y|Y|90/91|Y|
-|[Définir la page nouvel onglet comme page d’accueil](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (stratégie)|-|-|À déterminer|Y|
+|[Définir la page Nouvel onglet comme page d’accueil](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (stratégie)|-|-|À déterminer|Y|
 
 > [!NOTE]
-> Lorsque le mode plein écran évolue, d’autres fonctionnalités sont disponibles.
+> Les fonctions suivies d'un « * » ne sont activées que dans un scénario d'accès assigné à une seule application.
 
-## Utiliser les fonctionnalités du mode plein écran
+## <a name="use-kiosk-mode-features"></a>Utiliser les fonctionnalités du mode kiosque
 
 Les fonctionnalités du mode plein écran de Microsoft Edge peuvent être invoquées avec les options de ligne de commande Windows10 suivantes pour la signalisation numérique/interactive et la navigation publique.
 
-### Mode plein écran numérique/signalisation interactive
+### <a name="kiosk-mode-digitalinteractive-signage"></a>Mode plein écran numérique/signalisation interactive
  
 ```
 msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
 ```
 
-### Navigation publique en mode plein écran
+### <a name="kiosk-mode-public-browsing"></a>Navigation publique en mode plein écran
 
 ```
 msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 ```
 
-### Autres options de la ligne de commande
+### <a name="additional-command-line-options"></a>Autres options de la ligne de commande
 
 - **--no-first-run**: désactiver la première expérience d’exécuter Microsoft Edge.
 
@@ -119,7 +119,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
    msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --kiosk-idle-timeout-minutes=1
    ```
 
-## Stratégies de support pour le mode plein écran
+## <a name="support-policies-for-kiosk-mode"></a>Stratégies de support pour le mode plein écran
 
 Utilisez l’une des stratégies MicrosoftEdge répertoriées dans le tableau suivant pour améliorer l’expérience plein écran pour le type de mode plein écran MicrosoftEdge que vous configurez. Pour en savoir plus sur ces stratégies, voir [MicrosoftEdge – Référence de stratégie de navigateur.](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
 
@@ -141,9 +141,9 @@ Utilisez l’une des stratégies MicrosoftEdge répertoriées dans le tableau su
 |[Paramètres SmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |Y |Y |
 |[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|Y|Y|
 
-## MicrosoftEdge avec accès affecté
+## <a name="microsoft-edge-with-assigned-access"></a>MicrosoftEdge avec accès affecté
 
-### Borne à application unique
+### <a name="single-app-kiosk"></a>Borne à application unique
 
 MicrosoftEdge prend actuellement en charge un sous-ensemble des mêmes types de mode plein écran hérités de MicrosoftEdge pour l’accès affecté à une seule application avec les expériences de verrouillage suivantes: connexion numérique/interactive et navigation publique.  
 
@@ -153,13 +153,13 @@ Le mode plein écran de Microsoft Edge avec une seule application à accès affe
 
 Si vous souhaitez en savoir plus sur l’installation d’une version d'évaluation de Windows10 Insider sur un PC, veuillez consulter les instructions de la rubrique  [Prise en main des versions d'évaluation de Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
 
-### Borne à plusieurs applications
+### <a name="multi-app-kiosk"></a>Borne à plusieurs applications
 
 Vous pouvez exécuter MicrosoftEdge avec un [accès attribué à plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) sous Windows10. Cela équivaut au type de mode plein écran «Navigation normale» de l’ancienne version de Microsoft Edge . Pour configurer MicrosoftEdge avec un accès affecté à plusieurs applications, suivez les instructions sur la configuration d’une borne [multi-application](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (L’AUMID du canal stable de MicrosoftEdge est **MSEdge**).
 
 Lorsque vous utilisez MicrosoftEdge avec un accès affecté à plusieurs applications, vous pouvez configurer MicrosoftEdge Kiosk pour utiliser les stratégies de navigateur[Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) afin de configurer l’expérience de navigation afin de répondre à vos besoins uniques.
 
-### Configurer à l’aide des paramètres Windows
+### <a name="configure-using-windows-settings"></a>Configurer à l’aide des paramètres Windows
 
 Les paramètres Windows constituent le moyen le plus simple de configurer un ou deux appareils borne à une seule application. Procédez comme suit pour configurer un ordinateur borne à une seul application.
 
@@ -207,7 +207,7 @@ Les paramètres Windows constituent le moyen le plus simple de configurer un ou 
 
 13. Déconnectez-vous à partir de l’appareil kiosque et connectez-vous avec le compte kiosque local pour valider la configuration.
 
-## Limitations fonctionnelles
+## <a name="functional-limitations"></a>Limitations fonctionnelles
 
 Avec la publication de cette version d’évaluation du mode plein écran, nous continuons à travailler sur l’amélioration du produit et en ajoutant de nouvelles fonctionnalités.
 
@@ -225,9 +225,9 @@ Nous vous recommandons de désactiver :
 - [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 - [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
 
-## Feuille de route
+## <a name="roadmap"></a>Feuille de route
 
-### Début 2021
+### <a name="in-early-2021"></a>Début 2021
 
 Nous allons ajouter la prise en charge et les fonctionnalités suivantes:
 
@@ -237,7 +237,7 @@ Nous allons ajouter la prise en charge et les fonctionnalités suivantes:
 - Limiter le lancement d’autres applications à partir du navigateur.
 - Verrouillage des paramètres d’impression de l’interface utilisateur.
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)

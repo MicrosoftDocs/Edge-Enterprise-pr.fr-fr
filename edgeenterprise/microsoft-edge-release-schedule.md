@@ -3,36 +3,36 @@ title: Planning de publication de MicrosoftEdge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/10/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planning de publication de MicrosoftEdge
-ms.openlocfilehash: b68e0386c270f00f862a9891a14d53177bffaf5d
-ms.sourcegitcommit: 543259647f221de88e67d47984617091f9c75cfc
+ms.openlocfilehash: f6567683b78d097547ebdef9320addc05863404e
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "11327007"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393693"
 ---
-# Planning de publication de MicrosoftEdge
+# <a name="microsoft-edge-release-schedule"></a>Planning de publication de MicrosoftEdge
 
 Cet article décrit la cadence de publication et le planning de publication prévu pour MicrosoftEdge.
 
-## Cadence de publication
+## <a name="release-cadence"></a>Cadence de publication
 
 Microsoft propose quatre options, appelées canaux, pour gérer la fréquence à laquelle MicrosoftEdge est mis à jour avec de nouvelles fonctionnalités. Les équipes MicrosoftEdge envisagent d’envoyer les mises à jour publiques vers les canaux bêta et stables toutes les six semaines. Si vous souhaitez plus d’informations sur nos canaux, leur cycle de publication et leur niveau de support, voir la[Vue d’ensemble des canaux](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels#channel-overview).
 
-## Planning de publication
+## <a name="release-schedule"></a>Planning de publication
 
 Le tableau suivant répertorie les dates de publication planifiées pour les canaux bêta et stables.
 
 > [!NOTE]
 > Les dates de publication sont approximatives et peuvent varier en fonction de l’état de la Build.
 
-### Versions MicrosoftEdge
+### <a name="microsoft-edge-releases"></a>Versions MicrosoftEdge
 
 Le tableau suivant suit et fournit uniquement des informations sur les principales publication dans les deux canaux.
 
@@ -40,24 +40,24 @@ Le tableau suivant suit et fournit uniquement des informations sur les principal
 |---------|-----|------|--------|
 | 86 | Publiée<br>Version | 09-sept-2020<br>[86.0.622.11](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-archive-beta-channel#version-86062211-september-9) | 09-oct-2020<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
 | 87 | Publiée<br>Version | 20-oct-2020<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412-october-20) | 19-nov-2020<br>[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19) |
-| **88** | Publiée<br>Version | 09-déc-2020<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | **21-jan-2021**<br>**[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)**|
-| **89** | Publiée<br>Version | **03-Feb-2021**<br>**[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3)** | Semaine du 04-mars-2021 |
+| **88** | Publiée<br>Version | 09-déc-2020<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | 21-jan-2021<br>[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)|
+| **89** | Publiée<br>Version | **03-Feb-2021**<br>**[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3)** | **04-mars-2021**<br>**[89.0.774.45](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-21)** |
 | 90 | Version cible | Semaine du 16-mars-2021 | Semaine du 15-avr-2021 |
 | 91 | Version cible | Semaine du 27-avr-2021 | Semaine du 27 mai-2021 |
 | 92 | Libération des cibles | Semaine du 08-Juin-2021 | Semaine du 22 Juillet 2021 |
 | 93 | Libération des cibles | Semaine du 03 Août 2021 | Semaine du 02 Septembre 2021 |
 
-## Processus de libération
+## <a name="release-process"></a>Processus de libération
 
 Le déclencheur pour les publications importantes des versions bêta et stables est une version de chrome équivalente.
 
-## Déploiements progressifs
+## <a name="progressive-rollouts"></a>Déploiements progressifs
 
 La référence de la date (publication ou semaine publiée) pour le canal stable fait référence au début du déploiement progressif.
 
 Nous utilisons un modèle de déploiement progressif, ce qui signifie que la disponibilité d’une nouvelle version pour un appareil donné peut être échelonnée au cours des prochains jours. Si vous souhaitez plus d’informations, voir [Déploiements progressifs pour les canaux Microsoft Edge stables](microsoft-edge-update-progressive-rollout.md).
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Canaux MicrosoftEdge](microsoft-edge-channels.md)
