@@ -1,10 +1,8 @@
-# last revised 03/02/2021
+# last revised 03/08/2021
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
   href: 'https://docs.microsoft.com/microsoft-edge/'
-- name: Mises à jour du contenu de MicrosoftEdge
-  href: microsoft-edge-content-updates.md
 - name: Prise en main de MicrosoftEdge
   items:
     - name: En savoir plus sur les canaux Microsoft Edge
@@ -95,10 +93,16 @@
       href: microsoft-edge-enterprise-state-roaming.md
     - name: Planifier votre transition en mode plein écran
       href: microsoft-edge-kiosk-mode-transition-plan.md
-    - name: Configurer Microsoft Edge en mode plein écran
+    - name: Configurer le mode kiosque Microsoft Edge
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Synchronisation de MicrosoftEdge
-      href: microsoft-edge-enterprise-sync.md
+    - name: Synchronisation d’entreprise Microsoft Edge
+      items:
+        - name: Configurer la synchronisation de MicrosoftEdge
+          href: microsoft-edge-enterprise-sync.md
+        - name: Diagnostiquer et résoudre les problèmes de synchronisation de Microsoft Edge
+          href: microsoft-edge-troubleshoot-enterprise-sync.md
+        - name: FAQ sur la synchronisation
+          href: microsoft-edge-enterprise-sync-faq.md
     - name: Synchronisation locale pour les utilisateurs Active Directory
       href: microsoft-edge-on-premises-sync.md
     - name: Lecteur PDF dans Microsoft Edge
