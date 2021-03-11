@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: 24fc6e567073f98cdadcfc3fa61c20c1ad5f1ab5
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: 96525327c75231974e2e2976c1b811dee3a6b03e
+ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393702"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "11400161"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notes de publication du canal stable Microsoft Edge
 
@@ -28,6 +28,10 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077448-march-8"></a>Version 89.0.774.48 : 8mars
+
+Résolution de divers bogues et problèmes de performances.
 
 <!-- begin major 89 -->
 ## <a name="version-89077445-march-4"></a>Version89.0.774.45: 4mars
@@ -52,7 +56,9 @@ Les mises à jour de sécurité du canal stable sont répertoriées [ici.](https
 
 - **Améliorer les performances du navigateur avec des onglets en veille**. Les onglets en veille améliorent les performances du navigateur en mettant les onglets inactifs en veille pour libérer des ressources système, telles que la mémoire et le processeur de sorte que les onglets actifs ou d’autres applications puissent les utiliser. Les utilisateurs peuvent empêcher la mise en veille de sites et configurer le délai avant qu’un onglet inactif ne soit mis en veille. Pour maintenir les utilisateurs dans leur flux, il existe également des [heuristiques](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434) pour empêcher certains sites de passer en veille, tels que les sites intranet. Cette fonctionnalité peut être gérée avec des stratégies de groupe.
 
-- **Réinitialisez manuellement vos données de synchronisation MicrosoftEdge dans le cloud**. Nous introduisons un moyen de réinitialiser vos données de synchronisation MicrosoftEdge à partir du produit. Cela garantit que vos données sont effacées des services Microsoft, ainsi qu’une résolution de certains problèmes de produit qui nécessitaient auparavant un ticket de support.
+- **Réinitialisez manuellement vos données de synchronisation MicrosoftEdge dans le cloud**. Nous introduisons un moyen de réinitialiser vos données de synchronisation MicrosoftEdge à partir du produit. Cela garantit que vos données sont effacées des services Microsoft, ainsi que la résolution de certains problèmes de produit qui nécessitaient auparavant un ticket de support.
+
+- **Activation intelligente de l'authentification unique (SSO) pour tous les comptes Active Directory (Azure AD) Windows Azure pour les utilisateurs avec un seul profil Microsoft Edge non Azure AD**.  Activez automatiquement ce paramètre pour les utilisateurs qui peuvent tirer le meilleur parti de cette fonctionnalité. Si un utilisateur n’a qu’un seul profil Microsoft Edge (et qu’il ne s’agit pas d’Azure AD ou du mode Enfants), le paramètre est automatiquement allumé au lancement de Microsoft Edge. Ce basculement automatique est également automatiquement éteint si un utilisateur choisit ultérieurement de se connecter à un autre profil Microsoft Edge avec un compte Azure AD. Les utilisateurs peuvent mettre à jour manuellement leurs préférences pour cette fonctionnalité dans **Paramètres > Profils >Préférences de profil > Autoriser l'authentification unique pour les sites professionnels ou scolaires à l’aide de ce profil**.
 
 - **Améliorations apportées à l’expérience de sélection de texte dans les documents PDF**. Les utilisateurs commenceront à obtenir une expérience de sélection de texte plus fluide et plus cohérente dans les documents PDF ouverts dans MicrosoftEdge à partir de la version89.
 
@@ -62,7 +68,7 @@ Les mises à jour de sécurité du canal stable sont répertoriées [ici.](https
 
 #### <a name="new-policies"></a>Nouvelles stratégies
 
-Nous avons ajouté sept nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
+Nous avons ajouté sept nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
 
 - [BrowsingDataLifetime](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#browsingdatalifetime): paramètres de durée de vie des données de navigation
 - [MAMEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mamenabled) - Gestion des applications mobiles activée
