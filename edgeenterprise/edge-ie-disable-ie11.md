@@ -3,19 +3,19 @@ title: Désactiver Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Découvrez comment désactiver Internet Explorer 11 et utiliser le mode Internet Explorer dans Microsoft Edge.
-ms.openlocfilehash: be52f33b091977aff0ca29a4e10d4fc6ea4be957
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: a0486c2965b1868db67b6de1423f279905074410
+ms.sourcegitcommit: f34ff11499a2b96941e704103bdd959d19e3d7e7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393614"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "11400604"
 ---
 # <a name="disable-internet-explorer-11"></a>Désactiver Internet Explorer 11
 
@@ -67,7 +67,7 @@ Si votre liste des sites en mode Entreprise contient des applications configuré
 
 Pour désactiver Internet Explorer 11 à l’aide de la stratégie de groupe, suivez les étapes suivantes :
 
-1. Téléchargez et installez le dernier [modèle de stratégie Microsoft Edge.](https://www.microsoft.com/edge/business/download)
+1. Assurez-vous que vous avez les mises à jour de système d’exploitation préalables. Cette étape met directement à jour les fichiers ADMX sur votre ordinateur (notamment inetréa.adml et inetrémx.admx). Si vous voulez mettre à jour votre magasin central, vous devrez copier les fichiers .adml et .admx à partir d’un ordinateur qui dispose des mises à jour préalables. Pour plus d’informations, voir [Créer et gérer des informations du Magasin central](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Ouvrez l’Éditeur de stratégie de groupe.
 3. Allez à ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***. 
 4. Double-cliquez **Désactiver Internet Explorer 11 en tant que navigateur autonome**.

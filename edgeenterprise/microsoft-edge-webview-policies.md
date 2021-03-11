@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies WebView2 Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: b362ac7b7addde044155428f61b7fb35d68f3e80
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 47072c6e39944bb51fd4c683a9597125d8776d08
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388740"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406355"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 - Politiques
 
@@ -31,9 +31,8 @@ Pour plus d'informations sur un ensemble supplémentaire de politiques utilisée
 
 Ces tableaux répertorient toutes les politiques de groupe disponibles dans cette version de Microsoft Edge WebView2. Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.
 
-|||
-|-|-|
-|[Paramètres d'annulation du chargeur](#loader-override-settings)|
+- [Paramètres d'annulation du chargeur](#loader-override-settings)
+
 
 ### [*<a name="loader-override-settings"></a>Paramètres d'annulation du chargeur*](#loader-override-settings-policies)
 
