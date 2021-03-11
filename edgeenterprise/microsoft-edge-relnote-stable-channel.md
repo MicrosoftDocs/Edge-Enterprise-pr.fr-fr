@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: 96525327c75231974e2e2976c1b811dee3a6b03e
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: bdb38513f15e0ed5d11be4e221ea9d2403d1a956
+ms.sourcegitcommit: 6d37cd6dc8618742f4729fc901fc66829dab462e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400161"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406235"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notes de publication du canal stable Microsoft Edge
 
@@ -29,7 +29,11 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
 
-## <a name="version-89077448-march-8"></a>Version 89.0.774.48 : 8mars
+## <a name="version-89077450-march-10"></a>Version 89.0.774.50: 10 mars
+
+Correction de divers bogues et problèmes de performance.
+
+## <a name="version-89077448-march-8"></a>Version 89.0.774.48 : 8 mars
 
 Résolution de divers bogues et problèmes de performances.
 
@@ -68,7 +72,7 @@ Les mises à jour de sécurité du canal stable sont répertoriées [ici.](https
 
 #### <a name="new-policies"></a>Nouvelles stratégies
 
-Nous avons ajouté sept nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
+Nous avons ajouté sept nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
 
 - [BrowsingDataLifetime](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#browsingdatalifetime): paramètres de durée de vie des données de navigation
 - [MAMEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mamenabled) - Gestion des applications mobiles activée
