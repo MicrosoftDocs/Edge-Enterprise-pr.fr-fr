@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 130ed008a190edb92649beb658084c157ebade50
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388731"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406375"
 ---
 # <a name="microsoft-edge---policies"></a>MicrosoftEdge: Stratégies
 
@@ -29,29 +29,36 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
-## <a name="new-policies"></a>Nouvelles stratégies
+## <a name="new-and-deprecated-policies"></a>Nouvelles stratégies déconseillées
 
-Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour.
+Le tableau suivant répertorie les stratégies nouvelles et déconseillées pour cette mise à jour.
 
-| Nom | Sous-titre |
+|Nom|Sous-titre|
 |--|--|
-|[PrintRasterizationMode](#printrasterizationmode)|Mode rastérisation de l’impression|
+|[SSLVersionMin](#sslversionmin)|Version TLS minimale activée (déconseillée)|
 
 ## <a name="available-policies"></a>Stratégies disponibles
 
 Ces tableaux répertorient toutes les stratégies de groupe relatives au navigateur, disponibles dans cette version de MicrosoftEdge. Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.
 
-|||
-|-|-|
-|[Paramètres de l’application Guard](#application-guard-settings)|[Cast](#cast)|
-|[Paramètres du contenu](#content-settings)|[Moteur de recherche par défaut](#default-search-provider)|
-|[Extensions](#extensions)|[Authentification HTTP](#http-authentication)|
-|[Paramètres du mode kiosque](#kiosk-mode-settings)|[Facilité de gestion](#manageability)|
-|[Messagerie native](#native-messaging)|[Gestionnaire et protection des mots de passe](#password-manager-and-protection)|
-|[Niveau de performance](#performance)|[Impression](#printing)|
-|[Serveur proxy](#proxy-server)|[Paramètres des onglets en veille](#sleeping-tabs-settings)|
-|[Paramètres SmartScreen](#smartscreen-settings)|[Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)|
-|[Supplémentaire](#additional)|
+- [Paramètres de l’application Guard](#application-guard-settings)
+- [Cast](#cast)
+- [Paramètres du contenu](#content-settings)
+- [Moteur de recherche par défaut](#default-search-provider)
+- [Extensions](#extensions)
+- [Authentification HTTP](#http-authentication)
+- [Paramètres du mode kiosque](#kiosk-mode-settings)
+- [Facilité de gestion](#manageability)
+- [Messagerie native](#native-messaging)
+- [Gestionnaire et protection des mots de passe](#password-manager-and-protection)
+- [Niveau de performance](#performance)
+- [Impression](#printing)
+- [Serveur proxy](#proxy-server)
+- [Paramètres des onglets en veille](#sleeping-tabs-settings)
+- [Paramètres SmartScreen](#smartscreen-settings)
+- [Démarrage, page d’accueil et page Nouvel onglet](#startup-home-page-and-new-tab-page)
+- [Supplémentaire](#additional)
+
 
 ### [*<a name="application-guard-settings"></a>Paramètres de l’application Guard*](#application-guard-settings-policies)
 
@@ -395,7 +402,7 @@ et des conseils pour les services Microsoft|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Étendre le paramètre de contenu Adobe Flash à tout le contenu (obsolète)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Autoriser les utilisateurs à poursuivre depuis la page d’avertissement HTTPS|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Autoriser les utilisateurs à poursuivre à partir de la page d’avertissement HTTPS pour des origines spécifiques|
-|[SSLVersionMin](#sslversionmin)|Version TLS minimale activée|
+|[SSLVersionMin](#sslversionmin)|Version TLS minimale activée (déconseillée)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Enregistrer les cookies lors de la fermeture de MicrosoftEdge|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Désactiver l’enregistrement de l’historique du navigateur|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Autoriser ou interdire la capture d’écran|
@@ -1893,9 +1900,9 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 
 Laisser la stratégie en suspens signifie la [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) s’applique à tous les sites, s’il est défini. Si ce n'est pas le cas, les paramètres personnels des utilisateurs s'appliquent.
 
-Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Aucune stratégie n’est prioritaire si une URL correspond à la fois.
+Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Aucune stratégie n’est prioritaire si une URL correspond aux deux.
 
-Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -1962,9 +1969,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 Si vous ne configurez pas cette stratégie, [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) s’applique à tous les sites, s’il est paramétré. Si ce n'est pas le cas, les paramètres personnels des utilisateurs s'appliquent.
 
-Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemReadAskForUrls](#filesystemreadaskforurls). Aucune stratégie n’est prioritaire si une URL correspond à la fois.
+Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemReadAskForUrls](#filesystemreadaskforurls). Aucune stratégie n’est prioritaire si une URL correspond aux deux.
 
-Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2031,9 +2038,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 Si vous ne configurez pas cette stratégie, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) s’applique à tous les sites, s’il est paramétré. Si ce n'est pas le cas, les paramètres personnels des utilisateurs s'appliquent.
 
-Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Aucune stratégie n’est prioritaire si une URL correspond à la fois.
+Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Aucune stratégie n’est prioritaire si une URL correspond aux deux.
 
-Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2100,9 +2107,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 Si vous ne configurez pas cette stratégie, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) s’applique à tous les sites, s’il est paramétré. Si ce n'est pas le cas, les paramètres personnels des utilisateurs s'appliquent.
 
-Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Aucune stratégie n’est prioritaire si une URL correspond à la fois.
+Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Aucune stratégie n’est prioritaire si une URL correspond aux deux.
 
-Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2169,6 +2176,8 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultImagesSetting](#defaultimagessetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire: Oui
@@ -2234,6 +2243,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultImagesSetting](#defaultimagessetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire: Oui
@@ -2297,7 +2308,9 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
   Créez une liste de modèles d’URL pour spécifier les sites pouvant afficher du contenu mixte non sécurisé (contenu HTTP sur les sites HTTPS).
 
-Si cette stratégie n’est pas configurée, le contenu mixte pouvant être bloqué le sera et le contenu mixte pouvant facultativement être bloqué sera mis à jour. Toutefois, les utilisateurs seront autorisés à définir des exceptions pour autoriser du contenu mixte non sécurisé pour des sites spécifiques. 
+Si cette stratégie n’est pas configurée, le contenu mixte pouvant être bloqué le sera et le contenu mixte pouvant facultativement être bloqué sera mis à jour. Toutefois, les utilisateurs seront autorisés à définir des exceptions pour autoriser du contenu mixte non sécurisé pour des sites spécifiques.
+
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2362,7 +2375,9 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
   Créez une liste des modèles d’URL pour spécifier les sites qui ne sont pas autorisés à afficher du contenu mixte blocable, c’est-à-dire actif, (contenu HTTP sur des sites HTTPS) et pour lesquels les mises à jour du contenu mixte pouvant facultativement être bloqué vont être désactivées.
 
-Si cette stratégie n’est pas configurée, le contenu mixte pouvant être bloqué le sera et le contenu mixte pouvant facultativement être bloqué sera mis à jour. Toutefois, les utilisateurs seront autorisés à définir des exceptions pour autoriser du contenu mixte non sécurisé pour des sites spécifiques. 
+Si cette stratégie n’est pas configurée, le contenu mixte pouvant être bloqué le sera et le contenu mixte pouvant facultativement être bloqué sera mis à jour. Toutefois, les utilisateurs seront autorisés à définir des exceptions pour autoriser du contenu mixte non sécurisé pour des sites spécifiques.
+
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -9129,9 +9144,9 @@ Si cette stratégie est activée ou si elle n’est pas configurée, les utilisa
 
   #### <a name="description"></a>Description
 
-  Cette stratégie est déconseillée, car elle n’est destinée qu’à être un mécanisme à court terme qui permet aux entreprises de mettre à jour leur contenu web si et quand il est détecté comme étant incompatible avec la modification pour interdire les demandes XHR synchrones au cours du masquage de page. Il ne fonctionne pas dans la version 88 de Microsoft Edge.
+  Cette stratégie est déconseillée, car elle n’est destinée qu’à être un mécanisme à court terme qui permet aux entreprises de mettre à jour leur contenu web si et quand il est détecté comme étant incompatible avec la modification pour interdire les demandes XHR synchrones au cours du masquage de page. Elle ne fonctionne pas dans MicrosoftEdge version93.
 
-Cette stratégie vous permet de spécifier si une page peut envoyer des demandes XHR synchrones lors de l’opération de rejet de page.
+Cette stratégie vous permet de spécifier si une page peut envoyer des demandes XHR synchrones lors de l’opération de masquage de page.
 
 Si vous activez cette stratégie, les pages envoient des demandes XHR synchrones lors de l’opération de rejet de page.
 
@@ -11052,7 +11067,7 @@ Si vous activez cette stratégie, le client DNS intégré est utilisé, si dispo
 
 Si vous désactivez cette stratégie, le client DNS intégré est utilisé uniquement lorsque DNS-over-HTTPS est en cours d’utilisation.
 
-Si vous ne configurez pas cette stratégie, le client DNS intégré est activé par défaut.
+Si vous ne configurez pas cette stratégie, le client DNS intégré est activé par défaut sur macOS et Android (lorsque ni le DNS privé ni le VPN ne sont activés).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -11112,7 +11127,7 @@ Si vous ne configurez pas cette stratégie, le client DNS intégré est activé 
 
   Cette stratégie est déconseillée, car elle a pour but de servir uniquement comme mécanisme à court terme afin d’offrir aux entreprises davantage de temps pour mettre à jour leurs environnements et signaler les problèmes s’ils sont détectés comme incompatibles avec le vérificateur de certificat intégré.
 
-Il ne fonctionne pas dans Microsoft Edge version 87, lorsque la prise en charge du vérificateur de certificats hérité sur Mac OS X est prévue pour être supprimée.
+Elle ne fonctionne pas dans Microsoft Edge version92, lorsque la prise en charge du programme de vérification de certificat hérité sur Mac OS X est prévue pour être supprimée.
 
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
@@ -19284,9 +19299,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### <a name="minimum-tls-version-enabled"></a>Version TLS minimale activée
+  #### <a name="minimum-tls-version-enabled-deprecated"></a>Version TLS minimale activée (déconseillée)
 
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
   #### <a name="supported-versions"></a>Versions prises en charge:
 
@@ -19294,7 +19309,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>Description
 
-  Définit la version minimale de TLS prise en charge. Si vous ne configurez pas cette stratégie, Microsoft Edge affiche une erreur pour TLS 1,0 et TLS 1,1, mais l’utilisateur peut la contourner.
+  La prise en charge de la suppression de l’avertissement TLS1.0/1.1 sera supprimée de MicrosoftEdge à partir de la version91 (vers le mois de mai2021) et cette stratégie cessera de fonctionner.
+
+Définit la version minimale de TLS prise en charge. Si vous ne configurez pas cette stratégie, Microsoft Edge affiche une erreur pour TLS 1,0 et TLS 1,1, mais l’utilisateur peut la contourner.
 
 Si vous activez cette stratégie, MicrosoftEdge n'utilise pas de versions SSL/TLS antérieures à la version précisée. Toute valeur non reconnue sera ignorée.
 
@@ -19323,7 +19340,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: SSLVersionMin
-  - Nom de la stratégie de groupe: version TLS minimale activée
+  - Nom de la stratégie de groupe : version TLS minimale activée (supprimé)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx

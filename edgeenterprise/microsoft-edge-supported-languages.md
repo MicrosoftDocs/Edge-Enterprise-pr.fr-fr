@@ -3,23 +3,23 @@ title: Prise en charge linguistique dans MicrosoftEdge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/01/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Prise en charge linguistique dans MicrosoftEdge
-ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+description: Prise en charge de la langue d’affichage dans Microsoft Edge pour Windows et macOS.
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384991"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406159"
 ---
 # <a name="microsoft-edge-language-support"></a>Prise en charge linguistique dans MicrosoftEdge
 
-Cet article explique comment utiliser les paramètres de MicrosoftEdge pour ajouter une langue prise en charge au navigateur. MicrosoftEdge prend en charge 96langues dans Windows et 91langues sur macOS.
+Cet article explique comment utiliser les paramètres de MicrosoftEdge pour ajouter une langue prise en charge au navigateur. Microsoft Edge prend en charge 84langues d’affichage sur Windows et 81langues d’affichage sur macOS.
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version78 ou ultérieure.
@@ -58,12 +58,12 @@ Outre l’utilisation d’une langue étrangère dans le navigateur, vous pouvez
 > [!NOTE]
 > Si l’extension traducteur ne fonctionne pas après l’installation, redémarrez MicrosoftEdge. Si l’extension ne fonctionne toujours pas, envoyez vos commentaires par le biais du Hub de commentaires.
 
-## <a name="supported-languages"></a>Langues prises en charge
+## <a name="supported-display-languages"></a>Langues d’affichage prises en charge
 
-Le tableau suivant répertorie les langues prises en charge par MicrosoftEdge.
+Le tableau suivant répertorie les langues d’affichage qui sont prises en charge par MicrosoftEdge.
 
 > [!NOTE]
-> Les langues qui ne sont pas prises en charge par MicrosoftEdge sur macOS sont indiquées par un astérisque (*) après le pays/la région.  
+> Les langues qui ne sont pas prises en charge par MicrosoftEdge sur macOS sont indiquées par un astérisque (*) après le pays/région.  
 
 |                      Langue                      |             Pays/région              |      Code      |
 |----------------------------------------------------|-----------------------------------------|----------------|
