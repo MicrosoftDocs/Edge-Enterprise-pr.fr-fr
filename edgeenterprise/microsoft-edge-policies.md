@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/10/2021
+ms.date: 03/12/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
-ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
+ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
+ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "11406375"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408646"
 ---
 # <a name="microsoft-edge---policies"></a>MicrosoftEdge: Stratégies
 
@@ -26,16 +26,9 @@ Si vous souhaitez en savoir plus sur un autre groupe de stratégies, utilisé po
 
 Vous pouvez télécharger le [Kit des ressources de conformité en matière de sécurité Microsoft](https://www.microsoft.com/download/details.aspx?id=55319) pour les paramètres de base de la configuration en matière de sécurité, recommandés pour MicrosoftEdge. Si vous souhaitez en savoir plus, consultez le [blog sur les bases de la sécurité Microsoft](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
+
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
-
-## <a name="new-and-deprecated-policies"></a>Nouvelles stratégies déconseillées
-
-Le tableau suivant répertorie les stratégies nouvelles et déconseillées pour cette mise à jour.
-
-|Nom|Sous-titre|
-|--|--|
-|[SSLVersionMin](#sslversionmin)|Version TLS minimale activée (déconseillée)|
 
 ## <a name="available-policies"></a>Stratégies disponibles
 

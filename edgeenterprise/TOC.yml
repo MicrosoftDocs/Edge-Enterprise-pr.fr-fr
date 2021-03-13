@@ -1,4 +1,4 @@
-# last revised 03/08/2021
+# last revised 03/11/2021
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
@@ -99,7 +99,7 @@
       items:
         - name: Configurer la synchronisation de MicrosoftEdge
           href: microsoft-edge-enterprise-sync.md
-        - name: Diagnostiquer et résoudre les problèmes de synchronisation de Microsoft Edge
+        - name: Diagnostiquer et résoudre les problèmes de synchronisation de MicrosoftEdge
           href: microsoft-edge-troubleshoot-enterprise-sync.md
         - name: FAQ sur la synchronisation
           href: microsoft-edge-enterprise-sync-faq.md
@@ -191,8 +191,6 @@
           href: edge-learnmore-regex.md
         - name: Réinitialisation de données MicrosoftEdge
           href: edge-learnmore-reset-data-in-cloud.md
-        - name: Variable du répertoire de données utilisateur
-          href: edge-learnmore-create-user-directory-vars.md
         - name: Utilisation de la rollback Microsoft Edge pour les entreprises
           href: edge-learnmore-rollback.md
 - name: Vidéos Microsoft Edge
