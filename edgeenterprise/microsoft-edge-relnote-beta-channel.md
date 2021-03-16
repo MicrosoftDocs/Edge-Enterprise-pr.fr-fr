@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/10/2021
+ms.date: 03/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 24fbf10b0b32ef4e64c74fdeaa4831bf01df7a87
-ms.sourcegitcommit: 6d37cd6dc8618742f4729fc901fc66829dab462e
+ms.openlocfilehash: 6682bbc1ea92a8b78a82507424814e2f3db4fcfd
+ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "11406245"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "11409239"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication du canal Microsoft Edge Beta
 
@@ -24,7 +24,11 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > Nous avons mis à jour la note de mise à jour de la [version bêta de Microsoft Edge 89.0.774.18 : 3 février](#version-89077418-february-3) pour refléter les fonctionnalités qui ont été publiées.
 
-## <a name="version-89077450-march-10"></a>Version 89.0.774.50 : 10 mars
+## <a name="version-89077454-march-13"></a>Version 89.0.774.54: 13 mars
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-89077450-march-10"></a>Version 89.0.774.50: 10 mars
 
 Correction de divers bogues et problèmes de performance.
 
