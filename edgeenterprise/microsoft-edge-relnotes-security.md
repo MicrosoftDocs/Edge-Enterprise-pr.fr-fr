@@ -3,23 +3,28 @@ title: Notes de publication pour les mises à jour de sécurité de Microsoft Ed
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication pour les mises à jour de sécurité de Microsoft Edge
-ms.openlocfilehash: c3d53950cd0b1dbc325d8c4798f9e0c40e4bf564
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: cca93aa987f627aba8ad9e4cc94f5805c95778c9
+ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393709"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "11409259"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notes de publication pour les mises à jour de sécurité de Microsoft Edge
 
 Ces notes de publication fournissent des informations sur les corrections de sécurité qui sont incluses dans les mises à jour du canal Microsoft Edge Stable.
+
+
+## <a name="march-13-2021"></a>13 mars 2021
+
+Microsoft a publié le dernier **Canal stable Microsoft Edge (version 89.0.774.54)**, qui incorpore les dernières mises à jour de sécurité du projet Chromium. Cette mise à jour contient le [CVE-2021-21193 ](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193) qui a été signalé par l'équipe Chromium comme ayant fait l'objet d'un exploit dans la nature. Pour plus d'informations, [voir le Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide).
 
 ## <a name="march-4-2021"></a>4 mars 2021
 
