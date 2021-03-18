@@ -3,28 +3,72 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/15/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 6682bbc1ea92a8b78a82507424814e2f3db4fcfd
-ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
+ms.openlocfilehash: 3c1b87b2ecaf68acf0bca447553b25d0b202e7ea
+ms.sourcegitcommit: ceecf4d9baf9dc677652ca07a6d2f2e17ef5b3b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409239"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "11440305"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication du canal Microsoft Edge Beta
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta. Les versions archivées de ces notes de publication sont disponibles [ici](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> Nous avons mis à jour la note de mise à jour de la [version bêta de Microsoft Edge 89.0.774.18 : 3 février](#version-89077418-february-3) pour refléter les fonctionnalités qui ont été publiées.
+> Nous avons mis à jour la note de publication de la [version bêta de MicrosoftEdge 89.0.774.18 : 3 février](#version-89077418-february-3) pour refléter les fonctionnalités qui ont été publiées.
 
-## <a name="version-89077454-march-13"></a>Version 89.0.774.54: 13 mars
+<!-- begin major 90 -->
+## <a name="version-90081808-march-16"></a>Version 90.0.818.08 : 16mars
+
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
+
+- **L'authentification unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) et le compte Microsoft (MSA) sur macOS**. Un utilisateur se connectant sur MicrosoftEdge sur macOS se connecte désormais automatiquement aux sites web qui sont configurés pour autoriser l'authentification unique avec les comptes Travail et Microsoft (par exemple, bing.com, office.com, msn.com et outlook.com).
+
+- **Impression:**
+
+  - **Nouveau mode de rastérisation d’impression pour les imprimantes non-PostScript**. À partir de Microsoft Edge version90, les administrateurs peuvent utiliser une nouvelle stratégie pour définir le mode de rastérisation d’impression pour leurs utilisateurs. Cette stratégie contrôle la façon dont MicrosoftEdge imprime vers des imprimantes non-PostScript sur Windows.  L’ impression sur des imprimantes non-PostScript doit parfois être rastérisée pour imprimer correctement. Les options d’impression sont Complète et Rapide.
+
+  - **Options de mise à l’échelle de page supplémentaires pour l’impression**. Les utilisateurs peuvent désormais personnaliser la mise à l’échelle lors de l’impression de pages web et de documents PDF à l’aide d’options supplémentaires. L’option «Ajuster à la page» permet de s’assurer que la page web ou le document est adapté à l’espace disponible dans le «Format de papier» sélectionné pour l’impression. L’option « Taille réelle » garantit qu’aucune modification n’a été apportée à la taille du contenu en cours d’impression, quelle que soit la « Taille du papier » sélectionnée.
+
+- **Productivité:**
+
+  - **Les suggestions de remplissage automatique sont étendues pour inclure le contenu des champs d’adresse à partir du Presse-papiers**. Le contenu du Presse-papiers est interrogé lorsque vous cliquez sur un champ de profil/adresse (par exemple, téléphone, e-mail, code postal, ville, état, etc.) pour afficher des suggestions de remplissage automatique.
+
+  - **Les utilisateurs peuvent rechercher des suggestions de remplissage automatique même si un formulaire ou un champ n’est pas détecté**. Aujourd’hui, si vos informations sont enregistrées sur MicrosoftEdge, les suggestions de remplissage automatique s’affichent automatiquement et vous permettent de gagner du temps lors du remplissage des formulaires. Dans les cas où le remplissage automatique manque un formulaire, ou si vous souhaitez récupérer des données dans des formulaires qui n’ont généralement pas de remplissage automatique (comme les formulaires temporaires), vous pouvez rechercher vos informations à l’utilisation du remplissage automatique.
+
+- **Accédez aux téléchargements à partir d’un menu volant dans la barre de menus**. Les téléchargements s’affichent dans le coin supérieur droit avec tous les téléchargements actifs au même endroit. Ce menu est facile à ignorer, de sorte que les utilisateurs continuent à naviguer sans interruption et qu’ils peuvent surveiller la progression globale du téléchargement directement à partir de la barre d’outils. [Si vous souhaitez en savoir plus](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
+
+- **Améliorations apportées au rendu des polices**. À partir de la version90 de Microsoft Edge, nous avons apporté des améliorations au rendu du texte afin d’améliorer la clarté et de réduire le flou. Une partie des améliorations apportées au rendu des polices sera apportée à la version90 bêta, mais elle sera désactivée par défaut.
+
+
+### <a name="policy-updates"></a>Mises à jour de stratégies
+
+#### <a name="new-policies"></a>Nouvelles stratégies
+
+Nous avons ajouté sept nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil MicrosoftEdgeEntreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées :
+
+- [ApplicationGuardFavoritesSyncEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled): synchronisation des Favoris d’Application Guard activée
+- [ManagedConfigurationPerOrigin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) : définit des valeurs de configuration gérées pour des sites web avec des origines spécifiques
+- [PrintRasterizationMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printrasterizationmode): mode de rastérisation d’impression
+- [QuickViewOfficeFilesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled): gérer la fonctionnalité de fichiers QuickView Office dans Microsoft Edge
+- [SSLErrorOverrideAllowedForOrigins](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins): autoriser les utilisateurs à passer de la page d’avertissement HTTPS pour des origines spécifiques
+- [WindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowocclusionenabled): activer l’occlusion de fenêtre
+- [WindowsHelloForHTTPAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled): Windows Hello Pour l’authentification HTTP activé
+
+#### <a name="deprecated-policies"></a>Stratégies déconseillées
+
+- [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled): activer l’occlusion de fenêtre native
+- [SSLVersionMin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslversionmin): version TLS minimale activée
+<!-- end major 90 -->
+
+## <a name="version-89077454-march-13"></a>Version 89.0.774.54: 13mars
 
 Résolution de divers bogues et problèmes de performances.
 
