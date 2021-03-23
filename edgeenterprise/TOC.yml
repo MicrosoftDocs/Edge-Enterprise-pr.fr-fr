@@ -1,8 +1,10 @@
-# last revised 03/11/2021
+# last revised 03/22/2021
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
 - name: Documentation MicrosoftEdge
   href: 'https://docs.microsoft.com/microsoft-edge/'
+- name: Mises à jour du contenu de MicrosoftEdge
+  href: microsoft-edge-content-updates.md
 - name: Prise en main de MicrosoftEdge
   items:
     - name: En savoir plus sur les canaux Microsoft Edge
