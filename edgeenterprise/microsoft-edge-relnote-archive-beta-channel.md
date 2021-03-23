@@ -3,28 +3,94 @@ title: Notes de publication archivées du canal Microsoft Edge Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/03/2021
+ms.date: 03/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication archivées du canal Microsoft Edge Beta
-ms.openlocfilehash: d15b1e9596f97ae5f88d0ed473e0abb0b37f3612
-ms.sourcegitcommit: 231727b0f42bc0b7af49cb3290692aa7e420502a
+ms.openlocfilehash: fd61e531db52d380e07588c1f12df4595f161841
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11312894"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442407"
 ---
-# Notes de publication archivées du canal Microsoft Edge Beta
+# <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication archivées du canal Microsoft Edge Beta
 
-Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta. Si vous souhaitez en savoir plus sur les canaux Microsoft Edge, veuillez consultez la rubrique [Vue d’ensemble des canaux Microsoft Edge](microsoft-edge-channels.md). L'ensemble des mises à jour de sécurité sont répertoriées [ici](microsoft-edge-relnotes-security.md).
+Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta. Si vous souhaitez en savoir plus sur les canaux Microsoft Edge, veuillez consultez la rubrique [Vue d’ensemble des canaux Microsoft Edge](microsoft-edge-channels.md). Toutes les mises à jour de sécurité sont listées [ici](microsoft-edge-relnotes-security.md).
 
+<!-- begin major 87 -->
+## <a name="version-87066412-october-20"></a>Version 87.0.664.12 : 20 octobre.
+
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
+
+- **Activation des fonctionnalités de confidentialité en mode plein écran**. Le démarrage des fonctionnalités du mode plein écran de Microsoft Edge version 87 qui permettront aux entreprises de respecter la confidentialité des données utilisateur, sera  activée. Ces fonctionnalités activent les expériences telles que l’effacement des données utilisateur à la fermeture, la suppression des fichiers téléchargés et la réinitialisation de l’expérience de démarrage configurée après une durée inactivité déterminée. En savoir plus sur la [Configuration du mode plein écran Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
+- **Activation du déploiement ClickOnce par défaut**. L’activation de ClickOnce par défaut dans Microsoft Edge 87, réduit les difficultés des entreprises à déployer des logiciels et mieux s’aligner sur le comportement du navigateur Microsoft Edge Legacy. Au démarrage de Microsoft Edge 87, l’état «Non Configuré» de la stratégie ClickOnceEnabled reflète le nouvel état par défaut Activé de la stratégie ClickOnce (comparé à l’État par défaut Désactivé précédent).
+- **La page nouvel onglet de l’entreprise (NTP) intègre la productivité avec un contenu de flux de travail personnalisable**. La Page Nouvel Onglet de l’Entreprise combine la page de productivité d’Office 365 que nous proposons aux utilisateurs connectés à leur compte professionnel ou scolaire, avec des flux professionnels personnalisés qui sont organisés en une seule page. Les utilisateurs reconnaîtront le contenu Office 365 familier et Microsoft Search pour Entreprises offert par Bing. De plus, ils peuvent facilement retourner à «Mon Flux» personnalisable avec du contenu et des modules pertinents pour l’utilisateur, sa société ou son industrie, et à une sélection d’autres flux mis à disposition par l’organisation. [En savoir plus](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide&preserve-view=true).
+
+- **Confidentialité et sécurité :**
+
+  - Jeton TLS de support Obligatoire pour les sites configurés par une stratégie. Le jeton TLS obligatoire permet d’éviter les attaques par vol de jetons afin de s’assurer que les cookies ne peuvent pas être réutilisés à partir d’un autre appareil que l’appareil sur lequel ils ont été initialement définis. L’utilisation du jeton TLS obligatoire nécessite la définition de la stratégie [AllowTokenBindingForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowtokenbindingforurls) et nécessite que les sites répertoriés prennent en charge cette fonctionnalité.
+
+- **Prise en charge du clavier pour le surligneur des fichiers PDF**. Les utilisateurs peuvent utiliser leurs touches de clavier pour surligner des textes de fichiers PDF.
+
+- **Impression:**
+
+  - Sélectionnez le côté à retourner lors de l’impression recto verso. Les utilisateurs peuvent choisir de retourner sur le côté long ou sur le côté court d’une feuille lors de l’impression recto verso.
+  - Sélectionnez le mode de tramage de l’impression pour l’entreprise. Contrôlez l’impression Microsoft Edge sur une imprimante non-PostScript sur Windows. Parfois l’ impression sur des imprimantes non-PostScript doit être tramée pour imprimer correctement. Les options d’impression sont «Complètes» et «Rapides».
+
+### <a name="policy-updates"></a>Mises à jour de stratégies
+
+#### <a name="new-policies"></a>Nouvelles stratégies
+
+Ajout de dix nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
+
+- [ConfigureFriendlyURLFormat](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configurefriendlyurlformat) - Configurez le format de collage par défaut des URL copiées à partir de Microsoft Edge, et déterminez si d’autres formats sont disponibles pour les utilisateurs.
+- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) - Activation des Achats dans Microsoft Edge.
+- [HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#hideinternetexplorerredirectuxforincompatiblesitesenabled) - Masquez la boite de dialogue redirection et la bannière sur Microsoft Edge.
+- [KioskAddressBarEditingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) - Configurez la modification de la barre d’adresses pour l’expérience de navigation publique en mode plein écran.
+- [KioskDeleteDownloadsOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) - Supprimez les fichiers téléchargés sous la session plein écran lorsque Microsoft Edge se ferme.
+- [PasswordRevealEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#passwordrevealenabled) - Activez le bouton d’affichage de mot de passe.
+- [RedirectSitesFromInternetExplorerPreventBHOInstall](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerpreventbhoinstall) - Empêchez l’installation BHO pour rediriger les sites incompatibles de Internet Explorer vers Microsoft Edge.
+- [RedirectSitesFromInternetExplorerRedirectMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerredirectmode) - Redirigez les sites incompatibles de Internet Explorer vers Microsoft Edge.
+- [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) - Configurez la Reconnaissance Vocale.
+- [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) - Activez la fonctionnalité de capture web dans Microsoft Edge.
+
+#### <a name="deprecated-policy"></a>Stratégie Déconseillée
+
+[NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Configurez l’expérience de la page nouvel onglet de Microsoft Edge.
+
+#### <a name="obsoleted-policy"></a>Stratégie obsolète
+
+[EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - Réactivez les fonctionnalités de plateforme web déconseillées pour une période limitée.
+
+<!-- end major 87 -->
+
+## <a name="version-86062243-october-16"></a>Version86.0.622.43: 16octobre
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-86062236-october-7"></a>Version86.0.622.36: 7octobre
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-86062231-october-1"></a>Version86.0.622.31: 1octobre
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-86062228-september-28"></a>Version 86.0.622.28: 28 septembre
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-86062215-september-14"></a>Version 86.0.622.15: 14 septembre
+
+Résolution de divers bogues et problèmes de performances.
 <!-- major 86 -->
-## Version 86.0.622.11 : 9 septembre
+## <a name="version-86062211-september-9"></a>Version 86.0.622.11: 9 septembre
 
-### Mises à jour des fonctionnalités
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
 * **Mode InternetExplorer:**
 
@@ -64,9 +130,9 @@ Ces stratégies sont remplacées par [Autoriser la télémétrie](https://go.mic
 
 * **SameSite = Lax cookies par défaut**. Pour améliorer la sécurité et la confidentialité sur le Web, les cookies s’affichent désormais par défaut [SameSite = Lax](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite) gestion par défaut. Cela signifie que les cookies sont uniquement envoyés dans un contexte tiers et sont omis pour les demandes envoyées aux tiers. Cette modification peut avoir un impact sur les sites Web qui requièrent des cookies pour que les ressources tierces fonctionnent correctement. Pour autoriser de tels cookies, les développeurs Web peuvent marquer les cookies qui doivent être définis de et envoyés à des contextes tiers en ajoutant des attributs `SameSite=none` et `Secure` explicites lorsque le cookie est défini. Les entreprises qui souhaitent exempter certains sites de cette modification peuvent le faire à l’aide de la stratégie de [LegacySameSiteCookieBehaviorEnabledForDomainList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabledfordomainlist). Vous pouvez également désactiver la modification sur tous les sites à l’aide de la stratégie [LegacySameSiteCookieBehaviorEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) .
 
-### Mises à jour de stratégies
+### <a name="policy-updates"></a>Mises à jour de stratégies
 
-#### Nouvelles stratégies
+#### <a name="new-policies"></a>Nouvelles stratégies
 
 Dix-neuf nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
@@ -90,20 +156,20 @@ Dix-neuf nouvelles stratégies ont été ajoutées. Téléchargez les modèles d
 - [UserAgentClientHintsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled): Activer la fonctionnalité User-Agent Client Hints.
 - [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#userdatasnapshotretentionlimit): limite le nombre de captures instantanées des données utilisateur conservées qui sont utilisées en cas de restauration d’urgence.
 
-#### Stratégies déconseillées
+#### <a name="deprecated-policies"></a>Stratégies déconseillées
 
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled): activer les rapports de données d’utilisation et d’incident.
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices): Envoyer des informations sur les sites pour améliorer les services Microsoft.
 
-#### Stratégie obsolète
+#### <a name="obsoleted-policy"></a>Stratégie obsolète
 
 [TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled): active une fonctionnalité de sécurité TLS 1.3 pour les ancres d’approbation locales.
 
-#### Légende de stratégie modifiée
+#### <a name="policy-caption-changed"></a>Légende de stratégie modifiée
 
 [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled): activer l’occlusion de fenêtre native.
 
-#### Description de stratégie modifiée
+#### <a name="policy-description-changed"></a>Description de stratégie modifiée
 
 - [AdsSettingForIntrusiveAdsSites](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#adssettingforintrusiveadssites)
 - [AllowTokenBindingForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowtokenbindingforurls)
@@ -179,29 +245,29 @@ Dix-neuf nouvelles stratégies ont été ajoutées. Téléchargez les modèles d
 
 <!-- end 86 -->
 
-## Version 85.0.564.41: 25 août
+## <a name="version-85056441-august-25"></a>Version 85.0.564.41: 25 août
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 85.0.564.40: 21 août
+## <a name="version-85056440-august-21"></a>Version 85.0.564.40: 21 août
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 85.0.564.36: 17 août
+## <a name="version-85056436-august-17"></a>Version 85.0.564.36: 17 août
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 85.0.564.30: 10 août
+## <a name="version-85056430-august-10"></a>Version 85.0.564.30: 10 août
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 85.0.564.23: 3 août
+## <a name="version-85056423-august-3"></a>Version 85.0.564.23: 3 août
 
 Résolution de divers bogues et problèmes de performances.
 <!-- major 85 -->
-## Version85.0.564.18: 28juillet
+## <a name="version-85056418-july-28"></a>Version85.0.564.18: 28juillet
 
-### Mises à jour des fonctionnalités
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
 - **Synchronisation locale des favoris et des paramètres**. Vous pouvez désormais synchroniser les favoris et paramètres d’un navigateur entre les profils ActiveDirectory au sein de votre propre environnement sans avoir besoin d’effectuer une synchronisation dans le cloud.
 
@@ -218,9 +284,9 @@ Résolution de divers bogues et problèmes de performances.
    - MicrosoftEdgeDevTools prend en charge l’émulation SurfaceDuo. MicrosoftEdgeDevTools peut émuler le SurfaceDuo pour vous permettre de tester l’apparence de votre contenu Web sur les appareils à deux écran. Pour activer cette expérience dans DevTools, accédez au mode Appareil en appuyant sur Ctrl+Maj+M sur Windows ou cmd+Maj+M sur macOS, puis sélectionnez SurfaceDuo dans la liste déroulante des appareils.
    - MicrosoftEdgeDevTools vous permet de faire correspondre les raccourcis clavier à VSCode. MicrosoftEdgeDevTools prend en charge la personnalisation des raccourcis clavier dans DevTools pour reproduire votre éditeur/IDE. Dans MicrosoftEdge85, nous ajoutons la possibilité de faire correspondre les raccourcis clavier DevTools à VSCode. Cette modification permet de gagner en efficacité dans VSCode et DevTools.
 
-### Mises à jour de stratégie
+### <a name="policy-updates"></a>Mises à jour de stratégie
 
-#### Nouvelles stratégies
+#### <a name="new-policies"></a>Nouvelles stratégies
 
 Treize nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
@@ -238,7 +304,7 @@ Treize nouvelles stratégies ont été ajoutées. Téléchargez les modèles d�
 - [RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation): définit le répertoire de profil itinérant.
 - [TLSCipherSuiteDenyList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tlsciphersuitedenylist): spécifiez les suites de chiffrementTLS à désactiver.
 
-#### Stratégies obsolètes
+#### <a name="obsoleted-policies"></a>Stratégies obsolètes
 
 - [EnableDomainActionsDownload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledomainactionsdownload): activer le téléchargement des actions de domaine à partir de Microsoft.
 - [WebComponentsV0Enabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcomponentsv0enabled) – Réactive les composants WebPart de l’API v0 jusqu’au M84.
@@ -246,29 +312,29 @@ Treize nouvelles stratégies ont été ajoutées. Téléchargez les modèles d�
 
 <!--- END ---->
 
-## Version84.0.522.35: 9juillet
+## <a name="version-84052235-july-9"></a>Version84.0.522.35: 9juillet
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version84.0.522.28: 26juin
+## <a name="version-84052228-june-26"></a>Version84.0.522.28: 26juin
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version84.0.522.26: 24juin
+## <a name="version-84052226-june-24"></a>Version84.0.522.26: 24juin
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version84.0.522.20: 15juin
+## <a name="version-84052220-june-15"></a>Version84.0.522.20: 15juin
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version84.0.522.15: 8juin
+## <a name="version-84052215-june-8"></a>Version84.0.522.15: 8juin
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version84.0.522.11: 2juin
+## <a name="version-84052211-june-2"></a>Version84.0.522.11: 2juin
 
-### Mises à jour des fonctionnalités
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
 - Cette version de Microsoft Edge permet un téléchargement plus rapide des listes de sites en mode Internet Explorer.  Nous avons réduit le délai de téléchargement des listes de sites en mode Internet Explorer à 0seconde (60secondes d’attente auparavant) en l’absence d’une liste de sites mis en cache. Nous avons également ajouté la prise en charge de la stratégie de groupe pour les cas où les navigations dans la page d’accueil en mode Internet Explorer doivent attendre le téléchargement de la liste des sites. Si vous souhaitez en savoir plus, veuillez consulter la stratégie [DelayNavigationsForInitialSiteListDownload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload).
 
@@ -303,9 +369,9 @@ Résolution de divers bogues et problèmes de performances.
 
 - DevTools prend en charge la personnalisation des raccourcis clavier en fonction de votre éditeur/IDE, code VS inclus.
 
-### Mises à jour de stratégies
+### <a name="policy-updates"></a>Mises à jour de stratégies
 
-#### Nouvelles stratégies
+#### <a name="new-policies"></a>Nouvelles stratégies
 
 Nous avons ajouté cinq nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
@@ -315,45 +381,45 @@ Nous avons ajouté cinq nouvelles stratégies. Téléchargez les modèles d’ad
 - [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) – Activer le masquage de fenêtres natives.
 - [NavigationDelayForInitialSiteListDownloadTimeout](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout): définit un délai d’expiration de la navigation par onglets pour la liste des sites en mode entreprise.
 
-#### Stratégies déconseillées
+#### <a name="deprecated-policies"></a>Stratégies déconseillées
 
 - [AllowSyncXHRInPageDismissal](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal): autorise les pages à envoyer des demandes XHR synchrones lors de l’opération de rejet de page.
 - [BuiltinCertificateVerifierEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#builtincertificateverifierenabled) – Indique si le vérificateur de certificats intégré est utilisé pour la vérification des certificats de serveur.
 - [StricterMixedContentTreatmentEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#strictermixedcontenttreatmentenabled): active un traitement plus strict pour des contenus mixtes.
 
-#### Stratégie obsolète
+#### <a name="obsoleted-policy"></a>Stratégie obsolète
 
 [ForceNetworkInProcess](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcenetworkinprocess): force l’exécution du code de mise en réseau dans le processus du navigateur.
 
 <!-- end 84 -->
 
-## Version83.0.478.44: 1erjuin
+## <a name="version-83047844-june-1"></a>Version83.0.478.44: 1erjuin
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version83.0.478.37: 20 mai
+## <a name="version-83047837-may-20"></a>Version83.0.478.37: 20 mai
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version83.0.478.33: 15mai
+## <a name="version-83047833-may-15"></a>Version83.0.478.33: 15mai
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version83.0.478.28: 7mai
+## <a name="version-83047828-may-7"></a>Version83.0.478.28: 7mai
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 83.0.478.25: 4 mai
+## <a name="version-83047825-may-4"></a>Version 83.0.478.25: 4 mai
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 83.0.478.18: 27avril
+## <a name="version-83047818-april-27"></a>Version 83.0.478.18: 27avril
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 83.0.478.13: 22avril
+## <a name="version-83047813-april-22"></a>Version 83.0.478.13: 22avril
 
-### Mises à jour des fonctionnalités
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
 - Améliorations apportées à Microsoft Defender SmartScreen: améliorations apportées au service Microsoft Defender SmartScreen, telles que la protection améliorée contre les sites malveillants qui redirigent au chargement et le blocage de trames de niveau supérieur, qui remplace complètement les sites malveillants avec la page de sécurité Microsoft Defender SmartScreen. Le blocage de trames de niveau supérieur empêche la lecture du contenu audio et d’autres éléments multimédias du site malveillant, ce qui permet d’obtenir une expérience plus facile et moins confuse.
 
@@ -384,9 +450,9 @@ Un utilisateur saisit «powerbi» comme «powerbbi».com. Le docteur de lien sug
 
 - Plusieurs mises à jour de DevTools, y compris la prise en charge du débogage distant, l’amélioration de l’interface utilisateur et bien plus encore. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Nouveautés de DevTools (Microsoft Edge 83)](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/whats-new/2020/03/devtools).
 
-### Mises à jour de stratégies
+### <a name="policy-updates"></a>Mises à jour de stratégies
 
-#### Nouvelles stratégies
+#### <a name="new-policies"></a>Nouvelles stratégies
 
 15 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
@@ -406,7 +472,7 @@ Un utilisateur saisit «powerbi» comme «powerbbi».com. Le docteur de lien sug
 - [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) – Configurer la liste des types exclus de la synchronisation.
 - [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) – Activer le masquage de fenêtres natives.
 
-#### Stratégie déconseillée
+#### <a name="deprecated-policy"></a>Stratégie déconseillée
 
 La stratégie suivante continuera à fonctionner dans cette version. Il deviendra «obsolète» dans une prochaine version.
 
@@ -414,45 +480,45 @@ La stratégie suivante continuera à fonctionner dans cette version. Il deviendr
 
 <!--  end 83 -->
 
-## Version 81.0.416.60: 20avril
+## <a name="version-81041660-april-20"></a>Version 81.0.416.60: 20avril
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 81.0.416.58: 17avril
+## <a name="version-81041658-april-17"></a>Version 81.0.416.58: 17avril
 
 Mises à jour de sécurité.
 
-## Version81.0.416.50: 10avril
+## <a name="version-81041650-april-10"></a>Version81.0.416.50: 10avril
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 81.0.416.45: 3avril
+## <a name="version-81041645-april-3"></a>Version 81.0.416.45: 3avril
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version81.0.416.41: 30mars
+## <a name="version-81041641-march-30"></a>Version81.0.416.41: 30mars
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version81.0.416.34: 17mars
+## <a name="version-81041634-march-17"></a>Version81.0.416.34: 17mars
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version81.0.416.31: 12mars
+## <a name="version-81041631-march-12"></a>Version81.0.416.31: 12mars
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version81.0.416.28: 9mars
+## <a name="version-81041628-march-9"></a>Version81.0.416.28: 9mars
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version81.0.416.20: 28février
+## <a name="version-81041620-february-28"></a>Version81.0.416.20: 28février
 
 Résolution de divers bogues et problèmes de performances.
 
-## Version 81.0.416.12: 20février
+## <a name="version-81041612-february-20"></a>Version 81.0.416.12: 20février
 
-### Mises à jour des fonctionnalités
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
 - Les collections sont désormais disponibles. Vous pouvez démarrer en cliquant sur l’icône Collections située près de la barre d’adresses. Cette action ouvre le volet Collections dans lequel vous pouvez créer, modifier et afficher des collections. Les Collections ont été conçues en fonction de votre activité sur le web. Si vous êtes un client, un voyageur, un enseignant ou un étudiant, les Collections peuvent vous être utiles. [En savoir plus](https://blogs.windows.com/msedgedev/2019/12/09/improvements-collections-sync-microsoft-edge/#LuDPRDUDCgdgdOVt.97).
 
@@ -492,9 +558,9 @@ Résolution de divers bogues et problèmes de performances.
 
 - Il est désormais plus facile de démarrer la lecture à haute voix à l’aide d’un raccourci clavier (Ctrl+Maj+U).
 
-### Mises à jour de stratégies
+### <a name="policy-updates"></a>Mises à jour de stratégies
 
-#### Nouvelles stratégies
+#### <a name="new-policies"></a>Nouvelles stratégies
 
 12 nouvelles stratégies ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise). Les nouvelles stratégies suivantes ont été ajoutées.
 
@@ -511,13 +577,13 @@ Résolution de divers bogues et problèmes de performances.
 - [TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled): active une fonctionnalité de sécurité TLS 1.3 pour les ancres d’approbation locales.
 - [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin): configure la connexion automatique avec un compte de domaine Azure Active Directory lorsqu'il n'existe pas de compte de domaine Azure Active Directory.
 
-#### Stratégies déconseillées
+#### <a name="deprecated-policies"></a>Stratégies déconseillées
 
 Les stratégies suivantes fonctionnent encore dans cette version. Elles deviendront «obsolètes» dans une prochaine version.
 
 - [WebComponentsV0Enabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcomponentsv0enabled): réactive les composants WebPart de l’API v0 jusqu’au M84.
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies): autorise WebDriver à substituer Incompatible.
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
