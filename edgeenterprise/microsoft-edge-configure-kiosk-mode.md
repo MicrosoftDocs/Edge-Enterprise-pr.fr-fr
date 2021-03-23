@@ -3,19 +3,19 @@ title: Configurer le mode kiosque Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Apprenez les fonctionnalités du mode kiosque et comment configurer les options du mode kiosque de Microsoft Edge.
-ms.openlocfilehash: 9f2ce26f2c505ba3fc9e2e05b057e5d5df8257fe
-ms.sourcegitcommit: 8da3a4de1a14514014b6d7b103ba79f2ace48044
+ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388552"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442484"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurer le mode kiosque Microsoft Edge
 
@@ -23,6 +23,9 @@ Cet article décrit la configuration des options Microsoft Edge en mode plein é
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version87 ou ultérieure.
+
+> [!IMPORTANT]
+> Appelez les fonctionnalités du mode plein écran MicrosoftEdge sur Windows10 à l’aide des arguments de lignes de commande fournis dans [Utiliser les fonctionnalités du mode plein écran](#use-kiosk-mode-features).
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -211,7 +214,7 @@ Les paramètres Windows constituent le moyen le plus simple de configurer un ou 
 
 Avec la publication de cette version d’évaluation du mode plein écran, nous continuons à travailler sur l’amélioration du produit et en ajoutant de nouvelles fonctionnalités.
 
-Nous vous recommandons de désactiver :
+Pour l’instant, nous ne supportons pas les fonctionnalités suivantes et vous recommandons de les désactiver:
 
 - [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
 - [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
@@ -224,6 +227,7 @@ Nous vous recommandons de désactiver :
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 - [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
 
 ## <a name="roadmap"></a>Feuille de route
 

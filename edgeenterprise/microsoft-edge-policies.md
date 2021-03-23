@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/12/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
-ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
+ms.openlocfilehash: 4935b927081ef1823ecf36b922948992926d4005
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408646"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442474"
 ---
 # <a name="microsoft-edge---policies"></a>MicrosoftEdge: Stratégies
 
@@ -29,6 +29,16 @@ Vous pouvez télécharger le [Kit des ressources de conformité en matière de s
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
+
+## <a name="new-policies"></a>Nouvelles stratégies
+
+Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour.
+
+|Nom|Sous-titre|
+|--|--|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Autoriser les liens rapides sur la page Nouvel onglet|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Récupérer la durée de mise à jour à l’arrêt|
+
 
 ## <a name="available-policies"></a>Stratégies disponibles
 
@@ -230,7 +240,8 @@ et des conseils pour les services Microsoft|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Masquer les sites populaires par défaut dans la page Nouvel onglet|
 |[NewTabPageLocation](#newtabpagelocation)|Configurer l’URL de la page Nouvel onglet|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Définir les liens rapides de la page Nouvel onglet|
-|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Activer le préchargement de la nouvelle page d’onglet pour un rendu plus rapide|
+|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Activer le préchargement de la page Nouvel onglet pour un rendu plus rapide|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Autoriser les liens rapides sur la page Nouvel onglet|
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configurer l’expérience de page Nouvel onglet MicrosoftEdge (déconseillée)|
 |[RestoreOnStartup](#restoreonstartup)|Action à effectuer au démarrage|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites à ouvrir lors du démarrage du navigateur|
@@ -322,6 +333,7 @@ et des conseils pour les services Microsoft|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Afficher une case à cocher «Toujours ouvrir» dans la boîte de dialogue de protocole externe|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Autoriser les utilisateurs à configurer la sécurité familiale et le mode Enfants|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Activer la barre des favoris|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Récupérer la durée de mise à jour à l’arrêt|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Appliquer le filtre adulte Bing|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configurer la sélection automatique d’un certificat par MicrosoftEdge lorsqu’il existe plusieurs correspondances de certificats pour un site configuré avec «AutoSelectCertificateForUrls»|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Activer l’utilisation des profils éphémères|
@@ -8454,6 +8466,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### <a name="newtabpagequicklinksenabled"></a>NewTabPageQuickLinksEnabled
+
+  #### <a name="allow-quick-links-on-the-new-tab-page"></a>Autoriser les liens rapides sur la page Nouvel onglet
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la mise à jour91 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Si vous activez ou ne configurez pas cette stratégie, MicrosoftEdge affiche des liens rapides sur la page Nouvel onglet et l’utilisateur peut interagir avec le contrôle, ce qui active et éteint les liens rapides. L’activation de cette stratégie ne force pas la visibilité des liens rapides : l’utilisateur peut continuer à activer et désactiver les liens rapides.
+
+Si vous désactivez cette stratégie, MicrosoftEdge masque les liens rapides sur la page Nouvel onglet et désactive le contrôle de liens rapides dans le volant des paramètres NTP.
+
+Cette stratégie s’applique uniquement aux profils utilisateur locaux MicrosoftEdge, aux profils signés à l’aide d’un compte Microsoft et aux profils signés à l’aide d’Active Directory. Pour configurer la page Nouvel onglet Entreprise pour les profils signés à l’aide d’Azure Active Directory, utilisez le portail d’administration M365.
+
+Stratégie associée: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### <a name="data-type"></a>Type de données:
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: NewTabPageQuickLinksEnabled
+  - Nom de la stratégie de groupe: autoriser les liens rapides sur la page nouvel onglet
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Startup, page d’accueil et page Nouvel onglet
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : NewTabPageQuickLinksEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence: NewTabPageQuickLinksEnabled
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
 
   #### <a name="configure-the-microsoft-edge-new-tab-page-experience-deprecated"></a>Configurer l’expérience de page Nouvel onglet MicrosoftEdge (déconseillée)
@@ -14376,6 +14452,68 @@ Si cette stratégie n’est pas configurée, l’utilisateur peut décider d’u
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### <a name="fetchkeepalivedurationonshutdown"></a>FetchKeepaliveDurationOnShutdown
+
+  #### <a name="fetch-keepalive-duration-on-shutdown"></a>Récupérer la durée de mise à jour à l’arrêt
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version 90 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Contrôle la durée (en secondes) de la mise à jour des demandes afin d’empêcher le navigateur de terminer son arrêt.
+
+Si vous configurez cette stratégie, le navigateur bloquera l’arrêt complet pendant qu’il traite les demandes de conservation en attente (voir https://fetch.spec.whatwg.org/#request-keepalive-flag) jusqu’à la période maximale spécifiée par cette stratégie.
+
+Si vous désactivez ou ne configurez pas cette stratégie, la valeur par défaut de 0 seconde est utilisée et les demandes de conservation en suspens sont immédiatement annulées pendant l’arrêt du navigateur.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### <a name="data-type"></a>Type de données:
+
+  - entier.
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de group : FetchKeepaliveDurationOnShutdown
+  - Nom de la stratégie de group : récupérer la durée de mise à jour à l’arrêt
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : FetchKeepaliveDurationOnShutdown
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : FetchKeepaliveDurationOnShutdown
+  - Exemple de valeur:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### <a name="forcebingsafesearch"></a>ForceBingSafeSearch
 
   #### <a name="enforce-bing-safesearch"></a>Appliquer le filtre adulte Bing
@@ -15102,7 +15240,11 @@ Les termes de recherche populaires à mot unique nécessitent une sélection man
 
   #### <a name="description"></a>Description
 
-  Les noms d'hôte spécifiés dans cette liste seront dispensés de la vérification de stratégie HSTS qui pourrait éventuellement mettre à niveau les demandes de «http://» vers «https://». Seuls les noms d'hôte en une seule partie sont autorisés dans cette stratégie. Les noms d'hôte doivent être au format canonique. Toutes les IDN doivent être convertis au format d'étiquette A et toutes les lettres ASCII doivent être en minuscule. Cette stratégie ne s'applique qu'aux noms d'hôte spécifiques indiqués ; elle ne s'applique pas aux sous-domaines des noms de la liste.
+  La définition de la stratégie spécifie une liste de noms d’hôtes qui contournent les mises à niveau HSTS préchargés de http vers https.
+
+Seuls les noms d’hôte à étiquette unique sont autorisés dans cette stratégie, et cette stratégie s’applique uniquement aux entrées statiques HSTS préchargés (par exemple, «application», «nouveau», «rechercher», «lire»). Cette stratégie n’empêche pas les mises à niveau HSTS pour les serveurs qui ont demandé dynamiquement des mises à niveau HSTS à l’aide d’un en-tête de réponse Strict-Transport-Security.
+
+Les noms d’hôte fournis doivent être canonisés: tous les IDN doivent être convertis au format A-label et toutes les lettres ASCII doivent être en minuscules. Cette stratégie s’applique uniquement aux noms d’hôte à étiquette unique spécifiés, et non aux sous-domaine de ces noms.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -16819,7 +16961,9 @@ Les utilisateurs peuvent le faire dans le menu «Autres Outils» en sélectionna
 
 Par ailleurs, les utilisateurs peuvent tester leurs applications dans un navigateur moderne sans supprimer les applications de la liste des sites à l’aide de l’option «Ouvrir les sites en mode Edge».
 
-Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) défini sur «IEMode» et [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) avec une liste comportant au moins une entrée.
+Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) est défini sur «IEMode».
+   
+                                                                                                                         
 
 Si vous activez cette stratégie, l’option «Ouvrir les sites en mode Internet Explorer» est visible sous «Autres outils». Les utilisateurs peuvent afficher leurs sites en mode Internet Explorer dans cet onglet. Une autre option servant à «Ouvrir les sites en mode Edge» apparaît également sous «Autres outils» pour permettre le test des sites dans un navigateur moderne sans les supprimer de la liste des sites.
 

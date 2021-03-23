@@ -3,39 +3,39 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/16/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 3c1b87b2ecaf68acf0bca447553b25d0b202e7ea
-ms.sourcegitcommit: ceecf4d9baf9dc677652ca07a6d2f2e17ef5b3b7
+ms.openlocfilehash: 6b5e68d44daf3297a20d6e87169c800bc06b9011
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "11440305"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442394"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication du canal Microsoft Edge Beta
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta. Les versions archivées de ces notes de publication sont disponibles [ici](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> Nous avons mis à jour la note de publication de la [version bêta de MicrosoftEdge 89.0.774.18 : 3 février](#version-89077418-february-3) pour refléter les fonctionnalités qui ont été publiées.
+> Nous avons mis à jour la note de publication de la [version bêta de MicrosoftEdge 89.0.774.18: 3février](#version-89077418-february-3) pour refléter les fonctionnalités qui ont été publiées.
 
 <!-- begin major 90 -->
-## <a name="version-90081808-march-16"></a>Version 90.0.818.08 : 16mars
+## <a name="version-9008188-march-16"></a>Version90.0.818.8: 16mars
 
 ### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
-- **L'authentification unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) et le compte Microsoft (MSA) sur macOS**. Un utilisateur se connectant sur MicrosoftEdge sur macOS se connecte désormais automatiquement aux sites web qui sont configurés pour autoriser l'authentification unique avec les comptes Travail et Microsoft (par exemple, bing.com, office.com, msn.com et outlook.com).
+- **L'authentification unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) et le compte Microsoft (MSA) sur macOS**. Un utilisateur connecté sur MicrosoftEdge sur macOS se connecte désormais automatiquement aux sites web qui sont configurés pour autoriser l'authentification unique avec les comptes Professionnels et Microsoft (par exemple, bing.com, office.com, msn.com et outlook.com).
 
 - **Impression:**
 
   - **Nouveau mode de rastérisation d’impression pour les imprimantes non-PostScript**. À partir de Microsoft Edge version90, les administrateurs peuvent utiliser une nouvelle stratégie pour définir le mode de rastérisation d’impression pour leurs utilisateurs. Cette stratégie contrôle la façon dont MicrosoftEdge imprime vers des imprimantes non-PostScript sur Windows.  L’ impression sur des imprimantes non-PostScript doit parfois être rastérisée pour imprimer correctement. Les options d’impression sont Complète et Rapide.
 
-  - **Options de mise à l’échelle de page supplémentaires pour l’impression**. Les utilisateurs peuvent désormais personnaliser la mise à l’échelle lors de l’impression de pages web et de documents PDF à l’aide d’options supplémentaires. L’option «Ajuster à la page» permet de s’assurer que la page web ou le document est adapté à l’espace disponible dans le «Format de papier» sélectionné pour l’impression. L’option « Taille réelle » garantit qu’aucune modification n’a été apportée à la taille du contenu en cours d’impression, quelle que soit la « Taille du papier » sélectionnée.
+  - **Options de mise à l’échelle de page supplémentaires pour l’impression**. Les utilisateurs peuvent désormais personnaliser la mise à l’échelle lors de l’impression de pages web et de documents PDF à l’aide d’options supplémentaires. L’option Ajuster à la page permet de s’assurer que la page web ou le document est adapté à l’espace disponible dans le «Format de papier» sélectionné pour l’impression. L’option « Taille réelle » garantit qu’aucune modification n’a été apportée à la taille du contenu en cours d’impression, quelle que soit la « Taille du papier » sélectionnée.
 
 - **Productivité:**
 
@@ -282,73 +282,7 @@ Résolution de divers bogues et problèmes de performances.
 
 Résolution de divers bogues et problèmes de performances.
 
-<!-- begin major 87 -->
-## <a name="version-87066412-october-20"></a>Version87.0.664.12: 20octobre
-
-### <a name="feature-updates"></a>Mises à jour des fonctionnalités
-
-- **Activation des fonctionnalités de confidentialité en mode plein écran**. Le démarrage des fonctionnalités du mode plein écran de Microsoft Edge version 87 qui permettront aux entreprises de respecter la confidentialité des données utilisateur, sera  activée. Ces fonctionnalités activent les expériences telles que l’effacement des données utilisateur à la fermeture, la suppression des fichiers téléchargés et la réinitialisation de l’expérience de démarrage configurée après une durée inactivité déterminée. En savoir plus sur la [Configuration du mode plein écran Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
-- **Activation du déploiement ClickOnce par défaut**. L’activation de ClickOnce par défaut dans Microsoft Edge 87, réduit les difficultés des entreprises à déployer des logiciels et mieux s’aligner sur le comportement du navigateur Microsoft Edge Legacy. Au démarrage de Microsoft Edge 87, l’état «Non Configuré» de la stratégie ClickOnceEnabled reflète le nouvel état par défaut Activé de la stratégie ClickOnce (comparé à l’État par défaut Désactivé précédent).
-- **La page nouvel onglet de l’entreprise (NTP) intègre la productivité avec un contenu de flux de travail personnalisable**. La Page Nouvel Onglet de l’Entreprise combine la page de productivité d’Office 365 que nous proposons aux utilisateurs connectés à leur compte professionnel ou scolaire, avec des flux professionnels personnalisés qui sont organisés en une seule page. Les utilisateurs reconnaîtront le contenu Office 365 familier et Microsoft Search pour Entreprises offert par Bing. De plus, ils peuvent facilement retourner à «Mon Flux» personnalisable avec du contenu et des modules pertinents pour l’utilisateur, sa société ou son industrie, et à une sélection d’autres flux mis à disposition par l’organisation. [En savoir plus](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide&preserve-view=true).
-
-- **Confidentialité et sécurité :**
-
-  - Jeton TLS de support Obligatoire pour les sites configurés par une stratégie. Le jeton TLS obligatoire permet d’éviter les attaques par vol de jetons afin de s’assurer que les cookies ne peuvent pas être réutilisés à partir d’un autre appareil que l’appareil sur lequel ils ont été initialement définis. L’utilisation du jeton TLS obligatoire nécessite la définition de la stratégie [AllowTokenBindingForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowtokenbindingforurls) et nécessite que les sites répertoriés prennent en charge cette fonctionnalité.
-
-- **Prise en charge du clavier pour le surligneur des fichiers PDF**. Les utilisateurs peuvent utiliser leurs touches de clavier pour surligner des textes de fichiers PDF.
-
-- **Impression:**
-
-  - Sélectionnez le côté à retourner lors de l’impression recto verso. Les utilisateurs peuvent choisir de retourner sur le côté long ou sur le côté court d’une feuille lors de l’impression recto verso.
-  - Sélectionnez le mode de tramage de l’impression pour l’entreprise. Contrôlez l’impression Microsoft Edge sur une imprimante non-PostScript sur Windows. Parfois l’ impression sur des imprimantes non-PostScript doit être tramée pour imprimer correctement. Les options d’impression sont «Complètes» et «Rapides».
-
-### <a name="policy-updates"></a>Mises à jour de stratégies
-
-#### <a name="new-policies"></a>Nouvelles stratégies
-
-Ajout de dix nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
-
-- [ConfigureFriendlyURLFormat](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configurefriendlyurlformat) - Configurez le format de collage par défaut des URL copiées à partir de Microsoft Edge, et déterminez si d’autres formats sont disponibles pour les utilisateurs.
-- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) - Activation des Achats dans Microsoft Edge.
-- [HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#hideinternetexplorerredirectuxforincompatiblesitesenabled) - Masquez la boite de dialogue redirection et la bannière sur Microsoft Edge.
-- [KioskAddressBarEditingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) - Configurez la modification de la barre d’adresses pour l’expérience de navigation publique en mode plein écran.
-- [KioskDeleteDownloadsOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) - Supprimez les fichiers téléchargés sous la session plein écran lorsque Microsoft Edge se ferme.
-- [PasswordRevealEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#passwordrevealenabled) - Activez le bouton d’affichage de mot de passe.
-- [RedirectSitesFromInternetExplorerPreventBHOInstall](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerpreventbhoinstall) - Empêchez l’installation BHO pour rediriger les sites incompatibles de Internet Explorer vers Microsoft Edge.
-- [RedirectSitesFromInternetExplorerRedirectMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerredirectmode) - Redirigez les sites incompatibles de Internet Explorer vers Microsoft Edge.
-- [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) - Configurez la Reconnaissance Vocale.
-- [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) - Activez la fonctionnalité de capture web dans Microsoft Edge.
-
-#### <a name="deprecated-policy"></a>Stratégie Déconseillée
-
-[NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Configurez l’expérience de la page nouvel onglet de Microsoft Edge.
-
-#### <a name="obsoleted-policy"></a>Stratégie obsolète
-
-[EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - Réactivez les fonctionnalités de plateforme web déconseillées pour une période limitée.
-
-<!-- end major 87 -->
-
-## <a name="version-86062243-october-16"></a>Version86.0.622.43: 16octobre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-86062236-october-7"></a>Version86.0.622.36: 7octobre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-86062231-october-1"></a>Version86.0.622.31: 1octobre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-86062228-september-28"></a>Version 86.0.622.28: 28 septembre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-86062215-september-14"></a>Version 86.0.622.15: 14 septembre
-
-Résolution de divers bogues et problèmes de performances.
-
+<!--- Archived from Version 87.0.664.12: October 20 to to version 86.0.622.15: September 14 ---->
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
