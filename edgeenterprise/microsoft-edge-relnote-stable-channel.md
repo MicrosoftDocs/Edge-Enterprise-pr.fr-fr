@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/15/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: 7d08aa1d9cf1f3e04861561169d2f6a01772e5f2
-ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
+ms.openlocfilehash: a0f33300d39f5ecaf48de114697c593a391dc052
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409249"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442384"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notes de publication du canal stable Microsoft Edge
 
@@ -29,7 +29,11 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
 
-## <a name="version-89077454-march-13"></a>Version 89.0.774.54: 13 mars
+## <a name="version-89077457-march-18"></a>Version 89.0.774.57: 18mars
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-89077454-march-13"></a>Version 89.0.774.54: 13mars
 
 > [!IMPORTANT]
 > Cette mise à jour contient le [CVE-2021-21193 ](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193) qui a été signalé par l'équipe Chromium comme ayant fait l'objet d'un exploit dans la nature. Pour plus d'informations, [voir le Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide).
