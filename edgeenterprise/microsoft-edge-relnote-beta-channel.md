@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 03/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 6b5e68d44daf3297a20d6e87169c800bc06b9011
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: f2fde765cffcc546a2bd64d931c58e7a460d260c
+ms.sourcegitcommit: 50bf27680754f4cfde4112e5e618d862c2919ac3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442394"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "11445243"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication du canal Microsoft Edge Beta
 
@@ -24,6 +24,9 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > Nous avons mis à jour la note de publication de la [version bêta de MicrosoftEdge 89.0.774.18: 3février](#version-89077418-february-3) pour refléter les fonctionnalités qui ont été publiées.
 
+## <a name="version-90081814-march-22"></a>Version 90.0.818.14: 22mars
+
+Résolution de divers bogues et problèmes de performances.
 <!-- begin major 90 -->
 ## <a name="version-9008188-march-16"></a>Version90.0.818.8: 16mars
 
