@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prise en charge de la langue d’affichage dans Microsoft Edge pour Windows et macOS.
-ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
-ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
+ms.openlocfilehash: 37073213fcdacac6b8182dcbef93901c82110756
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "11406159"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447098"
 ---
 # <a name="microsoft-edge-language-support"></a>Prise en charge linguistique dans MicrosoftEdge
 
@@ -156,5 +156,5 @@ Le tableau suivant répertorie les langues d’affichage qui sont prises en char
 
 ## <a name="see-also"></a>Articles associés
 
-- [Documentation MicrosoftEdge](https://docs.microsoft.com/DeployEdge/)
+- [Documentation MicrosoftEdge](./index.yml)
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Questions fréquemment posées sur la synchronisation d’entreprise Microsoft Edge.
-ms.openlocfilehash: 51f6dfc4cd8f308815ee111c30d5501ec0e44f59
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400188"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447868"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Synchronisation de MicrosoftEdge Entreprise FAQ
 
@@ -25,11 +25,11 @@ Cet article répond à des questions fréquentes sur la synchronisation d’entr
 
 ### <a name="is-the-synced-data-encrypted"></a>Les données synchronisées sont-elles chiffrées?
 
-Les données sont cryptées lors du transport en utilisant TLS1.2 ou version ultérieure. Tous les types de données sont également chiffrés sur REST dans le service de Microsoft à l’aide de AES128. Tous les types de données, à l’exception de ceux utilisés pour la synchronisation de l’onglet ouvert et de l’historique, sont chiffrés avant de laisser l’appareil de l’utilisateur avec des clés gérées via la stratégie [Azure Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern).
+Les données sont cryptées lors du transport en utilisant TLS1.2 ou version ultérieure. Tous les types de données sont également chiffrés sur REST dans le service de Microsoft à l’aide de AES128. Tous les types de données, à l’exception de ceux utilisés pour la synchronisation de l’onglet ouvert et de l’historique, sont chiffrés avant de laisser l’appareil de l’utilisateur avec des clés gérées via la stratégie [Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern).
 
 ### <a name="why-dont-open-tab-and-history-data-have-more-client-side-encryption"></a>Pourquoi les données d’historique et d’onglets ouverts n’ont-elles pas davantage de chiffrement côté client?
 
-Pour réduire l’utilisation des ressources sur les appareils des utilisateurs finaux, les données d’historique sont générées côté serveur en fonction des données d’itinérance de l’onglet ouvert. Ce processus n’est pas possible avec le chiffrement côté client de ces données. Pour désactiver la synchronisation des onglets et de l’historique, appliquez les stratégies [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) ou [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) .
+Pour réduire l’utilisation des ressources sur les appareils des utilisateurs finaux, les données d’historique sont générées côté serveur en fonction des données d’itinérance de l’onglet ouvert. Ce processus n’est pas possible avec le chiffrement côté client de ces données. Pour désactiver la synchronisation des onglets et de l’historique, appliquez les stratégies [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) ou [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) .
 
 ### <a name="can-tenant-admins-bring-their-own-key"></a>Les administrateurs client peuvent-ils incorporer leur propre clé?
 
@@ -63,7 +63,7 @@ Non. Enterprise State Roaming (ESR) peut être utilisé pour activer la synchron
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>Microsoft Edge prend-il en charge la synchronisation entre Microsoft Edge et Internet Explorer?
 
-Il n’existe pas d’offre pour la prise en charge de cette synchronisation. Si vous avez encore besoin d’Internet Explorer dans votre environnement pour prendre en charge des applications héritées, nous vous conseillons le [Nouveau mode Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode).
+Il n’existe pas d’offre pour la prise en charge de cette synchronisation. Si vous avez encore besoin d’Internet Explorer dans votre environnement pour prendre en charge des applications héritées, nous vous conseillons le [Nouveau mode Internet Explorer](./edge-ie-mode.md).
 
 ### <a name="will-microsoft-edge-sync-with-microsoft-edge-legacy"></a>Est-ce que Microsoft Edge se synchronise avec Microsoft Edge hérité?
 
@@ -73,7 +73,7 @@ Non. Nous pensons que la connexion de ces deux écosystèmes entraîne la compro
 
 ### <a name="is-it-possible-to-stop-my-users-from-syncing-with-a-personal-tenant"></a>Est-il possible d’empêcher la synchronisation de mes utilisateurs avec un client personnel?
 
-Pas directement, mais vous pouvez déterminer quels profils peuvent se connecter à Microsoft Edge à l’aide de la stratégie [RestrictSigninToPattern](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern).
+Pas directement, mais vous pouvez déterminer quels profils peuvent se connecter à Microsoft Edge à l’aide de la stratégie [RestrictSigninToPattern](./microsoft-edge-policies.md#restrictsignintopattern).
 
 ## <a name="see-also"></a>Voir également
 

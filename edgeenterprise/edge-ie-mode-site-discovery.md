@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Utiliser la découverte de site d’entreprise pour préparer le mode IE
-ms.openlocfilehash: 9ec748686b83466cd1c7d92fcc7fdc0f0d136977
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 2557544a93222b03aaa0961149aa0d3c5d7d8806
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979775"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447718"
 ---
-# Guide pas à pas pour la découverte de site d’entreprise
+# <a name="enterprise-site-discovery-step-by-step-guide"></a>Guide pas à pas pour la découverte de site d’entreprise
 
 Cet article fournit un guide pas à pas sur l’utilisation de la découverte de site d’entreprise avec Microsoft Endpoint Configuration Manager.
 
@@ -29,7 +29,7 @@ La découverte de site d’entreprise peut vous aider à configurer votre liste 
 > [!NOTE]
 > Cet article concerne les canaux MicrosoftEdge **stable**, **Beta** et **Dev**, version77 ou ultérieures.
 
-## Conditions préalables
+## <a name="prerequisites"></a>Conditions préalables
 
 Ce guide part du principe que vous avez de l'expérience dans l'utilisation de Microsoft Endpoint Configuration Manager et que les services et rôles suivants sont installés :
 
@@ -37,20 +37,20 @@ Ce guide part du principe que vous avez de l'expérience dans l'utilisation de M
 2. Microsoft SQL Server Reporting Services
 3. (Facultatif) Configuration du rôle Point de Reporting Services du Gestionnaire de configuration
 
-## Télécharger les outils de découverte de site d’entreprise
+## <a name="download-enterprise-site-discovery-tools"></a>Télécharger les outils de découverte de site d’entreprise
 
 Télécharger les outils suivants:
 
 - [Configuration de la découverte de site d’entreprise et package de configuration](https://go.microsoft.com/fwlink/p/?LinkId=517719)
 - [Générateur de rapports Microsoft](https://www.microsoft.com/download/details.aspx?id=53613)
 
-## Activer la découverte de site d’entreprise
+## <a name="enable-enterprise-site-discovery"></a>Activer la découverte de site d’entreprise
 
 Avant de pouvoir vous connecter à Windows Management Instrumentation (WMI) pour récupérer les données de découverte de site, vous devez commencer par déployer le fournisseur de classes WMI sur l’appareil.
 
 Dans la rubrique **Configuration de la découverte de site d’entreprise et package de configuration**, extrayez le contenu vers un dossier dans le partage de fichiers de la bibliothèque logicielle définitive. Exemple : **\\\\DSL\\EnterpriseSiteDiscovery**.
 
-Créez ensuite un package dans Microsoft Endpoint Configuration Manager, comme décrit dans la [documentation](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs), en sélectionnant les options suivantes:
+Créez ensuite un package dans Microsoft Endpoint Configuration Manager, comme décrit dans la [documentation](/configmgr/apps/deploy-use/packages-and-programs), en sélectionnant les options suivantes:
 
 - Dans la page **Package**, sélectionnez **Nom** et spécifiez le nom **Activer la découverte de site**
 - Dans la page **Package**, sélectionnez **Ce package contient des fichiers source**
@@ -68,11 +68,11 @@ Créez ensuite un package dans Microsoft Endpoint Configuration Manager, comme d
 Après la création du package, double-cliquez sur le nom du package **Activer la découverte de site** pour afficher ses propriétés. Dans la propriété **Après l’exécution**, sélectionnez **Le gestionnaire de configuration redémarre l'ordinateur**. La collecte de données WMI commence après le redémarrage des appareils.
 
 > [!NOTE]
-> Vous pouvez configurer le temps dont dispose un utilisateur pour redémarrer l'appareil comme décrit dans la [documentation des paramètres du client](https://docs.microsoft.com/configmgr/core/clients/deploy/about-client-settings#computer-restart).
+> Vous pouvez configurer le temps dont dispose un utilisateur pour redémarrer l'appareil comme décrit dans la [documentation des paramètres du client](/configmgr/core/clients/deploy/about-client-settings#computer-restart).
 
-## Configurer la découverte de site d’entreprise via la stratégie de groupe
+## <a name="configure-enterprise-site-discovery-via-group-policy"></a>Configurer la découverte de site d’entreprise via la stratégie de groupe
 
-Lorsque la découverte de site d’entreprise est activée, vous pouvez configurer les données à collecter. Tenez compte de la législation locale et des exigences réglementaires décrites [ici](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
+Lorsque la découverte de site d’entreprise est activée, vous pouvez configurer les données à collecter. Tenez compte de la législation locale et des exigences réglementaires décrites [ici](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
 
 1. Ouvrez l’Éditeur de stratégie de groupe
 2. Cliquez sur **Configuration ordinateur** > **Modèles d’administration** > **Composants Windows** > **Internet Explorer** 
@@ -103,7 +103,7 @@ Vous pouvez limiter les zones pour lesquelles vous collectez les données de sit
 3. Entrez les domaines pour lesquels vous souhaitez collecter des données, un domaine par ligne
 4. Cliquez sur **OK** ou sur **Appliquer** pour enregistrer ce paramètre de stratégie
 
-## Collecter des données de découverte de site à l’aide du Gestionnaire de configuration
+## <a name="collect-site-discovery-data-using-configuration-manager"></a>Collecter des données de découverte de site à l’aide du Gestionnaire de configuration
 
 À présent que vos appareils génèrent des données, vous pouvez collecter ces données dans le Gestionnaire de configuration.
 
@@ -121,16 +121,16 @@ Vous pouvez limiter les zones pour lesquelles vous collectez les données de sit
 
 Une fois que le client a mis à jour les paramètres à partir du point de gestion, les données sont signalées lors de l’exécution du prochain inventaire matériel (par défaut, tous les sept jours).
 
-## Importer des rapports de découverte de site
+## <a name="import-site-discovery-reports"></a>Importer des rapports de découverte de site
 
 Le package de découverte de site d’entreprise inclut deux exemples de rapports. Un rapport affiche les sites utilisant des contrôles ActiveX, tandis qu’un autre affiche les sites utilisant des modes de documents hérités.
 
-### Configurer l’exemple de rapport de découverte de site
+### <a name="configure-the-site-discovery-sample-report"></a>Configurer l’exemple de rapport de découverte de site
 
 Pour créer un exemple de rapport qui utilise trois sources de données, utilisez la procédure suivante: les sites visités par les utilisateurs, les informations sur leur système et les modes de document utilisés par les sites. Ce rapport vous permet d’identifier les sites susceptibles de dépendre des modes de documents hérités.
 
 1. Copiez le rapport **SCCM_Report-Site_Discovery.rdl** sur votre serveur Gestionnaire de configuration.
-2. Installer le [Générateur de rapports Microsoft](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Installer le [Générateur de rapports Microsoft](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
 3. Double-cliquez sur **SCCM_Report Site_Discovery.rdl** pour ouvrir le rapport dans le Générateur de rapports.
 4. La première fois que vous essayez d’ouvrir le rapport, celui-ci tente de contacter le serveur où il a été créé. Lorsque le système affiche l'invite **Se connecter au serveur de rapports**, cliquez sur **Non**.
 5. Une fois le rapport ouvert, développez **Sources de données**, puis double-cliquez sur **DataSource1**.
@@ -147,12 +147,12 @@ Pour créer un exemple de rapport qui utilise trois sources de données, utilise
 16. Fermez le générateur de rapports Microsoft.
 17. Renommez le fichier en **Site Discovery.rdl**
 
-### Configurer l’exemple de rapport ActiveX
+### <a name="configure-the-activex-sample-report"></a>Configurer l’exemple de rapport ActiveX
 
 Pour créer un exemple de rapport qui utilise une seule source de données, utilisez la procédure suivante: les sites qui utilisent des contrôles ActiveX. Dans la mesure où Internet Explorer est le seul navigateur qui prend en charge les contrôles ActiveX, ces sites peuvent nécessiter le mode IE.
 
 1. Copiez le rapport **Exemple de rapport SCCM – ActiveX.rdl** sur votre serveur Gestionnaire de configuration.
-2. Installer le [Générateur de rapports Microsoft](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Installer le [Générateur de rapports Microsoft](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
 3. Double-cliquez sur **Exemple de rapport SCCM – ActiveX.rdl** pour ouvrir le rapport dans le Générateur de rapports.
 4. La première fois que vous essayez d’ouvrir le rapport, celui-ci tente de contacter le serveur où il a été créé. Lorsque le système affiche l'invite **Se connecter au serveur de rapports**, cliquez sur **Non**.
 5. Après l’ouverture du rapport, développez **Sources de données**, puis double-cliquez sur **AutoGen__5C6358F2_4BB6_4a1b_A16E_8D96795D8602_**.
@@ -167,7 +167,7 @@ Pour créer un exemple de rapport qui utilise une seule source de données, util
 14. Fermez le générateur de rapports Microsoft.
 15. Renommez le fichier en **ActiveX**
 
-### Charger des rapports configurés dans Microsoft SQL Server Reporting Services
+### <a name="upload-configured-reports-to-microsoft-sql-server-reporting-services"></a>Charger des rapports configurés dans Microsoft SQL Server Reporting Services
 
 Une fois que vous avez configuré les rapports pour votre environnement, chargez-les sur le serveur de rapports.
 
@@ -181,16 +181,16 @@ Une fois que vous avez configuré les rapports pour votre environnement, chargez
 8. Sélectionnez le rapport **Découverte de site**, puis cliquez sur **OK**.
 9. Répétez les étapes7 et 8 pour le rapport **ActiveX**.
 
-### Afficher les rapports dans le Gestionnaire de configuration
+### <a name="view-reports-in-configuration-manager"></a>Afficher les rapports dans le Gestionnaire de configuration
 
 À présent que vous avez personnalisé et chargé les rapports, vous pouvez les afficher dans le Gestionnaire de configuration.
 
 1. Dans la console Gestionnaire de configuration, sélectionnez **Surveillance** > **Création de rapports** > ** Rapports** > **Découverte de site d’entreprise**
 2. Double-cliquez sur un rapport pour l’afficher.
 
-## Désactiver la découverte de site d’entreprise
+## <a name="disable-enterprise-site-discovery"></a>Désactiver la découverte de site d’entreprise
 
-Lorsque vous avez terminé la collecte des données, désactivez la découverte de site d’entreprise. Créez un deuxième package pour désactiver la découverte de site d’entreprise dans Microsoft Endpoint Configuration Manager, comme décrit dans la [documentation](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs), en sélectionnant les options suivantes:
+Lorsque vous avez terminé la collecte des données, désactivez la découverte de site d’entreprise. Créez un deuxième package pour désactiver la découverte de site d’entreprise dans Microsoft Endpoint Configuration Manager, comme décrit dans la [documentation](/configmgr/apps/deploy-use/packages-and-programs), en sélectionnant les options suivantes:
 
 - Dans la page **Package**, sélectionnez **Nom** et spécifiez le nom **Désactiver la découverte de site**
 - Dans la page **Package**, sélectionnez **Ce package contient des fichiers source**
@@ -203,9 +203,9 @@ Lorsque vous avez terminé la collecte des données, désactivez la découverte 
 - Dans la page **Programme standard**, sélectionnez l’option pour exécuter **Masquée**
 - Dans la page **Programme standard**, sous **Le programme peut s'exécuter**, sélectionnez l’option **Connexion ou non d'un utilisateur**
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [À propos du mode IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Informations supplémentaires sur le mode entreprise](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Informations supplémentaires concernant la découverte de site d’entreprise](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
+- [À propos du mode Internet Explorer](./edge-ie-mode.md)
+- [Informations supplémentaires sur le mode entreprise](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Informations supplémentaires concernant la découverte de site d’entreprise](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)

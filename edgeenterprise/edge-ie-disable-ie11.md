@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Découvrez comment désactiver Internet Explorer 11 et utiliser le mode Internet Explorer dans Microsoft Edge.
-ms.openlocfilehash: a0486c2965b1868db67b6de1423f279905074410
-ms.sourcegitcommit: f34ff11499a2b96941e704103bdd959d19e3d7e7
+ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400604"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447388"
 ---
 # <a name="disable-internet-explorer-11"></a>Désactiver Internet Explorer 11
 
@@ -45,7 +45,7 @@ Pour les organisations qui ont besoin d’Internet Explorer 11 (IE11) pour la co
 Après avoir configuré le mode Internet Explorer, vous pouvez désactiver Internet Explorer 11 en tant que navigateur autonome**sans affecter les fonctionnalités du mode IE**au sein de votre organisation à l’aide de la stratégie de groupe.
 
 > [!NOTE]
-> Si vous avez besoin de l’application IE11 autonome pour des sites spécifiques et que vous souhaitez rediriger tout le trafic du navigateur vers Microsoft Edge, vous pouvez configurer la stratégie[Envoyer tous les sites non inclus dans la liste des sites vers Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge) pour rediriger les sites d’Internet Explorer vers Microsoft Edge.
+> Si vous avez besoin de l’application IE11 autonome pour des sites spécifiques et que vous souhaitez rediriger tout le trafic du navigateur vers Microsoft Edge, vous pouvez configurer la stratégie[Envoyer tous les sites non inclus dans la liste des sites vers Microsoft Edge](./edge-ie-mode-policies.md#redirect-sites-from-ie-to-microsoft-edge) pour rediriger les sites d’Internet Explorer vers Microsoft Edge.
 
 ## <a name="user-experience-after-redirecting-traffic-to-microsoft-edge"></a>Expérience utilisateur après la redirection du trafic vers Microsoft Edge
 
@@ -67,7 +67,7 @@ Si votre liste des sites en mode Entreprise contient des applications configuré
 
 Pour désactiver Internet Explorer 11 à l’aide de la stratégie de groupe, suivez les étapes suivantes :
 
-1. Assurez-vous que vous avez les mises à jour de système d’exploitation préalables. Cette étape met directement à jour les fichiers ADMX sur votre ordinateur (notamment inetréa.adml et inetrémx.admx). Si vous voulez mettre à jour votre magasin central, vous devrez copier les fichiers .adml et .admx à partir d’un ordinateur qui dispose des mises à jour préalables. Pour plus d’informations, voir [Créer et gérer des informations du Magasin central](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+1. Assurez-vous que vous avez les mises à jour de système d’exploitation préalables. Cette étape met directement à jour les fichiers ADMX sur votre ordinateur (notamment inetréa.adml et inetrémx.admx). Si vous voulez mettre à jour votre magasin central, vous devrez copier les fichiers .adml et .admx à partir d’un ordinateur qui dispose des mises à jour préalables. Pour plus d’informations, voir [Créer et gérer des informations du Magasin central](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Ouvrez l’Éditeur de stratégie de groupe.
 3. Allez à ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***. 
 4. Double-cliquez **Désactiver Internet Explorer 11 en tant que navigateur autonome**.
@@ -83,5 +83,5 @@ Pour désactiver Internet Explorer 11 à l’aide de la stratégie de groupe, su
 ## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [À propos du mode Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Informations supplémentaires sur le mode entreprise](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [À propos du mode Internet Explorer](./edge-ie-mode.md)
+- [Informations supplémentaires sur le mode entreprise](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

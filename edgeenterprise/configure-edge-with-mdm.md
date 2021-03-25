@@ -10,16 +10,16 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer Microsoft Edge à l’aide de Gestion des périphériques mobiles.
-ms.openlocfilehash: dda35199f653b3dfb8f20b33b068c59621222b36
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: c9a725b5d0e820fb907150a8f83eeb17291b9f6a
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979687"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447548"
 ---
-# Configurer Microsoft Edge à l’aide de Gestion des périphériques mobiles
+# <a name="configure-microsoft-edge-using-mobile-device-management"></a>Configurer Microsoft Edge à l’aide de Gestion des périphériques mobiles
 
-Cet article explique comment configurer MicrosoftEdge sur Windows10 à l’aide de [Gestion des périphériques mobiles (GPM)](https://docs.microsoft.com/windows/client-management/mdm/) au moyen de l’[Ingestion ADMX](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). Cet article présente également:
+Cet article explique comment configurer MicrosoftEdge sur Windows10 à l’aide de [Gestion des périphériques mobiles (GPM)](/windows/client-management/mdm/) au moyen de l’[Ingestion ADMX](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). Cet article présente également:
 
 - Procédure de [création d’un identifiant OMA-URI (Open Mobile Alliance Uniform Resource Identifier) pour les stratégies MicrosoftEdge](#create-an-oma-uri-for-microsoft-edge-policies).
 - Procédure de [configuration de MicrosoftEdge dans Intune à l’aide de l’ingestion ADMX et d’un OMA-URI personnalisé](#configure-microsoft-edge-in-intune-using-admx-ingestion).
@@ -27,7 +27,7 @@ Cet article explique comment configurer MicrosoftEdge sur Windows10 à l’aide 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
-## Éléments prérequis
+## <a name="prerequisites"></a>Éléments prérequis
 
 Windows10, avec la configuration minimale requise suivante:
 
@@ -36,9 +36,9 @@ Windows10, avec la configuration minimale requise suivante:
 - Windows10, version1803 avec les mises à jour [KB4512509](https://support.microsoft.com/help/4512509/) et [KB4519978](https://support.microsoft.com/help/4519978) installées
 - Windows10, version1709 avec les mises à jour [KB4516071](https://support.microsoft.com/help/4516071/) et [KB4520006](https://support.microsoft.com/help/4520006) installées
 
-## Présentation
+## <a name="overview"></a>Présentation
 
-Vous pouvez configurer MicrosoftEdge sur Windows10 à l’aide de GPM avec votre fournisseur préféré de Gestion de la mobilité d’entreprise ou GPM qui prend en charge l’[Ingestion ADMX](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration).
+Vous pouvez configurer MicrosoftEdge sur Windows10 à l’aide de GPM avec votre fournisseur préféré de Gestion de la mobilité d’entreprise ou GPM qui prend en charge l’[Ingestion ADMX](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration).
 
 La configuration de MicrosoftEdge avec GPM est un processus en deux parties:
 
@@ -49,7 +49,7 @@ La configuration de MicrosoftEdge avec GPM est un processus en deux parties:
 
 2. [Création d’un OMA-URI pour une stratégie MicrosoftEdge](#create-an-oma-uri-for-microsoft-edge-policies).
 
-## Créer un OMA-URI pour les stratégies MicrosoftEdge
+## <a name="create-an-oma-uri-for-microsoft-edge-policies"></a>Créer un OMA-URI pour les stratégies MicrosoftEdge
 
 Les sections suivantes décrivent la procédure de création du chemin d’accès OMA-URI et la procédure de recherche et de définition de la valeur au format XML pour les stratégies de navigateur obligatoires et recommandées.
 
@@ -61,7 +61,7 @@ Il existe trois étapes pour définir l’OMA-URI:
 2. [Spécifier le type de données OMA-URI](#specify-the-data-type)
 3. [Définir la valeur OMA-URI](#set-the-value-for-a-browser-policy)
 
-### Créer le chemin d’accès OMA-URI
+### <a name="create-the-oma-uri-path"></a>Créer le chemin d’accès OMA-URI
 
 Utilisez la formule suivante comme guide pour la création des chemins d’accès OMA-URI. <br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`* <br/><br/>
@@ -71,9 +71,9 @@ Utilisez la formule suivante comme guide pour la création des chemins d’accè
 | \<ADMXIngestName> | Utilisez «Edge» ou ce que vous avez défini lors de l’ingestion du modèle d’administration. Par exemple, si vous avez utilisé «./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/MicrosoftEdge/Policy/EdgeAdmx», utilisez «MicrosoftEdge».<br/><br/> Le `<ADMXIngestionName>` doit correspondre à celui utilisé lors de l’ingestion du fichier ADMX. |
 | \<ADMXNamespace>  | «microsoft_edge» ou «microsoft_edge_recommended», selon que vous définissez une stratégie obligatoire ou recommandée. |
 | \<ADMXCategory>   | La catégorie «parentCategory» de la stratégie est définie dans le fichier ADMX. Omettez `<ADMXCategory>` si la stratégie n’est pas groupée (aucune «parentCategory» définie). |
-| \<PolicyName>     | Le nom de la stratégie est indiqué dans l’article [Référence de la stratégie du navigateur](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies). |
+| \<PolicyName>     | Le nom de la stratégie est indiqué dans l’article [Référence de la stratégie du navigateur](./microsoft-edge-policies.md). |
 
-#### Exemple de chemin d’URI:
+#### <a name="uri-path-example"></a>Exemple de chemin d’URI:
 
 Pour cet exemple, supposons que le nœud `<ADMXIngestName>` est nommé «Edge» et que vous définissez une stratégie obligatoire. Le chemin d’URI serait:<br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~<ADMXCategory>/<PolicyName>`*
@@ -89,22 +89,22 @@ Si la stratégie se trouve dans un groupe, procédez comme suit:
 4. Remplacez `<ADMXCategory>` par la valeur *ref* de l’attribut pour construire le chemin d’accès de l’URI. Le chemin d’URI serait:<br/><br/>
 *`/Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~Extensions/ExtensionInstallForcelist`*
 
-### Spécifier le type de données
+### <a name="specify-the-data-type"></a>Spécifier le type de données
 
 Le type de données OMA-URI est toujours «chaîne».
 
-### Définir la valeur d’une stratégie de navigateur
+### <a name="set-the-value-for-a-browser-policy"></a>Définir la valeur d’une stratégie de navigateur
 
-Cette section décrit comment définir la valeur, au format XML, pour chaque type de données. Accédez à la [Référence de stratégie du navigateur](https://docs.microsoft.com/deployedge/microsoft-edge-policies) pour rechercher le type de données de la stratégie.
+Cette section décrit comment définir la valeur, au format XML, pour chaque type de données. Accédez à la [Référence de stratégie du navigateur](./microsoft-edge-policies.md) pour rechercher le type de données de la stratégie.
 
 > [!NOTE]
 > Pour les données de type non booléen, la valeur commence toujours par `<enabled/>`.
 
-#### Données de type booléen
+#### <a name="boolean-data-type"></a>Données de type booléen
 
 Pour les stratégies qui sont des types booléens, utilisez `<enabled/>` ou `<disabled/>`.
 
-#### Données de type entier
+#### <a name="integer-data-type"></a>Données de type entier
 
 La valeur doit toujours commencer par l’élément `<enabled/>` suivi de `<data id="[valueName]" value="[decimal value]"/>`.
 
@@ -119,7 +119,7 @@ Pour rechercher le nom de la valeur et la valeur décimale d’une nouvelle page
 Pour ouvrir la page de nouvel onglet au démarrage, utilisez:<br>
 `<enabled/> <data id="RestoreOnStartup" value="5"/>`
 
-#### Données de type liste de chaînes
+#### <a name="list-of-strings-data-type"></a>Données de type liste de chaînes
 
 La valeur doit toujours commencer par l’élément `<enabled/>` suivi de `<data id="[listID]" value="[string 1];[string 2];[string 3]"/>`.
 
@@ -136,7 +136,7 @@ Pour rechercher le listID et définir la valeur pour bloquer une URL, procédez 
 Par exemple, pour bloquer l’accès à `contoso.com` et à `https://ssl.server.com`:<br>
 `<enabled/> <data id=" URLBlocklistDesc" value="contoso.com;https://ssl.server.com"/>`
 
-#### Type de données dictionnaire ou chaîne
+#### <a name="dictionary-or-string-data-type"></a>Type de données dictionnaire ou chaîne
 
 La valeur doit toujours commencer par l’élément `<enabled/>` suivi de `<data id="[textID]" value="[string]"/>`.
 
@@ -150,11 +150,11 @@ Pour rechercher le textID et définir la valeur définie par les paramètres ré
 Pour définir les paramètres régionaux sur «es-US» avec la stratégie «ApplicationLocaleValue»:<br>
 `<enabled/> <data id="ApplicationLocaleValue" value="es-US"/>`
 
-### Créer l’OMA-URI pour une stratégie recommandée
+### <a name="create-the-oma-uri-for-a-recommended-policies"></a>Créer l’OMA-URI pour une stratégie recommandée
 
 La définition du chemin d’URI pour les stratégies recommandées dépend de la stratégie que vous souhaitez configurer.
 
-#### Pour définir le chemin d’URI d’une stratégie recommandée
+#### <a name="to-define-the-uri-path-for-a-recommended-policy"></a>Pour définir le chemin d’URI d’une stratégie recommandée
 
 Utilisez la formule de chemin d’URI (*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`*) et les étapes suivantes pour définir le chemin d’accès de l’URI:
 
@@ -179,27 +179,27 @@ Utilisez la formule de chemin d’URI (*`./Device/Vendor/MSFT/Policy/Config/<ADM
 
 4. `<PolicyName>` est le nom de la stratégie, auquel est ajouté «_recommended».
 
-#### Exemples de chemin d’accès OMA-URI pour les stratégies recommandées
+#### <a name="oma-uri-path-examples-for-recommended-policies"></a>Exemples de chemin d’accès OMA-URI pour les stratégies recommandées
 
 Le tableau suivant présente des exemples de chemins d’accès OMA-URI pour les stratégies recommandées.
 
 |              Stratégie               |             OMA-URI                      |
 |-----------------------------------|------------------------------------------|
-| [RegisteredProtocolHandlers](https://docs.microsoft.com/deployedge/microsoft-edge-policies#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
-| [PasswordManagerEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
-| [PrintHeaderFooter](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
-| [SmartScreenEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
-| [HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
-| [ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
-| [FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
+| [RegisteredProtocolHandlers](./microsoft-edge-policies.md#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
+| [PasswordManagerEnabled](./microsoft-edge-policies.md#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
+| [PrintHeaderFooter](./microsoft-edge-policies.md#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
+| [SmartScreenEnabled](./microsoft-edge-policies.md#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
+| [HomePageLocation](./microsoft-edge-policies.md#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
+| [ShowHomeButton](./microsoft-edge-policies.md#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
+| [FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
 
-### Exemples d’OMA-URI
+### <a name="oma-uri-examples"></a>Exemples d’OMA-URI
 
 Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 
-#### Exemples de données de type booléen
+#### <a name="boolean-data-type-examples"></a>Exemples de données de type booléen
 
-*[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ShowHomeButton):*
+*[ShowHomeButton](./microsoft-edge-policies.md#ShowHomeButton):*
 
 | Champ   | Valeur                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -208,7 +208,7 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | type    | Chaîne                                                                               |
 | Valeur   | `<enabled/>`                                                                          |
 
-*[DefaultSearchProviderEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultSearchProviderEnabled):*
+*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#DefaultSearchProviderEnabled):*
 
 | Champ   | Valeur                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -217,9 +217,9 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | type    | Chaîne                                                                               |
 | Valeur   | `<disable/>`                                                                          |
 
-### Exemples de données de type entier
+### <a name="integer-data-type-examples"></a>Exemples de données de type entier
 
-*[AutoImportAtFirstRun](https://docs.microsoft.com/deployedge/microsoft-edge-policies#AutoImportAtFirstRun):*
+*[AutoImportAtFirstRun](./microsoft-edge-policies.md#AutoImportAtFirstRun):*
 
 | Champ   | Valeur                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -228,7 +228,7 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | type    | Chaîne                                                                               |
 | Valeur   | `<enabled/><data id="AutoImportAtFirstRun" value="1"/>`                             |
 
-*[DefaultImagesSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultImagesSetting):*
+*[DefaultImagesSetting](./microsoft-edge-policies.md#DefaultImagesSetting):*
 
 | Champ   | Valeur                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -237,7 +237,7 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | type    | Chaîne                                                                               |
 | Valeur   | `<enabled/><data id="DefaultImagesSetting" value="2"/>`                             |
 
-*[DiskCacheSize](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DiskCacheSize):*
+*[DiskCacheSize](./microsoft-edge-policies.md#DiskCacheSize):*
 
 | Champ   | Valeur                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -246,9 +246,9 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | type    | Chaîne                                                                               |
 | Valeur   | `<enabled/><data id="DiskCacheSize" value="1000000"/>`                               |
 
-#### Exemples de données de type liste de chaînes
+#### <a name="list-of-strings-data-type-examples"></a>Exemples de données de type liste de chaînes
 <!--
-*[NotificationsAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#NotificationsAllowedForUrls):*
+*[NotificationsAllowedForUrls](./microsoft-edge-policies.md#NotificationsAllowedForUrls):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -257,7 +257,7 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | Type    | String                                                                               |
 | Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                               |
 -->
-*[RestoreOnStartupURLS](https://docs.microsoft.com/deployedge/microsoft-edge-policies#RestoreOnStartupURLS):*
+*[RestoreOnStartupURLS](./microsoft-edge-policies.md#RestoreOnStartupURLS):*
 
 | Champ   | Valeur                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -266,7 +266,7 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | Type    | Chaîne                                                                               |
 | Valeur   | `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com"/>`<br>Pour les éléments de listes multiples: `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com&#xF000;2&#xF000;http://www.microsoft.com"/>`  |
 
-*[ExtensionInstallForcelist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ExtensionInstallForcelist):*
+*[ExtensionInstallForcelist](./microsoft-edge-policies.md#ExtensionInstallForcelist):*
 
 | Champ   | Valeur                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -275,9 +275,9 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | Type    | Chaîne                                                                               |
 | Valeur   | `<enabled/><data id="ExtensionInstallForcelistDesc" value="1&#xF000;gbchcmhmhahfdphkhkmpfmihenigjmpp;https://extensionwebstorebase.edgesv.net/v1/crx"/>`                               |
 
-#### Exemple de données de type dictionnaire et chaîne
+#### <a name="dictionary-and-string-data-type-example"></a>Exemple de données de type dictionnaire et chaîne
 
-*[ProxyMode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ProxyMode):*
+*[ProxyMode](./microsoft-edge-policies.md#ProxyMode):*
 
 | Champ   | Valeur                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -286,9 +286,9 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | Type    | Chaîne                                                                               |
 | Valeur   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
-## Configurer MicrosoftEdge dans Intune à l’aide de l’ingestion ADMX
+## <a name="configure-microsoft-edge-in-intune-using-admx-ingestion"></a>Configurer MicrosoftEdge dans Intune à l’aide de l’ingestion ADMX
 
-La méthode recommandée pour configurer MicrosoftEdge avec MicrosoftIntune consiste à utiliser le profil de modèles d’administration comme décrit dans [Configurer les paramètres de stratégie MicrosoftEdge avec MicrosoftIntune](https://docs.microsoft.com/deployedge/configure-edge-with-intune). Si vous souhaitez évaluer une stratégie qui n’est actuellement pas disponible dans les modèles d’administration MicrosoftEdge dans Intune, vous pouvez configurer MicrosoftEdge avec des [paramètres personnalisés pour les appareils Windows10 dans Intune](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10).
+La méthode recommandée pour configurer MicrosoftEdge avec MicrosoftIntune consiste à utiliser le profil de modèles d’administration comme décrit dans [Configurer les paramètres de stratégie MicrosoftEdge avec MicrosoftIntune](./configure-edge-with-intune.md). Si vous souhaitez évaluer une stratégie qui n’est actuellement pas disponible dans les modèles d’administration MicrosoftEdge dans Intune, vous pouvez configurer MicrosoftEdge avec des [paramètres personnalisés pour les appareils Windows10 dans Intune](/intune/configuration/custom-settings-windows-10).
 
 Cette section décrit comment fournir des ressources de multiplexage aux pilotes clients.
 
@@ -298,7 +298,7 @@ Cette section décrit comment fournir des ressources de multiplexage aux pilotes
 > [!IMPORTANT]
 > Il est recommandé d’utiliser un profil OMA-URI personnalisé et un profil de modèles d’administration pour configurer le même paramètre MicrosoftEdge dans Intune. Si vous déployez la même stratégie à l’aide d’un OMA-URI personnalisé et d’un profil de modèle d’administration, mais avec des valeurs différentes, les utilisateurs obtiendront des résultats imprévisibles. Nous vous recommandons vivement de supprimer votre profil OMA-URI avant d’utiliser un profil de modèles d’administration.
 
-### Ingérer le fichier ADMX MicrosoftEdge dans Intune
+### <a name="ingest-the-microsoft-edge-admx-file-into-intune"></a>Ingérer le fichier ADMX MicrosoftEdge dans Intune
 
 Cette section décrit la procédure d’ingestion du modèle d’administration MicrosoftEdge (**fichier msedge.admx**) dans Intune.
 
@@ -347,7 +347,7 @@ Pour ingérer le fichier ADMX, procédez comme suit:
 > [!NOTE]
 > You can use the preceding steps to ingest the msedgeupate.admx policy template file.
 -->
-### Définir une stratégie à l’aide d’un OMA-URI personnalisé dans Intune
+### <a name="set-a-policy-using-custom-oma-uri-in-intune"></a>Définir une stratégie à l’aide d’un OMA-URI personnalisé dans Intune
 
 > [!NOTE]
 > Avant d’utiliser les étapes de cette section, vous devez appliquer les étapes présentées dans [Ingérer le fichier ADMX MicrosoftEdge dans Intune](#ingest-the-microsoft-edge-admx-file-into-intune).
@@ -379,17 +379,17 @@ Pour ingérer le fichier ADMX, procédez comme suit:
 8. Sous **Paramètres OMA-URI personnalisés**, cliquez sur **OK**.
 9. Dans le profil «**Configuration ingérée de MicrosoftEdge ADMX - Propriétés**» (ou le nom que vous avez utilisé), cliquez sur **Enregistrer**.
 
-Une fois le profil créé et les propriétés définies, vous devez [attribuer le profil dans MicrosoftIntune](https://docs.microsoft.com/intune/configuration/device-profile-assign).
+Une fois le profil créé et les propriétés définies, vous devez [attribuer le profil dans MicrosoftIntune](/intune/configuration/device-profile-assign).
 
-#### Vérifiez que la stratégie a été créée.
+#### <a name="confirm-that-the-policy-was-set"></a>Vérifiez que la stratégie a été créée.
 
 Procédez comme suit pour confirmer que la stratégie MicrosoftEdge utilise le profil que vous avez créé. (Laissez à MicrosoftIntune le temps de propager la stratégie sur un périphérique que vous avez attribué dans l’exemple de profil «Configuration ingérée de MicrosoftEdge ADMX».)
 
 1. Ouvrez MicrosoftEdge et accédez à *edge://policy*.
 2. Sur la page **Stratégies**, vérifiez si la stratégie que vous avez définie dans le profil est répertoriée.
-3. Si ce n’est pas le cas, consultez [Diagnostiquer les échecs GPM dans Windows10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) ou [Résoudre les problèmes liés à un paramètre de stratégie](#troubleshoot-a-policy-setting).
+3. Si ce n’est pas le cas, consultez [Diagnostiquer les échecs GPM dans Windows10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) ou [Résoudre les problèmes liés à un paramètre de stratégie](#troubleshoot-a-policy-setting).
 
-#### Résoudre les problèmes liés à un paramètre de stratégie
+#### <a name="troubleshoot-a-policy-setting"></a>Résoudre les problèmes liés à un paramètre de stratégie
 
 Si une stratégie MicrosoftEdge ne prend pas effet, procédez comme suit:
 
@@ -398,13 +398,13 @@ Ouvrez la page *edge://policy* sur le périphérique cible (un périphérique au
 - Vérifiez que la stratégie est bien dans le registre et qu’elle est correcte. Sur le périphérique cible, ouvrez l’Éditeur du Registre Windows10 (**touche Windows +r**, entrez «*regedit*», puis appuyez sur **Entrée**.) Vérifiez que la stratégie est correctement définie dans le chemin d’accès *\Software\Policies\ Microsoft\Edge*. Si vous ne trouvez pas la stratégie dans le chemin d’accès attendu, cela signifie qu’elle n’a pas été envoyée correctement au périphérique.
 - Vérifiez que le chemin d’accès OMA-URI est correct et que la valeur est une chaîne XML valide. Si l’une de ces conditions est incorrecte, la stratégie ne sera pas envoyée vers l’appareil cible.
 
-Pour plus de conseils sur la résolution de problèmes, consultez [Installer MicrosoftIntune](https://docs.microsoft.com/intune/fundamentals/setup-steps) et [Synchroniser les périphériques](https://docs.microsoft.com/intune/remote-actions/device-sync).
+Pour plus de conseils sur la résolution de problèmes, consultez [Installer MicrosoftIntune](/intune/fundamentals/setup-steps) et [Synchroniser les périphériques](/intune/remote-actions/device-sync).
 
-## Articles associés
+## <a name="see-also"></a>Articles associés
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Configurer les paramètres de stratégie MicrosoftEdge avec MicrosoftIntune](configure-edge-with-intune.md)
-- [Gestion des périphériques mobiles](https://docs.microsoft.com/windows/client-management/mdm/)
-- [Utiliser les paramètres personnalisés pour les appareils Windows10 dans Intune](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10)
-- [Configuration de stratégie d’applications Win32 et Pont du bureau](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
-- [Fonctionnement des stratégies ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)
+- [Gestion des périphériques mobiles](/windows/client-management/mdm/)
+- [Utiliser les paramètres personnalisés pour les appareils Windows10 dans Intune](/intune/configuration/custom-settings-windows-10)
+- [Configuration de stratégie d’applications Win32 et Pont du bureau](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
+- [Fonctionnement des stratégies ADMX](/windows/client-management/mdm/understanding-admx-backed-policies)

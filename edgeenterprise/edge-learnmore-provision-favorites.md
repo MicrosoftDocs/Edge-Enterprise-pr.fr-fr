@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer les favoris pour Microsoft Edge
-ms.openlocfilehash: 94bd42573bdbc0fd1b971ded1c82e5fe152acc54
-ms.sourcegitcommit: 854dd73eb168960c0eb4b483f81a8efe88806a64
+ms.openlocfilehash: 67627fa10806435d76cecae00f79867bc5af03df
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "11088694"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447598"
 ---
-# Configurer les favoris pour Microsoft Edge
+# <a name="provision-favorites-for-microsoft-edge"></a>Configurer les favoris pour Microsoft Edge
 
 Sur la base des commentaires des clients, nous avons apporté des améliorations aux favoris de mise en service. À partir de la version85 de Microsoft Edge, les administrateurs n’ont plus besoin de créer manuellement un fichier pour configurer les favoris. Les administrateurs peuvent ajouter des favoris et dossiers à l’aide de l’interface utilisateur Microsoft Edge pour générer un fichier qui peut être exporté vers une stratégie de groupe.
 
-Cet article décrit la mise en service d’un ensemble de favoris et de dossiers pour votre organisation. Vous pouvez utiliser la stratégie [configurer les favoris](https://docs.microsoft.com//DeployEdge/microsoft-edge-policies#configure-favorites) pour configurer les favoris et les dossiers.
+Cet article décrit la mise en service d’un ensemble de favoris et de dossiers pour votre organisation. Vous pouvez utiliser la stratégie [configurer les favoris](//DeployEdge/microsoft-edge-policies#configure-favorites) pour configurer les favoris et les dossiers.
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version85 ou ultérieure.
 
-## Conditions préalables et recommandations
+## <a name="prerequisites-and-recommendations"></a>Conditions préalables et recommandations
 
 - Microsoft Edge version85 avec le modèle d’administration approprié installé pour les stratégies de groupe.
 - Nous vous recommandons d’utiliser un nouveau profil dans Microsoft Edge pour configurer ces favoris. Tous les favoris enregistrés avec le profil sont inclus dans l’exportation.  
 
-## Configurer les favoris et les dossiers
+## <a name="provision-favorites-and-folders"></a>Configurer les favoris et les dossiers
 
 Procédez comme suit pour mettre en service vos favoris et dossiers pour vos utilisateurs.
 
@@ -66,6 +66,6 @@ Procédez comme suit pour mettre en service vos favoris et dossiers pour vos uti
 
 7. Cliquez sur **OK** ou sur **Appliquer** pour sécuriser les paramètres de stratégie.
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

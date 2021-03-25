@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge et les téléchargements de contenu mixte
-ms.openlocfilehash: 57da17a8684b97aad88e7837ff9d070f6862357b
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 13cc9d935dfe415039078b2ca794945b4fa2d1a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979751"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447268"
 ---
-# Découvrez Microsoft Edge et les téléchargements de contenu mixte
+# <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Découvrez Microsoft Edge et les téléchargements de contenu mixte
 
 Cet article décrit les téléchargements de contenu mixte et leur traitement par Microsoft Edge.
 
 >[!NOTE]
 >Cet article concerne MicrosoftEdge version85 ou ultérieure.
 
-## Quels sont les téléchargements de contenu mixte?
+## <a name="what-are-mixed-content-downloads"></a>Quels sont les téléchargements de contenu mixte?
 
 Un téléchargement de contenu mixte se produit lorsque vous démarrez un téléchargement à partir d’une page HTML qui a été chargée sur une connexion HTTPS sécurisée, mais que l’une des conditions suivantes existe:
 
@@ -33,7 +33,7 @@ Un téléchargement de contenu mixte se produit lorsque vous démarrez un télé
 
 Les deux scénarios sont un contenu mixte, car la demande a été effectuée à l’aide d'une connexion HTTPS sécurisée et que les contenus HTTP et HTTPS sont impliqués dans l'accession à la destination finale du téléchargement. Les navigateurs modernes affichent des avertissements sur ce type de contenu pour indiquer à l’utilisateur que ce téléchargement ne peut pas être transféré de manière non sécurisée, même si la page d’origine consultée était sécurisée.
 
-## Télécharger des avertissements et options de l'utilisateur
+## <a name="download-warnings-and-user-options"></a>Télécharger des avertissements et options de l'utilisateur
 
 L’avertissement de téléchargement permet aux utilisateurs de savoir que le fichier qu’ils téléchargent peut être lu par des pirates sur leur réseau. Cet avertissement permet à un utilisateur de prendre une décision éclairée sur le téléchargement ou non du fichier.
 
@@ -56,17 +56,17 @@ Si un utilisateur décide de conserver le téléchargement, il est invité à co
 
  ![Choisissez Mode InternetExplorer](./media/edge-learnmore-mixed-content-downloads/edge-mixed-content-download-override.png)
 
-## Stratégies d'appui
+## <a name="supporting-policies"></a>Stratégies d'appui
 
-Les entreprises souhaitant exclure le blocage de contenu mixte de certains sites web peuvent utiliser la stratégie [InsecureContentAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#insecurecontentallowedforurls) pour le faire.
+Les entreprises souhaitant exclure le blocage de contenu mixte de certains sites web peuvent utiliser la stratégie [InsecureContentAllowedForUrls](./microsoft-edge-policies.md#insecurecontentallowedforurls) pour le faire.
 
-## Licence de contenu
+## <a name="content-license"></a>Licence de contenu
 
 > [!NOTE]
 > Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Chromium.org et utilisé conformément aux conditions décrites dans la [Licence internationale Creative Commons Attribution4.0](http://creativecommons.org/licenses/by/4.0/). La page d’origine est disponible [ici](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce travail est concédé sous une <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence internationale Creative Commons Attribution4.0</a>.
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

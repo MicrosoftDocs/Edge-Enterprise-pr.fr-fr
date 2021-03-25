@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Apprenez les fonctionnalités du mode kiosque et comment configurer les options du mode kiosque de Microsoft Edge.
-ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 9d76bfcaebeaf56e627a401cc4f0375bce9d17a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442484"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448128"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurer le mode kiosque Microsoft Edge
 
@@ -48,17 +48,17 @@ Le tableau suivant répertorie les fonctionnalités prise en charge par le mode 
 |-|-|-|-|-|
 |Navigation InPrivate|Y|Y|89|Y|
 |Réinitialiser en période d’inactivité|Y|Y|89|Y|
-|[Barre d’adresses en lecture seule](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (stratégie) |N|Y |89|N|
-|[Supprimer les téléchargements à la sortie](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (stratégie)  | Y|Y |89|N|
+|[Barre d’adresses en lecture seule](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (stratégie) |N|Y |89|N|
+|[Supprimer les téléchargements à la sortie](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (stratégie)  | Y|Y |89|N|
 |F11 bloqué (entrée/sortie en plein écran) | Y | Y | 89 |Y|
 |F12 bloqué (lancer les outils de développement) | Y | Y | 89 |Y|
 | Prise en charge de plusieurs onglets | N| Y| 89|Y|
-|[Autoriser la prise en charge des URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (stratégie)|Y|Y|89|N|
-|[Bloquer la prise en charge des URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (stratégie)|Y|Y|89|N|
-|[Afficher le bouton d’accueil](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (stratégie)|N|Y|89|Y|
-|[Gérer les favoris](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (stratégie)|N|Y|89|Y|
-|[Activer l’imprimante](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (stratégie)|Y|Y|89|Y|
-|[Configurer l’URL de la page Nouvel onglet](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (stratégie)|N|Y||Y|
+|[Autoriser la prise en charge des URL](./microsoft-edge-policies.md#urlallowlist) (stratégie)|Y|Y|89|N|
+|[Bloquer la prise en charge des URL](./microsoft-edge-policies.md#urlblocklist) (stratégie)|Y|Y|89|N|
+|[Afficher le bouton d’accueil](./microsoft-edge-policies.md#showhomebutton) (stratégie)|N|Y|89|Y|
+|[Gérer les favoris](./microsoft-edge-policies.md#managedfavorites) (stratégie)|N|Y|89|Y|
+|[Activer l’imprimante](./microsoft-edge-policies.md#printingenabled) (stratégie)|Y|Y|89|Y|
+|[Configurer l’URL de la page Nouvel onglet](./microsoft-edge-policies.md#newtabpagelocation) (stratégie)|N|Y||Y|
 |Bouton de fin de session * | N| Y| 89|Y|
 |Toutes les URL MicrosoftEdge internes sont bloquées, à l’exception de *edge://downloads* et *edge://print* |N|Y|89|Y|
 | CTRL+N bloqué (ouvrir une nouvelle fenêtre) * | Y | Y | 89 |Y|
@@ -66,7 +66,7 @@ Le tableau suivant répertorie les fonctionnalités prise en charge par le mode 
 |Paramètres et plus (...) afficheront uniquement les options requises  |Y |Y |89 |Y|
 |Restreindre le lancement d’autres applications à partir du navigateur|Y|Y|90/91|Y|
 |Verrouillage des paramètres d’impression de l’interface utilisateur|Y|Y|90/91|Y|
-|[Définir la page Nouvel onglet comme page d’accueil](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (stratégie)|-|-|À déterminer|Y|
+|[Définir la page Nouvel onglet comme page d’accueil](./microsoft-edge-policies.md#homepageisnewtabpage) (stratégie)|-|-|À déterminer|Y|
 
 > [!NOTE]
 > Les fonctions suivies d'un « * » ne sont activées que dans un scénario d'accès assigné à une seule application.
@@ -124,25 +124,25 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ## <a name="support-policies-for-kiosk-mode"></a>Stratégies de support pour le mode plein écran
 
-Utilisez l’une des stratégies MicrosoftEdge répertoriées dans le tableau suivant pour améliorer l’expérience plein écran pour le type de mode plein écran MicrosoftEdge que vous configurez. Pour en savoir plus sur ces stratégies, voir [MicrosoftEdge – Référence de stratégie de navigateur.](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
+Utilisez l’une des stratégies MicrosoftEdge répertoriées dans le tableau suivant pour améliorer l’expérience plein écran pour le type de mode plein écran MicrosoftEdge que vous configurez. Pour en savoir plus sur ces stratégies, voir [MicrosoftEdge – Référence de stratégie de navigateur.](./microsoft-edge-policies.md)
 
 > [!NOTE]
 > La configuration des stratégies n’est pas limitée aux stratégies répertoriées dans le tableau suivant, mais des stratégies supplémentaires doivent être testées pour s’assurer que les fonctionnalités du mode plein écran ne sont pas affectées.
 
 |Stratégie de groupe|Connexion numérique/interactive|Navigation publique à application unique|
 |--|--|--|
-|[Impression](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printing-policies) | Y|Y |
-|[HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation) |N | Y|
-|[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | Y|
-|[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |Y |
-|[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |Y |
-|[URLAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
-|[URLBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
-|[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | Y|
-|[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
-|[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
-|[Paramètres SmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |Y |Y |
-|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|Y|Y|
+|[Impression](./microsoft-edge-policies.md#printing-policies) | Y|Y |
+|[HomePageLocation](./microsoft-edge-policies.md#homepagelocation) |N | Y|
+|[ShowHomeButton](./microsoft-edge-policies.md#showhomebutton) |N | Y|
+|[NewTabPageLocation](./microsoft-edge-policies.md#newtabpagelocation) |N |Y |
+|[FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled) |N |Y |
+|[URLAllowlist](./microsoft-edge-policies.md#urlallowlist) |Y |Y |
+|[URLBlocklist](./microsoft-edge-policies.md#urlblocklist) |Y | Y|
+|[ManagedSearchEngines](./microsoft-edge-policies.md#managedsearchengines) |N | Y|
+|[UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed) |N | Y|
+|[VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) | N|Y |
+|[Paramètres SmartScreen](./microsoft-edge-policies.md#smartscreen-settings-policies) |Y |Y |
+|[EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)|Y|Y|
 
 ## <a name="microsoft-edge-with-assigned-access"></a>MicrosoftEdge avec accès affecté
 
@@ -154,11 +154,11 @@ Le mode plein écran de Microsoft Edge avec une seule application à accès affe
 
 **Comment puis-je obtenir l’aperçu de Windows Insider?**
 
-Si vous souhaitez en savoir plus sur l’installation d’une version d'évaluation de Windows10 Insider sur un PC, veuillez consulter les instructions de la rubrique  [Prise en main des versions d'évaluation de Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+Si vous souhaitez en savoir plus sur l’installation d’une version d'évaluation de Windows10 Insider sur un PC, veuillez consulter les instructions de la rubrique  [Prise en main des versions d'évaluation de Windows 10 Insider Preview](/windows-insider/get-started).
 
 ### <a name="multi-app-kiosk"></a>Borne à plusieurs applications
 
-Vous pouvez exécuter MicrosoftEdge avec un [accès attribué à plusieurs applications](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) sous Windows10. Cela équivaut au type de mode plein écran «Navigation normale» de l’ancienne version de Microsoft Edge . Pour configurer MicrosoftEdge avec un accès affecté à plusieurs applications, suivez les instructions sur la configuration d’une borne [multi-application](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (L’AUMID du canal stable de MicrosoftEdge est **MSEdge**).
+Vous pouvez exécuter MicrosoftEdge avec un [accès attribué à plusieurs applications](/windows/configuration/lock-down-windows-10-to-specific-apps) sous Windows10. Cela équivaut au type de mode plein écran «Navigation normale» de l’ancienne version de Microsoft Edge . Pour configurer MicrosoftEdge avec un accès affecté à plusieurs applications, suivez les instructions sur la configuration d’une borne [multi-application](/windows/configuration/lock-down-windows-10-to-specific-apps). (L’AUMID du canal stable de MicrosoftEdge est **MSEdge**).
 
 Lorsque vous utilisez MicrosoftEdge avec un accès affecté à plusieurs applications, vous pouvez configurer MicrosoftEdge Kiosk pour utiliser les stratégies de navigateur[Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) afin de configurer l’expérience de navigation afin de répondre à vos besoins uniques.
 
@@ -166,7 +166,7 @@ Lorsque vous utilisez MicrosoftEdge avec un accès affecté à plusieurs applica
 
 Les paramètres Windows constituent le moyen le plus simple de configurer un ou deux appareils borne à une seule application. Procédez comme suit pour configurer un ordinateur borne à une seul application.
 
-1. Installez la version la plus récente de Windows10 Insider Preview, version 20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+1. Installez la version la plus récente de Windows10 Insider Preview, version 20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows10 Insider Preview](/windows-insider/get-started).
 2. Pour tester les dernières fonctionnalités, vous pouvez télécharger la dernière version bêta de [Microsoft Edge](https://www.microsoftedgeinsider.com/download), version89 ou supérieure.
 3. Sur l’ordinateur de borne, ouvrez Paramètres Windows, puis tapez «borne» dans le champ de recherche. Sélectionnez  **Configurer une borne (accès attribué)**, illustré dans la capture d’écran suivante pour ouvrir la boîte de dialogue de création de la borne.
 
@@ -216,18 +216,18 @@ Avec la publication de cette version d’évaluation du mode plein écran, nous 
 
 Pour l’instant, nous ne supportons pas les fonctionnalités suivantes et vous recommandons de les désactiver:
 
-- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
-- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
-- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
-- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
-- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
-- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
-- [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
-- [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
-- [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
-- [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
+- [InPrivateModeAvailability](./microsoft-edge-policies.md#inprivatemodeavailability)
+- [IsolateOrigins](./microsoft-edge-policies.md#isolateorigins)
+- [ManagedFavorites](./microsoft-edge-policies.md#managedfavorites)
+- [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
+- [DefaultPopupsSetting](./microsoft-edge-policies.md#defaultpopupssetting)
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
+- [InternetExplorerIntegrationLevel](./microsoft-edge-policies.md#internetexplorerintegrationlevel)
+- [Extensions](./microsoft-edge-policies.md#extensions-policies)
+- [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 
 ## <a name="roadmap"></a>Feuille de route
 
@@ -245,5 +245,5 @@ Nous allons ajouter la prise en charge et les fonctionnalités suivantes:
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)
-- [Configurer des bornes et enseignes numériques dans les éditions Windows de bureau](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Configurer des bornes et enseignes numériques dans les éditions Windows de bureau](/windows/configuration/kiosk-methods)
 - [Planifier votre transition en mode plein écran](microsoft-edge-kiosk-mode-transition-plan.md)

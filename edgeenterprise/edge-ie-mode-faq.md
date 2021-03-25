@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Forum aux questions et résolution des problèmes pour Microsoft Edge avec le mode IE
-ms.openlocfilehash: 565af265811e0e4814d82859f638ae9abcd0a014
-ms.sourcegitcommit: ef30fe37d0d115af0d4402c9005f5d0d1ba54b6c
+ms.openlocfilehash: f5279caddb5d3dfabaf04be6bd927f7095be1fc9
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11431811"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447728"
 ---
 # <a name="ie-mode-faq"></a>FAQ sur le mode IE
 
@@ -41,7 +41,7 @@ Vous pouvez obtenir des informations de diagnostic en mode InternetExplorer sous
 
 ### <a name="error-message-to-open-this-page-in-internet-explorer-mode-reinstall-microsoft-edge-with-administrator-privileges"></a>Message d’erreur: «Pour ouvrir cette page en mode InternetExplorer, réinstallez MicrosoftEdge avec des privilèges d’administrateur.»
 
-Vous pouvez rencontrer cette erreur si vous n’avez pas toutes les mises à jour Windows requises. Consultez les conditions requises listées dans [À propos du mode IE](https://docs.microsoft.com/deployedge/edge-ie-mode) pour connaître les versions requises de Windows et MicrosoftEdge.
+Vous pouvez rencontrer cette erreur si vous n’avez pas toutes les mises à jour Windows requises. Consultez les conditions requises listées dans [À propos du mode IE](./edge-ie-mode.md) pour connaître les versions requises de Windows et MicrosoftEdge.
 
 Si vous avez déjà installé toutes les mises à jour Windows requises, vous pouvez rencontrer cette erreur dans les cas suivants:
 
@@ -66,7 +66,7 @@ Vous pouvez rencontrer cette erreur si vous procédez au débogage distant et ac
 
 ### <a name="error-message-error-could-not-retrieve-emie-site-list"></a>Message d’erreur: «Erreur: La liste des sites EMIE n’a pas pu être récupérée.»
 
-Vous pouvez voir cette erreur sur la page *edge://compat/enterprise* indiquant que le téléchargement de la liste des sites a échoué. À partir de La version87 de MicrosoftEdge, lorsque les cookies sont bloqués pour les demandes tierces à l’aide de la stratégie [BlockThirdPartyCookies,](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) l’authentification HTTP est également interdite. Vous pouvez autoriser les cookies pour le domaine spécifique hébergeant votre liste des sites en mode Entreprise à l’aide de la stratégie [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) pour vous assurer que les téléchargements de listes de sites sont réussis.
+Vous pouvez voir cette erreur sur la page *edge://compat/enterprise* indiquant que le téléchargement de la liste des sites a échoué. À partir de La version87 de MicrosoftEdge, lorsque les cookies sont bloqués pour les demandes tierces à l’aide de la stratégie [BlockThirdPartyCookies,](./microsoft-edge-policies.md#blockthirdpartycookies) l’authentification HTTP est également interdite. Vous pouvez autoriser les cookies pour le domaine spécifique hébergeant votre liste des sites en mode Entreprise à l’aide de la stratégie [CookiesAllowedForURLs](./microsoft-edge-policies.md#cookiesallowedforurls) pour vous assurer que les téléchargements de listes de sites sont réussis.
 
 ## <a name="frequently-asked-questions"></a>Forum Aux Questions
 
@@ -104,5 +104,5 @@ Notez que cette fonctionnalité nécessite les mises à jour de système d’exp
 ## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [À propos du mode Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Informations supplémentaires sur le mode entreprise](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [À propos du mode Internet Explorer](./edge-ie-mode.md)
+- [Informations supplémentaires sur le mode entreprise](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

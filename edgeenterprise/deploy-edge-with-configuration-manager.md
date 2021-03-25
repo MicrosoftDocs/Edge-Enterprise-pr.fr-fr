@@ -10,33 +10,33 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Découvrez comment déployer Microsoft Edge avec SystemCenter ConfigurationManager (SCCM).
-ms.openlocfilehash: be14f2db3b28b7585bfad1706b9f82209235df0a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 64b26412c4596a9514227d41d1a4e753a66ed057
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979727"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447828"
 ---
-# Déployer Microsoft Edge à l’aide de SystemCenter ConfigurationManager
+# <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>Déployer Microsoft Edge à l’aide de SystemCenter ConfigurationManager
 
 Cet article explique comment automatiser un déploiement de MicrosoftEdge à l’aide de SystemCenter ConfigurationManager (SCCM).
 
 >[!NOTE]
 >Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
-## Avant de commencer
+## <a name="before-you-begin"></a>Avant de commencer
 
-Consultez les informations dans [Présentation de la gestion d’applications dans Configuration Manager](https://docs.microsoft.com/sccm/apps/understand/introduction-to-application-management). Cet article relatif à la gestion des applications vous aidera à mieux appréhender la terminologie utilisée dans cet article. Il vous aidera également à préparer votre site à l’installation d’applications.
+Consultez les informations dans [Présentation de la gestion d’applications dans Configuration Manager](/sccm/apps/understand/introduction-to-application-management). Cet article relatif à la gestion des applications vous aidera à mieux appréhender la terminologie utilisée dans cet article. Il vous aidera également à préparer votre site à l’installation d’applications.
 
 Téléchargez les fichiers d’installation de MicrosoftEdge (**MicrosoftEdgeDevEnterpriseX64.msi** et/ou **MicrosoftEdgeDevEnterpriseX86.msi**) sur la [page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise).
 
 Enregistrez les fichiers d’installation de MicrosoftEdge dans un emplacement réseau accessible.
 
-## Créez la liste des langues de l’application.
+## <a name="create-the-application"></a>Créez la liste des langues de l’application.
 
 Vous allez créer l’application à l’aide d’un Assistant Gestionnaire de configuration.
 
-### Démarrer l’Assistant Création d’une application et créer l’application  
+### <a name="start-the-create-application-wizard-and-create-the-application"></a>Démarrer l’Assistant Création d’une application et créer l’application  
 
 1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.  
 
@@ -85,7 +85,7 @@ La capture d’écran suivante illustre l’exemple utilisé pour cet article.
 
 ![Applications](./media/edge-ent-deployment-sccm/edge-ent-create-app-8.png)
 
-## Modifier les propriétés de l’application et les paramètres de déploiement
+## <a name="change-application-properties-and-deployment-settings"></a>Modifier les propriétés de l’application et les paramètres de déploiement
 
 Après avoir créé une application, vous pouvez affiner les paramètres d’application, le cas échéant. Pour consulter les propriétés de l’application:
 
@@ -94,7 +94,7 @@ Après avoir créé une application, vous pouvez affiner les paramètres d’app
 
    ![Configurer les propriétés de l’application](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-1.png)
 
- Dans la boîte de dialogue **Propriétés de l’application <nom de l’application\>**, vous verrez une vue avec onglets des éléments que vous pouvez configurer pour modifier le comportement de l’application. Pour plus d’informations sur les paramètres que vous pouvez configurer, consultez [Créer des applications](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications).
+ Dans la boîte de dialogue **Propriétés de l’application <nom de l’application\>**, vous verrez une vue avec onglets des éléments que vous pouvez configurer pour modifier le comportement de l’application. Pour plus d’informations sur les paramètres que vous pouvez configurer, consultez [Créer des applications](/sccm/apps/deploy-use/create-applications).
 
 Pour cet exemple, vous allez modifier certaines propriétés du type de déploiement de l’application. Pour modifier les propriétés de déploiement:
 
@@ -104,7 +104,7 @@ Pour cet exemple, vous allez modifier certaines propriétés du type de déploie
 
    ![Modifier le type de déploiement](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-2.png)
 
-### Ajouter une condition requise au type de déploiement
+### <a name="add-a-requirement-to-the-deployment-type"></a>Ajouter une condition requise au type de déploiement
 
  Les conditions requises spécifient les critères à remplir pour qu’une application soit installée sur un périphérique. Vous pouvez choisir parmi les conditions requises intégrées ou vous pouvez créer votre propre configuration. Par exemple, vous pouvez ajouter une condition stipulant que l’application sera installée uniquement sur les PC exécutant Windows10 **x86** ou **x64**, en fonction de l’architecture du processeur cible du fichier d’installation. Dans cet exemple, vous allez spécifier Windows10 **x86**.
 
@@ -132,12 +132,12 @@ Pour cet exemple, vous allez modifier certaines propriétés du type de déploie
 
 4. Cliquez sur **OK** pour fermer chaque page de propriétés ouverte et revenir à la liste **Applications** dans la console Configuration Manager.  
 
-## Ajouter le contenu de l’application à un point de distribution  
+## <a name="add-the-application-content-to-a-distribution-point"></a>Ajouter le contenu de l’application à un point de distribution  
 
 Pour déployer l’application mise à jour sur des PC, assurez-vous que le contenu de l’application est copié sur un point de distribution. Les PC accèdent au point de distribution pour installer l’application.  
 
 >[!TIP]
->Pour en savoir plus sur les points de distribution et la gestion de contenu dans Configuration Manager, consultez [Déployer et gérer le contenu pour SystemCenter ConfigurationManager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/deploy-and-manage-content).  
+>Pour en savoir plus sur les points de distribution et la gestion de contenu dans Configuration Manager, consultez [Déployer et gérer le contenu pour SystemCenter ConfigurationManager](/sccm/core/servers/deploy/configure/deploy-and-manage-content).  
 
 1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
 
@@ -155,7 +155,7 @@ Pour déployer l’application mise à jour sur des PC, assurez-vous que le cont
 
 Vous pouvez vérifier que le contenu de l’application a été copié correctement dans le point de distribution à partir de l’espace de travail **Surveillance**, sous **État de la distribution** > **État du contenu**.  
 
-## Déployer l’application  
+## <a name="deploy-the-application"></a>Déployer l’application  
 
 Ensuite, déployez l’application sur un regroupement de périphériques dans votre hiérarchie. Dans cet exemple, vous déployez l’application sur le regroupement de périphériques **Tous les systèmes**.  
 
@@ -199,11 +199,11 @@ Ensuite, déployez l’application sur un regroupement de périphériques dans v
 
 Utilisez les informations de la section **Surveiller l’application** suivante pour afficher l’état du déploiement de votre application.  
 
-## Surveiller l’application
+## <a name="monitor-the-application"></a>Surveiller l’application
 
  Dans cette section, vous allez consulter rapidement l’état du déploiement de l’application que vous venez de déployer.  
 
-### Pour consulter l’état du déploiement  
+### <a name="to-review-the-deployment-status"></a>Pour consulter l’état du déploiement  
 
 1. Dans la console Configuration Manager, cliquez sur **Surveillance** > **Déploiements**.  
 
@@ -226,13 +226,13 @@ Utilisez les informations de la section **Surveiller l’application** suivante 
     - **Inconnu**: ConfigurationManager n’a pas pu signaler l’état du déploiement. Vérifiez à nouveau ultérieurement.  
 
     >[!TIP]
-    >Il existe plusieurs façons de surveiller le déploiements des applications. Pour plus d’informations, consultez [Surveiller les applications avec la console SystemCenterConfigurationManager](https://docs.microsoft.com/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+    >Il existe plusieurs façons de surveiller le déploiements des applications. Pour plus d’informations, consultez [Surveiller les applications avec la console SystemCenterConfigurationManager](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
-## Expérience pour l’utilisateur final  
+## <a name="end-user-experience"></a>Expérience pour l’utilisateur final  
 
 Les utilisateurs qui disposent de PC gérés par ConfigurationManager et qui exécutent Windows10 de l’architecture de processeur spécifiée verront un message leur indiquant qu’ils doivent installer l’application MicrosoftEdge Dev. Lorsqu’ils acceptent cette option d’installation, l’application est installée.  
 
-## Articles associés
+## <a name="see-also"></a>Articles associés
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Pour plus d’informations sur le déploiement de packages MSI, voir Créer et déployer une application avec System Center Configuration Manager.](https://docs.microsoft.com/sccm/apps/get-started/create-and-deploy-an-application)
+- [Pour plus d’informations sur le déploiement de packages MSI, voir Créer et déployer une application avec System Center Configuration Manager.](/sccm/apps/get-started/create-and-deploy-an-application)

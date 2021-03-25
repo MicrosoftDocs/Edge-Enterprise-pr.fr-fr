@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planifier votre transition en mode plein écran
-ms.openlocfilehash: 3a438c6dd71d9e1f0e644d24e3b1d1d60b099e8e
-ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
+ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11314234"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447848"
 ---
-# Planifier votre transition en mode plein écran
+# <a name="plan-your-kiosk-mode-transition"></a>Planifier votre transition en mode plein écran
 
 Cet article fournit des instructions sur la transition de votre kiosque de MicrosoftEdge hérité vers Microsoft Edge.  
 
@@ -27,7 +27,7 @@ Cet article fournit des instructions sur la transition de votre kiosque de Micro
 > [!IMPORTANT]
 > Lorsque la prise en charge de la version héritée de Microsoft Edge se termine le 9mars2021, elle sera supprimée et remplacée par MicrosoftEdge sur Chromium dans le cadre de Windows Update en avril. Pour plus d’informations, voir [ce billet de blog](https://aka.ms/EdgeLegacyEOS). Pour continuer à utiliser vos scénarios de kiosque basés sur le navigateur, vous devez installer MicrosoftEdge sur Chromium et configurer le mode plein écran avant la publication de Windows Update d’avril sur votre appareil.
 
-## Étapes de configuration du kiosque
+## <a name="kiosk-setup-steps"></a>Étapes de configuration du kiosque
 
 Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Microsoft Edge.
 
@@ -37,17 +37,17 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 |-|-|-|-|-|
 |Navigation InPrivate|Y|Y|89|Y|
 |Réinitialiser en période d’inactivité|Y|Y|89|Y|
-|[Barre d’adresses en lecture seule](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (stratégie) |N|Y |89|N|
-|[Supprimer les téléchargements à la sortie](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (stratégie)  | Y|Y |89|N|
+|[Barre d’adresses en lecture seule](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (stratégie) |N|Y |89|N|
+|[Supprimer les téléchargements à la sortie](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (stratégie)  | Y|Y |89|N|
 |F11 bloqué (entrée/sortie en plein écran) | Y | Y | 89 |Y|
 |F12 bloqué (lancer les outils de développement) | Y | Y | 89 |Y|
 | Prise en charge de plusieurs onglets | N| Y| 89|Y|
-|[Autoriser la prise en charge des URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (stratégie)|Y|Y|89|N|
-|[Bloquer la prise en charge des URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (stratégie)|Y|Y|89|N|
-|[Afficher le bouton d’accueil](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (stratégie)|N|Y|89|Y|
-|[Gérer les favoris](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (stratégie)|N|Y|89|Y|
-|[Activer l’imprimante](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (stratégie)|Y|Y|89|Y|
-|[Configurer l’URL de la page Nouvel onglet](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (stratégie)|N|Y||Y|
+|[Autoriser la prise en charge des URL](./microsoft-edge-policies.md#urlallowlist) (stratégie)|Y|Y|89|N|
+|[Bloquer la prise en charge des URL](./microsoft-edge-policies.md#urlblocklist) (stratégie)|Y|Y|89|N|
+|[Afficher le bouton d’accueil](./microsoft-edge-policies.md#showhomebutton) (stratégie)|N|Y|89|Y|
+|[Gérer les favoris](./microsoft-edge-policies.md#managedfavorites) (stratégie)|N|Y|89|Y|
+|[Activer l’imprimante](./microsoft-edge-policies.md#printingenabled) (stratégie)|Y|Y|89|Y|
+|[Configurer l’URL de la page Nouvel onglet](./microsoft-edge-policies.md#newtabpagelocation) (stratégie)|N|Y||Y|
 |Bouton Terminer la session | N| Y| 89|Y|
 |Toutes les URL MicrosoftEdge internes sont bloquées, à l’exception de *edge://downloads* et *edge://print* |N|Y|89|Y|
 | Ctrl+N bloqué (ouvrir une nouvelle fenêtre) | Y | Y | 89 |Y|
@@ -55,14 +55,14 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 |Paramètres et plus (...) afficheront uniquement les options requises  |Y |Y |89 |Y|
 |Restreindre le lancement d’autres applications à partir du navigateur|Y|Y|90/91|Y|
 |Verrouillage des paramètres d’impression de l’interface utilisateur|Y|Y|90/91|Y|
-|[Définir la page Nouvel onglet comme page d’accueil](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (stratégie)|-|-|À déterminer|Y|
+|[Définir la page Nouvel onglet comme page d’accueil](./microsoft-edge-policies.md#homepageisnewtabpage) (stratégie)|-|-|À déterminer|Y|
 
 > [!NOTE]
 > Pour plus d’informations sur la planification des publication de Microsoft Edge, voir [la planification des publication de Microsoft Edge.](microsoft-edge-release-schedule.md)
 
 **Étape 2 : testez le nouveau kiosque dans Microsoft Edge.** Nous vous recommandons de tester la configuration du mode plein écran dans Microsoft Edge. Un moyen rapide et facile de tester le mode plein écran consiste à configurer une application à accès unique affecté à l’aide des paramètres Windows, comme décrit ci-après.
 
-1. Installez la version la plus récente de Windows10 Insider Preview, version20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+1. Installez la version la plus récente de Windows10 Insider Preview, version20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows10 Insider Preview](/windows-insider/get-started).
 2. Installez la dernière version du canal [stable MicrosoftEdge,](https://www.microsoft.com/edge)version87 ou ultérieure.  Pour tester les dernières fonctionnalités, vous pouvez télécharger la dernière version bêta de [Microsoft Edge](https://www.microsoftedgeinsider.com/download), version89 ou ultérieure.
 
    > [!IMPORTANT]
@@ -109,11 +109,11 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 
 **Étape 3 : Développer un plan de transition.** En fonction de vos tests et de vos besoins organisationnels, nous vous recommandons de développer un plan de transition et de passer à Microsoft Edge sur Chromium avant la fin de la prise en charge de Microsoft Edge hérité le 9mars 2021.
 
-## Scénarios supplémentaires qui nécessitent la recréation d’un mode plein écran existant
+## <a name="additional-scenarios-that-require-you-to-recreate-an-existing-kiosk-mode"></a>Scénarios supplémentaires qui nécessitent la recréation d’un mode plein écran existant
 
 Si vous mettez à jour vers Windows10, version 20H2, Microsoft Edge sur Chromium sera installé et Microsoft Edge hérité sera masqué. Dans ce cas, vous devrez configurer à nouveau le mode plein écran dans Microsoft Edge sur Chromium.
 
-## Comment obtenir de l’aide
+## <a name="how-to-get-help"></a>Comment obtenir de l’aide
 
 Le mode plein écran étant un élément important de votre activité quotidienne, nous voulons contribuer à rendre cette transition aussi fluide que possible et à éviter les perturbations. Si votre entreprise a besoin d’aide pour la transition vers Microsoft Edge sur Chromium :
 
@@ -121,7 +121,7 @@ Le mode plein écran étant un élément important de votre activité quotidienn
 - [Le support FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) est également disponible sans frais supplémentaires pour les clients 150 ou plus de sièges payants de Windows10 Entreprise.
 - [L’application Assure](https://www.microsoft.com/en-us/fasttrack/microsoft-365/app-assure) est disponible si vous rencontrez des problèmes de compatibilité de site ou d’application.
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Nouveau Microsoft Edge pour remplacer la version héritée de Microsoft Edge par la version mardi de la mise à jour Windows 10 d’avril](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)

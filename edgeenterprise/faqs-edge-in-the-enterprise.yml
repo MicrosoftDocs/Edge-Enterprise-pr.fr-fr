@@ -11,12 +11,12 @@ metadata:
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
   description: Forum aux questions (FAQ) sur le déploiement de Microsoft Edge dans l’entreprise
-  ms.openlocfilehash: d7098666c67d1b88fc6f7e0910c8793315e750cc
-  ms.sourcegitcommit: 0bd67aa982613f663e6840929a769fc88d5a6b4d
+  ms.openlocfilehash: 6a0a3c508f36318c080b6ccc62271b0d79bb9630
+  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/05/2021
-  ms.locfileid: "11393777"
+  ms.lasthandoff: 03/24/2021
+  ms.locfileid: "11448148"
 title: Forum aux questions (FAQ) sur Microsoft Edge dans l’entreprise
 summary: >
   > [!NOTE]
@@ -27,21 +27,21 @@ sections:
   questions:
   - question: Comment savoir de quelle version de MicrosoftEdge je dispose?
     answer: >
-      Dans le coin supérieur droit de Microsoft Edge, sélectionnez l’icône des ellipses (**...**), puis sélectionnez **Paramètres.** Sélectionnez **A propos de MicrosoftEdge** pour afficher votre version de MicrosoftEdge.
+      Dans le coin supérieur droit de Microsoft Edge, sélectionnez l’icône des ellipses (**...**), puis sélectionnez **Paramètres**. Sélectionnez **A propos de MicrosoftEdge** pour afficher votre version de MicrosoftEdge.
   - question: Internet Explorer11 continuera-t-il à recevoir des mises à jour?
     answer: >
       Nous nous engageons à ce qu’Internet Explorer reste un navigateur pris en charge, fiable et sécurisé. Internet Explorer est toujours un composant de Windows et suit le cycle de vie du support du système d’exploitation sur lequel il est installé. Pour plus d’informations, consultez [FAQ sur le cycle de vie: Internet Explorer](https://support.microsoft.com/help/17454/). Bien que nous continuions à prendre en charge et à mettre à jour Internet Explorer, les fonctionnalités et mises à jour de plateforme les plus récentes seront disponibles uniquement dans MicrosoftEdge.
   - question: Puis-je exécuter la version actuelle de MicrosoftEdge (version héritée de MicrosoftEdge) côte à côte lorsque j’essaie la nouvelle version?
     answer: >
-      Oui, c’est possible. Après le 15janvier2020 la nouvelle version de MicrosoftEdge (basée sur Chromium) sera distribuée aux appareils d’édition familiale et professionnel exécutant Windows10 version1803 ou ultérieure. Les appareils joints à un domaine sont exclus de cette mise à jour. Pour plus d’informations, voir [Vue d’ensemble des mises à jour de MicrosoftEdge](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). Vous pouvez avoir une installation côte à côte de l’ancienne version de Microsoft Edge lors de l’évaluation de la prochaine version de Microsoft Edge. Pour plus d’informations, consultez [Comment accéder à l’ancienne version de MicrosoftEdge](https://docs.microsoft.com/deployedge/microsoft-edge-sysupdate-access-old-edge). En outre, chacun des nouveaux canaux Microsoft Edge prend également en charge les installations côte à côte. Pour plus d’informations, voir [Vue d’ensemble des canaux de MicrosoftEdge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
+      Oui, c’est possible. Après le 15janvier2020 la nouvelle version de MicrosoftEdge (basée sur Chromium) sera distribuée aux appareils d’édition familiale et professionnel exécutant Windows10 version1803 ou ultérieure. Les appareils joints à un domaine sont exclus de cette mise à jour. Pour plus d’informations, voir [Vue d’ensemble des mises à jour de MicrosoftEdge](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). Vous pouvez avoir une installation côte à côte de l’ancienne version de Microsoft Edge lors de l’évaluation de la prochaine version de Microsoft Edge. Pour plus d’informations, consultez [Comment accéder à l’ancienne version de MicrosoftEdge](./microsoft-edge-sysupdate-access-old-edge.md). En outre, chacun des nouveaux canaux Microsoft Edge prend également en charge les installations côte à côte. Pour plus d’informations, voir [Vue d’ensemble des canaux de MicrosoftEdge](./microsoft-edge-channels.md).
   - question: MicrosoftEdge (basé sur Chrome) prend-il en charge les contrôles ActiveX ou les objets application d'assistance du navigateur comme Silverlight ou Java?
     answer: >
-      Non. Microsoft Edge ne prend pas en charge les contrôles ActiveX ou les objets d’aide du navigateur (BHO) tels que Silverlight ou Java. Toutefois, si vous exécutez des applications web utilisant les contrôles ActiveX, BHOS ou des modes de document legacy sur Internet Explorer11, vous pouvez les configurer pour exécuter le mode IE sur le nouveau Microsoft Edge. Pour plus d’informations, voir [Configurer le mode IE sur Microsoft Edge](https://docs.microsoft.com/DeployEdge/edge-ie-mode).
+      Non. Microsoft Edge ne prend pas en charge les contrôles ActiveX ou les objets d’aide du navigateur (BHO) tels que Silverlight ou Java. Toutefois, si vous exécutez des applications web utilisant les contrôles ActiveX, BHOS ou des modes de document legacy sur Internet Explorer11, vous pouvez les configurer pour exécuter le mode IE sur le nouveau Microsoft Edge. Pour plus d’informations, voir [Configurer le mode IE sur Microsoft Edge](./edge-ie-mode.md).
   - question: Les favoris seront-ils portés à partir de la version actuelle de Microsoft Edge ou devradront-ils les rajouter ?
     answer: "Actuellement, MicrosoftEdge prend en charge l’importation à partir d’installations existantes de MicrosoftEdge, Chrome, Internet Explorer et Firefox (sur Win10). Les paramètres suivants sont pris en charge pour l’importation : Signets, Historique, Mots de passe et Remplissage automatique (paiements, adresses et formulaires génériques). Vous pouvez choisir d’effectuer une importation à partir de la première utilisation ou à partir des paramètres du navigateur.  \n"
   - question: Quelle est la différence entre les canaux/builds stable, Beta, Dev et Canary?
     answer: >
-      La version stable suivante de MicrosoftEdge est le canal de version préliminaire le plus stable que nous proposons, avec des fonctionnalités axées sur l’entreprise,prêtes à être [testées et évaluées](https://aka.ms/EdgeEnterprise) au sein de votre organisation. Le canal bêta vous permet de valider la prochaine version stable avec un ensemble représentatif d’utilisateurs. Les canaux stable et bêta sont mis à jour environ toutes les six semaines. Les canaux Dev et Canary continuent de se mettre à jour hebdomadairement et quotidiennement, respectivement. Les programme d’installation hors connexion (fichiers MSI et PKG) sont disponibles uniquement pour les canaux stables, bêta et dev. Pour plus d’informations, voir [Vue d’ensemble des canaux de MicrosoftEdge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
+      La version stable suivante de MicrosoftEdge est le canal de version préliminaire le plus stable que nous proposons, avec des fonctionnalités axées sur l’entreprise,prêtes à être [testées et évaluées](https://aka.ms/EdgeEnterprise) au sein de votre organisation. Le canal bêta vous permet de valider la prochaine version stable avec un ensemble représentatif d’utilisateurs. Les canaux stable et bêta sont mis à jour environ toutes les six semaines. Les canaux Dev et Canary continuent de se mettre à jour hebdomadairement et quotidiennement, respectivement. Les programme d’installation hors connexion (fichiers MSI et PKG) sont disponibles uniquement pour les canaux stables, bêta et dev. Pour plus d’informations, voir [Vue d’ensemble des canaux de MicrosoftEdge](./microsoft-edge-channels.md).
   - question: De quel type de prise en charge d’extension vais-je bénéficier avec la nouvelle version de MicrosoftEdge?
     answer: >
       MicrosoftEdge prend en charge les extensions provenant des [Modules complémentaires Microsoft Edge Insider](https://go.microsoft.com/fwlink/?linkid=2081222) et du [Chrome Web Store](https://go.microsoft.com/fwlink/?linkid=2072338).
@@ -53,12 +53,12 @@ sections:
       Oui. Le [catalogue Microsoft Update est inclus dans les packages](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) qui peuvent être utilisés pour le déploiement initial du nouveau MicrosoftEdge via WSUS. Après le déploiement initial, les mises à jour automatiques sont configurées par défaut. Pour plus d’informations, voir [mise à jour dans WSUS pour le nouveau Microsoft Edge pour Windows10, version1809, 1903, 1909 et 2004: 29octobre2020](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
 
 
-      Les mises à jour manuelles peuvent être effectuées à l’aide d’un outil de gestion de la configuration, tel que [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+      Les mises à jour manuelles peuvent être effectuées à l’aide d’un outil de gestion de la configuration, tel que [ConfigMgr](/configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json).
   - question: Les préférences maîtres sont-elles pris en charge ?
     answer: "Non, les préférences maîtres ne sont pas pris en charge. \n"
 additionalContent: >-
   ## <a name="see-also"></a>Voir également
 
-  - [Page d’accueil de la documentation MicrosoftEdge](https://docs.microsoft.com/DeployEdge/)
+  - [Page d’accueil de la documentation MicrosoftEdge](./index.yml)
 
   - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer les paramètres de stratégie MicrosoftEdge pour Windows avec MicrosoftIntune.
-ms.openlocfilehash: 6200b52e9061f37f85fe0bfe7cf59a2172db97df
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 0189a3fc2f9dc115563e7cf6dca1df960680bf22
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979698"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447558"
 ---
-# Configurer les paramètres de stratégie MicrosoftEdge avec MicrosoftIntune
+# <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Configurer les paramètres de stratégie MicrosoftEdge avec MicrosoftIntune
 
 Cet article explique comment configurer les paramètres de stratégie MicrosoftEdge pour Windows10 à l’aide de MicrosoftIntune.
 
@@ -26,16 +26,16 @@ Cet article explique comment configurer les paramètres de stratégie MicrosoftE
 
 Vous pouvez configurer les stratégies et paramètres MicrosoftEdge en ajoutant un profil de configuration de périphérique à MicrosoftIntune. L’utilisation de Intune pour gérer et appliquer des méthodes revient à utiliser la méthode de groupe ActiveDirectory ou à configurer les paramètres du Group Policy Object (GPO) local sur les périphériques des utilisateurs.
 
-Pour plus d’informations sur la gestion des stratégies de MicrosoftEdge avec MicrosoftIntune, vous pouvez consulter [Gérer l’accès au web à l’aide de MicrosoftEdge avec MicrosoftIntune](https://docs.microsoft.com/intune/manage-microsoft-edge). Gardez néanmoins à l’esprit que l’article associé est spécifique à MicrosoftEdge version45 et versions antérieures et que, par conséquent, il peut contenir des informations et des références qui ne concernent pas MicrosoftEdge Enterprise version77 et ultérieures.
+Pour plus d’informations sur la gestion des stratégies de MicrosoftEdge avec MicrosoftIntune, vous pouvez consulter [Gérer l’accès au web à l’aide de MicrosoftEdge avec MicrosoftIntune](/intune/manage-microsoft-edge). Gardez néanmoins à l’esprit que l’article associé est spécifique à MicrosoftEdge version45 et versions antérieures et que, par conséquent, il peut contenir des informations et des références qui ne concernent pas MicrosoftEdge Enterprise version77 et ultérieures.
 
 > [!TIP]
 > Pour plus d’informations sur la configuration de MicrosoftEdge sur macOS à l’aide de MicrosoftIntune, consultez [Configurer pour macOS](configure-microsoft-edge-on-mac.md).
 
-## Créer un profil pour gérer les paramètres dans MicrosoftEdge pour Windows10
+## <a name="create-a-profile-to-manage-settings-in-microsoft-edge-for-windows-10"></a>Créer un profil pour gérer les paramètres dans MicrosoftEdge pour Windows10
 
 Grâce aux modèles d’administration dans MicrosoftIntune, vous pouvez gérer les stratégies de groupe MicrosoftEdge sur vos appareils Windows10 en utilisant le cloud. Cette section vous aidera à créer un modèle pour configurer les paramètres d’application spécifiques de MicrosoftEdge. Lorsque vous créez le modèle, il crée un profil de configuration de périphérique. Vous pouvez ensuite attribuer ou déployer ce profil sur les appareils Windows10 de votre organisation.
 
-### Prérequis
+### <a name="prerequisites"></a>Prérequis
 
 - Windows10, avec la configuration minimale requise suivante:
   - Windows10 version1909
@@ -44,7 +44,7 @@ Grâce aux modèles d’administration dans MicrosoftIntune, vous pouvez gérer 
   - Windows10, version1803 avec la mise à jour [KB4512509](https://support.microsoft.com/kb/4512509) installée
   - Windows10, version1709 avec la mise à jour [KB4516071](https://support.microsoft.com/kb/4516071) installée
 
-### Utiliser les modèles d’administration pour créer méthode pour Microsoft Edge
+### <a name="use-administrative-templates-to-create-a-policy-for-microsoft-edge"></a>Utiliser les modèles d’administration pour créer méthode pour Microsoft Edge
 
 Cette procédure s’inspire des modèles d’administration (que vous avez peut-être utilisés dans la méthode de groupe) intégrés à Intune. Vous pouvez utiliser ces modèles pour créer une méthode pour Microsoft Edge en sélectionnant les paramètres dans une liste préconfigurée.
 
@@ -73,7 +73,7 @@ La capture d’écran suivante montre le formulaire de l’onglet **Notions de B
    ![Onglet Paramètres de configuration](./media/configure-edge-with-intune/create-profile-configuration-settings-tab.png)
 
    > [!NOTE]
-   > Consulter [MICROSOFT– Méthodes](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies) et [Microsoft Edge– Méthodes de Mises à jour](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies) pour la liste la plus complète et récente de tous les paramètres disponibles pour Microsoft Edge.
+   > Consulter [MICROSOFT– Méthodes](./microsoft-edge-policies.md) et [Microsoft Edge– Méthodes de Mises à jour](./microsoft-edge-update-policies.md) pour la liste la plus complète et récente de tous les paramètres disponibles pour Microsoft Edge.
 
 10. Utiliser le champ de recherche («Rechercher pour filtrer les éléments...») pour trouver un paramètre spécifique que vous voulez configurer. Dans cet exemple, la chaîne de recherche est «page d’accueil». La capture d’écran suivante montre les résultats de la recherche.
 
@@ -93,7 +93,7 @@ La capture d’écran suivante montre le formulaire de l’onglet **Notions de B
 
 15. Sur l’onglet Indicateurs d’étendue, ajoutez une balise d’étendue si vous le souhaitez, sinon cliquez sur le**bouton ** suivant.
 
-16. Sous l’onglet **Assignations**, cliquez sur + sélectionner des groupes à inclure  pour assigner cette méthode au groupe Azure Active Directory (Azure AD) qui contient les appareils ou les utilisateurs auxquels vous voulez assigner ce paramètre de méthode. Consultez [Assigner les profils d’utilisateur et de périphérique dans MicrosoftIntune](https://docs.microsoft.com/intune/device-profile-assign) pour les informations sur comment assigner le profil à vos groupes d’utilisateurs ou à périphériques Azure AD.
+16. Sous l’onglet **Assignations**, cliquez sur + sélectionner des groupes à inclure  pour assigner cette méthode au groupe Azure Active Directory (Azure AD) qui contient les appareils ou les utilisateurs auxquels vous voulez assigner ce paramètre de méthode. Consultez [Assigner les profils d’utilisateur et de périphérique dans MicrosoftIntune](/intune/device-profile-assign) pour les informations sur comment assigner le profil à vos groupes d’utilisateurs ou à périphériques Azure AD.
 
     ![Sélectionner les groupes à inclure](./media/configure-edge-with-intune/create-profile-assignments-tab.png)
 
@@ -105,11 +105,11 @@ La capture d’écran suivante montre le formulaire de l’onglet **Notions de B
 
     ![Sélectionner les groupes à inclure](./media/configure-edge-with-intune/create-profile-new-policy-finished.png)
 
-Pour plus d’informations sur les profils Windows10, consultez [Utiliser des modèles Windows10 pour configurer les paramètres de stratégie de groupe dans MicrosoftIntune](https://docs.microsoft.com/intune/administrative-templates-windows).
+Pour plus d’informations sur les profils Windows10, consultez [Utiliser des modèles Windows10 pour configurer les paramètres de stratégie de groupe dans MicrosoftIntune](/intune/administrative-templates-windows).
 
-## Articles associés
+## <a name="see-also"></a>Articles associés
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Gérer l’accès web à l’aide de MicrosoftEdge avec MicrosoftIntune](https://docs.microsoft.com/intune/manage-microsoft-edge)
-- [Utilisez les modèles Windows10 pour configurer les paramètres de stratégie de groupe dans MicrosoftIntune](https://docs.microsoft.com/intune/administrative-templates-windows)
-- [Déployer MicrosoftEdge à l’aide de MicrosoftIntune](https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)
+- [Gérer l’accès web à l’aide de MicrosoftEdge avec MicrosoftIntune](/intune/manage-microsoft-edge)
+- [Utilisez les modèles Windows10 pour configurer les paramètres de stratégie de groupe dans MicrosoftIntune](/intune/administrative-templates-windows)
+- [Déployer MicrosoftEdge à l’aide de MicrosoftIntune](/intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)

@@ -1,14 +1,12 @@
 ---
-ms.openlocfilehash: 07c279d909b7656cb5afbb1adf22cf3ea8d18245
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 5d4a937bbf7ceb0e0dbb3db82ce43319a1088e29
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442437"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448213"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
-
-
 
 
 ## <a name="week-of-march-15-2021"></a>Semaine du 15mars2021

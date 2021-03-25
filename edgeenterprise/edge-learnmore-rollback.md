@@ -10,29 +10,29 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Comment restaurer Microsoft Edge à une version antérieure
-ms.openlocfilehash: 2059ea04bf8ec3a03266fe95599ea3b515b78c12
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: 58323071fcbe4704f29819684bb5359d92c030b6
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314567"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448158"
 ---
-# Comment restaurer Microsoft Edge à une version antérieure
+# <a name="how-to-roll-back-microsoft-edge-to-a-previous-version"></a>Comment restaurer Microsoft Edge à une version antérieure
 
 Cet article explique comment revenir à une version antérieure de Microsoft Edge à l’aide de la fonctionnalité de restauration. Pour en savoir plus sur cette fonctionnalité, regardez [la vidéo : Retour en arrière de la version Microsoft Edge](microsoft-edge-video-version-rollback.md).
 
 >[!NOTE]
 >Cet article concerne MicrosoftEdge version86 ou ultérieure.
 
-## Présentation de la restauration
+## <a name="introduction-to-rollback"></a>Présentation de la restauration
 
 La restauration vous permet de remplacer la version de votre navigateur Microsoft Edge par une version antérieure. Cette fonctionnalité est conçue comme filet de sécurité pour les entreprises qui déploient Microsoft Edge. Elle offre la résolution de problèmes avec Microsoft Edge. Les avantages de la restauration sont la capacité de revenir facilement et rapidement à une version antérieure du navigateur. La restauration réduit l’impact potentiel qu’un problème lié à Microsoft Edge a sur les activités de l’entreprise.
 
-## Avant de commencer
+## <a name="before-you-begin"></a>Avant de commencer
 
 Il est important de comprendre comment la fonctionnalité de restauration est installée dans un environnement Microsoft Edge. Vous pouvez déployer la restauration à l’aide de deux méthodes différentes: manuellement avec un MSI ou en utilisant la méthode de groupe et de mise à jour de Microsoft Edge.  Nous encourageons également l’utilisation d’une sélection de méthodes de groupe pour un déploiement plus fluide.
 
-### Recommandations
+### <a name="recommendations"></a>Recommandations
 
 La fonctionnalité de restauration est un correctif temporaire pour résoudre les problèmes que vous pourriez rencontrer dans une mise à jour du navigateur Microsoft Edge. Nous recommandons aux utilisateurs d’installer la dernière version du navigateur Microsoft Edge afin d’utiliser la protection offerte par les dernières mises à jour de sécurité. La restauration à une version antérieure présente des risques d’exposition aux problèmes de sécurité connus.
 
@@ -41,14 +41,14 @@ Avant de restaurer temporairement la version de votre navigateur, nous vous reco
 > [!CAUTION]
 > Utilisez la restauration seulement lorsque cela s’avère nécessaire, il y a toujours the risque de perte de données.
 
-## Activer la restauration manuelle avec un MSI
+## <a name="enable-rollback-manually-with-an-msi"></a>Activer la restauration manuelle avec un MSI
 
 Procéder comme suit pour restaurer manuellement avec un fichier MSI.
 
 1. Désactiver les mises à jour de Microsoft Edge.
 
    > [!NOTE]
-   > Nous vous recommandons d’installer les modèles d’administration les plus courants. Pour plus d’informations, voir[ téléchargez et installez le modèle d’administration de MicrosoftEdge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template).
+   > Nous vous recommandons d’installer les modèles d’administration les plus courants. Pour plus d’informations, voir[ téléchargez et installez le modèle d’administration de MicrosoftEdge](./configure-microsoft-edge.md#1-download-and-install-the-microsoft-edge-administrative-template).
 
    - Ouvrez l’éditeur de la méthode de groupe locale, puis accédez à *Configuration ordinateur > modèles d’administration>Mise à jour de Microsoft Edge> Applications>Microsoft Edge >*.
    - Sélectionnez Remplacement de la méthode de mise à jour puis sélectionnez **activé**.
@@ -65,10 +65,10 @@ Procéder comme suit pour restaurer manuellement avec un fichier MSI.
    - Tapez la commande suivante, où: *C:\Utilisateurs\nom d’utilisateur\Bureau\test* est le chemin d’accès au MSI que vous avez téléchargé et nom du fichier est le nom du .fichier msi:<br>
  `C:\Users\username\Desktop\test>msiexec /I FileName.msi /qn ALLOWDOWNGRADE=1`<br>
      > [!NOTE]
-     > Pour plus d’informations sur msiexec, voir [msiexec](https://docs.microsoft.com/windows-server/administration/windows-commands/msiexec).
+     > Pour plus d’informations sur msiexec, voir [msiexec](/windows-server/administration/windows-commands/msiexec).
    - Fermez et rouvrez Microsoft Edge pour vérifier que la restauration a fonctionné. Sous **paramètres et plus** (ALT + F), accédez à paramètres puis sélectionnez sur Microsoft Edge.
 
-## Activer la restauration avec la mise à jour de Microsoft Edge et de la méthode de groupe
+## <a name="enable-rollback-with-microsoft-edge-update-and-group-policy"></a>Activer la restauration avec la mise à jour de Microsoft Edge et de la méthode de groupe
 
 Procédez comme suit pour activer la restauration avec la mise à jour de Microsoft Edge et de la méthode de groupe.
 
@@ -85,7 +85,7 @@ Procédez comme suit pour activer la restauration avec la mise à jour de Micros
 
 5. Cliquez sur **OK** pour enregistrer le paramètre. La restauration aura lieu la prochaine fois que Microsoft Edge Update recherchera une mise à jour. Si vous souhaitez que la mise à jour se produise plus tôt, vous pouvez modifier l’intervalle d’interrogation de MicrosoftEdgeUpdate ou activer la restauration avec un MSI.
 
-### Erreurs de restauration courantes
+### <a name="common-rollback-errors"></a>Erreurs de restauration courantes
 
 Les erreurs suivantes peuvent empêcher la restauration:
 
@@ -93,53 +93,53 @@ Les erreurs suivantes peuvent empêcher la restauration:
 - L’entrée est une version cible inexistante
 - La mise en forme de l’entrée est incorrecte
 
-### Méthodes de groupe recommandées
+### <a name="recommended-group-policies"></a>Méthodes de groupe recommandées
 
 Les méthodes de groupe et les paramètres suivants sont fortement recommandés pour l’utilisation de la restauration.
 
-#### Méthodes de groupe de synchronisation
+#### <a name="sync-group-policies"></a>Méthodes de groupe de synchronisation
 
 - ForceSync. Activez ForceSync. Cette méthode force l’activation de la synchronisation sur tous les utilisateurs Azure Active Directory (Azure AD). Cette méthode est applicable uniquement aux versions 86 et ultérieures de Microsoft Edge.
 - La fonctionnalité *configurer la liste des types exclus de la méthode de synchronisation* permet aux administrateurs de contrôler les données qui peuvent être synchronisées par les utilisateurs.
 
-#### Les méthodes de groupe de redémarrage du navigateur
+#### <a name="browser-restart-group-policies"></a>Les méthodes de groupe de redémarrage du navigateur
 
 Nous vous recommandons de forcer un redémarrage sur les utilisateurs après l’activation de la restauration.
 
 - Activer *Avertir un utilisateur qu'un redémarrage du navigateur est recommandé ou requis pour les mises à jour en attente*. Sous options, sélectionnez **requis**.
 - Activez *Définir l’intervalle de temps pour les notifications de mise à jour* puis configurez le temps souhaité en millisecondes.
 
-## Capture instantanée
+## <a name="snapshot"></a>Capture instantanée
 
 Une capture instantanée est une copie estampillée du dossier des données utilisateur. Lors d’une mise à niveau d’une version, une capture instantanée de la version précédente est créée et stockée dans le dossier des captures instantanées. Une fois la restauration effectuée, une capture instantanée correspondant à la version est copiée dans le nouveau dossier des données utilisateur et est supprimée du dossier des captures instantanées. Si aucune capture instantanée correspondant à la version n’est disponible lors du retour à la version antérieure, la restauration s’appuiera sur la synchronisation pour remplir les données utilisateur dans la nouvelle version de MicrosoftEdge.
 
-La stratégie de groupe [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userdatasnapshotretentionlimit) vous permet de définir une limite pour le nombre d’instantanés qui peuvent être conservés à tout moment. Par défaut, trois captures instantanées sont conservées. Vous pouvez configurer cette stratégie pour conserver de 0à5captures instantanées.
+La stratégie de groupe [UserDataSnapshotRetentionLimit](./microsoft-edge-policies.md#userdatasnapshotretentionlimit) vous permet de définir une limite pour le nombre d’instantanés qui peuvent être conservés à tout moment. Par défaut, trois captures instantanées sont conservées. Vous pouvez configurer cette stratégie pour conserver de 0à5captures instantanées.
 
-## Forum Aux Questions
+## <a name="frequently-asked-questions"></a>Forum Aux Questions
 
-### Restauration manuelle de MSI
+### <a name="manual-msi-rollback"></a>Restauration manuelle de MSI
 
-#### Quelles sont les défaillances MSI génériques qui peuvent se produire?
+#### <a name="what-generic-msi-failures-that-can-happen"></a>Quelles sont les défaillances MSI génériques qui peuvent se produire?
 
 1. Si la méthode de groupe installer mise à jour est désactivée, la restauration sera impossible.
 
-   - Pour utiliser la restauration, assurez-vous que l’option Installer est configurée en mode **activé**. Lorsque cette méthode est désactivée, les canaux Microsoft Edge ne sont pas installés. Pour plus d'informations, consultez [Installer](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#install).
+   - Pour utiliser la restauration, assurez-vous que l’option Installer est configurée en mode **activé**. Lorsque cette méthode est désactivée, les canaux Microsoft Edge ne sont pas installés. Pour plus d'informations, consultez [Installer](./microsoft-edge-update-policies.md#install).
 
 2. Si les mises à jour de veille n’apparaissent pas, les installations Microsoft Edge seront bloquées, sauf si *l’option Autoriser l’ Utilisation du navigateur Côte à Côte de Microsoft Edge * est activée.
 
    - Pour les versions 1903 et 1909 de Windows: Si votre dernière mise à jour est antérieure au mois d’octobre 2019, vous pouvez rencontrer ce problème.
    - Pour les versions 1709, 1803 et 1809 de Windows: Si votre dernière mise à jour est antérieure au mois d’octobre 2019, vous pouvez rencontrer ce problème.<br>
-Pour plus d’informations, consultez [Mises à jour Windows pour prendre en charge la prochaine version de MicrosoftEdge](https://docs.microsoft.com/deployedge/microsoft-edge-sysupdate-windows-updates)
+Pour plus d’informations, consultez [Mises à jour Windows pour prendre en charge la prochaine version de MicrosoftEdge](./microsoft-edge-sysupdate-windows-updates.md)
 
-#### Le message d’erreur suivant s’est affiché après l’utilisation de l’invite de commandes et la restauration n’a pas eu lieu. Qu'est-ce qui ne va pas?
+#### <a name="the-following-error-message-was-shown-after-using-the-command-prompt-and-rollback-didnt-occur-whats-wrong"></a>Le message d’erreur suivant s’est affiché après l’utilisation de l’invite de commandes et la restauration n’a pas eu lieu. Qu'est-ce qui ne va pas?
 
 ![Message de l’état de restauration](./media/edge-learnmore-rollback/edge-rollback-cmd-flag-error.png)
 
 *Autoriser le passage à une version antérieure= 1* n’a pas été exécuté.
 
-### Mise à jour de Microsoft Edge et restauration de la Méthode de Groupe
+### <a name="microsoft-edge-update-and-group-policy-rollback"></a>Mise à jour de Microsoft Edge et restauration de la Méthode de Groupe
 
-#### J’ai défini *restaurer à la version cible*, activé *Remplacement de la méthode de mise à jour*, entré ma version de navigateur souhaitée pour *Remplacement de la version cible*, mais la version du navigateur n’était pas celle que je souhaitais. Qu'est-ce qui ne va pas?
+#### <a name="i-set-rollback-to-target-version-enabled-update-policy-override-input-my-desired-browser-version-for-target-version-override-but-the-browser-version-wasnt-what-i-expected-whats-wrong"></a>J’ai défini *restaurer à la version cible*, activé *Remplacement de la méthode de mise à jour*, entré ma version de navigateur souhaitée pour *Remplacement de la version cible*, mais la version du navigateur n’était pas celle que je souhaitais. Qu'est-ce qui ne va pas?
 
 Voici quelques erreurs courantes qui empêchent la restauration:
 
@@ -152,15 +152,15 @@ Voici quelques erreurs courantes qui empêchent la restauration:
 
 - Si le remplacement de la stratégie de mise à jour est défini sur «Mises à jour désactivées», MicrosoftEdgeUpdate n’accepte aucune mise à jour et la restauration n’est pas exécutée.
 
-### J’ai défini toutes les méthodes de groupe correctement, mais la restauration n’a pas été exécutée. que se passe-t-il?
+### <a name="i-set-all-the-group-policies-correctly-but-rollback-didnt-execute-what-happened"></a>J’ai défini toutes les méthodes de groupe correctement, mais la restauration n’a pas été exécutée. que se passe-t-il?
 
-Microsoft Edge Update n’a pas encore exécuté de recherche de mises à jour. Définir par défaut, la mise à jour automatique de recherche des mises à jour toutes les 10heures. Vous pouvez résoudre ce problème en modifiant l’intervalle d’interrogation de MicrosoftEdgeUpdate avec la stratégie de groupe de remplacement de période de vérification des mises à jour automatiques. Pour plus d’informations, consultez la méthode [ Des Minutes de la Période de Recherche des Mises à jour](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) Automatiques.
+Microsoft Edge Update n’a pas encore exécuté de recherche de mises à jour. Définir par défaut, la mise à jour automatique de recherche des mises à jour toutes les 10heures. Vous pouvez résoudre ce problème en modifiant l’intervalle d’interrogation de MicrosoftEdgeUpdate avec la stratégie de groupe de remplacement de période de vérification des mises à jour automatiques. Pour plus d’informations, consultez la méthode [ Des Minutes de la Période de Recherche des Mises à jour](./microsoft-edge-update-policies.md#autoupdatecheckperiodminutes) Automatiques.
 
-### En tant qu’administrateur informatique, j’ai suivi toutes les étapes de la restauration correctement. Seule une partie de mon groupe d’utilisateurs a été restaurée. Pourquoi les autres utilisateurs n’ont pas encore été restaurés?
+### <a name="as-an-it-admin-i-followed-all-the-steps-for-rollback-correctly-only-a-portion-of-my-user-group-was-rolled-back-why-havent-the-other-users-been-rolled-back-yet"></a>En tant qu’administrateur informatique, j’ai suivi toutes les étapes de la restauration correctement. Seule une partie de mon groupe d’utilisateurs a été restaurée. Pourquoi les autres utilisateurs n’ont pas encore été restaurés?
 
-Le paramètre de la méthode de groupe n’a pas encore été synchronisé avec tous les clients. Lorsque les administrateurs définissent une méthode de groupe, les clients ne reçoivent pas ces paramètres instantanément. Vous pouvez [Forcer une actualisation de la stratégie de groupe à distance](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
+Le paramètre de la méthode de groupe n’a pas encore été synchronisé avec tous les clients. Lorsque les administrateurs définissent une méthode de groupe, les clients ne reçoivent pas ces paramètres instantanément. Vous pouvez [Forcer une actualisation de la stratégie de groupe à distance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Vidéo: Restauration de version de Microsoft Edge](microsoft-edge-video-version-rollback.md)
