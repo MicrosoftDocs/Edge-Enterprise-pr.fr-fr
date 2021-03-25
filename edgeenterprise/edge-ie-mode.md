@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Apprenez à utiliser MicrosoftEdge avec le mode IE.
-ms.openlocfilehash: bcb25e0f104d4a9b64ee8fd7bf29b12bb24b4724
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ecb4bffc5afdde3a8891d1eaa6e28508205ab097
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979774"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447338"
 ---
-# À propos du mode Internet Explorer
+# <a name="about-ie-mode"></a>À propos du mode Internet Explorer
 
 Cet article offre une vue d’ensemble et les conditions préalables à l’utilisation de Microsoft Edge avec le mode IE.
 
 > [!NOTE]
 > Cet article concerne les canaux MicrosoftEdge **stable**, **Beta** et **Dev**, version77 ou ultérieures.
 
-## Qu’est-ce que le modeIE?
+## <a name="what-is-ie-mode"></a>Qu’est-ce que le modeIE?
 
 Le mode IE sur Microsoft Edge simplifie l’utilisation de tous les sites nécessaires à votre organisation dans un seul navigateur. Il utilise le moteur Chromium intégré pour les sites modernes et utilise le moteur Trident MSHTML d’Internet Explorer11 (IE11) pour les sites hérités.
 
@@ -41,22 +41,22 @@ Seuls les sites configurés spécifiquement (via une stratégie) utiliseront le 
   > Nous ne traitons qu’une seule liste de sites en Mode entreprise. La stratégie de liste de sites Microsoft Edge est prioritaire sur la stratégie de liste de sites Internet Explorer.
 - Tous les sites intranet dont la stratégie de groupe **Envoyer tous les sites intranet vers InternetExplorer** est activée (Microsoft Edge77 ou version ultérieure).
 
-### Le mode IE prend en charge les fonctionnalités Internet Explorer suivantes
+### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>Le mode IE prend en charge les fonctionnalités Internet Explorer suivantes
 
 - Tous les modes document et les modes entreprise
 - Contrôles ActiveX (par exemple, Java ou Silverlight)
 - Objets application d’assistance du navigateur 
 - Les paramètres et stratégies de groupe Internet Explorer qui affectent les paramètres de zone de sécurité et le mode protégé
-- Les outils de développementF12 pour IE lorsqu'ils sont lancés avec [IEChooser](https://docs.microsoft.com/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
+- Les outils de développementF12 pour IE lorsqu'ils sont lancés avec [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
 - Les extensions Microsoft Edge (extensions qui interagissent directement avec le contenu de la page IE ne sont pas prises en charge.)
 
-### Le mode IE ne prend pas en charge les fonctionnalités Internet Explorer suivantes
+### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>Le mode IE ne prend pas en charge les fonctionnalités Internet Explorer suivantes
 
 - Barres d’outils Internet Explorer
 - Paramètres et stratégies de groupe Internet Explorer qui affectent le menu de navigation (par exemple, moteurs de recherche et pages d’accueil).
 - Outils de développement IE11 ou Microsoft EdgeF12
 
-## Conditions préalables
+## <a name="prerequisites"></a>Conditions préalables
 
 Les prérequis suivants concernent l’utilisation de MicrosoftEdge avec le mode IE.
 
@@ -87,10 +87,10 @@ Les prérequis suivants concernent l’utilisation de MicrosoftEdge avec le mode
   > [!IMPORTANT]
   > ** Windows7 et WindowsServer2008R2 seront pris en charge par MicrosoftEdge même après la fin du support de ces systèmes d’exploitation. Pour que le mode IE soit pris en charge sur ces systèmes d’exploitation, les appareils doivent disposer des [Mises à jour de sécurité étendues pour Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Nous vous recommandons d’effectuer une mise à jour vers un système d’exploitation pris en charge dès que possible afin de maintenir la sécurité. La prise en charge de MicrosoftEdge avec les mises à jour de sécurité étendues doit être considérée comme un pont temporaire pour obtenir un état de système d’exploitation pris en charge.
 
-2. Modèle d’administration MicrosoftEdge. Pour plus d’informations, voir [Configurer Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge).
+2. Modèle d’administration MicrosoftEdge. Pour plus d’informations, voir [Configurer Microsoft Edge](./configure-microsoft-edge.md).
 3. Internet Explorer11 activé dans les fonctionnalités de Windows.
 
-## Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Informations supplémentaires sur le mode entreprise](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Informations supplémentaires sur le mode entreprise](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
