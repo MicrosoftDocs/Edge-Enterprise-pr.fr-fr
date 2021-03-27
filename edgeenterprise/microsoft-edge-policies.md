@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/18/2021
+ms.date: 03/24/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur MicrosoftEdge pour Windows et Mac
-ms.openlocfilehash: 4935b927081ef1823ecf36b922948992926d4005
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 2204f1062699095e66707858646014daefc9322a
+ms.sourcegitcommit: e17de92b1fe9637cc7476e5c953bb8131ca2fbe1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442474"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "11448431"
 ---
 # <a name="microsoft-edge---policies"></a>MicrosoftEdge: Stratégies
 
@@ -25,7 +25,6 @@ La dernière version de MicrosoftEdge inclut les stratégies suivantes. Vous pou
 Si vous souhaitez en savoir plus sur un autre groupe de stratégies, utilisé pour contrôler la mise à jour de MicrosoftEdge, consultez la page [Informations de référence sur les stratégies de mise à jour de MicrosoftEdge](microsoft-edge-update-policies.md).
 
 Vous pouvez télécharger le [Kit des ressources de conformité en matière de sécurité Microsoft](https://www.microsoft.com/download/details.aspx?id=55319) pour les paramètres de base de la configuration en matière de sécurité, recommandés pour MicrosoftEdge. Si vous souhaitez en savoir plus, consultez le [blog sur les bases de la sécurité Microsoft](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
-
 
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
@@ -36,9 +35,7 @@ Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour
 
 |Nom|Sous-titre|
 |--|--|
-|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Autoriser les liens rapides sur la page Nouvel onglet|
-|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Récupérer la durée de mise à jour à l’arrêt|
-
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Autoriser le contenu Microsoft News sur la page Nouvel onglet|
 
 ## <a name="available-policies"></a>Stratégies disponibles
 
@@ -237,6 +234,7 @@ et des conseils pour les services Microsoft|
 |[HomepageLocation](#homepagelocation)|Configurer l’URL de la page d’accueil|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configurer les types d’arrière-plan autorisés pour la disposition du nouvel onglet|
 |[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Définir le logo de l’entreprise sur la page Nouvel onglet (obsolète)|
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Autoriser le contenu Microsoft News sur la page Nouvel onglet|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Masquer les sites populaires par défaut dans la page Nouvel onglet|
 |[NewTabPageLocation](#newtabpagelocation)|Configurer l’URL de la page Nouvel onglet|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Définir les liens rapides de la page Nouvel onglet|
@@ -333,7 +331,7 @@ et des conseils pour les services Microsoft|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Afficher une case à cocher «Toujours ouvrir» dans la boîte de dialogue de protocole externe|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Autoriser les utilisateurs à configurer la sécurité familiale et le mode Enfants|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Activer la barre des favoris|
-|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Récupérer la durée de mise à jour à l’arrêt|
+|[FetchKeepaliveDurationSecondsOnShutdown](#fetchkeepalivedurationsecondsonshutdown)|Récupérer la durée de mise à jour à l’arrêt|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Appliquer le filtre adulte Bing|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configurer la sélection automatique d’un certificat par MicrosoftEdge lorsqu’il existe plusieurs correspondances de certificats pour un site configuré avec «AutoSelectCertificateForUrls»|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Activer l’utilisation des profils éphémères|
@@ -387,7 +385,7 @@ et des conseils pour les services Microsoft|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configurer la connexion automatique du profil par défaut de l’utilisateur avec son compte professionnel ou scolaire|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Contrôler l’application des restrictions de sécurité aux origines non sécurisées|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Autoriser les sites web à vérifier les modes de paiement disponibles|
-|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Autoriser la personnalisation des publicités, de la recherche et des actualités en envoyant un historique de navigation à Microsoft|
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Autoriser la personnalisation des services Microsoft en envoyant des données de navigation et de navigateur à Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Autoriser l’Assistant Épingler à la barre des tâches|
 |[ProactiveAuthEnabled](#proactiveauthenabled)|Activer l’authentification proactive (déconseillé)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Activer le contenu promotionnel dans les onglets|
@@ -436,7 +434,7 @@ et des conseils pour les services Microsoft|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Configurer la liste des types exclus de la synchronisation|
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Activer une fonctionnalité de sécurité TLS1.3 pour les ancres d’approbation locales (obsolète)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Spécifier les suites de chiffrement TLS à désactiver|
-|[TabFreezingEnabled](#tabfreezingenabled)|Autoriser le gel des onglets d’arrière-plan|
+|[TabFreezingEnabled](#tabfreezingenabled)|Autoriser le gel des onglets d’arrière-plan (obsolète)|
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Ne définissez pas window.opener pour les liens ciblant _blank|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Activer la possibilité de mettre fin aux processus dans le gestionnaire des tâches|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Définir une limite de mémoire en mégaoctets qu’une seule instance de MicrosoftEdge peut utiliser|
@@ -506,7 +504,7 @@ Si vous choisissez la valeur «fixed_servers» comme « ProxyMode », le champs 
 
 Si vous choisissez la valeur 'pac_script' comme 'ProxyMode', le champ 'ProxyPacUrl' est utilisé.
 
-Pour plus d’informations sur l’identification du trafic Application Guard via un proxy double, visitez [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653).
+Pour plus d’informations sur l’identification du trafic Application Guard via un proxy double, visitez [https://go.microsoft.com/fwlink/?linkid=2134653](./microsoft-edge-security-windows-defender-application-guard.md).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -846,7 +844,7 @@ Il ne peut pas y avoir de modèles d’URL en conflit définis entre ces trois s
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie.
 
 Pour exclure la suppression des cookies lors de la fermeture, configurez la stratégie de [SaveCookiesOnExit](#savecookiesonexit).
 
@@ -925,7 +923,7 @@ Il ne peut pas y avoir de modèles d’URL en conflit définis entre ces trois s
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) . * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -1004,7 +1002,7 @@ Il ne peut pas y avoir de modèles d’URL en conflit définis entre ces trois s
 
 - CookiesSessionOnlyForUrls
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) . * n’est pas une valeur acceptée pour cette stratégie.
 
 Si vous définissez la stratégie [RestoreOnStartup](#restoreonstartup) de manière à restaurer les URL à partir des sessions précédentes, cette stratégie est ignorée et les cookies sont stockés définitivement pour ces sites. 
 
@@ -1907,7 +1905,7 @@ Laisser la stratégie en suspens signifie la [DefaultFileSystemReadGuardSetting]
 
 Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Aucune stratégie n’est prioritaire si une URL correspond aux deux.
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -1976,7 +1974,7 @@ Si vous ne configurez pas cette stratégie, [DefaultFileSystemReadGuardSetting](
 
 Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemReadAskForUrls](#filesystemreadaskforurls). Aucune stratégie n’est prioritaire si une URL correspond aux deux.
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2045,7 +2043,7 @@ Si vous ne configurez pas cette stratégie, [DefaultFileSystemWriteGuardSetting]
 
 Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Aucune stratégie n’est prioritaire si une URL correspond aux deux.
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2114,7 +2112,7 @@ Si vous ne configurez pas cette stratégie, [DefaultFileSystemWriteGuardSetting]
 
 Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Aucune stratégie n’est prioritaire si une URL correspond aux deux.
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2181,7 +2179,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultImagesSetting](#defaultimagessetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2248,7 +2246,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultImagesSetting](#defaultimagessetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2315,7 +2313,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Si cette stratégie n’est pas configurée, le contenu mixte pouvant être bloqué le sera et le contenu mixte pouvant facultativement être bloqué sera mis à jour. Toutefois, les utilisateurs seront autorisés à définir des exceptions pour autoriser du contenu mixte non sécurisé pour des sites spécifiques.
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2382,7 +2380,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 Si cette stratégie n’est pas configurée, le contenu mixte pouvant être bloqué le sera et le contenu mixte pouvant facultativement être bloqué sera mis à jour. Toutefois, les utilisateurs seront autorisés à définir des exceptions pour autoriser du contenu mixte non sécurisé pour des sites spécifiques.
 
-Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2716,7 +2714,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   Vous permet de créer une liste de modèles d’URL pour spécifier les sites autorisés à afficher les notifications.
 
-Si cette stratégie n’est pas configurée, la valeur globale par défaut est utilisée pour tous les sites. Cette valeur par défaut est comprise dans la stratégie [DefaultNotificationsSetting](#defaultnotificationssetting) si elle est définie, ou à partir de la configuration personnelle de l’utilisateur. Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Si cette stratégie n’est pas configurée, la valeur globale par défaut est utilisée pour tous les sites. Cette valeur par défaut est comprise dans la stratégie [DefaultNotificationsSetting](#defaultnotificationssetting) si elle est définie, ou à partir de la configuration personnelle de l’utilisateur. Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2781,7 +2779,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   Vous permet de créer une liste de modèles d’URL pour spécifier les sites non autorisés à afficher les notifications.
 
-Si cette stratégie n’est pas configurée, la valeur globale par défaut est utilisée pour tous les sites. Cette valeur par défaut est comprise dans la stratégie [DefaultNotificationsSetting](#defaultnotificationssetting) si elle est définie, ou à partir de la configuration personnelle de l’utilisateur. Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Si cette stratégie n’est pas configurée, la valeur globale par défaut est utilisée pour tous les sites. Cette valeur par défaut est comprise dans la stratégie [DefaultNotificationsSetting](#defaultnotificationssetting) si elle est définie, ou à partir de la configuration personnelle de l’utilisateur. Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2850,7 +2848,7 @@ Déterminez une liste des sites, basés sur des formats d’URL, qui sont autori
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultPluginsSetting](#defaultpluginssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -2919,7 +2917,7 @@ Déterminez une liste des sites, basés sur des formats d’URL, qui ne sont pas
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultPluginsSetting](#defaultpluginssetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
+Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Toutefois, à partir de M85, les modèles avec des caractères génériques comme «\*» et «[\*.]» dans l’hôte ne sont plus pris en charge pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -3362,7 +3360,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [WebUsbBlockedForUrls](#webusbblockedforurls): vous ne pouvez pas à la fois autoriser et bloquer une URL. Pour plus d’informations sur les modèles d’URL valides, veuillez consulter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [WebUsbBlockedForUrls](#webusbblockedforurls): vous ne pouvez pas à la fois autoriser et bloquer une URL. Pour plus d’informations sur les modèles d’URL valides, veuillez consulter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -3429,7 +3427,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
 
-Les modèles d’URL dans cette stratégie ne peuvent pas être en conflit avec ceux configurés dans la stratégie [WebUsbAskForUrls](#webusbaskforurls). Vous ne pouvez pas à la fois autoriser et bloquer une URL.   Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Les modèles d’URL dans cette stratégie ne peuvent pas être en conflit avec ceux configurés dans la stratégie [WebUsbAskForUrls](#webusbaskforurls). Vous ne pouvez pas à la fois autoriser et bloquer une URL.   Pour plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -4414,7 +4412,7 @@ Sur les instances macOS, les applications et les extensions externes au site web
 
 Des utilisateurs équipés d’outils de développement peuvent modifier le code source de n’importe quelle extension. Cela risque éventuellement de rendre l’extension inopérante. Si ce point est un problème, configurez la stratégie DeveloperToolsDisabled.
 
-Chaque élément de liste de la stratégie est une chaîne contenant un ID d’extension et, éventuellement, une URL de «mise à jour» séparée par un point-virgule (;). L’ID d’extension correspond à la chaîne de 32 caractères détectée, par exemple, sur edge://extensions en mode développeur. Si vous avez spécifié ce paramètre, l’URL «update» doit pointer vers un document XML Update Manifest ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). Par défaut, le programme utilise l’URL de mise à jour du site web des composants additionnels Microsoft Edge. L’URL «update» spécifiée dans cette stratégie ne sert que pour l’installation initiale. Les mises à jour ultérieures de l’extension utilisent l’URL indiquée dans le fichier manifeste de l’extension.
+Chaque élément de liste de la stratégie est une chaîne contenant un ID d’extension et, éventuellement, une URL de «mise à jour» séparée par un point-virgule (;). L’ID d’extension correspond à la chaîne de 32 caractères détectée, par exemple, sur edge://extensions en mode développeur. Si vous avez spécifié ce paramètre, l’URL «update» doit pointer vers un document XML Update Manifest ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ). Par défaut, le programme utilise l’URL de mise à jour du site web des composants additionnels Microsoft Edge. L’URL «update» spécifiée dans cette stratégie ne sert que pour l’installation initiale. Les mises à jour ultérieures de l’extension utilisent l’URL indiquée dans le fichier manifeste de l’extension.
 
 Remarque: cette stratégie ne s’applique pas au mode InPrivate. En savoir plus sur les extensions d’hébergement ( https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) .
 
@@ -4483,7 +4481,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 Définissez les URL qui peuvent installer les extensions et les thèmes directement sans avoir à faire glisser les packages vers la page edge://extensions.
 
-Chaque élément de cette liste est un modèle correspondant au type extension (consultez [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Les utilisateurs peuvent facilement installer des éléments à partir de n’importe quelle URL qui correspond à un élément de cette liste. L’emplacement du fichier *.crx et de la page à partir de laquelle le téléchargement est effectué (en d’autres termes, le référent) doit être autorisé par ces modèles. N’hébergez pas les fichiers à un emplacement nécessitant une authentification.
+Chaque élément de cette liste est un modèle correspondant au type extension (consultez [https://go.microsoft.com/fwlink/?linkid=2095039](/microsoft-edge/extensions-chromium/enterprise/match-patterns)). Les utilisateurs peuvent facilement installer des éléments à partir de n’importe quelle URL qui correspond à un élément de cette liste. L’emplacement du fichier *.crx et de la page à partir de laquelle le téléchargement est effectué (en d’autres termes, le référent) doit être autorisé par ces modèles. N’hébergez pas les fichiers à un emplacement nécessitant une authentification.
 
 La stratégie [ExtensionInstallBlocklist](#extensioninstallblocklist) prévaut sur cette stratégie. Les extensions figurant dans la liste rouge ne sont pas installées, même si elles proviennent d’un site figurant sur cette liste.
 
@@ -4548,7 +4546,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   La définition de cette stratégie contrôle les paramètres de gestion des extensions pour Microsoft Edge, y compris tout contrôle par les stratégies associées aux extensions existantes. Cette stratégie remplace les stratégies héritées éventuellement définies.
 
-Cette stratégie mappe un ID d’extension ou une URL de mise à jour à son paramètre spécifique. Une configuration par défaut peut être définie pour l’ID spécial «*», qui s’applique à toutes les extensions sans configuration personnalisée de cette stratégie. Avec une URL de mise à jour, la configuration s’applique aux extensions dont l’URL de mise à jour est exacte, indiquée dans le manifeste de l’extension ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+Cette stratégie mappe un ID d’extension ou une URL de mise à jour à son paramètre spécifique. Une configuration par défaut peut être définie pour l’ID spécial «*», qui s’applique à toutes les extensions sans configuration personnalisée de cette stratégie. Avec une URL de mise à jour, la configuration s’applique aux extensions dont l’URL de mise à jour est exacte, indiquée dans le manifeste de l’extension ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ).
 
 Pour bloquer les extensions d’un magasin tiers particulier, vous devez uniquement bloquer les update_url pour ce magasin. Par exemple, si vous souhaitez bloquer les extensions du Chrome Web Store, vous pouvez utiliser le JSON suivant.
 
@@ -5316,7 +5314,7 @@ Si vous activez ou ne configurez pas cette stratégie, les utilisateurs peuvent 
 
 Si vous désactivez cette stratégie, cela empêche les utilisateurs de modifier l’URL dans la barre d’adresses.
 
-Pour obtenir plus d’informations sur la configuration du mode plein écran, voir [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+Pour obtenir plus d’informations sur la configuration du mode plein écran, voir [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -5380,7 +5378,7 @@ Si vous activez cette stratégie, les fichiers téléchargés dans le cadre d’
 
 Si vous la désactivez ou si vous ne la configurez pas, les fichiers téléchargés dans le cadre d’une session plein écran ne sont pas supprimés lors de la fermeture de MicrosoftEdge.
 
-Pour obtenir plus d’informations sur la configuration du mode plein écran, voir [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+Pour obtenir plus d’informations sur la configuration du mode plein écran, voir [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -6875,7 +6873,7 @@ Si vous activez cette stratégie, vous pouvez créer une liste d’hôtes pour l
 
 Si vous ne configurez pas cette stratégie, aucune liste d’hôtes n’est créée et MicrosoftEdge ne contourne aucun proxy. Ne configurez pas cette stratégie si vous avez spécifié une autre méthode de configuration des stratégies de proxy.
 
-Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -6946,7 +6944,7 @@ Si vous choisissez d’utiliser:
   * fixed_servers=Serveurs proxy fixes. Vous pouvez spécifier d’autres options avec [ProxyServer](#proxyserver) et [ProxyBypassList](#proxybypasslist).
   * pac_script= UnScript proxy .pac. Use [ProxyPacUrl](#proxypacurl) pour définir l’URL sur fichier .pac proxy.
 
-Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
 Si vous ne configurez pas cette stratégie, les utilisateurs peuvent choisir eux-mêmes leurs paramètres de proxy.
 
@@ -7030,7 +7028,7 @@ Si vous activez cette stratégie, vous pouvez spécifier une URL pour un fichier
 
 Si vous désactivez ou ne configurez pas cette stratégie, aucun fichier PAC n’est spécifié. Ne configurez pas cette stratégie si vous avez spécifié une autre méthode de configuration des stratégies de proxy.
 
-Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Si vous souhaitez voir des exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -7098,7 +7096,7 @@ Si vous activez cette stratégie, le serveur proxy configuré par cette stratég
 
 Si vous désactivez ou ne configurez pas cette stratégie, les utilisateurs peuvent choisir eux-mêmes leurs paramètres de proxy dans le mode proxy. Ne configurez pas cette stratégie si vous avez spécifié une autre méthode de configuration des stratégies de proxy.
 
-Si vous souhaitez voir plus d’options et plus d’exemples détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Si vous souhaitez voir plus d’options et plus d’exemples détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -7182,7 +7180,7 @@ Pour ProxyMode, si vous choisissez la valeur:
   * fixed_servers, les champs ProxyServer et ProxyBypassList sont utilisés.
   * pac_script, les champs ProxyPacUrl et ProxyBypassList sont utilisés.
 
-Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -8173,6 +8171,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### <a name="newtabpagecontentenabled"></a>NewTabPageContentEnabled
+
+  #### <a name="allow-microsoft-news-content-on-the-new-tab-page"></a>Autoriser le contenu Microsoft News sur la page Nouvel onglet
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la mise à jour91 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Si vous activez ou ne configurez pas cette stratégie, Microsoft Edge affiche le contenu Microsoft News sur la page Nouvel onglet. L’utilisateur peut choisir différentes options d’affichage pour le contenu, y compris, mais sans s’y limiter, contenu visible sur défilement, Titres uniquement et Contenu visible. L’activation de cette stratégie ne force pas la visibilité du contenu : l’utilisateur peut continuer à définir sa propre position de contenu préférée.
+
+Si vous désactivez cette stratégie, Microsoft Edge n’affiche pas le contenu Microsoft News sur la page Nouvel onglet, le contrôle Contenu dans le menu contextuel des paramètres NTP est désactivé et est désactivé et est «Contenu désactivé».
+
+Cette stratégie s’applique uniquement aux profils utilisateur locaux MicrosoftEdge, aux profils signés à l’aide d’un compte Microsoft et aux profils signés à l’aide d’Active Directory. Pour configurer la page Nouvel onglet Entreprise pour les profils signés à l’aide d’Azure Active Directory, utilisez le portail d’administration M365.
+
+Stratégies connexes [: NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire: Oui
+  - Peut être recommandée: Non
+  - Actualisation dynamique de la stratégie: Oui
+
+  #### <a name="data-type"></a>Type de données:
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : NewTabPageContentEnabled
+  - Nom de la stratégie de groupe : autoriser le contenu Microsoft News sur la page nouvel onglet
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Startup, page d’accueil et page Nouvel onglet
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : NewTabPageContentEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : NewTabPageContentEnabled
+  - Exemple de valeur:
+``` xml
+<false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### <a name="newtabpagehidedefaulttopsites"></a>NewTabPageHideDefaultTopSites
 
   #### <a name="hide-the-default-top-sites-from-the-new-tab-page"></a>Masquer les sites populaires par défaut dans la page Nouvel onglet
@@ -8484,7 +8546,7 @@ Si vous désactivez cette stratégie, MicrosoftEdge masque les liens rapides sur
 
 Cette stratégie s’applique uniquement aux profils utilisateur locaux MicrosoftEdge, aux profils signés à l’aide d’un compte Microsoft et aux profils signés à l’aide d’Active Directory. Pour configurer la page Nouvel onglet Entreprise pour les profils signés à l’aide d’Azure Active Directory, utilisez le portail d’administration M365.
 
-Stratégie associée: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+Stratégies connexes [: NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageContentEnabled](#newtabpagecontentenabled)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -10053,7 +10115,7 @@ Si l’une ou l’autre condition est fausse, l’invite de lancement de protoco
 
 Si vous ne configurez pas cette stratégie, vous ne pouvez pas lancer d’autres protocoles sans invite de commandes. Les utilisateurs peuvent désactiver les invites sur une base par protocole ou par site, sauf si la stratégie de [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) est désactivée. Cette stratégie n’a aucun impact sur les exemptions d’invite par protocole ou par site définis par les utilisateurs.
 
-Les modèles de correspondance d’origine utilisent un format similaire à celui de la stratégie de [URLBlocklist](#urlblocklist), documentée dans [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Les modèles de correspondance d’origine utilisent un format similaire à celui de la stratégie de [URLBlocklist](#urlblocklist), documentée dans [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 Toutefois, les modèles de correspondance d’origine pour cette stratégie ne peuvent pas contenir d’éléments "/path" ou "@query". Tout modèle contenant un élément "/path" ou "@query" sera ignoré.
 
@@ -10175,7 +10237,7 @@ Si vous configurez des URL dans cette stratégie, les fichiers s’ouvrent autom
 
 Si vous ne configurez pas cette stratégie, tous les téléchargements où se trouve le type de fichier dans [AutoOpenFileTypes](#autoopenfiletypes) s’ouvrent automatiquement.
 
-Un modèle d’URL doit être mis en forme en fonction de [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Un modèle d’URL doit être mis en forme en fonction de [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -10637,7 +10699,7 @@ Si vous ne configurez pas cette stratégie, l’expérience par défaut affiche 
 
 Cette stratégie est disponible uniquement pour les références SKUK-12 qui sont identifiées comme clients EDU par Microsoft.
 
-Si vous souhaitez en apprendre plus sur cette stratégie ou si ces cas s’appliquent à votre situation, consultez [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711):
+Si vous souhaitez en apprendre plus sur cette stratégie ou si ces cas s’appliquent à votre situation, consultez [https://go.microsoft.com/fwlink/?linkid=2119711](/microsoft-365/education/deploy/install-microsoft-edge):
 
 * Vous avez un client EDU, mais la stratégie ne fonctionne pas.
 
@@ -11383,7 +11445,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 Cette règle autorise à ne pas communiquer les certificats associés aux noms d’hôte dans la liste d’URL répertoriées via les règles de transparence des certificats. Cela vous permet d’utiliser des certificats qui, autrement, ne seraient pas fiables, car ils n’ont pas été correctement divulgués publiquement, mais il est plus difficile de détecter les certificats émis incorrectement pour ces hôtes.
 
-Le format d’un modèle d’URL doit être conforme aux règles stipulées à l’adresse [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Comme les certificats sont valides pour un nom d’hôte donné, indépendamment du schéma, du port ou du chemin d’accès, seule la partie du nom d’hôte de l’URL est prise en compte. Les caractères génériques ne sont pas pris en charge.
+Le format d’un modèle d’URL doit être conforme aux règles stipulées à l’adresse [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Comme les certificats sont valides pour un nom d’hôte donné, indépendamment du schéma, du port ou du chemin d’accès, seule la partie du nom d’hôte de l’URL est prise en compte. Les caractères génériques ne sont pas pris en charge.
 
 Si vous ne configurez pas cette stratégie, tout certificat qui doit être communiqué tel que le prévoient les règles de transparence des certificats est considéré comme n’étant pas fiable s’il n’est pas communiqué comme il se doit.
 
@@ -11590,7 +11652,7 @@ Si vous ne configurez pas cette stratégie, les utilisateurs disposant de Micros
 
 La désactivation de ClickOnce peut empêcher le lancement correct des applications ClickOnce (fichiers .application).
 
-Si vous souhaitez en savoir plus sur ClickOnce, consultez [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) et [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
+Si vous souhaitez en savoir plus sur ClickOnce, consultez [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) et [https://go.microsoft.com/fwlink/?linkid=2099880](/visualstudio/deployment/clickonce-security-and-deployment).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -11989,7 +12051,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### <a name="description"></a>Description
 
-  Activez l’utilisation des comptes ActiveDirectory pour la connexion automatique si les ordinateurs de vos utilisateurs sont joints au domaine et si votre environnement n’est pas joint de façon hybride. Si vous souhaitez que les utilisateurs soient connectés automatiquement avec leur compte AzureActiveDirectory, créez une jonction AzureAD (consultez [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) si vous souhaitez en savoir plus) ou une jonction hybride (consultez [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) si vous souhaitez en savoir plus) pour votre environnement.
+  Activez l’utilisation des comptes ActiveDirectory pour la connexion automatique si les ordinateurs de vos utilisateurs sont joints au domaine et si votre environnement n’est pas joint de façon hybride. Si vous souhaitez que les utilisateurs soient connectés automatiquement avec leur compte AzureActiveDirectory, créez une jonction AzureAD (consultez [https://go.microsoft.com/fwlink/?linkid=2118197](/azure/active-directory/devices/azureadjoin-plan) si vous souhaitez en savoir plus) ou une jonction hybride (consultez [https://go.microsoft.com/fwlink/?linkid=2118365](/azure/active-directory/devices/hybrid-azuread-join-plan) si vous souhaitez en savoir plus) pour votre environnement.
 
 À chaque lancement, Microsoft Edge essaiera de se connecter à l’aide de cette stratégie, tant que le premier profil lancé n’est pas connecté ou qu’une se connecte automatique n’a pas eu lieu auparavant.
 
@@ -12317,7 +12379,7 @@ Si vous attribuez la valeur false à cette stratégie, Microsoft Edge cesse de v
 
 Si vous ne configurez pas cette stratégie, Microsoft Edge permet aux utilisateurs de contrôler s’il s’agit de la valeur par défaut. si ce n’est pas le cas, les notifications de l’utilisateur doivent s’afficher.
 
-Remarque pour les administrateurs Windows: L’activation de cette stratégie ne fonctionne que pour les ordinateurs fonctionnant sous Windows7. Pour les versions ultérieures de Windows, vous devez déployer un fichier «associations d’applications par défaut» qui définit MicrosoftEdge comme gestionnaire des protocoles https et http (et, éventuellement, du protocole ftp et des formats de fichiers tels que .html, .htm, .pdf, .svg ou .webp). Si vous souhaitez en savoir plus, consultez [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932).
+Remarque pour les administrateurs Windows: L’activation de cette stratégie ne fonctionne que pour les ordinateurs fonctionnant sous Windows7. Pour les versions ultérieures de Windows, vous devez déployer un fichier «associations d’applications par défaut» qui définit MicrosoftEdge comme gestionnaire des protocoles https et http (et, éventuellement, du protocole ftp et des formats de fichiers tels que .html, .htm, .pdf, .svg ou .webp). Si vous souhaitez en savoir plus, consultez [https://go.microsoft.com/fwlink/?linkid=2094932](./edge-default-browser.md).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -12849,7 +12911,7 @@ Les données de diagnostic requises sont collectées pour garantir le niveau att
 
 Les données de diagnostic facultatives incluent des données sur la façon dont vous utilisez le navigateur, les sites web que vous visitez et les rapports d’incident à Microsoft afin d’améliorer les produits et services.
 
-Cette stratégie n’est pas prise en charge sur les appareils Windows10. Pour contrôler cette collecte de données sur Windows10, les administrateurs informatiques doivent utiliser la stratégie de groupe de données de diagnostic de Windows. Selon la version de Windows, cette stratégie est soit «Autoriser la télémétrie», soit «Autoriser les données de diagnostic». Si vous souhaitez en savoir plus sur la collecte de données de diagnostic Windows10: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+Cette stratégie n’est pas prise en charge sur les appareils Windows10. Pour contrôler cette collecte de données sur Windows10, les administrateurs informatiques doivent utiliser la stratégie de groupe de données de diagnostic de Windows. Selon la version de Windows, cette stratégie est soit «Autoriser la télémétrie», soit «Autoriser les données de diagnostic». Si vous souhaitez en savoir plus sur la collecte de données de diagnostic Windows10: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 Utilisez l’un des paramètres suivants pour configurer cette stratégie:
 
@@ -12937,7 +12999,7 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas ouvrir de 
 
 Remarque : la désactivation de DirectInvoke peut empêcher certaines fonctionnalités de Microsoft SharePoint Online d’être utilisées correctement.
 
-Si vous souhaitez en savoir plus sur DirectInvoke, consultez [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) et [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871).
+Si vous souhaitez en savoir plus sur DirectInvoke, consultez [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) et [https://go.microsoft.com/fwlink/?linkid=2099871](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85)).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -14114,7 +14176,7 @@ Si vous désactivez ou ne configurez pas cette stratégie, les types de fichiers
 
 Si vous activez cette stratégie:
 
-* Le modèle d’URL doit être mis en forme en fonction de [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+* Le modèle d’URL doit être mis en forme en fonction de [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 * L’extension de type de fichier entrée doit être en minuscules ASCII. Il n’est pas possible d’inclure le séparateur principal dans la liste des types de fichiers. par conséquent, vous devez utiliser la liste «JNLP» à la place de «. jnlp».
 
 Exemple:
@@ -14452,7 +14514,7 @@ Si cette stratégie n’est pas configurée, l’utilisateur peut décider d’u
 
   [Retour au début](#microsoft-edge---policies)
 
-  ### <a name="fetchkeepalivedurationonshutdown"></a>FetchKeepaliveDurationOnShutdown
+  ### <a name="fetchkeepalivedurationsecondsonshutdown"></a>FetchKeepaliveDurationSecondsOnShutdown
 
   #### <a name="fetch-keepalive-duration-on-shutdown"></a>Récupérer la durée de mise à jour à l’arrêt
 
@@ -14484,8 +14546,8 @@ Si vous désactivez ou ne configurez pas cette stratégie, la valeur par défaut
 
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de group : FetchKeepaliveDurationOnShutdown
-  - Nom de la stratégie de group : récupérer la durée de mise à jour à l’arrêt
+  - Nom unique de la stratégie de groupe : FetchKeepaliveDurationSecondsOnShutdown
+  - Nom de la stratégie de groupe : récupérer la durée de mise à jour à l’arrêt
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -14494,7 +14556,7 @@ Si vous désactivez ou ne configurez pas cette stratégie, la valeur par défaut
 
   - Chemin d’accès (obligatoire): SOFTWARE\Policies\Microsoft\Edge
   - Chemin d’accès (recommandé): N/A
-  - Nom de la valeur : FetchKeepaliveDurationOnShutdown
+  - Nom de la valeur : FetchKeepaliveDurationSecondsOnShutdown
   - Type de valeur: REG_DWORD
 
   ##### <a name="example-value"></a>Exemple de valeur:
@@ -14505,7 +14567,7 @@ Si vous désactivez ou ne configurez pas cette stratégie, la valeur par défaut
 
   #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
   
-  - Nom clé de la préférence : FetchKeepaliveDurationOnShutdown
+  - Nom clé de la préférence : FetchKeepaliveDurationSecondsOnShutdown
   - Exemple de valeur:
 ``` xml
 <integer>1</integer>
@@ -16529,7 +16591,7 @@ Si vous définissez cette stratégie sur «Enabled» ou si vous ne la configurez
 
 Si vous configurez cette stratégie sur «Disabled», la détection d’arrêt intempestif renforcée est désactivée et les utilisateurs obtiendront le comportement de détection d’arrêt intempestif de base d’Internet Explorer.
 
-Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
 Mappage des options de stratégie:
 
@@ -16588,7 +16650,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### <a name="description"></a>Description
 
-  Si vous souhaitez obtenir des instructions sur la configuration optimale de l'expérience pour Internet Explorer, consultez [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  Si vous souhaitez obtenir des instructions sur la configuration optimale de l'expérience pour Internet Explorer, consultez [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
 Mappage des options de stratégie:
 
@@ -16657,7 +16719,7 @@ Si vous définissez cette stratégie sur true ou si vous ne la configurez pas, l
 
 Si vous définissez cette stratégie sur false, l’utilisateur n’est pas autorisé à utiliser l’argument de ligne de commande --ie-mode-file-url pour lancer des fichiers locaux en mode InternetExplorer.
 
-Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -16716,7 +16778,7 @@ Lorsqu’une URL file:// doit être lancée en mode InternetExplorer, l’extens
 
 Si vous définissez cette stratégie sur la valeur spéciale «*» ou si vous ne la configurez pas, toutes les extensions de fichier sont autorisées.
 
-Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -16778,7 +16840,7 @@ Si vous définissez cette stratégie sur true, l’élément de menu contextuel 
 
 Si vous définissez cette stratégie sur false ou si vous ne la configurez pas, l’élément de menu contextuel ne sera pas ajouté.
 
-Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -16829,7 +16891,7 @@ Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la pag
 
   #### <a name="description"></a>Description
 
-  Si vous souhaitez obtenir des instructions sur la configuration optimale de l'expérience pour Internet Explorer, consultez [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  Si vous souhaitez obtenir des instructions sur la configuration optimale de l'expérience pour Internet Explorer, consultez [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -16894,7 +16956,7 @@ Si vous définissez cette stratégie sur « AutomaticNavigationsOnly », vous b�
 
 Si vous configurez cette stratégie sur « AllInPageNavigations », toutes les navigations depuis les pages chargées en mode IE vers des sites non configurés restent en mode Internet Explorer (le moins recommandé). 
 
-Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2105106](./edge-learnmore-inpage-nav.md)
 
 Mappage des options de stratégie:
 
@@ -16962,8 +17024,6 @@ Les utilisateurs peuvent le faire dans le menu «Autres Outils» en sélectionna
 Par ailleurs, les utilisateurs peuvent tester leurs applications dans un navigateur moderne sans supprimer les applications de la liste des sites à l’aide de l’option «Ouvrir les sites en mode Edge».
 
 Ce paramètre fonctionne conjointement avec: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) est défini sur «IEMode».
-   
-                                                                                                                         
 
 Si vous activez cette stratégie, l’option «Ouvrir les sites en mode Internet Explorer» est visible sous «Autres outils». Les utilisateurs peuvent afficher leurs sites en mode Internet Explorer dans cet onglet. Une autre option servant à «Ouvrir les sites en mode Edge» apparaît également sous «Autres outils» pour permettre le test des sites dans un navigateur moderne sans les supprimer de la liste des sites.
 
@@ -17748,13 +17808,13 @@ Si la stratégie [EnableMediaRouter](#enablemediarouter) est désactivée, cette
 
   #### <a name="description"></a>Description
 
-  Cette stratégie n’est plus prise en charge. Elle est remplacée par [DiagnosticData](#diagnosticdata) (pour Windows7, Windows8 et macOS) et Autoriser la télémétrie sur Windows10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569) ).
+  Cette stratégie n’est plus prise en charge. Elle est remplacée par [DiagnosticData](#diagnosticdata) (pour Windows7, Windows8 et macOS) et Autoriser la télémétrie sur Windows10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) ).
 
 Cette stratégie permet l’envoi à Microsoft de rapports sur l’utilisation et les incidents liés à MicrosoftEdge.
 
 Activez cette stratégie pour envoyer des rapports sur l’utilisation et les incidents à Microsoft. Désactivez cette stratégie pour ne pas envoyer les données à Microsoft. Dans un cas comme dans l’autre, les utilisateurs ne peuvent pas modifier ou remplacer le paramètre.
 
-Dans Windows10, MicrosoftEdge prendra par défaut le paramètre de données de diagnostic Windows, si vous ne configurez cette stratégie. Si cette stratégie est activée, MicrosoftEdge envoie des données d’utilisation uniquement si le paramètre de données de Diagnostic Windows est défini sur Avancé ou Complet. Si cette stratégie est désactivée, MicrosoftEdge n’enverra pas de données d’utilisation. Les données liées aux incidents sont envoyées en fonction du paramètre de données de diagnostic Windows. Si vous souhaitez en savoir plus sur les paramètres de données de diagnostic Windows, consultez [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+Dans Windows10, MicrosoftEdge prendra par défaut le paramètre de données de diagnostic Windows, si vous ne configurez cette stratégie. Si cette stratégie est activée, MicrosoftEdge envoie des données d’utilisation uniquement si le paramètre de données de Diagnostic Windows est défini sur Avancé ou Complet. Si cette stratégie est désactivée, MicrosoftEdge n’enverra pas de données d’utilisation. Les données liées aux incidents sont envoyées en fonction du paramètre de données de diagnostic Windows. Si vous souhaitez en savoir plus sur les paramètres de données de diagnostic Windows, consultez [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 Sur Windows7, Windows8 et macOS, cette stratégie contrôle l’envoi des données relatives à l’utilisation et aux incidents. Si vous ne configurez pas cette stratégie, MicrosoftEdge est défini par défaut sur les préférences de l’utilisateur.
 
@@ -18190,7 +18250,7 @@ Si vous activez cette stratégie ou si vous ne la définissez pas, les sites web
 
   ### <a name="personalizationreportingenabled"></a>PersonalizationReportingEnabled
 
-  #### <a name="allow-personalization-of-ads-search-and-news-by-sending-browsing-history-to-microsoft"></a>Autoriser la personnalisation des publicités, de la recherche et des actualités en envoyant un historique de navigation à Microsoft
+  #### <a name="allow-personalization-of-microsoft-services-by-sending-browsing-and-browser-related-data-to-microsoft"></a>Autoriser la personnalisation des services Microsoft en envoyant des données de navigation et de navigateur à Microsoft
 
   
   
@@ -18200,9 +18260,9 @@ Si vous activez cette stratégie ou si vous ne la définissez pas, les sites web
 
   #### <a name="description"></a>Description
 
-  Cette stratégie empêche Microsoft de collecter l'historique de navigation MicrosoftEdge d'un utilisateur pour personnaliser la publicité, la recherche, les actualités et d'autres services Microsoft.
+  Cette stratégie empêche Microsoft de collecter l’historique de navigation Microsoft Edge d’un utilisateur, les collections et favoris, les données d’utilisation du navigateur et la saisie comme dans la barre d’adresses à utiliser pour personnaliser les publicités, la recherche, les actualités, Microsoft Edge et d’autres services Microsoft.
 
-Ce paramètre n'est disponible que pour les utilisateurs disposant d'un compte Microsoft. Ce paramètre n'est pas disponible pour les comptes enfants ou les comptes d'entreprise.
+Ce paramètre n'est pas disponible pour les comptes enfants ou les comptes d'entreprise.
 
 Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas modifier ou remplacer le paramètre. Si vous activez cette stratégie ou si vous ne la configurez pas, MicrosoftEdge sera par défaut la préférence de l'utilisateur.
 
@@ -18221,7 +18281,7 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas modifier o
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: PersonalizationReportingEnabled
-  - Nom de la stratégie de groupe: autoriser la personnalisation des publicités, de la recherche et des actualités en envoyant un historique de navigation à Microsoft
+  - Nom de la stratégie de groupe : autoriser la personnalisation des services Microsoft en envoyant des données de navigation et de navigateur à Microsoft
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -18643,7 +18703,7 @@ Si cette stratégie est désactivée ou non configurée, l’objet application d
 
 L’objet application d'assistance du navigateur est nécessaire pour qu’une redirection de site incompatible ait lieu, mais la redirection est également conditionnée par [RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode).
 
-Pour plus d’informations sur cette stratégie, voir [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+Pour plus d’informations sur cette stratégie, voir [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -18704,7 +18764,7 @@ Lorsque Microsoft Edge est lancé pour charger un site à partir d’IE, une bar
 
 Si vous définissez cette stratégie sur Désactiver, Internet Explorer ne redirige pas le trafic vers Microsoft Edge.
 
-Pour plus d’informations sur cette stratégie, voir [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+Pour plus d’informations sur cette stratégie, voir [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
 
 Mappage des options de stratégie:
 
@@ -19198,7 +19258,7 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, seuls les 
 
 [SyncDisabled](#syncdisabled) désactive uniquement la synchronisation cloud et n’a aucun impact sur cette stratégie.
 
-Voir [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) pour plus d’informations sur l’utilisation des profils utilisateur itinérants.
+Voir [https://go.microsoft.com/fwlink/?linkid=2150058](./microsoft-edge-on-premises-sync.md) pour plus d’informations sur l’utilisation des profils utilisateur itinérants.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -19383,7 +19443,7 @@ Si vous désactivez la stratégie [SSLErrorOverrideAllowed,](#sslerroroverrideal
 
 Si vous ne configurez pas cette stratégie, la stratégie [SSLErrorOverrideAllowed](#sslerroroverrideallowed) s’applique à tous les sites.
 
-Pour plus d’informations sur les modèles d’origine valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie. Cette stratégie ne correspond qu’en fonction de l’origine, de sorte que tout chemin d’accès ou requête dans le modèle d’URL est ignoré.
+Pour plus d’informations sur les modèles d’origine valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * n’est pas une valeur acceptée pour cette stratégie. Cette stratégie ne correspond qu’en fonction de l’origine, de sorte que tout chemin d’accès ou requête dans le modèle d’URL est ignoré.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -19902,7 +19962,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Description
 
-  Si vous souhaitez obtenir des instructions sur la configuration optimale de l'expérience pour Internet Explorer, consultez [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  Si vous souhaitez obtenir des instructions sur la configuration optimale de l'expérience pour Internet Explorer, consultez [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -19953,13 +20013,13 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Description
 
-  Cette stratégie n’est plus prise en charge. Elle est remplacée par [DiagnosticData](#diagnosticdata) (pour Windows7, Windows8 et macOS) et Autoriser la télémétrie sur Windows10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569) ).
+  Cette stratégie n’est plus prise en charge. Elle est remplacée par [DiagnosticData](#diagnosticdata) (pour Windows7, Windows8 et macOS) et Autoriser la télémétrie sur Windows10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) ).
 
 Cette stratégie permet d'envoyer à Microsoft des informations sur les sites web visités dans MicrosoftEdge afin d'améliorer les services, tels que la recherche.
 
 Activez cette stratégie pour envoyer à Microsoft des informations sur les sites web visités dans MicrosoftEdge. Désactivez cette stratégie pour ne pas envoyer à Microsoft d'informations sur les sites web visités dans MicrosoftEdge. Dans un cas comme dans l’autre, les utilisateurs ne peuvent pas modifier ou remplacer le paramètre.
 
-Dans Windows10, MicrosoftEdge prendra par défaut le paramètre de données de diagnostic Windows, si vous ne configurez cette stratégie. Si cette stratégie est activée, MicrosoftEdge n'envoie que des informations sur les sites web visités dans MicrosoftEdge si le paramètre Données de diagnostic Windows est défini sur Complet. Si cette stratégie est désactivée, MicrosoftEdge n’enverra pas d’informations concernant les sites web visités. Si vous souhaitez en savoir plus sur les paramètres de données de diagnostic Windows, rendez-vous sur: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+Dans Windows10, MicrosoftEdge prendra par défaut le paramètre de données de diagnostic Windows, si vous ne configurez cette stratégie. Si cette stratégie est activée, MicrosoftEdge n'envoie que des informations sur les sites web visités dans MicrosoftEdge si le paramètre Données de diagnostic Windows est défini sur Complet. Si cette stratégie est désactivée, MicrosoftEdge n’enverra pas d’informations concernant les sites web visités. Si vous souhaitez en savoir plus sur les paramètres de données de diagnostic Windows, rendez-vous sur: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 Sous Windows7, Windows8 et macOS, cette stratégie contrôle l'envoi d'informations sur les sites web visités. Si vous ne configurez pas cette stratégie, MicrosoftEdge est défini par défaut sur les préférences de l’utilisateur.
 
@@ -20029,7 +20089,7 @@ Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordr
 
 Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [SensorsBlockedForUrls](#sensorsblockedforurls). Vous ne pouvez pas autoriser et bloquer une URL.
 
-Si vous souhaitez obtenir plus d’informations concernant les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+Si vous souhaitez obtenir plus d’informations concernant les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -20100,7 +20160,7 @@ Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordr
 
 Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [SensorsAllowedForUrls](#sensorsallowedforurls). Vous ne pouvez pas autoriser et bloquer une URL.
 
-Si vous souhaitez obtenir plus d’informations concernant les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+Si vous souhaitez obtenir plus d’informations concernant les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -20171,7 +20231,7 @@ Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordr
 
 Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [SerialBlockedForUrls](#serialblockedforurls). Vous ne pouvez pas autoriser et bloquer une URL.
 
-Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -20242,7 +20302,7 @@ Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordr
 
 Les modèles d’URL dans cette stratégie ne peuvent pas être en conflit avec ceux configurés dans la stratégie [SerialAskForUrls](#serialaskforurls). Vous ne pouvez pas autoriser et bloquer une URL.
 
-Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Si vous souhaitez obtenir plus d’informations sur les modèles d’URL valides, consultez [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
@@ -21333,17 +21393,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   ### <a name="tabfreezingenabled"></a>TabFreezingEnabled
 
-  #### <a name="allow-freezing-of-background-tabs"></a>Autoriser le gel des onglets d’arrière-plan
+  #### <a name="allow-freezing-of-background-tabs-obsolete"></a>Autoriser le gel des onglets d’arrière-plan (obsolète)
 
   
-  
+  >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version 86 de Microsoft Edge.
   #### <a name="supported-versions"></a>Versions prises en charge:
 
-  - sur Windows et macOS depuis la version79 ou versions ultérieures
+  - Sur Windows et macOS depuis la 79, jusqu’à la 86
 
   #### <a name="description"></a>Description
 
-  Détermine si MicrosoftEdge peut geler ou non des onglets qui sont en arrière-plan depuis au moins cinq minutes. 
+  Cette stratégie ne fonctionne pas, utilisez [Plutôt SleepingTabsEnabled.](#sleepingtabsenabled)
+
+Détermine si MicrosoftEdge peut geler ou non des onglets qui sont en arrière-plan depuis au moins cinq minutes. 
 
 Le gel des onglets permet de moins solliciter le processeur, la batterie et la mémoire. MicrosoftEdge utilise des heuristiques pour ne pas figer les onglets qui exécutent une tâche utile en arrière-plan, comme l'affichage de notifications, la lecture audio et la diffusion d'une vidéo en streaming. 
 
@@ -21366,7 +21428,7 @@ Si vous désactivez cette stratégie, aucun onglet n’est figé.
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
   - Nom unique de la stratégie de groupe: TabFreezingEnabled
-  - Nom de la stratégie de groupe: autoriser le gel des onglets d'arrière-plan
+  - Nom de la stratégie de groupe : autoriser le gel des onglets d’arrière-plan (obsolète)
   - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé): N/A
   - Nom du fichier ADMX de la stratégie de groupe: MSEdge.admx
@@ -21727,7 +21789,7 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent décider d'uti
 
   La définition de la stratégie permet d’accéder aux URL répertoriées en tant qu’exceptions à [URLBlocklist](#urlblocklist).
 
-Le format d'un modèle d’URL doit être conforme aux règles stipulées à l'adresse [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Le format d'un modèle d’URL doit être conforme aux règles stipulées à l'adresse [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 Vous pouvez utiliser cette stratégie pour ouvrir des exceptions aux listes rouges restrictives. Par exemple, vous pouvez inclure « \* » dans la liste d’adresses url pour bloquer toutes les demandes, puis utiliser cette stratégie pour autoriser l’accès à une liste limitée d’URL. Vous pouvez utiliser cette stratégie pour ouvrir des exceptions pour certains schémas, sous-domaines d'autres domaines, ports ou chemins d'accès spécifiques.
 
@@ -21808,7 +21870,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   Définissez la liste des sites, en fonction des modèles d'URL, qui sont bloqués (les utilisateurs ne peuvent pas les charger).
 
-Le format d'un modèle d’URL doit être conforme aux règles stipulées à l'adresse [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Le format d'un modèle d’URL doit être conforme aux règles stipulées à l'adresse [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 Vous pouvez définir des exceptions dans la stratégie [URLAllowlist](#urlallowlist). Ces stratégies sont limitées à 1000 entrées. Les entrées suivantes sont ignorées.
 
