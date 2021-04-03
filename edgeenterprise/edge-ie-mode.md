@@ -1,28 +1,28 @@
 ---
-title: À propos du mode Internet Explorer
+title: Qu'est-ce que le mode Internet Explorer?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 03/25/2020
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Apprenez à utiliser MicrosoftEdge avec le mode IE.
-ms.openlocfilehash: ecb4bffc5afdde3a8891d1eaa6e28508205ab097
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Découvrez comment le mode Internet Explorer dans Microsoft Edge permet d’accéder aux sites qui ont besoin d’Internet Explorer 11 et d’accéder aux sites modernes.
+ms.openlocfilehash: 5ca14c4d448b573dc7de6781ce86ee62281a48a4
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447338"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470222"
 ---
-# <a name="about-ie-mode"></a>À propos du mode Internet Explorer
+# <a name="what-is-internet-explorer-ie-mode"></a>Qu’est-ce qu’Internet Explorer ?
 
-Cet article offre une vue d’ensemble et les conditions préalables à l’utilisation de Microsoft Edge avec le mode IE.
+Nous avons créé le mode Internet Explorer (IE) dans Microsoft Edge pour les organisations qui ont encore besoin d’Internet Explorer 11 pour la compatibilité vers l’arrière avec des sites web existants, mais qui ont également besoin d’un navigateur moderne. Cette fonctionnalité permet aux organisations d’utiliser un seul navigateur, pour les applications web héritées ou pour une application web/moderne. Cet article vous propose une introduction à l’utilisation de Microsoft Edge avec le mode IE.
 
 > [!NOTE]
-> Cet article concerne les canaux MicrosoftEdge **stable**, **Beta** et **Dev**, version77 ou ultérieures.
+> Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
 ## <a name="what-is-ie-mode"></a>Qu’est-ce que le modeIE?
 

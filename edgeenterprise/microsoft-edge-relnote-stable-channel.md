@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: 94d8d621ecac3764ecf13194efb55cfbbf80b70b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447988"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470272"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notes de publication du canal stable Microsoft Edge
 
@@ -28,6 +28,10 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 
 > [!NOTE]
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077463-march-25"></a>Version89.0.774.63: 25mars
+
+Résolution de divers bogues et problèmes de performances.
 
 ## <a name="version-89077457-march-18"></a>Version 89.0.774.57: 18mars
 
@@ -107,7 +111,7 @@ Résolution de divers bogues et de problèmes de performances.
 
 ## <a name="version-88070574-february-17"></a>Version88.0.705.74du 17février
 
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#February-17-2021)
+Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#february-17-2021)
 
 ## <a name="version-88070568-february-11"></a>Version88.0.705.68 du 11février
 
@@ -118,11 +122,11 @@ Résolution de divers bogues et de problèmes de performances.
 > [!IMPORTANT]
 > Cette mise à jour contient [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), qui a été signalé par l’équipe Chromium comme cible de code malveillant exploitant une faille de sécurité.
 
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#February-5-2021)
+Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#february-5-2021)
 
 ## <a name="version-88070562-february-4"></a>Version88.0.705.62 du 4février
 
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#February-4-2021)
+Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#february-4-2021)
 
 Résolution de divers bogues et de problèmes de performances.
 
