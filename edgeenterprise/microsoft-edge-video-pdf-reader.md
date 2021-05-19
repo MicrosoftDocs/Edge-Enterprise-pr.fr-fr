@@ -29,6 +29,6 @@ Cette vidéo met en avant les fonctionnalités du lecteur PDF intégré de Micro
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Lecteur PDF dans Microsoft Edge](microsoft-edge-pdf.md)
 - [Playlist Microsoft Edge sur YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

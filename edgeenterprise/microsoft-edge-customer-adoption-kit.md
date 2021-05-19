@@ -25,10 +25,10 @@ Revenez pour obtenir d’autres documents dès qu’ils sont disponibles.
 
 ## <a name="customer-adoption-kit"></a>Kit d’adoption par les clients
 
-Le kit d’adoption par les clients contient les éléments suivants:
+Le kit d’adoption par les clients contient les éléments suivants :
 
 - Guide de déploiement informatique
-- Guide de l’utilisateursur la mise en route
+- Guide de l’utilisateur sur la mise en route
 - Modèles de courrier électronique d’adoption
 - Bannière
 - Signalisation numérique
@@ -44,11 +44,11 @@ Utilisez ce guide pour commencer à planifier le déploiement, puis découvrez c
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Série de vidéos sur Microsoft Mechanics":::
 
-### <a name="how-to-get-started-user-guide"></a>Guide de l’utilisateursur la mise en route
+### <a name="how-to-get-started-user-guide"></a>Guide de l’utilisateur sur la mise en route
 
 Utilisez ce guide pour informer les utilisateurs sur Microsoft Edge. Le guide inclut des vues d’ensemble de l’interface utilisateur, des menus et des fonctionnalités. Nous avons également inclus des conseils pour aider les utilisateurs lors de la mise en route.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Guide de l’utilisateursur la mise en route":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Guide de l’utilisateur sur la mise en route":::
 
 ### <a name="adoption-email-templates"></a>Modèles de courrier électronique d’adoption
 
@@ -85,4 +85,4 @@ Si vous souhaitez en savoir plus sur les avantages de Microsoft Edge, [veuillez 
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

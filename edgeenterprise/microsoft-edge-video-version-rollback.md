@@ -29,6 +29,6 @@ La restauration de version vous permet de remplacer votre version du navigateur 
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Comment restaurer Microsoft Edge à une version antérieure](edge-learnmore-rollback.md)
 - [Playlist Microsoft Edge sur YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

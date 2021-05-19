@@ -22,7 +22,7 @@ ms.locfileid: "11470285"
 Cet article récapitule la prise en charge de la plateforme pour les fonctionnalités de Microsoft Edge.
 
 > [!NOTE]
-> Cet article concerne MicrosoftEdge version77 ou ultérieure.
+> Cet article concerne Microsoft Edge version 77 ou ultérieure.
 
 ## <a name="feature-matrix-for-platforms"></a>Matrice de fonctionnalités pour les plateformes
 
@@ -35,7 +35,7 @@ Les tableaux suivants résument la prise en charge des fonctionnalités pour les
 |--------|-------|--------|-----|-------|---|
 |Accès conditionnel à Azure Active Directory (Azure AD)|Oui|Oui|Oui|Oui|[Accès conditionnel Azure AD](https://docs.microsoft.com/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
 |Microsoft Defender Application Guard|Oui (1890+)|Non|Non|Non|[Microsoft Defender Application Guard](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-defender-application-guard) |
-|MicrosoftDefenderSmartScreen|Oui|Oui|Oui|Oui|[MicrosoftDefenderSmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-security-smartscreen) |
+|Microsoft Defender SmartScreen|Oui|Oui|Oui|Oui|[Microsoft Defender SmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-security-smartscreen) |
 |Microsoft Endpoint DLP|Oui|Non|Non|Non|[Microsoft Endpoint DLP](https://docs.microsoft.com/deployedge/microsoft-edge-security-dlp#microsoft-endpoint-data-loss-prevention-endpoint-dlp)|
 |Moniteur de mots de passe|Oui|Oui|Oui|Oui|[Moniteur de mots de passe](https://blogs.windows.com/msedgedev/2021/01/21/edge-88-privacy/)|
 |Générateur de mot de passe|Oui|Oui|Oui|Oui |[Générateur de mot de passe](https://blogs.windows.com/msedgedev/2021/01/21/edge-88-privacy/)|
@@ -59,7 +59,7 @@ Les tableaux suivants résument la prise en charge des fonctionnalités pour les
 |--------|-------|--------|-----|-------|---|
 |Collections|Oui|Oui|Oui|Oui|[Collections](https://blogs.windows.com/msedgedev/2019/12/09/improvements-collections-sync-microsoft-edge/) |
 |Page Nouvel onglet Entreprise|Oui|Oui|Oui|Oui|[Page Nouvel onglet](https://blogs.windows.com/msedgedev/2020/10/29/enterprise-new-tab-page-my-feed/) |
-|Mode InternetExplorer|Oui|Oui|Oui|Non|[Mode InternetExplorer](https://docs.microsoft.com/deployedge/edge-ie-mode#prerequisites)|
+|Mode Internet Explorer|Oui|Oui|Oui|Non|[Mode Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode#prerequisites)|
 |Mode plein écran|Oui|Non|Non|Non|[Mode plein écran](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)|
 |Recherche Microsoft dans Bing|Oui|Oui|Oui|Oui|[Recherche intelligente dans Bing](https://www.microsoft.com/edge/business/intelligent-search-with-bing) |
 |Lecteur PDF|Oui|Oui|Oui|Oui|[Lecteur PDF](https://docs.microsoft.com/deployedge/microsoft-edge-pdf) |
@@ -71,4 +71,4 @@ Les tableaux suivants résument la prise en charge des fonctionnalités pour les
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

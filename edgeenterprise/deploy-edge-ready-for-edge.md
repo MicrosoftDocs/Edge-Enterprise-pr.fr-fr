@@ -145,5 +145,5 @@ Le tableau suivant répertorie les instructions de prise en charge du fournisseu
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Planifier votre déploiement de Microsoft Edge](deploy-edge-plan-deployment.md)

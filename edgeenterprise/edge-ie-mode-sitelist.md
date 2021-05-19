@@ -19,12 +19,12 @@ ms.locfileid: "11470152"
 ---
 # <a name="enterprise-site-configuration-strategy"></a>Stratégie de configuration de site d’entreprise
 
-Cet article décrit les modifications apportées à la liste des sites en mode Entreprise pour prendre en charge le mode Internet Explorer pour Microsoft Edge version77 et ultérieures.
+Cet article décrit les modifications apportées à la liste des sites en mode Entreprise pour prendre en charge le mode Internet Explorer pour Microsoft Edge version 77 et ultérieures.
 
 Pour plus d’informations sur le schéma du fichier XML de liste des sites en mode Entreprise, voir [Guide de schéma Mode Enterprise v.2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
-> Cet article concerne MicrosoftEdge version77 ou ultérieure.
+> Cet article concerne Microsoft Edge version 77 ou ultérieure.
 <!--
 ## Updated schema elements
 
@@ -82,7 +82,7 @@ Pour que le mode IE fonctionne correctement, les serveurs d’authentification/a
 
 Un site neutre utilise le navigateur dans lequel la navigation a commencé, soit Microsoft Edge, soit le mode IE. La configuration de sites neutres garantit que toutes les applications utilisant ces serveurs d’authentification, modernes et héritées, continuent de fonctionner.
 
-Vous pouvez configurer des sites neutres en paramétrant le menu déroulant *Ouvrir dans* sur «Note»dans l’outil Gestionnaire de liste de sites en mode entreprise ou en mettant directement à jour le fichier XML de liste de sites:
+Vous pouvez configurer des sites neutres en paramétrant le menu déroulant *Ouvrir dans* sur « Note »dans l’outil Gestionnaire de liste de sites en mode entreprise ou en mettant directement à jour le fichier XML de liste de sites :
 
 ``` xml
 <site url="login.contoso.com">
@@ -95,7 +95,7 @@ Vous pouvez configurer des sites neutres en paramétrant le menu déroulant *Ouv
 Pour identifier les serveurs d’authentification, examinez le trafic réseau d’une application à l’aide des outils de développement IE11. Si vous avez besoin de plus de temps pour identifier vos serveurs d’authentification, vous pouvez configurer une stratégie pour conserver toutes les navigations dans la page en mode IE afin de permettre à vos utilisateurs de poursuivre leurs flux de travail sans interruption. Pour réduire l’utilisation du mode IE lorsque cela est inutile, désactivez ce paramètre une fois que vous avez identifié et ajouté vos serveurs d’authentification à la liste des sites. Pour plus d’informations, voir [Conserver la navigation dans la page en mode IE.](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav)
 
 >[!NOTE]
-   >Le schéma du mode entreprisev.1 n’est pas pris en charge pour l’intégration du mode IE. Si vous utilisez actuellement le schémav.1 avec Internet Explorer11, vous devez effectuer la mise à niveau vers le schémav.2. Pour plus d’informations, consultez [Recommandations sur le schéma du mode Entreprisev.2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+   >Le schéma du mode entreprise v.1 n’est pas pris en charge pour l’intégration du mode IE. Si vous utilisez actuellement le schéma v.1 avec Internet Explorer 11, vous devez effectuer la mise à niveau vers le schéma v.2. Pour plus d’informations, consultez [Recommandations sur le schéma du mode Entreprise v.2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 ## <a name="optional-use-cookie-sharing-if-necessary"></a>(Facultatif) Utiliser le partage de cookies si nécessaire
 
@@ -103,6 +103,6 @@ Par défaut, les processus Microsoft Edge et Internet Explorer ne partagent pas 
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [À propos du mode Internet Explorer](./edge-ie-mode.md)
 - [Informations supplémentaires sur le mode entreprise](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: En savoir plus sur le lecteur PDF dans Microsoft Edge.
-ms.openlocfilehash: 342f6702ff0da3305c037112555549b0d5503d3c
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: d84b838556ed10951d7a7a3c6e5085b7e32c286c
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447838"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11385032"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Lecteur PDF dans Microsoft Edge
 
@@ -24,7 +24,7 @@ Les fichiers PDF constituent une partie importante de nos vies quotidiennes. Ils
 Microsoft Edge inclut un lecteur PDF intégré qui vous permet d’ouvrir des fichiers PDF locaux, des fichiers PDF en ligne ou des fichiers PDF incorporés dans des pages web. Vous pouvez annoter ces fichiers à l’aide d’entrées manuscrites et de surlignage. Ce lecteur PDF offre aux utilisateurs une application unique pour répondre aux besoins des pages web et des documents PDF. Le lecteur Microsoft Edge PDF est une application sécurisée et fiable qui fonctionne sur les plateformes de bureau Windows et macOS.
 
 > [!NOTE]
-> Cet article concerne MicrosoftEdge version77 ou ultérieure.
+> Cet article concerne Microsoft Edge version 77 ou ultérieure.
 
 ## <a name="prerequisites-support-and-constraints"></a>Conditions préalables, support et contraintes
 
@@ -48,7 +48,7 @@ Le tableau suivant indique les canaux et les versions de Microsoft Edge qui pren
 
 ### <a name="constraints"></a>Contraintes
 
-Notez les contraintes suivantes pour le lecteur PDF actuel:
+Notez les contraintes suivantes pour le lecteur PDF actuel :
 
 -  L’architecture de formulaires XML (XFA) est un format hérité de formulaires qui ne sont pas pris en charge dans Microsoft Edge.
 -  La documentation relative aux scénarios d’accessibilité qui ne sont pas pris en charge pour le moment est disponible sur le blog [Rapports de conformité de l’accessibilité Microsoft](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports/).
@@ -109,18 +109,18 @@ La lecture à voix haute pour PDF ajoute la commodité d’écouter du contenu P
 
 ### <a name="protected-pdfs"></a>Fichiers PDF protégés
 
-[Microsoft Information Protection (MIP)](/microsoft-365/compliance/protect-information?preserve-view=true&view=o365-worldwide) permet aux utilisateurs de collaborer en toute sécurité avec d’autres personnes, conformément aux stratégies de conformité de votre organisation. Une fois un fichier protégé, les actions que les utilisateurs peuvent effectuer sont déterminées par les autorisations qui leur sont affectées.
+[Microsoft Information Protection (MIP)](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide&preserve-view=true) permet aux utilisateurs de collaborer en toute sécurité avec d’autres personnes, conformément aux stratégies de conformité de votre organisation. Une fois un fichier protégé, les actions que les utilisateurs peuvent effectuer sont déterminées par les autorisations qui leur sont affectées.
 
 > [!IMPORTANT]
-> Une licence est requise pour MIP. Pour plus d’informations, consultez ces [conseils concernant les licences Microsoft365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
+> Une licence est requise pour MIP. Pour plus d’informations, consultez ces [conseils concernant les licences Microsoft 365](https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
 
 Ces fichiers peuvent être ouverts directement dans le navigateur, sans qu’il soit nécessaire de télécharger d’autres logiciels ou d’installer un complément. Cette fonctionnalité intègre la sécurité fournie par MIP directement dans le navigateur, offrant un flux de travail transparent.
 
 ![Document PDF protégé.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 
-Outre les fichiers protégés par MIP, les fichiers PDF dans des bibliothèques SharePoint protégées par[Gestion des droits relatifs à l'information (IRM)](/microsoft-365/compliance/set-up-irm-in-sp-admin-center?preserve-view=true&view=o365-worldwide) peuvent également être ouverts en mode natif dans le navigateur.
+Outre les fichiers protégés par MIP, les fichiers PDF dans des bibliothèques SharePoint protégées par[Gestion des droits relatifs à l'information (IRM)](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center?view=o365-worldwide&preserve-view=true) peuvent également être ouverts en mode natif dans le navigateur.
 
-Avec Microsoft Edge, les utilisateurs peuvent afficher les fichiers protégés par MIP enregistrés localement ou dans le cloud. Si vous l’enregistrez en local, le fichier peut être ouvert directement dans le navigateur. Si le fichier est ouvert à partir d’un service cloud sous SharePoint, l’utilisateur peut avoir besoin d’utiliser l’option «Ouvrir dans le navigateur».
+Avec Microsoft Edge, les utilisateurs peuvent afficher les fichiers protégés par MIP enregistrés localement ou dans le cloud. Si vous l’enregistrez en local, le fichier peut être ouvert directement dans le navigateur. Si le fichier est ouvert à partir d’un service cloud sous SharePoint, l’utilisateur peut avoir besoin d’utiliser l’option « Ouvrir dans le navigateur ».
 
 Si le profil que l’utilisateur est connecté à Microsoft Edge avec dispose au minimum des autorisations d’affichage sur le fichier, le fichier s’ouvre dans Microsoft Edge.
 
@@ -154,8 +154,8 @@ La sécurité est parmi les principes les plus importants pour toutes les organi
 
 - Isolation des processus. Les fichiers PDF ouverts à partir de différents sites web sont totalement isolés. Il n’est pas nécessaire de communiquer avec des sites web ou des fichiers PDF ouverts à partir d’une autre source. La navigation au format PDF est sécurisée contre toutes les attaques qui envisagent d’utiliser des fichiers PDF compromis comme une surface d’attaque.
 
-- ApplicationGuard. Avec Application Guard, les administrateurs peuvent établir une liste de sites approuvés par leur organisation. Si les utilisateurs ouvrent d’autres sites, ils sont ouverts dans une fenêtre Application Guard distincte qui s’exécute dans son propre conteneur. Le conteneur permet de protéger le réseau d’entreprise et les données sur l’ordinateur d’un utilisateur contre la compromission de celui-ci.<br><br>
-Cette protection s’applique également aux fichiers PDF en ligne consultés. De plus, tous les fichiers PDF téléchargés à partir d’une fenêtre Application Guard sont stockés, et le cas échéant, rouvert dans le conteneur. Cela permet de maintenir la sécurité de votre environnement non seulement lors du téléchargement du fichier, mais tout au long de son cycle de vie. Pour plus d’informations, voir [Application Guard](./microsoft-edge-security-windows-defender-application-guard.md).
+- Application Guard. Avec Application Guard, les administrateurs peuvent établir une liste de sites approuvés par leur organisation. Si les utilisateurs ouvrent d’autres sites, ils sont ouverts dans une fenêtre Application Guard distincte qui s’exécute dans son propre conteneur. Le conteneur permet de protéger le réseau d’entreprise et les données sur l’ordinateur d’un utilisateur contre la compromission de celui-ci.<br><br>
+Cette protection s’applique également aux fichiers PDF en ligne consultés. De plus, tous les fichiers PDF téléchargés à partir d’une fenêtre Application Guard sont stockés, et le cas échéant, rouvert dans le conteneur. Cela permet de maintenir la sécurité de votre environnement non seulement lors du téléchargement du fichier, mais tout au long de son cycle de vie. Pour plus d’informations, voir [Application Guard](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-defender-application-guard).
 
 ### <a name="reliability"></a>Fiabilité
 
@@ -163,10 +163,10 @@ Cette protection s’applique également aux fichiers PDF en ligne consultés. D
 
 ## <a name="deploy-and-update-pdf-reader"></a>Déployer et mettre à jour le lecteur PDF
 
-Le lecteur PDF est déployé et mis à jour avec le reste du navigateur Microsoft Edge. Pour en savoir plus sur le déploiement de Microsoft Edge, Regardez la vidéo [Déploiement de Microsoft Edge sur des centaines ou des milliers d’appareils](microsoft-edge-video-deploy.md) vidéo. Vous pouvez également consulter d’autres informations de déploiement sur la page d’accueil [Documentation Microsoft Edge](./index.yml).
+Le lecteur PDF est déployé et mis à jour avec le reste du navigateur Microsoft Edge. Pour en savoir plus sur le déploiement de Microsoft Edge, Regardez la vidéo [Déploiement de Microsoft Edge sur des centaines ou des milliers d’appareils](microsoft-edge-video-deploy.md) vidéo. Vous pouvez également consulter d’autres informations de déploiement sur la page d’accueil [Documentation Microsoft Edge](https://docs.microsoft.com/DeployEdge/).
 
 > [!TIP]
-> Vous pouvez définir Microsoft Edge comme lecteur PDF par défaut pour votre organisation. Pour ce faire, [procédez comme suit](./edge-default-browser.md).
+> Vous pouvez définir Microsoft Edge comme lecteur PDF par défaut pour votre organisation. Pour ce faire, [procédez comme suit](https://docs.microsoft.com/deployedge/edge-default-browser).
 
 ## <a name="roadmap-and-feedback"></a>Feuille de route et commentaires
 
@@ -176,6 +176,6 @@ Nous recherchons activement les commentaires des fonctionnalités que vous trouv
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Feuille de route Microsoft365](https://www.microsoft.com/microsoft-365/roadmap)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Feuille de route Microsoft 365](https://www.microsoft.com/microsoft-365/roadmap)
 - [Vidéo : lecteur PDF de qualité professionnelle Microsoft Edge](microsoft-edge-video-pdf-reader.md)

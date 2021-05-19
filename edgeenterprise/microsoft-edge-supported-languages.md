@@ -1,5 +1,5 @@
 ---
-title: Prise en charge linguistique dans MicrosoftEdge
+title: Prise en charge linguistique dans Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
@@ -10,39 +10,39 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prise en charge de la langue d’affichage dans Microsoft Edge pour Windows et macOS.
-ms.openlocfilehash: 37073213fcdacac6b8182dcbef93901c82110756
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447098"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406159"
 ---
-# <a name="microsoft-edge-language-support"></a>Prise en charge linguistique dans MicrosoftEdge
+# <a name="microsoft-edge-language-support"></a>Prise en charge linguistique dans Microsoft Edge
 
-Cet article explique comment utiliser les paramètres de MicrosoftEdge pour ajouter une langue prise en charge au navigateur. Microsoft Edge prend en charge 84langues d’affichage sur Windows et 81langues d’affichage sur macOS.
+Cet article explique comment utiliser les paramètres de Microsoft Edge pour ajouter une langue prise en charge au navigateur. Microsoft Edge prend en charge 84 langues d’affichage sur Windows et 81 langues d’affichage sur macOS.
 
 > [!NOTE]
-> Cet article concerne MicrosoftEdge version78 ou ultérieure.
+> Cet article concerne Microsoft Edge version 78 ou ultérieure.
 
-## <a name="add-a-supported-language-to-microsoft-edge"></a>Ajouter une langue prise en charge à MicrosoftEdge
+## <a name="add-a-supported-language-to-microsoft-edge"></a>Ajouter une langue prise en charge à Microsoft Edge
 
-Procédez comme suit pour afficher la liste des langues prises en charge, puis ajoutez une langue à MicrosoftEdge.
+Procédez comme suit pour afficher la liste des langues prises en charge, puis ajoutez une langue à Microsoft Edge.
 
-1. Dans la barre de menus du navigateur, cliquez sur l’icône **Paramètres et plus** (**...**) ou tapez **Alt+F** pour ouvrir le menu «Paramètres et plus».
+1. Dans la barre de menus du navigateur, cliquez sur l’icône **Paramètres et plus** (**...**) ou tapez **Alt+F** pour ouvrir le menu « Paramètres et plus ».
 2. Sous **Paramètres**, cliquez sur **Langues**.
 3. Sous **Langues**, cliquez sur **Ajouter des langues** pour voir la liste des langues que vous pouvez ajouter.
 4. Dans la liste **Ajouter des langues**, vous pouvez rechercher une langue (**Langues de recherche**) ou utiliser la barre de défilement pour rechercher la langue que vous souhaitez ajouter.
-5. Lorsque vous avez localisé la langue, activez la case à cocher lui correspondant, puis cliquez sur **Ajouter**. La langue que vous avez ajoutée s’affiche en bas de la liste des **Langues préférées** qui sont déjà définies pour MicrosoftEdge. Les sites web que vous visitez s’affichent dans la première langue de la liste qu’ils prennent en charge.
+5. Lorsque vous avez localisé la langue, activez la case à cocher lui correspondant, puis cliquez sur **Ajouter**. La langue que vous avez ajoutée s’affiche en bas de la liste des **Langues préférées** qui sont déjà définies pour Microsoft Edge. Les sites web que vous visitez s’affichent dans la première langue de la liste qu’ils prennent en charge.
 
 ### <a name="change-preferred-languages"></a>Modifier les langues préférées
 
-Vous pouvez réorganiser vos préférences linguistiques, obtenir MicrosoftEdge pour proposer des traductions et voir MicrosoftEdge dans une langue spécifique.
-Pour modifier un paramètre de langue, cliquez sur les points de suspension (**...**) en regard de la langue à ouvrir pour «Autres actions».
-Selon la langue, une ou plusieurs des options suivants sont disponibles:
+Vous pouvez réorganiser vos préférences linguistiques, obtenir Microsoft Edge pour proposer des traductions et voir Microsoft Edge dans une langue spécifique.
+Pour modifier un paramètre de langue, cliquez sur les points de suspension (**...**) en regard de la langue à ouvrir pour « Autres actions ».
+Selon la langue, une ou plusieurs des options suivants sont disponibles :
 
-- Affichez MicrosoftEdge dans cette langue.
+- Affichez Microsoft Edge dans cette langue.
   - Dans Windows, sélectionnez cette option, puis cliquez sur **Redémarrer**.
-  - Sur macOS, MicrosoftEdge s’affiche dans la langue par défaut de votre système. Vous pouvez modifier la langue dans **Préférences système > Langue et région**. Redémarrez MicrosoftEdge.
+  - Sur macOS, Microsoft Edge s’affiche dans la langue par défaut de votre système. Vous pouvez modifier la langue dans **Préférences système > Langue et région**. Redémarrez Microsoft Edge.
 - Proposez de traduire des pages dans cette langue. Cette option n’est disponible que si vous activez l’option **Proposer de traduire les pages qui ne sont pas dans une langue que vous lisez**.
 - Se déplacer vers le haut
 - Monter
@@ -53,24 +53,24 @@ Selon la langue, une ou plusieurs des options suivants sont disponibles:
 
 ## <a name="foreign-language-translator-extension"></a>Extension traducteur de langue étrangère
 
-Outre l’utilisation d’une langue étrangère dans le navigateur, vous pouvez utiliser l’extension [Traducteur pour MicrosoftEdge](https://www.microsoft.com/p/translator-for-microsoft-edge/9nblggh4n4n3) pour traduire des pages web en langue étrangère et des sélections de texte pour plus de 60langues.
+Outre l’utilisation d’une langue étrangère dans le navigateur, vous pouvez utiliser l’extension [Traducteur pour Microsoft Edge](https://www.microsoft.com/p/translator-for-microsoft-edge/9nblggh4n4n3) pour traduire des pages web en langue étrangère et des sélections de texte pour plus de 60 langues.
 
 > [!NOTE]
-> Si l’extension traducteur ne fonctionne pas après l’installation, redémarrez MicrosoftEdge. Si l’extension ne fonctionne toujours pas, envoyez vos commentaires par le biais du Hub de commentaires.
+> Si l’extension traducteur ne fonctionne pas après l’installation, redémarrez Microsoft Edge. Si l’extension ne fonctionne toujours pas, envoyez vos commentaires par le biais du Hub de commentaires.
 
 ## <a name="supported-display-languages"></a>Langues d’affichage prises en charge
 
-Le tableau suivant répertorie les langues d’affichage qui sont prises en charge par MicrosoftEdge.
+Le tableau suivant répertorie les langues d’affichage qui sont prises en charge par Microsoft Edge.
 
 > [!NOTE]
-> Les langues qui ne sont pas prises en charge par MicrosoftEdge sur macOS sont indiquées par un astérisque (*) après le pays/région.  
+> Les langues qui ne sont pas prises en charge par Microsoft Edge sur macOS sont indiquées par un astérisque (*) après le pays/région.  
 
 |                      Langue                      |             Pays/région              |      Code      |
 |----------------------------------------------------|-----------------------------------------|----------------|
 |              Afrikaans                             |              Afrique du Sud               |     af         |
 |                 Albanais                           |                 Albanie                 |     sq         |
 |            Amharique                                 |                Éthiopie                 |     am         |
-|               Arabe                               |              Arabiesaoudite               |     ar         |
+|               Arabe                               |              Arabie saoudite               |     ar         |
 |               Assamais                             |                  Inde                  |     as         |
 |          Azerbaïdjanais                               |               Azerbaïdjan, latin         |    az          |
 |                   Bengali                           |              Inde*                     |     bn-IN      |
@@ -109,7 +109,7 @@ Le tableau suivant répertorie les langues d’affichage qui sont prises en char
 |                  Khmer                             |                Cambodge                 |     km         |
 |                      Konkani                       |                  Inde                  |     kok        |
 |                   Coréen                           |                  Corée du Sud                  |     ko         |
-|                     Lao                            |               République démocratique populaireLao               |     lo         |
+|                     Lao                            |               République démocratique populaire Lao               |     lo         |
 |                  Letton                           |                 Lettonie                  |     lv         |
 |               Lituanien                           |                Lituanie                |     lt         |
 |             Luxembourgeois                          |               Luxembourg                |     lb         |
@@ -156,5 +156,5 @@ Le tableau suivant répertorie les langues d’affichage qui sont prises en char
 
 ## <a name="see-also"></a>Articles associés
 
-- [Documentation MicrosoftEdge](./index.yml)
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Documentation Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

@@ -19,21 +19,21 @@ ms.locfileid: "11447848"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>Planifier votre transition en mode plein écran
 
-Cet article fournit des instructions sur la transition de votre kiosque de MicrosoftEdge hérité vers Microsoft Edge.  
+Cet article fournit des instructions sur la transition de votre kiosque de Microsoft Edge hérité vers Microsoft Edge.  
 
 > [!NOTE]
-> Cet article s’applique aux canaux stables, bêta et développement de Microsoft Edge, version87 ou ultérieure.
+> Cet article s’applique aux canaux stables, bêta et développement de Microsoft Edge, version 87 ou ultérieure.
 
 > [!IMPORTANT]
-> Lorsque la prise en charge de la version héritée de Microsoft Edge se termine le 9mars2021, elle sera supprimée et remplacée par MicrosoftEdge sur Chromium dans le cadre de Windows Update en avril. Pour plus d’informations, voir [ce billet de blog](https://aka.ms/EdgeLegacyEOS). Pour continuer à utiliser vos scénarios de kiosque basés sur le navigateur, vous devez installer MicrosoftEdge sur Chromium et configurer le mode plein écran avant la publication de Windows Update d’avril sur votre appareil.
+> Lorsque la prise en charge de la version héritée de Microsoft Edge se termine le 9 mars 2021, elle sera supprimée et remplacée par Microsoft Edge sur Chromium dans le cadre de Windows Update en avril. Pour plus d’informations, voir [ce billet de blog](https://aka.ms/EdgeLegacyEOS). Pour continuer à utiliser vos scénarios de kiosque basés sur le navigateur, vous devez installer Microsoft Edge sur Chromium et configurer le mode plein écran avant la publication de Windows Update d’avril sur votre appareil.
 
 ## <a name="kiosk-setup-steps"></a>Étapes de configuration du kiosque
 
 Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Microsoft Edge.
 
-**Étape 1: évaluez vos besoins par rapport aux fonctionnalités publiées (et à venir) du mode plein écran.** Le tableau suivant répertorie les fonctionnalités prise en charge par le mode plein écran dans Microsoft Edge sur Chromium et Microsoft Edge hérité. Utilisez ce tableau comme guide pour passer à Microsoft Edge en comparant la prise en charge de ces fonctionnalités dans les deux versions de Microsoft Edge.
+**Étape 1 : évaluez vos besoins par rapport aux fonctionnalités publiées (et à venir) du mode plein écran.** Le tableau suivant répertorie les fonctionnalités prise en charge par le mode plein écran dans Microsoft Edge sur Chromium et Microsoft Edge hérité. Utilisez ce tableau comme guide pour passer à Microsoft Edge en comparant la prise en charge de ces fonctionnalités dans les deux versions de Microsoft Edge.
 
-|Fonctionnalité|Connexion numérique/interactive|Navigation publique|Disponible avec la version de MicrosoftEdge (et versions supérieures)|Disponible avec Microsoft Edge hérité|
+|Fonctionnalité|Connexion numérique/interactive|Navigation publique|Disponible avec la version de Microsoft Edge (et versions supérieures)|Disponible avec Microsoft Edge hérité|
 |-|-|-|-|-|
 |Navigation InPrivate|Y|Y|89|Y|
 |Réinitialiser en période d’inactivité|Y|Y|89|Y|
@@ -49,7 +49,7 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 |[Activer l’imprimante](./microsoft-edge-policies.md#printingenabled) (stratégie)|Y|Y|89|Y|
 |[Configurer l’URL de la page Nouvel onglet](./microsoft-edge-policies.md#newtabpagelocation) (stratégie)|N|Y||Y|
 |Bouton Terminer la session | N| Y| 89|Y|
-|Toutes les URL MicrosoftEdge internes sont bloquées, à l’exception de *edge://downloads* et *edge://print* |N|Y|89|Y|
+|Toutes les URL Microsoft Edge internes sont bloquées, à l’exception de *edge://downloads* et *edge://print* |N|Y|89|Y|
 | Ctrl+N bloqué (ouvrir une nouvelle fenêtre) | Y | Y | 89 |Y|
 | Ctrl+T bloqué (ouvrir un nouvel onglet) |Y | Y | 89 |Y|
 |Paramètres et plus (...) afficheront uniquement les options requises  |Y |Y |89 |Y|
@@ -62,66 +62,66 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 
 **Étape 2 : testez le nouveau kiosque dans Microsoft Edge.** Nous vous recommandons de tester la configuration du mode plein écran dans Microsoft Edge. Un moyen rapide et facile de tester le mode plein écran consiste à configurer une application à accès unique affecté à l’aide des paramètres Windows, comme décrit ci-après.
 
-1. Installez la version la plus récente de Windows10 Insider Preview, version20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows10 Insider Preview](/windows-insider/get-started).
-2. Installez la dernière version du canal [stable MicrosoftEdge,](https://www.microsoft.com/edge)version87 ou ultérieure.  Pour tester les dernières fonctionnalités, vous pouvez télécharger la dernière version bêta de [Microsoft Edge](https://www.microsoftedgeinsider.com/download), version89 ou ultérieure.
+1. Installez la version la plus récente de Windows 10 Insider Preview, version 20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows 10 Insider Preview](/windows-insider/get-started).
+2. Installez la dernière version du canal [stable Microsoft Edge,](https://www.microsoft.com/edge)version 87 ou ultérieure.  Pour tester les dernières fonctionnalités, vous pouvez télécharger la dernière version bêta de [Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 89 ou ultérieure.
 
    > [!IMPORTANT]
    > Étant donné qu’une installation au niveau de l’appareil est requise, le canal Canary n’est pas pris en charge.
 
-3. Sur l’ordinateur kiosque, ouvrez Paramètres Windows, puis tapez «kiosque» dans le champ de recherche. Sélectionnez  **Configurer une borne (accès attribué)**, illustré dans la capture d’écran suivante pour ouvrir la boîte de dialogue de création de la borne.
+3. Sur l’ordinateur kiosque, ouvrez Paramètres Windows, puis tapez « kiosque » dans le champ de recherche. Sélectionnez  **Configurer une borne (accès attribué)**, illustré dans la capture d’écran suivante pour ouvrir la boîte de dialogue de création de la borne.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Configurer la borne avec l’accès attribué":::
 
 4. Sur la page **Configurer une borne** , cliquez sur  **Prise en main**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Page borne: prise en main":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Page borne : prise en main":::
 
 5. Tapez un nom pour créer un nouveau compte borne ou sélectionnez un compte existant dans la liste déroulante rempli, puis cliquez sur **Suivant**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Mode plein écran: créer un compte":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Mode plein écran : créer un compte":::
 
 6. Dans la page **Choisir une application borne** , sélectionnez **Microsoft Edge**, puis cliquez sur  **Suivant**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Mode plein écran: choisir une application":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Mode plein écran : choisir une application":::
 
 7. Sélectionnez l’une des options suivantes pour l’affichage de Microsoft Edge en mode plein écran :
 
-   - Connexion numérique/interactive: affiche un site spécifique en mode plein écran, exécutant Microsoft Edge.
-   - Navigateur public: exécute une version multi-onglet limitée de Microsoft Edge.
+   - Connexion numérique/interactive : affiche un site spécifique en mode plein écran, exécutant Microsoft Edge.
+   - Navigateur public : exécute une version multi-onglet limitée de Microsoft Edge.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Affichage en mode plein écran: signature numérique plein écran":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Affichage en mode plein écran : signature numérique plein écran":::
 
 8. Sélectionnez **Suivant**.
 9. Tapez l’URL à charger lors du lancement du kiosque.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Mode plein écran: entrer l’URL":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Mode plein écran : entrer l’URL":::
 
 10. Acceptez la valeur par défaut de 5 minutes pour le temps d’inactivité ou indiquez la valeur de votre choix.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Mode plein écran: entrer la durée d’inactivité":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Mode plein écran : entrer la durée d’inactivité":::
 
 11. Cliquez sur  **Suivant**.
 12. Fermez la fenêtre  **Paramètres**  pour enregistrer et appliquer vos choix.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Mode plein écran: terminer la configuration":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Mode plein écran : terminer la configuration":::
 
 13. Déconnectez-vous à partir de l’appareil kiosque et connectez-vous avec le compte kiosque local pour valider la configuration.
 
-**Étape 3 : Développer un plan de transition.** En fonction de vos tests et de vos besoins organisationnels, nous vous recommandons de développer un plan de transition et de passer à Microsoft Edge sur Chromium avant la fin de la prise en charge de Microsoft Edge hérité le 9mars 2021.
+**Étape 3 : Développer un plan de transition.** En fonction de vos tests et de vos besoins organisationnels, nous vous recommandons de développer un plan de transition et de passer à Microsoft Edge sur Chromium avant la fin de la prise en charge de Microsoft Edge hérité le 9 mars 2021.
 
 ## <a name="additional-scenarios-that-require-you-to-recreate-an-existing-kiosk-mode"></a>Scénarios supplémentaires qui nécessitent la recréation d’un mode plein écran existant
 
-Si vous mettez à jour vers Windows10, version 20H2, Microsoft Edge sur Chromium sera installé et Microsoft Edge hérité sera masqué. Dans ce cas, vous devrez configurer à nouveau le mode plein écran dans Microsoft Edge sur Chromium.
+Si vous mettez à jour vers Windows 10, version 20H2, Microsoft Edge sur Chromium sera installé et Microsoft Edge hérité sera masqué. Dans ce cas, vous devrez configurer à nouveau le mode plein écran dans Microsoft Edge sur Chromium.
 
 ## <a name="how-to-get-help"></a>Comment obtenir de l’aide
 
 Le mode plein écran étant un élément important de votre activité quotidienne, nous voulons contribuer à rendre cette transition aussi fluide que possible et à éviter les perturbations. Si votre entreprise a besoin d’aide pour la transition vers Microsoft Edge sur Chromium :
 
 - [Le support](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207) est disponible auprès de Microsoft. 
-- [Le support FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) est également disponible sans frais supplémentaires pour les clients 150 ou plus de sièges payants de Windows10 Entreprise.
+- [Le support FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) est également disponible sans frais supplémentaires pour les clients 150 ou plus de sièges payants de Windows 10 Entreprise.
 - [L’application Assure](https://www.microsoft.com/en-us/fasttrack/microsoft-365/app-assure) est disponible si vous rencontrez des problèmes de compatibilité de site ou d’application.
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Nouveau Microsoft Edge pour remplacer la version héritée de Microsoft Edge par la version mardi de la mise à jour Windows 10 d’avril](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)

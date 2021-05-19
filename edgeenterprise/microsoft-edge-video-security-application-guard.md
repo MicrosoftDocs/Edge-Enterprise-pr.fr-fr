@@ -29,6 +29,6 @@ Avec Microsoft Edge, contribuez à réduire l'exposition de votre entreprise aux
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Prise en charge de Microsoft Edge pour Microsoft Defender Application Guard](microsoft-edge-security-windows-defender-application-guard.md)
 - [Playlist Microsoft Edge sur YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

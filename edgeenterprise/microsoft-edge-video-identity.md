@@ -29,6 +29,6 @@ Cette vidéo décrit comment configurer une expérience authentifiée et personn
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Prise en charge et configuration des identités MicrosoftEdge](microsoft-edge-security-identity.md)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Prise en charge et configuration des identités Microsoft Edge](microsoft-edge-security-identity.md)
 - [Playlist Microsoft Edge sur YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

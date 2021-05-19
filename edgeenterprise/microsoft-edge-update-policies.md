@@ -1,32 +1,31 @@
 ---
 title: Documentation relative aux stratégies Microsoft Edge Update
 ms.author: stmoody
-author: dan-wesley
+author: brianalt-msft
 manager: tahills
-ms.date: 11/12/2020
+ms.date: 10/07/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
-description: Documentation relative à toutes les stratégies prises en charge par le programme de mise à jour MicrosoftEdge
-ms.openlocfilehash: 0cdcda984efff8d10a84431e44c49ffbf28ddf07
-ms.sourcegitcommit: c2ac4f889b625210b9365a60a447482fb5b4c9d4
+description: Documentation relative à toutes les stratégies prises en charge par le programme de mise à jour Microsoft Edge
+ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "11167306"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105568"
 ---
 # Microsoft Edge - Stratégies de mise à jour
+La dernière version de Microsoft Edge comprend les stratégies suivantes que vous pouvez utiliser pour contrôler comment et quand Microsoft Edge est mis à jour.
 
-La dernière version de MicrosoftEdge comprend les stratégies suivantes que vous pouvez utiliser pour contrôler comment et quand MicrosoftEdge est mis à jour.
-
-Pour plus d’informations sur les autres stratégies disponibles dans MicrosoftEdge, consultez la [Référence de stratégies du navigateur MicrosoftEdge](microsoft-edge-policies.md)
+Pour plus d’informations sur les autres stratégies disponibles dans Microsoft Edge, consultez la [Référence de stratégies du navigateur Microsoft Edge](microsoft-edge-policies.md)
 > [!NOTE]
-> Cet article concerne MicrosoftEdge version77 ou ultérieure.
+> Cet article concerne Microsoft Edge version 77 ou ultérieure.
 ## Stratégies disponibles
-Ces tableaux répertorient toutes les stratégies de groupe relatives aux mises à jour disponibles dans cette version de MicrosoftEdge. Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.
+Ces tableaux répertorient toutes les stratégies de groupe relatives aux mises à jour disponibles dans cette version de Microsoft Edge. Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.
 
 |||
 |-|-|
@@ -40,7 +39,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives aux mises 
 |[UpdateDefault](#updatedefault)|Remplacer la stratégie de mise à jour par défaut|
 |[Install](#install)|Autoriser l’installation (par canal)|
 |[Update](#update)|Remplacer la stratégie de mise à jour (par canal)|
-|[Allowsxs](#allowsxs)|Autoriser l’expérience de navigateur côte à côte MicrosoftEdge|
+|[Allowsxs](#allowsxs)|Autoriser l’expérience de navigateur côte à côte Microsoft Edge|
 |[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|Empêcher la création du Raccourci Bureau lors de l’installation par défaut|
 |[CreateDesktopShortcut](#createdesktopshortcut)|Empêcher la création du Raccourci Bureau lors de l’installation (par canal)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Restaurez la version Cible (par canal)|
@@ -70,29 +69,29 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives aux mises 
 [Retour au début](#microsoft-edge---update-policies)
 ### InstallDefault
 #### Autoriser l’installation par défaut
->MicrosoftEdge Update1.2.145.5 et versions ultérieures
+>Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
 #### Description
 Vous pouvez spécifier le comportement par défaut de tous les canaux pour autoriser ou bloquer Microsoft Edge sur les appareils liés à un domaine.
 
-Vous pouvez remplacer cette stratégie pour des canaux individuels en spécifiant la stratégie «[Autoriser l’installation](#install)» pour des canaux spécifiques.
+Vous pouvez remplacer cette stratégie pour des canaux individuels en spécifiant la stratégie « [Autoriser l’installation](#install) » pour des canaux spécifiques.
 
-Si vous désactivez cette stratégie, l’installation de MicrosoftEdge est bloquée. Cela affecte uniquement l’installation du logiciel Microsoft Edge lorsque la stratégie «[Autoriser l’installation](#install)» est définie Non Configurée.
+Si vous désactivez cette stratégie, l’installation de Microsoft Edge est bloquée. Cela affecte uniquement l’installation du logiciel Microsoft Edge lorsque la stratégie «[Autoriser l’installation](#install)» est définie Non Configurée.
 
-Cette stratégie n’empêche pas MicrosoftEdge Update de s’exécuter, ni les utilisateurs d’installer le logiciel MicrosoftEdge en utilisant d’autres méthodes.
+Cette stratégie n’empêche pas Microsoft Edge Update de s’exécuter, ni les utilisateurs d’installer le logiciel Microsoft Edge en utilisant d’autres méthodes.
 
 Cette stratégie est disponible uniquement sur les instances Windows qui sont liées au domaine Microsoft® Active Directory®.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: InstallDefault
-- Nom de la stratégie de groupe: Autoriser l’installation par défaut
-- Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge Update/Applications
+- Nom unique de la stratégie de groupe : InstallDefault
+- Nom de la stratégie de groupe : Autoriser l’installation par défaut
+- Chemin de la stratégie de groupe : Administrative Templates/Microsoft Edge Update/Applications
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: InstallDefault
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : InstallDefault
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000001
 ```
@@ -101,33 +100,33 @@ Cette stratégie est disponible uniquement sur les instances Windows qui sont li
 
 ### UpdateDefault
 #### Remplacer la stratégie de mise à jour par défaut
->MicrosoftEdge Update1.2.145.5 et versions ultérieures
+>Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
 #### Description
-Permet de spécifier le comportement par défaut de tous les canaux concernant la façon dont MicrosoftEdge Update gère les mises à jour disponibles pour MicrosoftEdge. Peut être remplacé pour des canaux individuels en spécifiant la stratégie «[Remplacer la stratégie de mise à jour](#update)» pour ces canaux spécifiques.
+Permet de spécifier le comportement par défaut de tous les canaux concernant la façon dont Microsoft Edge Update gère les mises à jour disponibles pour Microsoft Edge. Peut être remplacé pour des canaux individuels en spécifiant la stratégie « [Remplacer la stratégie de mise à jour](#update) » pour ces canaux spécifiques.
 
-  Si vous activez cette stratégie, MicrosoftEdge Update gère les mises à jour de MicrosoftEdge en fonction de la façon dont vous configurez les options suivantes:
-   - Toujours autoriser les mises à jour: les mises à jour sont toujours appliquées lorsqu’elles sont trouvées, soit par une recherche de mise à jour périodique, soit par une recherche de mise à jour manuelle.
-   - Mises à jour automatiques en mode silencieux uniquement: les mises à jour sont appliquées uniquement lorsqu’elles sont trouvées par la recherche de mise à jour périodique.
-   - Mises à jour manuelles uniquement: les mises à jour sont appliquées uniquement lorsque l’utilisateur exécute une recherche de mise à jour manuelle.
-   - Mises à jour désactivées: les mises à jour ne sont jamais appliquées.
+  Si vous activez cette stratégie, Microsoft Edge Update gère les mises à jour de Microsoft Edge en fonction de la façon dont vous configurez les options suivantes :
+   - Toujours autoriser les mises à jour : les mises à jour sont toujours appliquées lorsqu’elles sont trouvées, soit par une recherche de mise à jour périodique, soit par une recherche de mise à jour manuelle.
+   - Mises à jour automatiques en mode silencieux uniquement : les mises à jour sont appliquées uniquement lorsqu’elles sont trouvées par la recherche de mise à jour périodique.
+   - Mises à jour manuelles uniquement : les mises à jour sont appliquées uniquement lorsque l’utilisateur exécute une recherche de mise à jour manuelle.
+   - Mises à jour désactivées : les mises à jour ne sont jamais appliquées.
 
   Si vous sélectionnez les mises à jour manuelles, vérifiez régulièrement si des mises à jour sont disponibles à l’aide du mécanisme de mise à jour manuelle de l’application, le cas échéant. Si vous désactivez les mises à jour, recherchez régulièrement les mises à jour et distribuez-les aux utilisateurs.
 
-  Si vous n’activez pas et ne configurez pas cette stratégie, MicrosoftEdge Update gère les mises à jour disponibles, comme spécifié par la stratégie «[Remplacer la stratégie de mise à jour](#update)».
+  Si vous n’activez pas et ne configurez pas cette stratégie, Microsoft Edge Update gère les mises à jour disponibles, comme spécifié par la stratégie « [Remplacer la stratégie de mise à jour](#update) ».
 
   Cette stratégie est disponible uniquement sur les instances Windows qui sont liées au domaine Microsoft® Active Directory®.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: UpdateDefault
-- Nom de la stratégie de groupe: Remplacer la stratégie de mise à jour par défaut
-- Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge Update/Applications
+- Nom unique de la stratégie de groupe : UpdateDefault
+- Nom de la stratégie de groupe : Remplacer la stratégie de mise à jour par défaut
+- Chemin de la stratégie de groupe : Administrative Templates/Microsoft Edge Update/Applications
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: UpdateDefault
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : UpdateDefault
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000003
 ```
@@ -136,37 +135,37 @@ Permet de spécifier le comportement par défaut de tous les canaux concernant l
 
 ### Install
 #### Autoriser l’installation
->MicrosoftEdge Update1.2.145.5 et versions ultérieures
+>Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
 #### Description
-Spécifie si un canal de MicrosoftEdge peut être installé sur des appareils liés à un domaine.
+Spécifie si un canal de Microsoft Edge peut être installé sur des appareils liés à un domaine.
 
   Si vous activez cette stratégie pour un canal, l’installation de Microsoft Edge ne sera pas bloquée.
 
   Si vous désactivez cette stratégie pour un canal, l’installation de Microsoft Edge sera bloquée.
 
-  Si vous ne configurez pas cette stratégie pour un canal, la configuration de la stratégie «[Autoriser l’installation par défaut](#installdefault)» détermine si les utilisateurs peuvent installer ce canal de MicrosoftEdge.
+  Si vous ne configurez pas cette stratégie pour un canal, la configuration de la stratégie «[Autoriser l’installation par défaut](#installdefault)» détermine si les utilisateurs peuvent installer ce canal de Microsoft Edge.
 
   Cette stratégie est disponible uniquement sur les instances Windows qui sont liées au domaine Microsoft® Active Directory®.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: Install
-- Nom de la stratégie de groupe: Autoriser l’installation
-- Chemin de la stratégie de groupe: 
+- Nom unique de la stratégie de groupe : Install
+- Nom de la stratégie de groupe : Autoriser l’installation
+- Chemin de la stratégie de groupe : 
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: 
-  - (Stable): install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
-  - (Beta): install{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
-  - (Canary): Install{65C35B14-6C1D-4122-AC46-7148CC9D6497}
-  - (Dev): Install{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : 
+  - (Stable) : install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Beta) : install{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canary) : Install{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev) : Install{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000001
 ```
@@ -175,43 +174,43 @@ Spécifie si un canal de MicrosoftEdge peut être installé sur des appareils li
 
 ### Update
 #### Remplacer la stratégie de mise à jour
->MicrosoftEdge Update1.2.145.5 et versions ultérieures
+>Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
 #### Description
-Spécifie comment MicrosoftEdge Update gère les mises à jour disponibles à partir de MicrosoftEdge.
+Spécifie comment Microsoft Edge Update gère les mises à jour disponibles à partir de Microsoft Edge.
 
-Si vous activez cette stratégie, MicrosoftEdge Update gère les mises à jour de MicrosoftEdge en fonction de la façon dont vous configurez les options suivantes:
-  - Toujours autoriser les mises à jour: les mises à jour sont toujours appliquées lorsqu’elles sont trouvées, soit par une recherche de mise à jour périodique, soit par une recherche de mise à jour manuelle.
-  - Mises à jour automatiques en mode silencieux uniquement: les mises à jour sont appliquées uniquement lorsqu’elles sont trouvées par la recherche de mise à jour périodique.
-  - Mises à jour manuelles uniquement: les mises à jour sont appliquées uniquement lorsque l’utilisateur exécute une recherche de mise à jour manuelle. (Toutes les applications n’offrent pas une interface pour cette option.)
-  - Mises à jour désactivées: les mises à jour ne sont jamais appliquées.
+Si vous activez cette stratégie, Microsoft Edge Update gère les mises à jour de Microsoft Edge en fonction de la façon dont vous configurez les options suivantes :
+  - Toujours autoriser les mises à jour : les mises à jour sont toujours appliquées lorsqu’elles sont trouvées, soit par une recherche de mise à jour périodique, soit par une recherche de mise à jour manuelle.
+  - Mises à jour automatiques en mode silencieux uniquement : les mises à jour sont appliquées uniquement lorsqu’elles sont trouvées par la recherche de mise à jour périodique.
+  - Mises à jour manuelles uniquement : les mises à jour sont appliquées uniquement lorsque l’utilisateur exécute une recherche de mise à jour manuelle. (Toutes les applications n’offrent pas une interface pour cette option.)
+  - Mises à jour désactivées : les mises à jour ne sont jamais appliquées.
 
 Si vous sélectionnez les mises à jour manuelles, vérifiez régulièrement si des mises à jour sont disponibles à l’aide du mécanisme de mise à jour manuelle de l’application, le cas échéant. Si vous désactivez les mises à jour, recherchez régulièrement les mises à jour et distribuez-les aux utilisateurs.
 
-Si vous n’activez pas et ne configurez pas cette stratégie, MicrosoftEdge Update gère les mises à jour disponibles, comme spécifié par la stratégie «[Remplacer la stratégie de mise à jour par défaut](#updatedefault)».
+Si vous n’activez pas et ne configurez pas cette stratégie, Microsoft Edge Update gère les mises à jour disponibles, comme spécifié par la stratégie « [Remplacer la stratégie de mise à jour par défaut](#updatedefault) ».
 
 Si vous souhaitez en savoir plus, consultez [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406).
 
 Cette stratégie est disponible uniquement sur les instances Windows qui sont liées au domaine Microsoft® Active Directory®.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: Update
-- Nom de la stratégie de groupe: Remplacer la stratégie de mise à jour
-- Chemin de la stratégie de groupe: 
+- Nom unique de la stratégie de groupe : Update
+- Nom de la stratégie de groupe : Remplacer la stratégie de mise à jour
+- Chemin de la stratégie de groupe : 
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: 
-  - (Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
-  - (Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
-  - (Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
-  - (Dev): Update{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : 
+  - (Stable) : Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Beta) : Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canary) : Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev) : Update{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000001
 ```
@@ -219,30 +218,30 @@ Cette stratégie est disponible uniquement sur les instances Windows qui sont li
 
 
 ### Allowsxs
-#### Autoriser l’expérience de navigateur côte à côte MicrosoftEdge
->MicrosoftEdge Update1.2.145.5 et versions ultérieures
+#### Autoriser l’expérience de navigateur côte à côte Microsoft Edge
+>Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
 #### Description
-Cette stratégie permet à un utilisateur d’exécuter MicrosoftEdge (HTML Edge) et MicrosoftEdge (basé sur Chromium) côte à côte.
+Cette stratégie permet à un utilisateur d’exécuter Microsoft Edge (HTML Edge) et Microsoft Edge (basé sur Chromium) côte à côte.
 
-Si cette stratégie est définie sur «Non configuré», MicrosoftEdge (basée sur Chromium) remplace MicrosoftEdge (Edge HTML) après installation du canal stable MicrosoftEdge (basé sur Chromium) et des mises à jour de sécurité de novembre2019.  C’est le même comportement que le paramètre «Désactivé».
+Si cette stratégie est définie sur « Non configuré », Microsoft Edge (basée sur Chromium) remplace Microsoft Edge (Edge HTML) après installation du canal stable Microsoft Edge (basé sur Chromium) et des mises à jour de sécurité de novembre 2019.  C’est le même comportement que le paramètre « Désactivé ».
 
-Le paramètre «Désactivé» bloque une expérience côte-à-côte et MicrosoftEdge (basée sur Chromium) remplace MicrosoftEdge (Edge HTML) après installation du canal stable MicrosoftEdge (basé sur Chromium) et des mises à jour de sécurité de novembre2019.  C’est le même comportement que le paramètre «Non configuré».
+Le paramètre « Désactivé » bloque une expérience côte-à-côte et Microsoft Edge (basée sur Chromium) remplace Microsoft Edge (Edge HTML) après installation du canal stable Microsoft Edge (basé sur Chromium) et des mises à jour de sécurité de novembre 2019.  C’est le même comportement que le paramètre « Non configuré ».
 
-Lorsque cette stratégie est «Activée», MicrosoftEdge (basé sur Chromium) et MicrosoftEdge (Edge HTML) peuvent s’exécuter côte à côte après l’installation de MicrosoftEdge (basé sur Chromium).
+Lorsque cette stratégie est « Activée », Microsoft Edge (basé sur Chromium) et Microsoft Edge (Edge HTML) peuvent s’exécuter côte à côte après l’installation de Microsoft Edge (basé sur Chromium).
 
-Pour que cette stratégie de groupe prenne effet, elle doit être configurée avant l’installation automatique de MicrosoftEdge (basé sur Chromium) par Windows Update. Remarque: un utilisateur peut bloquer la mise à jour automatique de MicrosoftEdge (basé sur Chromium) à l’aide du kit de ressources de bloqueur MicrosoftEdge (basé sur Chromium).
+Pour que cette stratégie de groupe prenne effet, elle doit être configurée avant l’installation automatique de Microsoft Edge (basé sur Chromium) par Windows Update. Remarque : un utilisateur peut bloquer la mise à jour automatique de Microsoft Edge (basé sur Chromium) à l’aide du kit de ressources de bloqueur Microsoft Edge (basé sur Chromium).
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: Allowsxs
-- Nom de la stratégie de groupe: Autoriser l’expérience de navigateur côte à côte MicrosoftEdge
-- Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge Update/Applications
+- Nom unique de la stratégie de groupe : Allowsxs
+- Nom de la stratégie de groupe : Autoriser l’expérience de navigateur côte à côte Microsoft Edge
+- Chemin de la stratégie de groupe : Administrative Templates/Microsoft Edge Update/Applications
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: Allowsxs
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : Allowsxs
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000001
 ```
@@ -251,7 +250,7 @@ Pour que cette stratégie de groupe prenne effet, elle doit être configurée av
 
 ### CreateDesktopShortcutDefault
 #### Empêcher la création du Raccourci Bureau lors de l’installation par défaut
->MicrosoftEdge Update1.3.128.0 et versions ultérieures
+>Microsoft Edge Update 1.3.128.0 et versions ultérieures
 
 #### Description
 Vous permet de spécifier le comportement par défaut de tous les canaux pour créer un raccourci bureau lorsque Microsoft Edge est installé.
@@ -262,15 +261,15 @@ Si vous ne configurez pas cette stratégie, un raccourci bureau vers Microsoft E
 Si Microsoft Edge est déjà installé, cette stratégie n’a aucun effet.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de stratégie de groupe: CreateDesktopShortcutDefault
-- Nom de stratégie de groupe: empêcher la création du Raccourci Bureau lors de l’installation par défaut
-- Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge Update/Applications
+- Nom unique de stratégie de groupe : CreateDesktopShortcutDefault
+- Nom de stratégie de groupe : empêcher la création du Raccourci Bureau lors de l’installation par défaut
+- Chemin de la stratégie de groupe : Administrative Templates/Microsoft Edge Update/Applications
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de valeur: CreateDesktopShortcutDefault
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de valeur : CreateDesktopShortcutDefault
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000001
 ```
@@ -279,7 +278,7 @@ Si Microsoft Edge est déjà installé, cette stratégie n’a aucun effet.
 
 ### CreateDesktopShortcut
 #### Empêcher la création du Raccourci Bureau lors de l’installation
->MicrosoftEdge Update1.3.128.0 et versions ultérieures
+>Microsoft Edge Update 1.3.128.0 et versions ultérieures
 
 #### Description
 Si vous activez cette stratégie, un raccourci bureau est créé lors de l’installation de Microsoft Edge.
@@ -287,26 +286,26 @@ Si vous désactivez cette stratégie, aucun raccourci bureau n’est créé lors
 Si vous ne configurez pas cette stratégie, un raccourci bureau vers Microsoft Edge est créé pendant l’installation.
 Si Microsoft Edge est déjà installé, cette stratégie n’a aucun effet.
 
-  Si vous ne configurez pas cette stratégie pour un canal, la configuration de stratégie «[Empêcher la création de raccourcis clavier lors de l’installation de la configuration de stratégie par défaut](#createdesktopshortcutdefault)» définit la création d’un raccourci lors de l’installation de Microsoft Edge.
+  Si vous ne configurez pas cette stratégie pour un canal, la configuration de stratégie « [Empêcher la création de raccourcis clavier lors de l’installation de la configuration de stratégie par défaut](#createdesktopshortcutdefault) » définit la création d’un raccourci lors de l’installation de Microsoft Edge.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de stratégie de groupe: CreateDesktopShortcut
-- Nom de stratégie de groupe: empêcher la création du Raccourci Bureau lors de l’installation
-- Chemin de la stratégie de groupe: 
+- Nom unique de stratégie de groupe : CreateDesktopShortcut
+- Nom de stratégie de groupe : empêcher la création du Raccourci Bureau lors de l’installation
+- Chemin de la stratégie de groupe : 
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de valeur: 
-  - (Stable): CreateDesktopShortcut{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
-  - (Bêta): CreateDesktopShortcut{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
-  - (Canary): CreateDesktopShortcut {65C35B14-6C1D-4122-AC46-7148CC9D6497}
-  - (Dev): CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de valeur : 
+  - (Stable) : CreateDesktopShortcut{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Bêta) : CreateDesktopShortcut{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canary) : CreateDesktopShortcut {65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev) : CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000001
 ```
@@ -315,7 +314,7 @@ Si Microsoft Edge est déjà installé, cette stratégie n’a aucun effet.
 
 ### RollbackToTargetVersion
 #### Restaurez la version Cible
->MicrosoftEdge Update1.3.133.3 et versions ultérieures
+>Microsoft Edge Update 1.3.133.3 et versions ultérieures
 
 #### Description
 Spécifie que Microsoft Edge Update doit restaurer les installations de Microsoft Edge à la version indiquée dans «[Remplacement de la version cible](#targetversionprefix)».
@@ -330,32 +329,32 @@ Nous recommandons aux utilisateurs d’installer la dernière version du navigat
 
 Avant de restaurer temporairement la version de votre navigateur, nous vous recommandons d’activer la Synchronisation ([https://go.microsoft.com/fwlink/?linkid=2133032](https://go.microsoft.com/fwlink/?linkid=2133032)) pour tous les utilisateurs de votre organisation. Si vous n’activez pas la Synchronisation, vous risquez de perdre définitivement les données de navigation. L’ utilisation de cette stratégie comporte des risques.
 
-Remarque: Vous pouvez afficher toutes les versions disponibles pour la restauration ici [https://aka.ms/EdgeEnterprise](https://aka.ms/EdgeEnterprise).
+Remarque : Vous pouvez afficher toutes les versions disponibles pour la restauration ici [https://aka.ms/EdgeEnterprise](https://aka.ms/EdgeEnterprise).
 
-Cette stratégie s’applique à MicrosoftEdge version86 ou ultérieure.
+Cette stratégie s’applique à Microsoft Edge version 86 ou ultérieure.
 
 Si vous souhaitez en savoir plus, consultez [https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918).
 
 Cette stratégie est disponible uniquement sur les instances Windows qui sont liées au domaine Microsoft® Active Directory®.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique GP: RollbackToTargetVersion
+- Nom unique GP : RollbackToTargetVersion
 - Nom GP: Restaurez la version Cible
-- Chemin de la stratégie de groupe: 
+- Chemin de la stratégie de groupe : 
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de valeur: 
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de valeur : 
   - (Stable): RollbackToTargetVersion{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): RollbackToTargetVersion{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): RollbackToTargetVersion{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): RollbackToTargetVersion{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000001
 ```
@@ -364,7 +363,7 @@ Cette stratégie est disponible uniquement sur les instances Windows qui sont li
 
 ### TargetVersionPrefix
 #### Remplacement de la version cible
->MicrosoftEdge Update1.3.119.43 et versions ultérieures
+>Microsoft Edge Update 1.3.119.43 et versions ultérieures
 
 #### Description
 Lorsque cette stratégie est activée et que la mise à jour automatique est activée, Microsoft Edge est mis à jour vers la version spécifiée par cette valeur de stratégie.
@@ -380,23 +379,23 @@ Si vous souhaitez en savoir plus, consultez [https://go.microsoft.com/fwlink/?li
 Cette stratégie est disponible uniquement sur les instances Windows qui sont liées au domaine Microsoft® Active Directory®.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de stratégie de groupe: TargetVersionPrefix
-- Nom de stratégie de groupe: Remplacement de la version cible
-- Chemin de la stratégie de groupe: 
+- Nom unique de stratégie de groupe : TargetVersionPrefix
+- Nom de stratégie de groupe : Remplacement de la version cible
+- Chemin de la stratégie de groupe : 
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de valeur: 
-  - (Stable): TargetVersionPrefix{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
-  - (Beta): TargetVersionPrefix{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
-  - (Canary): TargetVersionPrefix{65C35B14-6C1D-4122-AC46-7148CC9D6497}
-  - (Dev): TargetVersionPrefix{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
-- Type de valeur: REG_SZ
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de valeur : 
+  - (Stable) : TargetVersionPrefix{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Beta) : TargetVersionPrefix{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canary) : TargetVersionPrefix{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev) : TargetVersionPrefix{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- Type de valeur : REG_SZ
+##### Exemple de valeur :
 ```
 83.0.499.12
 ```
@@ -408,23 +407,23 @@ Cette stratégie est disponible uniquement sur les instances Windows qui sont li
 [Retour au début](#microsoft-edge---update-policies)
 ### AutoUpdateCheckPeriodMinutes
 #### Remplacement de la période de vérification de mise à jour automatique
->MicrosoftEdge Update1.2.145.5 et versions ultérieures
+>Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
 #### Description
-Si elle est activée, cette stratégie vous permet de définir une valeur pour le nombre minimal de minutes entre les recherches automatiques de mises à jour. Dans le cas contraire, par défaut, la mise à jour automatique recherche les mises à jour toutes les 10heures.
+Si elle est activée, cette stratégie vous permet de définir une valeur pour le nombre minimal de minutes entre les recherches automatiques de mises à jour. Dans le cas contraire, par défaut, la mise à jour automatique recherche les mises à jour toutes les 10 heures.
 
   Si vous souhaitez désactiver toutes les vérifications de mise à jour automatique, définissez la valeur sur 0 (non recommandé).
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: AutoUpdateCheckPeriodMinutes
-- Nom de la stratégie de groupe: Remplacement de la période de vérification de mise à jour automatique
-- Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge Update/Preferences
+- Nom unique de la stratégie de groupe : AutoUpdateCheckPeriodMinutes
+- Nom de la stratégie de groupe : Remplacement de la période de vérification de mise à jour automatique
+- Chemin de la stratégie de groupe : Administrative Templates/Microsoft Edge Update/Preferences
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: AutoUpdateCheckPeriodMinutes
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : AutoUpdateCheckPeriodMinutes
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000578
 ```
@@ -433,27 +432,27 @@ Si elle est activée, cette stratégie vous permet de définir une valeur pour l
 
 ### UpdatesSuppressed
 #### Période quotidienne pendant laquelle supprimer la vérification de mise à jour automatique
->MicrosoftEdge Update1.3.33.5 et versions ultérieures
+>Microsoft Edge Update 1.3.33.5 et versions ultérieures
 
 #### Description
-Si vous activez cette stratégie, les vérifications de mise à jour sont supprimées chaque jour à partir de Heure:Minute pendant une Durée (en minutes). La durée n’est pas affectée par l’heure d’été. Par exemple, si l’heure de début est 22:00 et que la durée est 480minutes, les mises à jour seront supprimées pendant exactement 8heures, même si l’heure d’été commence ou se termine pendant cette période.
+Si vous activez cette stratégie, les vérifications de mise à jour sont supprimées chaque jour à partir de Heure:Minute pendant une Durée (en minutes). La durée n’est pas affectée par l’heure d’été. Par exemple, si l’heure de début est 22:00 et que la durée est 480 minutes, les mises à jour seront supprimées pendant exactement 8 heures, même si l’heure d’été commence ou se termine pendant cette période.
 
   Si vous désactivez ou que vous ne configurez pas cette stratégie, les vérifications de mise à jour ne sont pas supprimées pendant une période spécifique.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: UpdatesSuppressed
-- Nom de la stratégie de groupe: Période quotidienne pendant laquelle supprimer la vérification de mise à jour automatique
+- Nom unique de la stratégie de groupe : UpdatesSuppressed
+- Nom de la stratégie de groupe : Période quotidienne pendant laquelle supprimer la vérification de mise à jour automatique
   - Options { Hour, Minute, Duration }
-- Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge Update/Preferences
+- Chemin de la stratégie de groupe : Administrative Templates/Microsoft Edge Update/Preferences
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: 
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : 
   - UpdatesSuppressedDurationMin
   - UpdatesSuppressedStartHour
   - UpdatesSuppressedStartMin
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 duration   : 0x0000003c
 start hour : 0x00000001
@@ -467,31 +466,31 @@ start min  : 0x00000002
 [Retour au début](#microsoft-edge---update-policies)
 ### ProxyMode
 #### Choisir comment spécifier les paramètres du serveur proxy
->MicrosoftEdge Update1.3.21.81 et versions ultérieures
+>Microsoft Edge Update 1.3.21.81 et versions ultérieures
 
 #### Description
-Permet de spécifier les paramètres de serveur proxy qui sont utilisés par MicrosoftEdge Update.
+Permet de spécifier les paramètres de serveur proxy qui sont utilisés par Microsoft Edge Update.
 
-  Si vous activez cette stratégie, vous pouvez choisir l’une des options de serveur proxy suivantes:
+  Si vous activez cette stratégie, vous pouvez choisir l’une des options de serveur proxy suivantes :
    - Si vous choisissez de ne jamais utiliser un serveur proxy et de toujours vous connecter directement, toutes les autres options sont ignorées.
    - Si vous choisissez d’utiliser les paramètres de proxy système ou de détection automatique du serveur proxy, toutes les autres options sont ignorées.
-   - Si vous choisissez le mode de serveur proxy fixe, vous pouvez spécifier d’autres options dans la stratégie [«Adresse ou URL du serveur proxy»](#proxyserver).
-   - Si vous choisissez d’utiliser un script de proxy .pac, vous devez spécifier l’URL du script dans la stratégie [«URL d’un fichier proxy. pac»](#proxypacurl).
+   - Si vous choisissez le mode de serveur proxy fixe, vous pouvez spécifier d’autres options dans la stratégie [« Adresse ou URL du serveur proxy »](#proxyserver).
+   - Si vous choisissez d’utiliser un script de proxy .pac, vous devez spécifier l’URL du script dans la stratégie [« URL d’un fichier proxy. pac »](#proxypacurl).
 
-  Si vous activez cette stratégie, les utilisateurs de votre organisation ne peuvent pas modifier les paramètres du proxy dans MicrosoftEdge Update.
+  Si vous activez cette stratégie, les utilisateurs de votre organisation ne peuvent pas modifier les paramètres du proxy dans Microsoft Edge Update.
 
-  Si vous désactivez ou que vous ne configurez pas cette stratégie, aucun paramètre de serveur proxy n’est configuré, mais les utilisateurs de votre organisation peuvent choisir leurs propres paramètres de proxy pour MicrosoftEdge Update.
+  Si vous désactivez ou que vous ne configurez pas cette stratégie, aucun paramètre de serveur proxy n’est configuré, mais les utilisateurs de votre organisation peuvent choisir leurs propres paramètres de proxy pour Microsoft Edge Update.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: ProxyMode
-- Nom de la stratégie de groupe: Choisir comment spécifier les paramètres du serveur proxy
-- Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge Update/Proxy Server
+- Nom unique de la stratégie de groupe : ProxyMode
+- Nom de la stratégie de groupe : Choisir comment spécifier les paramètres du serveur proxy
+- Chemin de la stratégie de groupe : Administrative Templates/Microsoft Edge Update/Proxy Server
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: ProxyMode
-- Type de valeur: REG_SZ
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : ProxyMode
+- Type de valeur : REG_SZ
+##### Exemple de valeur :
 ```
 fixed_servers
 ```
@@ -500,27 +499,27 @@ fixed_servers
 
 ### ProxyPacUrl
 #### URL d’un fichier proxy. pac
->MicrosoftEdge Update1.3.21.81 et versions ultérieures
+>Microsoft Edge Update 1.3.21.81 et versions ultérieures
 
 #### Description
 Permet de spécifier une URL pour un fichier de configuration automatique de proxy (PAC).
 
-  Si vous activez cette stratégie, vous pouvez spécifier une URL pour un fichier PAC pour automatiser la façon dont MicrosoftEdge Update sélectionne le serveur proxy approprié pour l’extraction d’un site web particulier.
+  Si vous activez cette stratégie, vous pouvez spécifier une URL pour un fichier PAC pour automatiser la façon dont Microsoft Edge Update sélectionne le serveur proxy approprié pour l’extraction d’un site web particulier.
 
-  Cette stratégie est appliquée uniquement si vous avez spécifié des paramètres de proxy manuels dans la stratégie «[Choisir comment spécifier les paramètres du serveur proxy](#proxymode)».
+  Cette stratégie est appliquée uniquement si vous avez spécifié des paramètres de proxy manuels dans la stratégie « [Choisir comment spécifier les paramètres du serveur proxy](#proxymode) ».
 
-  Ne configurez pas cette stratégie si vous avez sélectionné un paramètre de proxy autre que manuel dans la stratégie «[Choisir comment spécifier les paramètres du serveur proxy](#proxymode)».
+  Ne configurez pas cette stratégie si vous avez sélectionné un paramètre de proxy autre que manuel dans la stratégie « [Choisir comment spécifier les paramètres du serveur proxy](#proxymode) ».
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: ProxyPacUrl
-- Nom de la stratégie de groupe: URL d’un fichier proxy. pac
-- Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge Update/Proxy Server
+- Nom unique de la stratégie de groupe : ProxyPacUrl
+- Nom de la stratégie de groupe : URL d’un fichier proxy. pac
+- Chemin de la stratégie de groupe : Administrative Templates/Microsoft Edge Update/Proxy Server
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: ProxyPacUrl
-- Type de valeur: REG_SZ
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : ProxyPacUrl
+- Type de valeur : REG_SZ
+##### Exemple de valeur :
 ```
 https://www.microsoft.com
 ```
@@ -529,27 +528,27 @@ https://www.microsoft.com
 
 ### ProxyServer
 #### Adresse ou URL du serveur proxy
->MicrosoftEdge Update1.3.21.81 et versions ultérieures
+>Microsoft Edge Update 1.3.21.81 et versions ultérieures
 
 #### Description
-Permet de spécifier l’URL du serveur proxy que MicrosoftEdge Update doit utiliser.
+Permet de spécifier l’URL du serveur proxy que Microsoft Edge Update doit utiliser.
 
-  Si vous activez cette stratégie, vous pouvez définir l’URL de serveur proxy utilisée par MicrosoftEdge Update dans votre organisation.
+  Si vous activez cette stratégie, vous pouvez définir l’URL de serveur proxy utilisée par Microsoft Edge Update dans votre organisation.
 
-  Cette stratégie est appliquée uniquement si vous avez sélectionné plusieurs paramètres de proxy manuels dans la stratégie «[Choisir comment spécifier les paramètres du serveur proxy](#proxymode)».
+  Cette stratégie est appliquée uniquement si vous avez sélectionné plusieurs paramètres de proxy manuels dans la stratégie « [Choisir comment spécifier les paramètres du serveur proxy](#proxymode) ».
 
-  Ne configurez pas cette stratégie si vous avez sélectionné un paramètre de proxy autre que manuel dans la stratégie «[Choisir comment spécifier les paramètres du serveur proxy](#proxymode)».
+  Ne configurez pas cette stratégie si vous avez sélectionné un paramètre de proxy autre que manuel dans la stratégie « [Choisir comment spécifier les paramètres du serveur proxy](#proxymode) ».
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: ProxyServer
-- Nom de la stratégie de groupe: Adresse ou URL du serveur proxy
-- Chemin de la stratégie de groupe: Administrative Templates/Microsoft Edge Update/Proxy Server
+- Nom unique de la stratégie de groupe : ProxyServer
+- Nom de la stratégie de groupe : Adresse ou URL du serveur proxy
+- Chemin de la stratégie de groupe : Administrative Templates/Microsoft Edge Update/Proxy Server
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de la valeur: ProxyServer
-- Type de valeur: REG_SZ
-##### Exemple de valeur:
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de la valeur : ProxyServer
+- Type de valeur : REG_SZ
+##### Exemple de valeur :
 ```
 https://www.microsoft.com
 ```
@@ -561,26 +560,26 @@ https://www.microsoft.com
 [Retour au début](#microsoft-edge---update-policies)
 ### Installation (Affichage web)
 #### Autoriser l’installation
->MicrosoftEdge Update1.3.127.1 et versions ultérieures
+>Microsoft Edge Update 1.3.127.1 et versions ultérieures
 
 #### Description
-Vous permet de spécifier si un affichage web de MicrosoftEdge peut être installé à l’aide de MicrosoftEdge Update.
+Vous permet de spécifier si un affichage web de Microsoft Edge peut être installé à l’aide de Microsoft Edge Update.
 
-  - Si vous activez cette stratégie, les utilisateurs peuvent installer l’affichage web de MicrosoftEdge via MicrosoftEdge Update.
-  - Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas installer l’affichage web de MicrosoftEdge via MicrosoftEdge Update.
-  - Si vous ne configurez pas cette stratégie, la configuration de la stratégie «[Autoriser l’installation par défaut](#installdefault)» détermine si les utilisateurs peuvent installer l’Affichage web MicrosoftEdge via MicrosoftEdge Update.
+  - Si vous activez cette stratégie, les utilisateurs peuvent installer l’affichage web de Microsoft Edge via Microsoft Edge Update.
+  - Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas installer l’affichage web de Microsoft Edge via Microsoft Edge Update.
+  - Si vous ne configurez pas cette stratégie, la configuration de la stratégie «[Autoriser l’installation par défaut](#installdefault)» détermine si les utilisateurs peuvent installer l’Affichage web Microsoft Edge via Microsoft Edge Update.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: Install
-- Nom de la stratégie de groupe: Autoriser l’installation
-- Chemin d’accès de la stratégie de groupe: Modèles administratifs/Microsoft Edge Update/Applications/Affichage web Microsoft Edge
+- Nom unique de la stratégie de groupe : Install
+- Nom de la stratégie de groupe : Autoriser l’installation
+- Chemin d’accès de la stratégie de groupe : Modèles administratifs/Microsoft Edge Update/Applications/Affichage web Microsoft Edge
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de valeur: 
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de valeur : 
   - Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000001
 ```
@@ -589,29 +588,29 @@ Vous permet de spécifier si un affichage web de MicrosoftEdge peut être instal
 
 ### Mise à jour (Affichage web)
 #### Remplacer la stratégie de mise à jour
->MicrosoftEdge Update1.3.127.1 et versions ultérieures
+>Microsoft Edge Update 1.3.127.1 et versions ultérieures
 
 #### Description
 Vous permet de spécifier si les mises à jour automatiques sont activées pour l’affichage web de Microsoft Edge. L’affichage web de Microsoft Edge est un composant utilisé par les applications pour afficher du contenu web.
 Les mises à jour automatiques sont activées par défaut. La désactivation des mises à jour automatiques pour l’affichage web de Microsoft Edge peut entraîner des problèmes de compatibilité avec les applications qui dépendent de ce composant.
 
-  Si vous activez cette stratégie, MicrosoftEdge Update gère les mises à jour de l’affichage web de MicrosoftEdge en fonction de la façon dont vous configurez les options suivantes:
-  - Toujours autoriser les mises à jour: les mises à jour sont téléchargées et appliquées automatiquement
-  - Mises à jour désactivées: les mises à jour ne sont jamais téléchargées ou appliquées.
+  Si vous activez cette stratégie, Microsoft Edge Update gère les mises à jour de l’affichage web de Microsoft Edge en fonction de la façon dont vous configurez les options suivantes :
+  - Toujours autoriser les mises à jour : les mises à jour sont téléchargées et appliquées automatiquement
+  - Mises à jour désactivées : les mises à jour ne sont jamais téléchargées ou appliquées.
 
   Si vous n’activez pas cette stratégie, les mises à jour sont automatiquement téléchargées et appliquées.
 #### Informations et paramètres Windows
 ##### Informations relatives à la stratégie de groupe (ADMX)
-- Nom unique de la stratégie de groupe: Update
-- Nom de la stratégie de groupe: Remplacer la stratégie de mise à jour
-- Chemin d’accès de la stratégie de groupe: Modèles administratifs/Microsoft Edge Update/Applications/Affichage web Microsoft Edge
+- Nom unique de la stratégie de groupe : Update
+- Nom de la stratégie de groupe : Remplacer la stratégie de mise à jour
+- Chemin d’accès de la stratégie de groupe : Modèles administratifs/Microsoft Edge Update/Applications/Affichage web Microsoft Edge
 - Nom du fichier GP ADMX: msedgeupdate.admx
 ##### Paramètres du Registre Windows
-- Chemin d’accès: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nom de valeur: 
+- Chemin d’accès : HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nom de valeur : 
   - Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
-- Type de valeur: REG_DWORD
-##### Exemple de valeur:
+- Type de valeur : REG_DWORD
+##### Exemple de valeur :
 ```
 0x00000001
 ```
@@ -619,5 +618,5 @@ Les mises à jour automatiques sont activées par défaut. La désactivation des
 
 
 ## Voir également
-  - [Configuration de MicrosoftEdge](configure-microsoft-edge.md)
-  - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+  - [Configuration de Microsoft Edge](configure-microsoft-edge.md)
+  - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

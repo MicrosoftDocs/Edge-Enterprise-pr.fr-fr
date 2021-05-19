@@ -23,12 +23,12 @@ Les vidéos décrites dans cet article présentent de nombreux aspects du déplo
 
 ## Série de vidéos sur la mécanique Microsoft
 
-La série de vidéos sur Microsoft Mechanics, illustrée dans cette page du «*Guide 2020 de déploiement de MSFTEdge Entreprise*», fait partie de la collection de vidéos MicrosoftEdge dédiée aux événements, annonces, solutions et conférences connexes.
+La série de vidéos sur Microsoft Mechanics, illustrée dans cette page du « *Guide 2020 de déploiement de MSFT Edge Entreprise *», fait partie de la collection de vidéos Microsoft Edge dédiée aux événements, annonces, solutions et conférences connexes.
 
-:::image type="content" source="media/microsoft-edge-videos/mechanics-video-series.png" alt-text="Exemples de la série de vidéos sur MicrosoftMechanics":::
+:::image type="content" source="media/microsoft-edge-videos/mechanics-video-series.png" alt-text="Exemples de la série de vidéos sur Microsoft Mechanics":::
 
-Vous pouvez les visionner au sein de la [playlist Mechanics Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy), ou sur la [chaîne Youtube MicrosoftEdge](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA), ainsi que d’autres vidéos.
+Vous pouvez les visionner au sein de la [playlist Mechanics Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy), ou sur la [chaîne Youtube Microsoft Edge](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA), ainsi que d’autres vidéos.
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

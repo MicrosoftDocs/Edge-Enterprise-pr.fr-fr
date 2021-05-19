@@ -1,5 +1,5 @@
 ---
-title: Syntaxe expression régulière2
+title: Syntaxe expression régulière 2
 ms.author: comanea
 author: dan-wesley
 manager: seanlyn
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Syntaxe expression régulière2
+description: Syntaxe expression régulière 2
 ms.openlocfilehash: 9654a25d2c0474601fb719b145ebb1f59241a6d9
 ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
 ms.translationtype: HT
@@ -21,15 +21,15 @@ ms.locfileid: "10979748"
 
 Les expressions régulières sont une notation permettant de décrire des jeux de chaînes de caractères. Lorsqu’une chaîne se trouve dans le groupe décrit par une expression régulière, l’expression régulière correspond souvent à la chaîne.
 
-L’expression régulière la plus simple est un caractère littéral unique. À l’exception des métacaractères tels que *\ * +? ()|*, les caractères correspondent eux-mêmes. Pour faire correspondre un métacaractère, faites-le glisser avec une barre oblique inverse: \ + correspond à un signe plus.
+L’expression régulière la plus simple est un caractère littéral unique. À l’exception des métacaractères tels que *\ * + ? ()|*, les caractères correspondent eux-mêmes. Pour faire correspondre un métacaractère, faites-le glisser avec une barre oblique inverse : \ + correspond à un signe plus.
 
-Deux expressions régulières peuvent être modifiées ou concaténées pour former une nouvelle expression régulière: si *e<sub>1</sub>* correspond à _s_ et *e<sub>2</sub>* correspond à _t_, puis*e<sub>1</sub>* | *e<sub>2</sub>* correspond à _s_ ou _t_, et *e<sub>1</sub>* *e<sub>2</sub>*  correspond à _st_.
+Deux expressions régulières peuvent être modifiées ou concaténées pour former une nouvelle expression régulière : si *e<sub>1</sub>* correspond à _s_ et *e<sub>2</sub>* correspond à _t_, puis*e<sub>1</sub>* | *e<sub>2</sub>* correspond à _s_ ou _t_, et *e<sub>1</sub>* *e<sub>2</sub>*  correspond à _st_.
 
-Les métacaractères _\*_ , _+_ et _?_ les opérateurs de répétition sont les suivants: *e<sub>1</sub>* _\*_ correspond à une séquence de zéro ou plusieurs chaînes (peut-être différente) qui correspondent *e<sub>1</sub>*; *e<sub>1</sub>* _+_ correspond à un ou plusieurs; *e<sub>1</sub>* _?_ correspond à zéro ou à un.
+Les métacaractères _\*_ , _+_ et _?_ les opérateurs de répétition sont les suivants : *e<sub>1</sub>* _\*_ correspond à une séquence de zéro ou plusieurs chaînes (peut-être différente) qui correspondent *e<sub>1</sub>*; *e<sub>1</sub>* _+_ correspond à un ou plusieurs ; *e<sub>1</sub>* _?_ correspond à zéro ou à un.
 
-La priorité de l’opérateur, de la plus faible à la liaison la plus forte, est la première alternative, la concaténation et enfin les opérateurs de répétition. Des parenthèses explicites peuvent être utilisées pour imposer des significations différentes, comme dans les expressions arithmétiques. Voici quelques exemples: _ab|cd_ équivaut à _(ab)|(cd)_; _ab\*_ équivaut à _a(b\*)_ .
+La priorité de l’opérateur, de la plus faible à la liaison la plus forte, est la première alternative, la concaténation et enfin les opérateurs de répétition. Des parenthèses explicites peuvent être utilisées pour imposer des significations différentes, comme dans les expressions arithmétiques. Voici quelques exemples : _ab|cd_ équivaut à _(ab)|(cd)_ ; _ab\*_ équivaut à _a(b\*)_ .
 
-La syntaxe décrite jusqu'à présent est la plupart de la syntaxe traditionnelle d'expression régulière Unix _egrep_. Ce sous-ensemble suffit à décrire toutes les langues standard: en fait, une langue standard est un ensemble de chaînes qui peuvent être mises en correspondance en une seule passe dans le texte en utilisant uniquement une quantité fixe de mémoire. Les nouvelles fonctionnalités des expressions régulières (notamment Perl et celles qui ont été copiées) ont ajouté de nombreux opérateurs et séquences d’échappement, ce qui rend les expressions régulières plus concises, voire plus énigmatiques, mais généralement plus puissantes.
+La syntaxe décrite jusqu'à présent est la plupart de la syntaxe traditionnelle d'expression régulière Unix _egrep_. Ce sous-ensemble suffit à décrire toutes les langues standard : en fait, une langue standard est un ensemble de chaînes qui peuvent être mises en correspondance en une seule passe dans le texte en utilisant uniquement une quantité fixe de mémoire. Les nouvelles fonctionnalités des expressions régulières (notamment Perl et celles qui ont été copiées) ont ajouté de nombreux opérateurs et séquences d’échappement, ce qui rend les expressions régulières plus concises, voire plus énigmatiques, mais généralement plus puissantes.
 
 Cette page répertorie la syntaxe de l’expression régulière acceptée par RE2.
 
@@ -75,7 +75,7 @@ Elle répertorie également une syntaxe acceptée par PCRE, PERL et VIM.
 | x{-n} | (≡ x{n}?) (NON PRIS EN CHARGE) VIM |
 | x= | (≡ x?) (NON PRIS EN CHARGE) VIM |
 
-Restriction d’implémentation: les formulaires de comptage x {n, m}, x {n,} et x {n} refusent les formulaires qui créent un nombre de répétitions minimum ou maximum au-dessus de 1000. Les répétitions illimitées ne sont pas sujettes à cette restriction.
+Restriction d’implémentation : les formulaires de comptage x {n, m}, x {n,} et x {n} refusent les formulaires qui créent un nombre de répétitions minimum ou maximum au-dessus de 1000. Les répétitions illimitées ne sont pas sujettes à cette restriction.
 
 | | Répétitions de possession |
 | --- | --- |
@@ -93,8 +93,8 @@ Restriction d’implémentation: les formulaires de comptage x {n, m}, x {n,} et
 | (?&lt;nom&gt;re) | nommé &amp; groupe de capture numéroté (sous-correspondance) (NON PRIS EN CHARGE) |
 | (?&#39;name&#39;re) | nommé &amp; groupe de capture numéroté (sous-correspondance) (NON PRIS EN CHARGE) |
 | (?:re) | groupe non capturé |
-| (?flags) | activer les indicateurs dans le groupe actuel; non capture |
-| (?flags:re) | définir des indicateurs pendant un re; non capture |
+| (?flags) | activer les indicateurs dans le groupe actuel ; non capture |
+| (?flags:re) | définir des indicateurs pendant un re ; non capture |
 | (?#text) | Commentaire (NON PRIS EN CHARGE) |
 | (?\|x\|y\|z) | réinitialisation de la numérotation des branches (NON PRIS EN CHARGE) |
 | (?&gt;re) | correspondance de possession de re (NON PRIS EN CHARGE) |
@@ -104,7 +104,7 @@ Restriction d’implémentation: les formulaires de comptage x {n, m}, x {n,} et
 | | Flags |
 | --- | --- |
 | i | non respect de la casse (valeur par défaut faux) |
-| m | mode multilignes: ^ et $ correspondent ligne début/fin en plus du texte début/fin (valeur par défaut faux) |
+| m | mode multilignes : ^ et $ correspondent ligne début/fin en plus du texte début/fin (valeur par défaut faux) |
 | s | let . correspondre à \n (valeur par défaut faux) |
 | U | ingratitude : échange de sens de x\* et x\*?, x+ et x+?, etc (valeur par défaut faux) |
 
@@ -198,7 +198,7 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | [\D] | pas de chiffres (≡ \d) |
 | [^\D] | non pas de chiffres (≡ \d) |
 | [[:name:]] | classe ASCII nommée à l’intérieur d’une classe de caractères (≡ [:name:]) |
-| [^ [: nom:]] | classe ASCII nommée à l’intérieur d’une classe de caractères inversée (≡ [:name:]) |
+| [^ [ : nom :]] | classe ASCII nommée à l’intérieur d’une classe de caractères inversée (≡ [:name:]) |
 | [\p{Name}] | propriété Unicode nommée dans la classe de caractères (≡ \p{Name}) |
 | [^\p{Name}] | propriété Unicode nommée dans la classe de caractères inversée (≡ \P{Name}) |
 
@@ -503,10 +503,10 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 ## Licence de contenu
 
 > [!NOTE]
-> Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Chromium.org et utilisé conformément aux conditions décrites dans la [Licence internationale Creative Commons Attribution4.0](http://creativecommons.org/licenses/by/4.0/). La page d’origine est disponible [ici](https://github.com/google/re2/wiki/Syntax).
+> Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Chromium.org et utilisé conformément aux conditions décrites dans la [Licence internationale Creative Commons Attribution 4.0](http://creativecommons.org/licenses/by/4.0/). La page d’origine est disponible [ici](https://github.com/google/re2/wiki/Syntax).
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce travail est concédé sous une <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence internationale Creative Commons Attribution4.0</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce travail est concédé sous une <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence internationale Creative Commons Attribution 4.0</a>.
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

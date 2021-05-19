@@ -21,7 +21,7 @@ ms.locfileid: "11313930"
 
 Cet article explique comment préparer le déploiement de Microsoft Edge lorsque l’ancienne version de Microsoft Edge atteint sa fin de service.
 
-Comme le permet [le billet de blog](https://aka.ms/EdgeLegacyEOS) de l’équipe produit Microsoft Edge, la prise en charge de l’application de bureau de l’ancienne version de Microsoft Edge prendra fin le 9 mars 2021. Lorsque vous appliquez la version Update Tuesday (ou «B») en avril, elle supprimera l’ancienne version de Microsoft Edge des appareils exécutant Windows 10 RS4 à 20H1 et la remplacera par Microsoft Edge.
+Comme le permet [le billet de blog](https://aka.ms/EdgeLegacyEOS) de l’équipe produit Microsoft Edge, la prise en charge de l’application de bureau de l’ancienne version de Microsoft Edge prendra fin le 9 mars 2021. Lorsque vous appliquez la version Update Tuesday (ou « B ») en avril, elle supprimera l’ancienne version de Microsoft Edge des appareils exécutant Windows 10 RS4 à 20H1 et la remplacera par Microsoft Edge.
 
 ## Comment se préparer
 
@@ -35,5 +35,5 @@ Après avoir planifié votre déploiement, utilisez l’une des approches suivan
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Planifier votre déploiement de Microsoft Edge](deploy-edge-plan-deployment.md)
