@@ -18,7 +18,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/09/2020
 ms.locfileid: "11105568"
 ---
-# Microsoft Edge - Stratégies de mise à jour
+# <a name="microsoft-edge---update-policies"></a>Microsoft Edge - Stratégies de mise à jour
 La dernière version de Microsoft Edge comprend les stratégies suivantes que vous pouvez utiliser pour contrôler comment et quand Microsoft Edge est mis à jour.
 
 Pour plus d’informations sur les autres stratégies disponibles dans Microsoft Edge, consultez la [Référence de stratégies du navigateur Microsoft Edge](microsoft-edge-policies.md)
