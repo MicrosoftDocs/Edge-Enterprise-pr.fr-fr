@@ -32,7 +32,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives aux mises 
 |[Applications](#applications)|[Préférences](#preferences)|
 |[Serveur proxy](#proxy-server)|[Affichage web Microsoft Edge](#microsoft-edge-webview)|
 
-### [Applications](#applications-policies)
+### <a name="applications"></a>[Applications](#applications-policies)
 |Nom de la stratégie|Caption|
 |-|-|
 |[InstallDefault](#installdefault)|Autoriser l’installation par défaut|
@@ -45,20 +45,20 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives aux mises 
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Restaurez la version Cible (par canal)|
 |[TargetVersionPrefix](#targetversionprefix)|Remplacement de la version cible (par canal)|
 
-### [Préférences](#preferences-policies)
+### <a name="preferences"></a>[Préférences](#preferences-policies)
 |Nom de la stratégie|Caption|
 |-|-|
 |[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Remplacement de la période de vérification de mise à jour automatique|
 |[UpdatesSuppressed](#updatessuppressed)|Période quotidienne pendant laquelle supprimer la vérification de mise à jour automatique|
 
-### [Serveur proxy](#proxy-server-policies)
+### <a name="proxy-server"></a>[Serveur proxy](#proxy-server-policies)
 |Nom de la stratégie|Légende|
 |-|-|
 |[ProxyMode](#proxymode)|Choisir comment spécifier les paramètres du serveur proxy|
 |[ProxyPacUrl](#proxypacurl)|URL d’un fichier proxy. pac|
 |[ProxyServer](#proxyserver)|Adresse ou URL du serveur proxy|
 
-### [Affichage web Microsoft Edge](#microsoft-edge-webview-policies)
+### <a name="install-webview"></a>[Affichage web Microsoft Edge](#microsoft-edge-webview-policies)
 |Nom de la stratégie|Caption|
 |-|-|
 |[Installer](#install-webview)|Autoriser l’installation|

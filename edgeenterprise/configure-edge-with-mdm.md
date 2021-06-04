@@ -389,7 +389,7 @@ Procédez comme suit pour confirmer que la stratégie Microsoft Edge utilise le 
 2. Sur la page **Stratégies**, vérifiez si la stratégie que vous avez définie dans le profil est répertoriée.
 3. Si ce n’est pas le cas, consultez [Diagnostiquer les échecs GPM dans Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) ou [Résoudre les problèmes liés à un paramètre de stratégie](#troubleshoot-a-policy-setting).
 
-#### Résoudre les problèmes liés à un paramètre de stratégie
+#### <a name="troubleshoot-a-policy-setting"></a>Résoudre les problèmes liés à un paramètre de stratégie
 
 Si une stratégie Microsoft Edge ne prend pas effet, procédez comme suit :
 

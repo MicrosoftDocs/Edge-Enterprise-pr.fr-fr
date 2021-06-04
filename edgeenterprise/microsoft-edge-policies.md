@@ -227,7 +227,7 @@ et des conseils pour les services Microsoft|
 |[SmartScreenEnabled](#smartscreenenabled)|Configurer Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forcer Microsoft Defender SmartScreen à vérifier les téléchargements provenant de sources approuvées|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurer Microsoft Defender SmartScreen pour bloquer les applications potentiellement indésirables.|
-### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Démarrage&comma; page d’accueil et page Nouvel onglet*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startup-home-page-and-new-tab-page"></a>Démarrage&comma; page d’accueil et page Nouvel onglet*](#startup-home-page-and-new-tab-page-policies)
 
 |Nom de la stratégie|Caption|
 |-|-|
