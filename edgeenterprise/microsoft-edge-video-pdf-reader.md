@@ -23,11 +23,11 @@ Cette vidéo présente le lecteur PDF de qualité professionnelle de Microsoft E
 
 [![Lecteur PDF de qualité professionnelle](media/microsoft-edge-video-pdf-reader/0.png)](http://www.youtube.com/watch?v=XWAqNQ0xAcE "Enterprise grade PDF reader")
 
-## À propos de la vidéo
+##  <a name="about-the-video"></a>À propos de la vidéo
 
 Cette vidéo met en avant les fonctionnalités du lecteur PDF intégré de Microsoft Edge. Découvrez comment les utilisateurs peuvent utiliser l’entrée manuscrite et mettre en surbrillance des PDF, ouvrir des documents protégés et afficher et valider des signatures numériques basées sur des certificats.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Lecteur PDF dans Microsoft Edge](microsoft-edge-pdf.md)

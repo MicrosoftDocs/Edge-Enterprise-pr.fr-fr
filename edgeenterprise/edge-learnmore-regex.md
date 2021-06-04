@@ -35,7 +35,7 @@ Cette page répertorie la syntaxe de l’expression régulière acceptée par RE
 
 Elle répertorie également une syntaxe acceptée par PCRE, PERL et VIM.
 
-## Tables de syntaxe
+##  <a name="syntax-tables"></a>Tables de syntaxe
 
 | Types d’expressions à un seul caractère | Exemples |
 | --- | --- |
@@ -500,13 +500,13 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | (\*BSR\_ANYCRLF) | définition de la convention (NON PRIS EN CHARGE) PCRE |
 | (\*BSR\_UNICODE) | (NON PRIS EN CHARGE) PCRE |
 
-## Licence de contenu
+##  <a name="content-license"></a>Licence de contenu
 
 > [!NOTE]
 > Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Chromium.org et utilisé conformément aux conditions décrites dans la [Licence internationale Creative Commons Attribution 4.0](http://creativecommons.org/licenses/by/4.0/). La page d’origine est disponible [ici](https://github.com/google/re2/wiki/Syntax).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce travail est concédé sous une <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence internationale Creative Commons Attribution 4.0</a>.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

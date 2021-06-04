@@ -21,11 +21,11 @@ ms.locfileid: "11157687"
 
 Cet article fournit des informations aux administrateurs informatiques qui envisagent un déploiement de Microsoft Edge nécessitant des informations sur la compatibilité et la prise en charge des applications.
 
-## Compatibilité et prise en charge de l’application web
+##  <a name="web-application-compatibility-and-support"></a>Compatibilité et prise en charge de l’application web
 
 Pour vous aider dans le déploiement de Microsoft Edge, nous avons compilé une liste des applications web susceptibles d’être utilisées au sein de votre organisation. Cette liste vous permet de déterminer si l’application Web est prête pour Microsoft Edge, conformément aux instructions de l’énoncé de support public du fournisseur d’applications web.
 
-### Ajouter à la liste des applications
+###  <a name="add-to-the-application-list"></a>Ajouter à la liste des applications
 
 Nous mettons régulièrement à jour la liste, car les commentaires de l’engagement client permettent d’identifier les énoncés de support.
 
@@ -36,7 +36,7 @@ Si vous êtes fournisseur d’applications web et souhaitez inclure votre énonc
 - Nom du fournisseur
 - URL de l’énoncé de support public.
 
-### Liste des applications
+###  <a name="application-list"></a>Liste des applications
 
 Microsoft ne teste ni ne certifie ces applications dans Microsoft Edge. La liste a été compilée sur la base des ressources accessibles au public. Consultez toujours l’instruction de prise en charge actuelle du fournisseur. Certaines applications peuvent nécessiter l’utilisation du mode IE, comme indiqué par l’instruction de prise en charge.
 
@@ -143,7 +143,7 @@ Le tableau suivant répertorie les instructions de prise en charge du fournisseu
 | Zoom  | Zoom  | https://support.zoom.us/hc/en-us/articles/201362023-System-Requirements-for-PC-Mac-and-Linux#h_92957a85-2506-43a2-bd4a-5bb274778518  |
 | ZScaler  | Zscaler   | https://help.zscaler.com/zia/supported-browsers |
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Planifier votre déploiement de Microsoft Edge](deploy-edge-plan-deployment.md)

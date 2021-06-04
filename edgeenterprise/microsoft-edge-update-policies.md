@@ -24,7 +24,7 @@ La dernière version de Microsoft Edge comprend les stratégies suivantes que vo
 Pour plus d’informations sur les autres stratégies disponibles dans Microsoft Edge, consultez la [Référence de stratégies du navigateur Microsoft Edge](microsoft-edge-policies.md)
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 77 ou ultérieure.
-## Stratégies disponibles
+##  <a name="available-policies"></a>Stratégies disponibles
 Ces tableaux répertorient toutes les stratégies de groupe relatives aux mises à jour disponibles dans cette version de Microsoft Edge. Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.
 
 |||
@@ -64,10 +64,10 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives aux mises 
 |[Installer](#install-webview)|Autoriser l’installation|
 |[Mettre à jour/Mise à jour](#update-webview)|Remplacer la stratégie de mise à jour|
 
-## Stratégies d’applications
+##  <a name="applications-policies"></a>Stratégies d’applications
 
 [Retour au début](#microsoft-edge---update-policies)
-### InstallDefault
+###  <a name="installdefault"></a>InstallDefault
 #### Autoriser l’installation par défaut
 >Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
@@ -98,7 +98,7 @@ Cette stratégie est disponible uniquement sur les instances Windows qui sont li
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### UpdateDefault
+###  <a name="updatedefault"></a>UpdateDefault
 #### Remplacer la stratégie de mise à jour par défaut
 >Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
@@ -133,7 +133,7 @@ Permet de spécifier le comportement par défaut de tous les canaux concernant l
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### Install
+###  <a name="install"></a>Install
 #### Autoriser l’installation
 >Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
@@ -172,7 +172,7 @@ Spécifie si un canal de Microsoft Edge peut être installé sur des appareils l
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### Update
+###  <a name="update"></a>Update
 #### Remplacer la stratégie de mise à jour
 >Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
@@ -217,7 +217,7 @@ Cette stratégie est disponible uniquement sur les instances Windows qui sont li
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### Allowsxs
+###  <a name="allowsxs"></a>Allowsxs
 #### Autoriser l’expérience de navigateur côte à côte Microsoft Edge
 >Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
@@ -248,7 +248,7 @@ Pour que cette stratégie de groupe prenne effet, elle doit être configurée av
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcutDefault
+###  <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### Empêcher la création du Raccourci Bureau lors de l’installation par défaut
 >Microsoft Edge Update 1.3.128.0 et versions ultérieures
 
@@ -276,7 +276,7 @@ Si Microsoft Edge est déjà installé, cette stratégie n’a aucun effet.
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcut
+###  <a name="createdesktopshortcut"></a>CreateDesktopShortcut
 #### Empêcher la création du Raccourci Bureau lors de l’installation
 >Microsoft Edge Update 1.3.128.0 et versions ultérieures
 
@@ -312,7 +312,7 @@ Si Microsoft Edge est déjà installé, cette stratégie n’a aucun effet.
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### RollbackToTargetVersion
+###  <a name="rollbacktotargetversion"></a>RollbackToTargetVersion
 #### Restaurez la version Cible
 >Microsoft Edge Update 1.3.133.3 et versions ultérieures
 
@@ -361,7 +361,7 @@ Cette stratégie est disponible uniquement sur les instances Windows qui sont li
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### TargetVersionPrefix
+###  <a name="targetversionprefix"></a>TargetVersionPrefix
 #### Remplacement de la version cible
 >Microsoft Edge Update 1.3.119.43 et versions ultérieures
 
@@ -402,10 +402,10 @@ Cette stratégie est disponible uniquement sur les instances Windows qui sont li
 [Retour au début](#microsoft-edge---update-policies)
 
 
-## Stratégies de préférences
+##  <a name="preferences-policies"></a>Stratégies de préférences
 
 [Retour au début](#microsoft-edge---update-policies)
-### AutoUpdateCheckPeriodMinutes
+###  <a name="autoupdatecheckperiodminutes"></a>AutoUpdateCheckPeriodMinutes
 #### Remplacement de la période de vérification de mise à jour automatique
 >Microsoft Edge Update 1.2.145.5 et versions ultérieures
 
@@ -430,7 +430,7 @@ Si elle est activée, cette stratégie vous permet de définir une valeur pour l
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### UpdatesSuppressed
+###  <a name="updatessuppressed"></a>UpdatesSuppressed
 #### Période quotidienne pendant laquelle supprimer la vérification de mise à jour automatique
 >Microsoft Edge Update 1.3.33.5 et versions ultérieures
 
@@ -461,10 +461,10 @@ start min  : 0x00000002
 [Retour au début](#microsoft-edge---update-policies)
 
 
-## Stratégies de serveur proxy
+##  <a name="proxy-server-policies"></a>Stratégies de serveur proxy
 
 [Retour au début](#microsoft-edge---update-policies)
-### ProxyMode
+###  <a name="proxymode"></a>ProxyMode
 #### Choisir comment spécifier les paramètres du serveur proxy
 >Microsoft Edge Update 1.3.21.81 et versions ultérieures
 
@@ -497,7 +497,7 @@ fixed_servers
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### ProxyPacUrl
+###  <a name="proxypacurl"></a>ProxyPacUrl
 #### URL d’un fichier proxy. pac
 >Microsoft Edge Update 1.3.21.81 et versions ultérieures
 
@@ -526,7 +526,7 @@ https://www.microsoft.com
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### ProxyServer
+###  <a name="proxyserver"></a>ProxyServer
 #### Adresse ou URL du serveur proxy
 >Microsoft Edge Update 1.3.21.81 et versions ultérieures
 
@@ -555,10 +555,10 @@ https://www.microsoft.com
 [Retour au début](#microsoft-edge---update-policies)
 
 
-## Stratégies d’affichage web Microsoft Edge
+##  <a name="microsoft-edge-webview-policies"></a>Stratégies d’affichage web Microsoft Edge
 
 [Retour au début](#microsoft-edge---update-policies)
-### Installation (Affichage web)
+###  <a name="install-(webview)"></a>Installation (Affichage web)
 #### Autoriser l’installation
 >Microsoft Edge Update 1.3.127.1 et versions ultérieures
 
@@ -586,7 +586,7 @@ Vous permet de spécifier si un affichage web de Microsoft Edge peut être insta
 [Retour au début](#microsoft-edge---update-policies)
 
 
-### Mise à jour (Affichage web)
+###  <a name="update-(webview)"></a>Mise à jour (Affichage web)
 #### Remplacer la stratégie de mise à jour
 >Microsoft Edge Update 1.3.127.1 et versions ultérieures
 
@@ -617,6 +617,6 @@ Les mises à jour automatiques sont activées par défaut. La désactivation des
 [Retour au début](#microsoft-edge---update-policies)
 
 
-## Voir également
+##  <a name="see-also"></a>Voir également
   - [Configuration de Microsoft Edge](configure-microsoft-edge.md)
   - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

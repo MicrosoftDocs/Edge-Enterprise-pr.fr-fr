@@ -26,7 +26,7 @@ Cet article décrit la prise en charge de l’accès conditionnel par Microsoft 
 
 L’un des aspects clés de la sécurité du cloud est l’identité et l’accès pour la gestion de vos ressources cloud. Dans un monde où la priorité est donnée aux appareils mobiles et au cloud, les utilisateurs peuvent accéder aux ressources de votre organisation via divers appareils et applications, où qu’ils se trouvent. En conséquence, se focaliser sur qui peut accéder à une ressource ne suffit pas. Vous devez également prendre en compte le mode d’accès à la ressource. L’accès conditionnel Azure Active Directory (Azure AD) vous aide à maîtriser l’équilibre entre sécurité et productivité.
 
-## Accès aux ressources protégées par un accès conditionnel dans Microsoft Edge
+##  <a name="accessing-conditional-access-protected-resources-in-microsoft-edge"></a>Accès aux ressources protégées par un accès conditionnel dans Microsoft Edge
 
 Microsoft Edge prend en charge en mode natif l’accès conditionnel Azure AD. Il n’est pas nécessaire d’installer une extension distincte. Lorsque vous êtes connecté(e) à un profil Microsoft Edge avec des informations d’identification Azure AD d’entreprise, Microsoft Edge permet un accès transparent aux ressources cloud d’entreprise protégées par l’accès conditionnel.
 
@@ -44,11 +44,11 @@ Pour vous connecter et utiliser votre profil, cliquez sur l’avatar du compte d
 
 Cette prise en charge est disponible sur toutes les plateformes, y compris toutes les versions prises en charge de Windows et de macOS.
 
-### Procédure de déploiement de l’accès conditionnel dans Azure Active Directory
+###  <a name="how-to-deploy-conditional-access-in-azure-active-directory"></a>Procédure de déploiement de l’accès conditionnel dans Azure Active Directory
 
 [Déployer l’accès conditionnel](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) fournit un guide détaillé pour vous aider à déployer l’accès conditionnel dans Azure Active Directory.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Vidéo : sécurité, compatibilité et facilité de gestion](/microsoft-edge-video-security-compatibility-manageability.md)

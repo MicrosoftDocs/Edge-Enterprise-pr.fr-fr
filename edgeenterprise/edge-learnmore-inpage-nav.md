@@ -26,7 +26,7 @@ Une navigation dans la page est lancée à partir d'un lien, d'un script ou d'un
 >[!NOTE]
 >Cet article concerne MicrosoftEdge version81 ou ultérieure.
 
-## Conditions préalables
+##  <a name="prerequisites"></a>Conditions préalables
 
 Les mises à jour Windows suivantes sont nécessaires pour cette stratégie:
 
@@ -36,13 +36,13 @@ Les mises à jour Windows suivantes sont nécessaires pour cette stratégie:
 - Windows 10 version 1709 ([KB4534318](https://support.microsoft.com/help/4534318))
 
 
-## À propos de cette stratégie
+##  <a name="about-this-policy"></a>À propos de cette stratégie
 
 Cette stratégie vous indique le temps d’identification et de configuration de tous les serveurs d’authentification utilisés par vos sites de mode IE. Toutefois, cette stratégie peut se traduire par une expérience de navigation incohérente dans laquelle certains sites sont affichés en mode IE et à d’autres moments affichés en mode Microsoft Edge. Cette expérience dépend selon que la navigation vers le site à partir a commencé ou non dans une page en mode IE. Les sites qui ne sont pas explicitement configurés pour s’ouvrir dans un moteur de rendu spécifique sont soumis à cette incohérence.
 
 Si vous activez cette stratégie, nous vous recommandons de la désactiver une fois que vous avez identifié tous les serveurs d’authentification et que vous les avez ajoutés à la liste des sites comme étant neutres. Cette action garantit que vos sites modernes ne s’affichent jamais en mode IE par inadvertance.
 
-## Conserver la navigation dans la page en mode InternetExplorer
+##  <a name="keep-in-page-navigation-in-ie-mode"></a>Conserver la navigation dans la page en mode InternetExplorer
 
 Pour conserver la navigation automatique ou dans toutes les navigations dans la page en mode Internet Explorer, procédez comme suit:
 
@@ -64,6 +64,6 @@ Pour conserver la navigation automatique ou dans toutes les navigations dans la 
 
 6. Cliquez sur **OK** ou sur **Appliquer** pour enregistrer les paramètres de stratégie.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

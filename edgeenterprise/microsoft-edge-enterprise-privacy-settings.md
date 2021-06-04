@@ -21,7 +21,7 @@ ms.locfileid: "11005492"
 
 Microsoft s’engage à fournir aux entreprises les informations et les contrôles nécessaires pour faire des choix concernant la collecte de données dans Microsoft Edge.
 
-## Vue d'ensemble
+##  <a name="overview"></a>Vue d'ensemble
 
 Lorsque Microsoft Edge est déployé sur Windows 10, la valeur par défaut est d’envoyer des données de diagnostic sur la base des [paramètres des données de diagnostic Windows](https://go.microsoft.com/fwlink/?linkid=2099569) de l’utilisateur.
 
@@ -32,11 +32,11 @@ Lorsque Microsoft Edge est déployé sur des plateformes non Windows, les donné
 
 Ces stratégies déconseillées ci-dessus sont remplacées par [Autoriser la télémétrie](https://go.microsoft.com/fwlink/?linkid=2099569) sur Windows 10, et la stratégie [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) pour toutes les autres plateformes.  
 
-## configurer des paramètres de stratégie,
+##  <a name="configure-policy-settings"></a>configurer des paramètres de stratégie,
 
 Avant de commencer, téléchargez et utilisez le dernier modèle de stratégie Microsoft Edge (pour plus d’informations, consultez [Configurer Microsoft Edge](configure-microsoft-edge.md)).
 
-### Envoyer les données de diagnostic requises et facultatives relatives à l’utilisation du navigateur
+###  <a name="send-required-and-optional-diagnostic-data-about-browser-usage"></a>Envoyer les données de diagnostic requises et facultatives relatives à l’utilisation du navigateur
 
 Si la stratégie [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) est configurée, elle a priorité sur [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) et [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices).
 
@@ -59,7 +59,7 @@ Sur Windows 7, Windows 8/8.1 et macOS, cette stratégie contrôle l’envoi à M
 
 Si vous ne configurez pas cette stratégie ou si vous la désactivez, Microsoft Edge est défini par défaut sur les préférences de l’utilisateur.
 
-### (DÉCONSEILLÉE) Activer les rapports de données d’utilisation et d’incident
+###  <a name="(deprecated)-enable-usage-and-crash-related-data-reporting"></a>(DÉCONSEILLÉE) Activer les rapports de données d’utilisation et d’incident
 
 Cette stratégie **MetricsReportingEnabled** permet l’envoi à Microsoft de rapports sur l’utilisation et les incidents liés à Microsoft Edge.
 
@@ -79,7 +79,7 @@ Lorsque Microsoft Edge est exécuté sur Windows 7, 8 et macOS :
 - Si cette stratégie n’est pas configurée, Microsoft Edge est défini par défaut sur les préférences de l’utilisateur.
 -  Si cette stratégie est activée, Microsoft Edge enverra uniquement les données d’utilisation si [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) est également activée.
 
-### (DÉCONSEILLÉ) Envoyer des informations sur les sites pour améliorer les services Microsoft
+###  <a name="(deprecated)-send-site-information-to-improve-microsoft-services"></a>(DÉCONSEILLÉ) Envoyer des informations sur les sites pour améliorer les services Microsoft
 
 La stratégie **SendSiteInformationToImproveServices** permet d’envoyer à Microsoft des informations sur les sites web visités dans Microsoft Edge afin d’améliorer les produits et services Microsoft tels que la fonctionnalité de recherche.
 
@@ -97,7 +97,7 @@ Lorsque Microsoft Edge est exécuté sur Windows 7, 8 et macOS :
 - Si cette stratégie est activée, Microsoft Edge enverra uniquement les données d’utilisation si [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) est également activée.
 - Si cette stratégie n’est pas configurée, Microsoft Edge est défini par défaut sur les préférences de l’utilisateur.
 
-## Détails de la mise en œuvre
+##  <a name="implementation-details"></a>Détails de la mise en œuvre
 
 Pour les appareils autres que Windows 10 : 
 - Si la stratégie [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) est configurée, elle a priorité sur [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) et [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices). 
@@ -115,7 +115,7 @@ Pour que Windows 10 comprenne notre implémentation avec la dépendance vis-à-v
 > [!IMPORTANT]
 > Microsoft Edge prend en charge **MetricsReportingEnabled** et **SendSiteInfoToImproveServices** pour Microsoft Edge versions 86 – 88 incluse. Dans Microsoft Edge version 89, **MetricsReportingEnabled** et **SendSiteInfoToImproveServices** ne sera plus prise en charge et prendra par défaut **DiagnosticData** sur les plateformes non Windows 10 ou la stratégie **autoriser la télémétrie** pour Windows 10.
 
-## Options de stratégie de confidentialité supplémentaires
+##  <a name="additional-privacy-policy-options"></a>Options de stratégie de confidentialité supplémentaires
 
 Vous pouvez envisager les stratégies de groupe suivantes liées à la confidentialité des données :
 
@@ -124,7 +124,7 @@ Vous pouvez envisager les stratégies de groupe suivantes liées à la confident
 - Configurer Ne pas me suivre
 - Désactiver le mode InPrivate
 
-## Articles associés
+##  <a name="see-also"></a>Articles associés
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Stratégies Microsoft Edge](microsoft-edge-policies.md)

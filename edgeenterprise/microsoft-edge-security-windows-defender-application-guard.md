@@ -24,7 +24,7 @@ Cet article décrit comment Microsoft Edge prend en charge Microsoft Defender Ap
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 77 ou ultérieure.
 
-## Vue d'ensemble
+##  <a name="overview"></a>Vue d'ensemble
 
 Les architectes de la sécurité au sein de l’entreprise doivent composer avec la tension qui existe entre la productivité et la sécurité. Il est relativement simple de verrouiller un navigateur et de n’autoriser que quelques sites approuvés à se charger. Cette approche permet d’améliorer la sécurité de manière globale, mais elle est vraisemblablement moins productive. Si vous prenez des mesures moins restrictives pour améliorer la productivité, vous augmentez le profil de risque. Il est difficile de parvenir à un équilibre !
 
@@ -32,7 +32,7 @@ Il est encore plus difficile de face aux menaces émergentes dans ce contexte de
 
 Une stratégie de sécurité clé à prendre en considération est d’[Adopter une méthodologie de violation](https://docs.microsoft.com/office365/Enterprise/office-365-monitoring-and-testing#assume-breach-methodology), ce qui signifie que l’on accepte l’idée qu’une attaque aboutisse au moins une fois, quels que soient les efforts déployés pour l’empêcher. Cette façon de penser exige l’élaboration de défenses pour limiter les dommages, ce qui garantit que le réseau de l’entreprise et d’autres ressources restent protégés dans ce scénario.  Le déploiement d’Application Guard pour Microsoft Edge s’inscrit parfaitement dans cette stratégie.
 
-## À propos d’Application Guard
+##  <a name="about-application-guard"></a>À propos d’Application Guard
 
 Conçu pour Windows 10 et Microsoft Edge, Application Guard utilise une approche d’isolation du matériel. Cette approche autorise le lancement de sites non approuvés à l’intérieur d’un conteneur lors de la navigation. L’isolation du matériel permet aux entreprises de protéger leur réseau et leurs données en cas de visite par un utilisateur d’un site compromis ou malveillant.
 
@@ -47,11 +47,11 @@ La capture d’écran suivante affiche un exemple de message de l’Application 
 
 ![Message de parcours sécurisé de l’Application Guard](media/microsoft-edge-security-windows-defender-application-guard/wd-application-guard-1.png)
 
-## Nouveautés
+##  <a name="what's-new"></a>Nouveautés
 
 La prise en charge d’Application Guard dans le nouveau navigateur Microsoft Edge dispose d’une parité fonctionnelle avec Microsoft Edge Legacy et inclut plusieurs améliorations.
 
-### Prise en charge de l’extension dans le conteneur
+###  <a name="extension-support-inside-the-container"></a>Prise en charge de l’extension dans le conteneur
 
 La prise en charge d’extension dans le conteneur a été l’une des principales demandes de la part des clients. Les scénarios vont de la possibilité d’exécuter des bloqueurs de publicités à l’intérieur du conteneur pour améliorer les performances d’un navigateur jusqu’à la possibilité d’exécuter des extensions personnalisées dans le conteneur.
 
@@ -66,7 +66,7 @@ Voici quelques exemples de scénarios de prise en charge du conteneur :
 > [!NOTE]
 > Il est également possible d’installer manuellement des extensions individuelles dans le conteneur à partir du magasin d’extension. Les extensions installées manuellement persisteront dans le conteneur uniquement lorsque la stratégie [Autoriser la persistance](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#application-specific-settings) est activée.
 
-### Identification du trafic Application Guard via un proxy double
+###  <a name="identifying-application-guard-traffic-via-dual-proxy"></a>Identification du trafic Application Guard via un proxy double
 
 Certains clients d’entreprise déploient Application Guard avec un cas d’utilisation spécifique où ils doivent identifier le trafic web sortant d’un conteneur Microsoft Defender Application Guard au niveau du proxy. À partir du canal stable version 84, Microsoft Edge prend en charge le serveur proxy double pour répondre à cette exigence. Vous pouvez configurer cette fonctionnalité à l’aide de la stratégie [ApplicationGuardContainerProxy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardcontainerproxy) .
 
@@ -74,7 +74,7 @@ Le schéma suivant illustre l’architecture double proxy pour Microsoft Edge.
 
 ![Architecture de proxy double pour Application Guard](media/microsoft-edge-security-windows-defender-application-guard/wd-application-guard-dual-proxy.png)
 
-### Page Diagnostics pour la résolution de problèmes
+###  <a name="diagnostic-page-for-troubleshooting"></a>Page Diagnostics pour la résolution de problèmes
 
 L’autre difficulté d’un utilisateur est de résoudre les problèmes de configuration d’Application Guard sur un appareil lorsqu’un problème est signalé. Microsoft Edge dispose d’une page de diagnostics (`edge://application-guard-internals`) pour résoudre les problèmes rencontrés par les utilisateurs. L’un de ces diagnostics est en mesure de vérifier le degré de confiance d’une URL en fonction de la configuration sur l’appareil de l’utilisateur.
 
@@ -82,11 +82,11 @@ La capture d’écran suivante affiche une page de diagnostic avec plusieurs ong
 
 ![Page de diagnostic d’Application Guard](media/microsoft-edge-security-windows-defender-application-guard/wd-application-guard-2.png)
 
-### Mises à jour de Microsoft Edge dans le conteneur
+###  <a name="microsoft-edge-updates-in-the-container"></a>Mises à jour de Microsoft Edge dans le conteneur
 
 Les mises à jour de la version héritée de Microsoft Edge dans le conteneur font partie du cycle de mise à jour du système d’exploitation Windows. Les mises à jour de la nouvelle version de Microsoft Edge s’opérant indépendamment du système d’exploitation Windows, il n’existe plus de dépendance sur les mises à jour de conteneur. Le canal et la version de l’hôte Microsoft Edge sont répliqués dans le conteneur.
 
-## Conditions préalables
+##  <a name="prerequisites"></a>Conditions préalables
 
 Les conditions suivantes s’appliquent aux appareils utilisant Application Guard avec Microsoft Edge :
 
@@ -98,7 +98,7 @@ Les conditions suivantes s’appliquent aux appareils utilisant Application Guar
 
 - Une des solutions de gestion est décrite dans la section [Configuration logicielle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard#software-requirements)
 
-## Comment installer Application Guard
+##  <a name="how-to-install-application-guard"></a>Comment installer Application Guard
 
 Les articles suivants fournissent les informations nécessaires pour installer, configurer et tester Application Guard avec Microsoft Edge.
 
@@ -107,21 +107,21 @@ Les articles suivants fournissent les informations nécessaires pour installer, 
 - [Configurer les paramètres de stratégie de groupe Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
 - [Tester Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
 
-## Forum Aux Questions
+##  <a name="faq"></a>Forum Aux Questions
 
-### Est-ce que application Guard fonctionne en mode Internet Explorer ?
+###  <a name="does-application-guard-work-in-ie-mode"></a>Est-ce que application Guard fonctionne en mode Internet Explorer ?
 
 Le mode IE prend en charge les fonctionnalités d’Application Guard, mais nous ne prévoyons pas l’utilisation de cette fonctionnalité en mode IE. Le mode IE est recommandé pour être déployé pour une liste de sites internes approuvés, tandis qu’Application Guard s’applique aux sites non approuvés uniquement. Assurez-vous que tous les sites ou adresses IP en mode IE sont également ajoutés à la stratégie d’isolement réseau afin qu’ils soient considérés comme des ressources approuvées par Application Guard.
 
-### Ai-je besoin d’installer l’extension Chrome d’Application Guard ?
+###  <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Ai-je besoin d’installer l’extension Chrome d’Application Guard ?
 
 Non, la fonctionnalité Application Guard est nativement prise en charge dans Microsoft Edge. En effet, l’extension Chrome d’Application Guard n’est pas une configuration prise en charge dans Microsoft Edge.
 
-### Y a-t-il d’autres forums aux questions liés à cette plateforme ?
+###  <a name="are-there-any-other-platform-related-faqs"></a>Y a-t-il d’autres forums aux questions liés à cette plateforme ?
 
 Oui. [Forum aux questions - Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard) 
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Microsoft Defender - Protection avancée contre les menaces](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)

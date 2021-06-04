@@ -24,7 +24,7 @@ Cet article explique la configuration de paramètres de stratégie sur macOS à 
 Vous pouvez également configurer les paramètres de stratégies Microsoft Edge sur macOS à l’aide d’un fichier de liste de propriétés (.plist). Pour plus d’informations, voir [Configuration pour macOS à l’aide d’un fichier .plist](configure-microsoft-edge-on-mac.md).
 
 
-## Conditions préalables
+##  <a name="prerequisites"></a>Conditions préalables
 
 Le logiciel suivant est nécessaire :
 
@@ -32,7 +32,7 @@ Le logiciel suivant est nécessaire :
 - Fichier de modèles de stratégie, version 81.0.416.3
 - Jamf Pro version 10.19
 
-## À propos de l’application Jamf Pro & du menu Paramètres personnalisés
+##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>À propos de l’application Jamf Pro & du menu Paramètres personnalisés
 
 Avant la publication de Jamf Pro 10.18, la gestion d’Office 365 impliquait la création manuelle d’un fichier .plist. Le flux de travail était fastidieux et nécessitait une solide formation technique. Jamf Pro 10.18 éliminait ces obstacles en rationalisant le processus de configuration. Cependant, les administrateurs informatiques pouvaient seulement utiliser cette nouvelle interface utilisateur pour des applications spécifiques et des domaines de préférence spécifiés par Jamf.
 
@@ -40,7 +40,7 @@ Avec Jamf Pro 10.19, un utilisateur peut télécharger un manifeste JSON en tant
 
 Pour plus d’informations, voir [Profils de configuration d’ordinateur](https://jamf.it/computer-configuration-profiles) dans le Guide de l’administrateur Jamf Pro.
 
-## Obtenir le manifeste de stratégie pour une version spécifique de Microsoft Edge
+##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Obtenir le manifeste de stratégie pour une version spécifique de Microsoft Edge
 
 Pour obtenir le manifeste de stratégie :
 
@@ -56,7 +56,7 @@ Une fois le fichier CAB décompressé, décompressez le fichier ZIP et accédez 
 
 Ce manifeste est publié dans chaque ensemble de stratégies à compter de la build 81.0.416.3. Si vous souhaitez tester des stratégies dans le canal de développement, vous pouvez prendre le manifeste associé à chaque publication de développement et le tester dans Jamf Pro.  
 
-## Utilisation du manifeste de stratégie dans Jamf Pro
+##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Utilisation du manifeste de stratégie dans Jamf Pro
 
 Utilisez la procédure suivante pour télécharger le manifeste de stratégie dans Jamf Pro et créer un profil de stratégie pour macOS.
 
@@ -105,7 +105,7 @@ Utilisez la procédure suivante pour télécharger le manifeste de stratégie da
 
 Une fois le nouveau profil de configuration créé, vous devez configurer l’**Étendue** du profil.
 
-### Configuration de l'étendue
+###  <a name="to-configure-the-scope"></a>Configuration de l'étendue
 
 1. Pour les **Cibles**, fournissez les paramètres minimaux suivants :
 
@@ -115,7 +115,7 @@ Une fois le nouveau profil de configuration créé, vous devez configurer l’**
 2. Pour les **Limitations**, conservez le paramètre par défaut, à savoir Aucune. Cliquez sur **Annuler**.
 3. Pour les **Exclusions**, conservez le paramètre par défaut, à savoir Aucune. Cliquez sur **Annuler**.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Configurer pour macOS avec Intune](configure-microsoft-edge-on-mac.md)

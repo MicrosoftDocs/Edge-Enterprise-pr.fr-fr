@@ -24,14 +24,14 @@ Cet article décrit comment déployer Microsoft Edge pour macOS à l’aide de J
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 77 ou ultérieure.
 
-## Prérequis
+##  <a name="prerequisites"></a>Prérequis
 
 Avant de déployer Microsot Edge, assurez-vous que les conditions préalables suivantes sont réunies :
 
 - Le fichier d’installation de Microsoft Edge, **MicrosoftEdgeDev-\\<version\>.pkg**, se trouve dans un emplacement accessible sur votre réseau. Vous pouvez téléchargez les fichiers d’installation de Microsoft Edge Entreprise sur la [page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise).
 - Vous disposez d’un compte Cloud Jamf avec le niveau d’accès et de privilèges nécessaires pour créer et déployer des fichiers d’installation sur des ordinateurs.
 
-## Pour déployer Microsoft Edge à l’aide de Jamf :
+##  <a name="to-deploy-microsoft-edge-using-jamf"></a>Pour déployer Microsoft Edge à l’aide de Jamf :
 
 1. Connectez-vous à Jamf et accédez à **Tous les paramètres**.
 
@@ -93,7 +93,7 @@ Avant de déployer Microsot Edge, assurez-vous que les conditions préalables su
 
 Félicitations ! Vous venez de terminer la configuration de Jamf pour déployer Microsoft Edge pour macOS. Lorsque la condition de déclencheur que vous avez définie sera true, le package sera déployé sur les ordinateurs que vous avez désignés.
 
-## Articles associés
+##  <a name="see-also"></a>Articles associés
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Jamf.com](https://www.jamf.com/)

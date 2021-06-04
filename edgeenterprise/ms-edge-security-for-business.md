@@ -23,15 +23,15 @@ Microsoft Edge s’appuie sur le projet open source de chrome (le projet qui est
 
 Nous allons voir les détails, à partir des **menaces externes** et examiner **les risques internes et la protection des informations**.
 
-## Protection contre les menaces externes
+##  <a name="external-threat-protection"></a>Protection contre les menaces externes
 
-### Protection la mieux cotée contre le hameçonnage et les programmes malveillants
+###  <a name="highest-rated-protection-against-phishing-and-malware"></a>Protection la mieux cotée contre le hameçonnage et les programmes malveillants
 
 Intégré à Microsoft Edge, SmartScreen bloque davantage de tentatives de [hameçonnage](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) et de [programmes malveillants](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) que Google Chrome, en fonction d’une étude indépendante de NSS Labs. SmartScreen fournit des vérifications de réputation en temps réel sur les sites et les téléchargements au fur et à mesure que les utilisateurs travaillent en ligne. Il fait partie de la [Sécurité intelligente Microsoft Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), qui permet de dessiner des signaux et des informations générés par le réseau de grande envergure de biens généraux, de chercheurs et de partenaires de Microsoft. En exécutant des vérifications sur des listes dynamiques de sites et de téléchargements dangereux, Microsoft Edge permet de détecter et de bloquer même les menaces éphémères qui disparaissent rapidement.  
 
 [Microsoft Edge avec SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) a bloqué 95,5 % des tentatives d’hameçonnage pendant le test [de protection anti-hameçonnage des laboratoires NSS](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) et 98,5 % des tentatives de programmes malveillants pendant le test [de protection contre les programmes malveillants des laboratoires NSS](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf), par rapport aux taux de navigation sécurisée de Chrome de 86,9 % et de 86,0 %, respectivement.
 
-### Le seul navigateur sur Windows 10 qui prend en charge l’isolation du matériel en mode natif
+###  <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>Le seul navigateur sur Windows 10 qui prend en charge l’isolation du matériel en mode natif
 
 Microsoft Edge est le seul navigateur sur Windows 10 qui prend en charge les fonctionnalités d’isolation de matériel en mode natif. Dans le cadre de Windows 10 Professionnel ou Entreprise, Microsoft Defender Application Guard (Application Guard) exécute les sites non approuvés dans un noyau isolé de l’appareil local et des réseaux internes. Les sites non dignes de confiance sont exécutés dans un « conteneur », de sorte qu’en cas d’attaque, celui-ci est mis en sandbox à partir du reste du réseau d’entreprise. Pour plus d’informations, consultez [Microsoft Edge support pour Application Guard](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-defender-application-guard).
 
@@ -40,9 +40,9 @@ Pour Chrome, une extension est disponible pour tirer parti de l’isolation du m
 > [!NOTE]
 > Application Guard est disponible sur Windows 10, 1809 et version ultérieure. Application Guard n’est pas disponible dans les éditions Windows 10 Famille.
 
-## Risques internes et protection des informations
+##  <a name="internal-risks-and-information-protection"></a>Risques internes et protection des informations
 
-### Prise en charge native de la sécurité Microsoft 365 sans logiciel supplémentaire
+###  <a name="native-support-for-microsoft-365-security-without-additional-software"></a>Prise en charge native de la sécurité Microsoft 365 sans logiciel supplémentaire
 
 Outre la protection contre les menaces externes, les administrateurs informatiques doivent également se prémunir contre les risques internes. La protection des données d’entreprise sensibles (à l’échelle) est une priorité essentielle pour les administrateurs informatiques, notamment lorsque les effectifs ont été décentralisés. Microsoft Edge est le seul navigateur avec une prise en charge native de l’accès conditionnel Azure AD, la Protection des informations Windows et la nouvelle protection contre la perte de données (DLP) Microsoft Endpoint sans nécessiter de logiciel supplémentaire.
 
@@ -63,7 +63,7 @@ Pour en savoir plus sur les conditions préalables de Microsoft Endpoint Protect
 > [!NOTE]
 > Microsoft 365 E5 ou l’abonnement de conformité Microsoft 365 E5 est requis pour Protection contre la perte de données Microsoft Endpoint.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Vidéo : Sécurité, compatibilité et facilité de gestion de Microsoft Edge](microsoft-edge-video-security-compatibility-manageability.md)

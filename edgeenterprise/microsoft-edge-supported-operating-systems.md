@@ -24,14 +24,14 @@ Cet article décrit les systèmes d’exploitation prenant en charge Microsoft E
 > [!NOTE]
 > Cet article concerne les versions 77 et ultérieures de bureau de Microsoft Edge.
 
-## Systèmes d’exploitation prenant en charge Microsoft Edge
+##  <a name="supported-operating-systems-for-microsoft-edge"></a>Systèmes d’exploitation prenant en charge Microsoft Edge
 
 > [!NOTE]
 > La disponibilité des fonctionnalités et les fonctionnalités du produit peuvent varier sur des systèmes d’exploitation plus anciens. Pour garantir l’installation correcte de Microsoft Edge, utilisez la dernière version de l’un des systèmes d’exploitation indiqués ci-dessous. Ces conseils incluent la mise à jour cumulative la plus récente, le cas échéant.
 
 Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge par les systèmes d'exploitation suivants.
 
-### Client Windows
+###  <a name="windows-client"></a>Client Windows
 
 - Windows 7 **
 - Windows 8.1
@@ -43,7 +43,7 @@ Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge 
 - Windows 10 IoT Enterprise SAC ****
 - Windows 10 IoT entreprise 2019 LTSC ****
 
-### Windows Server
+###  <a name="windows-server"></a>Windows Server
 
 - Windows Server 2008 R2 **
 - Windows Server 2012
@@ -59,32 +59,32 @@ Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge 
 >
 > **** L’OPK Microsoft Edge est disponible sur MOO pour que les fabricants d’ordinateurs IoT le préinstallent et le distribuent dans le cadre de leur solution Windows 10 IoT Entreprise.
 
-### macOS
+###  <a name="macos"></a>macOS
 
 - Sierra (10.12) et versions ultérieures
 
-### iOS
+###  <a name="ios"></a>iOS
 
 Microsoft Edge pour iPad&reg; et iPhone&reg; nécessite iOS 11.0 ou version ultérieure. Microsoft Edge pour iPad Pro&trade; nécessite iOS 11.0 ou version ultérieure. Microsoft Edge est pris en charge sur les deux versions d'iOS les plus récentes. Lors de la publication d’une nouvelle version d’iOS, la configuration requise pour le Système d’exploitation Microsoft Edge devient la version actuelle de deux versions les plus récentes : la nouvelle version d’iOS et la version précédente.
 
-### Android
+###  <a name="android"></a>Android
 
 Microsoft Edge pour Android peut s'installer sur des tablettes et des téléphones répondant aux critères suivants : appareils exécutant Android KitKat 4.4 ou version ultérieure avec un processeur basé sur ARM.
 
-### Mac Apple Silicon
+###  <a name="apple-silicon-macs"></a>Mac Apple Silicon
 
 Prise en charge native de Microsoft Edge à partir de la version stable 88 pour les Mac Apple Silicon.
 
-### Chromebooks
+###  <a name="chromebooks"></a>Chromebooks
 
 Microsoft Edge ne prend pas en charge Chromebooks.
 
-## Modifications récentes
+##  <a name="recent-changes"></a>Modifications récentes
 
 - **17/12/2020** : la prise en charge de Microsoft Edge sur Windows 7 et Windows Server 2008 R2 est étendue jusqu’au 15 janvier 2022.
 - **28/01/2021** - Prise en charge de Microsoft Edge pour les Mac Apple Silicon.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Politique de cycle de vie moderne de Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy)

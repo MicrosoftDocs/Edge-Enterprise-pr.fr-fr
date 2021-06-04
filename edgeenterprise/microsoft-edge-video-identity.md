@@ -23,11 +23,11 @@ Cette vidéo montre comment Microsoft Edge active et prend en charge l’identit
 
 [![Identité dans Microsoft Edge](media/microsoft-edge-video-identity/0.png)](http://www.youtube.com/watch?v=8lRUKhR7ipA "Identity in Microsoft Edge")
 
-## À propos de la vidéo
+##  <a name="about-the-video"></a>À propos de la vidéo
 
 Cette vidéo décrit comment configurer une expérience authentifiée et personnalisée pour vos utilisateurs. Les rubriques incluent la configuration de la connexion, la connexion unique et les profils multiples.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Prise en charge et configuration des identités Microsoft Edge](microsoft-edge-security-identity.md)

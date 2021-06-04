@@ -24,7 +24,7 @@ Cet article décrit la configuration du partage de cookies de session d’un pro
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 87 ou ultérieure.
 
-## Conditions préalables
+##  <a name="prerequisites"></a>Conditions préalables
 
 - Mises à jour Windows
 
@@ -37,7 +37,7 @@ Cet article décrit la configuration du partage de cookies de session d’un pro
 - Microsoft Edge version 87 ou ultérieure
 - [Mode Internet Explorer](https://aka.ms/iemodeonedge)  configuré avec la liste des sites en mode Entreprise
 
-## Vue d'ensemble
+##  <a name="overview"></a>Vue d'ensemble
 
 Une configuration courante dans les grandes organisations consiste à lier une application qui fonctionne sur un navigateur moderne à une autre application, configurable pour s’ouvrir en mode Internet Explorer avec l’authentification unique (SSO) activée dans le flux de travail.
 
@@ -46,13 +46,13 @@ Par défaut, les processus Microsoft Edge et Internet Explorer ne partagent pas 
 > [!NOTE]
 > Vous pouvez partager des cookies de session uniquement de Microsoft Edge vers Internet Explorer. Vous ne pouvez pas partager de cookies de session dans le sens inverse (d’Internet Explorer vers Microsoft Edge).
 
-## Fonctionnement du partage de cookies
+##  <a name="how-cookie-sharing-works"></a>Fonctionnement du partage de cookies
 
 Nous avons étendu le fichier XML de liste de sites en mode entreprise pour autoriser des éléments supplémentaires à spécifier des cookies à partager depuis une session Microsoft Edge avec Internet Explorer.  
 
 Lors de la première création d’un onglet de mode Internet Explorer dans une session Microsoft Edge, le partage de tous les cookies correspondants s’effectue vers la session Internet Explorer. Par la suite, chaque fois à chaque ajout, suppression ou modification d’un cookie qui correspond à une règle, l’application envoie ce cookie sous forme de mise à jour à la session Internet Explorer. L’ensemble de cookies partagés fait également l’objet d’une réévaluation lors de la mise à jour de la liste de sites.
 
-### Éléments de schéma mis à jour
+###  <a name="updated-schema-elements"></a>Éléments de schéma mis à jour
 
 Le tableau suivant décrit l’élément \<shared-cookie\> ajouté pour la prise en charge de la fonctionnalité de partage de cookies.
 
@@ -71,7 +71,7 @@ Le tableau suivant décrit l’élément \<shared-cookie\> ajouté pour la prise
 </site-list>
 ```
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [À propos du mode IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
 - [Informations sur les sites configurables](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)

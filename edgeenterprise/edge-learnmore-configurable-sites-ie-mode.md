@@ -21,7 +21,7 @@ ms.locfileid: "10979808"
 
 Cet article décrit la fonctionnalité de sites configurables de la liste des sites en mode Entreprise lorsque vous utilisez le mode Internet Explorer dans Microsoft Edge.
 
-## Conditions préalables
+##  <a name="prerequisites"></a>Conditions préalables
 
 - Mises à jour Windows
 
@@ -36,15 +36,15 @@ Cet article décrit la fonctionnalité de sites configurables de la liste des si
 - Microsoft Edge version 83 ou ultérieure
 - [Mode Internet Explorer](https://aka.ms/iemodeonedge) configuré avec la liste des sites en mode Entreprise
 
-## Vue d'ensemble
+##  <a name="overview"></a>Vue d'ensemble
 
 La configuration des sites nécessitant le mode Internet Explorer dans la liste des sites en mode Entreprise fonctionne parfaitement pour la plupart des environnements avec des applications héritées. Toutefois, dans certains cas, il ne s’agit pas de la meilleure approche pour configurer un sous-ensemble de sites afin qu’il s’ouvre en mode Internet Explorer sans afficher l’intégralité d’un domaine en mode Internet Explorer. Par exemple, lorsque votre environnement contient des applications modernes et héritées qui s’exécutent sur un seul serveur, et que vous aimeriez afficher uniquement les applications héritées en mode Internet Explorer et les applications restantes en mode Microsoft Edge.
 
 La solution consiste à utiliser la fonctionnalité de sites configurables de la liste des sites en mode Entreprise. Lorsque la fonctionnalité est activée, Microsoft Edge permet aux sites disposant de la balise « configurable » de participer à la détermination du moteur du mode Internet Explorer.
 
-## Fonctionnement des sites configurables
+##  <a name="how-configurable-sites-works"></a>Fonctionnement des sites configurables
 
-### Basculement automatique du moteur Microsoft Edge vers le moteur du mode Internet Explorer
+###  <a name="automatic-switching-from-the-microsoft-edge-engine-to-the-ie-mode-engine"></a>Basculement automatique du moteur Microsoft Edge vers le moteur du mode Internet Explorer
 
 Pour utiliser la fonctionnalité de sites configurables et que l’option `<open-in>Configurable</open-in>` soit disponible, la liste des sites en mode Entreprise doit contenir au moins un site.
 
@@ -67,7 +67,7 @@ Lorsque la fonctionnalité de sites configurables est activée, le comportement 
    > [!NOTE]
    > La réponse de redirection fait l’objet d’une mise en cache HTTP normale de Microsoft Edge pour les redirections.
 
-### Rebasculement du moteur du mode Internet Explorer vers le moteur Microsoft Edge
+###  <a name="switching-back-from-ie-mode-engine-to-microsoft-edge-engine"></a>Rebasculement du moteur du mode Internet Explorer vers le moteur Microsoft Edge
 
 L’activation de sites configurables dans Microsoft Edge active automatiquement les comportements suivants dans les onglets du mode Internet Explorer :
 
@@ -81,7 +81,7 @@ L’activation de sites configurables dans Microsoft Edge active automatiquement
 > [!TIP]
 > Les deux moteurs de navigateur envoient le même en-tête de demande « `X-InternetExplorerModeConfigurable: 1` » aux sites configurables. Vous devez utiliser l’en-tête de requête User-Agent pour faire la distinction entre les demandes en provenance du mode Microsoft Edge et celles du mode Internet Explorer, afin d’éviter la redirection lorsque le site est déjà chargé dans le bon moteur.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [À propos du mode Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode)
 - [Informations supplémentaires sur le mode entreprise](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

@@ -26,11 +26,11 @@ Cette vidéo montre comment Microsoft Edge utilise l’expérience de compatibil
 > [!NOTE]
 > Cet article a été filmé chez Microsoft Ignite2019, session THR2279: Microsoft Edge et Microsoft Search: suivez la visite guidée des administrateurs informatiques et des utilisateurs.
 
-## À propos de la vidéo
+##  <a name="about-the-video"></a>À propos de la vidéo
 
 Microsoft Search ajoute des résultats de recherche intranet personnalisés et sur mesure pour les sites, les personnes, les fichiers et les autres aspects sur le PC, Mac et appareils mobiles. Pour finir, nous allons vous montrer comment configurer Microsoft Search dans le cadre de Microsoft365. et comment déployer Microsoft Edge à partir de System Center Configuration Manager et Microsoft Intune sur toutes les plateformes.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Playlist Microsoft Edge sur YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

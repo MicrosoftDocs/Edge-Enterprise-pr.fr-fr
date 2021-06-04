@@ -24,7 +24,7 @@ Cet article décrit le format de filtre utilisé pour les stratégies basées su
 > [!NOTE]
 > Cet article concerne MicrosoftEdge version77 ou ultérieure.
 
-## Format de filtre
+##  <a name="the-filter-format"></a>Format de filtre
 
 Le format de filtre est:
 
@@ -42,7 +42,7 @@ Les champs de format de filtre sont les suivants:
 | **chemin d’accès** (*facultatif*) | Vous pouvez utiliser n’importe quelle chaîne dans le chemin d’accès. |
 | **requête** (*facultatif*) | La **requête** est constituée de jetons de paire clé-valeur ou de clé uniquement séparés par une esperluette («&»). Séparez les jetons de paire clé-valeur par un signe égal («=»). Pour indiquer une correspondance de préfixe, vous pouvez utiliser un astérisque («\*») à la fin de la **requête**. |
 
-## Comparaison du format de filtre au format URL
+##  <a name="comparing-the-filter-format-to-the-url-format"></a>Comparaison du format de filtre au format URL
 
 Le format de filtre ressemble au format d’URL, à l’exception des différences suivantes:
 
@@ -51,7 +51,7 @@ Le format de filtre ressemble au format d’URL, à l’exception des différenc
 - Vous pouvez utiliser un caractère générique («*») comme **hôte** et le faire précéder d’un point («.»).
 - Vous pouvez utiliser une barre oblique («/») ou un point («.») comme suffixe pour l’**hôte**. Dans ce cas, le suffixe est ignoré.
 
-## Critères de sélection du filtre
+##  <a name="filter-selection-criteria"></a>Critères de sélection du filtre
 
 Le filtre sélectionné pour une URL est la correspondance la plus précise trouvée après le traitement des règles de sélection de filtre suivantes:
 
@@ -65,7 +65,7 @@ Le filtre sélectionné pour une URL est la correspondance la plus précise trou
    >[!NOTE]
    >Le comportement par défaut consiste à autoriser la demande d’URL si aucun filtre n’a de correspondance.
 
-## Exemple de critère de sélection du filtre
+##  <a name="example-filter-selection-criteria"></a>Exemple de critère de sélection du filtre
 
 Dans cet exemple, lors de la recherche d’une correspondance à «https://sub.contoso.com/docs», la sélection de filtre effectue les actions suivantes:
 
@@ -75,7 +75,7 @@ Dans cet exemple, lors de la recherche d’une correspondance à «https://sub.c
 4. Dans les filtres restants, tous les éléments qui n’ont pas «/docs" comme préfixe du **chemin d’accès** sont supprimés.
 5. Dans les filtres restants, le filtre avec le préfixe de chemin correspondant le plus long est sélectionné et appliqué. Si aucun filtre n’est trouvé, le processus de sélection reprend à l’étape1. Le processus est répété avec le sous-domaine suivant.
 
-### Informations de filtre complémentaires
+###  <a name="additional-filter-information"></a>Informations de filtre complémentaires
 
 Si un filtre a un point («.») comme préfixe de l’**hôte**, seules les correspondances exactes d’**hôte** sont filtrées. Par exemple:
 
@@ -99,13 +99,13 @@ Le **chemin** et la **requête** respectent la casse. Par exemple:
 
 - Le filtre «http://contoso.com/path?query=A» ne correspond pas à «http://contoso.com/Path?query=A» ou «http://contoso.com/path?Query=A». Mais il correspond à «http://contoso.COM/path?query=A».
 
-## Licence de contenu
+##  <a name="content-license"></a>Licence de contenu
 
 > [!NOTE]
 > Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Chromium.org et utilisé conformément aux conditions décrites dans la [Licence internationale Creative Commons Attribution4.0](http://creativecommons.org/licenses/by/4.0/). La [page Chromium d’origine est disponible ici](https://www.chromium.org/administrators/url-blacklist-filter-format).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce travail est concédé sous une <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence internationale Creative Commons Attribution4.0</a>.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

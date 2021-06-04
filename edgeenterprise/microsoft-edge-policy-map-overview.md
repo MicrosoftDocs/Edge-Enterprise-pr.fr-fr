@@ -29,7 +29,7 @@ Pour vous aider à effectuer votre déploiement initial, utilisez les mappages d
 > - [Référence de stratégie du navigateur](microsoft-edge-policies.md)
 > - [Référence de stratégie de mise à jour](microsoft-edge-update-policies.md)
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 - [Configuration de Microsoft Edge sur Windows](configure-microsoft-edge.md)
 - [Configuration de Microsoft Edge sur macOS](configure-microsoft-edge-on-mac.md)
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

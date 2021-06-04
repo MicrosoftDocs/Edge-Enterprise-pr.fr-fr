@@ -24,7 +24,7 @@ Cet article explique comment associer Microsoft Edge au mode Internet Explorer a
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 86 ou ultérieure.
 
-## Recommandations en matière d’association d’extensions de fichier avec le mode Internet Explorer
+##  <a name="guidance-for-file-extension-association-with-internet-explorer-mode"></a>Recommandations en matière d’association d’extensions de fichier avec le mode Internet Explorer
 
 Les instructions suivantes indiquent une entrée qui associe Microsoft Edge au mode IE avec le type de fichier .mht. Pour définir une association de fichiers, procédez comme suit.
 
@@ -62,7 +62,7 @@ Les instructions suivantes indiquent une entrée qui associe Microsoft Edge au m
 
 Une fois que vous avez défini les clés décrites dans l’exemple précédent, une option supplémentaire s’affiche dans le menu **Ouvrir avec** de vos utilisateurs. Cette option permet d’ouvrir un fichier .mht avec Microsoft Edge \<channel\> en mode IE.
 
-## Exemple de registre
+##  <a name="registry-example"></a>Exemple de registre
 
 Vous pouvez enregistrer l’extrait de code suivant sous la forme d’un fichier .reg, puis l’importer dans le registre.
 
@@ -91,13 +91,13 @@ Windows Registry Editor Version 5.00
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
-## Configurer l’ouverture de types de fichiers dans le mode Internet Explorer
+##  <a name="configuring-file-types-to-open-in-internet-explorer-mode"></a>Configurer l’ouverture de types de fichiers dans le mode Internet Explorer
 
 À partir Edge 88, vous pouvez configurer des liens de types de fichiers spécifiques pour qu'ils s'ouvrent dans le mode Internet Explorer à l'aide de la stratégie [Afficher le menu contextuel pour ouvrir les liens dans le mode Internet Explorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#show-context-menu-to-open-a-link-in-internet-explorer-mode). 
 
 Vous pouvez définir les types de fichiers auxquels cette option doit s'appliquer, en spécifiant les extensions de fichiers dans cette stratégie [Ouvrir des fichiers locaux dans le mode Internet Explorer Liste des extensions de fichiers autorisées](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist). 
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [À propos du mode IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
 - [Informations sur les sites configurables](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)

@@ -23,11 +23,11 @@ Cette vidéo montre comment Microsoft Edge prend en charge l'isolation du naviga
 
 [![Isolation du navigateur à l’aide d’Application Guard]( media/microsoft-edge-video-security-application-guard/0.png)](http://www.youtube.com/watch?v=zQjaRqNXMqw "Browser isolation using Application Guard")
 
-## À propos de la vidéo
+##  <a name="about-the-video"></a>À propos de la vidéo
 
 Avec Microsoft Edge, contribuez à réduire l'exposition de votre entreprise aux attaques sur le web. Avec Microsoft Edge, contribuez à réduire l'exposition de votre entreprise aux attaques sur le web.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Prise en charge de Microsoft Edge pour Microsoft Defender Application Guard](microsoft-edge-security-windows-defender-application-guard.md)

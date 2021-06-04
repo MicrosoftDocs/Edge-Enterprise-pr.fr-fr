@@ -29,7 +29,7 @@ Microsoft Defender SmartScreen est un service utilisé par Microsoft Edge pour p
 > [!NOTE]
 > Avant la version 1703 de Windows 10, cette fonctionnalité était appelée filtre SmartScreen lorsqu’elle était utilisée dans le navigateur et Microsoft SmartScreen dans le cas d’une utilisation en dehors du navigateur.
 
-## Avantages de Microsoft Defender SmartScreen
+##  <a name="the-benefits-of-microsoft-defender-smartscreen"></a>Avantages de Microsoft Defender SmartScreen
 
 Microsoft Defender SmartScreen offre plusieurs avantages synthétisés dans la liste suivante. Ces avantages sont décrits en détail dans la [Documentation de Microsoft Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview#benefits-of-windows-defender-smartscreen). Les avantages sont les suivants :
 
@@ -40,11 +40,11 @@ Microsoft Defender SmartScreen offre plusieurs avantages synthétisés dans la l
 - Gestion par le biais de la stratégie de groupe et Microsoft Intune
 - Blocage des URL associées à des applications potentiellement indésirables
 
-## Comprendre le fonctionnement de Microsoft Defender SmartScreen
+##  <a name="understand-how-microsoft-defender-smartscreen-works"></a>Comprendre le fonctionnement de Microsoft Defender SmartScreen
 
 Plusieurs entrées contribuent aux avertissements Microsoft Defender SmartScreen. Les données sont reçues de nombreuses sources, notamment les commentaires des utilisateurs, les fournisseurs de données et les modèles d’intelligence. Ces données sont utilisées pour vous aider à identifier le contenu potentiellement malveillant. Microsoft Defender SmartScreen vérifie également si les programmes d’installation des applications ou les programmes téléchargés sont malveillants. Dans les deux cas, Microsoft Defender SmartScreen avertit les utilisateurs sur un contenu suspect de façon appropriée.
 
-### Analyse de site
+###  <a name="site-analysis"></a>Analyse de site
 
 Microsoft Defender SmartScreen détermine si un site est potentiellement dangereux par :
 
@@ -57,7 +57,7 @@ Si Microsoft Defender SmartScreen établit qu’une page est malveillante, une p
 
 Les utilisateurs ont la possibilité de signaler un site comme fiable ou non sécurisé dans le message d’avertissement. Pour plus d'informations, consultez [Comment signaler un site](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device#how-users-can-report-websites-as-safe-or-unsafe).
 
-### Analyse de fichier
+###  <a name="file-analysis"></a>Analyse de fichier
 
 Microsoft Defender SmartScreen détermine si une application téléchargée ou un programme d’installation d’application est potentiellement malveillant en fonction de nombreux critères, tels que le trafic de téléchargement, l’historique de téléchargement, les résultats précédents d’un antivirus et la réputation de l’URL.
 
@@ -81,7 +81,7 @@ Toutefois, les utilisateurs peuvent continuer à télécharger et exécuter l’
 
 Vous voyez la façon dont Microsoft Defender SmartScreen répond à différents scénarios à l’aide de notre [site de démonstration](https://demo.smartscreen.msft.net/).
 
-## Microsoft Defender SmartScreen et la confidentialité de l’utilisateur
+##  <a name="microsoft-defender-smartscreen-and-user-privacy"></a>Microsoft Defender SmartScreen et la confidentialité de l’utilisateur
 
 Microsoft Defender SmartScreen protège les utilisateurs lorsqu’ils naviguent sur Internet à l’aide d’un système de vérification de la réputation. Microsoft Edge transmet les informations pertinentes sur l’URL ou le fichier au service Microsoft Defender SmartScreen pour commencer la vérification de réputation. La vérification compare le site web ou le fichier à des listes dynamiques de sites et de fichiers connus comme étant dangereux. Toutes les demandes adressées au service Microsoft Defender SmartScreen sont effectuées avec le chiffrement TLS. Le service renvoie les résultats de la vérification de réputation, ce qui peut entraîner l’affichage par Microsoft Edge d’un avertissement pour le site ou le fichier. Ces résultats sont stockés localement sur l’appareil.
 
@@ -89,35 +89,35 @@ Le service Microsoft Defender SmartScreen stocke les données sur les vérificat
 
 Pour plus d’informations sur Microsoft Defender SmartScreen et la confidentialité sur Microsoft Edge, consultez le [Livre blanc sur la confidentialité Microsoft Edge](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#smartscreen).
 
-## Configuration de Microsoft Defender SmartScreen pour les administrateurs
+##  <a name="microsoft-defender-smartscreen-setup-for-admins"></a>Configuration de Microsoft Defender SmartScreen pour les administrateurs
 
 Les administrateurs peuvent configurer Microsoft Defender SmartScreen en utilisation les paramètres de stratégie de groupe, de Microsoft Intune ou de Gestion des périphériques mobiles (MDM). Selon la manière dont vous configurez Microsoft Defender SmartScreen, vous pouvez afficher une page d’avertissement à destination de vos employés et leur permettre de poursuivre la consultation du site, ou vous pouvez bloquer ce dernier.
 
-### Microsoft Defender SmartScreen est configuré à l’aide d’une stratégie de groupe
+###  <a name="microsoft-defender-smartscreen-set-up-using-group-policy"></a>Microsoft Defender SmartScreen est configuré à l’aide d’une stratégie de groupe
 
 Pour obtenir la liste complète des stratégies SmartScreen, voir les [paramètres de Microsoft Defender SmartScreen](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartscreen-settings)
 
-### Configuration de Microsoft Defender SmartScreen à l’aide de la Gestion des périphériques mobiles (MDM)
+###  <a name="microsoft-defender-smartscreen-set-up-using-mdm"></a>Configuration de Microsoft Defender SmartScreen à l’aide de la Gestion des périphériques mobiles (MDM)
 
 Pour plus d’informations, voir :
 
 - [Paramètres de Windows Intune pour Microsoft Defender SmartScreen](https://docs.microsoft.com/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
 - [Paramètres de stratégie de Gestion des périphériques mobiles (MDM)](https://docs.microsoft.com/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
 
-## Configuration de Microsoft Defender SmartScreen pour les utilisateurs
+##  <a name="microsoft-defender-smartscreen-setup-for-users"></a>Configuration de Microsoft Defender SmartScreen pour les utilisateurs
 
 Microsoft Edge pour Microsoft Defender SmartScreen est activé par défaut pour Microsoft Edge. Pour désactiver Microsoft Defender SmartScreen, accédez à *edge://settings/privacy > Services > Microsoft Defender SmartScreen*. Ce paramètre est identique pour tous les profils associés à l’installation de Microsoft Edge sur un appareil. Ce paramètre n’est pas synchronisé sur tous vos appareils. Le paramètre s’applique à la navigation InPrivate et au mode Invité. Si un appareil est géré à l’aide de stratégies de groupe définies par une organisation, cette configuration est reflétée dans *edge://settings/privacy*.
 
 > [!NOTE]
 > Les utilisateurs peuvent configurer Microsoft Defender SmartScreen pour un appareil individuel, sauf si la stratégie de groupe ou le service de Gestion des périphériques mobiles (MDM) est configuré pour l’empêcher. Pour plus d’informations, voir [configurer et utiliser Microsoft Defender SmartScreen sur des appareils individuels](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device).
 
-## Forum Aux Questions
+##  <a name="faq"></a>Forum Aux Questions
 
-### Fonctionnement du système de vérification de la réputation
+###  <a name="how-does-the-reputation-check-system-work"></a>Fonctionnement du système de vérification de la réputation
 
 Lorsque vous naviguez sur le web, Microsoft Defender SmartScreen classe les sites web et les téléchargements en tant que trafic principal, dangereux ou inconnu. Le trafic principal concerne les sites populaires que Microsoft Defender SmartScreen a déterminés comme étant fiables. Si vous accédez à un site marqué comme dangereux, Microsoft Defender SmartScreen vous empêche immédiatement d’accéder au site. Lorsque vous accédez à un site inconnu, Microsoft DefenderSmartScreen vérifie sa réputation afin de déterminer si vous pouvez accéder au site.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Vidéo : Sécuriser la navigation sur Microsoft Edge](microsoft-edge-video-security-smartscreen.md)

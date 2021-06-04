@@ -8,13 +8,13 @@ ms.locfileid: "10979705"
 ---
 <!-- BEGIN MICROSOFT SECURITY.MD V0.0.5 BLOCK -->
 
-## Sécurité
+##  <a name="security"></a>Sécurité
 
 Microsoft prend en compte la sécurité de nos produits et services logiciels, y compris tous les référentiels de code source gérés par le biais de nos organisations GitHub, notamment [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [dotnet](https://github.com/dotnet), [ASPNET](https://github.com/aspnet), [Xamarin](https://github.com/xamarin)et [nos organisations GitHub](https://opensource.microsoft.com/).
 
 Si vous pensez que vous avez trouvé une faille de sécurité dans un référentiel possédant Microsoft qui répond à [la définition d’une faille de sécurité](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10)), signalez-le à nous comme décrit ci-dessous.
 
-## Signalisation des problèmes de sécurité
+##  <a name="reporting-security-issues"></a>Signalisation des problèmes de sécurité
 
 **Ne signalez pas de failles de sécurité par le biais de problèmes GitHub publics.**
 
@@ -38,11 +38,11 @@ Ces informations nous permettront de trier plus rapidement votre rapport.
 
 Si vous signalez une prime d’erreur, des rapports plus complètes peuvent contribuer à une augmentation de la prime. Rendez-vous sur notre page du [programme de correction de bogues Microsoft](https://microsoft.com/msrc/bounty) pour plus d’informations sur les programmes actifs.
 
-## Langues préférées
+##  <a name="preferred-languages"></a>Langues préférées
 
 Nous souhaitons que toutes les communications soient en anglais.
 
-## Stratégie
+##  <a name="policy"></a>Stratégie
 
 Microsoft suit le principe de la [divulgation de vulnérabilités coordonnées](https://www.microsoft.com/en-us/msrc/cvd).
 

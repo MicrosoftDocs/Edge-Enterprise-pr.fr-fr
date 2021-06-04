@@ -37,7 +37,7 @@ Ces sections fournissent des instructions spécifiques pour la planification du 
 - [Évaluez le pilote](#validate-your-deployment)
 - [Déployez Microsoft Edge au sein de l’entreprise](#broad-deployment-of-microsoft-edge)
 
-## Évaluer votre environnement de navigateur et vos besoins de navigateur existants
+##  <a name="evaluate-your-existing-browser-environment-and-browser-needs"></a>Évaluer votre environnement de navigateur et vos besoins de navigateur existants
 
 Prenez le temps de comprendre l’état actuel de votre navigateur et votre vision du projet pour vous assurer que toutes les parties prenantes du projet sont au diapason et qu’elles travaillent en vue du même objectif.
 
@@ -68,27 +68,27 @@ Vous devez également connaître les **conditions préalables** pour les fonctio
 Une fois que vous disposez de ces réponses, vous êtes prêt à planifier votre déploiement de Microsoft Edge.
 <!--bookmark -->
 
-## Vous assurer que vos appareils Windows 10 sont prêts
+##  <a name="make-sure-your-windows-10-devices-are-ready"></a>Vous assurer que vos appareils Windows 10 sont prêts
 
 La dernière mise à jour cumulative (LCU) est requise pour le canal stable Microsoft Edge à partir d’octobre 2019 (ou version ultérieure). Si vous tentez le déploiement vers un appareil Windows 10 contenant une ancienne LCU, l’installation échouera. Si vous souhaitez obtenir plus d’informations sur la LCU minimale à appliquer avant de déployer Microsoft Edge, consultez [Mises à jour Windows pour prendre en charge la prochaine version de Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-windows-updates).
 
-## Définir votre méthodologie de déploiement
+##  <a name="determine-your-deployment-methodology"></a>Définir votre méthodologie de déploiement
 
 Lorsque vous connaissez l’état final souhaité, vous pouvez commencer à planifier la façon d’y parvenir. Les deux principales façons de déployer Microsoft Edge consistent à procéder par rôle et par site.
 
-### Déployer vers les utilisateurs finaux par rôle
+###  <a name="deploy-to-end-users-by-role"></a>Déployer vers les utilisateurs finaux par rôle
 
 Si la compatibilité des applications est votre principale préoccupation et que vous n’avez pas de véritable emprise sur les applications à tester, vous pouvez envisager de déployer les utilisateurs finaux par rôle. Cela permet, à chaque vague d’un déploiement progressif, de recueillir des commentaires et des informations sur les applications dont la configuration peut être modifiée pour résoudre les problèmes de compatibilité.
 
-### Déployer vers les utilisateurs finaux par site
+###  <a name="deploy-to-end-users-by-site"></a>Déployer vers les utilisateurs finaux par site
 
 Si la bande passante est votre principale préoccupation, vous pouvez envisager d’effectuer des tests de compatibilité des applications à l’avance. Après avoir terminé les tests, déployez vers les utilisateurs finaux par site pour pouvoir tirer profit de la mise en cache d’autres optimisations de la distribution de logiciels.
 
-## Effectuer une détection du site
+##  <a name="do-site-discovery"></a>Effectuer une détection du site
 
 Si vous êtes dépendant des applications web héritées et que vous envisagez d’utiliser le mode Internet Explorer (ce que fait la plupart des clients), vous devrez probablement effectuer une découverte de site supplémentaire.
 
-### Si vous avez déjà déployé et configuré la version héritée de Microsoft Edge
+###  <a name="if-you've-already-deployed-and-configured-the-legacy-version-of-microsoft-edge"></a>Si vous avez déjà déployé et configuré la version héritée de Microsoft Edge
 
 Si vous avez déjà configuré votre liste de sites d’entreprise pour qu’elle fonctionne pour la version héritée de Microsoft Edge, votre travail est presque terminé. La seule chose que vous devrez peut-être ajouter est les sites neutres.
 
@@ -96,14 +96,14 @@ Les sites neutres sont généralement des sites qui fournissent une authentifica
 
 Identifiez les sites SSO (ou autres sites neutres) que vous utilisez et ajoutez-les à votre liste de sites d’entreprise.
 
-### Si vous avez configuré Internet Explorer comme navigateur par défaut
+###  <a name="if-you've-configured-internet-explorer-as-your-default-browser"></a>Si vous avez configuré Internet Explorer comme navigateur par défaut
 
 Si vous utilisez actuellement Internet Explorer, vous ne savez peut-être pas quels sites ont été mis à niveau vers les normes web modernes qui nécessitent toujours Internet Explorer. Vous pouvez rechercher ces sites et les ajouter à la liste de sites d’entreprise. Cela vous permet d’utiliser le mode Internet Explorer uniquement sur les sites qui en ont besoin.
 
 > [!TIP]
 > Utilisez les outils de [recherche de sites d’entreprise](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery?redirectedfrom=MSDN) pour découvrir les sites qui peuvent nécessiter le mode Internet Explorer. Vous pouvez également collecter des données sur les ordinateurs exécutant Windows Internet Explorer 8 à 11 sur Windows 10, Windows 8.1 ou Windows 7.
 
-### Analyser les données de détection de site
+###  <a name="analyze-site-discovery-data"></a>Analyser les données de détection de site
 
 Une fois que vous avez collecté les données de site, nous recommandons d’utiliser la procédure en 4 étapes suivante pour analyser les données :
 
@@ -115,7 +115,7 @@ Une fois que vous avez collecté les données de site, nous recommandons d’uti
    > [!NOTE]
    > Il est recommandé de regrouper tous les sites qui composent une application. Si les sites doivent être utilisés pour accomplir une tâche et s’ils sont mis à jour ensemble, c’est une bonne indication qu’ils doivent être regroupés. Ainsi, lorsque vous mettez à niveau une application, il est plus facile de supprimer l’intégralité du site du mode Internet Explorer et de commencer à utiliser un navigateur moderne pour cette application.
 
-## Déterminer votre stratégie de canal
+##  <a name="determine-your-channel-strategy"></a>Déterminer votre stratégie de canal
 
 Microsoft Edge est publié dans [plusieurs canaux](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels).
 
@@ -124,7 +124,7 @@ Microsoft Edge est publié dans [plusieurs canaux](https://docs.microsoft.com/De
 
 Le canal stable est celui que vous devez déployer sur la plupart des appareils. Toutefois, vous devez envisager une stratégie de déploiement qui comprend plusieurs appareils et plusieurs canaux.
 
-### Plusieurs appareils et canaux
+###  <a name="multiple-devices-and-channels"></a>Plusieurs appareils et canaux
 
 Nous recommandons de disposer d’un sous-ensemble représentatif d’appareils configurés pour utiliser le canal bêta. Cela vous permet d’avoir un aperçu des modifications à venir dans le navigateur. Vous pouvez voir si ces modifications vont affecter vos utilisateurs finaux ou vos applications.
 
@@ -135,7 +135,7 @@ Vous souhaiterez peut-être également rendre le canal Microsoft Edge Dev (ou m�
 > [!NOTE]
 > Si l’utilisateur a activé la synchronisation, sa configuration est synchronisée entre les canaux, ce qui facilite la transition entre les canaux.
 
-## Définir et configurer des stratégies
+##  <a name="define-and-configure-policies"></a>Définir et configurer des stratégies
 
 Après avoir créé votre liste de sites d’entreprise, nous vous recommandons d’identifier et de configurer les stratégies que vous envisagez de déployer avec Microsoft Edge. Cela permet de s’assurer que ces stratégies sont appliquées lorsque vous effectuez vos tests.
 
@@ -145,7 +145,7 @@ Pour les stratégies de sécurité, nous vous recommandons de commencer par la l
 
 Pour les autres stratégies, nous vous recommandons de consulter les configurations de stratégie pour [Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies) et les mises à jour [Microsoft Edge Update](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies).
 
-### Définir votre stratégie et vos règles de mise à jour
+###  <a name="define-your-update-strategy-and-policies"></a>Définir votre stratégie et vos règles de mise à jour
 
 Vous souhaitez également déterminer la façon dont vous souhaitez effectuer les mises à jour après avoir déployé Microsoft Edge :
 
@@ -161,7 +161,7 @@ Quelle que soit votre stratégie de mise à jour, nous vous recommandons d’ado
 >[!NOTE]
 >La prise en charge de Microsoft Edge s’applique uniquement à la version la plus récente de Microsoft Edge dans chaque canal
 
-## Effectuer des tests de compatibilité des applications
+##  <a name="do-app-compatibility-testing"></a>Effectuer des tests de compatibilité des applications
 
 La compatibilité des applications pour Microsoft Edge est extrêmement élevée, à tel point que Microsoft s’engage à assurer les compatibilités suivantes :
 
@@ -171,7 +171,7 @@ La compatibilité des applications pour Microsoft Edge est extrêmement élevée
 
 Si vous utilisez une application pour laquelle nous ne répondons pas à l’engagement de compatibilité, nous nous servons de cet engagement pour résoudre le problème avec [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-### Ligne interne de test des applications professionnelles
+###  <a name="internal-line-of-business-app-testing"></a>Ligne interne de test des applications professionnelles
 
 Malgré notre engagement de compatibilité, nous savons que de nombreuses organisations doivent valider certaines applications pour leurs propres raisons de conformité ou de gestion des risques. Même si cette procédure est très simple, il est important d’être organisé et rigoureux lors des tests d’applications.
 
@@ -182,11 +182,11 @@ Il existe deux façons d’effectuer des tests de compatibilité des application
 
 Choisissez la méthode qui convient le mieux à chaque application pour gérer les risques sans surinvestissement dans les tests de compatibilité.
 
-### Prise en charge des applications tierces
+###  <a name="third-party-app-support"></a>Prise en charge des applications tierces
 
 Outre leur propre gamme d’applications professionnelles, de nombreuses organisations utilisent des applications fournies par des sources externes. L’article [Prêt pour Microsoft Edge](deploy-edge-ready-for-edge.md) contient la liste des applications Web susceptibles d’être utilisées au sein de votre organisation. Cette liste fournit des liens vers des instructions de prise en charge de fournisseur pour leurs produits utilisés avec Microsoft Edge.
 
-## Déployer Microsoft Edge vers un groupe pilote
+##  <a name="deploy-microsoft-edge-to-a-pilot-group"></a>Déployer Microsoft Edge vers un groupe pilote
 
 Après avoir défini vos stratégies et réalisé le test de compatibilité des applications initial, vous êtes prêt à effectuer le déploiement vers votre groupe pilote. Déployez dans votre groupe pilote à l’aide de l’un des outils suivants :
 
@@ -194,7 +194,7 @@ Après avoir défini vos stratégies et réalisé le test de compatibilité des 
 - [Configuration Manager](https://docs.microsoft.com/DeployEdge/deploy-edge-with-configuration-manager).
 - Un autre outil de gestion, téléchargez et déployez le [fichier MSI pour Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise).
 
-## Valider votre déploiement
+##  <a name="validate-your-deployment"></a>Valider votre déploiement
 
 Après avoir déployé votre pilote, vous devez capturer tous les commentaires que vous envoient vos utilisateurs.
 
@@ -202,11 +202,11 @@ Après avoir déployé votre pilote, vous devez capturer tous les commentaires q
 - Capturez les commentaires concernant la configuration de stratégie. Assurez-vous que les utilisateurs peuvent utiliser les fonctionnalités clés et effectuer leur travail tout en suivant les recommandations de sécurité.
 - Capturez vos commentaires sur la facilité d’utilisation et les nouvelles fonctionnalités. Identifiez les domaines dans lesquels une formation doit être mise au point et proposée en fonction des questions de l’utilisateur.
 
-## Déploiement large de Microsoft Edge
+##  <a name="broad-deployment-of-microsoft-edge"></a>Déploiement large de Microsoft Edge
 
 Après avoir terminé le projet pilote et mis à jour votre plan de déploiement avec les leçons tirées du projet pilote, vous êtes prêt à effectuer un déploiement complet de Microsoft Edge à tous vos utilisateurs.  Félicitations !
 
-## Articles associés
+##  <a name="see-also"></a>Articles associés
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Vidéo : Déployer Microsoft Edge](microsoft-edge-video-deploy.md)

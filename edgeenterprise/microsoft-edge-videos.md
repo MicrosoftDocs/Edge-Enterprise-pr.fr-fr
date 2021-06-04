@@ -21,7 +21,7 @@ ms.locfileid: "11030551"
 
 Les vidéos décrites dans cet article présentent de nombreux aspects du déploiement, de l’utilisation et de la maintenance de Microsoft Edge au sein de l’entreprise.
 
-## Série de vidéos sur la mécanique Microsoft
+##  <a name="the-microsoft-mechanics-video-series"></a>Série de vidéos sur la mécanique Microsoft
 
 La série de vidéos sur Microsoft Mechanics, illustrée dans cette page du « *Guide 2020 de déploiement de MSFT Edge Entreprise *», fait partie de la collection de vidéos Microsoft Edge dédiée aux événements, annonces, solutions et conférences connexes.
 
@@ -29,6 +29,6 @@ La série de vidéos sur Microsoft Mechanics, illustrée dans cette page du « *
 
 Vous pouvez les visionner au sein de la [playlist Mechanics Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy), ou sur la [chaîne Youtube Microsoft Edge](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA), ainsi que d’autres vidéos.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

@@ -6,7 +6,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 08/31/2020
 ms.locfileid: "10979706"
 ---
-## Informations légales
+##  <a name="legal-notices"></a>Informations légales
 Microsoft ainsi que tout contributeur vous octroient une licence sur la documentation de Microsoft et d’autres contenus de ce référentiel en vertu de la [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), voir le fichier [LICENSE](LICENSE), et vous octroient une licence pour tout code du référentiel, en vertu de la [MIT License](https://opensource.org/licenses/MIT), voir le fichier [LICENSE-CODE](LICENSE-CODE).
 
 Microsoft, Windows, MicrosoftAzure et/ou d’autres produits et services Microsoft référencés dans la présente documentation peuvent être des marques commerciales ou déposées de MicrosoftCorporation aux États-Unis et/ou dans d’autres pays.

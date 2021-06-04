@@ -23,11 +23,11 @@ Cette vidéo montre comment Microsoft Edge prend en charge la restauration de ve
 
 [![Restauration de version de Microsoft Edge](media/microsoft-edge-video-version-rollback/0.png)](http://www.youtube.com/watch?v=pXhXHvKUa_c "Microsoft Edge version rollback")
 
-## À propos de la vidéo
+##  <a name="about-the-video"></a>À propos de la vidéo
 
 La restauration de version vous permet de remplacer votre version du navigateur Microsoft Edge par une version antérieure. Découvrez comment la restauration dans Microsoft Edge peut fournir à votre entreprise un dispositif de sécurité pour réduire l’impact potentiel lorsque vous résoudrez des problèmes dans Microsoft Edge.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Comment restaurer Microsoft Edge à une version antérieure](edge-learnmore-rollback.md)

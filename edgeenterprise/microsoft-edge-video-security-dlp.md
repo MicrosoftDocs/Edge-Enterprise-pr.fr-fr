@@ -23,11 +23,11 @@ Cette vidéo montre comment Microsoft Edge prend en charge la protection contre 
 
 [![ Microsoft Edge et la protection contre la perte de données](media/microsoft-edge-security-dlp/0.png)](http://www.youtube.com/watch?v=dLD04U9eTqg " Microsoft Edge and data loss prevention")
 
-## À propos de la vidéo
+##  <a name="about-the-video"></a>À propos de la vidéo
 
 La protection contre la perte de données (DLP) revêt une importance capitale avec le travail à distance. Découvrez les fonctionnalités de la protection contre la perte de données en mode natif de Microsoft Edge. Vous saurez également comment la protection contre la perte de données vous permet de conserver vos données sous le contrôle de l’entreprise et de vous conformer aux normes applicables.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Protection contre la perte de données (DLP) dans Microsoft Edge](microsoft-edge-security-dlp.md)

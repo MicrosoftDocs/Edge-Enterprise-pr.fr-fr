@@ -24,20 +24,20 @@ Cet article décrit la politique de cycle de vie qui s’applique à Microsoft E
 > [!NOTE]
 > Cet article concerne Microsoft Edge versions 77 et ultérieures.
 
-## Vue d’ensemble de la stratégie de cycle de vie pour Microsoft Edge
+##  <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Vue d’ensemble de la stratégie de cycle de vie pour Microsoft Edge
 
 La prochaine version de Microsoft Edge offre des fonctionnalités des mise à jour plus fréquentes et flexibles. Étant donné que les versions de navigateur ne sont pas liées aux versions majeures de Windows, il est nécessaire de mettre à jour la stratégie de cycle de vie pour refléter cela. Dorénavant, Microsoft Edge fera partie de la [Politique de cycle de vie moderne](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 Dans le cadre de cette stratégie, les versions de Microsoft Edge prises en charge comprendront la dernière version disponible à partir des canaux bêta et stable.
 
-## Disponibilité du support assisté pour Microsoft Edge
+##  <a name="assisted-support-availability-for-microsoft-edge"></a>Disponibilité du support assisté pour Microsoft Edge
 Les mises à jour de sécurité et les mises à jour de maintenance sont uniquement disponibles sur la publication la plus récente du canal stable et la publication de canal bêta. L’utilisation d’anciennes versions de Microsoft Edge signifie probablement que vous ne disposez pas des dernières mises à jour de qualité et de sécurité, ce qui n’est pas recommandé. Si l’utilisation des versions antérieures est nécessaire pour votre organisation, un support assisté est disponible pour les trois versions les plus récentes du canal stable et la dernière publication du canal bêta.  La véritable durée du support assistée pour une publication de canal stable est d’environ 18 semaines. La véritable durée du support d’une version de canal bêta est de 6 semaines environ. Les versions précédentes du canal bêta ne sont pas prises en charge.
 
 Microsoft vous recommande vivement de rester à jour avec la version la plus récente du canal stable ou de la version du canal bêta.
 
 
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Documentation Microsoft Edge](https://docs.microsoft.com/DeployEdge/)

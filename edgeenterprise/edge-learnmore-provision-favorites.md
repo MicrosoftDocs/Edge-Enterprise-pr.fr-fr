@@ -26,12 +26,12 @@ Cet article décrit la mise en service d’un ensemble de favoris et de dossiers
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 85 ou ultérieure.
 
-## Conditions préalables et recommandations
+##  <a name="prerequisites-and-recommendations"></a>Conditions préalables et recommandations
 
 - Microsoft Edge version 85 avec le modèle d’administration approprié installé pour les stratégies de groupe.
 - Nous vous recommandons d’utiliser un nouveau profil dans Microsoft Edge pour configurer ces favoris. Tous les favoris enregistrés avec le profil sont inclus dans l’exportation.  
 
-## Configurer les favoris et les dossiers
+##  <a name="provision-favorites-and-folders"></a>Configurer les favoris et les dossiers
 
 Procédez comme suit pour mettre en service vos favoris et dossiers pour vos utilisateurs.
 
@@ -66,6 +66,6 @@ Procédez comme suit pour mettre en service vos favoris et dossiers pour vos uti
 
 7. Cliquez sur **OK** ou sur **Appliquer** pour sécuriser les paramètres de stratégie.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

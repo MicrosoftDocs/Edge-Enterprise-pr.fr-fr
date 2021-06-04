@@ -27,7 +27,7 @@ Ce mélange d’activités des utilisateurs s’est également étendu aux appar
 
 Microsoft Edge prend en charge en mode natif deux solutions DLP différentes : Microsoft Endpoint DLP et Protection des informations Windows (WIP).
 
-## Protection de perte de données de points de terminaison Microsoft (Endpoint DLP)
+##  <a name="microsoft-endpoint-data-loss-prevention-(endpoint-dlp)"></a>Protection de perte de données de points de terminaison Microsoft (Endpoint DLP)
 
 Protection de perte de données de points de terminaison Microsoft est la nouvelle génération de prévention de perte de données à l’aide de concepts modernes tels que la protection orientée données. Elle est intégrée à Windows 10 et à Microsoft Edge, de sorte qu’il n’a pas besoin d’agents ou de plug-ins supplémentaires sur l’appareil.
 
@@ -51,7 +51,7 @@ Vous pouvez auditer et gérer les activités suivantes des utilisateurs sur les 
 
 Si vous souhaitez en savoir plus sur les activités des utilisateurs que vous pouvez auditer et gérer, veuillez consulter la rubrique [Activités de point de terminaison que vous pouvez surveiller et sur lesquelles vous pouvez agir](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true).
 
-## Protection des informations Windows
+##  <a name="windows-information-protection"></a>Protection des informations Windows
 
 Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Support pour la Protection des informations Windows](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection). Cette rubrique décrit comment Microsoft Edge prend en charge la protection des informations Windows (WIP). Si vous souhaitez en savoir plus sur la configuration requise, les avantages et les fonctionnalités prises en charge, veuillez consulter les sections suivantes :
 
@@ -59,7 +59,7 @@ Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Support pour l
 - [Avantages de la Protection des informations Windows](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
 - [Fonctionnalités WIP prises en charge dans Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Vidéo : protection contre la perte de données dans Microsoft Edge](https://www.youtube.com/watch?v=dLD04U9eTqg)

@@ -28,7 +28,7 @@ Pour plus d'informations sur un ensemble supplémentaire de politiques utilisée
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 87 ou ultérieure.
 
-## Stratégies disponibles
+##  <a name="available-policies"></a>Stratégies disponibles
 
 Ces tableaux répertorient toutes les politiques de groupe disponibles dans cette version de Microsoft Edge WebView2. Utilisez les liens dans le tableau pour obtenir plus de détails sur des stratégies données.
 
@@ -161,7 +161,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, V
   [Retour au début](#microsoft-edge-webview2---policies)
 
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Configuration de Microsoft Edge](configure-microsoft-edge.md)
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

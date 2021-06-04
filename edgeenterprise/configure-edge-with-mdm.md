@@ -27,7 +27,7 @@ Cet article explique comment configurer Microsoft Edge sur Windows 10 à l’aid
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 77 ou ultérieure.
 
-## Éléments prérequis
+##  <a name="prerequisites"></a>Éléments prérequis
 
 Windows 10, avec la configuration minimale requise suivante :
 
@@ -36,7 +36,7 @@ Windows 10, avec la configuration minimale requise suivante :
 - Windows 10, version 1803 avec les mises à jour [KB4512509](https://support.microsoft.com/help/4512509/) et [KB4519978](https://support.microsoft.com/help/4519978) installées
 - Windows 10, version 1709 avec les mises à jour [KB4516071](https://support.microsoft.com/help/4516071/) et [KB4520006](https://support.microsoft.com/help/4520006) installées
 
-## Présentation
+##  <a name="overview"></a>Présentation
 
 Vous pouvez configurer Microsoft Edge sur Windows 10 à l’aide de GPM avec votre fournisseur préféré de Gestion de la mobilité d’entreprise ou GPM qui prend en charge l’[Ingestion ADMX](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration).
 
@@ -49,7 +49,7 @@ La configuration de Microsoft Edge avec GPM est un processus en deux parties :
 
 2. [Création d’un OMA-URI pour une stratégie Microsoft Edge](#create-an-oma-uri-for-microsoft-edge-policies).
 
-## Créer un OMA-URI pour les stratégies Microsoft Edge
+##  <a name="create-an-oma-uri-for-microsoft-edge-policies"></a>Créer un OMA-URI pour les stratégies Microsoft Edge
 
 Les sections suivantes décrivent la procédure de création du chemin d’accès OMA-URI et la procédure de recherche et de définition de la valeur au format XML pour les stratégies de navigateur obligatoires et recommandées.
 
@@ -61,7 +61,7 @@ Il existe trois étapes pour définir l’OMA-URI :
 2. [Spécifier le type de données OMA-URI](#specify-the-data-type)
 3. [Définir la valeur OMA-URI](#set-the-value-for-a-browser-policy)
 
-### Créer le chemin d’accès OMA-URI
+###  <a name="create-the-oma-uri-path"></a>Créer le chemin d’accès OMA-URI
 
 Utilisez la formule suivante comme guide pour la création des chemins d’accès OMA-URI. <br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`* <br/><br/>
@@ -89,11 +89,11 @@ Si la stratégie se trouve dans un groupe, procédez comme suit :
 4. Remplacez `<ADMXCategory>` par la valeur *ref* de l’attribut pour construire le chemin d’accès de l’URI. Le chemin d’URI serait :<br/><br/>
 *`/Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~Extensions/ExtensionInstallForcelist`*
 
-### Spécifier le type de données
+###  <a name="specify-the-data-type"></a>Spécifier le type de données
 
 Le type de données OMA-URI est toujours « chaîne ».
 
-### Définir la valeur d’une stratégie de navigateur
+###  <a name="set-the-value-for-a-browser-policy"></a>Définir la valeur d’une stratégie de navigateur
 
 Cette section décrit comment définir la valeur, au format XML, pour chaque type de données. Accédez à la [Référence de stratégie du navigateur](https://docs.microsoft.com/deployedge/microsoft-edge-policies) pour rechercher le type de données de la stratégie.
 
@@ -150,7 +150,7 @@ Pour rechercher le textID et définir la valeur définie par les paramètres ré
 Pour définir les paramètres régionaux sur « es-US » avec la stratégie « ApplicationLocaleValue » :<br>
 `<enabled/> <data id="ApplicationLocaleValue" value="es-US"/>`
 
-### Créer l’OMA-URI pour une stratégie recommandée
+###  <a name="create-the-oma-uri-for-a-recommended-policies"></a>Créer l’OMA-URI pour une stratégie recommandée
 
 La définition du chemin d’URI pour les stratégies recommandées dépend de la stratégie que vous souhaitez configurer.
 
@@ -193,7 +193,7 @@ Le tableau suivant présente des exemples de chemins d’accès OMA-URI pour les
 | [ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
 | [FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
 
-### Exemples d’OMA-URI
+###  <a name="oma-uri-examples"></a>Exemples d’OMA-URI
 
 Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 
@@ -217,7 +217,7 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | type    | Chaîne                                                                               |
 | Valeur   | `<disable/>`                                                                          |
 
-### Exemples de données de type entier
+###  <a name="integer-data-type-examples"></a>Exemples de données de type entier
 
 *[AutoImportAtFirstRun](https://docs.microsoft.com/deployedge/microsoft-edge-policies#AutoImportAtFirstRun) :*
 
@@ -286,7 +286,7 @@ Exemples d’OMA-URI avec leur chemin d’URI, le type et un exemple de valeur.
 | Type    | Chaîne                                                                               |
 | Valeur   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
-## Configurer Microsoft Edge dans Intune à l’aide de l’ingestion ADMX
+##  <a name="configure-microsoft-edge-in-intune-using-admx-ingestion"></a>Configurer Microsoft Edge dans Intune à l’aide de l’ingestion ADMX
 
 La méthode recommandée pour configurer Microsoft Edge avec Microsoft Intune consiste à utiliser le profil de modèles d’administration comme décrit dans [Configurer les paramètres de stratégie Microsoft Edge avec Microsoft Intune](https://docs.microsoft.com/deployedge/configure-edge-with-intune). Si vous souhaitez évaluer une stratégie qui n’est actuellement pas disponible dans les modèles d’administration Microsoft Edge dans Intune, vous pouvez configurer Microsoft Edge avec des [paramètres personnalisés pour les appareils Windows 10 dans Intune](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10).
 
@@ -298,7 +298,7 @@ Cette section décrit comment fournir des ressources de multiplexage aux pilotes
 > [!IMPORTANT]
 > Il est recommandé d’utiliser un profil OMA-URI personnalisé et un profil de modèles d’administration pour configurer le même paramètre Microsoft Edge dans Intune. Si vous déployez la même stratégie à l’aide d’un OMA-URI personnalisé et d’un profil de modèle d’administration, mais avec des valeurs différentes, les utilisateurs obtiendront des résultats imprévisibles. Nous vous recommandons vivement de supprimer votre profil OMA-URI avant d’utiliser un profil de modèles d’administration.
 
-### Ingérer le fichier ADMX Microsoft Edge dans Intune
+###  <a name="ingest-the-microsoft-edge-admx-file-into-intune"></a>Ingérer le fichier ADMX Microsoft Edge dans Intune
 
 Cette section décrit la procédure d’ingestion du modèle d’administration Microsoft Edge (**fichier msedge.admx**) dans Intune.
 
@@ -347,7 +347,7 @@ Pour ingérer le fichier ADMX, procédez comme suit :
 > [!NOTE]
 > You can use the preceding steps to ingest the msedgeupate.admx policy template file.
 -->
-### Définir une stratégie à l’aide d’un OMA-URI personnalisé dans Intune
+###  <a name="set-a-policy-using-custom-oma-uri-in-intune"></a>Définir une stratégie à l’aide d’un OMA-URI personnalisé dans Intune
 
 > [!NOTE]
 > Avant d’utiliser les étapes de cette section, vous devez appliquer les étapes présentées dans [Ingérer le fichier ADMX Microsoft Edge dans Intune](#ingest-the-microsoft-edge-admx-file-into-intune).
@@ -400,7 +400,7 @@ Ouvrez la page *edge://policy* sur le périphérique cible (un périphérique au
 
 Pour plus de conseils sur la résolution de problèmes, consultez [Installer Microsoft Intune](https://docs.microsoft.com/intune/fundamentals/setup-steps) et [Synchroniser les périphériques](https://docs.microsoft.com/intune/remote-actions/device-sync).
 
-## Articles associés
+##  <a name="see-also"></a>Articles associés
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Configurer les paramètres de stratégie Microsoft Edge avec Microsoft Intune](configure-edge-with-intune.md)

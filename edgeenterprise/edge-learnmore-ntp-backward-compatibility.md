@@ -24,7 +24,7 @@ Cet article décrit la modification apportée à la page Nouvel onglet et la man
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 87 ou ultérieure.
 
-## Flux d’informations à partir d’un point de terminaison unique
+##  <a name="information-feeds-from-single-endpoint"></a>Flux d’informations à partir d’un point de terminaison unique
 
 La nouvelle version de la page Nouvel onglet de l’Entreprise associe le contenu conforme à Microsoft 365 à des flux d’informations pertinents et conformes au secteur qui sont traités via le point de terminaison MSN.com.
 
@@ -35,7 +35,7 @@ Si l’accès au domaine MSN.com est limité pour votre organisation, nous vous 
 
 Si vous avez besoin de davantage de temps pour autoriser l’accès au domaine MSN, nous vous recommandons d’utiliser [NewTabPageSetFeedType](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagesetfeedtype) qui vous permet de choisir entre l’expérience de flux Microsoft News ou Office 365 pour la nouvelle page d’onglets.
 
-### Continuer à utiliser Office.com
+###  <a name="keep-using-office.com"></a>Continuer à utiliser Office.com
 
  Vous pouvez configurer la stratégie **NewTabPageSetFeedType** pour continuer à utiliser le domaine Office.com déconseillé.
 
@@ -52,7 +52,7 @@ Si le passage à Office.com n’est pas possible, n’hésitez pas à nous envoy
 > [!NOTE]
 > La stratégie **NewTabPageLocation** a priorité si la stratégie **NewTabPageSetFeedType** est également configurée.
 
-## Les utilisateurs Entreprise reçoivent désormais du contenu Microsoft News via Mon flux
+##  <a name="enterprise-users-will-now-get-microsoft-news-content-via-my-feed"></a>Les utilisateurs Entreprise reçoivent désormais du contenu Microsoft News via Mon flux
 
 La page Nouvel onglet de l’Entreprise propose des informations pertinentes de **Mon flux** et le contenu Office 365 dans un affichage unique pour les utilisateurs connectés avec leur compte Azure Active Directory (Azure AD). Pour les utilisateurs connectés avec leur compte Azure Active Directory (Azure AD) ayant sélectionné l’option Microsoft News dans le paramètres du menu volant, leur nouvel affichage de page d’onglet est remplacé par le contenu **Mon flux**. Lorsqu’ils ouvrent une page nouvel onglet dans le navigateur, celle-ci se présente comme dans l’exemple de la capture d’écran suivante.
 
@@ -61,7 +61,7 @@ La page Nouvel onglet de l’Entreprise propose des informations pertinentes de 
 > [!NOTE]
 > Les utilisateurs qui ne se sont pas connectés avec Azure AD continueront à voir le flux Actualités MSN lorsqu’ils ouvrent un nouvel onglet.
 
-## Mise en page
+##  <a name="page-layout"></a>Mise en page
 
 Avec les modifications apportées à la page nouvel onglet, la mise en page ne doit plus contrôler deux types de contenu spécifiques (Office 365 et Microsoft News), de sorte que le bouton bascule de contenu n’est pas disponible. La capture d’écran suivante montre le menu volant pour la mise en page.
 
@@ -69,7 +69,7 @@ Avec les modifications apportées à la page nouvel onglet, la mise en page ne d
 
 Si vous voulez continuer à accéder au contenu de Microsoft News qui n’est pas lié à votre organisation, vous devez utiliser un autre profil de navigateur. Accédez à *edge://settings/profiles* et déconnectez-vous de votre profil Azure AD. Cette action ouvre l’affichage standard pour la page Nouvel onglet de l’Entreprise. 
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Mode Entreprise d’Internet Explorer 11](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

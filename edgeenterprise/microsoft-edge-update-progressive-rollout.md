@@ -24,15 +24,15 @@ ms.locfileid: "10979780"
 > [!NOTE]
 > Cela concerne la version 83 ou ultérieure du canal stable Microsoft Edge.
 
-## Pourquoi un déploiement progressif ?
+##  <a name="why-do-we-need-progressive-rollout"></a>Pourquoi un déploiement progressif ?
 
 En surveillant étroitement l’intégrité de nos mises à jour et en les déployant sur plusieurs jours, nous pouvons limiter l’impact des problèmes liés aux nouvelles mises à jour. Avec Microsoft Edge version 83, le déploiement progressif est activé pour toutes les versions Windows 7, Windows 8 et 8.1, et Windows 10 de Microsoft Edge. Nous prendrons en charge Microsoft Edge sur Mac dès qu’il sera prêt.
 
-## Comment se dérouleront les mises à jour ?
+##  <a name="how-will-the-updates-work"></a>Comment se dérouleront les mises à jour ?
 
 Une valeur de mise à niveau est attribuée à chaque installation de Microsoft Edge. Lorsque nous lançons le déploiement par incréments, la mise à jour s’affiche lorsque la valeur de votre appareil est comprise dans la plage de valeurs de mise à niveau. Au fur et à mesure du déploiement (dans un délai de quelques jours), tous les utilisateurs finissent par obtenir la mise à jour. Les mises à jour de navigateur incluant des correctifs de sécurité critiques auront une cadence de déploiement plus rapide que les mises à jour qui en sont dépourvu. Cela permet de garantir une protection rapide contre les vulnérabilités.
 
-## En quoi les grandes entreprises sont-elles affectées ?
+##  <a name="how-does-this-affect-enterprises"></a>En quoi les grandes entreprises sont-elles affectées ?
 
 Les artefacts Microsoft Edge sont distribués aux grandes entreprises à l’aide de plusieurs mécanismes tels que Microsoft Intune, Windows Server Update Service (WSUS) et le gestionnaire de configuration. Ces outils de déploiement se comportent différemment en ce qui concerne le déploiement progressif :
 
@@ -41,6 +41,6 @@ Les artefacts Microsoft Edge sont distribués aux grandes entreprises à l’aid
 
 Partagez vos précieux commentaires par le biais de UserVoice, du bouton Commentaires dans les applications ou ci-dessous dans la section Commentaires si vous avez des questions ou des remarques.
 
-## Voir également
+##  <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
