@@ -42,11 +42,12 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "ocv-translation-feedback": true,
       "breadcrumb_path": "/DeployEdge/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "searchScope": ["Microsoft Edge"],
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/EdgeEnterprise",
+      "feedback_system": "none",
+      "feedback_github_repo": "MicrosoftDocs/Edge-Enterprise",
       "feedback_product_url": "https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app",
       "contributors_to_exclude": [
         "dstrome"
