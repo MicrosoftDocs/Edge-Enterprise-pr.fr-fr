@@ -1,11 +1,11 @@
 # last revised 03/31/2021
 - name: Documentation Microsoft Edge Entreprise
   href: index.yml
-- name: Documentation MicrosoftEdge
+- name: Documentation Microsoft Edge
   href: /microsoft-edge/
-- name: Mises à jour du contenu de MicrosoftEdge
+- name: Mises à jour du contenu de Microsoft Edge
   href: microsoft-edge-content-updates.md
-- name: Prise en main de MicrosoftEdge
+- name: Prise en main de Microsoft Edge
   items:
     - name: En savoir plus sur les canaux Microsoft Edge
       href: microsoft-edge-channels.md
@@ -15,7 +15,7 @@
       href: microsoft-edge-customer-adoption-kit.md
     - name: Découvrir les ressources de documentation
       href: /microsoft-edge/
-    - name: Laboratoire pratique sur le déploiement MicrosoftEdge
+    - name: Laboratoire pratique sur le déploiement Microsoft Edge
       href: deploy-edge-hands-on-lab.md
     - name: 'Blogs Windows : développeur Microsoft Edge'
       href: 'https://blogs.windows.com/msedgedev/'
@@ -41,7 +41,7 @@
       href: microsoft-edge-relnote-beta-channel.md
     - name: Notes de publication archivées du canal bêta
       href: microsoft-edge-relnote-archive-beta-channel.md
-    - name: Planning de publication
+    - name: Planification de publication
       href: microsoft-edge-release-schedule.md
     - name: Mises à jour de sécurité
       href: microsoft-edge-relnotes-security.md
@@ -63,7 +63,7 @@
       items:
         - name: Comment accéder à l’ancienne version de MicrosoftEdge
           href: microsoft-edge-sysupdate-access-old-edge.md
-        - name: Mises à jour Windows pour prendre en charge MicrosoftEdge
+        - name: Mises à jour Windows pour prendre en charge Microsoft Edge
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Déployer Microsoft Edge
   items:
@@ -77,7 +77,7 @@
       href: deploy-edge-mac-jamf.md
     - name: Déployer sur macOS avec Intune
       href: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
-- name: Configurer MicrosoftEdge
+- name: Configurer Microsoft Edge
   items:
     - name: Configurer pour Windows
       href: configure-microsoft-edge.md
@@ -99,17 +99,17 @@
       href: microsoft-edge-enterprise-state-roaming.md
     - name: Planifier votre transition en mode plein écran
       href: microsoft-edge-kiosk-mode-transition-plan.md
-    - name: Configurer le mode kiosque Microsoft Edge
+    - name: Configurer Microsoft Edge en mode plein écran
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Synchronisation d’entreprise Microsoft Edge
+    - name: Synchronisation du mode entreprise Microsoft Edge
       items:
-        - name: Configurer la synchronisation de MicrosoftEdge
+        - name: Configurer la synchronisation Microsoft Edge
           href: microsoft-edge-enterprise-sync.md
-        - name: Diagnostiquer et résoudre les problèmes de synchronisation de MicrosoftEdge
+        - name: Diagnostiquer et résoudre les problèmes de synchronisation de Microsoft Edge
           href: microsoft-edge-troubleshoot-enterprise-sync.md
         - name: FAQ sur la synchronisation
           href: microsoft-edge-enterprise-sync-faq.md
-    - name: Synchronisation locale pour les utilisateurs Active Directory
+    - name: Synchronisation locale pour les utilisateurs Active Directory (AD)
       href: microsoft-edge-on-premises-sync.md
     - name: Lecteur PDF dans Microsoft Edge
       href: microsoft-edge-pdf.md
@@ -123,23 +123,23 @@
           href: edge-ie-mode-sitelist.md
         - name: Configurer des stratégies de mode IE
           href: edge-ie-mode-policies.md
-        - name: Désactiver Internet Explorer 11
+        - name: Désactiver Internet Explorer11
           href: edge-ie-disable-ie11.md
-        - name: Découverte de site et gestion des listes
+        - name: Découverte de sites et gestion des listes
           items:
             - name: Guide pas à pas pour la découverte de site d’entreprise
               href: edge-ie-mode-site-discovery.md
-            - name: Enterprise Site List Manager dans MicrosoftEdge
+            - name: Gestionnaire de listes de sites du mode entreprise dans Microsoft Edge
               href: edge-ie-mode-site-list-manager.md
         - name: Conserver la navigation dans la page en mode InternetExplorer
           href: edge-learnmore-inpage-nav.md
-        - name: Partage de cookies de MicrosoftEdge vers InternetExplorer
+        - name: Partage de cookies de Microsoft Edge vers Internet Explorer
           href: edge-ie-mode-add-guidance-cookieshare.md
         - name: Sites configurables en mode InternetExplorer
           href: edge-learnmore-configurable-sites-ie-mode.md
-        - name: Associer les extensions de fichier avec le mode InternetExplorer
+        - name: Associer les extensions de fichier avec le mode Internet Explorer
           href: edge-ie-mode-add-guidance-filetype-associations.md
-        - name: Résolution des problèmes et FAQ du mode IE
+        - name: Résolution des problèmes du mode Internet Explorer et FAQ
           href: edge-ie-mode-faq.md
 - name: Sécurité Microsoft Edge
   items:
@@ -147,7 +147,7 @@
       href: ms-edge-security-for-business.md
     - name: Liste verte pour les points de terminaison de MicrosoftEdge
       href: microsoft-edge-security-endpoints.md
-    - name: Protection contre la perte de données (DLP)
+    - name: Protection contre la perte de données
       href: microsoft-edge-security-dlp.md
     - name: Surveillance de mot de passe activée automatiquement pour les utilisateurs
       href: microsoft-edge-security-password-monitor.md
@@ -161,11 +161,11 @@
       href: microsoft-edge-security-smartscreen.md
     - name: Support pour la Protection des informations Windows
       href: microsoft-edge-security-windows-information-protection.md
-- name: Confidentialité MicrosoftEdge
+- name: Confidentialité Microsoft Edge
   items:
     - name: Configurer les paramètres de confidentialité
       href: microsoft-edge-enterprise-privacy-settings.md
-    - name: Livre blanc sur la confidentialité MicrosoftEdge
+    - name: Livre blanc sur la confidentialité Microsoft Edge
       href: /microsoft-edge/privacy-whitepaper
 - name: Référence Microsoft Edge
   items:
@@ -189,37 +189,37 @@
           href: edge-learnmore-mixed-content-downloads.md
         - name: Déploiements progressifs pour les mises à jour du canal stable
           href: microsoft-edge-update-progressive-rollout.md
-        - name: Configurer les favoris pour Microsoft Edge
+        - name: Provisionner des favoris pour Microsoft Edge
           href: edge-learnmore-provision-favorites.md
-        - name: Redirection d’Internet Explorer vers Microsoft Edge
+        - name: Redirection de Internet Explorer vers Microsoft Edge
           href: edge-learnmore-neededge.md
         - name: Syntaxe expression régulière 2 (re2.h)
           href: edge-learnmore-regex.md
-        - name: Réinitialisation de données MicrosoftEdge
+        - name: Réinitialiser les données de Microsoft Edge
           href: edge-learnmore-reset-data-in-cloud.md
-        - name: Utilisation de la rollback Microsoft Edge pour les entreprises
+        - name: Utilisation de la restauration Microsoft Edge pour les entreprises
           href: edge-learnmore-rollback.md
 - name: Vidéos Microsoft Edge
   items:
     - name: Collection de vidéos Microsoft Edge
       href: microsoft-edge-videos.md
-    - name: Vidéo - Microsoft Edge - État du navigateur 2020
+    - name: 'Vidéo: Microsoft Edge - État du navigateur 2020'
       href: microsoft-edge-video-state-of-browser.md
-    - name: 'Vidéo : isolation du navigateur à l’aide d’Application Guard'
+    - name: 'Vidéo: isolation du navigateur à l’aide d’Application Guard'
       href: microsoft-edge-video-security-application-guard.md
     - name: 'Vidéo: Déployer Microsoft Edge'
       href: microsoft-edge-video-deploy.md
-    - name: Vidéo - Protection contre la perte de données (DLP)
+    - name: 'Vidéo: Protection contre la perte de données (DLP)'
       href: microsoft-edge-video-security-dlp.md
-    - name: Vidéo - Identité dans Microsoft Edge
+    - name: 'Vidéo: identité dans Microsoft Edge'
       href: microsoft-edge-video-identity.md
-    - name: Vidéo - Version de la version de Microsoft Edge
+    - name: 'Vidéo: restauration de la version Microsoft Edge'
       href: microsoft-edge-video-version-rollback.md
-    - name: Vidéo - Lecteur PDF dans Microsoft Edge
+    - name: 'Vidéo: lecteur PDF dans Microsoft Edge'
       href: microsoft-edge-video-pdf-reader.md
-    - name: Vidéo - Navigation sécurisée sur Microsoft Edge
+    - name: 'Vidéo: navigation sécurisée sur Microsoft Edge'
       href: microsoft-edge-video-security-smartscreen.md
     - name: 'Vidéo: sécurité, compatibilité et facilité de gestion'
       href: microsoft-edge-video-security-compatibility-manageability.md
-- name: Forum Aux Questions
+- name: Questions fréquemment posées
   href: faqs-edge-in-the-enterprise.yml
