@@ -23,11 +23,11 @@ Cette vidéo montre les étapes de déploiement de Microsoft Edge sur tous vos a
 
 [![Déploiement de Microsoft Edge sur des centaines ou des milliers d’appareils](media/microsoft-edge-video-deploy/0.png)](http://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices")
 
-##  <a name="about-the-video"></a>À propos de la vidéo
+## À propos de la vidéo
 
 Consultez la visite guidée sur la façon de déployer Microsoft Edge sur vos appareils. Découvrez les options de package Microsoft Edge pour une installation automatisée, comment déployer Microsoft Edge vers des PC Windows à l’aide de Microsoft Endpoint Configuration Manager et les étapes pour s’assurer que tous les appareils gérés, y compris vos téléphones et Mac, sont mis en service avec Microsoft Edge.
 
-##  <a name="see-also"></a>Voir également
+## Voir également
 
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Playlist Microsoft Edge sur YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)
