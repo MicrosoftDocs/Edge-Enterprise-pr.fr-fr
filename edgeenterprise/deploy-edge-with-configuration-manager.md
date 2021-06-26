@@ -3,19 +3,19 @@ title: Déployer Microsoft Edge à l’aide de SystemCenter ConfigurationManager
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 09/30/2019
+ms.date: 06/08/2021
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Découvrez comment déployer Microsoft Edge avec SystemCenter ConfigurationManager (SCCM).
-ms.openlocfilehash: 64b26412c4596a9514227d41d1a4e753a66ed057
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b403c8924a0f970aaadff2e1b20ebd05c0641a96
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447828"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617544"
 ---
 # <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a><span data-ttu-id="ccdfa-103">Déployer Microsoft Edge à l’aide de SystemCenter ConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="ccdfa-103">Deploy Microsoft Edge using System Center Configuration Manager</span></span>
 
