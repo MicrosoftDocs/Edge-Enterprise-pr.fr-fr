@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Syntaxe expression régulière 2
-ms.openlocfilehash: 9654a25d2c0474601fb719b145ebb1f59241a6d9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 5d7026a034300e098497c63911f7516f72877c5d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979748"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617314"
 ---
-# Syntaxe expression régulière 2 (re2.h)
+# <a name="regular-expression-2-re2h-syntax"></a>Syntaxe expression régulière 2 (re2.h)
 
 Les expressions régulières sont une notation permettant de décrire des jeux de chaînes de caractères. Lorsqu’une chaîne se trouve dans le groupe décrit par une expression régulière, l’expression régulière correspond souvent à la chaîne.
 
@@ -35,7 +35,7 @@ Cette page répertorie la syntaxe de l’expression régulière acceptée par RE
 
 Elle répertorie également une syntaxe acceptée par PCRE, PERL et VIM.
 
-##  <a name="syntax-tables"></a>Tables de syntaxe
+## <a name="syntax-tables"></a>Tables de syntaxe
 
 | Types d’expressions à un seul caractère | Exemples |
 | --- | --- |
@@ -51,12 +51,12 @@ Elle répertorie également une syntaxe acceptée par PCRE, PERL et VIM.
 | classe de caractères Unicode inversée (nom à une lettre) | \PN |
 | classe de caractères Unicode inversée | \P{Greek} |
 
-| | Composites |
+|&nbsp;| Composites |
 | --- | --- |
 | xy | x suivi par y |
 | x\|y | x ou y (de préférence x) |
 
-| | Répétitions |
+|&nbsp;| Répétitions |
 | --- | --- |
 | x\* | zéro ou plus x, préférer plus |
 | x+ | zéro ou plus x, préférer plus |
@@ -77,7 +77,7 @@ Elle répertorie également une syntaxe acceptée par PCRE, PERL et VIM.
 
 Restriction d’implémentation : les formulaires de comptage x {n, m}, x {n,} et x {n} refusent les formulaires qui créent un nombre de répétitions minimum ou maximum au-dessus de 1000. Les répétitions illimitées ne sont pas sujettes à cette restriction.
 
-| | Répétitions de possession |
+|&nbsp;| Répétitions de possession |
 | --- | --- |
 | x\*+ | zéro ou plus x, possession (NON PRIS EN CHARGE) |
 | x++ | un ou plus x, possession (NON PRIS EN CHARGE) |
@@ -86,7 +86,7 @@ Restriction d’implémentation : les formulaires de comptage x {n, m}, x {n,} e
 | x{n,}+ | n ou plus x, possession (NON PRIS EN CHARGE) |
 | x{n}+ | exactement n x, possession (NON PRIS EN CHARGE) |
 
-| | Regroupement |
+|&nbsp;| Regroupement |
 | --- | --- |
 | (re) | Groupe de capture numéroté (sous-correspondance) |
 | (?P&lt;nom&gt;re) | nommé &amp; groupe de capture numéroté (sous-correspondance) |
@@ -101,7 +101,7 @@ Restriction d’implémentation : les formulaires de comptage x {n, m}, x {n,} e
 | re@&gt; | correspondance de possession de re (NON PRIS EN CHARGE) VIM |
 | %(re) | groupe de non capture (NON PRIS EN CHARGE) VIM |
 
-| | Flags |
+|&nbsp;| Flags |
 | --- | --- |
 | i | non respect de la casse (valeur par défaut faux) |
 | m | mode multilignes : ^ et $ correspondent ligne début/fin en plus du texte début/fin (valeur par défaut faux) |
@@ -110,7 +110,7 @@ Restriction d’implémentation : les formulaires de comptage x {n, m}, x {n,} e
 
 La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensemble xy, clear z).
 
-|  | Chaînes vides |
+|&nbsp;| Chaînes vides |
 | --- | --- |
 | ^ | au début d’un texte ou d’une ligne (m = vrai) |
 | $ | à la fin du texte (comme \z non \z) ou ligne (m = vrai) |
@@ -141,7 +141,7 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | \%23c | dans la colonne 23 (NON PRIS EN CHARGE) VIM |
 | \%23v | dans la colonne virtuelle 23 (NON PRIS EN CHARGE) VIM |
 
-|  | Séquences d’échappement |
+|&nbsp;| Séquences d’échappement |
 | --- | --- |
 | \a | bell (≡ \007) |
 | \f | flux de formulaire (≡ \014) |
@@ -182,7 +182,7 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | \%u1234 | caractère Unicode 0x1234 (NON PRIS EN CHARGE) VIM |
 | \%U12345678 | caractère Unicode 0x12345678 (NON PRIS EN CHARGE) VIM |
 
-|  | Éléments de classe de caractères |
+|&nbsp;| Éléments de classe de caractères |
 | --- | --- |
 | x | caractère unique |
 | A-Z | plage de caractères (incluse) |
@@ -191,7 +191,7 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | \p{Foo} | Classe de caractères Unicode Foo |
 | \pF | Classe de caractères Unicode F (nom à une lettre) |
 
-|  | Classes de caractères nommés comme éléments de classe de caractères |
+|&nbsp;| Classes de caractères nommés comme éléments de classe de caractères |
 | --- | --- |
 | [\d] | chiffres (≡ \d) |
 | [^\d] | pas de chiffres (≡ \d) |
@@ -232,7 +232,7 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | [[:word:]] | caractères de mot (≡ [0-9A-Za-z\_]) |
 | [[:xdigit:]] | chiffre hexadécimal (≡ [0-9A-Fa-f]) |
 
-| | Noms de classe de caractères Unicode--catégorie général |
+|&nbsp;| Noms de classe de caractères Unicode--catégorie général |
 | --- | --- |
 | C | Autre |
 | Cc | control |
@@ -433,7 +433,7 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | Yi |
 | Zanabazar\_Square |
 
-|  | classes de caractères Vim |
+|&nbsp;| classes de caractères Vim |
 | --- | --- |
 | \i | caractère d’identificateur (NON PRIS EN CHARGE) VIM |
 | \I | \i sauf chiffres (NON PRIS EN CHARGE) VIM |
@@ -470,7 +470,7 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | \V | verynomagic (NON PRIS EN CHARGE) VIM |
 | \Z | ignorer les différences entre les caractères de combinaison Unicode (NON PRIS EN CHARGE) VIM |
 
-|  | Magic |
+| &nbsp; | Magic |
 | --- | --- |
 | (?{code}) | code perl arbitraire (NON PRIS EN CHARGE) PERL |
 | (??{code}) | code perl arbitraire différé (NON PRIS EN CHARGE) PERL |
@@ -500,13 +500,13 @@ La syntaxe de l’indicateur est xyz (ensemble) ou -xyz (clear) ou xy-z (ensembl
 | (\*BSR\_ANYCRLF) | définition de la convention (NON PRIS EN CHARGE) PCRE |
 | (\*BSR\_UNICODE) | (NON PRIS EN CHARGE) PCRE |
 
-##  <a name="content-license"></a>Licence de contenu
+## <a name="content-license"></a>Licence de contenu
 
 > [!NOTE]
 > Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Chromium.org et utilisé conformément aux conditions décrites dans la [Licence internationale Creative Commons Attribution 4.0](http://creativecommons.org/licenses/by/4.0/). La page d’origine est disponible [ici](https://github.com/google/re2/wiki/Syntax).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce travail est concédé sous une <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence internationale Creative Commons Attribution 4.0</a>.
 
-##  <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir également
 
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

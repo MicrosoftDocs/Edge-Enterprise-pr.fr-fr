@@ -1,6 +1,6 @@
 ---
 title: Diagnostiquer et résoudre les problèmes de synchronisation de Microsoft Edge
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 03/08/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Conseils et outils qu’un administrateur Microsoft Edge peut utiliser pour résoudre les problèmes courants de synchronisation d’entreprise
-ms.openlocfilehash: 767b26c74e91213b407e8264a8ed185f38dfc2e9
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: d934e1ad73500fcb7f15bcd7dd29cb0f905577c5
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400187"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617904"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Diagnostiquer et résoudre les problèmes de synchronisation de Microsoft Edge
 
@@ -49,10 +49,10 @@ Si cette erreur est rencontrée pour un compte Azure Active Directory, ou si DIS
 > [!NOTE]
 > Étant donné que la source de cette erreur nécessite généralement une modification de configuration dans un client Azure Active Directory, ces étapes de dépannage ne peuvent être effectuées que par un administrateur client et non par les utilisateurs finaux.
 
-1. Vérifiez que le client d’entreprise dispose d’un abonnement M365 pris en charge. La liste actuelle des types d’abonnement disponibles [est fournie ici](https://docs.microsoft.com/azure/information-protection/activate-office365). Si le client n’a pas d’abonnement pris en charge, il peut acheter Azure Information Protection séparément ou mettre à niveau vers l’un des abonnements pris en charge.
-2. Si un abonnement pris en charge est disponible, vérifiez que le client dispose d’Azure Information Protection (AIP). Les instructions pour vérifier l’état d’Azure Information Protection et, si nécessaire, l’activation d’Azure Information Protection se trouvent [ici](https://docs.microsoft.com/azure/information-protection/activate-office365).
-3. Si l’étape 2 indique qu’Azure Information Protection est actif mais que la synchronisation ne fonctionne toujours pas, activez Enterprise State Roaming (ESR). Les instructions d’activation du système ESR sont [ici](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable). Notez qu’Enterprise State Roaming n’a pas besoin de rester en place. Vous pouvez désactiver Enterprise State Roaming si cette étape résout le problème.
-4. Confirmez qu’Azure Information Protection n’est pas étendue via une stratégie d’intégration. Vous pouvez utiliser l’applet [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) de PowerShell pour voir si l’étendue est activée. Les deux exemples suivants illustrent une configuration non étendue et une configuration étendue à un groupe de sécurité spécifique.
+1. Vérifiez que le client d’entreprise dispose d’un abonnement M365 pris en charge. La liste actuelle des types d’abonnement disponibles [est fournie ici](/azure/information-protection/activate-office365). Si le client n’a pas d’abonnement pris en charge, il peut acheter Azure Information Protection séparément ou mettre à niveau vers l’un des abonnements pris en charge.
+2. Si un abonnement pris en charge est disponible, vérifiez que le client dispose d’Azure Information Protection (AIP). Les instructions pour vérifier l’état d’Azure Information Protection et, si nécessaire, l’activation d’Azure Information Protection se trouvent [ici](/azure/information-protection/activate-office365).
+3. Si l’étape 2 indique qu’Azure Information Protection est actif mais que la synchronisation ne fonctionne toujours pas, activez Enterprise State Roaming (ESR). Les instructions d’activation du système ESR sont [ici](/azure/active-directory/devices/enterprise-state-roaming-enable). Notez qu’Enterprise State Roaming n’a pas besoin de rester en place. Vous pouvez désactiver Enterprise State Roaming si cette étape résout le problème.
+4. Confirmez qu’Azure Information Protection n’est pas étendue via une stratégie d’intégration. Vous pouvez utiliser l’applet [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) de PowerShell pour voir si l’étendue est activée. Les deux exemples suivants illustrent une configuration non étendue et une configuration étendue à un groupe de sécurité spécifique.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
@@ -71,9 +71,9 @@ Si cette erreur est rencontrée pour un compte Azure Active Directory, ou si DIS
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   Si l’étendue est activée, l’utilisateur affecté doit être ajouté au groupe de sécurité pour l’étendue ou l’étendue doit être supprimée. Dans l’exemple ci-dessous, l’intégration a étendu Azure Information Protection au groupe de sécurité indiqué et l’étendue doit être supprimée avec l’applet [PowerShell Set-AadrmOnboardingControlPolicy.](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps)
+   Si l’étendue est activée, l’utilisateur affecté doit être ajouté au groupe de sécurité pour l’étendue ou l’étendue doit être supprimée. Dans l’exemple ci-dessous, l’intégration a étendu Azure Information Protection au groupe de sécurité indiqué et l’étendue doit être supprimée avec l’applet [PowerShell Set-AadrmOnboardingControlPolicy.](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps)
 
-5. Confirmez que IPCv3Service est activé dans le client. [L’applet PowerShell Get-AadrmConfiguration](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) affiche l’état du service.
+5. Confirmez que IPCv3Service est activé dans le client. [L’applet PowerShell Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) affiche l’état du service.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Vérifiez si IPCv3Service est activé.":::
 
@@ -99,7 +99,7 @@ Si cette erreur est rencontrée pour un compte Azure Active Directory, ou si DIS
       - [https://api.aadrm.com](https://api.aadrm.com) (pour la plupart des locataires)
       - [https://api.aadrm.de](https://api.aadrm.de) (pour les locataires en Allemagne)
       - [https://api.aadrm.cn](https://api.aadrm.cn) (pour les locataires en Chine)
-   - [Points de terminaison du service de notification Windows](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
+   - [Points de terminaison du service de notification Windows](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
 5. Si le problème n’est toujours pas résolu, contactez le [support Microsoft Edge](https://www.microsoftedgeinsider.com/support).
 
@@ -116,10 +116,10 @@ Cette erreur est visible sous **Type d’informations** dans *edge://sync-intern
 
 ### <a name="issue-sync-has-been-turned-off-by-your-administrator"></a>Problème : « La synchronisation a été désactivée par votre administrateur ».
 
-Assurez-vous que la [stratégie SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled) n’est pas définie.
+Assurez-vous que la [stratégie SyncDisabled](./microsoft-edge-policies.md#syncdisabled) n’est pas définie.
 
 ## <a name="see-also"></a>Voir également
 
 - [Synchronisation de Microsoft Edge Entreprise](microsoft-edge-enterprise-sync.md)
-- [Microsoft Edge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [MicrosoftEdge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

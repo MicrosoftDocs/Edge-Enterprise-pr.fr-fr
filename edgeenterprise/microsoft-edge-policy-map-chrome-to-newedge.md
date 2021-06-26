@@ -3,28 +3,28 @@ title: Mappage de Google Chrome vers la stratégie Microsoft Edge
 ms.author: brianalt
 author: brianalt
 manager: srugh
-ms.date: 02/10/2020
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Mappage de Google Chrome vers la stratégie Microsoft Edge
-ms.openlocfilehash: 10253d8d18864fedf5cfaf7d064766ad641675d4
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: e6a85549ee260dbebdafd900dc4ca634dc7dbd12
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448038"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617864"
 ---
 # <a name="google-chrome-to-microsoft-edge-policy-mapping"></a>Mappage de Google Chrome vers la stratégie Microsoft Edge
 
-Cet article présente la mise en correspondance les stratégies Google Chrome avec les stratégies Microsoft Edge appropriées qui sont prises en charge dans la version80. Pour en savoir plus sur les stratégies Microsoft Edge héritées, voir l’article [Mappage de Microsoft Edge hérité vers la stratégie Microsoft Edge](microsoft-edge-policy-map-legacy-to-newedge.md).
+Cet article présente la mise en correspondance les stratégies Google Chrome avec les stratégies Microsoft Edge appropriées qui sont prises en charge dans la version80. Pour en savoir plus sur les stratégies Microsoft Edge héritées, voir l’article [Mappage de Microsoft Edge hérité vers la stratégie Microsoft Edge](/deployedge/microsoft-edge-policy-map-chrome-to-newedge?branch=master).
 
 > [!NOTE]
 > Le mappage fourni ci-dessous est destiné à vous aider dans le cadre de votre déploiement initial de la version80 de Microsoft Edge. Pour obtenir la liste établie des dernières stratégies, voir:
-> - [Référence de stratégie du navigateur](microsoft-edge-policies.md)
-> - [Référence de stratégie de mise à jour](microsoft-edge-update-policies.md)
+> - [Référence de stratégie du navigateur](/deployedge/microsoft-edge-policies)
+> - [Référence de stratégie de mise à jour](/deployedge/microsoft-edge-update-policies)
 
 ## <a name="google-chrome-to-microsoft-edge-policy-map"></a>Mise en correspondance de Google Chrome avec la stratégie Microsoft Edge
 
@@ -94,8 +94,8 @@ Cet article présente la mise en correspondance les stratégies Google Chrome av
 |[CloudPrintProxyEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintProxyEnabled)|Non applicable|
 |[CloudPrintSubmitEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintSubmitEnabled)|Non applicable|
 |[CloudReportingEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudReportingEnabled)|Non applicable|
-|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)|[CoalesceH2ConnectionsWithClientCertificatesForHosts](./microsoft-edge-policies.md#coalesceh2connectionswithclientcertificatesforhosts)|
-|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)|[CommandLineFlagSecurityWarningsEnabled](./microsoft-edge-policies.md#commandlineflagsecuritywarningsenabled)|
+|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)
+|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)
 |[ComponentUpdatesEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ComponentUpdatesEnabled)|[ComponentUpdatesEnabled](./microsoft-edge-policies.md#componentupdatesenabled)|
 |[CookiesAllowedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesAllowedForUrls)|[CookiesAllowedForUrls](./microsoft-edge-policies.md#cookiesallowedforurls)|
 |[CookiesBlockedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesBlockedForUrls)|[CookiesBlockedForUrls](./microsoft-edge-policies.md#cookiesblockedforurls)|

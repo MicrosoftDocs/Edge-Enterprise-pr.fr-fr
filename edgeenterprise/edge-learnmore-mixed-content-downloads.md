@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge et les téléchargements de contenu mixte
-ms.author: kele
+ms.author: collw
 author: dan-wesley
 manager: srugh
 ms.date: 04/30/2020
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge et les téléchargements de contenu mixte
-ms.openlocfilehash: 13cc9d935dfe415039078b2ca794945b4fa2d1a3
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: a81c44754865b2303320bfe87346c7f7533e6133
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447268"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617304"
 ---
 # <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Découvrez Microsoft Edge et les téléchargements de contenu mixte
 
@@ -63,9 +63,9 @@ Les entreprises souhaitant exclure le blocage de contenu mixte de certains sites
 ## <a name="content-license"></a>Licence de contenu
 
 > [!NOTE]
-> Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Chromium.org et utilisé conformément aux conditions décrites dans la [Licence internationale Creative Commons Attribution4.0](http://creativecommons.org/licenses/by/4.0/). La page d’origine est disponible [ici](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content).
+> Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Chromium.org et utilisé conformément aux conditions décrites dans la [Licence internationale Creative Commons Attribution 4.0](http://creativecommons.org/licenses/by/4.0/). La page d’origine est disponible [ici](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content).
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce travail est concédé sous une <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence internationale Creative Commons Attribution4.0</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce travail est concédé sous une <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence internationale Creative Commons Attribution 4.0</a>.
 
 ## <a name="see-also"></a>Voir également
 

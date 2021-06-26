@@ -3,35 +3,35 @@ title: Automatiser Microsoft Edge pour le déploiement sur macOS avec Jamf
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 audience: ITPro
-ms.topic: technical
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Procédure d’automatisation de Microsoft Edge pour le déploiement sur macOS avec Jamf.
-ms.openlocfilehash: 3065e4f02dbfed70b887a60b1cf076335dbff19a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e56ed4c2a9c0ebb4a4341830cd09ca040e80a657
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979649"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617524"
 ---
-# Déployer sur macOS avec Jamf
+# <a name="deploy-to-macos-with-jamf"></a>Déployer sur macOS avec Jamf
 
 Cet article décrit comment déployer Microsoft Edge pour macOS à l’aide de Jamf.
 
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 77 ou ultérieure.
 
-##  <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Prérequis
 
 Avant de déployer Microsot Edge, assurez-vous que les conditions préalables suivantes sont réunies :
 
 - Le fichier d’installation de Microsoft Edge, **MicrosoftEdgeDev-\\<version\>.pkg**, se trouve dans un emplacement accessible sur votre réseau. Vous pouvez téléchargez les fichiers d’installation de Microsoft Edge Entreprise sur la [page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise).
 - Vous disposez d’un compte Cloud Jamf avec le niveau d’accès et de privilèges nécessaires pour créer et déployer des fichiers d’installation sur des ordinateurs.
 
-##  <a name="to-deploy-microsoft-edge-using-jamf"></a>Pour déployer Microsoft Edge à l’aide de Jamf :
+## <a name="to-deploy-microsoft-edge-using-jamf"></a>Pour déployer Microsoft Edge à l’aide de Jamf :
 
 1. Connectez-vous à Jamf et accédez à **Tous les paramètres**.
 
@@ -93,8 +93,8 @@ Avant de déployer Microsot Edge, assurez-vous que les conditions préalables su
 
 Félicitations ! Vous venez de terminer la configuration de Jamf pour déployer Microsoft Edge pour macOS. Lorsque la condition de déclencheur que vous avez définie sera true, le package sera déployé sur les ordinateurs que vous avez désignés.
 
-##  <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Articles associés
 
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Jamf.com](https://www.jamf.com/)
-- [Intégrer Jamf à Microsoft Intune](https://docs.microsoft.com/intune/conditional-access-integrate-jamf)
+- [Intégrer Jamf à Microsoft Intune](/intune/conditional-access-integrate-jamf)
