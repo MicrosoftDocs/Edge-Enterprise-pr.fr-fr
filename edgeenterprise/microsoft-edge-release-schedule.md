@@ -1,21 +1,21 @@
 ---
 title: Planning de publication de Microsoft Edge
 ms.author: aguta
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 06/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planning de publication de Microsoft Edge
-ms.openlocfilehash: a78c56d4c20da711eb73679dbe1c974bfac3c869
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 578a7a3c1a87aee1acc01715c735d5eea9ab67c0
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448178"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617969"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Planning de publication de Microsoft Edge
 
@@ -41,10 +41,10 @@ Le tableau suivant suit et fournit uniquement des informations sur les principal
 
 | Version | État de la publication | Canal Beta<br>Semaine de publication | Canal Stable<br>Semaine de publication |
 |---------|-----|------|--------|
-| 88 | Publiée<br>Version | 09-déc-2020<br>[88.0.705.18](./microsoft-edge-relnote-beta-channel.md#version-88070518-december-9) | 21-jan-2021<br>[88.0.705.50](./microsoft-edge-relnote-stable-channel.md#version-88070550-january-21)|
-| **89** | Publiée<br>Version | 03-Feb-2021<br>[89.0.774.18](./microsoft-edge-relnote-beta-channel.md#version-89077418-february-3) | **04-mars-2021**<br>**[89.0.774.45](./microsoft-edge-relnote-stable-channel.md#version-89077445-march-21)** |
-| **90** | Publiée<br>Version | **16-Mars-2021**<br>**[90.0.818.8](./microsoft-edge-relnote-beta-channel.md#version-9008188-march-16)** | Semaine du 15-Avril-2021 |
-| 91 | Version cible | Semaine du 27-avr-2021 | Semaine du 27 mai-2021 |
+| 88 | Publiée<br>Version | 09-déc-2020<br>[88.0.705.18](/microsoft-edge-relnote-archive-beta-channel.md#version-88070518-december-9) | 21-jan-2021<br>[88.0.705.50](/microsoft-edge-relnote-archive-stable-channel.md#version-88070550-january-21)|
+| 89 | Publiée<br>Version | 03-Feb-2021<br>[89.0.774.18](/microsoft-edge-relnote-beta-channel.md#version-89077423-february-8) | 04-mars-2021<br>[89.0.774.45](/microsoft-edge-relnote-stable-channel.md#version-89077445-march-4) |
+| **90** | Publiée<br>Version | 16-Mars-2021<br>[90.0.818.8](/microsoft-edge-relnote-beta-channel.md#version-9008188-march-16) | **15-avr-2021**<BR>**[90.0.818.39](/microsoft-edge-relnote-stable-channel#version-90081839-april-15)** |
+| **91** | Publiée<br>Version | **30-avr-2021**<br>[91.0.864.11](/microsoft-edge-relnote-beta-channel.md#version-91086411-april-30) | **27-mai-2021**<BR>**[91.0.864.37](/microsoft-edge-relnote-stable-channel#version-91086437-may-27)** |
 | 92 | Libération des cibles | Semaine du 08-Juin-2021 | Semaine du 22 Juillet 2021 |
 | 93 | Libération des cibles | Semaine du 03 Août 2021 | Semaine du 02 Septembre 2021 |
 | 94 | Publication cible | Semaine du 01 septembre 2021 | Semaine du 23 septembre 2021 |
@@ -60,10 +60,10 @@ Le déclencheur pour les publications importantes des versions bêta et stables 
 
 La référence de la date (publication ou semaine publiée) pour le canal stable fait référence au début du déploiement progressif.
 
-Nous utilisons un modèle de déploiement progressif, ce qui signifie que la disponibilité d’une nouvelle version pour un appareil donné peut être échelonnée au cours des prochains jours. Si vous souhaitez plus d’informations, voir [Déploiements progressifs pour les canaux Microsoft Edge stables](microsoft-edge-update-progressive-rollout.md).
+Nous utilisons un modèle de déploiement progressif, ce qui signifie que la disponibilité d’une nouvelle version pour un appareil donné peut être échelonnée au cours des prochains jours. Si vous souhaitez plus d’informations, voir [Déploiements progressifs pour les canaux Microsoft Edge stables](/deployedge/microsoft-edge-update-progressive-rollout).
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Canaux Microsoft Edge](microsoft-edge-channels.md)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Canaux Microsoft Edge](/deployedge/microsoft-edge-channels)
 - [Téléchargements de canaux](https://www.microsoft.com/edge/business/download)

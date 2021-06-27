@@ -1,27 +1,25 @@
 ---
 title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 04/01/2021
+ms.date: 06/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: 31aaad801f4632985d7fc9d043155f2eb82ed046
-ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
+ms.openlocfilehash: ef059624339f4b50b92fb187023991ae0526afa7
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11470902"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617944"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notes de publication du canal stable Microsoft Edge
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal stable Microsoft Edge.
-
-
 
 - L'ensemble des mises à jour de sécurité est répertorié [ici](microsoft-edge-relnotes-security.md).
 - Les notes de publication archivées pour le canal stable Microsoft Edge sont situées [ici](microsoft-edge-relnote-archive-stable-channel.md).
@@ -29,9 +27,178 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
  Si vous souhaitez en savoir plus sur les canaux Microsoft Edge, veuillez consultez la rubrique [Vue d’ensemble des canaux Microsoft Edge](microsoft-edge-channels.md).
 
 > [!NOTE]
-> Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+> Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
+>
+> La plateforme web MicrosoftEdge évolue constamment pour améliorer l’expérience utilisateur, la sécurité et la confidentialité. Pour en savoir plus, consultez les [modifications qui ont un impact sur la compatibilité du prochain MicrosoftEdge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## <a name="version-89077468-april-1"></a>Version 89.0.774.68 : 1er avril
+## <a name="version-91086459-june-24"></a>Version91.0.864.59 : 24juin
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#june-24-2021).
+
+## <a name="version-91086454-june-18"></a>Version91.0.864.54: 18juin
+
+> [!Important]
+> Cette mise à jour contient [CVE-2021-30554](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30554) qui a été signalé par l’équipe Chromium comme ayant une faille dans la nature. Pour plus d'informations, voir le [Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#june-18-2021).
+
+## <a name="version-91086448-june-11"></a>Version91.0.864.48: 11juin
+
+> [!Important]
+>Cette mise à jour contient [CVE-2021-30551](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551) qui a été signalé par l’équipe Chromium comme ayant une faille dans la nature. Pour plus d'informations, voir le [Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#june-11-2021).
+
+## <a name="version-91086441-june-3"></a>Version91.0.864.41: 3juin
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#june-3-2021).
+
+## <a name="version-91086437-may-27"></a>Version91.0.864.37: 27mai
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#may-27-2021).
+
+### <a name="feature-updates"></a>Mises à jour des fonctionnalités
+
+- **Identifiez le trafic réseau provenant des conteneurs Microsoft Defender Application Guard au niveau du proxy.** À partir Microsoft Edge version91, la prise en charge intégrée permet de baliser le trafic réseau provenant de conteneurs ApplicationGuard, ce qui permet aux entreprises de les identifier et d’appliquer des stratégies spécifiques.
+
+- **Option de prise en charge permettant de synchroniser les Favoris de l’hôte vers le conteneur Edge ApplicationGuard.** À partir MicrosoftEdge version91, les utilisateurs ont la possibilité de configurer ApplicationGuard pour synchroniser leurs favoris entre l’hôte et le conteneur. Cela garantit que les nouveaux favoris apparaissent également sur le conteneur.
+
+- À partir de **MicrosoftEdge version91,** le navigateur interrompt automatiquement les téléchargements de types qui pourraient endommager votre ordinateur si ces téléchargements sont démarrés sans intervention de l’utilisateur et ne sont pas pris en charge par la vérification de Réputation d’application SmartScreen. Les utilisateurs peuvent remplacer et continuer à télécharger en cliquant avec le bouton droit et en choisissant «Conserver» sur l’élément de téléchargement. Enterprise administrateurs peuvent refuser ce comportement en configurant la stratégie suivante:
+  - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md): désactiver les avertissements basés sur l’extension de type de fichier de téléchargement pour les types de fichiers spécifiés sur les domaines
+
+    Pour plus d’informations, voir [Interruptions des téléchargement de sécurité MicrosoftEdge](microsoft-edge-security-downloads-interruptions.md).
+
+- **Prise en charge des API de reconnaissance vocale**. À partir Microsoft Edge version91, la prise en charge de l’API pour les commandes de reconnaissance vocale sur Google.com et sites similaires est ajoutée. Cette fonctionnalité est limitée à un groupe d’utilisateurs sélectionnés de manière aléatoire et ayant activé l’expérimentation. Ces utilisateurs fournissent des commentaires à l’équipe chargée de la fonctionnalité.
+
+- **Personnalisez votre navigateur avec de nouvelles couleurs de thème.** Faites MicrosoftEdge vous-même avec l’une des dix-neuf nouvelles couleurs de thème sur la page Paramètres -> Apparence. Vous pouvez également installer des thèmes personnalisés à partir du site des composants additionnels Microsoft Edge. [En savoir plus](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
+
+### <a name="policy-updates"></a>Mises à jour de stratégie
+
+#### <a name="new-policies"></a>Nouvelles stratégies
+
+Six nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil MicrosoftEdgeEntreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées:
+
+- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled): Identification du trafic Application Guard
+- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports): ports réseau explicitement autorisés
+- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings): autoriser l’importation des paramètres de page de démarrage
+- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled): permet aux utilisateurs de capturer un problème mathématique et d’obtenir la solution avec une explication pas à pas dans MicrosoftEdge
+- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled): autoriser le contenu Microsoft News sur la page Nouvel onglet
+- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled): autoriser les liens rapides sur la page Nouvel onglet
+
+#### <a name="obsoleted-policy"></a>Stratégie obsolète
+
+- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled): activer l’authentification proactive
+<!-- end major 91 -->
+
+## <a name="version-90081866-may-20"></a>Version 90.0.818.66: 20mai
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-90081862-may-13"></a>Version 90.0.818.62: 13mai
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#may-13-2021).
+
+## <a name="version-90081856-may-6"></a>Version 90.0.818.56: 6mai
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-90081851-april-29"></a>Version 90.0.818.51: 29avril
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-29-2021).
+
+## <a name="version-90081849-april-26"></a>Version 90.0.818.49: 26avril
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-90081846-april-22"></a>Version 90.0.818.46: 22avril ##
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-22-2021).
+
+## <a name="version-90081842-april-19"></a>Version 90.0.818.42: 19avril
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-90081841-april-16"></a>Version 90.0.818.41: 16avril ##
+
+> [!Important]
+>Cette mise à jour contient [CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224) qui a été signalé par l’équipe Chromium comme ayant une faille dans la nature. Pour plus d'informations, voir le [Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide).
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-16-2021).
+
+## <a name="version-90081839-april-15"></a>Version 90.0.818.39: 15avril ##
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-15-2021).
+
+## <a name="feature-updates"></a>Mises à jour des fonctionnalités ##
+
+-    **L'authentification unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) et le compte Microsoft (MSA) sur macOS.** Un utilisateur connecté sur Microsoft Edge sur macOS se connecte désormais automatiquement aux sites web qui sont configurés pour autoriser l'authentification unique avec les comptes Professionnels et Microsoft (par exemple, bing.com, office.com, msn.com et outlook.com).
+
+- **Mode plein écran.** À partir Microsoft Edge version90, nous avons verrouillé les paramètres d’impression de l’interface utilisateur pour autoriser uniquement les imprimantes configurées et les options «Imprimer au format PDF». Nous avons également effectué des améliorations dans le mode plein écran de l’application unique à accès affecté pour limiter le lancement d’autres applications à partir du navigateur. Pour plus d’informations sur les fonctionnalités du mode plein écran, cliquez [ici.](/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features)
+
+- **Interrompre les téléchargements** À partir de MicrosoftEdge version91, le navigateur interrompt automatiquement les téléchargements de types qui pourraient endommager votre ordinateur si ces téléchargements sont démarrés sans intervention de l’utilisateur et ne sont pas pris en charge par la vérification de réputation de l’application SmartScreen. Les utilisateurs peuvent remplacer et continuer à télécharger en cliquant avec le bouton droit et en choisissant «Conserver» sur l’élément de téléchargement.
+Enterprise administrateurs peuvent refuser ce comportement, l’une des deux stratégies ci-après:
+- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) : désactiver les avertissements basés sur l’extension de type de fichier de téléchargement pour les types de fichiers spécifiés sur les domaines Pour plus d’informations, voir [Interruptions de téléchargements de sécurité Microsoft Edge](/deployedge/microsoft-edge-security-downloads-interruptions)
+
+- **Impression**:
+
+    - **Nouveau mode de rastérisation d’impression pour les imprimantes non PostScript.** À partir de MicrosoftEdge version90, les administrateurs peuvent utiliser une nouvelle stratégie pour définir le mode de rastérisation d’impression pour leurs utilisateurs. Cette stratégie contrôle la façon dont MicrosoftEdge imprime sur des imprimantes non PostScript sur Windows. L’ impression sur des imprimantes non-PostScript doit parfois être rastérisée pour imprimer correctement. Les options d’impression sont Complète et Rapide.
+    
+  - **Options de mise à l’échelle de page supplémentaires pour l’impression.** Les utilisateurs peuvent désormais personnaliser la mise à l’échelle lors de l’impression de pages web et de documents PDF à l’aide d’options supplémentaires. L’option Ajuster à la page permet de s’assurer que la page web ou le document est adapté à l’espace disponible dans le « Format de papier » sélectionné pour l’impression. L’option « Taille réelle » garantit qu’aucune modification n’a été apportée à la taille du contenu en cours d’impression, quelle que soit la « Taille du papier » sélectionnée.
+
+-   **Productivité:**
+
+    -   **Les suggestions de remplissage automatique sont étendues pour inclure le contenu des champs d’adresse à partir du Presse-papiers.** Le contenu du Presse-papiers est interrogé lorsque vous cliquez sur un champ de profil/adresse (par exemple, téléphone, e-mail, code postal, ville, état, etc.) pour afficher des suggestions de remplissage automatique.
+
+    -   **Les utilisateurs peuvent rechercher des suggestions de remplissage automatique même si un formulaire ou un champ n’est pas détecté.** Aujourd’hui, si vos informations sont enregistrées sur Microsoft Edge, les suggestions de remplissage automatique s’affichent automatiquement et vous permettent de gagner du temps lors du remplissage des formulaires. Dans les cas où le remplissage automatique manque un formulaire, ou si vous souhaitez récupérer des données dans des formulaires qui n’ont généralement pas de remplissage automatique (comme les formulaires temporaires), vous pouvez rechercher vos informations à l’utilisation du remplissage automatique.
+
+-   **Accédez aux téléchargements à partir d’un menu volant dans la barre de menus.** Les téléchargements s’affichent dans le coin supérieur droit avec tous les téléchargements actifs au même endroit. Ce menu est facile à ignorer, de sorte que les utilisateurs continuent à naviguer sans interruption et qu’ils peuvent surveiller la progression globale du téléchargement directement à partir de la barre d’outils. [Si vous souhaitez en savoir plus](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
+
+-   **Améliorations apportées au rendu des polices.** À partir de la version90 de MicrosoftEdge, nous avons apporté des améliorations au rendu du texte afin d’améliorer la clarté et de réduire le flou. Une partie des améliorations apportées au rendu des polices sera apportée à la version90 bêta, mais elle sera désactivée par défaut.
+
+- **Mode Enfant.** Nous avons mis à jour la stratégie afin que, lorsque la stratégie est activée, elle désactive la fonctionnalité Mode Enfant en plus de la sécurité de la famille. En savoir plus sur le mode [Enfant ici](https://go.microsoft.com/fwlink/?linkid=2146910)
+
+## <a name="policy-updates"></a>Mises à jour de stratégies
+
+## <a name="new-policies"></a>Nouvelles stratégies
+
+Huit nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil MicrosoftEdgeEntreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées :
+-   [ApplicationGuardFavoritesSyncEnabled](/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled): synchronisation des Favoris d’ApplicationGuard activée
+- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) Identification du trafic ApplicationGuard
+- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) Ports réseau explicitement autorisés
+- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) Autoriser l’importation des paramètres de page de démarrage
+- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) Laissez les utilisateurs capturer un problème mathématique et obtenir la solution avec une explication pas à pas dans MicrosoftEdge
+- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) Autoriser le contenu MicrosoftNews sur la page Nouvel onglet
+- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) Autoriser les liens rapides sur la page Nouvel onglet
+-   [FetchKeepaliveDurationSecondsOnShutdown](/DeployEdge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown): Durée de mise à jour continue à l’arrêt
+-   [ManagedConfigurationPerOrigin](/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) : définit des valeurs de configuration gérées pour des sites web avec des origines spécifiques
+-   [PrintRasterizationMode](/DeployEdge/microsoft-edge-policies#printrasterizationmode) : mode de rastérisation d’impression
+-   [QuickViewOfficeFilesEnabled](/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) : gérer la fonctionnalité de fichiers QuickView Office dans Microsoft Edge
+-   [SSLErrorOverrideAllowedForOrigins](/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins) : autoriser les utilisateurs à passer de la page d’avertissement HTTPS pour des origines spécifiques
+-   [WindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#windowocclusionenabled) : activer l’occlusion de fenêtre
+-   [WindowsHelloForHTTPAuthEnabled](/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled) : Windows Hello Pour l’authentification HTTP activé
+
+## <a name="deprecated-policies"></a>Stratégies déconseillées
+
+- [ProactiveAuthEnabled](/DeployEdge/microsoft-edge-policies#proactiveauthenabled) Activer l’authentification proactive
+-   [NativeWindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled): activer l’occlusion de fenêtre native
+-   [SSLVersionMin](/DeployEdge/microsoft-edge-policies#sslversionmin): version TLS minimale activée
+
+## <a name="version-89077477-april-14"></a>Version 89.0.774.77: 14avril
+
+> [!Important]
+>Cette mise à jour contient [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) et [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) qui ont été signalés par l’équipe Chromium comme ayant une faille dans la nature.  Pour plus d'informations, voir le [Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide).
+
+Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-14-2021).
+
+## <a name="version-89077476-april-12"></a>Version 89.0.774.76 : 12avril
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-89077475-april-8"></a>Version 89.0.774.75: 8avril
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-89077468-april-1"></a>Version 89.0.774.68: 1eravril
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#april-1-2021)
 
@@ -109,270 +276,13 @@ Les stratégies suivantes sont obsolètes.
 
 - [ForceLegacyDefaultReferrerPolicy](./microsoft-edge-policies.md#forcelegacydefaultreferrerpolicy) : utiliser une stratégie de référence par défaut de no-referrer-when-downgrade
 - [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) : activer les rapports de données d’utilisation et d’incident
-- [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) : envoyer des informations sur le site pour améliorer les services Microsoft
+- [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices): envoyer des informations sur le site pour améliorer les services Microsoft
 <!-- end major 89 -->
-## <a name="version-88070581-february-25"></a>Version 88.0.705.81 du 25 février
 
-Résolution de divers bogues et de problèmes de performances.
-
-## <a name="version-88070574-february-17"></a>Version 88.0.705.74 du 17 février
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#february-17-2021)
-
-## <a name="version-88070568-february-11"></a>Version 88.0.705.68 du 11 février
-
-Résolution de divers bogues et de problèmes de performances.
-
-## <a name="version-88070563-february-5"></a>Version 88.0.705.63 du 5 février
-
-> [!IMPORTANT]
-> Cette mise à jour contient [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), qui a été signalé par l’équipe Chromium comme cible de code malveillant exploitant une faille de sécurité.
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#february-5-2021)
-
-## <a name="version-88070562-february-4"></a>Version 88.0.705.62 du 4 février
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#february-4-2021)
-
-Résolution de divers bogues et de problèmes de performances.
-
-## <a name="version-88070556-january-28"></a>Version 88.0.705.56 : 28 janvier
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-88070553-january-26"></a>Version 88.0.705.53 : 26 janvier
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-88070550-january-21"></a>Version 88.0.705.50 du 21 janvier
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#january-21-2021)
-
-<!--- begin major 88  --->
-### <a name="feature-updates"></a>Mises à jour des fonctionnalités
-
-- **Fonctionnalités obsolètes :**
-
-  - Prise en charge du protocole FTP obsolète. La prise en charge du protocole FTP hérité a été supprimée de Microsoft Edge. Toute tentative d’accès à un lien FTP entraînera l’ouverture par le système d’exploitation d’une application externe pour gérer le lien FTP. Une autre solution pour les administrateurs informatiques consiste à configurer Microsoft Edge afin qu’il utilise le mode IE pour les sites qui dépendent du protocole FTP.
-  - La prise en charge d’Adobe Flash sera supprimé. À partir de la version 88 de Microsoft Edge Beta, la fonctionnalité et la prise en charge d’Adobe Flash seront supprimées. Pour en savoir plus : [Mise à jour concernant la fin de la prise en charge d’Adobe Flash Player – Blog Microsoft Edge (Windows.com)](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/)
-
-- **Authentification :**
-
-  - La signature unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) et le compte Microsoft (MSA) sur Windows de niveau inférieur. Un utilisateur se connectant à Microsoft Edge sur Microsoft Windows de niveau inférieur (7, 8.1) se connecte désormais automatiquement aux sites web configurés pour autoriser la connexion unique avec les comptes Professionnel et Microsoft (par exemple, bing.com, office.com, msn.com, outlook.com).<br>Remarque : il est possible que l’utilisateur doive se déconnecter et se reconnecter s’il se connecte à une version antérieure à la version 88 de Microsoft Edge pour utiliser cette fonctionnalité.
-  
-  - L’authentification unique (SSO) vers des sites professionnels à l’aide des comptes Windows Azure Active Directory (Azure AD) sur le système dans des profils Microsoft Edge non Azure AD. Cette fonctionnalité peut être activée pour n’importe quel profil qui n’est pas connecté avec un compte scolaire/professionnel et qui n’est pas invité ou en mode privé et permet l’utilisation de n’importe quel compte scolaire/professionnel sur le système d’exploitation avec ce profil. Cette fonctionnalité peut être configurée dans **Paramètres** > **Profils** > **Préférences de profil** > **Autoriser l'authentification unique pour les sites professionnels ou scolaires à l’aide de ce profil**.
-  
-    > [!NOTE]
-    > « L’authentification unique (SSO) pour tous les comptes Windows utilisant le profil Microsoft Edge » est une mise à jour des notes de publication du 21 janvier.
-
-- **Option du mode plein écran pour terminer la session**. Le bouton « Mettre fin à la session » est désormais disponible en mode plein écran dans l’expérience de navigation publique. Cette fonctionnalité permet de supprimer les données et paramètres du navigateur lorsque Microsoft Edge est fermé. Pour en savoir plus sur les fonctionnalités et la feuille de route du mode plein écran, voir [Configurer le mode plein écran Microsoft Edge](./microsoft-edge-configure-kiosk-mode.md).
-
-- **Sécurité et confidentialité :**
-
-  - Des alertes sont générées si le mot de passe d’un utilisateur est détecté dans une fuite en ligne. Les mots de passe des utilisateurs sont examinés par rapport à un référentiel d’informations d’identification connues qui ont été divulguées et envoient à l’utilisateur une alerte si une correspondance est trouvée. Pour garantir la sécurité et la confidentialité, les mots de passe des utilisateurs sont hachés et chiffrés lorsqu’ils sont vérifiés par rapport à la base de données des informations d’identification divulguées.
-  - Mettre automatiquement à niveau le contenu mixte. Les pages sécurisées fournies via HTTPS peuvent contenir des images de référence fournies via HTTP non sécurisé. Pour améliorer la confidentialité et la sécurité dans Microsoft Edge 88, ces images seront récupérées via HTTPS. Si l’image n’est pas disponible via HTTPS, elle n’est pas chargée.
-  - Afficher les autorisations de site par site et par activité récente. À partir de Microsoft Edge 88, les utilisateurs peuvent gérer plus facilement les autorisations de site. Ils peuvent afficher les autorisations par site web, et non plus seulement par type d’autorisation. Par ailleurs, nous avons ajouté une section activité récente qui permettra à l’utilisateur d’afficher les dernières modifications apportées à ses autorisations de site.
-  - Amélioration des contrôles pour les cookies du navigateur. À partir de Microsoft Edge 88, les utilisateurs peuvent supprimer des cookies tiers sans affecter les cookies de première partie. Les utilisateurs peuvent également filtrer leurs cookies selon s’il s’agit d’une première ou tierce partie et les trier en fonction du nom, du nombre de cookies, de la quantité de données stockées et de la dernière modification.
-
-- **Mots de passe :**
-
-  - Générateur de mot de passe. Microsoft Edge offre un générateur de mot de passe fort intégré que vous pouvez utiliser lors de l’inscription d’un nouveau compte ou lors de la modification d’un mot de passe existant. Recherchez simplement la liste déroulante de mot de passe suggéré par le navigateur dans le champ mot de passe et, lorsqu’il est sélectionné, il sera automatiquement enregistrer dans le navigateur et synchronisé sur tous les appareils pour une utilisation facile à l’avenir.
-  - Moniteur de mot de passe. Lorsque l’un de vos mots de passe enregistrés dans le navigateur correspond à ceux répertoriés dans la liste des informations d’identification divulguées, Microsoft Edge vous avertit et vous invite à mettre à jour votre mot de passe. Le moniteur de mot de passe analyse les correspondances en votre nom et est activé par défaut.
-  - Modifier le mot de passe. Vous pouvez désormais modifier vos mots de passe enregistrés directement dans les paramètres Microsoft Edge. Chaque fois qu’un mot de passe a été mis à jour en dehors de Microsoft Edge, il est facile de remplacer l’ancien mot de passe enregistré par le nouveau en modifiant l’entrée enregistrée dans les Paramètres. 
-
-- **Améliorer la vitesse de démarrage de Microsoft Edge grâce à l'accélération du démarrage**. Pour améliorer la vitesse de démarrage de Microsoft Edge, nous avons conçu une fonctionnalité appelée Accélérateur de démarrage. L’Accélérateur de démarrage accélère le lancement en permettant à Microsoft Edge de s’exécuter en arrière-plan. Remarque : cette fonctionnalité est limitée à un groupe d’utilisateurs sélectionnés de manière aléatoire et ayant activé l’expérimentation. Ces utilisateurs donnent des commentaires à l’équipe chargée de la fonctionnalité.
-
-- **Productivité :**
-
-  - Améliorez votre productivité et le travail multitâche grâce aux onglets verticaux. À mesure que vous ajoutez des onglets horizontaux, les titres de site sont tronqués et les commandes des onglets perdent en visibilité. Cela interrompt le flux de travail de l’utilisateur, car il passe plus de temps à rechercher, à passer de l’un à l’autre et à gérer ses onglets, et moins de temps sur la tâche en cours. Les onglets verticaux permettent aux utilisateurs de déplacer leurs onglets vers le côté, là où les icônes alignées à la verticale et les titres de sites plus longs permettent de jeter un coup d’œil rapide pour identifier l’onglet que vous voulez ouvrir et basculer vers celui-ci.
-  - Remplissage automatique du champ de date de naissance. Microsoft Edge vous permet d’économiser du temps et de l’énergie lors du remplissage des formulaires et de la création de comptes en ligne à l’aide de la saisie semi-automatique des données utilisateur, telles que les adresses, les noms, les numéros de téléphone, etc. Microsoft Edge prend désormais en charge le champ Date de naissance que les utilisateurs peuvent enregistrer et remplir automatiquement. Un utilisateur peut afficher, modifier et supprimer ces informations à tout moment dans ses paramètres de profil.
-  - Améliorations apportées à l’historique Récemment fermés. L’historique Récemment fermés conserve désormais les 25 derniers onglets et fenêtres de n’importe quelle session de navigation, et non plus seulement la session précédente. Les utilisateurs peuvent sélectionner Récemment fermés dans la nouvelle expérience d’Historique pour afficher tous les onglets qui ont été ouverts.
-  - Fonction « votre journée en un clin d’œil » activée par défaut. À partir de la version 88 de Microsoft Edge, les travailleurs de l’information peuvent bénéficier de fonctionnalités de productivité intelligentes sur leur page Nouvel onglet (NTP). Les utilisateurs de Microsoft Edge 87 pourront également découvrir ces fonctionnalités dans les 2 semaines après la publication de Microsoft Edge 88. Nous offrons aux utilisateurs qui sont connectés à l’aide de leur compte professionnel ou scolaire du contenu personnalisé et pertinent optimisé par leur M365 Graph. Les utilisateurs peuvent rapidement parcourir leurs modules « votre journée en un clin d’œil » pour suivre facilement leurs réunions et leurs activités récentes, et lancer rapidement les applications qu’ils souhaitent utiliser.
-
-- **Synchronisation de l'historique et des onglets ouverts**. La synchronisation de l'historique et des onglets ouverts est désormais disponible pour les utilisateurs. L’activation de ces fonctionnalités permet aux utilisateurs de reprendre là où ils en étaient en rendant leur historique de navigation et les onglets ouverts disponibles sur tous leurs appareils de synchronisation. Nous avons mis à jour les stratégies de synchronisation et d’historique des navigateurs, de sorte que les utilisateurs sont désormais connectés et productifs sur tous les appareils à l’aide de Microsoft Edge. [En savoir plus ](https://blogs.windows.com/windowsexperience/2021/01/21/this-year-lets-resolve-to-make-the-most-of-our-time-online-and-better-protect-ourselves-from-online-threats/).
-
-- **PDF :**
-
-  - Affichage d’un document PDF en mode livre (deux pages) À partir de la version 88 de Microsoft Edge, les utilisateurs peuvent consulter des documents PDF en affichage à une ou deux pages (mode livre). Pour modifier l’affichage, cliquez sur le bouton **Mode Page** dans la barre d’outils.
-  - Prise en charge des notes de texte ancré pour les fichiers PDF. À partir de la version 87 de Microsoft Edge, les utilisateurs peuvent ajouter des notes de texte tapées sur n’importe quelle portion de texte dans des fichiers PDF.
-
-- **Polices :**
-
-  - Les icônes du navigateur sont mises à jour dans le système Fluent Design. Dans le cadre de nos efforts continus en termes de Fluent Design dans le navigateur, nous avons apporté des modifications de façon à aligner davantage les icônes sur le nouveau système d’icônes Microsoft. Ces modifications peuvent avoir une incidence sur un grand nombre de nos interfaces utilisateur avec une interaction tactile importante, y compris les onglets, la barre d’adresses, ainsi que les icônes de navigation et de recherche d’itinéraire dans nos différents menus.
-  - Amélioration du rendu des polices. Le rendu du texte est amélioré pour améliorer la clarté et réduire le flou.
-
-### <a name="policy-updates"></a>Mises à jour de stratégies
-
-#### <a name="new-policies"></a>Nouvelles stratégies
-
-Dix-huit nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
-
-- [BasicAuthOverHttpEnabled](./microsoft-edge-policies.md#basicauthoverhttpenabled) : autoriser l’authentification de base pour HTTP.
-- [BlockExternalExtensions](./microsoft-edge-policies.md#blockexternalextensions) : empêche l’installation d’extensions externes.
-- [InternetExplorerIntegrationLocalFileAllowed](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileallowed) : autorise le lancement de fichiers locaux en mode Internet Explorer.
-- [InternetExplorerIntegrationLocalFileExtensionAllowList](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist) : ouvre les fichiers locaux dans la liste verte des extensions de fichier en mode Internet Explorer.
-- [InternetExplorerIntegrationLocalFileShowContextMenu](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileshowcontextmenu) : afficher le menu contextuel pour ouvrir un lien en mode Internet Explorer.
-- [IntranetRedirectBehavior](./microsoft-edge-policies.md#intranetredirectbehavior) : comportement de la redirection intranet.
-- [PrinterTypeDenyList](./microsoft-edge-policies.md#printertypedenylist) : désactive les types d’imprimante dans la liste d’exclusion.
-- [ShowMicrosoftRewards](./microsoft-edge-policies.md#showmicrosoftrewards) : affiche les expériences Microsoft Rewards.
-- [SleepingTabsEnabled](./microsoft-edge-policies.md#sleepingtabsenabled) : configure les onglets en veille.
-- [SleepingTabsTimeout](./microsoft-edge-policies.md#sleepingtabstimeout) : définit le délai d’inactivité des onglets en arrière-plan avant qu’ils ne soient mis en veille.
-- [SleepingTabsBlockedForUrls](./microsoft-edge-policies.md#sleepingtabsblockedforurls) : bloque les onglets en veille sur des sites spécifiques.
-- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled) : active l’accélérateur de démarrage.
-- [TargetBlankImpliesNoOpener](./microsoft-edge-policies.md#targetblankimpliesnoopener) : ne définissez pas window.opener pour les liens ciblant _blank.
-- [UpdatePolicyOverride](./microsoft-edge-policies.md#updatepolicyoverride) : indique comment Microsoft Edge Update gère les mises à jour disponibles à partir de Microsoft Edge.
-- [VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) : configure la disponibilité de la disposition verticale pour les onglets situés sur le côté du navigateur.
-- [WebRtcAllowLegacyTLSProtocols](./microsoft-edge-policies.md#webrtcallowlegacytlsprotocols) : autorise le passage à une version antérieure héritée de TLS/DTLS dans WebRTC.
-- [WebWidgetAllowed](./microsoft-edge-policies.md#webwidgetallowed) : active le widget Web.
-- [WebWidgetIsEnabledOnStartup](./microsoft-edge-policies.md#webwidgetisenabledonstartup) : autorise le widget web au démarrage de Windows.
-
-#### <a name="deprecated-policies"></a>Stratégies déconseillées
-
-- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) : active l’authentification proactive.
-- [ProxyBypassList](./microsoft-edge-policies.md#proxybypasslist) : configure les règles de contournement du proxy.
-- [ProxyMode](./microsoft-edge-policies.md#proxymode) : configure les paramètres du serveur proxy.
-- [ProxyPacUrl](./microsoft-edge-policies.md#proxypacurl) : définit l’URL du fichier proxy .pac.
-- [ProxyServer](./microsoft-edge-policies.md#proxyserver) : configure l’adresse ou l’URL du serveur proxy.
-- [WebDriverOverridesIncompatiblePolicies](./microsoft-edge-policies.md#webdriveroverridesincompatiblepolicies) : autorise WebDriver à remplacer les stratégies incompatibles.
-
-### <a name="obsoleted-policies"></a>Stratégies obsolètes
-
-- [AllowPopupsDuringPageUnload](./microsoft-edge-policies.md#allowpopupsduringpageunload) : permet à une page d’afficher des fenêtres contextuelles pendant son déchargement.
-- [DefaultPluginsSetting](./microsoft-edge-policies.md#defaultpluginssetting) : paramètre Adobe Flash par défaut.
-- [PluginsAllowedForUrls](./microsoft-edge-policies.md#pluginsallowedforurls) : autorise le plug-in Adobe Flash sur des sites spécifiques.
-- [PluginsBlockedForUrls](./microsoft-edge-policies.md#pluginsblockedforurls) : bloque le plug-in Adobe Flash sur des sites spécifiques.
-- [RunAllFlashInAllowMode](./microsoft-edge-policies.md#runallflashinallowmode) : étend le paramètre de contenu Adobe Flash à l’ensemble du contenu.
-<!--- end major 88  --->
-## <a name="version-87066475-january-7"></a>Version 87.0.664.75 du 7 janvier
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#january-7-2021)
-
-## <a name="version-87066466-december-17"></a>Version 87.0.664.66 du 17 décembre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-87066460-december-10"></a>Version 87.0.664.60 : 10 décembre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-87066457-december-7"></a>Version 87.0.664.57 : 7 décembre
-
-Résolution de divers bogues et de problèmes de performances. Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#december-7-2020)
-
-## <a name="version-87066455-december-3"></a>Version 87.0.664.55 du 3 décembre
-
-Résolution de divers bogues et problèmes de performances. La fonctionnalité suivante a été mise à jour pour cette version.
-
-- **L’option achat est activée par défaut**. À partir de la version 87 de Microsoft Edge, les utilisateurs de l’entreprise peuvent profiter d’achats dans Microsoft Edge. Grâce aux fonctionnalités d’achat, Microsoft Edge permet aux utilisateurs de trouver des coupons et de meilleurs prix lors de leurs achats en ligne. (L’interface de coupon a été publiée avec la version stable 87.0.664.41). L’interface de comparaison des prix est désormais disponible dans cette mise à jour. Cette fonctionnalité peut être configurée à l’aide de la stratégie [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled). Consultez notre [Blog](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) et [En savoir plus](/microsoft-edge/privacy-whitepaper#shopping) sur les Achats Microsoft.
-
-## <a name="version-87066452-november-30"></a>Version 87.0.664.52 : 30 novembre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-87066447-november-23"></a>Version 87.0.664.47 : 23 novembre
-
-Résolution de divers bogues et problèmes de performances.
-
-<!-- begin major 87 --->
-## <a name="version-87066441-november-19"></a>Version 87.0.664.41 du 19 novembre
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#november-19-2020)
-
-### <a name="feature-updates"></a>Mises à jour des fonctionnalités
-
-- **Redirection automatique pour les sites incompatibles d’Internet Explorer vers Microsoft Edge**. À partir de la mise à jour stable de Microsoft Edge 87, les sites web publics qui affichent un message d’incompatibilité sur Internet Explorer seront automatiquement redirigés vers Microsoft Edge. Pour en savoir plus et configurer cette interface, voir la [Redirection des sites incompatibles](./edge-learnmore-neededge.md).
-
-- **Activation des fonctionnalités de confidentialité en mode plein écran**. À partir de la version 87 de Microsoft Edge, les fonctionnalités du mode plein écran seront activées et permettront aux entreprises de garantir la confidentialité des données utilisateur. Ces fonctionnalités activent les expériences telles que l’effacement des données utilisateur à la fermeture, la suppression des fichiers téléchargés et la réinitialisation de l’expérience de démarrage configurée après une durée inactivité déterminée. En savoir plus sur la [Configuration du mode plein écran Microsoft Edge](./microsoft-edge-configure-kiosk-mode.md).
-
-- **Fonctionnalités d’achat activées par défaut**. À partir de la version 87 de Microsoft Edge, les utilisateurs entreprise peuvent également bénéficier des achats dans Microsoft Edge. Grâce aux fonctionnalités Achats, Microsoft Edge permet aux utilisateurs de trouver des bons de réduction et de meilleurs tarifs lors de leurs achats en ligne. La fonction des bons de réduction est disponible avec cette mise à jour et la fonctionnalité de comparaison des prix sera publiée dans les prochaines mises à jour de Microsoft Edge version 87. Vous pouvez configurer cette fonctionnalité via la stratégie [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled) . Consultez notre [Blog](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) et [En savoir plus](/microsoft-edge/privacy-whitepaper#shopping) sur les Achats Microsoft.
-
-- **Activation du déploiement ClickOnce par défaut**. L’activation de ClickOnce par défaut dans Microsoft Edge 87, réduit les difficultés des entreprises à déployer des logiciels et mieux s’aligner sur le comportement du navigateur Microsoft Edge Legacy. Au démarrage de Microsoft Edge 87, l’état « Non Configuré » de la stratégie ClickOnceEnabled reflète le nouvel état par défaut Activé de la stratégie ClickOnce (comparé à l’État par défaut Désactivé précédent).
-
-- **La page nouvel onglet de l’entreprise (NTP) intègre la productivité avec un contenu de flux de travail personnalisable**. La Page Nouvel Onglet de l’Entreprise combine la page de productivité d’Office 365 que nous proposons aux utilisateurs connectés à leur compte professionnel ou scolaire, avec des flux professionnels personnalisés qui sont organisés en une seule page. Les utilisateurs reconnaîtront le contenu familier Office 365 et Microsoft Search pour les entreprises optimisé par Bing. Par ailleurs, il peuvent facilement personnaliser « Mon flux » en choisissant le contenu le plus pertinent pour eux à partir du contenu et des modules disponibles pour leur organisation. Les administrateurs informatiques peuvent contrôler les paramètres de flux d’actualités pour leur organisation, notamment le secteur sélectionné pour la nouvelle page d’onglets Microsoft Edge en accédant au Centre d’administration Microsoft 365. [Si vous souhaitez en savoir plus](https://blogs.windows.com/msedgedev/2020/10/29/enterprise-new-tab-page-my-feed/)
-
-- **Confidentialité et sécurité :**
-
-  - Jeton TLS de support Obligatoire pour les sites configurés par une stratégie. Le jeton TLS obligatoire permet d’éviter les attaques par vol de jetons afin de s’assurer que les cookies ne peuvent pas être réutilisés à partir d’un autre appareil que l’appareil sur lequel ils ont été initialement définis. L’utilisation du jeton TLS obligatoire nécessite la définition de la stratégie [AllowTokenBindingForUrls](./microsoft-edge-policies.md#allowtokenbindingforurls) et nécessite que les sites répertoriés prennent en charge cette fonctionnalité.
-
-- **Prise en charge du clavier pour le surligneur des fichiers PDF**. Les utilisateurs peuvent utiliser leurs touches de clavier pour surligner des textes de fichiers PDF.
-
-- **Impression:**
-
-  - Sélectionnez le côté à retourner lors de l’impression recto verso. Les utilisateurs peuvent choisir de retourner sur le côté long ou sur le côté court d’une feuille lors de l’impression recto verso.
-  - Sélectionnez le mode de tramage de l’impression pour l’entreprise. Contrôlez l’impression Microsoft Edge sur une imprimante non-PostScript sur Windows. Parfois l’ impression sur des imprimantes non-PostScript doit être tramée pour imprimer correctement. Les options d’impression sont « Complètes » et « Rapides ».
-
-### <a name="policy-updates"></a>Mises à jour de stratégies
-
-#### <a name="new-policies"></a>Nouvelles stratégies
-
-Ajout de dix nouvelles stratégies. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées.
-
-- [ConfigureFriendlyURLFormat](./microsoft-edge-policies.md#configurefriendlyurlformat) - Configurez le format de collage par défaut des URL copiées à partir de Microsoft Edge et déterminez si d’autres formats sont disponibles pour les utilisateurs.
-- [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled) -Achats activés dans Microsoft Edge.
-- [HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](./microsoft-edge-policies.md#hideinternetexplorerredirectuxforincompatiblesitesenabled) - Masquez la boite de dialogue de redirection ponctuelle et la bannière sur Microsoft Edge.
-- [KioskAddressBarEditingEnabled](./microsoft-edge-policies.md#kioskaddressbareditingenabled) - Configurez la modification de la barre d’adresses pour l’expérience de navigation publique en mode plein écran.
-- [KioskDeleteDownloadsOnExit](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) - Supprimez des fichiers téléchargés sous la session plein écran lorsque Microsoft Edge se ferme.
-- [PasswordRevealEnabled](./microsoft-edge-policies.md#passwordrevealenabled) -Activez le bouton Affichage du mot de passe.
-- [RedirectSitesFromInternetExplorerPreventBHOInstall](./microsoft-edge-policies.md#redirectsitesfrominternetexplorerpreventbhoinstall) -Empêchez l’installation de l’objet d’assistance du navigateur (BHO) pour rediriger les sites incompatibles d’Internet Explorer vers Microsoft Edge.
-- [RedirectSitesFromInternetExplorerRedirectMode](./microsoft-edge-policies.md#redirectsitesfrominternetexplorerredirectmode) - Redirigez les sites incompatibles de Internet Explorer vers Microsoft Edge.
-- [SpeechRecognitionEnabled](./microsoft-edge-policies.md#speechrecognitionenabled) - Configurez la Reconnaissance vocale.
-- [WebCaptureEnabled](./microsoft-edge-policies.md#webcaptureenabled) -Activez la fonctionnalité de capture web dans Microsoft Edge.
-
-#### <a name="deprecated-policy"></a>Stratégie Déconseillée
-
-[NewTabPageSetFeedType](./microsoft-edge-policies.md#newtabpagesetfeedtype) - Configurez l’expérience de la page nouvel onglet de Microsoft Edge.
-
-#### <a name="obsoleted-policy"></a>Stratégie obsolète
-
-[EnableDeprecatedWebPlatformFeatures](./microsoft-edge-policies.md#enabledeprecatedwebplatformfeatures) - Réactivez les fonctionnalités de plateforme web déconseillées pendant une période limitée.
-
-<!-- end major 87 -->
-
-## <a name="version-86062269-november-13"></a>Version 86.0.622.69 du 13 novembre
-
-> [!IMPORTANT]
-> Cette mise à jour contient [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) et [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), signalés par l’équipe Chromium comme cible code malveillant exploitant une faille de sécurité.
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#november-13-2020)
-
-## <a name="version-86062268-november-11"></a>Version 86.0.622.68 du 11 novembre
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici](./microsoft-edge-relnotes-security.md#november-11-2020)
-
-## <a name="version-86062263-november-4"></a>Version 86.0.622.63 du 4 novembre
-
-> [!IMPORTANT]
-> Cette mise à jour contient [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), signalé par l’équipe Chromium comme cible de code malveillant exploitant une faille de sécurité.
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#november-4-2020)
-
-## <a name="version-86062261-november-2"></a>Version 86.0.622.61 du 2 novembre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-86062258-october-29"></a>Version 86.0.622.58 : 29 octobre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-86062256-october-27"></a>Version 86.0.622.56 : 27 octobre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-86062251-october-22"></a>Version 86.0.622.51 du 22 octobre
-
-Les mises à jour de sécurité du canal stable sont répertoriées [ici](./microsoft-edge-relnotes-security.md#october-22-2020)
-
-## <a name="version-86062248-october-20"></a>Version 86.0.622.48 du 20 octobre
-
-Résolution de divers bogues et problèmes de performances.
-
-## <a name="version-86062243-october-15"></a>Version 86.0.622.43 : 15 octobre
-
-Résolution de divers bogues et problèmes de performances.
-
+<!-- Archive from 86.0.622.43: October 15 to beta 88.0.705.81: February 25  ->
 <!-- Archive from 86.0.622.38-october-9 to beta 86.0.62.215-september-14  ->
 <!-- Archived to version 84.0.522.40: July 16 -->
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

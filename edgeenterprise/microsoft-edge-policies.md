@@ -3,7 +3,7 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/01/2021
+ms.date: 06/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur Microsoft Edge pour Windows et Mac
-ms.openlocfilehash: 79996cdbee3099fbb3a3d17b982b84a05f5a5066
-ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
+ms.openlocfilehash: 21933e81427b84d69f6d3ead4dfc911519e65bb3
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11470892"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617874"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge : Stratégies
 
@@ -35,7 +35,34 @@ Le tableau suivant répertorie les stratégies nouvelles pour cette mise à jour
 
 |Nom|Sous-titre|
 |--|--|
-|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Identification du trafic Application Guard|
+|[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Connexion unique des sites professionnels ou scolaires à l’aide de ce profil activé|
+|[AutomaticHttpsDefault](#automatichttpsdefault)|Configurer HTTPS automatique|
+|[CECPQ2Enabled](#cecpq2enabled)|Accord clé post quantum CECPQ2 activé pour TLS|
+|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Spécifie s’il faut autoriser les sites web non sécurisés à effectuer des demandes vers des points de terminaison de réseau plus privés|
+|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Autoriser les sites répertoriés à effectuer des demandes vers des points de terminaison de réseau plus privés à partir de contextes non sécurisés|
+|[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Spécifier le nombre de jours pendant lesquels un site reste dans la liste des sites en mode InternetExplorer local|
+|[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Autoriser le rechargement des sites non configurés en mode InternetExplorer|
+|[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Activer Windows pour rechercher des données de navigation MicrosoftEdge locales|
+|[TripleDESEnabled](#tripledesenabled)|Activer les suites de chiffrement 3DES dans TLS|
+
+## <a name="deprecated-policies"></a>Stratégies déconseillées
+
+Le tableau suivant répertorie les stratégies dépréciées pour cette mise à jour.
+
+|Nom|Sous-titre|
+|--|--|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Autoriser le test du mode InternetExplorer (déconseillé)|
+|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Activer le paramètre de comportement de cookie SameSite hérité par défaut (déconseillé)|
+
+## <a name="obsolete-policies"></a>Stratégies obsolètes
+
+Le tableau suivant répertorie les stratégies obsolètes pour cette mise à jour.
+
+|Nom|Sous-titre|
+|--|--|
+|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Autoriser les certificats signés à l’aide de SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (obsolète)|
+|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configurer l’expérience de page Nouvel onglet MicrosoftEdge (obsolète)|
+|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Autoriser WebDriver à remplacer les stratégies incompatibles (obsolète)|
 
 ## <a name="available-policies"></a>Stratégies disponibles
 
@@ -53,6 +80,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 - [Gestionnaire et protection des mots de passe](#password-manager-and-protection)
 - [Niveau de performance](#performance)
 - [Impression](#printing)
+- [Paramètres de demande de réseau privé](#private-network-request-settings)
 - [Serveur proxy](#proxy-server)
 - [Paramètres des onglets en veille](#sleeping-tabs-settings)
 - [Paramètres SmartScreen](#smartscreen-settings)
@@ -103,7 +131,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|Bloquer le contenu non sécurisé sur les sites spécifiés|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|Autoriser JavaScript sur des sites spécifiques|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Bloquer JavaScript sur des sites spécifiques|
-|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Activer le paramètre de comportement hérité par défaut du cookie SameSite|
+|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Activer le paramètre de comportement de cookie SameSite hérité par défaut (déconseillé)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Revenir au comportement hérité de SameSite pour les cookies sur des sites spécifiés|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Autoriser les notifications sur des sites spécifiques|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|Bloquer les notifications sur des sites spécifiques|
@@ -112,8 +140,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Autoriser les fenêtres contextuelles sur des sites spécifiques|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Bloquer les fenêtres contextuelles sur des sites spécifiques|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Enregistrer les gestionnaires de protocoles|
-|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Déterminer si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications,
-et des conseils pour les services Microsoft|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choisissez si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications et des conseils pour les services Microsoft|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Accorder l’accès à des sites spécifiques pour la connexion à des périphériques USB spécifiques|
 |[WebUsbAskForUrls](#webusbaskforurls)|Autoriser WebUSB sur des sites spécifiques|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Bloquer WebUSB sur des sites spécifiques|
@@ -200,7 +227,13 @@ et des conseils pour les services Microsoft|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Mode d’impression graphique d’arrière-plan par défaut|
 |[PrintingEnabled](#printingenabled)|Activer l’impression|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Taille de page par défaut pour l’impression|
-|[UseSystemPrintDialog](#usesystemprintdialog)|Imprimer via la boîte de dialogue Imprimer du système|
+|[UseSystemPrintDialog](#usesystemprintdialog)|Boîte de dialogue d’impression Imprimer à l’aide du système|
+### [*<a name="private-network-request-settings"></a>Paramètres de demande de réseau privé*](#private-network-request-settings-policies)
+
+|Nom de la stratégie|Sous-titre|
+|-|-|
+|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Spécifie s’il faut autoriser les sites web non sécurisés à effectuer des demandes vers des points de terminaison de réseau plus privés|
+|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Autoriser les sites répertoriés à effectuer des demandes vers des points de terminaison de réseau plus privés à partir de contextes non sécurisés|
 ### [*<a name="proxy-server"></a>Serveur proxy*](#proxy-server-policies)
 
 |Nom de la stratégie|Caption|
@@ -227,7 +260,7 @@ et des conseils pour les services Microsoft|
 |[SmartScreenEnabled](#smartscreenenabled)|Configurer Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forcer Microsoft Defender SmartScreen à vérifier les téléchargements provenant de sources approuvées|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurer Microsoft Defender SmartScreen pour bloquer les applications potentiellement indésirables.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Démarrage&comma; page d’accueil et page Nouvel onglet*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Démarrage&comma; page d’accueil et page Nouvel onglet*](#startup-home-page-and-new-tab-page-policies)
 
 |Nom de la stratégie|Caption|
 |-|-|
@@ -241,14 +274,15 @@ et des conseils pour les services Microsoft|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Définir les liens rapides de la page Nouvel onglet|
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Activer le préchargement de la page Nouvel onglet pour un rendu plus rapide|
 |[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Autoriser les liens rapides sur la page Nouvel onglet|
-|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configurer l’expérience de page Nouvel onglet Microsoft Edge (déconseillée)|
+|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configurer l’expérience de page Nouvel onglet MicrosoftEdge (obsolète)|
 |[RestoreOnStartup](#restoreonstartup)|Action à effectuer au démarrage|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites à ouvrir lors du démarrage du navigateur|
 |[ShowHomeButton](#showhomebutton)|Afficher le bouton Accueil sur la barre d’outils|
 ### [*<a name="additional"></a>Supplémentaire*](#additional-policies)
 
-|Nom de la stratégie|Caption|
+|Nom de la stratégie|Sous-titre|
 |-|-|
+|[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Connexion unique des sites professionnels ou scolaires à l’aide de ce profil activé|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Activer les suggestions de la Recherche Microsoft dans la barre d’adresse de Bing|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Paramètres des annonces pour les sites contenant des annonces gênantes|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Activer la suppression de l’historique du navigateur et de l’historique des téléchargements|
@@ -272,6 +306,7 @@ et des conseils pour les services Microsoft|
 |[AutoOpenFileTypes](#autoopenfiletypes)|Liste des types de fichiers qui doivent être automatiquement ouverts au téléchargement|
 |[AutofillAddressEnabled](#autofilladdressenabled)|Activer la saisie automatique pour les adresses|
 |[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Activer la saisie automatique pour les cartes de crédit|
+|[AutomaticHttpsDefault](#automatichttpsdefault)|Configurer HTTPS automatique|
 |[AutoplayAllowed](#autoplayallowed)|Autoriser la lecture automatique de média pour les sites web|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Poursuivre l’exécution des applications en arrière-plan après la fermeture de Microsoft Edge|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Active les mises à jour en arrière-plan dans la liste des modèles disponibles pour Collections et d’autres fonctionnalités qui utilisent des modèles|
@@ -284,6 +319,7 @@ et des conseils pour les services Microsoft|
 |[BrowsingDataLifetime](#browsingdatalifetime)|Paramètres de durée de vie des données de navigation|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Utiliser le client DNS intégré|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Indique si le vérificateur de certificats intégré est utilisé pour la vérification des certificats de serveur (déconseillé)|
+|[CECPQ2Enabled](#cecpq2enabled)|Accord clé post quantum CECPQ2 activé pour TLS|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Désactiver l’application des règles de transparence des certificats pour une liste de hachages subjectPublicKeyInfo|
 |[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Désactiver l’application des règles de transparence des certificats pour une liste d’autorités de certification héritées|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Désactiver l’application des règles de transparence des certificats pour des URL spécifiques|
@@ -324,11 +360,12 @@ et des conseils pour les services Microsoft|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Nom de la stratégie de groupe : réactiver les fonctionnalités des plateformes web déconseillées pendant une durée limitée (obsolète)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Activer le téléchargement des actions de domaine à partir de Microsoft|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Activer les vérifications OCSP/CRL en ligne|
-|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Autoriser les certificats signés à l’aide de l’algorithme SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (obsolète)|
+|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Autoriser les certificats signés à l’aide de SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (obsolète)|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Autoriser les extensions gérées de manière à utiliser l’API de plateforme de matériel d’entreprise|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Autoriser l’accès à l’outil Enterprise Mode Site List Manager|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Désactiver le téléchargement des avertissements basés sur l’extension de fichier pour les types de fichiers spécifiés sur les domaines|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Contrôler la communication avec le service d’expérimentation et de configuration|
+|[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Ports réseau explicitement autorisés|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Afficher une case à cocher « Toujours ouvrir » dans la boîte de dialogue de protocole externe|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Autoriser les utilisateurs à configurer la sécurité familiale et le mode Enfants|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Activer la barre des favoris|
@@ -346,6 +383,7 @@ et des conseils pour les services Microsoft|
 |[GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar)|Forcer la navigation directe sur le site intranet au lieu de rechercher des entrées à mots uniques dans la barre d’adresses|
 |[HSTSPolicyBypassList](#hstspolicybypasslist)|Configurer la liste des noms qui vont contourner la vérification de stratégie HSTS|
 |[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)|Utiliser l’accélération matérielle lorsque celle-ci est disponible|
+|[HeadlessModeEnabled](#headlessmodeenabled)|Contrôler l’utilisation du mode sans affichage|
 |[HideFirstRunExperience](#hidefirstrunexperience)|Masquer l’expérience de première utilisation et l’écran de démarrage|
 |[HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](#hideinternetexplorerredirectuxforincompatiblesitesenabled)|Masquer la bannière et la boîte de dialogue de redirection ponctuelle sur Microsoft Edge|
 |[ImportAutofillFormData](#importautofillformdata)|Autoriser l’importation des données de saisie automatique|
@@ -360,6 +398,7 @@ et des conseils pour les services Microsoft|
 |[ImportSavedPasswords](#importsavedpasswords)|Autoriser l’importation des mots de passe enregistrés|
 |[ImportSearchEngine](#importsearchengine)|Autoriser l’importation des paramètres du moteur de recherche|
 |[ImportShortcuts](#importshortcuts)|Autoriser l’importation des raccourcis|
+|[ImportStartupPageSettings](#importstartuppagesettings)|Autoriser l’importation des paramètres de la page de démarrage|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configurer la disponibilité du mode InPrivate|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Activer les avertissements pour les formulaires non sécurisés|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Contrôler la fonctionnalité IntensiveWakeUpThrottling|
@@ -367,16 +406,20 @@ et des conseils pour les services Microsoft|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configurer l’intégration d’Internet Explorer|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Autoriser le lancement de fichiers locaux en mode Internet Explorer|
 |[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Ouvrir les fichiers locaux dans la liste verte des extensions de fichier en mode Internet Explorer|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Afficher le menu contextuel pour ouvrir un lien en mode Internet Explorer|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Afficher le menu contextuel pour ouvrir un lien file:// en mode InternetExplorer|
+|[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Spécifier le nombre de jours pendant lesquels un site reste dans la liste des sites en mode InternetExplorer local|
+|[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Autoriser le rechargement des sites non configurés en mode InternetExplorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configurer la liste des sites en mode Entreprise|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Spécifier le comportement des navigations « sur la page » vers des sites non configurés lors du démarrage à partir des pages du mode Internet Explorer.|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Autoriser le test du mode Internet Explorer|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Autoriser le test du mode InternetExplorer (déconseillé)|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportement de la redirection intranet|
 |[IsolateOrigins](#isolateorigins)|Activer l’isolation de site pour des origines spécifiques|
+|[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Activer Windows pour rechercher des données de navigation MicrosoftEdge locales|
 |[LocalProvidersEnabled](#localprovidersenabled)|Autoriser les suggestions des fournisseurs de services locaux|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Définit des valeurs de configuration gérées pour des sites web avec des origines spécifiques|
 |[ManagedFavorites](#managedfavorites)|Configurer les favoris|
 |[ManagedSearchEngines](#managedsearchengines)|Gérer les moteurs de recherche|
+|[MathSolverEnabled](#mathsolverenabled)|Permettre aux utilisateurs de capturer un problème mathématique et d’obtenir la solution avec une explication pas à pas dans MicrosoftEdge|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Nombre maximal de connexions simultanées au serveur proxy|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Autoriser Google Cast à se connecter aux appareils Cast sur toutes les adresses IP|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Activer les rapports de données liés à l’utilisation et aux incidents (obsolète)|
@@ -386,9 +429,9 @@ et des conseils pour les services Microsoft|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configurer la connexion automatique du profil par défaut de l’utilisateur avec son compte professionnel ou scolaire|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Contrôler l’application des restrictions de sécurité aux origines non sécurisées|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Autoriser les sites web à vérifier les modes de paiement disponibles|
-|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Autoriser la personnalisation des services Microsoft en envoyant des données de navigation et de navigateur à Microsoft|
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Autoriser la personnalisation des publicités, de Microsoft Edge, de la recherche, des actualités et d’autres services Microsoft en envoyant l’historique de navigation, les favoris et les collections, l’utilisation et d’autres données de navigation à Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Autoriser l’Assistant Épingler à la barre des tâches|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|Activer l’authentification proactive (déconseillé)|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|Activer l’authentification proactive (obsolète)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Activer le contenu promotionnel dans les onglets|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Demander où enregistrer les fichiers téléchargés|
 |[QuicAllowed](#quicallowed)|Autoriser le protocole QUIC|
@@ -419,6 +462,7 @@ et des conseils pour les services Microsoft|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquer l’accès aux capteurs sur des sites spécifiques|
 |[SerialAskForUrls](#serialaskforurls)|Autoriser l’API Serial sur des sites spécifiques|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquer l’API Serial sur des sites spécifiques|
+|[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Spécifie si SharedArrayBuffers peut être utilisé dans un contexte non isolé inter origines|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Afficher les expériences de Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher le raccourci Microsoft Office dans la barre des favoris (déconseillé)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Autoriser les recommandations et les notifications promotionnelles de Microsoft Edge|
@@ -441,6 +485,7 @@ et des conseils pour les services Microsoft|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Définir une limite de mémoire en mégaoctets qu’une seule instance de Microsoft Edge peut utiliser|
 |[TrackingPrevention](#trackingprevention)|Bloquer le suivi de l’activité de navigation sur le web des utilisateurs|
 |[TranslateEnabled](#translateenabled)|Activer la traduction|
+|[TripleDESEnabled](#tripledesenabled)|Activer les suites de chiffrement 3DES dans TLS|
 |[URLAllowlist](#urlallowlist)|Définir une liste d’URL autorisées|
 |[URLBlocklist](#urlblocklist)|Bloquer l’accès à une liste d’URL|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Indique comment Microsoft Edge Update gère les mises à jour disponibles à partir de Microsoft Edge|
@@ -455,7 +500,7 @@ et des conseils pour les services Microsoft|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configurer la liste des applications web dont l’installation est forcée|
 |[WebCaptureEnabled](#webcaptureenabled)|Activer la fonctionnalité de capture web dans Microsoft Edge|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Réactiver l'API Web Components v0 jusqu'à M84 (obsolète)|
-|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Autoriser WebDriver à remplacer les stratégies incompatibles (déconseillé)|
+|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Autoriser WebDriver à remplacer les stratégies incompatibles (obsolète)|
 |[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Autoriser la mise à niveau vers une ancienne version de TLS/DTLS dans WebRTC (déconseillé)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gérer l’exposition des adresses IP locales par WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Limiter l’exposition de l’adresse IP locale par WebRTC|
@@ -538,8 +583,8 @@ Pour plus d’informations sur l’identification du trafic Application Guard vi
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
-  "ProxyMode": "direct", 
-  "ProxyPacUrl": "https://internal.site/example.pac", 
+  "ProxyMode": "direct",
+  "ProxyPacUrl": "https://internal.site/example.pac",
   "ProxyServer": "123.123.123.123:8080"
 }
 ```
@@ -1044,8 +1089,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Les cookies créés par les sites web qui ne correspondent pas au modèle sont contrôlés par la stratégie [DefaultCookiesSetting](#defaultcookiessetting), si elle est définie, ou par la configuration personnelle de l’utilisateur. Il s’agit également du comportement par défaut si cette stratégie n’est pas configurée.
 
-Si Microsoft Edge s’exécute en mode arrière-plan, la session peut rester ouverte lors de la fermeture de la dernière fenêtre, ce qui signifie que les cookies ne seront pas effacés lors de la fermeture de la fenêtre. Si vous souhaitez en savoir plus sur la configuration de ce comportement, consultez la stratégie [BackgroundModeEnabled](#backgroundmodeenabled).
-
 Vous pouvez également utiliser les stratégies [CookiesAllowedForUrls](#cookiesallowedforurls) et [CookiesBlockedForUrls](#cookiesblockedforurls) pour contrôler les sites web pouvant créer des cookies.
 
 Il ne peut pas y avoir de modèles d’URL en conflit définis entre ces trois stratégies :
@@ -1123,9 +1166,9 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   Déterminez si les sites web peuvent créer des cookies sur l’appareil de l’utilisateur. Il s’agit de la stratégie du « tout ou rien » : vous pouvez autoriser tous les sites web à créer des cookies, ou bien, aucun site web ne peut en créer. Vous ne pouvez pas utiliser cette stratégie pour activer les cookies provenant de sites web spécifiques.
 
-Définissez la stratégie sur « SessionOnly » pour effacer les cookies à la fermeture de la session. Si Microsoft Edge s’exécute en mode arrière-plan, la session peut rester ouverte lors de la fermeture de la dernière fenêtre, ce qui signifie que les cookies ne seront pas effacés lors de la fermeture de la fenêtre. Si vous souhaitez en savoir plus sur la configuration de ce comportement, consultez la stratégie [BackgroundModeEnabled](#backgroundmodeenabled).
+Définissez la stratégie sur «SessionOnly» pour effacer les cookies à la fermeture de la session.
 
-Si cette stratégie n’est pas configurée, la valeur par défaut « AllowCookies » est utilisée ; les utilisateurs peuvent, en accédant aux paramètres de Microsoft Edge, le modifier. (Si vous souhaitez que les utilisateurs ne puissent pas modifier ce paramètre, configurez la stratégie.)
+Si cette stratégie n’est pas configurée, la valeur par défaut «AllowCookies» est utilisée; les utilisateurs peuvent, en accédant aux paramètres de MicrosoftEdge, la modifier. (Si vous souhaitez que les utilisateurs ne puissent pas modifier ce paramètre, configurez la stratégie.)
 
 Mappage des options de stratégie :
 
@@ -2497,9 +2540,11 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
   #### <a name="description"></a>Description
 
-  Déterminez une liste des sites, basés sur des formats d’URL, qui sont autorisés à exécuter JavaScript.
+  Définissez une liste de sites, basés sur des formats d’URL, qui sont autorisés à exécuter JavaScript.
 
-Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultJavaScriptSetting](#defaultjavascriptsetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
+Si vous ne configurez pas cette stratégie, [DefaultJavaScriptSetting](#defaultjavascriptsetting) s’applique à tous les sites, si elle est définie. Si ce n’est pas le cas, le paramètre personnel de l’utilisateur s’applique.
+
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge :
 
@@ -2562,9 +2607,11 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>Description
 
-  Déterminez une liste des sites, basés sur des formats d’URL, qui ne sont pas autorisés à exécuter JavaScript.
+  Définissez une liste de sites, basés sur des formats d’URL, qui ne sont pas autorisés à exécuter JavaScript.
 
-Si cette stratégie n’est pas configurée, la valeur par défaut globale sera utilisée pour tous les sites à partir de la stratégie [DefaultJavaScriptSetting](#defaultjavascriptsetting), si elle est définie, ou à défaut, à partir de la configuration personnelle de l’utilisateur.
+Si vous ne configurez pas cette stratégie, [DefaultJavaScriptSetting](#defaultjavascriptsetting) s’applique à tous les sites, si elle est définie. Si ce n’est pas le cas, le paramètre personnel de l’utilisateur s’applique.
+
+Pour plus d’informations sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * n’est pas une valeur acceptée pour cette stratégie.
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge :
 
@@ -2617,9 +2664,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### <a name="legacysamesitecookiebehaviorenabled"></a>LegacySameSiteCookieBehaviorEnabled
 
-  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting"></a>Activer le paramètre de comportement hérité par défaut du cookie SameSite
+  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting-deprecated"></a>Activer le paramètre de comportement de cookie SameSite hérité par défaut (déconseillé)
 
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
   #### <a name="supported-versions"></a>Versions prises en charge :
 
@@ -2627,7 +2674,11 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>Description
 
-  Vous permet de rétablir le comportement SameSite hérité pour tous les cookies. Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient « SameSite=None », supprime la condition requise pour que les cookies « SameSite=None » transportent l’attribut « Secure » et ignore la comparaison de schéma lorsque vous évaluez si deux sites sont same-site.
+  «Cette stratégie est déconseillée, car elle est destinée à servir uniquement de mécanisme à court terme pour donner aux entreprises plus de temps pour mettre à jour leurs environnements s’ils sont jugés incompatibles avec le changement de comportement SameSite.
+
+Elle ne fonctionne pas dans MicrosoftEdge version95. Si vous avez toujours besoin d’un comportement de cookie hérité, utilisez [LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) pour configurer le comportement par domaine.
+
+Vous permet de rétablir le comportement SameSite hérité pour tous les cookies. Le rétablissement du comportement hérité entraîne le traitement des cookies qui ne spécifient pas d’attribut SameSite comme s’ils étaient « SameSite=None », supprime la condition requise pour que les cookies « SameSite=None » transportent l’attribut « Secure » et ignore la comparaison de schéma lorsque vous évaluez si deux sites sont same-site.
 
 Si vous ne configurez pas cette stratégie, le comportement SameSite par défaut pour les cookies dépend d’autres sources de configuration pour la fonctionnalité SameSite par défaut, la fonctionnalité Cookies-without-SameSite-must-be-secure et la fonctionnalité Schemeful Same-Site. Ces fonctionnalités peuvent également être configurées à l’aide d’une version d’évaluation de terrain ou de l’indicateur same-site-by-default-cookies, l’indicateur cookies-without-same-site-must-be-secure ou l’indicateur schemeful-same-site dans edge://flags.
 
@@ -2653,9 +2704,9 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de groupe : LegacySameSiteCookieBehaviorEnabled
-  - Nom de la stratégie de groupe : activer le paramètre de comportement hérité par défaut du cookie SameSite
-  - Chemin d’accès de la stratégie de groupe (obligatoire) : Administrative Templates/Microsoft Edge/Content settings
+  - Nom unique de la stratégie de groupe: LegacySameSiteCookieBehaviorEnabled
+  - Nom de la stratégie de groupe: activer le paramètre de comportement de cookie SameSite hérité par défaut (déconseillé)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Content settings
   - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
   - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
 
@@ -2701,7 +2752,7 @@ Le rétablissement du comportement hérité entraîne le traitement des cookies 
 
 Si cette stratégie n’est pas configurée, la valeur globale par défaut est utilisée. La valeur globale par défaut est également utilisée pour les cookies sur les domaines non couverts par les modèles que vous spécifiez.
 
-La valeur globale par défaut peut être configurée à l’aide de la stratégie [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled). Si [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) n’est pas définie, la valeur globale par défaut revient aux autres sources de configuration.
+La valeur par défaut globale peut être configurée jusqu’à MicrosoftEdge version95 à l’aide de la stratégie déconseillée [LegacySameSiteCookieBehaviorEnabled.](#legacysamesitecookiebehaviorenabled) Si [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) n’est pas définie, la valeur globale par défaut revient aux autres sources de configuration.
 
 Les modèles que vous répertoriez dans cette stratégie sont traités comme des domaines, et non comme des URL. Vous ne devez donc pas spécifier des schémas ou des ports.
 
@@ -3205,8 +3256,8 @@ Les utilisateurs ne peuvent pas supprimer un gestionnaire de protocoles inscrit 
 ```
 SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   {
-    "default": true, 
-    "protocol": "mailto", 
+    "default": true,
+    "protocol": "mailto",
     "url": "https://mail.contoso.com/mail/?extsrc=mailto&url=%s"
   }
 ]
@@ -3242,12 +3293,11 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   ### <a name="spotlightexperiencesandrecommendationsenabled"></a>SpotlightExperiencesAndRecommendationsEnabled
 
-  #### <a name="choose-whether-users-can-receive-customized-background-images-and-text-suggestions-notifications"></a>Déterminer si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications,
-et des conseils pour les services Microsoft
+  #### <a name="choose-whether-users-can-receive-customized-background-images-and-text-suggestions-notifications-and-tips-for-microsoft-services"></a>Choisissez si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications et des conseils pour les services Microsoft
 
   
   
-  #### <a name="supported-versions"></a>Versions prises en charge :
+  #### <a name="supported-versions"></a>Versions prises en charge:
 
   - Sur Windows depuis la version 86 ou ultérieur
 
@@ -3350,12 +3400,12 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   {
     "devices": [
       {
-        "product_id": 5678, 
+        "product_id": 5678,
         "vendor_id": 1234
       }
-    ], 
+    ],
     "urls": [
-      "https://contoso.com", 
+      "https://contoso.com",
       "https://fabrikam.com"
     ]
   }
@@ -4182,12 +4232,12 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
 Si vous activez ce paramètre, les extensions externes ne peuvent pas être installées.
 
-Si vous désactivez ce paramètre ou si vous ne l’avez pas désactivé, les extensions externes sont autorisées à être installées.
+Si vous désactivez ce paramètre ou si vous ne l’avez pas défini, les extensions externes sont autorisées à être installées.
 
-Les extensions externes et leur installation sont documentées sur https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options .
+Les extensions externes et leur installation sont documentées dans ./microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
 
 
-  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire : Oui
   - Peut être recommandée : Non
@@ -4468,9 +4518,9 @@ Des utilisateurs équipés d’outils de développement peuvent modifier le code
 
 Chaque élément de liste de la stratégie est une chaîne contenant un ID d’extension et, éventuellement, une URL de « mise à jour » séparée par un point-virgule (;). L’ID d’extension correspond à la chaîne de 32 caractères détectée, par exemple, sur edge://extensions en mode développeur. Si vous avez spécifié ce paramètre, l’URL « update » doit pointer vers un document XML Update Manifest ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). Par défaut, le programme utilise l’URL de mise à jour du site web des composants additionnels Microsoft Edge. L’URL « update » spécifiée dans cette stratégie ne sert que pour l’installation initiale. Les mises à jour ultérieures de l’extension utilisent l’URL indiquée dans le fichier manifeste de l’extension.
 
-Remarque : cette stratégie ne s’applique pas au mode InPrivate. En savoir plus sur les extensions d’hébergement ( https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) .
+Remarque: cette stratégie ne s’applique pas au mode InPrivate. En savoir plus sur les extensions d’hébergement (./microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
-  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire : Oui
   - Peut être recommandée : Non
@@ -4600,7 +4650,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   La définition de cette stratégie contrôle les paramètres de gestion des extensions pour Microsoft Edge, y compris tout contrôle par les stratégies associées aux extensions existantes. Cette stratégie remplace les stratégies héritées éventuellement définies.
 
-Cette stratégie mappe un ID d’extension ou une URL de mise à jour à son paramètre spécifique. Une configuration par défaut peut être définie pour l’ID spécial « * », qui s’applique à toutes les extensions sans configuration personnalisée de cette stratégie. Avec une URL de mise à jour, la configuration s’applique aux extensions dont l’URL de mise à jour est exacte, indiquée dans le manifeste de l’extension ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+Cette stratégie mappe un ID d’extension ou une URL de mise à jour à son paramètre spécifique. Une configuration par défaut peut être définie pour l’ID spécial «*», qui s’applique à toutes les extensions sans configuration personnalisée de cette stratégie. Avec une URL de mise à jour, la configuration s’applique aux extensions dont l’URL de mise à jour exacte est indiqué dans le manifeste de l’extension. Pour plus d’informations, consultez le guide détaillé de la stratégie ExtensionSettings disponible sur [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
 
 Pour bloquer les extensions d’un magasin tiers particulier, vous devez uniquement bloquer les update_url pour ce magasin. Par exemple, si vous souhaitez bloquer les extensions du Chrome Web Store, vous pouvez utiliser le JSON suivant.
 
@@ -4645,62 +4695,62 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   "*": {
     "allowed_types": [
       "hosted_app"
-    ], 
-    "blocked_install_message": "Custom error message.", 
+    ],
+    "blocked_install_message": "Custom error message.",
     "blocked_permissions": [
-      "downloads", 
+      "downloads",
       "bookmarks"
-    ], 
+    ],
     "install_sources": [
       "https://company-intranet/apps"
-    ], 
-    "installation_mode": "blocked", 
+    ],
+    "installation_mode": "blocked",
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
-    ], 
+    ],
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
     ]
-  }, 
+  },
   "abcdefghijklmnopabcdefghijklmnop": {
     "blocked_permissions": [
       "history"
-    ], 
-    "installation_mode": "allowed", 
+    ],
+    "installation_mode": "allowed",
     "minimum_version_required": "1.0.1"
-  }, 
+  },
   "bcdefghijklmnopabcdefghijklmnopa": {
     "allowed_permissions": [
       "downloads"
-    ], 
-    "installation_mode": "force_installed", 
+    ],
+    "installation_mode": "force_installed",
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
-    ], 
+    ],
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
-    ], 
+    ],
     "update_url": "https://contoso.com/update_url"
-  }, 
+  },
   "cdefghijklmnopabcdefghijklmnopab": {
-    "blocked_install_message": "Custom error message.", 
+    "blocked_install_message": "Custom error message.",
     "installation_mode": "blocked"
-  }, 
+  },
   "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {
-    "blocked_install_message": "Custom error message.", 
+    "blocked_install_message": "Custom error message.",
     "installation_mode": "blocked"
-  }, 
+  },
   "fghijklmnopabcdefghijklmnopabcde": {
-    "blocked_install_message": "Custom removal message.", 
+    "blocked_install_message": "Custom removal message.",
     "installation_mode": "removed"
-  }, 
+  },
   "update_url:https://www.contoso.com/update.xml": {
     "allowed_permissions": [
       "downloads"
-    ], 
+    ],
     "blocked_permissions": [
       "wallpaper"
-    ], 
+    ],
     "installation_mode": "allowed"
   }
 }
@@ -5084,7 +5134,9 @@ Si vous ne configurez pas cette stratégie, Microsoft Edge essaie de détecter s
 
 Si vous désactivez cette stratégie, les demandes HTTP non sécurisées provenant du schéma d’authentification de base sont bloquées et seule la sécurité HTTPS est autorisée.
 
-  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+Ce paramètre de stratégie est ignoré (et Basic est toujours interdit) si la stratégie [AuthSchemes](#authschemes) est définie et n’inclut pas Basic.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire : Oui
   - Peut être recommandée : Non
@@ -6803,9 +6855,9 @@ Si la taille de page n’est pas disponible sur l’imprimante choisie par l’u
 ```
 SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   "custom_size": {
-    "height": 297000, 
+    "height": 297000,
     "width": 210000
-  }, 
+  },
   "name": "custom"
 }
 ```
@@ -6901,6 +6953,152 @@ Si vous ne configurez pas ou désactivez cette stratégie, les commandes d’imp
 
   [Retour au début](#microsoft-edge---policies)
 
+  ## <a name="private-network-request-settings-policies"></a>Stratégies des paramètres de demande de réseau privé
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### <a name="insecureprivatenetworkrequestsallowed"></a>InsecurePrivateNetworkRequestsAllowed
+
+  #### <a name="specifies-whether-to-allow-insecure-websites-to-make-requests-to-more-private-network-endpoints"></a>Spécifie s’il faut autoriser les sites web non sécurisés à effectuer des demandes vers des points de terminaison de réseau plus privés
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version 92 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Contrôle si les sites web non sécurisés sont autorisés à effectuer des demandes vers des points de terminaison réseau plus privés.
+
+Cette stratégie est liée à la spécification CORS-RFC1918. Voir https://wicg.github.io/cors-rfc1918 pour plus d’informations.
+
+Un point de terminaison réseau est plus privé qu’un autre si:
+1) Son adresse IP est localhost et l’autre non.
+2) Son adresse IP est privée et l’autre est publique.
+À l’avenir, en fonction de l’évolution des spécifications, cette stratégie peut s’appliquer à toutes les demandes inter-origines adressées à des adresses IP privées ou à l’hôte local.
+
+Un site web est considéré comme sécurisé s’il répond à la définition d’un contexte sécurisé dans https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts. Sinon, il sera traité comme un contexte non sécurisé.
+
+Lorsque cette stratégie n’est pas définie ou définie sur false, le comportement par défaut des demandes provenant de contextes non sécurisés vers des points de terminaison réseau plus privés dépend de la configuration personnelle de l’utilisateur pour la fonctionnalité BlockInsecurePrivateNetworkRequests, qui peut être définie par une version d’évaluation du champ ou sur la ligne de commande.
+
+Lorsque cette stratégie est définie sur True, les sites web non sécurisés sont autorisés à effectuer des demandes à n’importe quel point de terminaison réseau, sous réserve d’autres vérifications inter-origines.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Non
+  - Actualisation dynamique de la stratégie : Oui
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: InsecurePrivateNetworkRequestsAllowed
+  - Nom de la stratégie de groupe: spécifie s’il faut autoriser les sites web non sécurisés à effectuer des demandes vers des points de terminaison réseau plus privés
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d’administration/Microsoft Edge/Paramètres de demande de réseau privé
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : InsecurePrivateNetworkRequestsAllowed
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : InsecurePrivateNetworkRequestsAllowed
+  - Exemple de valeur:
+``` xml
+<false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### <a name="insecureprivatenetworkrequestsallowedforurls"></a>InsecurePrivateNetworkRequestsAllowedForUrls
+
+  #### <a name="allow-the-listed-sites-to-make-requests-to-more-private-network-endpoints-from-insecure-contexts"></a>Autoriser les sites répertoriés à effectuer des demandes vers des points de terminaison de réseau plus privés à partir de contextes non sécurisés
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version 92 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Liste des modèles d’URL. Les demandes de réseau privé initiées à partir de sites web non sécurisés servis par des origines correspondantes sont autorisées.
+
+Si cette stratégie n’est pas définie, elle se comporte comme si elle était définie sur la liste vide.
+
+Pour les origines non couvertes par les modèles spécifiés ici, la valeur globale par défaut sera utilisée à partir de la stratégie [InsecurePrivateNetworkRequestsAllowed,](#insecureprivatenetworkrequestsallowed) si elle est définie, ou à partir de la configuration personnelle de l’utilisateur dans le cas contraire.
+
+Notez que cette stratégie affecte uniquement les origines non sécurisées, de sorte que les origines sécurisées (par exemple, incluses dans cette liste https://example.com) seront ignorées).
+
+Pour plus d’informations sur les modèles d’URL valides, cliquez [ici.](/DeployEdge/edge-learnmmore-url-list-filter%20format)
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Non
+  - Actualisation dynamique de la stratégie : Oui
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Liste composée de chaînes
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : InsecurePrivateNetworkRequestsAllowedForUrls
+  - Nom de la stratégie de groupe : autoriser les sites répertoriés à effectuer des requêtes vers des points de terminaison de réseau plus privés à partir de contextes non sécurisés
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Modèles d’administration/Microsoft Edge/Paramètres de demande de réseau privé
+  - Chemin d’accès de la stratégie de groupe (recommandé): N/A
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : 1, 2, 3, ...
+  - Type de valeur : liste composée de REG_SZ
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls\1 = "http://www.example.com:8080"
+SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : InsecurePrivateNetworkRequestsAllowedForUrls
+  - Exemple de valeur:
+``` xml
+<array>
+  <string>http://www.example.com:8080</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ## <a name="proxy-server-policies"></a>Stratégies de serveur proxy
 
   [Retour au début](#microsoft-edge---policies)
@@ -6919,9 +7117,9 @@ Si vous ne configurez pas ou désactivez cette stratégie, les commandes d’imp
 
   Cette stratégie est déconseillée, utilisez plutôt[ProxySettings](#proxysettings). Elle ne fonctionne pas dans la version 91 de Microsoft Edge.
 
-Définit la liste des hôtes pour lesquels Microsoft Edge contourne les proxy.
+Définit la liste des hôtes pour lesquels MicrosoftEdge contourne les proxy.
 
-Cette stratégie est appliquée uniquement si la stratégie de [ProxySettings](#proxysettings) n’est pas spécifiée et que vous avez sélectionné fixed_servers dans la stratégie [ProxyMode](#proxymode) . Si vous avez sélectionné un autre mode pour la configuration des stratégies proxy, n’activez ou ne configurez pas cette stratégie.
+Cette stratégie est appliquée uniquement si la stratégie [ProxySettings](#proxysettings) n’est pas spécifiée et que vous avez sélectionné fixed_servers ou pac_script dans la stratégie [ProxyMode](#proxymode). Si vous avez sélectionné un autre mode pour la configuration des stratégies proxy, n’activez ou ne configurez pas cette stratégie.
 
 Si vous activez cette stratégie, vous pouvez créer une liste d’hôtes pour lesquels Microsoft Edge n’utilise pas de proxy.
 
@@ -7267,9 +7465,9 @@ Si vous souhaitez voir plus d’exemples plus détaillés, consultez [https://go
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
-  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "pac_script", 
-  "ProxyPacUrl": "https://internal.site/example.pac", 
+  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/",
+  "ProxyMode": "pac_script",
+  "ProxyPacUrl": "https://internal.site/example.pac",
   "ProxyServer": "123.123.123.123:8080"
 }
 ```
@@ -8147,9 +8345,9 @@ Si vous activez cette stratégie, Microsoft Edge télécharge et affiche le ou l
 
 Si vous désactivez cette stratégie ou si vous ne la configurez pas, Microsoft Edge n’affiche pas le logo de l’entreprise, ni le logo Microsoft sur le nouvel onglet.
 
-Pour obtenir de l’aide sur la détermination du hachage SHA-256, consultez https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+Pour obtenir de l’aide sur la détermination du hachage SHA-256, voir ./powershell/module/microsoft.powershell.utility/get-filehash.
 
-  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire : Oui
   - Peut être recommandée : Non
@@ -8181,11 +8379,11 @@ Pour obtenir de l’aide sur la détermination du hachage SHA-256, consultez htt
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   "default_logo": {
-    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", 
+    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
     "url": "https://www.contoso.com/logo.png"
-  }, 
+  },
   "light_logo": {
-    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", 
+    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737",
     "url": "https://www.contoso.com/light_logo.png"
   }
 }
@@ -8479,12 +8677,12 @@ Si la stratégie est définie comme recommandée, les vignettes épinglées sont
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   {
-    "pinned": true, 
-    "title": "Contoso Portal", 
+    "pinned": true,
+    "title": "Contoso Portal",
     "url": "https://contoso.com"
-  }, 
+  },
   {
-    "title": "Fabrikam", 
+    "title": "Fabrikam",
     "url": "https://fabrikam.com"
   }
 ]
@@ -8648,19 +8846,19 @@ Stratégies connexes [: NewTabPageAllowedBackgroundTypes](#newtabpageallowedback
 
   ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
 
-  #### <a name="configure-the-microsoft-edge-new-tab-page-experience-deprecated"></a>Configurer l’expérience de page Nouvel onglet Microsoft Edge (déconseillée)
+  #### <a name="configure-the-microsoft-edge-new-tab-page-experience-obsolete"></a>Configurer l’expérience de page Nouvel onglet MicrosoftEdge (obsolète)
 
-  >DÉCONSEILLÉ : cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
-  #### <a name="supported-versions"></a>Versions prises en charge :
+  >OBSOLÈTE : cette stratégie est obsolète et ne fonctionne pas après Microsoft Edge version92.
+  #### <a name="supported-versions"></a>Versions prises en charge:
 
-  - sur Windows et macOS depuis la version 79 ou versions ultérieures
+  - Sur Windows macOS depuis la version79, jusqu’à 92
 
   #### <a name="description"></a>Description
 
-  Nous ne recommandons plus cette stratégie, car la nouvelle version de la page Nouvel onglet pour entreprises ne nécessite plus de choisir entre différents types de contenu. Au lieu de cela, le contenu présenté à l’utilisateur peut être contrôlé via le Centre d’administration Microsoft 365. Pour accéder au Centre d’administration Microsoft 365, connectez-vous à https://admin.microsoft.com à l’aide de votre compte d’administrateur. La stratégie sera obsolète après la version 90 de Microsoft Edge.
+  Cette stratégie est obsolète, car la nouvelle version de la page Nouvel onglet d’entreprise ne nécessite plus de choisir entre différents types de contenu. Au lieu de cela, le contenu présenté à l’utilisateur peut être contrôlé via le Centre d’administration Microsoft365. Pour accéder au Centre d’administration Microsoft365, connectez-vous à https://admin.microsoft.com à l’aide de votre compte d’administrateur.
 
-Vous permet de choisir l’expérience de flux Microsoft Actualités ou Office 365 pour la page Nouvel onglet.
+Vous permet de choisir l’expérience de flux MicrosoftNews ou Office365 pour la page Nouvel onglet.
 
 Si vous définissez cette stratégie sur « News », les utilisateurs voient l’expérience de flux Microsoft Actualités sur le nouvel onglet.
 
@@ -8698,9 +8896,9 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de groupe : NewTabPageSetFeedType
-  - Nom de la stratégie de groupe : configurer l’expérience de page Nouvel onglet Microsoft Edge (déconseillée)
-  - Chemin d’accès de la stratégie de groupe (obligatoire) : Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - Nom unique de la stratégie de groupe: NewTabPageSetFeedType
+  - Nom de la stratégie de groupe : configurer l’expérience Microsoft Edge page nouvel onglet (obsolète)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/Startup, page d’accueil et page Nouvel onglet
   - Chemin d’accès de la stratégie de groupe (recommandé) : Administrative Templates/Microsoft Edge - Default Settings (peut être remplacé par les utilisateurs)/Startup, home page and new tab page
   - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
 
@@ -8939,6 +9137,68 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent choisir d’af
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### <a name="aadwebsitessousingthisprofileenabled"></a>AADWebSiteSSOUsingThisProfileEnabled
+
+  #### <a name="single-sign-on-for-work-or-school-sites-using-this-profile-enabled"></a>Connexion unique des sites professionnels ou scolaires à l’aide de ce profil activé
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version 92 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  L’option «Autoriser la connexion unique pour les sites professionnels ou scolaires à l’aide de ce profil» permet aux profils non AAD d’utiliser la connexion unique pour les sites professionnels ou scolaires à l’aide des informations d’identification professionnelles ou scolaires présentes sur l’ordinateur. Cette option s’affiche pour les utilisateurs finaux en tant que bascule dans Paramètres -> Profils -> Préférences de profil pour les profils non AAD uniquement.
+
+Si vous désactivez cette stratégie, les profils non AAD ne seront pas en mesure d’utiliser l’authentification unique à l’aide d’autres informations d’identification présentes sur l’ordinateur. Cela permet également de s’assurer que l'«activation intelligente de l’authentification unique (SSO) pour tous les comptes Windows Azure Active Directory (Azure AD) pour les utilisateurs avec un profil de Microsoft Edge unique non Azure AD» est désactivée.
+
+Si vous activez cette stratégie ou si vous ne la configurez pas, les profils non AAD pourront utiliser l'authentification unique à l’aide d’autres informations d’identification présentes sur l’ordinateur, et l'« activation intelligente de l’authentification unique (SSO) pour tous les comptes Windows Azure Active Directory (Azure AD) pour les utilisateurs avec un seul profil non Azure AD Microsoft Edge » continuera de fonctionner.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Oui
+  - Actualisation dynamique de la stratégie : Non, nécessite le redémarrage du navigateur
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : AADWebSiteSSOUsingThisProfileEnabled
+  - Nom de la stratégie de groupe : authentification unique pour les sites scolaires ou de travail à l’aide de ce profil activé
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : Administrative Templates/Microsoft Edge - Default Settings (peut être remplacé par les utilisateurs)/
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de la valeur : AADWebSiteSSOUsingThisProfileEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : AADWebSiteSSOUsingThisProfileEnabled
+  - Exemple de valeur:
+``` xml
+<false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### <a name="addressbarmicrosoftsearchinbingproviderenabled"></a>AddressBarMicrosoftSearchInBingProviderEnabled
 
   #### <a name="enable-microsoft-search-in-bing-suggestions-in-the-address-bar"></a>Activer les suggestions de la Recherche Microsoft dans la barre d’adresse de Bing
@@ -9083,7 +9343,7 @@ Même si cette stratégie est désactivée, il n’est pas garanti que l’histo
 
 Si vous activez cette stratégie ou que vous ne la configurez pas, les utilisateurs peuvent supprimer l’historique de navigation et de téléchargement.
 
-Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas supprimer l’historique de navigation et de téléchargement du navigateur et la synchronisation de l’historique sera désactivée.
+Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas supprimer l’historique de navigation et de téléchargement. La désactivation de cette stratégie désactive la synchronisation de l’historique et ouvre la synchronisation des onglets.
 
 Si vous activez cette stratégie, n’activez pas la stratégie [ClearBrowsingDataOnExit](#clearbrowsingdataonexit), car elles traitent toutes deux la suppression de données. Si vous activez toutes les deux, la stratégie [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) prévaut et supprime toutes les données lors de la fermeture de Microsoft Edge, quelle que soit la configuration de cette stratégie.
 
@@ -10206,23 +10466,23 @@ Toutefois, les modèles de correspondance d’origine pour cette stratégie ne p
 SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   {
     "allowed_origins": [
-      "example.com", 
+      "example.com",
       "http://www.example.com:8080"
-    ], 
+    ],
     "protocol": "spotify"
-  }, 
+  },
   {
     "allowed_origins": [
-      "https://example.com", 
+      "https://example.com",
       "https://.mail.example.com"
     ], 
-    "protocol": "teams"
+    "protocol": "msteams"
   }, 
   {
     "allowed_origins": [
       "*"
     ], 
-    "protocol": "outlook"
+    "protocol": "msoutlook"
   }
 ]
 ```
@@ -10230,7 +10490,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   ##### <a name="compact-example-value"></a>Exemple de valeur compacte :
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "teams"}, {"allowed_origins": ["*"], "protocol": "outlook"}]
+  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "msteams"}, {"allowed_origins": ["*"], "protocol": "msoutlook"}]
   ```
   
 
@@ -10542,6 +10802,80 @@ Si vous activez cette stratégie ou ne la configurez pas, les utilisateurs contr
   - Exemple de valeur :
 ``` xml
 <false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### <a name="automatichttpsdefault"></a>AutomaticHttpsDefault
+
+  #### <a name="configure-automatic-https"></a>Configurer HTTPS automatique
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version 92 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Cette stratégie vous permet de gérer les paramètres de [AutomaticHttpsDefault,](#automatichttpsdefault) qui bascule les connexions HTTP vers HTTPS.
+
+Cette fonctionnalité permet de se protéger contre les attaques de l’intercepteur en appliquant des connexions plus sécurisées, mais les utilisateurs peuvent faire face à davantage d’erreurs de connexion.
+
+Remarque : la configuration « UpgradeCapableDomains » nécessite une liste de composants et ne permet pas de mettre à niveau ces connexions si [ComponentUpdatesEnabled](#componentupdatesenabled) est définie sur «Désactivé».
+
+Si vous ne configurez pas cette stratégie, [AutomaticHttpsDefault](#automatichttpsdefault) sera activé et ne mettre à niveau les connexions que sur les domaines susceptibles de prendre en charge HTTPS.
+
+Mappage des options de stratégie:
+
+* DisableAutomaticHttps (0) = la fonctionnalité HTTPS automatique est désactivée.
+
+* UpgradeCapableDomains (1) = Les navigations remises sur HTTP sont basculées vers HTTPS, uniquement sur les domaines susceptibles de prendre en charge HTTPS.
+
+* AlwaysUpgrade (2) = Toutes les navigations remises sur HTTP sont basculées vers HTTPS. Les erreurs de connexion peuvent se produire plus souvent.
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Oui
+  - Actualisation dynamique de la stratégie : Oui
+
+  #### <a name="data-type"></a>Type de données :
+
+  - entier.
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : AutomaticHttpsDefault
+  - Nom de la stratégie de groupe : configurer le protocole HTTPS automatique
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : Administrative Templates/Microsoft Edge - Default Settings (peut être remplacé par les utilisateurs)/
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de la valeur : AutomaticHttpsDefault
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000002
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : AutomaticHttpsDefault
+  - Exemple de valeur:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -11145,10 +11479,10 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   Configure les paramètres de durée de vie des données de navigation pour Microsoft Edge.
 Cette stratégie contrôle la durée de vie des données de navigation sélectionnées. Cette stratégie n’a aucun effet si la synchronisation est activée.
 Les types de données disponibles sont « browsing_history » ( browsing_history), « download_history » (cookies_and_other_site_data), « cached_images_and_files » (cached_images_and_files), « password_signin » (password_signin), « autofill », « site_settings » (site_settings) et « hosted_app_data » (hosted_app_data).
-Microsoft Edge supprime régulièrement les données des types sélectionnés plus anciens que « time_to_live_in_hours ». Étant donné que la suppression des données ne se produit qu’à certains intervalles, certaines données peuvent être conservées légèrement plus longtemps, mais jamais plus du double du « time_to_live_in_hours » prévu.
+MicrosoftEdge supprime régulièrement les données des types sélectionnés plus anciens que «time_to_live_in_hours». La suppression des données expirées se produit 15secondes après le démarrage du navigateur, puis toutes les heures pendant son exécution.
 
 
-  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire : Oui
   - Peut être recommandée : Non
@@ -11182,14 +11516,14 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
   {
     "data_types": [
       "browsing_history"
-    ], 
+    ],
     "time_to_live_in_hours": 24
-  }, 
+  },
   {
     "data_types": [
-      "password_signin", 
+      "password_signin",
       "autofill"
-    ], 
+    ],
     "time_to_live_in_hours": 12
   }
 ]
@@ -11333,6 +11667,68 @@ Elle ne fonctionne pas dans Microsoft Edge version 92, lorsque la prise en charg
   - Exemple de valeur :
 ``` xml
 <false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### <a name="cecpq2enabled"></a>CECPQ2Enabled
+
+  #### <a name="cecpq2-post-quantum-key-agreement-enabled-for-tls"></a>Accord clé post quantum CECPQ2 activé pour TLS
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version93 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Si cette stratégie n’est pas configurée ou est activée, MicrosoftEdge suit le processus de déploiement par défaut pour CECPQ2, un algorithme de contrat de clé post quantum dans TLS.
+
+CeCPQ2 entraîne des messages TLS plus volumineux qui, dans de très rares cas, peuvent déclencher des bogues dans certains matériels réseau. Cette stratégie peut être définie sur False pour désactiver CECPQ2 pendant que les problèmes réseau sont résolus.
+
+Cette stratégie est une mesure temporaire qui sera supprimée dans les futures versions de MicrosoftEdge.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Non
+  - Actualisation dynamique de la stratégie : Oui
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : CECPQ2Enabled
+  - Nom de la stratégie de groupe : accord clé post quantum CECPQ2 activé pour TLS
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : CECPQ2Enabled
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : CECPQ2Enabled
+  - Exemple de valeur:
+``` xml
+<true/>
 ```
   
 
@@ -11767,7 +12163,17 @@ Mappage des options de stratégie :
 
 * pinterest_suggestions (pinterest_suggestions) = Suggestions Pinterest
 
-* collections_share (collections_share) = P°artage de Collections
+* collections_share (collections_share) = Partage de Collections
+
+* local_pdf (local_pdf) = Enregistrer les données PDF locales dans les collections OneDrive
+
+* send_word (send_word) = Envoyer une collection à Microsoft Word
+
+* send_excel (send_excel) = Envoyer une collection à Microsoft Excel
+
+* send_onenote (send_onenote) = Envoyer une collection à Microsoft OneNote
+
+* send_pinterest (send_pinterest) = Envoyer une collection à Pinterest
 
 Utilisez les informations précédentes lors de la configuration de cette stratégie.
 
@@ -11803,6 +12209,11 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\3 = "local_pdf"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\4 = "send_word"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\5 = "send_excel"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\6 = "send_onenote"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "send_pinterest"
 
 ```
 
@@ -11814,6 +12225,11 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 <array>
   <string>pinterest_suggestions</string>
   <string>collections_share</string>
+  <string>local_pdf</string>
+  <string>send_word</string>
+  <string>send_excel</string>
+  <string>send_onenote</string>
+  <string>send_pinterest</string>
 </array>
 ```
   
@@ -12115,7 +12531,7 @@ Si vous activez cette stratégie et la définissez sur « SignInAndMakeDomainAcc
 
 Si vous définissez cette stratégie sur « Disabled » ou ne la définissez pas, Microsoft Edge ne connecte pas automatiquement les utilisateurs qui se trouvent sur des ordinateurs joints au domaine joint avec un compte Active Directory.
 
-À partir de Microsoft Edge 89, s’il existe un profil local existant avec synchronisation désactivée et que l’ordinateur est désormais joint hybride, c’est-à-dire qu’il dispose d’un compte Azure AD, il va mettre à niveau automatiquement le profil local vers le profil Azure AD pour obtenir les installations de synchronisation Azure AD complètes.
+À partir Microsoft Edge version89 et ultérieure, s’il existe un profil local existant avec la stratégie [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) désactivée et que l’ordinateur est désormais joint hybride, c’est-à-dire qu’il dispose d’un compte Azure AD, il va mettre à niveau automatiquement le profil local vers le profil Azure AD pour obtenir les installations de synchronisation Azure AD complètes.
 
 Mappage des options de stratégie :
 
@@ -13712,13 +14128,15 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas accéder �
 
   #### <a name="description"></a>Description
 
-  Cette stratégie permet aux utilisateurs de comparer les prix d’un produit qu’ils recherchent, d’obtenir des coupons ou des remises à partir du site web où ils se trouvent, ou d’appliquer automatiquement des coupons lors de l’achat.
+  Cette stratégie permet aux utilisateurs de comparer les prix d’un produit qu’ils recherchent, d’obtenir des coupons ou des remises à partir du site web où ils se trouver, d’appliquer automatiquement des coupons et d’obtenir de l’aide plus rapidement pour le paiement à l’aide des données de remplissage automatique.
 
-Si vous activez ou ne configurez pas cette stratégie, les fonctionnalités d’achat telles que la comparaison des prix, les coupons et les remises sont automatiquement appliquées aux domaines de vente au détail. Les bons de réduction pour le détaillant actuel et les prix d’autres détaillants sont récupérés à partir d’un serveur.
+Si vous activez ou ne configurez pas cette stratégie, les fonctionnalités d’achat telles que la comparaison des prix, les coupons, les remises et le paiement express seront automatiquement appliquées aux domaines de vente au détail. Les bons de réduction pour le détaillant actuel et les prix d’autres détaillants sont récupérés à partir d’un serveur.
 
-Si vous désactivez cette stratégie, les fonctionnalités d’achat telles que la comparaison des prix, les coupons et les remises ne seront pas automatiquement trouvés pour les domaines de vente au détail.
+Si vous désactivez cette stratégie, les fonctionnalités d’achat telles que la comparaison des prix, les coupons, les remises et le paiement express, ne seront pas automatiquement trouvées pour les domaines de vente au détail.
 
-  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+À compter de la version90.0.818.56, le comportement de la messagerie faisant savoir aux utilisateurs qu’un coupon, une remise, une comparaison des prix ou un historique des prix sont disponibles sur les domaines d’achat est également effectué via une bannière horizontale en dessous de la barre d’adresses. Auparavant, cette messagerie était effectuée dans la barre d’adresses.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire : Oui
   - Peut être recommandée : Oui
@@ -14033,13 +14451,13 @@ Si vous désactivez ou ne configurez pas la stratégie, Microsoft Edge n’effec
 
   ### <a name="enablesha1forlocalanchors"></a>EnableSha1ForLocalAnchors
 
-  #### <a name="allow-certificates-signed-using-sha-1-when-issued-by-local-trust-anchors-deprecated"></a>Autoriser les certificats signés à l’aide de l’algorithme SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (obsolète)
+  #### <a name="allow-certificates-signed-using-sha-1-when-issued-by-local-trust-anchors-obsolete"></a>Autoriser les certificats signés à l’aide de SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (obsolète)
 
-  >DÉCONSEILLÉ : cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
-  #### <a name="supported-versions"></a>Versions prises en charge :
+  >OBSOLÈTE : cette stratégie est obsolète et ne fonctionne pas après Microsoft Edge version91.
+  #### <a name="supported-versions"></a>Versions prises en charge:
 
-  - sur Windows et macOS depuis la version 85 ou versions ultérieures
+  - Sur Windows et macOS depuis la version85, jusqu’à 91
 
   #### <a name="description"></a>Description
 
@@ -14065,9 +14483,9 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique GP : EnableSha1ForLocalAnchors
-  - Nom GP : Autoriser les certificats signés à l’aide de l’algorithme SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (déconseillé)
-  - Chemin d’accès de la stratégie de groupe (obligatoire) : Administrative Templates/Microsoft Edge/
+  - Nom unique de la stratégie de groupe : EnableSha1ForLocalAnchors
+  - Nom de la stratégie de groupe : autoriser les certificats signés à l’aide de SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (obsolète)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
   - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
 
@@ -14271,8 +14689,8 @@ Notez que, bien que l’exemple précédent montre la suppression des avertissem
   ##### <a name="example-value"></a>Exemple de valeur :
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
 
 ```
 
@@ -14282,8 +14700,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   - Exemple de valeur :
 ``` xml
 <array>
-  <string>{'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}</string>
-  <string>{'domains': ['*'], 'file_extension': 'swf'}</string>
+  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
+  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
 </array>
 ```
   
@@ -14369,6 +14787,85 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
   - Exemple de valeur :
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### <a name="explicitlyallowednetworkports"></a>ExplicitlyAllowedNetworkPorts
+
+  #### <a name="explicitly-allowed-network-ports"></a>Ports réseau explicitement autorisés
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la mise à jour 91 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Cette stratégie permet de contourner la liste des ports restreints intégrée MicrosoftEdge. L’ensemble des ports est défini comme une liste séparée par des virgules sur qui les connexions sortantes doivent être autorisées.
+
+Les ports sont limités pour empêcher MicrosoftEdge d’être utilisé comme vecteur pour exploiter diverses vulnérabilités réseau. La définition de cette stratégie peut exposer votre réseau à des attaques. Cette stratégie est conçue comme une solution de contournement temporaire pour le code d’erreur «ERR_UNSAFE_PORT» lors de la migration d’un service s’exécutant sur un port bloqué vers un port standard (par exemple, le port 80 ou 443).
+
+Les sites web malveillants peuvent facilement détecter que cette stratégie est définie et pour quels ports, puis utiliser ces informations pour cibler des attaques.
+
+Le fait de laisser la valeur vide ou non définie signifie que tous les ports restreints seront bloqués. Les valeurs de port non valides définies par le biais de cette stratégie seront ignorées tandis que les valeurs valides seront toujours appliquées.
+
+Cette stratégie remplace l’option de ligne de commande «--explicitly-allowed-ports».
+
+Mappage des options de stratégie:
+
+* 554 (554) = port 554 (expire le 15/10/2021)
+
+* 10080 (10080) = port 10080 (expire le 01/04/2022)
+
+* 6566 (6566) = port 6566 (expire le 15/10/2021)
+
+Utilisez les informations précédentes lors de la configuration de cette stratégie.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Non
+  - Actualisation dynamique de la stratégie : Oui
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Liste composée de chaînes
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : ExplicitlyAllowedNetworkPorts
+  - Nom de la stratégie de groupe : ports réseau explicitement autorisés
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge\ExplicitlyAllowedNetworkPorts
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : 1, 2, 3, ...
+  - Type de valeur : liste composée de REG_SZ
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ExplicitlyAllowedNetworkPorts\1 = "10080"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : ExplicitlyAllowedNetworkPorts
+  - Exemple de valeur:
+``` xml
+<array>
+  <string>10080</string>
+</array>
 ```
   
 
@@ -15469,6 +15966,68 @@ Si vous désactivez cette stratégie, l'accélération matérielle est désactiv
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### <a name="headlessmodeenabled"></a>HeadlessModeEnabled
+
+  #### <a name="control-use-of-the-headless-mode"></a>Contrôler l’utilisation du mode sans affichage
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version 92 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Ce paramètre de stratégie vous permet de décider si les utilisateurs peuvent lancer Microsoft Edge en mode sans affichage.
+
+Si vous activez ou ne configurez pas cette stratégie, Microsoft Edge l’utilisation du mode sans affichage.
+
+Si vous désactivez cette stratégie, Microsoft Edge l’utilisation du mode sans affichage.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Non
+  - Actualisation dynamique de la stratégie : Non, nécessite le redémarrage du navigateur
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : HeadlessModeEnabled
+  - Nom de la stratégie de groupe : contrôler l’utilisation du mode sans affichage
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : HeadlessModeEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : HeadlessModeEnabled
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### <a name="hidefirstrunexperience"></a>HideFirstRunExperience
 
   #### <a name="hide-the-first-run-experience-and-splash-screen"></a>Masquer l’expérience de première utilisation et l’écran de démarrage
@@ -16422,6 +16981,67 @@ Vous pouvez également définir cette stratégie comme une recommandation. Cela 
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### <a name="importstartuppagesettings"></a>ImportStartupPageSettings
+
+  #### <a name="allow-importing-of-startup-page-settings"></a>Autoriser l’importation des paramètres de la page de démarrage
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows depuis la version 91 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Permet aux utilisateurs d’importer des paramètres de démarrage à partir d’un autre navigateur dans Microsoft Edge.
+
+Si vous activez cette stratégie, les paramètres de démarrage sont toujours importés.
+
+Si vous désactivez cette stratégie, les paramètres de démarrage ne sont pas importés lors de la première utilisation ou lors de l’importation manuelle.
+
+Si vous ne configurez pas cette stratégie, les paramètres de démarrage sont importés lors de la première utilisation et les utilisateurs peuvent choisir d’importer ces données manuellement en sélectionnant l’option paramètres du navigateur lors des sessions de navigation ultérieures.
+
+Vous pouvez définir cette stratégie comme une recommandation. Cela signifie que Microsoft Edge importera les paramètres de démarrage lors de la première utilisation, mais que les utilisateurs peuvent sélectionner ou effacer l’option de **paramètres** de navigateur lors de l’importation manuelle.
+
+**Remarque**: cette stratégie gère actuellement l’importation à partir de Version antérieure de Microsoft Edge et Google Chrome (sur les navigateurs Windows 7, 8 et 10).
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Oui
+  - Actualisation dynamique de la stratégie : Oui
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : ImportStartupPageSettings
+  - Nom de la stratégie de groupe : autoriser l’importation des paramètres de page de démarrage
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : Administrative Templates/Microsoft Edge - Default Settings (peut être remplacé par les utilisateurs)/
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de la valeur : ImportStartupPageSettings
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000001
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### <a name="inprivatemodeavailability"></a>InPrivateModeAvailability
 
   #### <a name="configure-inprivate-mode-availability"></a>Configurer la disponibilité du mode InPrivate
@@ -16876,11 +17496,11 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   ### <a name="internetexplorerintegrationlocalfileshowcontextmenu"></a>InternetExplorerIntegrationLocalFileShowContextMenu
 
-  #### <a name="show-context-menu-to-open-a-link-in-internet-explorer-mode"></a>Afficher le menu contextuel pour ouvrir un lien en mode Internet Explorer
+  #### <a name="show-context-menu-to-open-a-file-link-in-internet-explorer-mode"></a>Afficher le menu contextuel pour ouvrir un lien file:// en mode InternetExplorer
 
   
   
-  #### <a name="supported-versions"></a>Versions prises en charge :
+  #### <a name="supported-versions"></a>Versions prises en charge:
 
   - Sur Windows depuis la version 88 ou versions ultérieures
 
@@ -16893,6 +17513,8 @@ Ce paramètre fonctionne conjointement avec : [InternetExplorerIntegrationLevel]
 Si vous définissez cette stratégie sur true, l’élément de menu contextuel « Ouvrir le lien dans un nouvel onglet Mode Internet Explorer » sera disponible pour les liens file://.
 
 Si vous définissez cette stratégie sur false ou si vous ne la configurez pas, l’élément de menu contextuel ne sera pas ajouté.
+
+Si la stratégie [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) permet aux utilisateurs de recharger des sites en mode Internet Explorer, l’élément de menu contextuel «Ouvrir le lien dans le nouvel onglet du mode Internet Explorer» sera disponible pour tous les liens, à l’exception des liens vers des sites configurés explicitement par la liste des sites pour utiliser le mode Microsoft Edge. Dans ce cas, si vous définissez cette stratégie sur True, l’élément de menu contextuel sera disponible pour les liens file:// même pour les sites configurés pour utiliser le mode Microsoft Edge contexte. Si vous définissez cette stratégie sur false ou si vous ne la configurez pas, cette stratégie n’a aucun effet.
 
 Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
@@ -16910,9 +17532,9 @@ Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la pag
 
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de groupe : InternetExplorerIntegrationLocalFileShowContextMenu
-  - Nom de la stratégie : afficher le menu contextuel pour ouvrir un lien en mode Internet Explorer
-  - Chemin d’accès de la stratégie de groupe (obligatoire) : Administrative Templates/Microsoft Edge/
+  - Nom unique de la stratégie de groupe: InternetExplorerIntegrationLocalFileShowContextMenu
+  - Nom de la stratégie de groupe : afficher le menu contextuel pour ouvrir un lien file:// en mode Internet Explorer
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
   - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
 
@@ -16922,6 +17544,132 @@ Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la pag
   - Chemin d’accès (recommandé) : N/A
   - Nom de la valeur : InternetExplorerIntegrationLocalFileShowContextMenu
   - Type de valeur : REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000001
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationlocalsitelistexpirationdays"></a>InternetExplorerIntegrationLocalSiteListExpirationDays
+
+  #### <a name="specify-the-number-of-days-that-a-site-remains-on-the-local-ie-mode-site-list"></a>Spécifier le nombre de jours pendant lesquels un site reste dans la liste des sites en mode InternetExplorer local
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows depuis la version92 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Si la stratégie [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) est activée ou n’est pas configurée, les utilisateurs pourront indiquer à Microsoft Edge de charger des pages spécifiques en mode Internet Explorer pendant un nombre limité de jours.
+
+Vous pouvez utiliser ce paramètre pour déterminer combien de jours cette configuration est rappelée dans le navigateur. Une fois cette période écoulée, la page individuelle ne se charge plus automatiquement en mode IE.
+
+Si vous désactivez la stratégie [InternetExplorerIntegrationReloadInIEModeAllowed,](#internetexplorerintegrationreloadiniemodeallowed) cette stratégie n’a aucun effet.
+
+Si vous désactivez ou ne configurez pas cette stratégie, la valeur par défaut de 30jours est utilisée.
+
+Si vous activez cette stratégie, vous devez entrer le nombre de jours pendant lesquels les sites sont conservés dans la liste des sites locaux de l’utilisateur dans Microsoft Edge. La valeur peut être de 0 à 90jours.
+
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [[](https://go.microsoft.com/fwlink/?linkid=2094210)](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Non
+  - Actualisation dynamique de la stratégie : Non, nécessite le redémarrage du navigateur
+
+  #### <a name="data-type"></a>Type de données :
+
+  - entier.
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : InternetExplorerIntegrationLocalSiteListExpirationDays
+  - Nom de la stratégie de groupe : spécifier le nombre de jours pendant combien de jours d’un site reste dans la liste des sites en mode IE local
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : InternetExplorerIntegrationLocalSiteListExpirationDays
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x0000001e
+```
+
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationreloadiniemodeallowed"></a>InternetExplorerIntegrationReloadInIEModeAllowed
+
+  #### <a name="allow-unconfigured-sites-to-be-reloaded-in-internet-explorer-mode"></a>Autoriser le rechargement des sites non configurés en mode InternetExplorer
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows depuis la version92 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Cette stratégie permet aux utilisateurs de recharger les sites non configurés (qui ne sont pas configurés dans la liste des sites en mode Enterprise) en mode Internet Explorer lorsque vous naviguez en Microsoft Edge et qu’un site requiert Internet Explorer pour la compatibilité.
+
+Une fois qu’un site a été rechargé en mode Internet Explorer, les navigations «dans la page» restent en mode Internet Explorer (par exemple, un lien, un script ou un formulaire sur la page, ou une redirection côté serveur à partir d’une autre navigation «dans la page»). Les utilisateurs peuvent choisir de quitter le mode Internet Explorer, ou MicrosoftEdge quitte automatiquement le mode Internet Explorer lorsqu’une navigation qui n’est pas «dans la page» se produit (par exemple, à l’aide de la barre d’adresses, du bouton Retour ou d’un lien favori).
+
+Les utilisateurs peuvent également indiquer MicrosoftEdge utiliser le mode Internet Explorer pour le site à l’avenir. Ce choix sera mémoriser pendant une durée gérée par la stratégie [InternetExplorerIntegrationLocalSiteListExpirationDays.](#internetexplorerintegrationlocalsitelistexpirationdays)
+
+Si la stratégie [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) est définie sur « IEMode », les sites configurés explicitement par la liste des sites de la stratégie [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) pour utiliser MicrosoftEdge ne peuvent pas être rechargés en mode Internet Explorer, et les sites configurés par la liste des sites ou par la stratégie [SendIntranetToInternetExplorer](#sendintranettointernetexplorer) pour utiliser le mode Internet Explorer ne peuvent pas quitter le mode Internet Explorer.
+
+Si vous activez cette stratégie, les utilisateurs sont autorisés à recharger les sites non configurés en mode Internet Explorer.
+
+Si vous désactivez cette stratégie, les utilisateurs ne sont pas autorisés à recharger des sites non configurés en mode Internet Explorer.
+
+Notez que si vous activez cette stratégie, elle est prioritaire sur la façon dont vous avez configuré la stratégie [InternetExplorerIntegrationTestingAllowed,](#internetexplorerintegrationtestingallowed) et cette stratégie sera désactivée.
+
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [[](https://go.microsoft.com/fwlink/?linkid=2094210)](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Oui
+  - Actualisation dynamique de la stratégie : Non, nécessite le redémarrage du navigateur
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : InternetExplorerIntegrationReloadInIEModeAllowed
+  - Nom de la stratégie de groupe : autoriser le rechargement des sites non configurés en mode Internet Explorer
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : Administrative Templates/Microsoft Edge - Default Settings (peut être remplacé par les utilisateurs)/
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de la valeur : InternetExplorerIntegrationReloadInIEModeAllowed
+  - Type de valeur: REG_DWORD
 
   ##### <a name="example-value"></a>Exemple de valeur :
 
@@ -17010,7 +17758,9 @@ Si vous définissez cette stratégie sur « AutomaticNavigationsOnly », vous b�
 
 Si vous configurez cette stratégie sur « AllInPageNavigations », toutes les navigations depuis les pages chargées en mode IE vers des sites non configurés restent en mode Internet Explorer (le moins recommandé). 
 
-Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
+Si la stratégie [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) permet aux utilisateurs de recharger des sites en mode Internet Explorer, toutes les navigations dans la page à partir de sites non configurés que les utilisateurs ont choisi de recharger en mode Internet Explorer sont conservées en mode Internet Explorer, quelle que soit la configuration de cette stratégie.
+
+Si vous souhaitez en savoir plus sur le mode Internet Explorer, consultez la page [[](https://go.microsoft.com/fwlink/?linkid=2105106)](https://go.microsoft.com/fwlink/?linkid=2105106)
 
 Mappage des options de stratégie :
 
@@ -17061,9 +17811,9 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   ### <a name="internetexplorerintegrationtestingallowed"></a>InternetExplorerIntegrationTestingAllowed
 
-  #### <a name="allow-internet-explorer-mode-testing"></a>Autoriser le test du mode Internet Explorer
+  #### <a name="allow-internet-explorer-mode-testing-deprecated"></a>Autoriser le test du mode InternetExplorer (déconseillé)
 
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
   #### <a name="supported-versions"></a>Versions prises en charge :
 
@@ -17071,7 +17821,9 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### <a name="description"></a>Description
 
-  Cette stratégie permet aux utilisateurs de tester les applications en mode Internet Explorer en ouvrant l’onglet mode Internet Explorer dans Microsoft Edge.
+  Cette stratégie est déconseillée, utilisez la stratégie [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) à la place. Elle ne fonctionne pas dans MicrosoftEdge version95.
+
+Cette stratégie permet aux utilisateurs de tester les applications en mode Internet Explorer en ouvrant l’onglet mode Internet Explorer dans MicrosoftEdge.
 
 Les utilisateurs peuvent le faire dans le menu «Autres Outils» en sélectionnant «Ouvrir les sites en mode Internet Explorer».
 
@@ -17079,7 +17831,7 @@ Par ailleurs, les utilisateurs peuvent tester leurs applications dans un navigat
 
 Ce paramètre fonctionne conjointement avec : [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) est défini sur « IEMode ».
 
-Si vous activez cette stratégie, l’option « Ouvrir les sites en mode Internet Explorer » est visible sous « Autres outils ». Les utilisateurs peuvent afficher leurs sites en mode Internet Explorer dans cet onglet. Une autre option servant à «Ouvrir les sites en mode Edge» apparaît également sous «Autres outils» pour permettre le test des sites dans un navigateur moderne sans les supprimer de la liste des sites.
+Si vous activez cette stratégie, l’option « Ouvrir les sites en mode Internet Explorer » est visible sous « Autres outils ». Les utilisateurs peuvent afficher leurs sites en mode Internet Explorer dans cet onglet. Une autre option servant à «Ouvrir les sites en mode Edge» apparaît également sous «Autres outils» pour permettre le test des sites dans un navigateur moderne sans les supprimer de la liste des sites. Notez que si la stratégie [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) est activée, elle est prioritaire et ces options ne seront pas visibles sous «Plus d’outils».
 
 Si vous désactivez ou ne configurez pas cette stratégie, les utilisateurs ne peuvent pas voir les options «Ouvrir dans le mode Internet Explorer» et «Ouvrir en mode Edge» sous le menu «Autres outils». Toutefois, les utilisateurs peuvent configurer ces options avec l’indicateur --ie-mode-test.
 
@@ -17097,9 +17849,9 @@ Si vous désactivez ou ne configurez pas cette stratégie, les utilisateurs ne p
 
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de groupe : InternetExplorerIntegrationTestingAllowed
-  - Nom de la stratégie : autoriser le test du mode Internet Explorer
-  - Chemin d’accès de la stratégie de groupe (obligatoire) : Administrative Templates/Microsoft Edge/
+  - Nom unique de la stratégie de groupe: InternetExplorerIntegrationTestingAllowed
+  - Nom de la stratégie de groupe : autoriser le test du mode Internet Explorer (supprimé)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
   - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
 
@@ -17208,17 +17960,15 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### <a name="description"></a>Description
 
-  Spécifiez les origines à exécuter dans une isolation, dans leur propre processus.
+  Spécifiez les origines à exécuter dans un processus isolé.
 
-Cette stratégie isole également les origines nommées par sous-domaine. Par exemple, la définition de https://contoso.com/ provoque l'isolation de https://foo.contoso.com/ dans le cadre du site https://contoso.com/.
+Par défaut, MicrosoftEdge isole les pages de chaque site dans son propre processus. Cette stratégie permet une isolation plus granulaire basée sur l’origine plutôt que sur le site. Par exemple, la spécification de https://subdomain.contoso.com/ entraîne l’isolement des pages de https://subdomain.contoso.com/ dans un processus différent de celui des pages provenant d’autres origines au sein du site https://contoso.com/.
 
-Si la stratégie est activée, chacune des origines nommées dans une liste séparée par des virgules s'exécute dans son propre processus.
+Si vous activez cette stratégie, chacune des origines nommées dans une liste séparée par des virgules s’exécute dans son propre processus.
 
-Si vous désactivez cette stratégie, les fonctionnalités « IsolateOrigins » et « SitePerProcess » sont désactivées. Les utilisateurs peuvent toujours activer la stratégie « IsolateOrigins » manuellement, via les indicateurs de ligne de commande.
+Si vous désactivez ou ne configurez pas cette stratégie, les pages seront isolées par site.
 
-Si vous ne configurez pas la stratégie, l'utilisateur peut modifier ce paramètre.
-
-  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire : Oui
   - Peut être recommandée : Non
@@ -17258,6 +18008,63 @@ Si vous ne configurez pas la stratégie, l'utilisateur peut modifier ce paramèt
 ``` xml
 <string>https://contoso.com/,https://fabrikam.com/</string>
 ```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### <a name="localbrowserdatashareenabled"></a>LocalBrowserDataShareEnabled
+
+  #### <a name="enable-windows-to-search-local-microsoft-edge-browsing-data"></a>Activer Windows pour rechercher des données de navigation MicrosoftEdge locales
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows depuis la version93 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Permet à Windows d’indexer les données de navigation MicrosoftEdge stockées localement sur l’appareil de l’utilisateur et permet aux utilisateurs de rechercher et de lancer des données de navigation précédemment stockées directement à partir de fonctionnalités Windows telles que la zone de recherche de la barre des tâches dans Windows.
+
+Si vous activez cette stratégie ou si vous ne la configurez pas, MicrosoftEdge publiera les données de navigation locales dans l’Indexeur Windows.
+
+Si vous désactivez cette stratégie, Microsoft Edge ne partagera pas de données avec l’Indexeur Windows.
+
+Notez que si vous désactivez cette stratégie, MicrosoftEdge supprimera les données partagées avec Windows sur l’appareil et cessera de partager de nouvelles données de navigation.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Oui
+  - Actualisation dynamique de la stratégie : Oui
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : LocalBrowserDataShareEnabled
+  - Nom de la stratégie de groupe : activer Windows pour rechercher des données de navigation Microsoft Edge locales
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : Administrative Templates/Microsoft Edge - Default Settings (peut être remplacé par les utilisateurs)/
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nom de la valeur : LocalBrowserDataShareEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000000
+```
+
   
 
   [Retour au début](#microsoft-edge---policies)
@@ -17379,13 +18186,13 @@ Cette stratégie nécessite un redémarrage du navigateur pour finaliser l’app
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
   {
-    "managed_configuration_hash": "asd891jedasd12ue9h", 
-    "managed_configuration_url": "https://static.contoso.com/configuration.json", 
+    "managed_configuration_hash": "asd891jedasd12ue9h",
+    "managed_configuration_url": "https://static.contoso.com/configuration.json",
     "origin": "https://www.contoso.com"
-  }, 
+  },
   {
-    "managed_configuration_hash": "djio12easd89u12aws", 
-    "managed_configuration_url": "https://static.contoso.com/configuration2.json", 
+    "managed_configuration_hash": "djio12easd89u12aws",
+    "managed_configuration_url": "https://static.contoso.com/configuration2.json",
     "origin": "https://www.example.com"
   }
 ]
@@ -17480,26 +18287,26 @@ Les favoris gérés ne sont pas synchronisés avec le compte d'utilisateur et ne
 SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   {
     "toplevel_name": "My managed favorites folder"
-  }, 
+  },
   {
-    "name": "Microsoft", 
+    "name": "Microsoft",
     "url": "microsoft.com"
-  }, 
+  },
   {
-    "name": "Bing", 
+    "name": "Bing",
     "url": "bing.com"
-  }, 
+  },
   {
     "children": [
       {
-        "name": "Microsoft Edge Insiders", 
+        "name": "Microsoft Edge Insiders",
         "url": "www.microsoftedgeinsider.com"
-      }, 
+      },
       {
-        "name": "Microsoft Edge", 
+        "name": "Microsoft Edge",
         "url": "www.microsoft.com/windows/microsoft-edge"
       }
-    ], 
+    ],
     "name": "Microsoft Edge links"
   }
 ]
@@ -17616,33 +18423,33 @@ Si la stratégie [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchur
 SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   {
     "allow_search_engine_discovery": true
-  }, 
+  },
   {
-    "is_default": true, 
-    "keyword": "example1.com", 
-    "name": "Example1", 
-    "search_url": "https://www.example1.com/search?q={searchTerms}", 
+    "is_default": true,
+    "keyword": "example1.com",
+    "name": "Example1",
+    "search_url": "https://www.example1.com/search?q={searchTerms}",
     "suggest_url": "https://www.example1.com/qbox?query={searchTerms}"
-  }, 
+  },
   {
-    "image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}", 
-    "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload", 
-    "keyword": "example2.com", 
-    "name": "Example2", 
-    "search_url": "https://www.example2.com/search?q={searchTerms}", 
+    "image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}",
+    "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload",
+    "keyword": "example2.com",
+    "name": "Example2",
+    "search_url": "https://www.example2.com/search?q={searchTerms}",
     "suggest_url": "https://www.example2.com/qbox?query={searchTerms}"
-  }, 
+  },
   {
-    "encoding": "UTF-8", 
-    "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload", 
-    "keyword": "example3.com", 
-    "name": "Example3", 
-    "search_url": "https://www.example3.com/search?q={searchTerms}", 
+    "encoding": "UTF-8",
+    "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload",
+    "keyword": "example3.com",
+    "name": "Example3",
+    "search_url": "https://www.example3.com/search?q={searchTerms}",
     "suggest_url": "https://www.example3.com/qbox?query={searchTerms}"
-  }, 
+  },
   {
-    "keyword": "example4.com", 
-    "name": "Example4", 
+    "keyword": "example4.com",
+    "name": "Example4",
     "search_url": "https://www.example4.com/search?q={searchTerms}"
   }
 ]
@@ -17715,6 +18522,70 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
     <string>https://www.example4.com/search?q={searchTerms}</string>
   </dict>
 </array>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
+  ### <a name="mathsolverenabled"></a>MathSolverEnabled
+
+  #### <a name="let-users-snip-a-math-problem-and-get-the-solution-with-a-step-by-step-explanation-in-microsoft-edge"></a>Permettre aux utilisateurs de capturer un problème mathématique et d’obtenir la solution avec une explication pas à pas dans MicrosoftEdge
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la mise à jour 91 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Cette stratégie vous permet de déterminer si les utilisateurs peuvent utiliser l’outil Solveur mathématique MicrosoftEdge ou non.
+
+Si vous activez ou ne configurez pas la stratégie, un utilisateur peut prendre une capture du problème mathématique et obtenir la solution, y compris une explication pas à pas de la solution dans un volet latéral Microsoft Edge.
+
+Si vous désactivez la stratégie, l’outil Solveur mathématique est désactivé et les utilisateurs ne peuvent pas l’utiliser.
+
+Remarque : la désactivation de la stratégie [ComponentUpdatesEnabled](#componentupdatesenabled) désactive également le composant Solveur mathématique.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Non
+  - Actualisation dynamique de la stratégie : Oui
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe : MathSolverEnabled
+  - Nom de la stratégie de groupe : laissez les utilisateurs résoudre un problème mathématique et obtenir la solution avec une explication pas à pas dans Microsoft Edge
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : MathSolverEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : MathSolverEnabled
+  - Exemple de valeur:
+``` xml
+<true/>
 ```
   
 
@@ -18304,17 +19175,17 @@ Si vous activez cette stratégie ou si vous ne la définissez pas, les sites web
 
   ### <a name="personalizationreportingenabled"></a>PersonalizationReportingEnabled
 
-  #### <a name="allow-personalization-of-microsoft-services-by-sending-browsing-and-browser-related-data-to-microsoft"></a>Autoriser la personnalisation des services Microsoft en envoyant des données de navigation et de navigateur à Microsoft
+  #### <a name="allow-personalization-of-ads-microsoft-edge-search-news-and-other-microsoft-services-by-sending-browsing-history-favorites-and-collections-usage-and-other-browsing-data-to-microsoft"></a>Autoriser la personnalisation des publicités, de Microsoft Edge, de la recherche, des actualités et d’autres services Microsoft en envoyant l’historique de navigation, les favoris et les collections, l’utilisation et d’autres données de navigation à Microsoft
 
   
   
-  #### <a name="supported-versions"></a>Versions prises en charge :
+  #### <a name="supported-versions"></a>Versions prises en charge:
 
   - sur Windows et macOS depuis la version 80 ou versions ultérieures
 
   #### <a name="description"></a>Description
 
-  Cette stratégie empêche Microsoft de collecter l’historique de navigation Microsoft Edge d’un utilisateur, les collections et favoris, les données d’utilisation du navigateur et la saisie comme dans la barre d’adresses à utiliser pour personnaliser les publicités, la recherche, les actualités, Microsoft Edge et d’autres services Microsoft.
+  Cette stratégie empêche Microsoft de collecter l’historique de navigation MicrosoftEdge d’un utilisateur, les favoris et les collections, l’utilisation et d’autres données de navigation à utiliser pour personnaliser la publicité, la recherche, les actualités, les Microsoft Edge et d’autres services Microsoft.
 
 Ce paramètre n'est pas disponible pour les comptes enfants ou les comptes d'entreprise.
 
@@ -18334,9 +19205,9 @@ Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas modifier o
 
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de groupe : PersonalizationReportingEnabled
-  - Nom de la stratégie de groupe : autoriser la personnalisation des services Microsoft en envoyant des données de navigation et de navigateur à Microsoft
-  - Chemin d’accès de la stratégie de groupe (obligatoire) : Administrative Templates/Microsoft Edge/
+  - Nom unique de la stratégie de groupe: PersonalizationReportingEnabled
+  - Nom de la stratégie de groupe : autoriser la personnalisation des publicités, des Microsoft Edge, de la recherche, des actualités et autres services Microsoft en envoyant l’historique de navigation, les favoris et les collections, l’utilisation et d’autres données de navigation à Microsoft
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
   - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
 
@@ -18423,17 +19294,17 @@ Les paramètres utilisateur permettant d'activer ou de désactiver l'Assistant �
 
   ### <a name="proactiveauthenabled"></a>ProactiveAuthEnabled
 
-  #### <a name="enable-proactive-authentication-deprecated"></a>Activer l’authentification proactive (déconseillé)
+  #### <a name="enable-proactive-authentication-obsolete"></a>Activer l’authentification proactive (obsolète)
 
-  >DÉCONSEILLÉ : cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
   
-  #### <a name="supported-versions"></a>Versions prises en charge :
+  >OBSOLÈTE : cette stratégie est obsolète et ne fonctionne pas après Microsoft Edge version90.
+  #### <a name="supported-versions"></a>Versions prises en charge:
 
-  - sur Windows et macOS depuis la version 77 ou versions ultérieures
+  - Sur Windows et macOS depuis la version77, jusqu’à 90
 
   #### <a name="description"></a>Description
 
-  Cette stratégie est déconseillée, car elle ne fonctionne pas indépendamment de la connexion du navigateur. Elle ne fonctionne pas dans la version 91 de Microsoft Edge. Si vous souhaitez configurer la connexion du navigateur, utilisez la stratégie [BrowserSignin](#browsersignin).
+  Cette stratégie est obsolète, car elle ne fonctionne pas indépendamment de la signature du navigateur. Elle ne fonctionne pas dans Microsoft Edge après la version90. Si vous souhaitez configurer la connexion du navigateur, utilisez la stratégie [BrowserSignin](#browsersignin).
 
 Vous permet de configurer l’activation de l’authentification proactive dans Microsoft Edge.
 
@@ -18457,9 +19328,9 @@ Si vous ne configurez pas cette stratégie, l'authentification proactive est act
 
   ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
 
-  - Nom unique de la stratégie de groupe : ProactiveAuthEnabled
-  - Nom de la stratégie de protection : activer l’authentification proactive (déconseillé)
-  - Chemin d’accès de la stratégie de groupe (obligatoire) : Administrative Templates/Microsoft Edge/
+  - Nom unique de la stratégie de groupe: ProactiveAuthEnabled
+  - Nom de la stratégie de groupe : activer l’authentification proactive (obsolète)
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
   - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
   - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
 
@@ -19356,10 +20227,10 @@ Voir [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/
   #### <a name="extend-adobe-flash-content-setting-to-all-content-obsolete"></a>Étendre le paramètre de contenu Adobe Flash à tout le contenu (obsolète)
 
   
-  >OBSOLÈTE : cette stratégie est obsolète et ne fonctionne pas sur les versions ultérieures à Microsoft Edge 87.
+  >OBSOLÈTE : cette stratégie est obsolète et ne fonctionne pas après MicrosoftEdgeversion88.
   #### <a name="supported-versions"></a>Versions prises en charge :
 
-  - Sur Windows et macOS depuis la version 77 et jusqu’à la version 87
+  - Sur Windows et macOS depuis la 77, jusqu’à la 88
 
   #### <a name="description"></a>Description
 
@@ -20407,6 +21278,70 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### <a name="sharedarraybufferunrestrictedaccessallowed"></a>SharedArrayBufferUnrestrictedAccessAllowed
+
+  #### <a name="specifies-whether-sharedarraybuffers-can-be-used-in-a-non-cross-origin-isolated-context"></a>Spécifie si SharedArrayBuffers peut être utilisé dans un contexte non isolé inter origines
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la mise à jour 91 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Spécifie si SharedArrayBuffers peut être utilisé dans un contexte inter-origines non isolé.  SharedArrayBuffer est une mémoire tampon de données binaires qui peut être utilisée pour créer des affichages sur la mémoire partagée.  SharedArrayBuffers a une vulnérabilité d’accès à la mémoire dans plusieurs processeurs populaires.
+
+Si vous activez cette stratégie, les sites sont autorisés à utiliser SharedArrayBuffers.
+
+Si vous désactivez ou ne configurez pas cette stratégie, les sites ne peuvent pas utiliser SharedArrayBuffers.
+
+Microsoft Edge nécessite une isolation inter-origines lors de l’utilisation de SharedArrayBuffers à partir MicrosoftEdge version91 et ultérieure pour des raisons de compatibilité web.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Non
+  - Actualisation dynamique de la stratégie : Non, nécessite le redémarrage du navigateur
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: SharedArrayBufferUnrestrictedAccessAllowed
+  - Nom de la stratégie de groupe: spécifie si SharedArrayBuffers peut être utilisé dans un contexte inter-origines non isolé
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur : SharedArrayBufferUnrestrictedAccessAllowed
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence: SharedArrayBufferUnrestrictedAccessAllowed
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### <a name="showmicrosoftrewards"></a>ShowMicrosoftRewards
 
   #### <a name="show-microsoft-rewards-experiences"></a>Afficher les expériences de Microsoft Rewards
@@ -20945,11 +21880,9 @@ Si vous ne configurez pas ou si vous désactivez cette stratégie, aucune modifi
 
 Si la stratégie [SpellcheckEnabled](#spellcheckenabled) est désactivée, cette stratégie n'aura aucun effet.
 
-Si une langue est incluse dans les deux stratégies « SpellcheckLanguage » et [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist), la langue du vérificateur orthographique est activée.
+Si une langue est incluse dans les deux stratégies «SpellcheckLanguage» et [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist), la langue du vérificateur orthographique est activée.
 
-Les langues prises en charge sont les suivantes : af, bg, ca, cs, cy, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
-
-  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire : Oui
   - Peut être recommandée : Non
@@ -21008,11 +21941,9 @@ Si vous ne définissez pas cette stratégie ou si vous la désactivez, les préf
 
 Si la stratégie [SpellcheckEnabled](#spellcheckenabled) est désactivée, cette stratégie n'a aucun effet. 
 
-Si une langue est incluse, à la fois, dans les stratégies [SpellcheckLanguage](#spellchecklanguage) et « SpellcheckLanguageBlocklist », la langue de la vérification orthographique est activée.
+Si une langue est incluse, à la fois, dans les stratégies [SpellcheckLanguage](#spellchecklanguage) et «SpellcheckLanguageBlocklist», la langue de la vérification orthographique est activée.
 
-Les langues actuellement prises en charge sont les suivantes : af, bg, ca, cs, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
-
-  #### <a name="supported-features"></a>Fonctionnalités prises en charge :
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
 
   - Peut être obligatoire : Oui
   - Peut être recommandée : Non
@@ -21829,6 +22760,66 @@ Si vous ne configurez pas la stratégie, les utilisateurs peuvent décider d'uti
 
   [Retour au début](#microsoft-edge---policies)
 
+  ### <a name="tripledesenabled"></a>TripleDESEnabled
+
+  #### <a name="enable-3des-cipher-suites-in-tls"></a>Activer les suites de chiffrement 3DES dans TLS
+
+  
+  
+  #### <a name="supported-versions"></a>Versions prises en charge:
+
+  - Sur Windows et macOS depuis la version93 ou ultérieure
+
+  #### <a name="description"></a>Description
+
+  Avertissement: 3DES sera complètement supprimé de Microsoft Edge version95 (vers octobre2021) et cette stratégie cessera de fonctionner.
+
+Si la stratégie est définie sur True, les suites de chiffrement 3DES dans TLS seront activées. Si elle est définie sur False, elles seront désactivées. Si la stratégie n’est pas définies, les suites de chiffrement 3DES sont désactivées par défaut. Cette stratégie peut être utilisée pour conserver temporairement la compatibilité avec un serveur obsolète. Il s’agit d’une mesure palliative et le serveur doit être reconfiguré.
+
+  #### <a name="supported-features"></a>Fonctionnalités prises en charge:
+
+  - Peut être obligatoire : Oui
+  - Peut être recommandée : Non
+  - Actualisation dynamique de la stratégie : Oui
+
+  #### <a name="data-type"></a>Type de données :
+
+  - Booléen
+
+  #### <a name="windows-information-and-settings"></a>Informations et paramètres Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informations relatives à la stratégie de groupe (ADMX)
+
+  - Nom unique de la stratégie de groupe: TripleDESEnabled
+  - Nom de la stratégie de groupe: activer les suites de chiffrement 3DES dans TLS
+  - Chemin d’accès de la stratégie de groupe(obligatoire): Administrative Templates/Microsoft Edge/
+  - Chemin d’accès de la stratégie de groupe (recommandé) : N/A
+  - Nom du fichier ADMX de la stratégie de groupe : MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Paramètres du Registre Windows
+
+  - Chemin d’accès (obligatoire) : SOFTWARE\Policies\Microsoft\Edge
+  - Chemin d’accès (recommandé): N/A
+  - Nom de la valeur: TripleDESEnabled
+  - Type de valeur: REG_DWORD
+
+  ##### <a name="example-value"></a>Exemple de valeur :
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informations et paramètres Mac
+  
+  - Nom clé de la préférence : TripleDESEnabled
+  - Exemple de valeur:
+``` xml
+<false/>
+```
+  
+
+  [Retour au début](#microsoft-edge---policies)
+
   ### <a name="urlallowlist"></a>URLAllowlist
 
   #### <a name="define-a-list-of-allowed-urls"></a>Définir une liste d’URL autorisées
@@ -22061,7 +23052,7 @@ Utilisez les informations précédentes lors de la configuration de cette strat�
 
   #### <a name="description"></a>Description
 
-  Cette stratégie est déconseillée, car elle a pour but de servir uniquement comme mécanisme à court terme afin d’offrir aux entreprises davantage de temps pour mettre à jour leurs environnements si et quand ils sont détectés comme étant incompatibles avec la fonctionnalité User-Agent Client Hints. Elle ne fonctionne pas dans Microsoft Edge version 93.
+  Cette stratégie est déconseillée, car elle a pour but de servir uniquement comme mécanisme à court terme afin d’offrir aux entreprises davantage de temps pour mettre à jour leurs environnements si et quand ils sont détectés comme étant incompatibles avec la fonctionnalité User-Agent Client Hints. Elle ne fonctionne pas dans Microsoft Edge version94.
 
 Lorsque la fonctionnalité User-Agent Client Hints est activée, des en-têtes de demande granulaires sont envoyés, ils fournissent des informations sur le navigateur de l’utilisateur (par exemple la version du navigateur) et l’environnement (par exemple l’architecture système).
 
@@ -22606,17 +23597,17 @@ et 3 membres facultatifs :
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
-    "create_desktop_shortcut": true, 
-    "default_launch_container": "window", 
+    "create_desktop_shortcut": true,
+    "default_launch_container": "window",
     "url": "https://www.contoso.com/maps"
-  }, 
+  },
   {
-    "default_launch_container": "tab", 
+    "default_launch_container": "tab",
     "url": "https://app.contoso.edu"
-  }, 
+  },
   {
-    "default_launch_container": "window", 
-    "fallback_app_name": "Editor", 
+    "default_launch_container": "window",
+    "fallback_app_name": "Editor",
     "url": "https://app.contoso.com/editor"
   }
 ]
@@ -22788,10 +23779,10 @@ Si elle est définie sur False ou si elle n'est pas définie, les fonctionnalit�
 
   ### <a name="webdriveroverridesincompatiblepolicies"></a>WebDriverOverridesIncompatiblePolicies
 
-  #### <a name="allow-webdriver-to-override-incompatible-policies-deprecated"></a>Autoriser WebDriver à remplacer les stratégies incompatibles (déconseillé)
+  #### <a name="allow-webdriver-to-override-incompatible-policies-obsolete"></a>Autoriser WebDriver à remplacer les stratégies incompatibles (obsolète)
 
-  >DÉCONSEILLÉ : cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
-  
+  >DÉCONSEILLÉ: cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
+  >OBSOLÈTE: Cette stratégie est obsolète et ne fonctionne pas après la version84 de Microsoft Edge.
   #### <a name="supported-versions"></a>Versions prises en charge :
 
   - sur Windows et macOS depuis la version 77 et jusqu’à la version 84
@@ -23365,5 +24356,5 @@ Si cette stratégie n’est pas configurée, la détection du masquage des fenê
 ## <a name="see-also"></a>Voir également
 
 - [Configuration de Microsoft Edge](configure-microsoft-edge.md)
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Blog sur les bases de la sécurité Microsoft](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines)

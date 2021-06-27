@@ -3,35 +3,36 @@ title: Systèmes d’exploitation prenant en charge Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 02/02/2021
+ms.date: 05/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Systèmes d’exploitation prenant en charge Microsoft Edge
-ms.openlocfilehash: 81b9999a98a913e72f3a064f32bd88b301e52b5f
-ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
+ms.openlocfilehash: 2e0002e38c090676e5443718b36fb2fb7956ba15
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "11311511"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617894"
 ---
-# Systèmes d’exploitation prenant en charge Microsoft Edge
+# <a name="microsoft-edge-supported-operating-systems"></a>Systèmes d’exploitation prenant en charge Microsoft Edge
 
 Cet article décrit les systèmes d’exploitation prenant en charge Microsoft Edge.
 
 > [!NOTE]
 > Cet article concerne les versions 77 et ultérieures de bureau de Microsoft Edge.
 
-##  <a name="supported-operating-systems-for-microsoft-edge"></a>Systèmes d’exploitation prenant en charge Microsoft Edge
+## <a name="supported-operating-systems-for-microsoft-edge"></a>Systèmes d’exploitation prenant en charge Microsoft Edge
 
 > [!NOTE]
 > La disponibilité des fonctionnalités et les fonctionnalités du produit peuvent varier sur des systèmes d’exploitation plus anciens. Pour garantir l’installation correcte de Microsoft Edge, utilisez la dernière version de l’un des systèmes d’exploitation indiqués ci-dessous. Ces conseils incluent la mise à jour cumulative la plus récente, le cas échéant.
 
+
 Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge par les systèmes d'exploitation suivants.
 
-###  <a name="windows-client"></a>Client Windows
+### <a name="windows-client"></a>Client Windows
 
 - Windows 7 **
 - Windows 8.1
@@ -43,7 +44,7 @@ Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge 
 - Windows 10 IoT Enterprise SAC ****
 - Windows 10 IoT entreprise 2019 LTSC ****
 
-###  <a name="windows-server"></a>Windows Server
+### <a name="windows-server"></a>Windows Server
 
 - Windows Server 2008 R2 **
 - Windows Server 2012
@@ -59,33 +60,37 @@ Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge 
 >
 > **** L’OPK Microsoft Edge est disponible sur MOO pour que les fabricants d’ordinateurs IoT le préinstallent et le distribuent dans le cadre de leur solution Windows 10 IoT Entreprise.
 
-###  <a name="macos"></a>macOS
+### <a name="macos"></a>macOS
 
 - Sierra (10.12) et versions ultérieures
 
-###  <a name="ios"></a>iOS
+### <a name="ios"></a>iOS
 
 Microsoft Edge pour iPad&reg; et iPhone&reg; nécessite iOS 11.0 ou version ultérieure. Microsoft Edge pour iPad Pro&trade; nécessite iOS 11.0 ou version ultérieure. Microsoft Edge est pris en charge sur les deux versions d'iOS les plus récentes. Lors de la publication d’une nouvelle version d’iOS, la configuration requise pour le Système d’exploitation Microsoft Edge devient la version actuelle de deux versions les plus récentes : la nouvelle version d’iOS et la version précédente.
 
-###  <a name="android"></a>Android
+### <a name="android"></a>Android
 
 Microsoft Edge pour Android peut s'installer sur des tablettes et des téléphones répondant aux critères suivants : appareils exécutant Android KitKat 4.4 ou version ultérieure avec un processeur basé sur ARM.
 
-###  <a name="apple-silicon-macs"></a>Mac Apple Silicon
+### <a name="apple-silicon-macs"></a>Mac Apple Silicon
 
-Prise en charge native de Microsoft Edge à partir de la version stable 88 pour les Mac Apple Silicon.
+Prise en charge native de Microsoft Edge à partir de la version stable88 pour les Mac Apple Silicon.
 
-###  <a name="chromebooks"></a>Chromebooks
+### <a name="linux"></a>Linux
+
+Les builds en préversion sont disponibles pour Linux. Pour tout problème lié à Microsoft Edge sur Linux, en tant que développeur ou en tant qu’entreprise, envoyez des commentaires directement via le navigateur ou en utilisant nos forums TechCommunity https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider. La prise en charge d’entreprise pour Microsoft Edge sur Linux sera disponible ultérieurement.
+
+### <a name="chromebooks"></a>Chromebooks
 
 Microsoft Edge ne prend pas en charge Chromebooks.
 
-##  <a name="recent-changes"></a>Modifications récentes
+## <a name="recent-changes"></a>Modifications récentes
 
 - **17/12/2020** : la prise en charge de Microsoft Edge sur Windows 7 et Windows Server 2008 R2 est étendue jusqu’au 15 janvier 2022.
 - **28/01/2021** - Prise en charge de Microsoft Edge pour les Mac Apple Silicon.
 
-##  <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir également
 
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Politique de cycle de vie moderne de Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy)
 - [Mises à jour de sécurité étendues pour Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)
