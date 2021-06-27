@@ -3,19 +3,19 @@ title: Planifier votre transition en mode plein écran
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planifier votre transition en mode plein écran
-ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b563f7ac773fb295d42e2b27b1259af321ce5f70
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447848"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617737"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>Planifier votre transition en mode plein écran
 
@@ -47,23 +47,29 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 |[Afficher le bouton d’accueil](./microsoft-edge-policies.md#showhomebutton) (stratégie)|N|Y|89|Y|
 |[Gérer les favoris](./microsoft-edge-policies.md#managedfavorites) (stratégie)|N|Y|89|Y|
 |[Activer l’imprimante](./microsoft-edge-policies.md#printingenabled) (stratégie)|Y|Y|89|Y|
-|[Configurer l’URL de la page Nouvel onglet](./microsoft-edge-policies.md#newtabpagelocation) (stratégie)|N|Y||Y|
+|[Configurer l’URL de la page Nouvel onglet](./microsoft-edge-policies.md#newtabpagelocation) (stratégie)|N|Y|89|Y|
 |Bouton Terminer la session | N| Y| 89|Y|
 |Toutes les URL Microsoft Edge internes sont bloquées, à l’exception de *edge://downloads* et *edge://print* |N|Y|89|Y|
 | Ctrl+N bloqué (ouvrir une nouvelle fenêtre) | Y | Y | 89 |Y|
 | Ctrl+T bloqué (ouvrir un nouvel onglet) |Y | Y | 89 |Y|
 |Paramètres et plus (...) afficheront uniquement les options requises  |Y |Y |89 |Y|
-|Restreindre le lancement d’autres applications à partir du navigateur|Y|Y|90/91|Y|
-|Verrouillage des paramètres d’impression de l’interface utilisateur|Y|Y|90/91|Y|
-|[Définir la page Nouvel onglet comme page d’accueil](./microsoft-edge-policies.md#homepageisnewtabpage) (stratégie)|-|-|À déterminer|Y|
+|Restreindre le lancement d’autres applications à partir du navigateur|Y|Y|90|Y|
+|Verrouillage des paramètres d’impression de l’interface utilisateur|Y|Y|90|Y|
+|[Définir la page Nouvel onglet comme page d’accueil](./microsoft-edge-policies.md#homepageisnewtabpage) (stratégie)|N|Y|90|Y|
 
 > [!NOTE]
 > Pour plus d’informations sur la planification des publication de Microsoft Edge, voir [la planification des publication de Microsoft Edge.](microsoft-edge-release-schedule.md)
 
-**Étape 2 : testez le nouveau kiosque dans Microsoft Edge.** Nous vous recommandons de tester la configuration du mode plein écran dans Microsoft Edge. Un moyen rapide et facile de tester le mode plein écran consiste à configurer une application à accès unique affecté à l’aide des paramètres Windows, comme décrit ci-après.
+**Étape 2 : testez le nouveau kiosque dans Microsoft Edge.** Nous vous recommandons de tester la configuration du mode plein écran dans Microsoft Edge. Un moyen rapide et facile de tester le mode plein écran consiste à configurer une application affectée à l’accès unique à l’aide des paramètres Windows, comme décrit ci-après.
 
-1. Installez la version la plus récente de Windows 10 Insider Preview, version 20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows 10 Insider Preview](/windows-insider/get-started).
-2. Installez la dernière version du canal [stable Microsoft Edge,](https://www.microsoft.com/edge)version 87 ou ultérieure.  Pour tester les dernières fonctionnalités, vous pouvez télécharger la dernière version bêta de [Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 89 ou ultérieure.
+1. Les mises à jour système minimales pour les systèmes d’exploitation sont indiquées dans le tableau suivant.
+
+|Systèmed’exploitation|Version|Mises à jour|
+|--|--|--|
+|Windows10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. Pour tester les dernières fonctionnalités, vous pouvez télécharger le dernier [Microsoft Edge stable](https://www.microsoftedgeinsider.com/download), version89 ou supérieure.
 
    > [!IMPORTANT]
    > Étant donné qu’une installation au niveau de l’appareil est requise, le canal Canary n’est pas pris en charge.
@@ -80,15 +86,15 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Mode plein écran : créer un compte":::
 
-6. Dans la page **Choisir une application borne** , sélectionnez **Microsoft Edge**, puis cliquez sur  **Suivant**.
+6. Dans la page **Choisir une application borne** , sélectionnez **MicrosoftEdge**, puis cliquez sur  **Suivant**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Mode plein écran : choisir une application":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Choisir une borne – Signe numérique plein écran":::
 
-7. Sélectionnez l’une des options suivantes pour l’affichage de Microsoft Edge en mode plein écran :
+7. Sélectionnez l’une des options suivantes pour l’affichage de Microsoft Edge en mode plein écran:
 
    - Connexion numérique/interactive : affiche un site spécifique en mode plein écran, exécutant Microsoft Edge.
    - Navigateur public : exécute une version multi-onglet limitée de Microsoft Edge.
-
+ 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Affichage en mode plein écran : signature numérique plein écran":::
 
 8. Sélectionnez **Suivant**.
@@ -123,5 +129,5 @@ Le mode plein écran étant un élément important de votre activité quotidienn
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Nouveau Microsoft Edge pour remplacer la version héritée de Microsoft Edge par la version mardi de la mise à jour Windows 10 d’avril](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)
