@@ -10,22 +10,22 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prêt pour Microsoft Edge
-ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
-ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
+ms.openlocfilehash: d41408c443c9976c8cb4b3b0f537143a5f185e3c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "11157687"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617504"
 ---
-# Prêt pour Microsoft Edge
+# <a name="ready-for-microsoft-edge"></a>Prêt pour Microsoft Edge
 
 Cet article fournit des informations aux administrateurs informatiques qui envisagent un déploiement de Microsoft Edge nécessitant des informations sur la compatibilité et la prise en charge des applications.
 
-##  <a name="web-application-compatibility-and-support"></a>Compatibilité et prise en charge de l’application web
+## <a name="web-application-compatibility-and-support"></a>Compatibilité et prise en charge de l’application web
 
 Pour vous aider dans le déploiement de Microsoft Edge, nous avons compilé une liste des applications web susceptibles d’être utilisées au sein de votre organisation. Cette liste vous permet de déterminer si l’application Web est prête pour Microsoft Edge, conformément aux instructions de l’énoncé de support public du fournisseur d’applications web.
 
-###  <a name="add-to-the-application-list"></a>Ajouter à la liste des applications
+### <a name="add-to-the-application-list"></a>Ajouter à la liste des applications
 
 Nous mettons régulièrement à jour la liste, car les commentaires de l’engagement client permettent d’identifier les énoncés de support.
 
@@ -36,7 +36,7 @@ Si vous êtes fournisseur d’applications web et souhaitez inclure votre énonc
 - Nom du fournisseur
 - URL de l’énoncé de support public.
 
-###  <a name="application-list"></a>Liste des applications
+### <a name="application-list"></a>Liste des applications
 
 Microsoft ne teste ni ne certifie ces applications dans Microsoft Edge. La liste a été compilée sur la base des ressources accessibles au public. Consultez toujours l’instruction de prise en charge actuelle du fournisseur. Certaines applications peuvent nécessiter l’utilisation du mode IE, comme indiqué par l’instruction de prise en charge.
 
@@ -44,6 +44,7 @@ Le tableau suivant répertorie les instructions de prise en charge du fournisseu
 
 | Fournisseur |  Produit | Instructions de prise en charge |
 |-|-|-|
+| Accentué  | TMS 5.23  | https://www.accruent.com/resources/blog-posts/accruent-enhances-tms-microsoft-edge-compatibility-new-automations?utm_source=linkedin&utm_medium=organic-social&utm_campaign=healthcare-general  |
 | Acumatica  | Prix Moyen Estimé Acumatica  | https://help-2020r1.acumatica.com/Wiki/(W(1))/ShowWiki.aspx?pageid=a8d5d39d-513a-4f93-b484-a95eb33103a1  |
 | Adaptatif (Jour de travail)    | Planification Adaptative de la Journée de travail   | https://www.adaptiveplanning.com/uk/products/adaptive-technology-foundation  |
 | Adobe  | Produits de Créativité Cloud (Acrobat, Photoshop, Illustrator)  | https://helpx.adobe.com/creative-cloud/system-requirements.html?promoid=P79NQR4R&mv=other  |
@@ -143,7 +144,7 @@ Le tableau suivant répertorie les instructions de prise en charge du fournisseu
 | Zoom  | Zoom  | https://support.zoom.us/hc/en-us/articles/201362023-System-Requirements-for-PC-Mac-and-Linux#h_92957a85-2506-43a2-bd4a-5bb274778518  |
 | ZScaler  | Zscaler   | https://help.zscaler.com/zia/supported-browsers |
 
-##  <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir également
 
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Planifier votre déploiement de Microsoft Edge](deploy-edge-plan-deployment.md)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)
