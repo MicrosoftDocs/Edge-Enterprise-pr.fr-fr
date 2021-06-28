@@ -3,19 +3,19 @@ title: Configurer le mode kiosque Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/16/2021
+ms.date: 04/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Apprenez les fonctionnalités du mode kiosque et comment configurer les options du mode kiosque de Microsoft Edge.
-ms.openlocfilehash: 9d76bfcaebeaf56e627a401cc4f0375bce9d17a3
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 20cb32c0cd27ad6d7437ed8ae0440560f3ed71b2
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448128"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617854"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurer le mode kiosque Microsoft Edge
 
@@ -50,23 +50,23 @@ Le tableau suivant répertorie les fonctionnalités prise en charge par le mode 
 |Réinitialiser en période d’inactivité|Y|Y|89|Y|
 |[Barre d’adresses en lecture seule](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (stratégie) |N|Y |89|N|
 |[Supprimer les téléchargements à la sortie](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (stratégie)  | Y|Y |89|N|
-|F11 bloqué (entrée/sortie en plein écran) | Y | Y | 89 |Y|
-|F12 bloqué (lancer les outils de développement) | Y | Y | 89 |Y|
-| Prise en charge de plusieurs onglets | N| Y| 89|Y|
+|F11 bloqué (entrée/sortie en plein écran) | Y | Y |89|Y|
+|F12 bloqué (lancer les outils de développement) | Y | Y |89|Y|
+| Prise en charge de plusieurs onglets | N| Y|89|Y|
 |[Autoriser la prise en charge des URL](./microsoft-edge-policies.md#urlallowlist) (stratégie)|Y|Y|89|N|
 |[Bloquer la prise en charge des URL](./microsoft-edge-policies.md#urlblocklist) (stratégie)|Y|Y|89|N|
 |[Afficher le bouton d’accueil](./microsoft-edge-policies.md#showhomebutton) (stratégie)|N|Y|89|Y|
 |[Gérer les favoris](./microsoft-edge-policies.md#managedfavorites) (stratégie)|N|Y|89|Y|
 |[Activer l’imprimante](./microsoft-edge-policies.md#printingenabled) (stratégie)|Y|Y|89|Y|
-|[Configurer l’URL de la page Nouvel onglet](./microsoft-edge-policies.md#newtabpagelocation) (stratégie)|N|Y||Y|
-|Bouton de fin de session * | N| Y| 89|Y|
+|[Configurer l’URL de la page Nouvel onglet](./microsoft-edge-policies.md#newtabpagelocation) (stratégie)|N|Y|89|Y|
+|Bouton de fin de session * | N| Y|89|Y|
 |Toutes les URL Microsoft Edge internes sont bloquées, à l’exception de *edge://downloads* et *edge://print* |N|Y|89|Y|
-| CTRL+N bloqué (ouvrir une nouvelle fenêtre) * | Y | Y | 89 |Y|
-| Ctrl+T bloqué (ouvrir un nouvel onglet) |Y | N | 89 |Y|
-|Paramètres et plus (...) afficheront uniquement les options requises  |Y |Y |89 |Y|
-|Restreindre le lancement d’autres applications à partir du navigateur|Y|Y|90/91|Y|
-|Verrouillage des paramètres d’impression de l’interface utilisateur|Y|Y|90/91|Y|
-|[Définir la page Nouvel onglet comme page d’accueil](./microsoft-edge-policies.md#homepageisnewtabpage) (stratégie)|-|-|À déterminer|Y|
+| CTRL+N bloqué (ouvrir une nouvelle fenêtre) * | Y | Y |89|Y|
+| Ctrl+T bloqué (ouvrir un nouvel onglet) |Y | N |89|Y|
+|Paramètres et plus (...) afficheront uniquement les options requises  |Y |Y |89|Y|
+|Restreindre le lancement d’autres applications à partir du navigateur|Y|Y|90|Y|
+|Verrouillage des paramètres d’impression de l’interface utilisateur|Y|Y|90|Y|
+|[Définir la page Nouvel onglet comme page d’accueil](./microsoft-edge-policies.md#homepageisnewtabpage) (stratégie)|N|Y|90|Y|
 
 > [!NOTE]
 > Les fonctions suivies d'un « * » ne sont activées que dans un scénario d'accès assigné à une seule application.
@@ -146,29 +146,36 @@ Utilisez l’une des stratégies Microsoft Edge répertoriées dans le tableau s
 
 ## <a name="microsoft-edge-with-assigned-access"></a>Microsoft Edge avec accès affecté
 
-### <a name="single-app-kiosk"></a>Borne à application unique
+### <a name="single-app-kiosk"></a>Borne d’application unique
 
-Microsoft Edge prend actuellement en charge un sous-ensemble des mêmes types de mode plein écran hérités de Microsoft Edge pour l’accès affecté à une seule application avec les expériences de verrouillage suivantes : connexion numérique/interactive et navigation publique.  
+MicrosoftEdge version90 du mode plein écran offre une liste complète de fonctionnalités. Consultez la section des fonctionnalités prises en charge du mode plein écran.
+Avec les mises à jour Windows suivantes, vous pouvez configurer MicrosoftEdge via une application unique à accès affecté.
 
-Le mode plein écran de Microsoft Edge avec une seule application à accès affecté est actuellement disponible pour les tests avec la dernière version d’évaluation de [Windows 10 Insider Preview,](https://insider.windows.com/)version 20215 ou supérieure, et avec le  [canal bêta de Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 89 ou supérieure.
+|Système d'exploitation|Version|Mises à jour|
+|--|--|--|
+|Windows10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
-**Comment puis-je obtenir l’aperçu de Windows Insider ?**
-
-Si vous souhaitez en savoir plus sur l’installation d’une version d'évaluation de Windows 10 Insider sur un PC, veuillez consulter les instructions de la rubrique  [Prise en main des versions d'évaluation de Windows 10 Insider Preview](/windows-insider/get-started).
+Vous pouvez gérer l’application unique à accès affecté du mode plein écran MicrosoftEdge via [Paramètres Windows](/deployedge/microsoft-edge-configure-kiosk-mode#configure-using-windows-settings) et Intune.
 
 ### <a name="multi-app-kiosk"></a>Borne à plusieurs applications
 
-Vous pouvez exécuter Microsoft Edge avec un [accès attribué à plusieurs applications](/windows/configuration/lock-down-windows-10-to-specific-apps) sous Windows 10. Cela équivaut au type de mode plein écran « Navigation normale » de l’ancienne version de Microsoft Edge . Pour configurer Microsoft Edge avec un accès affecté à plusieurs applications, suivez les instructions sur la configuration d’une borne [multi-application](/windows/configuration/lock-down-windows-10-to-specific-apps). (L’AUMID du canal stable de Microsoft Edge est **MSEdge**).
+Vous pouvez exécuter Microsoft Edge avec un [accès attribué à plusieurs applications](/windows/configuration/lock-down-windows-10-to-specific-apps) sous Windows 10. Cela équivaut au type de mode plein écran « Navigation normale » de l’ancienne version de Microsoft Edge . Pour configurer Microsoft Edge avec un accès affecté à plusieurs applications, suivez les instructions sur la configuration d’une borne [multi-application](/windows/configuration/lock-down-windows-10-to-specific-apps). (L’AUMID du canal stable de MicrosoftEdge est **MSEdge**).
 
-Lorsque vous utilisez Microsoft Edge avec un accès affecté à plusieurs applications, vous pouvez configurer Microsoft Edge Kiosk pour utiliser les stratégies de navigateur[Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) afin de configurer l’expérience de navigation afin de répondre à vos besoins uniques.
+### <a name="configure-using-windows-settings"></a>Configuration à l’aide des paramètres Windows
 
-### <a name="configure-using-windows-settings"></a>Configurer à l’aide des paramètres Windows
+Les paramètres Windows constituent le moyen le plus simple de configurer un ou deux appareils borne à une seule application. Procédez comme suit pour configurer un ordinateur de borne à une seule application.
 
-Les paramètres Windows constituent le moyen le plus simple de configurer un ou deux appareils borne à une seule application. Procédez comme suit pour configurer un ordinateur borne à une seul application.
+1. Les mises à jour système minimales pour les systèmes d’exploitation sont indiqués dans le tableau suivant.
 
-1. Installez la version la plus récente de Windows 10 Insider Preview, version 20215 ou ultérieure. Suivez les instructions de [Prise en main des versions d'évaluation de Windows 10 Insider Preview](/windows-insider/get-started).
-2. Pour tester les dernières fonctionnalités, vous pouvez télécharger la dernière version bêta de [Microsoft Edge](https://www.microsoftedgeinsider.com/download), version 89 ou supérieure.
-3. Sur l’ordinateur de borne, ouvrez Paramètres Windows, puis tapez « borne » dans le champ de recherche. Sélectionnez  **Configurer une borne (accès attribué)**, illustré dans la capture d’écran suivante pour ouvrir la boîte de dialogue de création de la borne.
+|Système d'exploitation|Version|Mises à jour|
+|--|--|--|
+|Windows10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. Pour tester les dernières fonctionnalités, vous pouvez télécharger le dernier [canal stable Microsoft Edge](https://www.microsoft.com/edge/business/download), version89 ou supérieure.
+
+3. Sur l’ordinateur kiosque, ouvrez Paramètres Windows, puis tapez «borne» dans le champ de recherche. Sélectionnez  **Configurer une borne (accès attribué)**, illustré dans la capture d’écran suivante pour ouvrir la boîte de dialogue de création de la borne.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Configurer la borne avec l’accès attribué":::
 
@@ -183,16 +190,16 @@ Les paramètres Windows constituent le moyen le plus simple de configurer un ou 
 6. Dans la page **Choisir une application borne** , sélectionnez **Microsoft Edge**, puis cliquez sur  **Suivant**.
 
    > [!NOTE]
-   > Cela s’applique uniquement aux canaux Microsoft Edge dev, Beta et stable.
+   > Cela s’applique uniquement aux canaux Microsoft Edge développement, bêta et stable.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Mode plein écran : choisir une application":::
+     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Affichage en mode plein écran: signature numérique plein écran":::
 
-7. Sélectionnez l’une des options suivantes pour l’affichage de Microsoft Edge en mode plein écran :
+7. Sélectionnez l’une des options suivantes pour l’affichage de MicrosoftEdge en mode plein écran:
 
    - Connexion numérique/interactive : affiche un site spécifique en mode plein écran, exécutant Microsoft Edge.
-   - Navigateur public : exécute une version multi-onglet limitée de Microsoft Edge.
+   - Navigateur public: exécute une version multi-onglet limitée de MicrosoftEdge.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Affichage en mode plein écran : signature numérique plein écran":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Mode d’utilisation de la borne : signe numérique plein écran":::
 
 8. Sélectionnez **Suivant**.
 9. Tapez l’URL à charger lors du lancement du kiosque.
@@ -229,21 +236,9 @@ Pour l’instant, nous ne supportons pas les fonctionnalités suivantes et vous 
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 
-## <a name="roadmap"></a>Feuille de route
-
-### <a name="in-early-2021"></a>Début 2021
-
-Nous allons ajouter la prise en charge et les fonctionnalités suivantes :
-
-- Disponibilité générale du mode plein écran de Microsoft Edge avec accès affecté à l’application unique sur Windows 10 1909 et les plus élevés.
-- Fonctionnalités supplémentaires pour la parité avec la version Microsoft Edge hérité.
-- Intégration avec Intune pour configurer les appareils à l’aide d’un profil en mode plein écran UX.
-- Limiter le lancement d’autres applications à partir du navigateur.
-- Verrouillage des paramètres d’impression de l’interface utilisateur.
-
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Planifier votre déploiement de Microsoft Edge](deploy-edge-plan-deployment.md)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)
 - [Configurer des bornes et enseignes numériques dans les éditions Windows de bureau](/windows/configuration/kiosk-methods)
 - [Planifier votre transition en mode plein écran](microsoft-edge-kiosk-mode-transition-plan.md)
