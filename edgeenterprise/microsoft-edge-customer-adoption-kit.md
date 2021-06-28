@@ -1,21 +1,21 @@
 ---
 title: Documents d’adoption de Microsoft Edge par les clients
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlynd
-ms.date: 03/01/2021
+ms.date: 06/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Documents d’adoption de Microsoft Edge par les clients
-ms.openlocfilehash: 4752b0b5221d0134c68a50153679979449d893ca
-ms.sourcegitcommit: 81383d92dba379d5e6073066c4cdcc2761390f8f
+ms.openlocfilehash: f8a37bceeee9b55587a14a97a5b64b73ec27d23f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385379"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617837"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Documents d’adoption par les clients pour Microsoft Edge
 
@@ -25,18 +25,29 @@ Revenez pour obtenir d’autres documents dès qu’ils sont disponibles.
 
 ## <a name="customer-adoption-kit"></a>Kit d’adoption par les clients
 
-Le kit d’adoption par les clients contient les éléments suivants :
-
-- Guide de déploiement informatique
-- Guide de l’utilisateur sur la mise en route
-- Modèles de courrier électronique d’adoption
-- Bannière
-- Signalisation numérique
-- Une seule page
-- Vidéo de démonstration et GIF
-- Liens de ressources Web
+Le kit d’adoption par les clients contient les éléments suivants:
+- **du kit de mise en retrait Internet Explorer (disponible en anglais, allemand, espagnol, français, japonais, coréen, chinois (simplifié))**
+    - E-mails d’adoption
+    - Prospectus
+    - Infographie
+    - Formulaire de collection de sites
+- Kit d’adoption générale
+    - Guide de déploiement informatique
+    - Guide de l’utilisateur sur la mise en route
+    - Modèles de courrier électronique d’adoption
+    - Bannière
+    - Signalisation numérique
+    - Une seule page
+    - Vidéo de démonstration et GIF
+    - Liens de ressources Web
 
 Le kit d’adoption est disponible en anglais et dans plusieurs autres langues, notamment le français, l’allemand et le japonais. Sélectionnez votre langue préférée dans le [Centre de téléchargement du Kit d’adoption client Microsoft Edge.](https://www.microsoft.com/download/details.aspx?id=102119)
+
+### <a name="internet-explorer-ie-retirement-resources"></a>ressources de mise hors service Internet Explorer (IE)
+
+Trouvez des ressources précieuses et des conseils d’experts pour aider votre organisation à passer rapidement et en toute sécurité d’Internet Explorer à Microsoft Edge.
+
+:::image type="content" source="media/customer-adoption-not-md/Internet Explorer Retirement Screenshot.png" alt-text="Mise hors-services Internet Explorer":::
 
 ### <a name="it-deployment-guide"></a>Guide de déploiement informatique
 
@@ -85,4 +96,4 @@ Si vous souhaitez en savoir plus sur les avantages de Microsoft Edge, [veuillez 
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)

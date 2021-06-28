@@ -1,23 +1,26 @@
 ---
 title: Guide pas à pas pour la découverte de site d’entreprise
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 04/07/2020
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Utiliser la découverte de site d’entreprise pour préparer le mode IE
-ms.openlocfilehash: 2557544a93222b03aaa0961149aa0d3c5d7d8806
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: f6298b801cceeb96d9285f3597de2a6abe8ee36e
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447718"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617474"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>Guide pas à pas pour la découverte de site d’entreprise
+
+>[!Note]
+> L’application de bureau Internet Explorer11 sera retirée et ne sera plus prise en charge le 15juin2022 (pour obtenir la liste des applications dans l’étendue, [consultez le FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites Internet Explorer11 que vous utilisez aujourd’hui peuvent s’ouvrir dans MicrosoftEdge en mode Internet Explorer. [Plus d'informations ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Cet article fournit un guide pas à pas sur l’utilisation de la découverte de site d’entreprise avec Microsoft Endpoint Configuration Manager.
 

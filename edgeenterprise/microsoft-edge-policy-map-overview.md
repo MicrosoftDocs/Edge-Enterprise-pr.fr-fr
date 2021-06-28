@@ -10,26 +10,25 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Vue d’ensemble du mappage de stratégie Microsoft Edge
-ms.openlocfilehash: 12967a90ab920bb25473902f2dd2c08fd003f934
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 724dba17d6f129abff4be52eda175c611cc9544f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979798"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617824"
 ---
-# Vue d’ensemble du mappage de stratégie Microsoft Edge
+# <a name="microsoft-edge-policy-mapping-overview"></a>Vue d’ensemble du mappage de stratégie Microsoft Edge
 
-Pour vous aider à effectuer votre déploiement initial, utilisez les mappages de stratégie suivants pour migrer la configuration de stratégie héritée (versions45 et antérieures) ou Google Chrome (version80) vers Microsoft Edge (version80).
+Pour vous aider à effectuer votre déploiement initial, utilisez les mappages de stratégie suivants pour migrer votre configuration de stratégie Google Chrome (version80) vers Microsoft Edge (version80).
 
-- [Mappage de Microsoft Edge hérité vers la stratégie Microsoft Edge](microsoft-edge-policy-map-legacy-to-newedge.md)
-- [Mappage de Google Chrome vers la stratégie Microsoft Edge](microsoft-edge-policy-map-chrome-to-newedge.md)
+- [Mappage de stratégie de Google Chrome vers Microsoft Edge](microsoft-edge-policy-map-chrome-to-newedge.md)
 
 > [!NOTE]
 > Pour obtenir la liste établie des dernières stratégies, voir:
 > - [Référence de stratégie du navigateur](microsoft-edge-policies.md)
 > - [Référence de stratégie de mise à jour](microsoft-edge-update-policies.md)
 
-##  <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir également
 - [Configuration de Microsoft Edge sur Windows](configure-microsoft-edge.md)
 - [Configuration de Microsoft Edge sur macOS](configure-microsoft-edge-on-mac.md)
 - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
