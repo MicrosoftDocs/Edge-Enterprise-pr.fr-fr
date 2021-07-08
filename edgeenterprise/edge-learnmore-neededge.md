@@ -27,7 +27,7 @@ ms.locfileid: "11617294"
 >[!Note]
 > L’application de bureau Internet Explorer 11 sera retirée et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des éléments concernés, [consultez le FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites IE11 que vous utilisez aujourd’hui peuvent s’ouvrir dans Microsoft Edge avec le mode Internet Explorer. [Apprenez-en plus ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-De nombreux sites web modernes comportent des conceptions incompatibles avec InternetExplorer. Chaque fois qu’un utilisateur d’Internet Explorer visite un site public incompatible, il reçoit un message l’informant que le site est incompatible avec son navigateur et qu’il doit basculer manuellement vers un autre navigateur.
+De nombreux sites web modernes comportent des conceptions incompatibles avec Internet Explorer. Chaque fois qu’un utilisateur d’Internet Explorer visite un site public incompatible, il reçoit un message l’informant que le site est incompatible avec son navigateur et qu’il doit basculer manuellement vers un autre navigateur.
 
 Vous devez basculer manuellement vers d’autres navigateurs à partir de la version 87 du canal stable de Microsoft Edge.
 
@@ -39,9 +39,9 @@ Lorsqu’un utilisateur accède à un site incompatible avec Internet Explorer, 
 ## <a name="prerequisites"></a>Conditions préalables
 - Microsoft Edge Stable version 87 ou ultérieure
 - Versions de Windows
-    - Windows10 version1709 ou ultérieure
+    - Windows 10 version 1709 ou ultérieure
     - Windows 8.1
-    - Windows7
+    - Windows 7
 
 
 

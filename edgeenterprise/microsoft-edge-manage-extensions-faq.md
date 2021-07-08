@@ -22,7 +22,7 @@ ms.locfileid: "11618103"
 Cet article fournit une FAQ sur les extensions de Microsoft Edge.
 
 > [!NOTE]
-> Cet article concerne MicrosoftEdge version77 ou ultérieure.
+> Cet article concerne Microsoft Edge version 77 ou ultérieure.
 
 ## <a name="what-is-the-update-url-for-the-microsoft-edge-add-ons-store"></a>Quelle est l’URL de mise à jour du magasin de modules complémentaires Microsoft Edge ?
 
@@ -34,8 +34,8 @@ L’URL de mise à jour des extensions hébergées sur chrome Webstore est la su
 
 ## <a name="see-also"></a>Voir également
 
-- [Gérer les extensions MicrosoftEdge dans l’entreprise](microsoft-edge-manage-extensions.md)
-- [Utiliser des stratégies de groupe pour gérer les extensions MicrosoftEdge](microsoft-edge-manage-extensions-policies.md)
+- [Gérer les extensions Microsoft Edge dans l’entreprise](microsoft-edge-manage-extensions.md)
+- [Utiliser des stratégies de groupe pour gérer les extensions Microsoft Edge](microsoft-edge-manage-extensions-policies.md)
 - [Créer un magasin web pour héberger les extensions Microsoft Edge](microsoft-edge-manage-extensions-webstore.md)
 - [Guide de référence pour la stratégie ExtensionSettings](microsoft-edge-manage-extensions-ref-guide.md)
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

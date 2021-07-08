@@ -148,19 +148,19 @@ Utilisez l’une des stratégies Microsoft Edge répertoriées dans le tableau s
 
 ### <a name="single-app-kiosk"></a>Borne d’application unique
 
-MicrosoftEdge version90 du mode plein écran offre une liste complète de fonctionnalités. Consultez la section des fonctionnalités prises en charge du mode plein écran.
-Avec les mises à jour Windows suivantes, vous pouvez configurer MicrosoftEdge via une application unique à accès affecté.
+Microsoft Edge version 90 du mode plein écran offre une liste complète de fonctionnalités. Consultez la section des fonctionnalités prises en charge du mode plein écran.
+Avec les mises à jour Windows suivantes, vous pouvez configurer Microsoft Edge via une application unique à accès affecté.
 
 |Système d'exploitation|Version|Mises à jour|
 |--|--|--|
-|Windows10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
-|Windows10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+|Windows 10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
-Vous pouvez gérer l’application unique à accès affecté du mode plein écran MicrosoftEdge via [Paramètres Windows](/deployedge/microsoft-edge-configure-kiosk-mode#configure-using-windows-settings) et Intune.
+Vous pouvez gérer l’application unique à accès affecté du mode plein écran Microsoft Edge via [Paramètres Windows](/deployedge/microsoft-edge-configure-kiosk-mode#configure-using-windows-settings) et Intune.
 
 ### <a name="multi-app-kiosk"></a>Borne à plusieurs applications
 
-Vous pouvez exécuter Microsoft Edge avec un [accès attribué à plusieurs applications](/windows/configuration/lock-down-windows-10-to-specific-apps) sous Windows 10. Cela équivaut au type de mode plein écran « Navigation normale » de l’ancienne version de Microsoft Edge . Pour configurer Microsoft Edge avec un accès affecté à plusieurs applications, suivez les instructions sur la configuration d’une borne [multi-application](/windows/configuration/lock-down-windows-10-to-specific-apps). (L’AUMID du canal stable de MicrosoftEdge est **MSEdge**).
+Vous pouvez exécuter Microsoft Edge avec un [accès attribué à plusieurs applications](/windows/configuration/lock-down-windows-10-to-specific-apps) sous Windows 10. Cela équivaut au type de mode plein écran « Navigation normale » de l’ancienne version de Microsoft Edge . Pour configurer Microsoft Edge avec un accès affecté à plusieurs applications, suivez les instructions sur la configuration d’une borne [multi-application](/windows/configuration/lock-down-windows-10-to-specific-apps). (L’AUMID du canal stable de Microsoft Edge est **MSEdge**).
 
 ### <a name="configure-using-windows-settings"></a>Configuration à l’aide des paramètres Windows
 
@@ -170,12 +170,12 @@ Les paramètres Windows constituent le moyen le plus simple de configurer un ou 
 
 |Système d'exploitation|Version|Mises à jour|
 |--|--|--|
-|Windows10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
-|Windows10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+|Windows 10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
-2. Pour tester les dernières fonctionnalités, vous pouvez télécharger le dernier [canal stable Microsoft Edge](https://www.microsoft.com/edge/business/download), version89 ou supérieure.
+2. Pour tester les dernières fonctionnalités, vous pouvez télécharger le dernier [canal stable Microsoft Edge](https://www.microsoft.com/edge/business/download), version 89 ou supérieure.
 
-3. Sur l’ordinateur kiosque, ouvrez Paramètres Windows, puis tapez «borne» dans le champ de recherche. Sélectionnez  **Configurer une borne (accès attribué)**, illustré dans la capture d’écran suivante pour ouvrir la boîte de dialogue de création de la borne.
+3. Sur l’ordinateur kiosque, ouvrez Paramètres Windows, puis tapez « borne » dans le champ de recherche. Sélectionnez  **Configurer une borne (accès attribué)**, illustré dans la capture d’écran suivante pour ouvrir la boîte de dialogue de création de la borne.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Configurer la borne avec l’accès attribué":::
 
@@ -192,12 +192,12 @@ Les paramètres Windows constituent le moyen le plus simple de configurer un ou 
    > [!NOTE]
    > Cela s’applique uniquement aux canaux Microsoft Edge développement, bêta et stable.
 
-     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Affichage en mode plein écran: signature numérique plein écran":::
+     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Affichage en mode plein écran : signature numérique plein écran":::
 
-7. Sélectionnez l’une des options suivantes pour l’affichage de MicrosoftEdge en mode plein écran:
+7. Sélectionnez l’une des options suivantes pour l’affichage de Microsoft Edge en mode plein écran :
 
    - Connexion numérique/interactive : affiche un site spécifique en mode plein écran, exécutant Microsoft Edge.
-   - Navigateur public: exécute une version multi-onglet limitée de MicrosoftEdge.
+   - Navigateur public : exécute une version multi-onglet limitée de Microsoft Edge.
 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Mode d’utilisation de la borne : signe numérique plein écran":::
 
@@ -238,7 +238,7 @@ Pour l’instant, nous ne supportons pas les fonctionnalités suivantes et vous 
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [Planifier votre déploiement de MicrosoftEdge](deploy-edge-plan-deployment.md)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Planifier votre déploiement de Microsoft Edge](deploy-edge-plan-deployment.md)
 - [Configurer des bornes et enseignes numériques dans les éditions Windows de bureau](/windows/configuration/kiosk-methods)
 - [Planifier votre transition en mode plein écran](microsoft-edge-kiosk-mode-transition-plan.md)

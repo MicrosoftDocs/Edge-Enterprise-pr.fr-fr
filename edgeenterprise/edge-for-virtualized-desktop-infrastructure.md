@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: MicrosoftEdge pour l’infrastructure bureau virtualisée.
+description: Microsoft Edge pour l’infrastructure bureau virtualisée.
 ms.openlocfilehash: eaad1b72934b336ce86d14dd8da92a6984d21914
 ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
@@ -17,15 +17,15 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/25/2021
 ms.locfileid: "11618092"
 ---
-# <a name="microsoft-edge-for-virtualized-desktop-infrastructure"></a>MicrosoftEdge pour l’infrastructure bureau virtualisée
+# <a name="microsoft-edge-for-virtualized-desktop-infrastructure"></a>Microsoft Edge pour l’infrastructure bureau virtualisée
 
-Cet article décrit les exigences et les limitations relatives à l’utilisation de MicrosoftEdge dans un environnement virtualisé.
+Cet article décrit les exigences et les limitations relatives à l’utilisation de Microsoft Edge dans un environnement virtualisé.
 
-## <a name="what-is-vdi"></a>Qu’est-ce que VDI?
+## <a name="what-is-vdi"></a>Qu’est-ce que VDI ?
 
 L’infrastructure VDI (Virtual Desktop Infrastructure) est une technologie de virtualisation qui héberge un système d’exploitation de bureau et des applications sur un serveur centralisé dans un centre de données. Cela permet aux utilisateurs d’avoir une expérience de bureau entièrement personnalisée avec une source centralisée entièrement sécurisée et conforme.
 
-MicrosoftEdge peut être utilisé dans un environnement virtualisé de la même manière que sur l’appareil local, tout en s’exécutant à partir d’un environnement serveur sécurisé et contrôlé. En fonction de votre solution VDI choisie, il peut également être possible de donner à vos utilisateurs un accès transparent aux sites et applications intranet.
+Microsoft Edge peut être utilisé dans un environnement virtualisé de la même manière que sur l’appareil local, tout en s’exécutant à partir d’un environnement serveur sécurisé et contrôlé. En fonction de votre solution VDI choisie, il peut également être possible de donner à vos utilisateurs un accès transparent aux sites et applications intranet.
 
 La plupart des fonctionnalités de Edge sont prises en charge dans les environnements VDI sans configuration spéciale. Toutefois, pour garantir une expérience optimale, il est recommandé de suivre les instructions ci-dessous.
 
@@ -40,10 +40,10 @@ Bien que d’autres solutions VDI n’ont pas encore été vérifiées par l’�
 
 Lors de la conception de votre environnement VDI, vous devez considérer attentivement les flux de travail et les besoins de vos utilisateurs pour obtenir des performances optimales, ainsi que les limites de votre configuration de serveur.
 
-Edge recommande les exigences minimales suivantes pour le déploiement d’Edge dans des environnements VDI:
+Edge recommande les exigences minimales suivantes pour le déploiement d’Edge dans des environnements VDI :
 
-- vCPU – 2 à 4cœurs par utilisateur
-- RAM – 1Go par utilisateur
+- vCPU – 2 à 4 cœurs par utilisateur
+- RAM – 1 Go par utilisateur
 
 Notez que les extensions et les applications web complexes de grande taille nécessitent davantage de mémoire et doivent être prises en compte lors de la configuration de votre environnement.
 
@@ -51,25 +51,25 @@ Notez que les extensions et les applications web complexes de grande taille néc
 
 De nombreuses solutions VDI permettent d’accéder à des environnements persistants, où les utilisateurs se voit attribuer un environnement virtuel qui persiste entre les sessions et des environnements non persistants, où les utilisateurs sont affectés à l’un des ordinateurs disponibles, éventuellement à un autre ordinateur chaque session, les données utilisateur peuvent ou non se synchroniser entre les sessions.
 
-Lorsque vous utilisez un environnement non persistant, on crée généralement une «image de base» qui est utilisée pour chaque appareil qui inclut les applications et configurations nécessaires. Voici nos recommandations pour préparer Edge pour une telle image.
+Lorsque vous utilisez un environnement non persistant, on crée généralement une « image de base » qui est utilisée pour chaque appareil qui inclut les applications et configurations nécessaires. Voici nos recommandations pour préparer Edge pour une telle image.
 
 ### <a name="deploy-edge"></a>Déployer Edge
 
-Si vous êtes sur Windows10 version1803 et supérieure, vous devez avoir installé MicrosoftEdge sur votre système. Toutefois, si vous êtes sur une version antérieure de Windows ou que vous souhaitez déployer un autre canal d’Edge, les étapes suivantes sont recommandées.
+Si vous êtes sur Windows 10 version 1803 et supérieure, vous devez avoir installé Microsoft Edge sur votre système. Toutefois, si vous êtes sur une version antérieure de Windows ou que vous souhaitez déployer un autre canal d’Edge, les étapes suivantes sont recommandées.
 
-1. Téléchargez le package Edge MSI correspondant au système d’exploitation de votre machine virtuelle VDI à partir de:
+1. Téléchargez le package Edge MSI correspondant au système d’exploitation de votre machine virtuelle VDI à partir de :
 
-    - [Télécharger MicrosoftEdge pour les entreprises – Microsoft](https://www.microsoft.com/edge/business/download)
+    - [Télécharger Microsoft Edge pour les entreprises – Microsoft](https://www.microsoft.com/edge/business/download)
 
-2. Installez MSI sur la machine virtuelle VDI en exécutant la commande suivante:
+2. Installez MSI sur la machine virtuelle VDI en exécutant la commande suivante :
 
     - `msiexec /i <path_to_msi> /qn /norestart /l*v <install_logfile_name>`
 
 ### <a name="disable-automatic-updates"></a>Désactiver les mises à jour automatiques
 
-Pour les ordinateurs non persistants, il est préférable de désactiver les mises à jour automatiques et de mettre à jour Edge en mettant à jour l'«image de base» pour s’assurer qu’il n’y a pas de version non correspondante parmi le groupe d’ordinateurs.
+Pour les ordinateurs non persistants, il est préférable de désactiver les mises à jour automatiques et de mettre à jour Edge en mettant à jour l'« image de base » pour s’assurer qu’il n’y a pas de version non correspondante parmi le groupe d’ordinateurs.
 
-Consultez les stratégies suivantes pour désactiver les mises à jour automatiques:
+Consultez les stratégies suivantes pour désactiver les mises à jour automatiques :
 
 - [Remplacer la stratégie de mise à jour par défaut](/deployedge/microsoft-edge-update-policies#updatedefault)
 
@@ -91,17 +91,17 @@ Pour plus d’informations sur les conditions requises et la configuration, voir
 
 ### <a name="on-premise-sync-for-active-directory-users"></a>Synchronisation sur site pour les utilisateurs Active Directory
 
-Avec la synchronisation sur site, MicrosoftEdge enregistre les favoris et les paramètres d’un utilisateur ActiveDirectory dans un fichier qui peut facilement être déplacé entre différents ordinateurs.  
+Avec la synchronisation sur site, Microsoft Edge enregistre les favoris et les paramètres d’un utilisateur Active Directory dans un fichier qui peut facilement être déplacé entre différents ordinateurs.  
 
 Pour plus d’informations sur les conditions requises et la configuration, voir les informations suivantes.  
 
-- [Synchronisation locale pour les utilisateurs ActiveDirectory (AD) | MicrosoftDocs](/deployedge/microsoft-edge-on-premises-sync)
+- [Synchronisation locale pour les utilisateurs Active Directory (AD) | Microsoft Docs](/deployedge/microsoft-edge-on-premises-sync)
 
 ### <a name="user-profile-redirection"></a>Redirection de profil utilisateur  
 
 Il existe plusieurs solutions pour migrer et rediriger l’intégralité du dossier utilisateur afin de garantir que le contexte utilisateur est conservé dans ces environnements non persistants. Consultez votre fournisseur VDI pour déterminer la solution recommandée.
 
-Voici quelques solutions populaires:
+Voici quelques solutions populaires :
 
 - [Vue d’ensemble de FSLogix – FSLogix | Microsoft Docs](/fslogix/overview)
 - [Comment configurer la gestion des profils Citrix](https://support.citrix.com/article/CTX222893)
@@ -115,13 +115,13 @@ Il est également recommandé d’exclure, lors de l’utilisation de cette mét
 
 ## <a name="known-issues"></a>Problèmes connus
 
-### <a name="microsoft-edge-crashes-in-older-versions-of-xenapp-and-xendesktop"></a>MicrosoftEdge se bloque dans les versions antérieures de XenApp et XenDesktop
+### <a name="microsoft-edge-crashes-in-older-versions-of-xenapp-and-xendesktop"></a>Microsoft Edge se bloque dans les versions antérieures de XenApp et XenDesktop
 
 Ce problème doit être corrigé dans les versions plus récentes. Cependant, si vous rencontrez ce problème dans votre environnement, vous pouvez le contourner en désactivant les Hooks d’API Citrix pour Edge. Consultez [Comment désactiver les hooks d’API Citrix par application.](https://support.citrix.com/article/CTX107825)
 
 ### <a name="degraded-performance-when-rendering-pages-with-exceptionally-large-html-tables"></a>Performances dégradées lors du rendu de pages avec des tableaux HTML exceptionnellement grands
 
-Les stratégies Citrix suivantes sont connues pour ralentir le rendu des pages html avec des tableaux très grands (plus de 30000lignes).
+Les stratégies Citrix suivantes sont connues pour ralentir le rendu des pages html avec des tableaux très grands (plus de 30 000 lignes).
 
 - Affichage automatique du clavier
 - Distant du contrôle zone de liste déroulante
@@ -130,7 +130,7 @@ Voir [paramètres de stratégie d’expérience mobile (citrix.com)](https://doc
 
 ### <a name="windows-account-manager-authorization-scenarios-ie--azure-sync-fail-in-edge-when-run-as-a-citrix-seamless-application"></a>Les scénarios d’autorisation Windows Account Manger (c’est-à-dire,  la synchronisation) sont en échec dans Edge lorsqu’ils sont exécutés en tant qu’application transparente Citrix
 
-Il s’agit d’un problème connu dans Edge et dans d’autres applications qui utilisent WAM (c’est-à-dire, Office) en raison des composants Windows nécessaires pour ces scénarios qui ne sont pas initialisés lors de l’exécution en mode «transparent». Pour contourner ce problème:
+Il s’agit d’un problème connu dans Edge et dans d’autres applications qui utilisent WAM (c’est-à-dire, Office) en raison des composants Windows nécessaires pour ces scénarios qui ne sont pas initialisés lors de l’exécution en mode « transparent ». Pour contourner ce problème :
 
 - Utilisez Edge via un Bureau à distance vers l’hôte Citrix au lieu d’une application distante transparente.
 - Utilisez plutôt les applications distantes Azure Virtual Desktop, qui ont des atténuations pour ce problème.

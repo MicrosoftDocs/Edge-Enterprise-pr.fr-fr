@@ -27,105 +27,105 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
  Si vous souhaitez en savoir plus sur les canaux Microsoft Edge, veuillez consultez la rubrique [Vue d’ensemble des canaux Microsoft Edge](microsoft-edge-channels.md).
 
 > [!NOTE]
-> Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
+> Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> La plateforme web MicrosoftEdge évolue constamment pour améliorer l’expérience utilisateur, la sécurité et la confidentialité. Pour en savoir plus, consultez les [modifications qui ont un impact sur la compatibilité du prochain MicrosoftEdge](/microsoft-edge/web-platform/site-impacting-changes).
+> La plateforme web Microsoft Edge évolue constamment pour améliorer l’expérience utilisateur, la sécurité et la confidentialité. Pour en savoir plus, consultez les [modifications qui ont un impact sur la compatibilité du prochain Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## <a name="version-91086459-june-24"></a>Version91.0.864.59 : 24juin
+## <a name="version-91086459-june-24"></a>Version 91.0.864.59 : 24 juin
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#june-24-2021).
 
-## <a name="version-91086454-june-18"></a>Version91.0.864.54: 18juin
+## <a name="version-91086454-june-18"></a>Version 91.0.864.54 : 18 juin
 
 > [!Important]
 > Cette mise à jour contient [CVE-2021-30554](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30554) qui a été signalé par l’équipe Chromium comme ayant une faille dans la nature. Pour plus d'informations, voir le [Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#june-18-2021).
 
-## <a name="version-91086448-june-11"></a>Version91.0.864.48: 11juin
+## <a name="version-91086448-june-11"></a>Version 91.0.864.48 : 11 juin
 
 > [!Important]
 >Cette mise à jour contient [CVE-2021-30551](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551) qui a été signalé par l’équipe Chromium comme ayant une faille dans la nature. Pour plus d'informations, voir le [Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#june-11-2021).
 
-## <a name="version-91086441-june-3"></a>Version91.0.864.41: 3juin
+## <a name="version-91086441-june-3"></a>Version 91.0.864.41 : 3 juin
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#june-3-2021).
 
-## <a name="version-91086437-may-27"></a>Version91.0.864.37: 27mai
+## <a name="version-91086437-may-27"></a>Version 91.0.864.37 : 27 mai
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#may-27-2021).
 
 ### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
-- **Identifiez le trafic réseau provenant des conteneurs Microsoft Defender Application Guard au niveau du proxy.** À partir Microsoft Edge version91, la prise en charge intégrée permet de baliser le trafic réseau provenant de conteneurs ApplicationGuard, ce qui permet aux entreprises de les identifier et d’appliquer des stratégies spécifiques.
+- **Identifiez le trafic réseau provenant des conteneurs Microsoft Defender Application Guard au niveau du proxy.** À partir Microsoft Edge version 91, la prise en charge intégrée permet de baliser le trafic réseau provenant de conteneurs Application Guard, ce qui permet aux entreprises de les identifier et d’appliquer des stratégies spécifiques.
 
-- **Option de prise en charge permettant de synchroniser les Favoris de l’hôte vers le conteneur Edge ApplicationGuard.** À partir MicrosoftEdge version91, les utilisateurs ont la possibilité de configurer ApplicationGuard pour synchroniser leurs favoris entre l’hôte et le conteneur. Cela garantit que les nouveaux favoris apparaissent également sur le conteneur.
+- **Option de prise en charge permettant de synchroniser les Favoris de l’hôte vers le conteneur Edge Application Guard.** À partir Microsoft Edge version 91, les utilisateurs ont la possibilité de configurer Application Guard pour synchroniser leurs favoris entre l’hôte et le conteneur. Cela garantit que les nouveaux favoris apparaissent également sur le conteneur.
 
-- À partir de **MicrosoftEdge version91,** le navigateur interrompt automatiquement les téléchargements de types qui pourraient endommager votre ordinateur si ces téléchargements sont démarrés sans intervention de l’utilisateur et ne sont pas pris en charge par la vérification de Réputation d’application SmartScreen. Les utilisateurs peuvent remplacer et continuer à télécharger en cliquant avec le bouton droit et en choisissant «Conserver» sur l’élément de téléchargement. Enterprise administrateurs peuvent refuser ce comportement en configurant la stratégie suivante:
-  - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md): désactiver les avertissements basés sur l’extension de type de fichier de téléchargement pour les types de fichiers spécifiés sur les domaines
+- À partir de **Microsoft Edge version 91,** le navigateur interrompt automatiquement les téléchargements de types qui pourraient endommager votre ordinateur si ces téléchargements sont démarrés sans intervention de l’utilisateur et ne sont pas pris en charge par la vérification de Réputation d’application SmartScreen. Les utilisateurs peuvent remplacer et continuer à télécharger en cliquant avec le bouton droit et en choisissant « Conserver » sur l’élément de téléchargement. Enterprise administrateurs peuvent refuser ce comportement en configurant la stratégie suivante :
+  - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) : désactiver les avertissements basés sur l’extension de type de fichier de téléchargement pour les types de fichiers spécifiés sur les domaines
 
-    Pour plus d’informations, voir [Interruptions des téléchargement de sécurité MicrosoftEdge](microsoft-edge-security-downloads-interruptions.md).
+    Pour plus d’informations, voir [Interruptions des téléchargement de sécurité Microsoft Edge](microsoft-edge-security-downloads-interruptions.md).
 
-- **Prise en charge des API de reconnaissance vocale**. À partir Microsoft Edge version91, la prise en charge de l’API pour les commandes de reconnaissance vocale sur Google.com et sites similaires est ajoutée. Cette fonctionnalité est limitée à un groupe d’utilisateurs sélectionnés de manière aléatoire et ayant activé l’expérimentation. Ces utilisateurs fournissent des commentaires à l’équipe chargée de la fonctionnalité.
+- **Prise en charge des API de reconnaissance vocale**. À partir Microsoft Edge version 91, la prise en charge de l’API pour les commandes de reconnaissance vocale sur Google.com et sites similaires est ajoutée. Cette fonctionnalité est limitée à un groupe d’utilisateurs sélectionnés de manière aléatoire et ayant activé l’expérimentation. Ces utilisateurs fournissent des commentaires à l’équipe chargée de la fonctionnalité.
 
-- **Personnalisez votre navigateur avec de nouvelles couleurs de thème.** Faites MicrosoftEdge vous-même avec l’une des dix-neuf nouvelles couleurs de thème sur la page Paramètres -> Apparence. Vous pouvez également installer des thèmes personnalisés à partir du site des composants additionnels Microsoft Edge. [En savoir plus](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
+- **Personnalisez votre navigateur avec de nouvelles couleurs de thème.** Faites Microsoft Edge vous-même avec l’une des dix-neuf nouvelles couleurs de thème sur la page Paramètres -> Apparence. Vous pouvez également installer des thèmes personnalisés à partir du site des composants additionnels Microsoft Edge. [En savoir plus](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
 
 ### <a name="policy-updates"></a>Mises à jour de stratégie
 
 #### <a name="new-policies"></a>Nouvelles stratégies
 
-Six nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil MicrosoftEdgeEntreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées:
+Six nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées :
 
-- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled): Identification du trafic Application Guard
-- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports): ports réseau explicitement autorisés
-- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings): autoriser l’importation des paramètres de page de démarrage
-- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled): permet aux utilisateurs de capturer un problème mathématique et d’obtenir la solution avec une explication pas à pas dans MicrosoftEdge
-- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled): autoriser le contenu Microsoft News sur la page Nouvel onglet
-- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled): autoriser les liens rapides sur la page Nouvel onglet
+- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) : Identification du trafic Application Guard
+- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) : ports réseau explicitement autorisés
+- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) : autoriser l’importation des paramètres de page de démarrage
+- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) : permet aux utilisateurs de capturer un problème mathématique et d’obtenir la solution avec une explication pas à pas dans Microsoft Edge
+- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) : autoriser le contenu Microsoft News sur la page Nouvel onglet
+- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) : autoriser les liens rapides sur la page Nouvel onglet
 
 #### <a name="obsoleted-policy"></a>Stratégie obsolète
 
-- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled): activer l’authentification proactive
+- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) : activer l’authentification proactive
 <!-- end major 91 -->
 
-## <a name="version-90081866-may-20"></a>Version 90.0.818.66: 20mai
+## <a name="version-90081866-may-20"></a>Version 90.0.818.66 : 20 mai
 
 Résolution de divers bogues et problèmes de performances.
 
-## <a name="version-90081862-may-13"></a>Version 90.0.818.62: 13mai
+## <a name="version-90081862-may-13"></a>Version 90.0.818.62 : 13 mai
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#may-13-2021).
 
-## <a name="version-90081856-may-6"></a>Version 90.0.818.56: 6mai
+## <a name="version-90081856-may-6"></a>Version 90.0.818.56 : 6 mai
 
 Résolution de divers bogues et problèmes de performances.
 
-## <a name="version-90081851-april-29"></a>Version 90.0.818.51: 29avril
+## <a name="version-90081851-april-29"></a>Version 90.0.818.51 : 29 avril
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-29-2021).
 
-## <a name="version-90081849-april-26"></a>Version 90.0.818.49: 26avril
+## <a name="version-90081849-april-26"></a>Version 90.0.818.49 : 26 avril
 
 Résolution de divers bogues et problèmes de performances.
 
-## <a name="version-90081846-april-22"></a>Version 90.0.818.46: 22avril ##
+## <a name="version-90081846-april-22"></a>Version 90.0.818.46 : 22 avril ##
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-22-2021).
 
-## <a name="version-90081842-april-19"></a>Version 90.0.818.42: 19avril
+## <a name="version-90081842-april-19"></a>Version 90.0.818.42 : 19 avril
 
 Résolution de divers bogues et problèmes de performances.
 
-## <a name="version-90081841-april-16"></a>Version 90.0.818.41: 16avril ##
+## <a name="version-90081841-april-16"></a>Version 90.0.818.41 : 16 avril ##
 
 > [!Important]
 >Cette mise à jour contient [CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224) qui a été signalé par l’équipe Chromium comme ayant une faille dans la nature. Pour plus d'informations, voir le [Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide).
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-16-2021).
 
-## <a name="version-90081839-april-15"></a>Version 90.0.818.39: 15avril ##
+## <a name="version-90081839-april-15"></a>Version 90.0.818.39 : 15 avril ##
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-15-2021).
 
@@ -133,19 +133,19 @@ Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deplo
 
 -    **L'authentification unique (SSO) est désormais disponible pour les comptes Azure Active Directory (Azure AD) et le compte Microsoft (MSA) sur macOS.** Un utilisateur connecté sur Microsoft Edge sur macOS se connecte désormais automatiquement aux sites web qui sont configurés pour autoriser l'authentification unique avec les comptes Professionnels et Microsoft (par exemple, bing.com, office.com, msn.com et outlook.com).
 
-- **Mode plein écran.** À partir Microsoft Edge version90, nous avons verrouillé les paramètres d’impression de l’interface utilisateur pour autoriser uniquement les imprimantes configurées et les options «Imprimer au format PDF». Nous avons également effectué des améliorations dans le mode plein écran de l’application unique à accès affecté pour limiter le lancement d’autres applications à partir du navigateur. Pour plus d’informations sur les fonctionnalités du mode plein écran, cliquez [ici.](/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features)
+- **Mode plein écran.** À partir Microsoft Edge version 90, nous avons verrouillé les paramètres d’impression de l’interface utilisateur pour autoriser uniquement les imprimantes configurées et les options « Imprimer au format PDF ». Nous avons également effectué des améliorations dans le mode plein écran de l’application unique à accès affecté pour limiter le lancement d’autres applications à partir du navigateur. Pour plus d’informations sur les fonctionnalités du mode plein écran, cliquez [ici.](/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features)
 
-- **Interrompre les téléchargements** À partir de MicrosoftEdge version91, le navigateur interrompt automatiquement les téléchargements de types qui pourraient endommager votre ordinateur si ces téléchargements sont démarrés sans intervention de l’utilisateur et ne sont pas pris en charge par la vérification de réputation de l’application SmartScreen. Les utilisateurs peuvent remplacer et continuer à télécharger en cliquant avec le bouton droit et en choisissant «Conserver» sur l’élément de téléchargement.
-Enterprise administrateurs peuvent refuser ce comportement, l’une des deux stratégies ci-après:
+- **Interrompre les téléchargements** À partir de Microsoft Edge version 91, le navigateur interrompt automatiquement les téléchargements de types qui pourraient endommager votre ordinateur si ces téléchargements sont démarrés sans intervention de l’utilisateur et ne sont pas pris en charge par la vérification de réputation de l’application SmartScreen. Les utilisateurs peuvent remplacer et continuer à télécharger en cliquant avec le bouton droit et en choisissant « Conserver » sur l’élément de téléchargement.
+Enterprise administrateurs peuvent refuser ce comportement, l’une des deux stratégies ci-après :
 - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) : désactiver les avertissements basés sur l’extension de type de fichier de téléchargement pour les types de fichiers spécifiés sur les domaines Pour plus d’informations, voir [Interruptions de téléchargements de sécurité Microsoft Edge](/deployedge/microsoft-edge-security-downloads-interruptions)
 
-- **Impression**:
+- **Impression** :
 
-    - **Nouveau mode de rastérisation d’impression pour les imprimantes non PostScript.** À partir de MicrosoftEdge version90, les administrateurs peuvent utiliser une nouvelle stratégie pour définir le mode de rastérisation d’impression pour leurs utilisateurs. Cette stratégie contrôle la façon dont MicrosoftEdge imprime sur des imprimantes non PostScript sur Windows. L’ impression sur des imprimantes non-PostScript doit parfois être rastérisée pour imprimer correctement. Les options d’impression sont Complète et Rapide.
+    - **Nouveau mode de rastérisation d’impression pour les imprimantes non PostScript.** À partir de Microsoft Edge version 90, les administrateurs peuvent utiliser une nouvelle stratégie pour définir le mode de rastérisation d’impression pour leurs utilisateurs. Cette stratégie contrôle la façon dont Microsoft Edge imprime sur des imprimantes non PostScript sur Windows. L’ impression sur des imprimantes non-PostScript doit parfois être rastérisée pour imprimer correctement. Les options d’impression sont Complète et Rapide.
     
   - **Options de mise à l’échelle de page supplémentaires pour l’impression.** Les utilisateurs peuvent désormais personnaliser la mise à l’échelle lors de l’impression de pages web et de documents PDF à l’aide d’options supplémentaires. L’option Ajuster à la page permet de s’assurer que la page web ou le document est adapté à l’espace disponible dans le « Format de papier » sélectionné pour l’impression. L’option « Taille réelle » garantit qu’aucune modification n’a été apportée à la taille du contenu en cours d’impression, quelle que soit la « Taille du papier » sélectionnée.
 
--   **Productivité:**
+-   **Productivité :**
 
     -   **Les suggestions de remplissage automatique sont étendues pour inclure le contenu des champs d’adresse à partir du Presse-papiers.** Le contenu du Presse-papiers est interrogé lorsque vous cliquez sur un champ de profil/adresse (par exemple, téléphone, e-mail, code postal, ville, état, etc.) pour afficher des suggestions de remplissage automatique.
 
@@ -153,7 +153,7 @@ Enterprise administrateurs peuvent refuser ce comportement, l’une des deux str
 
 -   **Accédez aux téléchargements à partir d’un menu volant dans la barre de menus.** Les téléchargements s’affichent dans le coin supérieur droit avec tous les téléchargements actifs au même endroit. Ce menu est facile à ignorer, de sorte que les utilisateurs continuent à naviguer sans interruption et qu’ils peuvent surveiller la progression globale du téléchargement directement à partir de la barre d’outils. [Si vous souhaitez en savoir plus](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
 
--   **Améliorations apportées au rendu des polices.** À partir de la version90 de MicrosoftEdge, nous avons apporté des améliorations au rendu du texte afin d’améliorer la clarté et de réduire le flou. Une partie des améliorations apportées au rendu des polices sera apportée à la version90 bêta, mais elle sera désactivée par défaut.
+-   **Améliorations apportées au rendu des polices.** À partir de la version 90 de Microsoft Edge, nous avons apporté des améliorations au rendu du texte afin d’améliorer la clarté et de réduire le flou. Une partie des améliorations apportées au rendu des polices sera apportée à la version 90 bêta, mais elle sera désactivée par défaut.
 
 - **Mode Enfant.** Nous avons mis à jour la stratégie afin que, lorsque la stratégie est activée, elle désactive la fonctionnalité Mode Enfant en plus de la sécurité de la famille. En savoir plus sur le mode [Enfant ici](https://go.microsoft.com/fwlink/?linkid=2146910)
 
@@ -161,15 +161,15 @@ Enterprise administrateurs peuvent refuser ce comportement, l’une des deux str
 
 ## <a name="new-policies"></a>Nouvelles stratégies
 
-Huit nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil MicrosoftEdgeEntreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées :
--   [ApplicationGuardFavoritesSyncEnabled](/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled): synchronisation des Favoris d’ApplicationGuard activée
-- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) Identification du trafic ApplicationGuard
+Huit nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’administration mis à jour à partir de la [Page d’accueil Microsoft Edge Entreprise](https://www.microsoft.com/edge/business/download). Les nouvelles stratégies suivantes ont été ajoutées :
+-   [ApplicationGuardFavoritesSyncEnabled](/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled) : synchronisation des Favoris d’Application Guard activée
+- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) Identification du trafic Application Guard
 - [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) Ports réseau explicitement autorisés
 - [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) Autoriser l’importation des paramètres de page de démarrage
-- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) Laissez les utilisateurs capturer un problème mathématique et obtenir la solution avec une explication pas à pas dans MicrosoftEdge
-- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) Autoriser le contenu MicrosoftNews sur la page Nouvel onglet
+- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) Laissez les utilisateurs capturer un problème mathématique et obtenir la solution avec une explication pas à pas dans Microsoft Edge
+- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) Autoriser le contenu Microsoft News sur la page Nouvel onglet
 - [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) Autoriser les liens rapides sur la page Nouvel onglet
--   [FetchKeepaliveDurationSecondsOnShutdown](/DeployEdge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown): Durée de mise à jour continue à l’arrêt
+-   [FetchKeepaliveDurationSecondsOnShutdown](/DeployEdge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown) : Durée de mise à jour continue à l’arrêt
 -   [ManagedConfigurationPerOrigin](/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) : définit des valeurs de configuration gérées pour des sites web avec des origines spécifiques
 -   [PrintRasterizationMode](/DeployEdge/microsoft-edge-policies#printrasterizationmode) : mode de rastérisation d’impression
 -   [QuickViewOfficeFilesEnabled](/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) : gérer la fonctionnalité de fichiers QuickView Office dans Microsoft Edge
@@ -180,25 +180,25 @@ Huit nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’a
 ## <a name="deprecated-policies"></a>Stratégies déconseillées
 
 - [ProactiveAuthEnabled](/DeployEdge/microsoft-edge-policies#proactiveauthenabled) Activer l’authentification proactive
--   [NativeWindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled): activer l’occlusion de fenêtre native
--   [SSLVersionMin](/DeployEdge/microsoft-edge-policies#sslversionmin): version TLS minimale activée
+-   [NativeWindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) : activer l’occlusion de fenêtre native
+-   [SSLVersionMin](/DeployEdge/microsoft-edge-policies#sslversionmin) : version TLS minimale activée
 
-## <a name="version-89077477-april-14"></a>Version 89.0.774.77: 14avril
+## <a name="version-89077477-april-14"></a>Version 89.0.774.77 : 14 avril
 
 > [!Important]
 >Cette mise à jour contient [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) et [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) qui ont été signalés par l’équipe Chromium comme ayant une faille dans la nature.  Pour plus d'informations, voir le [Guide de mise à jour de la sécurité](https://msrc.microsoft.com/update-guide).
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici](/deployedge/microsoft-edge-relnotes-security#april-14-2021).
 
-## <a name="version-89077476-april-12"></a>Version 89.0.774.76 : 12avril
+## <a name="version-89077476-april-12"></a>Version 89.0.774.76 : 12 avril
 
 Résolution de divers bogues et problèmes de performances.
 
-## <a name="version-89077475-april-8"></a>Version 89.0.774.75: 8avril
+## <a name="version-89077475-april-8"></a>Version 89.0.774.75 : 8 avril
 
 Résolution de divers bogues et problèmes de performances.
 
-## <a name="version-89077468-april-1"></a>Version 89.0.774.68: 1eravril
+## <a name="version-89077468-april-1"></a>Version 89.0.774.68 : 1er avril
 
 Les mises à jour de sécurité du canal stable sont répertoriées [ici.](./microsoft-edge-relnotes-security.md#april-1-2021)
 
@@ -276,7 +276,7 @@ Les stratégies suivantes sont obsolètes.
 
 - [ForceLegacyDefaultReferrerPolicy](./microsoft-edge-policies.md#forcelegacydefaultreferrerpolicy) : utiliser une stratégie de référence par défaut de no-referrer-when-downgrade
 - [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) : activer les rapports de données d’utilisation et d’incident
-- [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices): envoyer des informations sur le site pour améliorer les services Microsoft
+- [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) : envoyer des informations sur le site pour améliorer les services Microsoft
 <!-- end major 89 -->
 
 <!-- Archive from 86.0.622.43: October 15 to beta 88.0.705.81: February 25  ->
@@ -285,4 +285,4 @@ Les stratégies suivantes sont obsolètes.
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

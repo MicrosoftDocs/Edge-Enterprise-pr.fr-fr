@@ -17,12 +17,12 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/25/2021
 ms.locfileid: "11617754"
 ---
-# <a name="configure-microsoft-edge-enterprise-sync"></a>Configurer la synchronisation d’entreprise MicrosoftEdge
+# <a name="configure-microsoft-edge-enterprise-sync"></a>Configurer la synchronisation d’entreprise Microsoft Edge
 
-Cet article explique comment les administrateurs peuvent configurer MicrosoftEdge pour synchroniser les favoris, mots de passe et autres données de navigateur de l’utilisateur sur tous les appareils connectés. Si vous n’êtes pas un administrateur, consultez cet article pour savoir comment vous connecter et synchroniser MicrosoftEdge sur plusieurs appareils. [Connectez-vous pour synchroniser MicrosoftEdge sur plusieurs appareils](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+Cet article explique comment les administrateurs peuvent configurer Microsoft Edge pour synchroniser les favoris, mots de passe et autres données de navigateur de l’utilisateur sur tous les appareils connectés. Si vous n’êtes pas un administrateur, consultez cet article pour savoir comment vous connecter et synchroniser Microsoft Edge sur plusieurs appareils. [Connectez-vous pour synchroniser Microsoft Edge sur plusieurs appareils](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
-> S'applique à MicrosoftEdge version77 ou ultérieure, sauf indication contraire.
+> S'applique à Microsoft Edge version 77 ou ultérieure, sauf indication contraire.
 
 ## <a name="overview"></a>Vue d’ensemble
 
@@ -80,5 +80,5 @@ Microsoft Edge est une application multiplateforme avec une étendue développé
 
 - [Synchronisation de Microsoft Edge Entreprise](microsoft-edge-enterprise-sync.md)
 - [Diagnostiquer et résoudre les problèmes de synchronisation de Microsoft Edge](microsoft-edge-troubleshoot-enterprise-sync.md)
-- [MicrosoftEdge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

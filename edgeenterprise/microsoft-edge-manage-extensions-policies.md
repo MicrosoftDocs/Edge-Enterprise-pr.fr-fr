@@ -1,5 +1,5 @@
 ---
-title: Utiliser des stratégies de groupe pour gérer les extensions MicrosoftEdge
+title: Utiliser des stratégies de groupe pour gérer les extensions Microsoft Edge
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Utiliser des stratégies de groupe pour gérer les extensions MicrosoftEdge dans l’entreprise
+description: Utiliser des stratégies de groupe pour gérer les extensions Microsoft Edge dans l’entreprise
 ms.openlocfilehash: a633b036c1733716dfb257b4711bca57bd6721f0
 ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
@@ -17,14 +17,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/25/2021
 ms.locfileid: "11618102"
 ---
-# <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Utiliser des stratégies de groupe pour gérer les extensions MicrosoftEdge
+# <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Utiliser des stratégies de groupe pour gérer les extensions Microsoft Edge
 
-Cet article décrit les options et les étapes de gestion des extensions à l’aide de stratégies de groupe. Ces options supposent que vous avez déjà MicrosoftEdge géré pour vos utilisateurs. Si vous n’avez pas encore configuré la gestion de MicrosoftEdge par vos utilisateurs, suivez le lien ci-dessous pour le faire maintenant.
+Cet article décrit les options et les étapes de gestion des extensions à l’aide de stratégies de groupe. Ces options supposent que vous avez déjà Microsoft Edge géré pour vos utilisateurs. Si vous n’avez pas encore configuré la gestion de Microsoft Edge par vos utilisateurs, suivez le lien ci-dessous pour le faire maintenant.
 
-- [Gérer les extensions MicrosoftEdge dans l’entreprise](/deployedge/microsoft-edge-manage-extensions)
+- [Gérer les extensions Microsoft Edge dans l’entreprise](/deployedge/microsoft-edge-manage-extensions)
 
 > [!NOTE]
-> Cet article concerne MicrosoftEdge version77 ou ultérieure.
+> Cet article concerne Microsoft Edge version 77 ou ultérieure.
 
 ## <a name="block-extensions-based-on-their-permissions"></a>Bloquer les extensions en fonction de leurs autorisations
 
@@ -36,11 +36,11 @@ Vous pouvez contrôler les extensions que vos utilisateurs peuvent installer en 
 Utilisez les étapes suivantes comme guide pour bloquer une extension.
 
 1. Ouvrez l’éditeur de gestion des stratégies de groupe et sélectionnez **Modèles d’administration > Microsoft Edge > Extensions**, puis sélectionnez **Configurer les paramètres de gestion des extensions**.
-2. Activez la stratégie, puis entrez les autorisations que vous souhaitez autoriser ou bloquer, à l’aide d’une chaîne JSON qui est compressée. La capture d’écran suivante montre comment bloquer une extension qui utilise l’autorisation «usb».
+2. Activez la stratégie, puis entrez les autorisations que vous souhaitez autoriser ou bloquer, à l’aide d’une chaîne JSON qui est compressée. La capture d’écran suivante montre comment bloquer une extension qui utilise l’autorisation « usb ».
 
     :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-1.png" alt-text="Configurez la stratégie de groupe pour bloquer une extension.":::
 
-L’exemple suivant montre le JSON pour bloquer toute extension qui nécessite l’utilisation de l’autorisation «usb» et de sa chaîne compressée.
+L’exemple suivant montre le JSON pour bloquer toute extension qui nécessite l’utilisation de l’autorisation « usb » et de sa chaîne compressée.
 
 ### <a name="json-example"></a>Exemple JSON
 
@@ -66,10 +66,10 @@ Ce paramètre empêche les extensions de lire et de modifier des données proven
 > [!NOTE]
 > Le paramètre Hôtes autorisés/bloqués runtime peut uniquement être défini dans la stratégie de paramètres d’extension.  
 
-Vous pouvez configurer les paramètres suivants dans la stratégie ExtensionSettings pour empêcher (ou autoriser) les modifications de sites web ou de domaines:
+Vous pouvez configurer les paramètres suivants dans la stratégie ExtensionSettings pour empêcher (ou autoriser) les modifications de sites web ou de domaines :
 
 - **Runtime_blocked_hosts**. Ce paramètre empêche les extensions d’apporter des modifications ou de lire des données à partir des sites web que vous spécifiez.
-- **Runtime_allowed_hosts**. Ce paramètre permet aux extensions d’apporter des modifications ou de lire des données à partir des sites web que vous spécifiez. Le format suivant est utilisé pour spécifier vos sites dans la chaîne JSON de la stratégie:
+- **Runtime_allowed_hosts**. Ce paramètre permet aux extensions d’apporter des modifications ou de lire des données à partir des sites web que vous spécifiez. Le format suivant est utilisé pour spécifier vos sites dans la chaîne JSON de la stratégie :
 
   ```json
   [http|https|ftp|*]://[subdomain|*].[hostname|*].[eTLD|*] [http|https|ftp|*],
@@ -115,7 +115,7 @@ Cet exemple illustre le JSON et la chaîne JSON compressée pour empêcher toute
 
 ### <a name="json-example-to-block-extensions-on-same-domain"></a>Exemple JSON pour bloquer les extensions sur le même domaine
 
-Cet exemple montre la chaîne JSON et JSON compressée pour empêcher l’exécution d’extensions spécifiques sur le même domaine, «importantwebsite».
+Cet exemple montre la chaîne JSON et JSON compressée pour empêcher l’exécution d’extensions spécifiques sur le même domaine, « importantwebsite ».
 
 ```json
 { 
@@ -140,12 +140,12 @@ Vous pouvez utiliser les stratégies [ExtensionInstallBlocklist](/DeployEdge/mic
 2. Sélectionnez **Activé**.
 3. Cliquez sur **Afficher**.
 4. Entrez l’ID d’application des extensions que vous souhaitez bloquer. Lorsque vous ajoutez plusieurs ID d’application, utilisez une ligne distincte pour chaque ID.
-5. Pour bloquer toutes les extensions, tapez **\*** dans la stratégie pour empêcher l’installation des extensions. Vous pouvez l’utiliser conjointement avec la stratégie «Autoriser l’installation d’extensions spécifiques» pour autoriser uniquement l’installation de certaines extensions. La capture d’écran suivante montre une extension qui sera bloquée en fonction de l’ID d’application fourni.
+5. Pour bloquer toutes les extensions, tapez **\*** dans la stratégie pour empêcher l’installation des extensions. Vous pouvez l’utiliser conjointement avec la stratégie « Autoriser l’installation d’extensions spécifiques » pour autoriser uniquement l’installation de certaines extensions. La capture d’écran suivante montre une extension qui sera bloquée en fonction de l’ID d’application fourni.
 
    :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-2.png" alt-text="Utilisez l’ID d’application pour bloquer une extension.":::
 
    > [!TIP]
-   > Si vous ne trouvez pas l’ID d’application d’une extension, reportez-vous à l’extension sur le site web des modules complémentaires MicrosoftEdge. Recherchez l’extension spécifique et l’ID de l’application s’affichera à la fin de l’URL dans l’omnibox.
+   > Si vous ne trouvez pas l’ID d’application d’une extension, reportez-vous à l’extension sur le site web des modules complémentaires Microsoft Edge. Recherchez l’extension spécifique et l’ID de l’application s’affichera à la fin de l’URL dans l’omnibox.
 
 > [!NOTE]
 > Vous pouvez ajouter une extension à la liste de blocage déjà installée sur l’ordinateur d’un utilisateur. Cela désactive l’extension et empêche l’utilisateur de la réactiver. Elle ne sera pas désinstallée, mais simplement désactivée.
@@ -162,7 +162,7 @@ Utilisez la [stratégie ExtensionInstallForcelist](/DeployEdge/microsoft-edge-po
 L’extension sera installée sans intervention de l’utilisateur. L’utilisateur ne peut pas non plus désinstaller ou désactiver l’extension. Ce paramètre remplace toute stratégie de liste de blocage activée.
 
 > [!NOTE]
-> Pour les extensions hébergées dans le Chrome Web Store, utilisez une chaîne telle que: `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
+> Pour les extensions hébergées dans le Chrome Web Store, utilisez une chaîne telle que : `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
 
 ## <a name="block-extensions-from-a-specific-store-or-update-url"></a>Bloquer les extensions à partir d’une URL de mise à jour ou de magasin spécifique
 
@@ -194,8 +194,8 @@ L’exemple suivant montre JSON et la chaîne JSON compressée à bloquer à par
 
 ## <a name="see-also"></a>Voir également
 
-- [Gérer les extensions MicrosoftEdge dans l’entreprise](microsoft-edge-manage-extensions.md)
-- [Créer un magasin web pour héberger les extensions MicrosoftEdge](microsoft-edge-manage-extensions-webstore.md)
+- [Gérer les extensions Microsoft Edge dans l’entreprise](microsoft-edge-manage-extensions.md)
+- [Créer un magasin web pour héberger les extensions Microsoft Edge](microsoft-edge-manage-extensions-webstore.md)
 - [Guide de référence pour la stratégie ExtensionSettings](microsoft-edge-manage-extensions-ref-guide.md)
 - [FAQ sur les extensions Microsoft Edge](microsoft-edge-manage-extensions-faq.md)
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

@@ -19,27 +19,27 @@ ms.locfileid: "11618093"
 ---
 # <a name="persite-configuration-by-policy"></a>Configuration par site par stratégie
 
-## <a name="introduction-browsers-as-decision-makers"></a>Introduction: Navigateurs en tant que décideurs
+## <a name="introduction-browsers-as-decision-makers"></a>Introduction : Navigateurs en tant que décideurs
 
-Dans le cadre de chaque chargement de page, les navigateurs prennent de nombreuses décisions: une API particulière doit-elle être disponible? Une charge de ressources doit-elle être autorisée? Le script doit-il être autorisé à s’exécuter? La liste est longue.
+Dans le cadre de chaque chargement de page, les navigateurs prennent de nombreuses décisions : une API particulière doit-elle être disponible ? Une charge de ressources doit-elle être autorisée ? Le script doit-il être autorisé à s’exécuter ? La liste est longue.
 
-Dans la plupart des cas, les décisions sont régies par deux entrées: un paramètre utilisateur et l’URL de la page pour laquelle la décision est prise.
+Dans la plupart des cas, les décisions sont régies par deux entrées : un paramètre utilisateur et l’URL de la page pour laquelle la décision est prise.
 
-Dans la plateforme web InternetExplorer héritée, chacune de ces décisions était appelée [URLAction](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537178%28v%3dvs.85%29)et les paramètres utilisateur et stratégie de groupe Entreprise dans le Panneau de configuration Internet contrôlaient la façon dont le navigateur gérait chaque décision.  
+Dans la plateforme web Internet Explorer héritée, chacune de ces décisions était appelée [URLAction](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537178%28v%3dvs.85%29)et les paramètres utilisateur et stratégie de groupe Entreprise dans le Panneau de configuration Internet contrôlaient la façon dont le navigateur gérait chaque décision.  
 
-Dans MicrosoftEdge, la plupart des autorisations par site sont contrôlées par des paramètres et des stratégies exprimés à l’aide d’une syntaxe simple avec une prise en charge limitée aux caractères génériques. Les zones Sécurité Windows sont toujours utilisées uniquement pour un petit nombre de décisions de configuration.
+Dans Microsoft Edge, la plupart des autorisations par site sont contrôlées par des paramètres et des stratégies exprimés à l’aide d’une syntaxe simple avec une prise en charge limitée aux caractères génériques. Les zones Sécurité Windows sont toujours utilisées uniquement pour un petit nombre de décisions de configuration.
 
-## <a name="background-windows-security-zones"></a>Contexte: Zones Sécurité Windows
+## <a name="background-windows-security-zones"></a>Contexte : Zones Sécurité Windows
 
-Pour simplifier la configuration de l’utilisateur ou de l’administrateur, la plateforme héritée a classé les sites en cinq **zones de sécurité** différentes: Ordinateur local, Intranet local, Approuvé, Internet et Sites restreints.
+Pour simplifier la configuration de l’utilisateur ou de l’administrateur, la plateforme héritée a classé les sites en cinq **zones de sécurité** différentes : Ordinateur local, Intranet local, Approuvé, Internet et Sites restreints.
 
-Lors de la prise de décision, le navigateur mappe d’abord le site web sur une zone, puis consulte le paramètre de cette URLAction pour cette zone pour décider de l’action à effectuer. Les valeurs par défaut raisonnables telles que «Satisfaire automatiquement les défis d’authentification de mon intranet» signifient que la plupart des utilisateurs n’ont jamais eu besoin de modifier les paramètres par rapport à leurs valeurs par défaut.
+Lors de la prise de décision, le navigateur mappe d’abord le site web sur une zone, puis consulte le paramètre de cette URLAction pour cette zone pour décider de l’action à effectuer. Les valeurs par défaut raisonnables telles que « Satisfaire automatiquement les défis d’authentification de mon intranet » signifient que la plupart des utilisateurs n’ont jamais eu besoin de modifier les paramètres par rapport à leurs valeurs par défaut.
 
-Les utilisateurs peuvent utiliser le Panneau de configuration Internet pour affecter des sites spécifiques aux zones et configurer les résultats des autorisations pour chaque zone. Dans les environnements gérés, les administrateurs peuvent utiliser la stratégie de groupe pour affecter des sites spécifiques à des zones (via la stratégie «Liste d’affectations de site à zone» ) et spécifier les paramètres d’URLActions par zone. Au-delà de l’affectation manuelle d’utilisateurs ou d’administration de sites à des zones, des heuristiques supplémentaires peuvent [affecter des sites à la zone Intranet local](/archive/blogs/ieinternals/the-intranet-zone). En particulier, les noms d’hôte pointillés (par exemple, `http://payroll`) ont été affectés à la zone Intranet. Si un script de configuration de proxy a été utilisé, tous les sites configurés pour contourner le proxy sont mappés à la zone Intranet.
+Les utilisateurs peuvent utiliser le Panneau de configuration Internet pour affecter des sites spécifiques aux zones et configurer les résultats des autorisations pour chaque zone. Dans les environnements gérés, les administrateurs peuvent utiliser la stratégie de groupe pour affecter des sites spécifiques à des zones (via la stratégie « Liste d’affectations de site à zone » ) et spécifier les paramètres d’URLActions par zone. Au-delà de l’affectation manuelle d’utilisateurs ou d’administration de sites à des zones, des heuristiques supplémentaires peuvent [affecter des sites à la zone Intranet local](/archive/blogs/ieinternals/the-intranet-zone). En particulier, les noms d’hôte pointillés (par exemple, `http://payroll`) ont été affectés à la zone Intranet. Si un script de configuration de proxy a été utilisé, tous les sites configurés pour contourner le proxy sont mappés à la zone Intranet.
 
-L’ancienne version de Microsoft Edge a hérité de l’architecture Zones de son prédécesseur InternetExplorer avec quelques modifications de simplification:
+L’ancienne version de Microsoft Edge a hérité de l’architecture Zones de son prédécesseur Internet Explorer avec quelques modifications de simplification :
 
-- Les cinq zones Windows intégrées ont été réduites à trois: Internet (Internet), Approuvé (Intranet+Approuvé) et Ordinateur local. La zone Sites restreints a été supprimée.
+- Les cinq zones Windows intégrées ont été réduites à trois : Internet (Internet), Approuvé (Intranet+Approuvé) et Ordinateur local. La zone Sites restreints a été supprimée.
 
 - Les mappages zone vers URLAction ont été codés en dur dans le navigateur, en ignorant les stratégies de groupe et les paramètres du Panneau de configuration Internet.
 
@@ -57,15 +57,15 @@ La plupart des paramètres sont très obscurs (WebSerial, WebMIDI) et il n’y a
 
 ## <a name="common-questions"></a>Questions courantes
 
-## <a name="q-can-the-url-filter-format-match-on-a-sites-ip-address"></a>Q: Le format de filtre d’URL peut-il correspondre à l’adresse IP d’un site?
+## <a name="q-can-the-url-filter-format-match-on-a-sites-ip-address"></a>Q : Le format de filtre d’URL peut-il correspondre à l’adresse IP d’un site ?
 
 Non, le format ne prend pas en charge la spécification d’une plage d’adresses IP pour les listes vert et rouge. Il prend en charge la spécification de  **littéraux** d’IP individuels, mais ces règles sont uniquement respectées si l’utilisateur navigue vers le site à l’aide du littéral (par exemple,  <http://127.0.0.1/>). Si un nom d’hôte est utilisé (<http://localhost>), la règle de littéral d’IP n’est pas respectée, même si l’adresse IP résolue de l’hôte correspond à l’adresse IP répertoriée par le filtre.
 
-## <a name="q-can-url-filters-matchjustdotless-host-names"></a>Q: Les filtres d’URL peuvent-ils correspondre uniquement aux noms d’hôtes pointillés?
+## <a name="q-can-url-filters-matchjustdotless-host-names"></a>Q : Les filtres d’URL peuvent-ils correspondre uniquement aux noms d’hôtes pointillés ?
 
 Non. Vous devez lister individuellement chaque nom d’hôte souhaité, par exemple (`https://payroll`, `https://stock`, `https://who`, etc.).
 
-Si vous avez été suffisamment visionnaire pour structurer votre intranet de telle sorte que vos noms d’hôte soient de la forme:
+Si vous avez été suffisamment visionnaire pour structurer votre intranet de telle sorte que vos noms d’hôte soient de la forme :
 
 - <div style="display: inline">`https://payroll.contoso-intranet.com`</div>
 
@@ -77,7 +77,7 @@ Félicitations, vous avez implémenté une meilleure pratique. Vous pouvez confi
 
 ## <a name="use-of-security-zones-inthe-microsoft-edge"></a>Utilisation des zones de sécurité dans Microsoft Edge
 
-Bien que MicrosoftEdge s’appuie principalement sur des stratégies individuelles utilisant le format de filtre d’URL, il continue d’utiliser les zones de Sécurité Windows par défaut dans un petit nombre d’endroits afin de simplifier le déploiement au sein des entreprises qui se basent toujours sur la configuration des zones. Les comportements suivants sont contrôlés par la stratégie de zone:
+Bien que Microsoft Edge s’appuie principalement sur des stratégies individuelles utilisant le format de filtre d’URL, il continue d’utiliser les zones de Sécurité Windows par défaut dans un petit nombre d’endroits afin de simplifier le déploiement au sein des entreprises qui se basent toujours sur la configuration des zones. Les comportements suivants sont contrôlés par la stratégie de zone :
 
 1. Lorsque vous décidez de libérer ou non automatiquement les informations d’identification de l’Authentification intégrée Windows (Kerberos/NTLM)
 
@@ -91,9 +91,9 @@ Par défaut, Microsoft Edge évaluera URLACTION_CREDENTIALS_USE pour déterminer
 
 ## <a name="file-downloads"></a>Téléchargements de fichiers
 
-Preuve sur les origines d’un téléchargement de fichier (appelée «[Marque du web](https://textslashplain.com/2016/04/04/downloads-and-the-mark-of-the-web/)» est enregistrée pour les fichiers téléchargés à partir de la zone Internet. D’autres applications (par exemple, WindowsShell, MicrosoftOffice, etc.) peuvent prendre en compte cette preuve d’origine lors du choix du traitement d’un fichier.
+Preuve sur les origines d’un téléchargement de fichier (appelée « [Marque du web](https://textslashplain.com/2016/04/04/downloads-and-the-mark-of-the-web/) » est enregistrée pour les fichiers téléchargés à partir de la zone Internet. D’autres applications (par exemple, Windows Shell, Microsoft Office, etc.) peuvent prendre en compte cette preuve d’origine lors du choix du traitement d’un fichier.
 
-Si la stratégie de zone Sécurité Windows est configurée pour désactiver le paramètre Lancement des applications et des fichiers non sécurisés, le gestionnaire de téléchargement MicrosoftEdge bloquera les téléchargements de fichiers à partir des sites de cette zone avec une note: «Impossible de télécharger – Bloqué».  
+Si la stratégie de zone Sécurité Windows est configurée pour désactiver le paramètre Lancement des applications et des fichiers non sécurisés, le gestionnaire de téléchargement Microsoft Edge bloquera les téléchargements de fichiers à partir des sites de cette zone avec une note : « Impossible de télécharger – Bloqué ».  
 
 ## <a name="ie-mode"></a>Mode Internet Explorer
 

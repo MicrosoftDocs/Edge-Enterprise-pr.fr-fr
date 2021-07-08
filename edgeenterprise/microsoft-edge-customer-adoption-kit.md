@@ -25,7 +25,7 @@ Revenez pour obtenir d’autres documents dès qu’ils sont disponibles.
 
 ## <a name="customer-adoption-kit"></a>Kit d’adoption par les clients
 
-Le kit d’adoption par les clients contient les éléments suivants:
+Le kit d’adoption par les clients contient les éléments suivants :
 - **du kit de mise en retrait Internet Explorer (disponible en anglais, allemand, espagnol, français, japonais, coréen, chinois (simplifié))**
     - E-mails d’adoption
     - Prospectus
@@ -96,4 +96,4 @@ Si vous souhaitez en savoir plus sur les avantages de Microsoft Edge, [veuillez 
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

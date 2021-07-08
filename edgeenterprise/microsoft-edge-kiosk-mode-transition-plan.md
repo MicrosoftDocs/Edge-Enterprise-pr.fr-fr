@@ -64,12 +64,12 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 
 1. Les mises à jour système minimales pour les systèmes d’exploitation sont indiquées dans le tableau suivant.
 
-|Systèmed’exploitation|Version|Mises à jour|
+|Système d’exploitation|Version|Mises à jour|
 |--|--|--|
-|Windows10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
-|Windows10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+|Windows 10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
-2. Pour tester les dernières fonctionnalités, vous pouvez télécharger le dernier [Microsoft Edge stable](https://www.microsoftedgeinsider.com/download), version89 ou supérieure.
+2. Pour tester les dernières fonctionnalités, vous pouvez télécharger le dernier [Microsoft Edge stable](https://www.microsoftedgeinsider.com/download), version 89 ou supérieure.
 
    > [!IMPORTANT]
    > Étant donné qu’une installation au niveau de l’appareil est requise, le canal Canary n’est pas pris en charge.
@@ -86,11 +86,11 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Mode plein écran : créer un compte":::
 
-6. Dans la page **Choisir une application borne** , sélectionnez **MicrosoftEdge**, puis cliquez sur  **Suivant**.
+6. Dans la page **Choisir une application borne** , sélectionnez **Microsoft Edge**, puis cliquez sur  **Suivant**.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Choisir une borne – Signe numérique plein écran":::
 
-7. Sélectionnez l’une des options suivantes pour l’affichage de Microsoft Edge en mode plein écran:
+7. Sélectionnez l’une des options suivantes pour l’affichage de Microsoft Edge en mode plein écran :
 
    - Connexion numérique/interactive : affiche un site spécifique en mode plein écran, exécutant Microsoft Edge.
    - Navigateur public : exécute une version multi-onglet limitée de Microsoft Edge.
@@ -129,5 +129,5 @@ Le mode plein écran étant un élément important de votre activité quotidienn
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Nouveau Microsoft Edge pour remplacer la version héritée de Microsoft Edge par la version mardi de la mise à jour Windows 10 d’avril](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)

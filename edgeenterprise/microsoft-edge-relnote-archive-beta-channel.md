@@ -20,7 +20,7 @@ ms.locfileid: "11617968"
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication archivées du canal Microsoft Edge Beta
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal Microsoft Edge Beta. Si vous souhaitez en savoir plus sur les canaux Microsoft Edge, veuillez consultez la rubrique [Vue d’ensemble des canaux Microsoft Edge](microsoft-edge-channels.md). Toutes les mises à jour de sécurité sont listées [ici](microsoft-edge-relnotes-security.md).
-## <a name="version-89077418-february-3"></a>Version89.0.774.18 du 3février
+## <a name="version-89077418-february-3"></a>Version 89.0.774.18 du 3 février
 
 ### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
@@ -202,7 +202,7 @@ Résolution de divers bogues et problèmes de performances.
 Résolution de divers bogues et problèmes de performances.
 
 <!-- begin major 87 -->
-## <a name="version-87066412-october-20"></a>Version87.0.664.12: 20octobre
+## <a name="version-87066412-october-20"></a>Version 87.0.664.12 : 20 octobre
 
 ### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
@@ -766,4 +766,4 @@ Les stratégies suivantes fonctionnent encore dans cette version. Elles deviendr
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

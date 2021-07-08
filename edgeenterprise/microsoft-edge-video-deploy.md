@@ -17,9 +17,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 01/14/2021
 ms.locfileid: "11269348"
 ---
-# Vidéo: déploiement de Microsoft Edge sur des centaines ou des milliers d’appareils
+# Vidéo : déploiement de Microsoft Edge sur des centaines ou des milliers d’appareils
 
-Cette vidéo montre les étapes de déploiement de Microsoft Edge sur tous vos appareils gérés. Cliquez sur la capture d’écran suivante pour regarder la vidéo de Jeremy Chapman, Director de Microsoft365.
+Cette vidéo montre les étapes de déploiement de Microsoft Edge sur tous vos appareils gérés. Cliquez sur la capture d’écran suivante pour regarder la vidéo de Jeremy Chapman, Director de Microsoft 365.
 
 [![Déploiement de Microsoft Edge sur des centaines ou des milliers d’appareils](media/microsoft-edge-video-deploy/0.png)](http://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices")
 
@@ -29,5 +29,5 @@ Consultez la visite guidée sur la façon de déployer Microsoft Edge sur vos ap
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Playlist Microsoft Edge sur YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

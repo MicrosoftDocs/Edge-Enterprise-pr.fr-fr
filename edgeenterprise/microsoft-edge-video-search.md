@@ -17,20 +17,20 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 01/14/2021
 ms.locfileid: "11269295"
 ---
-# Vidéo: Microsoft Edge et Microsoft Search
+# Vidéo : Microsoft Edge et Microsoft Search
 
 Cette vidéo montre comment Microsoft Edge utilise l’expérience de compatibilité au niveau supérieur avec Microsoft Search. Cliquez cette capture d’écran pour regarder la vidéo de Chuck Friedman, CVP de l’équipe Microsoft Edge.
 
 [![Microsoft Edge et Microsoft Search](https://res.cloudinary.com/marcomontalbano/image/upload/v1592253564/video_to_markdown/images/youtube--7LfNqmJkeTM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](http://www.youtube.com/watch?v=7LfNqmJkeTM "Microsoft Edge and Microsoft Search")
 
 > [!NOTE]
-> Cet article a été filmé chez Microsoft Ignite2019, session THR2279: Microsoft Edge et Microsoft Search: suivez la visite guidée des administrateurs informatiques et des utilisateurs.
+> Cet article a été filmé chez Microsoft Ignite 2019, session THR2279 : Microsoft Edge et Microsoft Search : suivez la visite guidée des administrateurs informatiques et des utilisateurs.
 
 ## À propos de la vidéo
 
-Microsoft Search ajoute des résultats de recherche intranet personnalisés et sur mesure pour les sites, les personnes, les fichiers et les autres aspects sur le PC, Mac et appareils mobiles. Pour finir, nous allons vous montrer comment configurer Microsoft Search dans le cadre de Microsoft365. et comment déployer Microsoft Edge à partir de System Center Configuration Manager et Microsoft Intune sur toutes les plateformes.
+Microsoft Search ajoute des résultats de recherche intranet personnalisés et sur mesure pour les sites, les personnes, les fichiers et les autres aspects sur le PC, Mac et appareils mobiles. Pour finir, nous allons vous montrer comment configurer Microsoft Search dans le cadre de Microsoft 365. et comment déployer Microsoft Edge à partir de System Center Configuration Manager et Microsoft Intune sur toutes les plateformes.
 
 ## Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Playlist Microsoft Edge sur YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

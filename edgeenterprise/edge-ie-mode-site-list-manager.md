@@ -17,10 +17,10 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/25/2021
 ms.locfileid: "11617404"
 ---
-# <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Enterprise Site List Manager dans MicrosoftEdge
+# <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Enterprise Site List Manager dans Microsoft Edge
 
 >[!Note]
-> L’application de bureau Internet Explorer 11 sera mise hors service et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des éléments concernés, [consultez le forum aux questions](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites Internet Explorer11 que vous utilisez aujourd’hui peuvent s’ouvrir dans MicrosoftEdge en mode Internet Explorer. [Plus d'informations ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> L’application de bureau Internet Explorer 11 sera mise hors service et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des éléments concernés, [consultez le forum aux questions](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites Internet Explorer 11 que vous utilisez aujourd’hui peuvent s’ouvrir dans Microsoft Edge en mode Internet Explorer. [Plus d'informations ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Cet article explique comment activer l’accès à Enterprise Site List Manager dans Microsoft Edge et l’utiliser pour créer, modifier et exporter votre liste des sites en mode Entreprise pour le mode Internet Explorer.
 
@@ -128,7 +128,7 @@ Pour effectuer une recherche, tapez une partie de l’URL dans la zone de recher
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [À propos du mode Internet Explorer](./edge-ie-mode.md)
 - [Guide du schéma du mode entreprise v.2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
 - [Informations supplémentaires sur le mode entreprise](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

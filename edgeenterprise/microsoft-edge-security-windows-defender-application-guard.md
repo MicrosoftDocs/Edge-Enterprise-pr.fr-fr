@@ -49,11 +49,11 @@ La capture d’écran suivante affiche un exemple de message de l’Application 
 
 ## <a name="whats-new"></a>Nouveautés
 
-La prise en charge d’ApplicationGuard dans le nouveau navigateur MicrosoftEdge dispose d’une parité fonctionnelle avec l’Ancienne version de MicrosoftEdge et inclut plusieurs améliorations.
+La prise en charge d’Application Guard dans le nouveau navigateur Microsoft Edge dispose d’une parité fonctionnelle avec l’Ancienne version de Microsoft Edge et inclut plusieurs améliorations.
 
 ### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>Synchronisation des favoris à partir de l’hôte dans le conteneur
 
-Certains de nos clients ont demandé la synchronisation des favoris entre le navigateur hôte et le conteneur dans ApplicationGuard. À partir Microsoft Edge version91, les utilisateurs ont désormais la possibilité de configurer ApplicationGuard pour synchroniser leurs favoris entre l’hôte et le conteneur. Cela garantit que les nouveaux favoris apparaissent également sur le conteneur.
+Certains de nos clients ont demandé la synchronisation des favoris entre le navigateur hôte et le conteneur dans Application Guard. À partir Microsoft Edge version 91, les utilisateurs ont désormais la possibilité de configurer Application Guard pour synchroniser leurs favoris entre l’hôte et le conteneur. Cela garantit que les nouveaux favoris apparaissent également sur le conteneur.
 
 Cette prise en charge peut être contrôlée par l’intermédiaire d’une stratégie. Vous pouvez mettre à jour la stratégie Edge [ApplicationGuardFavoritesSyncEnabled](/deployedge/microsoft-edge-policies#applicationguardfavoritessyncenabled) pour activer ou désactiver la synchronisation des favoris.
 
@@ -62,12 +62,12 @@ Cette prise en charge peut être contrôlée par l’intermédiaire d’une stra
 
 ### <a name="identify-network-traffic-originating-from-the-container"></a>Identifier le trafic réseau provenant du conteneur
 
-Plusieurs clients utilisent WDAG dans une configuration spécifique où ils souhaitent identifier le trafic réseau provenant du conteneur. Voici quelques exemples de scénarios:
+Plusieurs clients utilisent WDAG dans une configuration spécifique où ils souhaitent identifier le trafic réseau provenant du conteneur. Voici quelques exemples de scénarios :
 
 - Pour restreindre l’accès à quelques sites non confiance uniquement
 - Pour autoriser l’accès à Internet à partir du conteneur uniquement
 
-À partir de Microsoft Edge version91, la prise en charge intégrée permet de baliser le trafic réseau provenant de conteneurs ApplicationGuard, ce qui permet aux entreprises d’utiliser un proxy pour filtrer le trafic et appliquer des stratégies spécifiques. Vous pouvez utiliser l’en-tête pour identifier le trafic qui passe par le conteneur ou l’hôte à l’aide de [ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
+À partir de Microsoft Edge version 91, la prise en charge intégrée permet de baliser le trafic réseau provenant de conteneurs Application Guard, ce qui permet aux entreprises d’utiliser un proxy pour filtrer le trafic et appliquer des stratégies spécifiques. Vous pouvez utiliser l’en-tête pour identifier le trafic qui passe par le conteneur ou l’hôte à l’aide de [ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
 
 ### <a name="extension-support-inside-the-container"></a>Prise en charge de l’extension dans le conteneur
 
@@ -127,9 +127,9 @@ Les articles suivants fournissent les informations nécessaires pour installer, 
 
 ## <a name="frequently-asked-questions"></a>Forum Aux Questions
 
-### <a name="does-application-guard-work-in-ie-mode"></a>ApplicationGuard fonctionne-t-elle en mode InternetExplorer?
+### <a name="does-application-guard-work-in-ie-mode"></a>Application Guard fonctionne-t-elle en mode Internet Explorer ?
 
-Le mode InternetExplorer prend en charge les fonctionnalités d’ApplicationGuard, mais nous ne prévoyons pas une utilisation importante de cette fonctionnalité en mode InternetExplorer. Il est recommandé de déployer le mode InternetExplorer pour une liste de sites internes de confiance, et ApplicationGuard pour les sites non approuvés uniquement. Assurez-vous que tous les sites ou adresses IP en mode IE sont également ajoutés à la stratégie d’isolement réseau afin qu’ils soient considérés comme des ressources approuvées par Application Guard.
+Le mode Internet Explorer prend en charge les fonctionnalités d’Application Guard, mais nous ne prévoyons pas une utilisation importante de cette fonctionnalité en mode Internet Explorer. Il est recommandé de déployer le mode Internet Explorer pour une liste de sites internes de confiance, et Application Guard pour les sites non approuvés uniquement. Assurez-vous que tous les sites ou adresses IP en mode IE sont également ajoutés à la stratégie d’isolement réseau afin qu’ils soient considérés comme des ressources approuvées par Application Guard.
 
 ### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Ai-je besoin d’installer l’extension Chrome d’Application Guard ?
 
@@ -141,6 +141,6 @@ Oui. [Forum aux questions - Microsoft Defender Application Guard](/windows/secur
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Microsoft Defender - Protection avancée contre les menaces](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 - [Vidéo : isolation du navigateur Microsoft Edge avec Application Guard](https://www.youtube.com/watch?v=zQjaRqNXMqw&t=3s)

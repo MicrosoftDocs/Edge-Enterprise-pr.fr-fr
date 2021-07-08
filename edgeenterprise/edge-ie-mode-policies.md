@@ -88,7 +88,7 @@ Le mode IE peut utiliser la stratégie existante qui configure la Liste des Site
     1. Tous les sites qui ont l’élément _\<open-in\>IE11\</open-in\>_ s’ouvrent désormais en mode IE.
 2. Ouvrez l’Éditeur de stratégie de groupe.
 3. Cliquez sur ** Configuration utilisateur/Configuration de l’ordinateur**  >  **Modèles d’administration**  >  ** composants Windows**  >  **Internet Explorer**.
-4. Double-cliquez sur **Utiliser la liste des sitesweb en modeEntreprise d’Internet Explorer**.
+4. Double-cliquez sur **Utiliser la liste des sites web en mode Entreprise d’Internet Explorer**.
 5. Sélectionnez **Activé**.
 6. Sous **Options**, tapez l’emplacement de la liste des sites web. Vous pouvez utiliser l’un des emplacements suivants :
     - (Recommandé) Emplacement HTTPS : **https**:**//iemode/sites.xml**
@@ -122,7 +122,7 @@ Le mode IE peut être configuré comme pour tous les sites dans la zone Intranet
 
 1. Ouvrez l'Éditeur d'objets de stratégie de groupe.
 2. Cliquez **sur configuration utilisateur/configuration de l’ordinateur**  >  ** Modèles d’administration** >  **Microsoft Edge**.
-3. Double-cliquez sur **Envoyer tous les sites intranet vers InternetExplorer**.
+3. Double-cliquez sur **Envoyer tous les sites intranet vers Internet Explorer**.
 4. Sélectionnez **Activé**, puis cliquez sur **OK** ou sur **Appliquer** pour enregistrer les paramètres de stratégie.
 
 ## <a name="redirect-sites-from-ie-to-microsoft-edge"></a>Rediriger des sites IE vers Microsoft Edge
@@ -146,6 +146,6 @@ Vous pouvez empêcher vos utilisateurs d’utiliser Internet Explorer pour les s
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [À propos du mode Internet Explorer](./edge-ie-mode.md)
 - [Informations supplémentaires sur le mode entreprise](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

@@ -19,16 +19,16 @@ ms.locfileid: "11617824"
 ---
 # <a name="microsoft-edge-policy-mapping-overview"></a>Vue d’ensemble du mappage de stratégie Microsoft Edge
 
-Pour vous aider à effectuer votre déploiement initial, utilisez les mappages de stratégie suivants pour migrer votre configuration de stratégie Google Chrome (version80) vers Microsoft Edge (version80).
+Pour vous aider à effectuer votre déploiement initial, utilisez les mappages de stratégie suivants pour migrer votre configuration de stratégie Google Chrome (version 80) vers Microsoft Edge (version 80).
 
 - [Mappage de stratégie de Google Chrome vers Microsoft Edge](microsoft-edge-policy-map-chrome-to-newedge.md)
 
 > [!NOTE]
-> Pour obtenir la liste établie des dernières stratégies, voir:
+> Pour obtenir la liste établie des dernières stratégies, voir :
 > - [Référence de stratégie du navigateur](microsoft-edge-policies.md)
 > - [Référence de stratégie de mise à jour](microsoft-edge-update-policies.md)
 
 ## <a name="see-also"></a>Voir également
 - [Configuration de Microsoft Edge sur Windows](configure-microsoft-edge.md)
 - [Configuration de Microsoft Edge sur macOS](configure-microsoft-edge-on-mac.md)
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

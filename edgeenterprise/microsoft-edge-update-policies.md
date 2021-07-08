@@ -619,4 +619,4 @@ Les mises à jour automatiques sont activées par défaut. La désactivation des
 
 ## <a name="see-also"></a>Voir également
   - [Configuration de Microsoft Edge](configure-microsoft-edge.md)
-  - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+  - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

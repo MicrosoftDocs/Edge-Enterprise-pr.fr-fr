@@ -64,6 +64,6 @@ Nous utilisons un modèle de déploiement progressif, ce qui signifie que la dis
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Canaux Microsoft Edge](/deployedge/microsoft-edge-channels)
 - [Téléchargements de canaux](https://www.microsoft.com/edge/business/download)

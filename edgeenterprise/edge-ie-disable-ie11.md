@@ -17,12 +17,12 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/25/2021
 ms.locfileid: "11617484"
 ---
-# <a name="disable-internet-explorer-11"></a>Désactiver Internet Explorer11
+# <a name="disable-internet-explorer-11"></a>Désactiver Internet Explorer 11
 
 >[!Note]
-> L’application de bureau Internet Explorer11 sera retirée et ne sera plus prise en charge le 15juin2022 (pour obtenir la liste des applications dans l’étendue, [consultez le FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites Internet Explorer11 que vous utilisez aujourd’hui peuvent s’ouvrir dans MicrosoftEdge en mode Internet Explorer. [Plus d'informations ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> L’application de bureau Internet Explorer 11 sera retirée et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des applications dans l’étendue, [consultez le FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites Internet Explorer 11 que vous utilisez aujourd’hui peuvent s’ouvrir dans Microsoft Edge en mode Internet Explorer. [Plus d'informations ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-Cet article explique comment désactiver Internet Explorer11 en tant que navigateur autonome dans votre environnement.
+Cet article explique comment désactiver Internet Explorer 11 en tant que navigateur autonome dans votre environnement.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -64,9 +64,9 @@ Dans le cadre de la définition de la stratégie pour cette expérience, vous po
 
 Si votre liste des sites en mode Entreprise contient des applications configurées pour s’ouvrir dans l’application IE11 et que vous désactivez IE11 avec cette stratégie, elles s’ouvrent en mode IE sur Microsoft Edge.
 > [!NOTE]
-> Un problème connu s’était créé avec le flux utilisateur lorsqu’un site est configuré pour s’ouvrir dans l’application IE11 et que la stratégie Désactiver InternetExplorer (IE11) est définie. Le problème a été résolu dans MicrosoftEdge versions 91.0.840.0 ou ultérieures.
+> Un problème connu s’était créé avec le flux utilisateur lorsqu’un site est configuré pour s’ouvrir dans l’application IE11 et que la stratégie Désactiver Internet Explorer (IE11) est définie. Le problème a été résolu dans Microsoft Edge versions 91.0.840.0 ou ultérieures.
 
-## <a name="disable-internet-explorer-11-as-a-standalone-browser"></a>Désactiver Internet Explorer11 en tant que navigateur autonome
+## <a name="disable-internet-explorer-11-as-a-standalone-browser"></a>Désactiver Internet Explorer 11 en tant que navigateur autonome
 
 Pour désactiver Internet Explorer 11 à l’aide de la stratégie de groupe, suivez les étapes suivantes :
 
@@ -85,6 +85,6 @@ Pour désactiver Internet Explorer 11 à l’aide de la stratégie de groupe, su
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [À propos du mode Internet Explorer](./edge-ie-mode.md)
 - [Informations supplémentaires sur le mode entreprise](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

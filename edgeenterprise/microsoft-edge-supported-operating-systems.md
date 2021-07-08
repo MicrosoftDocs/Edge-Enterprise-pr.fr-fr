@@ -74,7 +74,7 @@ Microsoft Edge pour Android peut s'installer sur des tablettes et des téléphon
 
 ### <a name="apple-silicon-macs"></a>Mac Apple Silicon
 
-Prise en charge native de Microsoft Edge à partir de la version stable88 pour les Mac Apple Silicon.
+Prise en charge native de Microsoft Edge à partir de la version stable 88 pour les Mac Apple Silicon.
 
 ### <a name="linux"></a>Linux
 
@@ -91,6 +91,6 @@ Microsoft Edge ne prend pas en charge Chromebooks.
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Politique de cycle de vie moderne de Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy)
 - [Mises à jour de sécurité étendues pour Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)

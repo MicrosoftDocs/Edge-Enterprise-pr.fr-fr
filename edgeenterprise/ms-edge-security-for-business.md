@@ -31,7 +31,7 @@ Intégré à Microsoft Edge, SmartScreen bloque davantage de tentatives de [hame
 
 [Microsoft Edge SmartScreen](//DeployEdge/microsoft-edge-security-smartscreen)a bloqué 95,5% des tentatives d’hameçonnage pendant le test de[Protection contre l’hameçonnage de NSS Labs](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1)et 98,5% des tentatives de programme malveillants pendant le test de [Protection des programmes malveillants de NSS Labs](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW)par rapport aux taux de navigation sécurisée de Chrome de 86,9% et 86,0% respectivement.
 
-### <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>Le seul navigateur sur Windows10 qui prend en charge l’isolation du matériel en mode natif
+### <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>Le seul navigateur sur Windows 10 qui prend en charge l’isolation du matériel en mode natif
 
 Microsoft Edge est le seul navigateur sur Windows 10 qui prend en charge les fonctionnalités d’isolation de matériel en mode natif. Dans le cadre de Windows 10 Professionnel ou Entreprise, Microsoft Defender Application Guard (Application Guard) exécute les sites non approuvés dans un noyau isolé de l’appareil local et des réseaux internes. Les sites non dignes de confiance sont exécutés dans un « conteneur », de sorte qu’en cas d’attaque, celui-ci est mis en sandbox à partir du reste du réseau d’entreprise. Pour plus d’informations, consultez [Microsoft Edge support pour Application Guard](./microsoft-edge-security-windows-defender-application-guard.md).
 
@@ -65,5 +65,5 @@ Pour en savoir plus sur les conditions préalables de Microsoft Endpoint Protect
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Vidéo : Sécurité, compatibilité et facilité de gestion de Microsoft Edge](microsoft-edge-video-security-compatibility-manageability.md)

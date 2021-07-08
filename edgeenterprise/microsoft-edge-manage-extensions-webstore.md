@@ -98,8 +98,8 @@ Vous pouvez appliquer ces stratégies à vos utilisateurs, appareils sélectionn
 
 ## <a name="see-also"></a>Voir également
 
-- [Gérer les extensions MicrosoftEdge dans l’entreprise](microsoft-edge-manage-extensions.md)
-- [Utiliser des stratégies de groupe pour gérer les extensions MicrosoftEdge](microsoft-edge-manage-extensions-policies.md)
+- [Gérer les extensions Microsoft Edge dans l’entreprise](microsoft-edge-manage-extensions.md)
+- [Utiliser des stratégies de groupe pour gérer les extensions Microsoft Edge](microsoft-edge-manage-extensions-policies.md)
 - [Guide détaillé de la stratégie ExtensionSettings](microsoft-edge-manage-extensions-ref-guide.md)
-- [FAQ sur les extensions MicrosoftEdge](microsoft-edge-manage-extensions-faq.md)
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [FAQ sur les extensions Microsoft Edge](microsoft-edge-manage-extensions-faq.md)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

@@ -17,7 +17,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/25/2021
 ms.locfileid: "11617464"
 ---
-# <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Partage de cookies de MicrosoftEdge vers InternetExplorer
+# <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Partage de cookies de Microsoft Edge vers Internet Explorer
 
 >[!Note]
 > L’application de bureau Internet Explorer 11 sera retirée et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des éléments concernés, [consultez le FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites IE11 que vous utilisez aujourd’hui peuvent s’ouvrir dans Microsoft Edge avec le mode Internet Explorer. [Apprenez-en plus ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
@@ -79,4 +79,4 @@ Le tableau suivant décrit l’élément \<shared-cookie\> ajouté pour la prise
 - [À propos du mode IE](./edge-ie-mode.md)
 - [Informations sur les sites configurables](./edge-learnmore-configurable-sites-ie-mode.md)
 - [Informations supplémentaires sur le mode entreprise](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

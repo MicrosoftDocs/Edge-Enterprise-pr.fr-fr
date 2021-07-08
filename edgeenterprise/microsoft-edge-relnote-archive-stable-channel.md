@@ -21,7 +21,7 @@ ms.locfileid: "11617954"
 
 Ces notes de publication fournissent des informations sur les nouvelles fonctionnalités et les mises à jour non liées à la sécurité qui sont incluses dans le canal stable Microsoft Edge. Toutes les mises à jour de sécurité sont listées [ici](microsoft-edge-relnotes-security.md).
 
-## <a name="version-88070581-february-25"></a>Version88.0.705.81 du 25février
+## <a name="version-88070581-february-25"></a>Version 88.0.705.81 du 25 février
 
 Résolution de divers bogues et de problèmes de performances.
 
@@ -829,4 +829,4 @@ La stratégie suivante a été déconseillée.
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
