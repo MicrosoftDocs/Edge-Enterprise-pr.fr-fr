@@ -25,7 +25,7 @@
       href: microsoft-edge-roadmap.md
     - name: Prise en charge des plateformes pour les fonctionnalités de Microsoft Edge
       href: microsoft-edge-platform-feature-matrix.md
-    - name: Planifier votre déploiement de MicrosoftEdge
+    - name: Planifier votre déploiement de Microsoft Edge
       href: deploy-edge-plan-deployment.md
     - name: Microsoft Edge dans votre environnement
       href: deploy-edge-prepare-to-deploy.md
@@ -57,13 +57,13 @@
       href: microsoft-edge-support-lifecycle.md
     - name: Langues prises en charge
       href: microsoft-edge-supported-languages.md
-    - name: Mises à jour système pour MicrosoftEdge
+    - name: Mises à jour système pour Microsoft Edge
       items:
-        - name: Mises à jour Windows pour prendre en charge MicrosoftEdge
+        - name: Mises à jour Windows pour prendre en charge Microsoft Edge
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Déployer Microsoft Edge
   items:
-    - name: Déployer Microsoft Edge avec les mises à jour Windows10
+    - name: Déployer Microsoft Edge avec les mises à jour Windows 10
       href: deploy-edge-with-windows-10-updates.md
     - name: Déployer dans Windows avec Configuration Manager
       href: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
@@ -95,7 +95,7 @@
       href: edge-configuration-and-experiments.md
     - name: Prise en charge et configuration des identités
       href: microsoft-edge-security-identity.md
-    - name: MicrosoftEdge et Enterprise State Roaming
+    - name: Microsoft Edge et Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
     - name: Planifier votre transition en mode plein écran
       href: microsoft-edge-kiosk-mode-transition-plan.md
@@ -125,7 +125,7 @@
       href: microsoft-edge-on-premises-sync.md
     - name: Lecteur PDF dans Microsoft Edge
       href: microsoft-edge-pdf.md
-    - name: Définir MicrosoftEdge comme navigateur par défaut
+    - name: Définir Microsoft Edge comme navigateur par défaut
       href: edge-default-browser.md
     - name: Utiliser Microsoft Edge en mode Internet Explorer
       items:
@@ -135,7 +135,7 @@
           href: edge-ie-mode-sitelist.md
         - name: Configurer des stratégies de mode IE
           href: edge-ie-mode-policies.md
-        - name: Désactiver Internet Explorer11
+        - name: Désactiver Internet Explorer 11
           href: edge-ie-disable-ie11.md
         - name: Découverte de sites et gestion des listes
           items:
@@ -143,11 +143,11 @@
               href: edge-ie-mode-site-discovery.md
             - name: Gestionnaire de listes de sites du mode entreprise dans Microsoft Edge
               href: edge-ie-mode-site-list-manager.md
-        - name: Conserver la navigation dans la page en mode InternetExplorer
+        - name: Conserver la navigation dans la page en mode Internet Explorer
           href: edge-learnmore-inpage-nav.md
         - name: Partage de cookies de Microsoft Edge vers Internet Explorer
           href: edge-ie-mode-add-guidance-cookieshare.md
-        - name: Sites configurables en mode InternetExplorer
+        - name: Sites configurables en mode Internet Explorer
           href: edge-learnmore-configurable-sites-ie-mode.md
         - name: Associer les extensions de fichier avec le mode Internet Explorer
           href: edge-ie-mode-add-guidance-filetype-associations.md
@@ -159,7 +159,7 @@
       href: ms-edge-security-for-business.md
     - name: Interruption des téléchargements de fichiers potentiellement dangereux
       href: microsoft-edge-security-downloads-interruptions.md
-    - name: Liste verte pour les points de terminaison de MicrosoftEdge
+    - name: Liste verte pour les points de terminaison de Microsoft Edge
       href: microsoft-edge-security-endpoints.md
     - name: Protection contre la perte de données
       href: microsoft-edge-security-dlp.md
@@ -171,7 +171,7 @@
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Prise en charge de l’accès conditionnel Azure AD
       href: ms-edge-security-conditional-access.md
-    - name: Support pour ApplicationGuard
+    - name: Support pour Application Guard
       href: microsoft-edge-security-windows-defender-application-guard.md
     - name: Support pour Microsoft Defender SmartScreen
       href: microsoft-edge-security-smartscreen.md
@@ -201,7 +201,7 @@
           href: edge-learnmore-cmdline-options-proxy-settings.md
         - name: Format de filtre pour les stratégies basées sur une liste d’URL
           href: edge-learnmmore-url-list-filter format.md
-        - name: Téléchargements de contenu mixte?
+        - name: Téléchargements de contenu mixte ?
           href: edge-learnmore-mixed-content-downloads.md
         - name: Déploiements progressifs pour les mises à jour du canal stable
           href: microsoft-edge-update-progressive-rollout.md
@@ -221,23 +221,23 @@
   items:
     - name: Collection de vidéos Microsoft Edge
       href: microsoft-edge-videos.md
-    - name: 'Vidéo: Microsoft Edge - État du navigateur 2020'
+    - name: 'Vidéo : Microsoft Edge - État du navigateur 2020'
       href: microsoft-edge-video-state-of-browser.md
-    - name: 'Vidéo: isolation du navigateur à l’aide d’Application Guard'
+    - name: 'Vidéo : isolation du navigateur à l’aide d’Application Guard'
       href: microsoft-edge-video-security-application-guard.md
-    - name: 'Vidéo: Déployer Microsoft Edge'
+    - name: 'Vidéo : Déployer Microsoft Edge'
       href: microsoft-edge-video-deploy.md
-    - name: 'Vidéo: Protection contre la perte de données (DLP)'
+    - name: 'Vidéo : Protection contre la perte de données (DLP)'
       href: microsoft-edge-video-security-dlp.md
-    - name: 'Vidéo: identité dans Microsoft Edge'
+    - name: 'Vidéo : identité dans Microsoft Edge'
       href: microsoft-edge-video-identity.md
-    - name: 'Vidéo: restauration de la version Microsoft Edge'
+    - name: 'Vidéo : restauration de la version Microsoft Edge'
       href: microsoft-edge-video-version-rollback.md
-    - name: 'Vidéo: lecteur PDF dans Microsoft Edge'
+    - name: 'Vidéo : lecteur PDF dans Microsoft Edge'
       href: microsoft-edge-video-pdf-reader.md
-    - name: 'Vidéo: navigation sécurisée sur Microsoft Edge'
+    - name: 'Vidéo : navigation sécurisée sur Microsoft Edge'
       href: microsoft-edge-video-security-smartscreen.md
-    - name: 'Vidéo: sécurité, compatibilité et facilité de gestion'
+    - name: 'Vidéo : sécurité, compatibilité et facilité de gestion'
       href: microsoft-edge-video-security-compatibility-manageability.md
 - name: Questions fréquemment posées
   href: faqs-edge-in-the-enterprise.yml
