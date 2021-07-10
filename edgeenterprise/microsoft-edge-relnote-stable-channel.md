@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal stable
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/24/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal stable
-ms.openlocfilehash: ef059624339f4b50b92fb187023991ae0526afa7
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: ab599e3995641290ed806acc241b00e808f7fc1b
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617944"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642530"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notes de publication du canal stable Microsoft Edge
 
@@ -30,6 +30,11 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > Pour le canal stable, le déploiement des mises à jour sera progressif et durera un ou plusieurs jours. Si vous souhaitez en savoir plus, veuillez consulter la rubrique [Déploiements progressifs pour les mises à jour de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > La plateforme web Microsoft Edge évolue constamment pour améliorer l’expérience utilisateur, la sécurité et la confidentialité. Pour en savoir plus, consultez les [modifications qui ont un impact sur la compatibilité du prochain Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+
+## <a name="version-91086464-july-2"></a>Version 91.0.864.64 : 2 juillet
+
+Résolution de divers bogues et problèmes de performances.
 
 ## <a name="version-91086459-june-24"></a>Version 91.0.864.59 : 24 juin
 

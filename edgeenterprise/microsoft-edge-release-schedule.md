@@ -3,19 +3,19 @@ title: Planning de publication de Microsoft Edge
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/18/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planning de publication de Microsoft Edge
-ms.openlocfilehash: 578a7a3c1a87aee1acc01715c735d5eea9ab67c0
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 58a5948af71e5667152bd29200d993888e263a89
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617969"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642710"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Planning de publication de Microsoft Edge
 
@@ -41,10 +41,10 @@ Le tableau suivant suit et fournit uniquement des informations sur les principal
 
 | Version | État de la publication | Canal Beta<br>Semaine de publication | Canal Stable<br>Semaine de publication |
 |---------|-----|------|--------|
-| 88 | Publiée<br>Version | 09-déc-2020<br>[88.0.705.18](/microsoft-edge-relnote-archive-beta-channel.md#version-88070518-december-9) | 21-jan-2021<br>[88.0.705.50](/microsoft-edge-relnote-archive-stable-channel.md#version-88070550-january-21)|
-| 89 | Publiée<br>Version | 03-Feb-2021<br>[89.0.774.18](/microsoft-edge-relnote-beta-channel.md#version-89077423-february-8) | 04-mars-2021<br>[89.0.774.45](/microsoft-edge-relnote-stable-channel.md#version-89077445-march-4) |
-| **90** | Publiée<br>Version | 16-Mars-2021<br>[90.0.818.8](/microsoft-edge-relnote-beta-channel.md#version-9008188-march-16) | **15-avr-2021**<BR>**[90.0.818.39](/microsoft-edge-relnote-stable-channel#version-90081839-april-15)** |
-| **91** | Publiée<br>Version | **30-avr-2021**<br>[91.0.864.11](/microsoft-edge-relnote-beta-channel.md#version-91086411-april-30) | **27-mai-2021**<BR>**[91.0.864.37](/microsoft-edge-relnote-stable-channel#version-91086437-may-27)** |
+| 88 | Publiée<br>Version | 09-déc-2020<br>[88.0.705.18](/deployedge/microsoft-edge-relnote-archive-beta-channel.md#version-88070518-december-9) | 21-jan-2021<br>[88.0.705.50](/microsoft-edge-relnote-archive-stable-channel.md#version-88070550-january-21)|
+| 89 | Publiée<br>Version | 03-Feb-2021<br>[89.0.774.18](/deployedge/microsoft-edge-relnote-beta-channel.md#version-89077423-february-8) | 04-mars-2021<br>[89.0.774.45](/microsoft-edge-relnote-stable-channel.md#version-89077445-march-4) |
+| **90** | Publiée<br>Version | 16-Mars-2021<br>[90.0.818.8](/deployedge/microsoft-edge-relnote-beta-channel.md#version-9008188-march-16) | **15-avr-2021**<BR>**[90.0.818.39](/deployedge/microsoft-edge-relnote-stable-channel#version-90081839-april-15) |
+| **91** | Publiée<br>Version | **30-avr-2021**<br>[91.0.864.11](/deployedge/microsoft-edge-relnote-beta-channel.md#version-91086411-april-30) | **27-mai-2021**<BR>**[91.0.864.37](/deployedge/microsoft-edge-relnote-stable-channel#version-91086437-may-27) |
 | 92 | Libération des cibles | Semaine du 08-Juin-2021 | Semaine du 22 Juillet 2021 |
 | 93 | Libération des cibles | Semaine du 03 Août 2021 | Semaine du 02 Septembre 2021 |
 | 94 | Publication cible | Semaine du 01 septembre 2021 | Semaine du 23 septembre 2021 |
