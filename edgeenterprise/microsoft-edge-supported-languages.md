@@ -3,19 +3,19 @@ title: Prise en charge linguistique dans Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/10/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Prise en charge de la langue d’affichage dans Microsoft Edge pour Windows et macOS.
-ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
-ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
-ms.translationtype: HT
+ms.openlocfilehash: 0331ec5cad241deb059af35be264a2f7abaf2bc8
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "11406159"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642370"
 ---
 # <a name="microsoft-edge-language-support"></a><span data-ttu-id="ed475-103">Prise en charge linguistique dans Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="ed475-103">Microsoft Edge language support</span></span>
 
@@ -156,5 +156,5 @@ ms.locfileid: "11406159"
 
 ## <a name="see-also"></a><span data-ttu-id="ed475-385">Articles associés</span><span class="sxs-lookup"><span data-stu-id="ed475-385">See also</span></span>
 
-- [<span data-ttu-id="ed475-386">Documentation Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="ed475-386">Microsoft Edge documentation</span></span>](https://docs.microsoft.com/DeployEdge/)
+- [<span data-ttu-id="ed475-386">Documentation Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="ed475-386">Microsoft Edge documentation</span></span>](./index.yml)
 - [<span data-ttu-id="ed475-387">Page d’accueil Microsoft Edge Entreprise</span><span class="sxs-lookup"><span data-stu-id="ed475-387">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)

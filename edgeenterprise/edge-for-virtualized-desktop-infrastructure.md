@@ -3,19 +3,19 @@ title: Edge pour l’infrastructure de bureau de virtualisation
 ms.author: anlake
 author: AndreaLBarr
 manager: collw
-ms.date: 06/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge pour l’infrastructure bureau virtualisée.
-ms.openlocfilehash: eaad1b72934b336ce86d14dd8da92a6984d21914
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 5dc234b0e6fbba4778f8236399a0ff438f704578
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618092"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641850"
 ---
 # <a name="microsoft-edge-for-virtualized-desktop-infrastructure"></a><span data-ttu-id="e0fe8-103">Microsoft Edge pour l’infrastructure bureau virtualisée</span><span class="sxs-lookup"><span data-stu-id="e0fe8-103">Microsoft Edge for Virtualized Desktop Infrastructure</span></span>
 

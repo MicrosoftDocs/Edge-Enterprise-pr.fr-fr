@@ -3,19 +3,19 @@ title: Notes de publication archivées du canal stable Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notes de publication archivées du canal stable Microsoft Edge
-ms.openlocfilehash: d8574e7b77babbf45a062ed9cadd4b60b616d972
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: d50da924c3c78e38eb55b30cf219145d19fe9816
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617954"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642390"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a><span data-ttu-id="ad40e-103">Notes de publication archivées du canal stable Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="ad40e-103">Archived release notes for Microsoft Edge Stable Channel</span></span>
 

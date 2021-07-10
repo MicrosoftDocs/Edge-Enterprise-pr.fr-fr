@@ -3,19 +3,19 @@ title: Vue d’ensemble du mappage de stratégie Microsoft Edge
 ms.author: brianalt
 author: brianalt
 manager: srugh
-ms.date: 02/10/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Vue d’ensemble du mappage de stratégie Microsoft Edge
-ms.openlocfilehash: 724dba17d6f129abff4be52eda175c611cc9544f
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: da10a1cf099a39ef03002bc539e3cf01eb9ccba3
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617824"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642570"
 ---
 # <a name="microsoft-edge-policy-mapping-overview"></a><span data-ttu-id="058ac-103">Vue d’ensemble du mappage de stratégie Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="058ac-103">Microsoft Edge policy mapping overview</span></span>
 

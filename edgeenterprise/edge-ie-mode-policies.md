@@ -3,19 +3,19 @@ title: Configurer des stratégies de mode IE
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurer des stratégies de mode IE
-ms.openlocfilehash: d73a9649619a746fd1ef382f0911ad7e45255f06
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 57d0db97a96baf361f88ca8ec90812373440c3d8
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617434"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641470"
 ---
 # <a name="configure-ie-mode-policies"></a><span data-ttu-id="c7f7d-103">Configurer des stratégies de mode IE</span><span class="sxs-lookup"><span data-stu-id="c7f7d-103">Configure IE mode policies</span></span>
 
