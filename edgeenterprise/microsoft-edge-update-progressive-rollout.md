@@ -3,36 +3,36 @@ title: Déploiements progressifs pour les mises à jour du canal stable Microsof
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 05/21/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Déploiements progressifs pour les mises à jour du canal stable Microsoft Edge
-ms.openlocfilehash: 5b0d2f58318b10538d0470b644d346b5b9b9489b
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
-ms.translationtype: HT
+ms.openlocfilehash: bdcefdc118125d67057fa77513bd732cff6882e3
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979780"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642290"
 ---
-# Déploiements progressifs pour les mises à jour du canal stable Microsoft Edge
+# <a name="progressive-rollouts-for-microsoft-edge-stable-channel-updates"></a>Déploiements progressifs pour les mises à jour du canal stable Microsoft Edge
 
 À compter de la version 83 de Microsoft Edge, nous allons effectuer un déploiement progressif des mises à jour majeures du canal stable Microsoft Edge sur une période de quelques jours. Ce déploiement progressif nous permet de contrôler les mises à niveau et de mettre à jour le navigateur en toute sécurité au sein de l’organisation.
 
 > [!NOTE]
 > Cela concerne la version 83 ou ultérieure du canal stable Microsoft Edge.
 
-##  <a name="why-do-we-need-progressive-rollout"></a>Pourquoi un déploiement progressif ?
+## <a name="why-do-we-need-progressive-rollout"></a>Pourquoi un déploiement progressif ?
 
 En surveillant étroitement l’intégrité de nos mises à jour et en les déployant sur plusieurs jours, nous pouvons limiter l’impact des problèmes liés aux nouvelles mises à jour. Avec Microsoft Edge version 83, le déploiement progressif est activé pour toutes les versions Windows 7, Windows 8 et 8.1, et Windows 10 de Microsoft Edge. Nous prendrons en charge Microsoft Edge sur Mac dès qu’il sera prêt.
 
-##  <a name="how-will-the-updates-work"></a>Comment se dérouleront les mises à jour ?
+## <a name="how-will-the-updates-work"></a>Comment se dérouleront les mises à jour ?
 
 Une valeur de mise à niveau est attribuée à chaque installation de Microsoft Edge. Lorsque nous lançons le déploiement par incréments, la mise à jour s’affiche lorsque la valeur de votre appareil est comprise dans la plage de valeurs de mise à niveau. Au fur et à mesure du déploiement (dans un délai de quelques jours), tous les utilisateurs finissent par obtenir la mise à jour. Les mises à jour de navigateur incluant des correctifs de sécurité critiques auront une cadence de déploiement plus rapide que les mises à jour qui en sont dépourvu. Cela permet de garantir une protection rapide contre les vulnérabilités.
 
-##  <a name="how-does-this-affect-enterprises"></a>En quoi les grandes entreprises sont-elles affectées ?
+## <a name="how-does-this-affect-enterprises"></a>En quoi les grandes entreprises sont-elles affectées ?
 
 Les artefacts Microsoft Edge sont distribués aux grandes entreprises à l’aide de plusieurs mécanismes tels que Microsoft Intune, Windows Server Update Service (WSUS) et le gestionnaire de configuration. Ces outils de déploiement se comportent différemment en ce qui concerne le déploiement progressif :
 
@@ -41,6 +41,6 @@ Les artefacts Microsoft Edge sont distribués aux grandes entreprises à l’aid
 
 Partagez vos précieux commentaires par le biais de UserVoice, du bouton Commentaires dans les applications ou ci-dessous dans la section Commentaires si vous avez des questions ou des remarques.
 
-##  <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

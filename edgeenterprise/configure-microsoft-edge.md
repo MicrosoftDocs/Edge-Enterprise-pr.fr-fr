@@ -3,19 +3,19 @@ title: Configurer Microsoft Edge pour Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 03/02/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurer les paramètres de stratégie Microsoft Edge sur les appareils Windows
-ms.openlocfilehash: 27e94a609bb8b01c90e1080c6e8cd521facc8d70
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+ms.openlocfilehash: a5db4352e723539843a5ad80a7b067e670bced5c
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385022"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642000"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Configurer les paramètres de stratégie Microsoft Edge sur Windows
 

@@ -3,27 +3,27 @@ title: Sécurité, compatibilité et facilité de gestion de Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sécurité, compatibilité et facilité de gestion de Microsoft Edge
-ms.openlocfilehash: 6d0787deac408e243697872b2393112d0d946dbb
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 480efbef308a68849ec3ea99d8a097a1a01a18c6
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314727"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643170"
 ---
-# Vidéo : Sécurité, compatibilité et facilité de gestion de Microsoft Edge
+# <a name="video-microsoft-edge-security-compatibility-and-manageability"></a>Vidéo : Sécurité, compatibilité et facilité de gestion de Microsoft Edge
 
 Cette vidéo montre comment Microsoft Edge optimise la sécurité, la compatibilité et la facilité de gestion. Cliquez sur la capture d’écran suivante pour regarder la vidéo de Jeremy Chapman, directeur de Microsoft 365.
 
 [![Sécurité, compatibilité et facilité de gestion de Microsoft Edge](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
-##  <a name="about-the-video"></a>À propos de la vidéo
+## <a name="about-the-video"></a>À propos de la vidéo
 
 Suivez une visite guidée pour découvrir la sécurité, la compatibilité et la facilité de gestion du nouveau Microsoft Edge. Microsoft Edge est basé sur Chromium et conçu pour être le meilleur navigateur pour les entreprises. Notre hôte, Jeremy Chapman, vous montre ce qui le distingue des autres navigateurs. Cette séance approfondie inclut les éléments suivants :
 
@@ -31,7 +31,7 @@ Suivez une visite guidée pour découvrir la sécurité, la compatibilité et la
 - Compatibilité. Microsoft Edge est compatible avec les versions Web modernes et existantes.
 - Facilité de gestion. Examinez vos options de gestion des mises à jour ou de maintenance pour Microsoft Edge.
 
-##  <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Sécurité Microsoft Edge pour votre entreprise](ms-edge-security-for-business.md)

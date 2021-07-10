@@ -3,19 +3,19 @@ title: ClickOnce et DirectInvoke dans Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 09/10/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Découvrez ClickOnce et DirectInvoke dans Microsoft Edge.
-ms.openlocfilehash: 528c9f39a2aa6a8b30e4ec92b6b0765fc04cb817
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d124f141e9212ba5ab25d4b725d32add62077a3
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617354"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642050"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Découvrez les fonctionnalités ClickOnce et DirectInvoke dans Microsoft Edge
 
@@ -137,4 +137,4 @@ Les exemples suivants illustrent la gestion des fichiers lorsque ClickOnce et Di
 
 - [Sécurité et déploiement de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [DirectInvoke dans Internet Explorer](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85))
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

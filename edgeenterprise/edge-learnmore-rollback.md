@@ -3,19 +3,19 @@ title: Restauration Microsoft Edge pour les entreprises
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 02/04/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Comment restaurer Microsoft Edge à une version antérieure
-ms.openlocfilehash: 38954f4b293470758b5484591779a3af52c6992c
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 1d20cfe920f8c0b5a8c1c253276555acb11e7916
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617374"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641700"
 ---
 # <a name="how-to-roll-back-microsoft-edge-to-a-previous-version"></a>Comment restaurer Microsoft Edge à une version antérieure
 
@@ -162,5 +162,5 @@ Le paramètre de la méthode de groupe n’a pas encore été synchronisé avec 
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Vidéo : Restauration de version de Microsoft Edge](microsoft-edge-video-version-rollback.md)

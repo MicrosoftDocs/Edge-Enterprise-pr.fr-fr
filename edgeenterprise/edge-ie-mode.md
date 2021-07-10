@@ -3,24 +3,24 @@ title: Qu'est-ce que le mode Internet Explorer?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 05/19/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Découvrez comment le mode Internet Explorer dans Microsoft Edge permet d’accéder aux sites qui ont besoin d’Internet Explorer 11 et d’accéder aux sites modernes.
-ms.openlocfilehash: 39f8797049ac1051d49c63c880b8436dd611d9c2
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 5903e8a50f0afa50daa5921f3c97f3dbcbf0c3c5
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617414"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641390"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Qu’est-ce qu’Internet Explorer (IE) ?
 
 >[!Note]
-> L’application de bureau Internet Explorer 11 sera retirée et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des éléments concernés, [consultez le FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites IE11 que vous utilisez aujourd’hui peuvent s’ouvrir dans Microsoft Edge avec le mode Internet Explorer. [Apprenez-en plus ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> L’application de bureau Internet Explorer 11 sera retirée et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des éléments concernés, [consultez le FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites Internet Explorer 11 que vous utilisez aujourd’hui peuvent s’ouvrir Microsoft Edge le mode Internet Explorer. [Apprenez-en plus ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Nous avons créé le mode Internet Explorer (IE) dans Microsoft Edge pour les organisations qui ont encore besoin d’Internet Explorer 11 pour la compatibilité vers l’arrière avec des sites web existants, mais qui ont également besoin d’un navigateur moderne. Cette fonctionnalité permet aux organisations d’utiliser un seul navigateur, pour les applications web héritées ou pour une application web/moderne. Cet article vous propose une introduction à l’utilisation de Microsoft Edge avec le mode IE.
 

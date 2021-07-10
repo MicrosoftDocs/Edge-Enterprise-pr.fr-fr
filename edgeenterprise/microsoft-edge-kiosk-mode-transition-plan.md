@@ -3,19 +3,19 @@ title: Planifier votre transition en mode plein écran
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/26/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Planifier votre transition en mode plein écran
-ms.openlocfilehash: b563f7ac773fb295d42e2b27b1259af321ce5f70
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 95c50b39eb6e844ae4309b260087931232276d45
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617737"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642910"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>Planifier votre transition en mode plein écran
 
@@ -64,7 +64,7 @@ Utilisez les étapes suivantes comme guide pour configurer un kiosque dans Micro
 
 1. Les mises à jour système minimales pour les systèmes d’exploitation sont indiquées dans le tableau suivant.
 
-|Système d’exploitation|Version|Mises à jour|
+|Système d'exploitation|Version|Mises à jour|
 |--|--|--|
 |Windows 10 | 2004 ou ultérieure|[KB4601382 ou ultérieure](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
 |Windows 10| 1909| [KB4601380 ou ultérieure](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|

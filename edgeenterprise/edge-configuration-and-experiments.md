@@ -3,19 +3,19 @@ title: Configurations et expérimentation de Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurations et expérimentation de Microsoft Edge
-ms.openlocfilehash: aef19fd9c119926a934a1ab00009a89ce2fe31fc
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 1ebfe5fc1da107aa7e9e20b629f14aff468bdd6d
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447768"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641560"
 ---
 # <a name="microsoft-edge-configurations-and-experimentation"></a>Configurations et expérimentation de Microsoft Edge
 
@@ -54,5 +54,5 @@ L’interaction de MicrosoftEdge avec ce service est contrôlée par les paramè
 
 ## <a name="see-also"></a>Articles associés
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://www.microsoftedgeinsider.com/enterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://www.microsoftedgeinsider.com/enterprise)
 - [Page d’accueil de la documentation MicrosoftEdge](./index.yml)

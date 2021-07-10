@@ -3,19 +3,19 @@ title: Définir MicrosoftEdge comme navigateur par défaut sur Windows et macOS
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 1/15/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Découvrez comment définir MicrosoftEdge comme navigateur par défaut
-ms.openlocfilehash: 9151294c34cb2252a7fb32e660c1e3d9e64b5f76
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 191d7835a0c4aacfc2fde409c57622ff5a351926
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447758"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641540"
 ---
 # <a name="set-microsoft-edge-as-the-default-browser"></a>Définir MicrosoftEdge comme navigateur par défaut
 

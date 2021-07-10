@@ -3,19 +3,19 @@ title: Créer des variables de répertoire de données utilisateur Microsoft Edg
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/21/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Découvrez comment créer des variables de répertoire de données utilisateur Microsoft Edge
-ms.openlocfilehash: 5ec78f16c7e5cd43f01845f35b8473494cd0c4bf
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618088"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641450"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Créer des variables de répertoire de données utilisateur Microsoft Edge
 
@@ -62,7 +62,7 @@ Microsoft Edge prend en charge les variables de chemin d’accès suivantes.
 | **${global_app_data}** | Dossier de données d’application à l’échelle du système. Exemple : *C:\AppData* |
 | **${program_files}** | Dossier de fichiers de programme pour le processus actuel. Ce dossier varie selon qu’il s’agit d’un processus 32 bits ou 64 bits. Exemple de résolution : *C:\Program Files (x86)* |
 | **${windows}** | Dossier Windows. Exemple : *C:\Windows* |
-| **${client_name)** | Nom du PC client connecté à une session RDP ou Citrix. Cette variable est vide si elle est utilisée à partir d’une session locale. Si elle est utilisée dans un chemin d’accès, faites-la précéder d’un élément qui est assuré de ne pas être vide. Exemple : *C:\edge_profiles\session_${client_name}* est résolu en *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* et *C:\edge_profiles\session_&lt;SomePCname&gt;* pour les sessions à distance. |
+| **${client_name}** | Nom du PC client connecté à une session RDP ou Citrix. Cette variable est vide si elle est utilisée à partir d’une session locale. Si elle est utilisée dans un chemin d’accès, faites-la précéder d’un élément qui est assuré de ne pas être vide. Exemple : *C:\edge_profiles\session_${client_name}* est résolu en *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* et *C:\edge_profiles\session_&lt;SomePCname&gt;* pour les sessions à distance. |
 | **${session_name}** | Nom de la session active. Utilisez ce nom pour distinguer plusieurs sessions à distance connectées simultanément qui utilisent un seul profil utilisateur. Exemple : *WinSta0 pour les sessions de bureau local* |
 
 #### <a name="macos-only"></a>macOS uniquement

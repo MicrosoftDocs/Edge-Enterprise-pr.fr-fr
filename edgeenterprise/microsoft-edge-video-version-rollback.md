@@ -3,31 +3,31 @@ title: Restauration de version de Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Restauration de version de Microsoft Edge
-ms.openlocfilehash: 1c12251802b2ca1d5012bd7c445c7a34f7e8539c
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 997bf68795ab7cd30935b36ecdf0a7d1854ad194
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314707"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642960"
 ---
-# Vidéo : Restauration de version de Microsoft Edge
+# <a name="video-microsoft-edge-version-rollback"></a>Vidéo : Restauration de version de Microsoft Edge
 
 Cette vidéo montre comment Microsoft Edge prend en charge la restauration de version. Cliquez sur la capture d’écran suivante pour regarder la vidéo par Andy Zeigler, Responsable de programme principal.
 
 [![Restauration de version de Microsoft Edge](media/microsoft-edge-video-version-rollback/0.png)](http://www.youtube.com/watch?v=pXhXHvKUa_c "Microsoft Edge version rollback")
 
-##  <a name="about-the-video"></a>À propos de la vidéo
+## <a name="about-the-video"></a>À propos de la vidéo
 
 La restauration de version vous permet de remplacer votre version du navigateur Microsoft Edge par une version antérieure. Découvrez comment la restauration dans Microsoft Edge peut fournir à votre entreprise un dispositif de sécurité pour réduire l’impact potentiel lorsque vous résoudrez des problèmes dans Microsoft Edge.
 
-##  <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Comment restaurer Microsoft Edge à une version antérieure](edge-learnmore-rollback.md)

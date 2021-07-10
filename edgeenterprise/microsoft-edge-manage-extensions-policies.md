@@ -3,19 +3,19 @@ title: Utiliser des stratégies de groupe pour gérer les extensions Microsoft E
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 06/09/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Utiliser des stratégies de groupe pour gérer les extensions Microsoft Edge dans l’entreprise
-ms.openlocfilehash: a633b036c1733716dfb257b4711bca57bd6721f0
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: dad239a448ec1f0ebef60c7072bfaad5c3baed57
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618102"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641370"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Utiliser des stratégies de groupe pour gérer les extensions Microsoft Edge
 
@@ -140,7 +140,7 @@ Vous pouvez utiliser les stratégies [ExtensionInstallBlocklist](/DeployEdge/mic
 2. Sélectionnez **Activé**.
 3. Cliquez sur **Afficher**.
 4. Entrez l’ID d’application des extensions que vous souhaitez bloquer. Lorsque vous ajoutez plusieurs ID d’application, utilisez une ligne distincte pour chaque ID.
-5. Pour bloquer toutes les extensions, tapez **\*** dans la stratégie pour empêcher l’installation des extensions. Vous pouvez l’utiliser conjointement avec la stratégie « Autoriser l’installation d’extensions spécifiques » pour autoriser uniquement l’installation de certaines extensions. La capture d’écran suivante montre une extension qui sera bloquée en fonction de l’ID d’application fourni.
+5. Pour bloquer toutes les extensions, tapez * _ dans la stratégie pour empêcher l’installation *\** des extensions. Vous pouvez l’utiliser conjointement avec la stratégie « Autoriser l’installation d’extensions spécifiques » pour autoriser uniquement l’installation de certaines extensions. La capture d’écran suivante montre une extension qui sera bloquée en fonction de l’ID d’application fourni.
 
    :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-2.png" alt-text="Utilisez l’ID d’application pour bloquer une extension.":::
 
@@ -154,7 +154,7 @@ Vous pouvez utiliser les stratégies [ExtensionInstallBlocklist](/DeployEdge/mic
 
 Utilisez la [stratégie ExtensionInstallForcelist](/DeployEdge/microsoft-edge-policies#extensioninstallforcelist) pour contrôler les extensions bloquées ou autorisées. Utilisez les étapes suivantes comme guide pour forcer l’installation d’une extension.
 
-1. Dans l’Éditeur de stratégie de groupe, sélectionnez **Modèles d’administration> Microsoft Edge > Extensions >**, puis sélectionnez **Contrôler les extensions installées en mode silencieux**.
+1. Dans l’Éditeur de stratégie de groupe, allez à _ Modèles d’administration *> Microsoft Edge > Extensions >** puis sélectionnez Contrôler les extensions installées en mode **silencieux.**
 2. Sélectionnez **Activé**.  
 3. Cliquez sur **Afficher**.
 4. Entrez l’ID d’application ou les ID de l’extension ou des extensions pour lesquelles vous souhaitez forcer l’installation.  

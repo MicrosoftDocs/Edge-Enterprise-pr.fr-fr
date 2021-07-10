@@ -3,20 +3,20 @@ title: Documentation relative aux stratégies du navigateur Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 06/17/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentation relative à toutes les stratégies prises en charge par le navigateur Microsoft Edge pour Windows et Mac
-ms.openlocfilehash: 21933e81427b84d69f6d3ead4dfc911519e65bb3
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: eba448024e86cd0c0ceb733b6363317d7c6ca5fb
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617874"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642830"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge : Stratégies
 
@@ -159,7 +159,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[NewTabPageSearchBox](#newtabpagesearchbox)|Configurer l’expérience de zone de recherche dans la nouvelle page d’onglets|
 ### [*<a name="extensions"></a>Extensions*](#extensions-policies)
 
-|Nom de la stratégie|Caption|
+|Nom de la stratégie|Sous-titre|
 |-|-|
 |[BlockExternalExtensions](#blockexternalextensions)|Empêche l’installation d’extensions externes|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Configurer les types d’extension autorisés|
@@ -260,7 +260,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[SmartScreenEnabled](#smartscreenenabled)|Configurer Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forcer Microsoft Defender SmartScreen à vérifier les téléchargements provenant de sources approuvées|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurer Microsoft Defender SmartScreen pour bloquer les applications potentiellement indésirables.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Démarrage&comma; page d’accueil et page Nouvel onglet*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Démarrage&comma; page d’accueil et page Nouvel onglet*](#startup-home-page-and-new-tab-page-policies)
 
 |Nom de la stratégie|Caption|
 |-|-|
@@ -4234,7 +4234,7 @@ Si vous activez ce paramètre, les extensions externes ne peuvent pas être inst
 
 Si vous désactivez ce paramètre ou si vous ne l’avez pas défini, les extensions externes sont autorisées à être installées.
 
-Les extensions externes et leur installation sont documentées dans ./microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+Les extensions externes et leur installation sont documentées [ici.](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options)
 
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge :
@@ -4518,7 +4518,7 @@ Des utilisateurs équipés d’outils de développement peuvent modifier le code
 
 Chaque élément de liste de la stratégie est une chaîne contenant un ID d’extension et, éventuellement, une URL de « mise à jour » séparée par un point-virgule (;). L’ID d’extension correspond à la chaîne de 32 caractères détectée, par exemple, sur edge://extensions en mode développeur. Si vous avez spécifié ce paramètre, l’URL « update » doit pointer vers un document XML Update Manifest ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). Par défaut, le programme utilise l’URL de mise à jour du site web des composants additionnels Microsoft Edge. L’URL « update » spécifiée dans cette stratégie ne sert que pour l’installation initiale. Les mises à jour ultérieures de l’extension utilisent l’URL indiquée dans le fichier manifeste de l’extension.
 
-Remarque : cette stratégie ne s’applique pas au mode InPrivate. En savoir plus sur les extensions d’hébergement (./microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Remarque : cette stratégie ne s’applique pas au mode InPrivate. En savoir plus sur les extensions [d’hébergement ici.](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge :
 
@@ -8111,7 +8111,7 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 
   [Retour au début](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Stratégies de démarrage&comma; page d’accueil et page Nouvel onglet
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Stratégies de démarrage&comma; page d’accueil et page Nouvel onglet
 
   [Retour au début](#microsoft-edge---policies)
 
@@ -8345,7 +8345,7 @@ Si vous activez cette stratégie, Microsoft Edge télécharge et affiche le ou l
 
 Si vous désactivez cette stratégie ou si vous ne la configurez pas, Microsoft Edge n’affiche pas le logo de l’entreprise, ni le logo Microsoft sur le nouvel onglet.
 
-Pour obtenir de l’aide sur la détermination du hachage SHA-256, voir ./powershell/module/microsoft.powershell.utility/get-filehash.
+Pour obtenir de l’aide sur la détermination du hachage SHA-256, cliquez [ici.](/powershell/module/microsoft.powershell.utility/get-filehash)
 
   #### <a name="supported-features"></a>Fonctionnalités prises en charge :
 

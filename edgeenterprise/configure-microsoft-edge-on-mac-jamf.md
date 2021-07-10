@@ -3,28 +3,28 @@ title: Configurer les stratégies Microsoft Edge sur macOS grâce à Jamf
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 11/30/2020
+ms.date: 6/29/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurer les paramètres de stratégie Microsoft Edge sur les appareils Mac grâce à Jamf
-ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
-ms.translationtype: HT
+ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194712"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641630"
 ---
-# Configurer les paramètres de stratégie Microsoft Edge sur macOS grâce à Jamf
+# <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>Configurer les paramètres de stratégie Microsoft Edge sur macOS grâce à Jamf
 
 Cet article explique la configuration de paramètres de stratégie sur macOS à l’aide d’un fichier de manifeste de stratégie Microsoft Edge sur Jamf Pro 10.19.
 
 Vous pouvez également configurer les paramètres de stratégies Microsoft Edge sur macOS à l’aide d’un fichier de liste de propriétés (.plist). Pour plus d’informations, voir [Configuration pour macOS à l’aide d’un fichier .plist](configure-microsoft-edge-on-mac.md).
 
 
-##  <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Conditions préalables
 
 Le logiciel suivant est nécessaire :
 
@@ -32,7 +32,7 @@ Le logiciel suivant est nécessaire :
 - Fichier de modèles de stratégie, version 81.0.416.3
 - Jamf Pro version 10.19
 
-##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>À propos de l’application Jamf Pro & du menu Paramètres personnalisés
+## <a name="about-the-jamf-pro-application--custom-settings-menu"></a>À propos de l’application Jamf Pro & du menu Paramètres personnalisés
 
 Avant la publication de Jamf Pro 10.18, la gestion d’Office 365 impliquait la création manuelle d’un fichier .plist. Le flux de travail était fastidieux et nécessitait une solide formation technique. Jamf Pro 10.18 éliminait ces obstacles en rationalisant le processus de configuration. Cependant, les administrateurs informatiques pouvaient seulement utiliser cette nouvelle interface utilisateur pour des applications spécifiques et des domaines de préférence spécifiés par Jamf.
 
@@ -40,7 +40,7 @@ Avec Jamf Pro 10.19, un utilisateur peut télécharger un manifeste JSON en tant
 
 Pour plus d’informations, voir [Profils de configuration d’ordinateur](https://jamf.it/computer-configuration-profiles) dans le Guide de l’administrateur Jamf Pro.
 
-##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Obtenir le manifeste de stratégie pour une version spécifique de Microsoft Edge
+## <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Obtenir le manifeste de stratégie pour une version spécifique de Microsoft Edge
 
 Pour obtenir le manifeste de stratégie :
 
@@ -56,7 +56,7 @@ Une fois le fichier CAB décompressé, décompressez le fichier ZIP et accédez 
 
 Ce manifeste est publié dans chaque ensemble de stratégies à compter de la build 81.0.416.3. Si vous souhaitez tester des stratégies dans le canal de développement, vous pouvez prendre le manifeste associé à chaque publication de développement et le tester dans Jamf Pro.  
 
-##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Utilisation du manifeste de stratégie dans Jamf Pro
+## <a name="use-the-policy-manifest-in-jamf-pro"></a>Utilisation du manifeste de stratégie dans Jamf Pro
 
 Utilisez la procédure suivante pour télécharger le manifeste de stratégie dans Jamf Pro et créer un profil de stratégie pour macOS.
 
@@ -105,7 +105,7 @@ Utilisez la procédure suivante pour télécharger le manifeste de stratégie da
 
 Une fois le nouveau profil de configuration créé, vous devez configurer l’**Étendue** du profil.
 
-###  <a name="to-configure-the-scope"></a>Configuration de l'étendue
+### <a name="to-configure-the-scope"></a>Configuration de l'étendue
 
 1. Pour les **Cibles**, fournissez les paramètres minimaux suivants :
 
@@ -115,7 +115,7 @@ Une fois le nouveau profil de configuration créé, vous devez configurer l’**
 2. Pour les **Limitations**, conservez le paramètre par défaut, à savoir Aucune. Cliquez sur **Annuler**.
 3. Pour les **Exclusions**, conservez le paramètre par défaut, à savoir Aucune. Cliquez sur **Annuler**.
 
-##  <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Configurer pour macOS avec Intune](configure-microsoft-edge-on-mac.md)

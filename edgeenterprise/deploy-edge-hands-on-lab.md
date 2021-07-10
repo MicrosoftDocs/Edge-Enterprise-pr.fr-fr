@@ -3,19 +3,19 @@ title: Laboratoire pratique sur le déploiement MicrosoftEdge
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 04/22/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Laboratoire pratique sur le déploiement MicrosoftEdge
-ms.openlocfilehash: 2dd57cbbb61cfb0acd9a7f97a5aaf5fe68525e7a
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: e4c2b0037434d2bb6a6d5928f7128ba82598de30
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447438"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641590"
 ---
 # <a name="microsoft-edge-hands-on-deployment-lab"></a>Laboratoire pratique sur le déploiement MicrosoftEdge
 
@@ -32,4 +32,4 @@ Pour plus d’informations, voir:
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

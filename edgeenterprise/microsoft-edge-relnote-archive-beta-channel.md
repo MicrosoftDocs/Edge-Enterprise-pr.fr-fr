@@ -3,19 +3,19 @@ title: Notes de publication archivées du canal Microsoft Edge Beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notes de publication archivées du canal Microsoft Edge Beta
-ms.openlocfilehash: c74a2a9f670a781d94738b6db00f84716a429a58
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 065c665892edc264e2ab94375bedf3af9dbc936c
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617968"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642420"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication archivées du canal Microsoft Edge Beta
 

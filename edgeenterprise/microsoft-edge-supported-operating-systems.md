@@ -3,19 +3,19 @@ title: Systèmes d’exploitation prenant en charge Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 05/17/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Systèmes d’exploitation prenant en charge Microsoft Edge
-ms.openlocfilehash: 2e0002e38c090676e5443718b36fb2fb7956ba15
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 3c5af933e6a9e6bf66f0f486f77c8ddd9364a53e
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617894"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642620"
 ---
 # <a name="microsoft-edge-supported-operating-systems"></a>Systèmes d’exploitation prenant en charge Microsoft Edge
 
@@ -36,12 +36,12 @@ Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge 
 
 - Windows 7 **
 - Windows 8.1
-- Windows 10 SAC 1709 et ultérieur ***
+- Windows10 SAC1709 et versions ultérieures **_
 - Windows 10 Entreprise 2015 LTSC
 - Windows 10 Entreprise 2016 LTSC
 - Windows 10 Entreprise 2019 LTSC
 - Multi-session Windows 10 Entreprise
-- Windows 10 IoT Enterprise SAC ****
+- Windows 10 IoT entreprise SAC _***
 - Windows 10 IoT entreprise 2019 LTSC ****
 
 ### <a name="windows-server"></a>Windows Server
@@ -56,9 +56,9 @@ Microsoft Edge suit la stratégie de cycle de vie moderne et est pris en charge 
 > [!IMPORTANT]
 > **Nous continuerons à prendre en charge Microsoft Edge sur Windows 7 et Windows Server 2008 R2 jusqu’au 15 janvier 2022. Ces systèmes d’exploitation ne sont pas pris en charge et Microsoft vous recommande de migrer vers un système d’exploitation pris en charge tel que Windows 10. Bien que Microsoft Edge vous aide à rester plus sécurisé sur le web, il est possible que votre PC soit toujours vulnérable aux risques de sécurité. Pour que le mode IE soit pris en charge sur ces systèmes d’exploitation, les appareils doivent disposer des [Mises à jour de sécurité étendues pour Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Sans les mises à jour de sécurité étendues de Windows 7, les fonctionnalités d’Internet Explorer sont exposées aux risques de sécurité. En outre, il se peut que les fonctionnalités du mode IE cessent de fonctionner sans que la maintenance soit poursuivie par les mises à jour de sécurité étendues.  
 >
-> *** De la même façon que ci-dessus, pour les versions de Windows 10 SAC qui ne sont pas prises en charge, mais si Microsoft Edge est pris en charge, il est conseillé d’effectuer une mise à niveau vers une version de Windows 10 SAC prise en charge dès que possible pour maintenir la sécurité. Microsoft Edge pris en charge dans cet état doit être considéré comme un pont temporaire pour obtenir un état de système d’exploitation pris en charge.
+> **_ De la même façon que ci-dessus, pour les versions de Windows10SAC qui ne sont pas prises en charge, mais si MicrosoftEdge est pris en charge, il est conseillé d’effectuer une mise à niveau vers une version de Windows10SAC prise en charge dès que possible pour maintenir la sécurité. MicrosoftEdge pris en charge dans cet état doit être considéré comme un pont temporaire pour obtenir un état de système d’exploitation pris en charge.
 >
-> **** L’OPK Microsoft Edge est disponible sur MOO pour que les fabricants d’ordinateurs IoT le préinstallent et le distribuent dans le cadre de leur solution Windows 10 IoT Entreprise.
+> _*** Le kit de préinstallation OEM (OPK) de Microsoft Edge est disponible sur MOO pour les OEM d’IoT pour la préinstallation et la distribution dans le cadre de leur solution Windows 10 IoT Enterprise.
 
 ### <a name="macos"></a>macOS
 

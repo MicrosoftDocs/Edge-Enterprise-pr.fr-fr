@@ -3,19 +3,19 @@ title: Synchronisation locale pour les utilisateurs de Active Directory (AD)
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 02/12/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Synchronisation locale pour les utilisateurs de Active Directory (AD)
-ms.openlocfilehash: 39d13a5d9d712ce2c086112c8de453562e037293
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: f595c863193f2b3d383a6215ab7817a53bbf5ca6
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617714"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642440"
 ---
 # <a name="on-premises-sync-for-active-directory-ad-users"></a>Synchronisation locale pour les utilisateurs de Active Directory (AD)
 
@@ -71,6 +71,6 @@ La stratégie [ListedeTypedeSynchronisationDésactivée](./microsoft-edge-polici
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
-- [MicrosoftEdge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
 - [Synchronisation de Microsoft Edge Entreprise](microsoft-edge-enterprise-sync.md)

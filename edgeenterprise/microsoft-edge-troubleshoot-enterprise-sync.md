@@ -3,19 +3,19 @@ title: Diagnostiquer et résoudre les problèmes de synchronisation de Microsoft
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 03/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Conseils et outils qu’un administrateur Microsoft Edge peut utiliser pour résoudre les problèmes courants de synchronisation d’entreprise
-ms.openlocfilehash: d934e1ad73500fcb7f15bcd7dd29cb0f905577c5
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 0aca8c98492aead0673b5738aa5dba85c3a34314
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617904"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642230"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Diagnostiquer et résoudre les problèmes de synchronisation de Microsoft Edge
 
@@ -121,5 +121,5 @@ Assurez-vous que la [stratégie SyncDisabled](./microsoft-edge-policies.md#syncd
 ## <a name="see-also"></a>Voir également
 
 - [Synchronisation de Microsoft Edge Entreprise](microsoft-edge-enterprise-sync.md)
-- [MicrosoftEdge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge et Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

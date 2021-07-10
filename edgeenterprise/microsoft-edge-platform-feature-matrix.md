@@ -3,19 +3,19 @@ title: Prise en charge des plateformes pour les fonctionnalités de Microsoft Ed
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 03/25/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Résumé de la prise en charge de la plateforme pour les fonctionnalités de Microsoft Edge
-ms.openlocfilehash: 3fb4fc0bc2671bdee5055fa650f191c5d3821963
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: c34249e126a1fb27c84a2f025c826654bb9df358
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617724"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643120"
 ---
 # <a name="platform-support-for-microsoft-edge-features"></a>Prise en charge des plateformes pour les fonctionnalités de Microsoft Edge
 
@@ -70,4 +70,4 @@ Les tableaux suivants résument la prise en charge des fonctionnalités pour les
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

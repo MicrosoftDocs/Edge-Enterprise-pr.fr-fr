@@ -3,19 +3,19 @@ title: Mappage de Google Chrome vers la stratégie Microsoft Edge
 ms.author: brianalt
 author: brianalt
 manager: srugh
-ms.date: 06/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Mappage de Google Chrome vers la stratégie Microsoft Edge
-ms.openlocfilehash: e6a85549ee260dbebdafd900dc4ca634dc7dbd12
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c422c66df9f2892e54ad9d935f4d6de6f88eae3
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617864"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642840"
 ---
 # <a name="google-chrome-to-microsoft-edge-policy-mapping"></a>Mappage de Google Chrome vers la stratégie Microsoft Edge
 

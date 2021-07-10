@@ -3,19 +3,19 @@ title: Interruption des téléchargements de fichiers potentiellement dangereux
 ms.author: kvice
 author: AndreaLBarr
 manager: srugh
-ms.date: 05/20/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Interruption des téléchargements de fichiers potentiellement dangereux
-ms.openlocfilehash: 6239fd766c9e10d070188133a84ec0d7ce42a882
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 527b98b54cf03f6c116624296c63803b57a7f0c4
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618113"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642670"
 ---
 # <a name="interrupting-downloads-of-potentially-dangerous-files"></a>Interruption des téléchargements de fichiers potentiellement dangereux
 

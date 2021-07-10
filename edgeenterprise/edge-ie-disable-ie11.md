@@ -3,24 +3,24 @@ title: Désactiver Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Découvrez comment désactiver Internet Explorer 11 et utiliser le mode Internet Explorer dans Microsoft Edge.
-ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 9ea99c794dc06a0eb5167e56e72b6e7b6ee70212
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617484"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641510"
 ---
 # <a name="disable-internet-explorer-11"></a>Désactiver Internet Explorer 11
 
 >[!Note]
-> L’application de bureau Internet Explorer 11 sera retirée et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des applications dans l’étendue, [consultez le FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites Internet Explorer 11 que vous utilisez aujourd’hui peuvent s’ouvrir dans Microsoft Edge en mode Internet Explorer. [Plus d'informations ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> L’application de bureau Internet Explorer 11 sera retirée et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des applications dans l’étendue, [consultez le FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Les mêmes applications et sites Internet Explorer 11 que vous utilisez aujourd’hui peuvent s’ouvrir Microsoft Edge le mode Internet Explorer. [Plus d'informations ici](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Cet article explique comment désactiver Internet Explorer 11 en tant que navigateur autonome dans votre environnement.
 
@@ -72,8 +72,8 @@ Pour désactiver Internet Explorer 11 à l’aide de la stratégie de groupe, su
 
 1. Assurez-vous que vous avez les mises à jour de système d’exploitation préalables. Cette étape met directement à jour les fichiers ADMX sur votre ordinateur (notamment inetréa.adml et inetrémx.admx). Si vous voulez mettre à jour votre magasin central, vous devrez copier les fichiers .adml et .admx à partir d’un ordinateur qui dispose des mises à jour préalables. Pour plus d’informations, voir [Créer et gérer des informations du Magasin central](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Ouvrez l’Éditeur de stratégie de groupe.
-3. Allez à ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***. 
-4. Double-cliquez **Désactiver Internet Explorer 11 en tant que navigateur autonome**.
+3. Go to **_Computer Configuration/Administrative Templates/Windows Components/Internet Explorer_*_. 
+4. Double-cliquez sur _*Désactiver Internet Explorer 11 en tant que navigateur autonome**.
 5. Sélectionnez **Activé.**
 6. Sous **Options,** sélectionnez l’une des valeurs suivantes :
 

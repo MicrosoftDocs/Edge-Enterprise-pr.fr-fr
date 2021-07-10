@@ -3,19 +3,19 @@ title: Gérer les extensions Microsoft Edge dans l’entreprise
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 04/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Gérer les extensions Microsoft Edge dans l’entreprise
-ms.openlocfilehash: c123deaed638004b380308fd0d29b40b132dbfd5
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 26134a8c352354c0c447518120f3d79332100c80
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618096"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642920"
 ---
 # <a name="manage-microsoft-edge-extensions-in-the-enterprise"></a>Gérer les extensions Microsoft Edge dans l’entreprise
 

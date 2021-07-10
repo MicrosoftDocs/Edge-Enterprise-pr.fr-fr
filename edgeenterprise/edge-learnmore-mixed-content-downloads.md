@@ -3,19 +3,19 @@ title: Microsoft Edge et les téléchargements de contenu mixte
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge et les téléchargements de contenu mixte
-ms.openlocfilehash: a81c44754865b2303320bfe87346c7f7533e6133
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 4871b23145d365e814c5cf1cac7699044f3da35e
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617304"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642140"
 ---
 # <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Découvrez Microsoft Edge et les téléchargements de contenu mixte
 
@@ -69,4 +69,4 @@ Les entreprises souhaitant exclure le blocage de contenu mixte de certains sites
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

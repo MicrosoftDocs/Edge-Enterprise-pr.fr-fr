@@ -3,21 +3,21 @@ title: Notification de contenu de MicrosoftEdge
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 09/06/2019
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Contenu d’entreprise MicrosoftEdge en développement
-ms.openlocfilehash: fbfcd6971d97a5821215abebf9894a16c286e9b5
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
-ms.translationtype: HT
+ms.openlocfilehash: 3d0da8406e244814bb4b6b3356ce3b098d91c751
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979718"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641870"
 ---
-# Le contenu d’entreprise MicrosoftEdge est en cours de développement
+# <a name="microsoft-edge-enterprise-content-is-under-development"></a>Le contenu d’entreprise MicrosoftEdge est en cours de développement
 
 Vous serez redirigé vers le contenu lorsqu’il sera disponible.
 

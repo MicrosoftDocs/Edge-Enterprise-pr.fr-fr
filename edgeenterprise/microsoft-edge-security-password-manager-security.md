@@ -3,19 +3,19 @@ title: 'Sécurité du gestionnaire des mots de passe Microsoft Edge '
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 05/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sécurité du gestionnaire des mots de passe Microsoft Edge
-ms.openlocfilehash: 830658dd1ff577bfb88be5512c955d556c437bcb
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 816bbd2c18fcae0a20a19fb0feab199454aa67b6
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618111"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643070"
 ---
 # <a name="microsoft-edge-password-manager-security"></a>Sécurité du gestionnaire des mots de passe Microsoft Edge 
 

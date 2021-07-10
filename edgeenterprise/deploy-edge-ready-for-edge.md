@@ -3,19 +3,19 @@ title: Prêt pour Microsoft Edge
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/06/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Prêt pour Microsoft Edge
-ms.openlocfilehash: d41408c443c9976c8cb4b3b0f537143a5f185e3c
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 4a5758e94e61776c98e4e3421e09b32815670b4b
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617504"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641900"
 ---
 # <a name="ready-for-microsoft-edge"></a>Prêt pour Microsoft Edge
 

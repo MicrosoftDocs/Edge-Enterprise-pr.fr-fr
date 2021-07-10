@@ -3,21 +3,21 @@ title: Configurer Microsoft Edge pour macOS à l'aide d'un fichier .plist
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 11/30/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurer les paramètres de stratégie Microsoft Edge sur macOS à l'aide d'un fichier .plist
-ms.openlocfilehash: abe110ab3589cc9276f28590273ece2d372be3b8
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
-ms.translationtype: HT
+ms.openlocfilehash: d2e604e13f0fb7f81b2fb492073eba0751407771
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194684"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641620"
 ---
-# Configurer les paramètres de stratégie Microsoft Edge pour macOS à l'aide d'un fichier .plist
+# <a name="configure-microsoft-edge-policy-settings-for-macos-using-a-plist"></a>Configurer les paramètres de stratégie Microsoft Edge pour macOS à l'aide d'un fichier .plist
 
 Cet article explique comment configurer Microsoft Edge sur macOS à l’aide d’un fichier de liste de propriétés (.plist). Découvrez la création et le déploiement de ce fichier dans Microsoft Intune.
 
@@ -26,7 +26,7 @@ Pour plus d’informations, consultez [À propos des fichiers de listes de propr
 > [!NOTE]
 > Cet article concerne Microsoft Edge version 77 ou ultérieure.
 
-##  <a name="configure-microsoft-edge-policies-on-macos"></a>Configurer les stratégies Microsoft Edge sur macOS
+## <a name="configure-microsoft-edge-policies-on-macos"></a>Configurer les stratégies Microsoft Edge sur macOS
 
 La première étape consiste à créer une soumission. Vous pouvez créer le fichier plist avec n’importe quel éditeur de texte ou vous pouvez utiliser [Terminal pour créer le profil de configuration](#create-a-configuration-profile-using-terminal). Toutefois, il est plus facile de créer et de modifier un fichier plist à l’aide d’un outil qui met en forme le code XML à votre place. *Xcode* est un environnement de développement intégré gratuit que vous pouvez obtenir de l’une des manières suivantes :
 
@@ -42,7 +42,7 @@ L’étape suivante, après la création du contenu de votre plist, consiste à 
 
 La dernière étape consiste à déployer votre plist sur les appareils Mac de vos utilisateurs à l’aide de votre fournisseur GPM préféré, tel que Microsoft Intune. Pour obtenir des instructions, consultez [Déployer votre plist](#deploy-your-plist).
 
-###  <a name="create-a-configuration-profile-using-terminal"></a>Créer un profil de configuration à l’aide de terminal
+### <a name="create-a-configuration-profile-using-terminal"></a>Créer un profil de configuration à l’aide de terminal
 
 1. Dans Terminal, utilisez la commande suivante pour créer un plist Microsoft Edge sur votre bureau avec vos paramètres préférés :
 
@@ -61,13 +61,13 @@ Après avoir converti le fichier, vérifiez que vos données de stratégie sont 
 > [!NOTE]
 > Seules les paires de valeurs de clé doivent figurer dans le contenu du fichier plist ou XML. Avant de télécharger votre fichier dans Intune, supprimez toutes les valeurs \<plist> et \<dict>, ainsi que les en-têtes XML de votre fichier. Le fichier ne doit contenir que des paires clé-valeur.
 
-##  <a name="deploy-your-plist"></a>Déployer votre plist
+## <a name="deploy-your-plist"></a>Déployer votre plist
 
-Pour Microsoft Intune créez un profil de configuration de périphérique ciblant la plateforme macOS et sélectionnez le type de profil *Fichier de préférence*. Ciblez **com.microsoft.Edge** comme nom de domaine de préférence et téléchargez votre plist. Pour plus d’informations, consultez [Ajouter un fichier de liste de propriétés à des périphériques macOS à l’aide de Microsoft Intune](https://docs.microsoft.com/intune/configuration/preference-file-settings-macos).
+Pour Microsoft Intune créez un profil de configuration de périphérique ciblant la plateforme macOS et sélectionnez le type de profil *Fichier de préférence*. Ciblez **com.microsoft.Edge** comme nom de domaine de préférence et téléchargez votre plist. Pour plus d’informations, consultez [Ajouter un fichier de liste de propriétés à des périphériques macOS à l’aide de Microsoft Intune](/intune/configuration/preference-file-settings-macos).
 
 Pour Jamf, téléchargez le fichier plist en tant que charge utile des *Paramètres personnalisés*.
 
-##  <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir également
 
 - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Configurer pour macOS avec Jamf](configure-microsoft-edge-on-mac-jamf.md)

@@ -4,19 +4,19 @@ metadata:
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Forum aux questions (FAQ) sur le déploiement de Microsoft Edge dans l’entreprise
-  ms.openlocfilehash: b9c1af51c8eb1898369bc4e3c52734736db5ebe3
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: a592a831f78c5d5e92c919112319120e0f0b3faf
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11617254"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641790"
 title: Forum aux questions (FAQ) sur les Microsoft Edge dans l’entreprise
 summary: >
   > [!NOTE]
@@ -27,7 +27,7 @@ sections:
   questions:
   - question: Comment savoir de quelle version de Microsoft Edge je dispose ?
     answer: >
-      Dans le coin supérieur droit de Microsoft Edge, sélectionnez l’icône des ellipses (**...**), puis sélectionnez **Paramètres**. Sélectionnez **A propos de Microsoft Edge** pour afficher votre version de Microsoft Edge.
+      Dans le coin supérieur droit de la Microsoft Edge, sélectionnez l’icône des ellipses (**...**), puis sélectionnez **Paramètres**. Sélectionnez **A propos de Microsoft Edge** pour afficher votre version de Microsoft Edge.
   - question: Qu’en est-il d’Internet Explorer 11 ?
     answer: >
       L’application de bureau Internet Explorer 11 sera retirée et ne sera plus prise en charge le 15 juin 2022 (pour obtenir la liste des applications dans l’étendue, consultez le [FAQ).](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/) Les mêmes applications et sites Internet Explorer 11 que vous utilisez aujourd’hui peuvent s’ouvrir Microsoft Edge le mode Internet Explorer. Cliquez [ici](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) pour en savoir plus.
@@ -58,4 +58,4 @@ additionalContent: >-
 
   - [Page d’accueil de la documentation Microsoft Edge](./index.yml)
 
-  - [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+  - [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)

@@ -3,19 +3,19 @@ title: Réinitialisation de données Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 04/08/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Comment réinitialiser des données Microsoft Edge dans le cloud
-ms.openlocfilehash: 6dcbf2a80705aa87a35b50d41e0dbaa266ed4384
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 19ee60926e36371bd710937fcafc43de7ea035f4
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617324"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642040"
 ---
 # <a name="reset-microsoft-edge-data-in-the-cloud"></a>Réinitialisation de données Microsoft Edge dans le cloud
 
@@ -63,5 +63,5 @@ Après la réinitialisation correcte des données, les données sont de nouveau 
 
 ## <a name="see-also"></a>Voir également
 
-- [Page d’accueil MicrosoftEdge Entreprise](https://aka.ms/EdgeEnterprise)
+- [Page d’accueil Microsoft Edge Entreprise](https://aka.ms/EdgeEnterprise)
 - [Synchronisation de Microsoft Edge Entreprise](microsoft-edge-enterprise-sync.md)

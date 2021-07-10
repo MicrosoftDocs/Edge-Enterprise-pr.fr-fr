@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/25/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: a4ef80420bfa87bf5fcfa154937ebe52b7cb375f
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 1115c8d7822fef7e3784a465d5d4ddfd7b6bd6b1
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617934"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643160"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication du canal Microsoft Edge Beta
 
@@ -66,18 +66,7 @@ Huit nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’a
 #### <a name="obsoleted-policy"></a>Stratégie obsolète
 
 - [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Autoriser les certificats signés à l’aide de SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales.
-- [AADWebSiteSSOUsingThisProfileEnabled](/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) Authentification unique pour les sites professionnels ou scolaires en utilisant ce profil activé.
-- [AutomaticHttpsDefault](/DeployEdge/microsoft-edge-policies#automatichttpsdefault) Configurer le protocole HTTPS automatique.
-- [HeadlessModeEnabled](/DeployEdge/microsoft-edge-policies#headlessmodeenabled) Contrôler l’utilisation du mode sans affichage.
-- [InsecurePrivateNetworkRequestsAllowed](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) Spécifie s’il faut autoriser les sites web non sécurisés à effectuer des demandes vers des points de terminaison réseau plus privés.
-- [InsecurePrivateNetworkRequestsAllowedForUrls](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) Autorisez les sites répertoriés à effectuer des demandes vers des points de terminaison de réseau plus privés à partir de contextes non sécurisés.
-- [InternetExplorerIntegrationLocalSiteListExpirationDays](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) Spécifiez le nombre de jours pendant lequel un site reste dans la liste des sites en mode IE local.
-- [InternetExplorerIntegrationReloadInIEModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Autoriser le rechargement des sites non configurés en mode Internet Explorer.
-- [SharedArrayBufferUnrestrictedAccessAllowed](/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) Spécifie si SharedArrayBuffers peut être utilisé dans un contexte non isolé inter-origines.
 
-#### <a name="obsoleted-policy"></a>Stratégie obsolète
-
-- [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Autoriser les certificats signés à l’aide de SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales.
 
 ## <a name="version-9209029-june-8"></a>Version 92.0.902.9 : 8 juin
 
