@@ -3,19 +3,19 @@ title: Notes de publication de Microsoft Edge pour le canal bêta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notes de publication de Microsoft Edge pour le canal bêta
-ms.openlocfilehash: 1115c8d7822fef7e3784a465d5d4ddfd7b6bd6b1
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d5e4a4807a12cfd50cd0efaeab672361c68a1508
+ms.sourcegitcommit: e3a30351b02226aa042153f17636d64a12c4518b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643160"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643940"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notes de publication du canal Microsoft Edge Beta
 
@@ -24,9 +24,20 @@ Ces notes de publication fournissent des informations sur les nouvelles fonction
 > [!NOTE]
 > La plateforme web Microsoft Edge évolue constamment pour améliorer l’expérience utilisateur, la sécurité et la confidentialité. Pour en savoir plus, consultez les [modifications qui ont un impact sur la compatibilité du prochain Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-92090245-july-12"></a>Version 92.0.902.45 : 12 juillet
+
+Résolution de divers bogues et problèmes de performances.
+
+## <a name="version-92090240-july-6"></a>Version 92.0.902.40 : 6 juillet
+
+Résolution de divers bogues et problèmes de performances.
+
 ## <a name="version-92090222-june-21"></a>Version 92.0.902.22 : 21 juin
 
 ### <a name="feature-updates"></a>Mises à jour des fonctionnalités
+
+- **Recherche en langage naturel pour l’historique du navigateur dans la barre d’adresses.** La recherche de l’article/site web que vous recherchez est désormais plus facile grâce à la recherche en langage naturel directement à partir de la barre d’adresses. Vous pouvez trouver des résultats de recherche basés sur le contenu/description/minutage de la page (par exemple, « recette de recette de la semaine dernière ») en plus des titres/url par correspondances de mots clés.
+Veuillez noter qu’il s’agit d’un déploiement de fonctionnalités contrôlé. Si cette fonctionnalité n’est pas présente, consultez-la prochainement lorsque nous continuerons notre déploiement.
 
 - **Les utilisateurs peuvent facilement passer en mode Internet Explorer sur Microsoft Edge**. À partir de Microsoft Edge version 92, les utilisateurs peuvent recharger un site en mode Internet Explorer sur Microsoft Edge au lieu de s’appuyer sur l’application Autonome Internet Explorer 11 en attendant qu’un site soit configuré dans la liste des sites en mode Enterprise. Les utilisateurs sont invités à ajouter le site à leur liste de sites locale afin que la navigation vers la même page dans Microsoft Edge s’effectue automatiquement en mode IE pendant les 30 prochains jours. Vous pouvez utiliser la stratégie *[InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)* pour configurer cette expérience et autoriser l’accès aux points d’entrée du mode Internet Explorer, ainsi que la possibilité d’ajouter des sites à la liste des sites locale. Vous pouvez utiliser la stratégie *[InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)* pour ajuster le nombre de jours afin de conserver les sites dans la liste des sites locale.
 Notez que KB5003698 ou version ultérieure est nécessaire pour Windows 10 version 1909 ; ou KB5003690 ou version ultérieure est requis pour Windows 10, version 2004, Windows 10, version 20H2 ou Windows 10, version 21H1 pour l’expérience de bout en bout.
@@ -34,19 +45,19 @@ Notez que KB5003698 ou version ultérieure est nécessaire pour Windows 10 versi
 - **Par défaut, les fichiers MHTML s’ouvrent en mode Internet Explorer**. À partir de Microsoft Edge version 92 stable, les types de fichiers MHTML s’ouvrent automatiquement en mode Internet Explorer sur Microsoft Edge au lieu de l’application Internet Explorer (IE11). Cela est le plus souvent observé lors de la tentative d’affichage des courriers Outlook dans un navigateur. Cette modification se produit uniquement si IE11 est le gestionnaire par défaut pour ce type de fichier. Si vous préférez modifier cela, vous pouvez le faire avant d’installer la mise à jour stable version 92 à l’aide [de ces conseils](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 - **Les instruments de paiement sont désormais synchronisés sur plusieurs appareils**. À partir Microsoft Edge version 92, vous avez la possibilité de synchroniser vos informations de paiement sur vos appareils connectés.
-Veuillez noter qu’il s’agit d’un déploiement de fonctionnalités contrôlé et que nous sommes actuellement à 50 %. Si cette fonctionnalité n’est pas présente, consultez-la prochainement lorsque nous continuerons notre déploiement.
+Veuillez noter qu’il s’agit d’un déploiement de fonctionnalités contrôlé. Si cette fonctionnalité n’est pas présente, consultez-la prochainement lorsque nous continuerons notre déploiement.
 
 - **L’avertissement « Désactiver les extensions du mode développeur » peut être définitivement ignoré**. À partir Microsoft Edge version 92, vous pouvez désactiver l’avertissement « Désactiver les extensions du mode développeur » en cliquant sur l’option « Ne plus afficher cette option ».
-Veuillez noter qu’il s’agit d’un déploiement de fonctionnalités contrôlé et que nous sommes actuellement à 25 %. Si cette fonctionnalité n’est pas présente, consultez-la prochainement lorsque nous continuerons notre déploiement.
+Veuillez noter qu’il s’agit d’un déploiement de fonctionnalités contrôlé. Si cette fonctionnalité n’est pas présente, consultez-la prochainement lorsque nous continuerons notre déploiement.
 
 - **Gérez vos extensions directement à partir de la barre d’outils**. Le menu des toutes nouvelles extensions de la barre d’outils vous permet de masquer/épingler facilement les extensions. Les liens rapides pour gérer les extensions et trouver de nouvelles extensions vous permettra de trouver facilement de nouvelles extensions et de gérer vos extensions existantes.
-Veuillez noter qu’il s’agit d’un déploiement de fonctionnalités contrôlé et que nous sommes actuellement à 25 %. Si cette fonctionnalité n’est pas présente, consultez-la prochainement lorsque nous continuerons notre déploiement.
+Veuillez noter qu’il s’agit d’un déploiement de fonctionnalités contrôlé. Si cette fonctionnalité n’est pas présente, consultez-la prochainement lorsque nous continuerons notre déploiement.
 
 - **HTTPS automatique**. Les utilisateurs auront la possibilité de mettre à niveau la navigation de HTTP vers HTTPS sur les domaines susceptibles de prendre en charge ce protocole plus sécurisé. Cette prise en charge peut également être configurée pour tenter la remise sur HTTPS pour tous les domaines.
 Veuillez noter : nous expérimentons cette fonctionnalité et ce comportement n’est pas visible si vous avez refusé d’expérimenter.
 
 - **Améliorations apportées au rendu des polices**. Des améliorations ont été apportées au rendu du texte afin d’améliorer la clarté et de réduire le flou.
-Veuillez noter qu’il s’agit d’un déploiement de fonctionnalités contrôlé et que nous sommes actuellement à 25 %. Si cette fonctionnalité n’est pas présente, consultez-la prochainement lorsque nous continuerons notre déploiement.
+Veuillez noter qu’il s’agit d’un déploiement de fonctionnalités contrôlé. Si cette fonctionnalité n’est pas présente, consultez-la prochainement lorsque nous continuerons notre déploiement.
 
 ### <a name="policy-updates"></a>Mises à jour de stratégies
 
@@ -66,7 +77,6 @@ Huit nouvelles stratégies ont été ajoutées. Téléchargez les modèles d’a
 #### <a name="obsoleted-policy"></a>Stratégie obsolète
 
 - [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Autoriser les certificats signés à l’aide de SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales.
-
 
 ## <a name="version-9209029-june-8"></a>Version 92.0.902.9 : 8 juin
 

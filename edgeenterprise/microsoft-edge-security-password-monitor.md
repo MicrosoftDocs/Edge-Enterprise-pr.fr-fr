@@ -1,21 +1,21 @@
 ---
 title: Surveillance de mot de passe activée automatiquement pour les utilisateurs
 ms.author: supalsul
-author: dan-wesley
+author: AndreLBarr
 manager: tulasim
-ms.date: 06/29/2021
+ms.date: 07/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Surveillance de mot de passe activée automatiquement pour les utilisateurs
-ms.openlocfilehash: 76fc4f0c0ce4bb59ba6b2d4d8a82b61592585918
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: bd1fe390b972c66cd9b4c20ab3a9fabde76c7e03
+ms.sourcegitcommit: 65530c0bad3097a510f507503eae9c5c67db47a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643090"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643881"
 ---
 # <a name="password-monitor-auto-enabled-for-users"></a>Surveillance de mot de passe activée automatiquement pour les utilisateurs
 
@@ -31,12 +31,6 @@ La Surveillance de mot de passe permet aux utilisateurs de Microsoft Edge de pro
 ### <a name="benefits"></a>Avantages
 
 Étant donné la fréquence et l’étendue de ces attaques en ligne, avoir ce type de protection est devenu nécessaire pour tout le monde. Microsoft Edge a la possibilité intégrée de vérifier en toute sécurité les mots de passe enregistrés d’un utilisateur par rapport aux mots de passe connus comme compromis et les avertit si une correspondance est trouvée.  
-
-### <a name="availability"></a>Disponibilité
-
-Le moniteur de mot de passe est disponible dans le canal stable version 88 à partir du 21/01. Le déploiement sera progressif et peut prendre quelques semaines avant de voir le message et le contrôle suivants dans votre page **Paramètres** > **Profil** > **Mot de passe**.
-
-:::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Option permettant d’activer la Surveillance de mot de passe":::
 
 ## <a name="configure-group-policy-for-password-monitor"></a>Configurer la stratégie de groupe pour la Surveillance de mot de passe
 
