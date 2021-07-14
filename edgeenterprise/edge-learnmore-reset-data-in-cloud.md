@@ -3,19 +3,19 @@ title: Réinitialisation de données Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Comment réinitialiser des données Microsoft Edge dans le cloud
-ms.openlocfilehash: 19ee60926e36371bd710937fcafc43de7ea035f4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: dc6c0ae1b1bc31228e9b9b1de315a19e99149134
+ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642040"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643739"
 ---
 # <a name="reset-microsoft-edge-data-in-the-cloud"></a>Réinitialisation de données Microsoft Edge dans le cloud
 
@@ -35,7 +35,7 @@ Il peut arriver que vous souhaitiez réinitialiser vos données Microsoft Edge d
 
 Avant d’effectuer une réinitialisation, nous vous recommandons de sauvegarder vos favoris. Suivez les étapes ci-dessous pour sauvegarder vos favoris.
 
-1. Dans Microsoft Edge, sélectionnez **Paramètres et plus > Favoris > Autres options > Exporter des favoris**.
+1. Dans le coin supérieur droit de MicrosoftEdge, sélectionnez **Paramètres et plus > Favoris > Autres options > Exporter des favoris**.
 2. Choisissez le fichier dans lequel vous voulez enregistrer vos favoris. Vous pouvez taper votre propre nom de fichier ou utiliser le nom fourni par défaut par Microsoft Edge, « favorites_month_day_year.html » en tant que nom de fichier. Par exemple, « favorites_12_17_20.html ». Si vous avez besoin de restaurer vos favoris ultérieurement, vous pouvez le faire à partir de ce fichier.
 3. Cliquez sur **Enregistrer**.
 
@@ -45,15 +45,15 @@ Si Microsoft Edge signale qu’il ne peut pas synchroniser vos données et sugg�
 
 Pour effectuer une réinitialisation, procédez comme suit.
 
-1. Tout d’abord, assurez-vous que vous êtes déconnecté de Microsoft Edge sur tous vos appareils, y compris les appareils mobiles, à l’exception de l’appareil sur lequel vous effectuez la réinitialisation. Pour vous déconnecter de Microsoft Edge, sélectionnez **Paramètres et autres > Paramètres > Se déconnecter**. Lorsque vous vous déconnectez, ne sélectionnez pas l’option d’effacement des favoris, paramètres, etc. de votre appareil local.
-2. Une fois que vous êtes déconnecté de tous les autres appareils, ouvrez Microsoft Edge sur votre ordinateur de bureau. **Sélectionnez Paramètres et autres > Synchroniser > Réinitialiser la synchronisation**. Dans la boîte de dialogue qui en résulte, choisissez de reprendre la synchronisation après la réinitialisation des données, puis cliquez sur **Réinitialiser**.
+1. Tout d’abord, assurez-vous que vous êtes déconnecté de Microsoft Edge sur tous vos appareils, y compris les appareils mobiles, à l’exception de l’appareil sur lequel vous effectuez la réinitialisation. Pour vous déconnecter de MicrosoftEdge, dans le coin supérieur droit de Microsoft Edge sélectionnez **Paramètres et autres > Paramètres > Se déconnecter**. Lorsque vous vous déconnectez, ne sélectionnez pas l’option d’effacement des favoris, paramètres, etc. de votre appareil local.
+2. Une fois que vous êtes déconnecté de tous les autres appareils, ouvrez Microsoft Edge sur votre ordinateur de bureau. Dans le coin supérieur droit de Microsoft Edge **Sélectionnez Paramètres et autres > Synchroniser > Réinitialiser la synchronisation**. Dans la boîte de dialogue qui en résulte, choisissez de reprendre la synchronisation après la réinitialisation des données, puis cliquez sur **Réinitialiser**.
 
 ## <a name="perform-a-reset-to-remove-your-data-from-microsofts-cloud"></a>Effectuer une réinitialisation pour supprimer vos données du cloud de Microsoft
 
 Si vous voulez supprimer vos données du cloud de Microsoft, procédez comme suit pour effectuer une réinitialisation.
 
-1. Arrêtez la synchronisation sur les appareils à l’exception de l’appareil sur lequel vous exécutez la réinitialisation.  Dans Microsoft Edge, sélectionnez **Paramètres et autres > Paramètres > Synchroniser > Désactiver la synchronisation**.  
-2. Après votre arrêt de la synchronisation, sélectionnez **Paramètres et autres > Synchroniser > Réinitialiser la synchronisation**. Dans la boîte de dialogue qui en résulte, **ne sélectionnez pas** l’option pour reprendre la synchronisation après la réinitialisation des données. Sélectionnez **Réinitialiser**.
+1. Arrêtez la synchronisation sur les appareils à l’exception de l’appareil sur lequel vous exécutez la réinitialisation.  Dans le coin supérieur droit de MicrosoftEdge, sélectionnez **Paramètres et autres > Paramètres > Synchroniser > Désactiver la synchronisation**.  
+2. Après votre arrêt de la synchronisation, dans le coin supérieur droit de Microsoft Edge sélectionnez **Paramètres et autres > Synchroniser > Réinitialiser la synchronisation**. Dans la boîte de dialogue qui en résulte, **ne sélectionnez pas** l’option pour reprendre la synchronisation après la réinitialisation des données. Sélectionnez **Réinitialiser**.
 
 ## <a name="what-to-expect-during-and-after-a-data-reset"></a>Ce à quoi vous pouvez vous attendre pendant et après la réinitialisation des données
 
