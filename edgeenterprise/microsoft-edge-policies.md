@@ -260,7 +260,7 @@ Ces tableaux répertorient toutes les stratégies de groupe relatives au navigat
 |[SmartScreenEnabled](#smartscreenenabled)|Configurer Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forcer Microsoft Defender SmartScreen à vérifier les téléchargements provenant de sources approuvées|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurer Microsoft Defender SmartScreen pour bloquer les applications potentiellement indésirables.|
-### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Démarrage&comma; page d’accueil et page Nouvel onglet*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startup-home-page-and-new-tab-page"></a>Démarrage&comma; page d’accueil et page Nouvel onglet*](#startup-home-page-and-new-tab-page-policies)
 
 |Nom de la stratégie|Caption|
 |-|-|
@@ -8111,7 +8111,7 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
 
   [Retour au début](#microsoft-edge---policies)
 
-  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Stratégies de démarrage&comma; page d’accueil et page Nouvel onglet
+  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Stratégies de démarrage&comma; page d’accueil et page Nouvel onglet
 
   [Retour au début](#microsoft-edge---policies)
 
